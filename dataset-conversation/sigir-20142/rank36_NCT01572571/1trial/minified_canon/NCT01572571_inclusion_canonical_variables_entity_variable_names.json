@@ -1,0 +1,13 @@
+[
+  "patient_arterial_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_fatigue_now",
+  "patient_has_finding_of_malaise_now",
+  "patient_has_finding_of_respiratory_distress_now",
+  "patient_has_finding_of_syncope_now",
+  "patient_has_finding_of_unresponsive_now",
+  "patient_has_symptoms_of_fatigue_now",
+  "patient_has_symptoms_of_malaise_now",
+  "patient_has_symptoms_of_respiratory_distress_now",
+  "patient_has_symptoms_of_syncope_now",
+  "patient_has_symptoms_of_unresponsive_now"
+]

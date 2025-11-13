@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_tobacco_smoking_behavior_finding_now",
+  "patient_has_finding_of_tobacco_user_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_has_diagnosis_of_anorexia_nervosa_inthehistory",
+  "patient_has_diagnosis_of_bulimia_nervosa_inthehistory"
+]

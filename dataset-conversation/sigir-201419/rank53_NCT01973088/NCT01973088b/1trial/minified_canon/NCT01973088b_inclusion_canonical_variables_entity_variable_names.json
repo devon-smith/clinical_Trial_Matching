@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_normal_renal_function_now",
+  "patient_has_finding_of_urolithiasis_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_can_undergo_radical_nephrectomy_now",
+  "patient_has_diagnosis_of_traumatic_injury_now",
+  "patient_can_undergo_kidney_excision_now",
+  "patient_has_finding_of_traumatic_injury_now"
+]

@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_coronary_arteriosclerosis_now",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_blood_pressure_value_recorded_now_withunit_mm_hg",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_has_finding_of_left_ventricular_hypertrophy_now"
+]

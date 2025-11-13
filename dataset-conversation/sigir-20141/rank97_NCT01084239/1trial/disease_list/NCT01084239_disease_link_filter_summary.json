@@ -1,0 +1,80 @@
+{
+  "generated": "2025-10-22T21:08:08",
+  "trial_id": "NCT01084239",
+  "contextual": {
+    "_id": "NCT01084239",
+    "title": "Multicenter Study to Rule Out Myocardial Infarction by Cardiac Computed Tomography",
+    "text": "Summary: The growing availability of cardiac computed tomography (CT)* in emergency departments (EDs) across the U.S. expands the opportunities for its clinical application, but also heightens the need to define its appropriate use in the evaluation of patients with acute chest pain. To address this need, we performed a randomized diagnostic trial (RDT) to determine whether integrating cardiac CT, along with the information it provides on coronary artery disease (CAD) and left ventricular (LV) function, can improve the efficiency of the management of these patients (i.e. shorten length of hospital stay, increase direct discharge rates from the ED, decreasing healthcare costs and improving cost effectiveness while being safe).\nInclusion criteria: inclusion criteria: \n\n Participant had at least five minutes of chest pain or equivalent (chest tightness; pain radiating to left, right, or both arms or shoulders, back, neck, epigastrium, jaw/throat; or unexplained shortness of breath, syncope/presyncope, generalized weakness, nausea, or vomiting thought to be of cardiac origin) at rest or during exercise within 24 hours of ED presentation, warranting further risk stratification, as determined by an ED attending. \n\n 2 or more cardiac risk factors (diabetes, hypertension, hyperlipidemia, current smoker and family history of coronary artery disease). \n\n Able to provide a written informed consent. \n\n <75 years of age, but >40 years of age. \n\n Able to hold breath for at least 10 seconds. \n\n Sinus rhythm. \n\n \nExclusion criteria: : \n\n New diagnostic ischemic ECG changes (ST-segment elevation or depression > 1 mm or T-wave inversion > 4 mm) in more than two anatomically adjacent leads or left bundle branch block \n\n Documented or self-reported history of CAD (MI, percutaneous coronary interventions [PCIs], coronary artery bypass graft [CABG], known significant coronary stenosis [>50%]) \n\n Greater than 6 hours since presentation to ED. \n\n BMI >40 kg/m2 \n\n Impaired renal function as defined by serum creatinine >1.5 mg/dL* \n\n Elevated troponin-T (> 0.09 ng/ml) \n\n Hemodynamically or clinically unstable condition (BP systolic < 80 mm Hg, atrial or ventricular arrhythmias, persistent chest pain despite adequate therapy) \n\n Known allergy to iodinated contrast agent \n\n Currently symptomatic asthma \n\n Documented or self-reported cocaine use within the past 48 hours (acute) \n\n On Metformin therapy and unable or unwilling to discontinue for 48 hours after the CT scan \n\n Contraindication to beta blockers (taking daily antiasthmatic medication): This exclusion only applies to patients with a heart rate >65 bpm at sites using a non-dual source CT scanner \n\n Participant with no telephone or cell phone numbers or no address (preventing follow-up) \n\n Participant with positive pregnancy test. Women of childbearing potential, defined as <2 years of menopause in the absence of hysterectomy or tube ligation, must have a pregnancy test performed within 24 hours before the CT scan. \n\n Participant unwilling to provide a written informed consent.",
+    "metadata": {
+      "brief_title": "Multicenter Study to Rule Out Myocardial Infarction by Cardiac Computed Tomography",
+      "phase": "Phase 3",
+      "drugs": "['Cardiac Computed Tomography']",
+      "drugs_list": [
+        "Cardiac Computed Tomography"
+      ],
+      "diseases": "['Acute Coronary Syndrome', 'Myocardial Infarction', 'Unstable Angina Pectoris']",
+      "diseases_list": [
+        "Acute Coronary Syndrome",
+        "Myocardial Infarction",
+        "Unstable Angina Pectoris"
+      ],
+      "enrollment": "1000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Participant had at least five minutes of chest pain or equivalent (chest tightness; pain radiating to left, right, or both arms or shoulders, back, neck, epigastrium, jaw/throat; or unexplained shortness of breath, syncope/presyncope, generalized weakness, nausea, or vomiting thought to be of cardiac origin) at rest or during exercise within 24 hours of ED presentation, warranting further risk stratification, as determined by an ED attending. \n\n 2 or more cardiac risk factors (diabetes, hypertension, hyperlipidemia, current smoker and family history of coronary artery disease). \n\n Able to provide a written informed consent. \n\n <75 years of age, but >40 years of age. \n\n Able to hold breath for at least 10 seconds. \n\n Sinus rhythm. \n\n ",
+      "exclusion_criteria": ": \n\n New diagnostic ischemic ECG changes (ST-segment elevation or depression > 1 mm or T-wave inversion > 4 mm) in more than two anatomically adjacent leads or left bundle branch block \n\n Documented or self-reported history of CAD (MI, percutaneous coronary interventions [PCIs], coronary artery bypass graft [CABG], known significant coronary stenosis [>50%]) \n\n Greater than 6 hours since presentation to ED. \n\n BMI >40 kg/m2 \n\n Impaired renal function as defined by serum creatinine >1.5 mg/dL* \n\n Elevated troponin-T (> 0.09 ng/ml) \n\n Hemodynamically or clinically unstable condition (BP systolic < 80 mm Hg, atrial or ventricular arrhythmias, persistent chest pain despite adequate therapy) \n\n Known allergy to iodinated contrast agent \n\n Currently symptomatic asthma \n\n Documented or self-reported cocaine use within the past 48 hours (acute) \n\n On Metformin therapy and unable or unwilling to discontinue for 48 hours after the CT scan \n\n Contraindication to beta blockers (taking daily antiasthmatic medication): This exclusion only applies to patients with a heart rate >65 bpm at sites using a non-dual source CT scanner \n\n Participant with no telephone or cell phone numbers or no address (preventing follow-up) \n\n Participant with positive pregnancy test. Women of childbearing potential, defined as <2 years of menopause in the absence of hysterectomy or tube ligation, must have a pregnancy test performed within 24 hours before the CT scan. \n\n Participant unwilling to provide a written informed consent.",
+      "brief_summary": "The growing availability of cardiac computed tomography (CT)* in emergency departments (EDs) across the U.S. expands the opportunities for its clinical application, but also heightens the need to define its appropriate use in the evaluation of patients with acute chest pain. To address this need, we performed a randomized diagnostic trial (RDT) to determine whether integrating cardiac CT, along with the information it provides on coronary artery disease (CAD) and left ventricular (LV) function, can improve the efficiency of the management of these patients (i.e. shorten length of hospital stay, increase direct discharge rates from the ED, decreasing healthcare costs and improving cost effectiveness while being safe)."
+    }
+  },
+  "linked_result": {
+    "Acute Coronary Syndrome": {
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome",
+      "match_reason": "Exact"
+    },
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    },
+    "Unstable Angina Pectoris": {
+      "conceptId": "4557003",
+      "preferred_term": "Preinfarction syndrome",
+      "fully_specified_name": "Preinfarction syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "Precordial pain at rest, which may precede a MYOCARDIAL INFARCTION.",
+      "best_match_term": "Unstable angina",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Acute Coronary Syndrome": 1,
+    "Myocardial Infarction": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Acute Coronary Syndrome": {
+      "disease": "Acute Coronary Syndrome",
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome"
+    },
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    }
+  }
+}

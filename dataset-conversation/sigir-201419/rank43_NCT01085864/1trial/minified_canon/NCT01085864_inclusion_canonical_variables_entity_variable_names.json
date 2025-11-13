@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_biopsy_inthehistory",
+  "patient_has_undergone_computerized_axial_tomography_inthehistory",
+  "patient_has_undergone_excision_inthehistory",
+  "patient_has_undergone_biopsy_now",
+  "patient_has_undergone_computerized_axial_tomography_now",
+  "patient_has_undergone_excision_now"
+]

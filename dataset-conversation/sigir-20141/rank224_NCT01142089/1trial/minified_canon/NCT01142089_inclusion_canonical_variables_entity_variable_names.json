@@ -1,0 +1,16 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_inthepast72hours",
+  "patients_recent_countries_visited_is_positive_inthehistory",
+  "patient_has_finding_of_diarrhea_inthepast24hours",
+  "patient_has_finding_of_abdominal_colic_now",
+  "patient_has_finding_of_excessive_upper_gastrointestinal_gas_now",
+  "patient_has_finding_of_infectious_enteritis_now",
+  "patient_has_finding_of_nausea_now",
+  "patient_has_finding_of_tenesmus_anal_now",
+  "patient_has_finding_of_urgent_desire_for_stool_now",
+  "patient_has_finding_of_vomiting_now"
+]

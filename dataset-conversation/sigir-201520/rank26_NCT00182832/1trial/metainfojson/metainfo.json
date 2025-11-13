@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT00182832",
+  "contextual": {
+    "_id": "NCT00182832",
+    "title": "e-CHAMP: Enhancing Care for Hospitalized Older Adults With Memory Problems",
+    "text": "Summary: The purpose of this study is to evaluate the effectiveness of a cognitive screening program coupled with a computerized decision support system in improving the quality of care for hospitalized older adults with cognitive impairment.\nInclusion criteria: inclusion criteria: \n\n 65 years of age or older \n\n Hospitalized in a medical ward \n\n Able to speak English \n\n Cognitive impairment based on screening at time of hospital admission \n\n \nExclusion criteria: : \n\n Previously enrolled in the study during prior hospitalization (for multiple admissions; only data from the first admission will be used) \n\n Enrolled in another clinical trial \n\n Does not have cognitive impairment based on screening at time of hospital admission",
+    "metadata": {
+      "brief_title": "e-CHAMP: Enhancing Care for Hospitalized Older Adults With Memory Problems",
+      "phase": "",
+      "drugs": "['e-CHAMP (Enhancing Care for Hospitalized Older Adults with Cognitive Impairment)', 'Standard Care']",
+      "drugs_list": [
+        "e-CHAMP (Enhancing Care for Hospitalized Older Adults with Cognitive Impairment)",
+        "Standard Care"
+      ],
+      "diseases": "['Cognitive Impairment', 'Delirium']",
+      "diseases_list": [
+        "Cognitive Impairment",
+        "Delirium"
+      ],
+      "enrollment": "424.0",
+      "inclusion_criteria": "inclusion criteria: \n\n 65 years of age or older \n\n Hospitalized in a medical ward \n\n Able to speak English \n\n Cognitive impairment based on screening at time of hospital admission \n\n ",
+      "exclusion_criteria": ": \n\n Previously enrolled in the study during prior hospitalization (for multiple admissions; only data from the first admission will be used) \n\n Enrolled in another clinical trial \n\n Does not have cognitive impairment based on screening at time of hospital admission",
+      "brief_summary": "The purpose of this study is to evaluate the effectiveness of a cognitive screening program coupled with a computerized decision support system in improving the quality of care for hospitalized older adults with cognitive impairment."
+    }
+  }
+}

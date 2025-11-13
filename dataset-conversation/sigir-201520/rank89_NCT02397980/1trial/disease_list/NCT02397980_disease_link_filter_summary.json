@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T23:43:33",
+  "trial_id": "NCT02397980",
+  "contextual": {
+    "_id": "NCT02397980",
+    "title": "Intervention Programs for Decreasing Caregiver Burden in Caregivers of Patients With Dementia",
+    "text": "Summary: The purpose of this study is to investigate if behavioral intervention for dementia caregivers will decrease caregiver burden in caregivers of patients with dementia. This multicenter, randomized trial will be conducted with 80 dementia caregivers, who will be randomized into two groups. One group consists of 40 participants who will receive behavioral intervention and 40 who will not receive intervention (waitlist control). The waitlist control group will be also provided the same intervention after the intervention group has completed the intervention. The behavioral intervention consists of 90-min-session a day with an interval of two weeks for 2 months. The primary outcome measures are the changes in scores of Zaret's Burden Inventory and Philadelphia Geriatric Center for Moral Scale (PGCMS).\nInclusion criteria: inclusion criteria: \n\n 30-80years old \n\n Caregivers who spend their own time with dementia patients over 4 hours a day \n\n caregiver distress scores >= 2 \n\n caregivers of patients in Alzheimer's disease dementia ( mild to moderate stage of dementia, Mini-Mental Status Examination:10 \n\n 26) \n\n \nExclusion criteria: : \n\n illiterate \n\n severe hearing/visual acuity difficulty \n\n cognitive impairment",
+    "metadata": {
+      "brief_title": "Intervention Programs for Decreasing Caregiver Burden in Caregivers of Patients With Dementia",
+      "phase": "",
+      "drugs": "['Behavioral intervention']",
+      "drugs_list": [
+        "Behavioral intervention"
+      ],
+      "diseases": "[\"Alzheimer's Disease\", 'Dementia']",
+      "diseases_list": [
+        "Alzheimer's Disease",
+        "Dementia"
+      ],
+      "enrollment": "80.0",
+      "inclusion_criteria": "inclusion criteria: \n\n 30-80years old \n\n Caregivers who spend their own time with dementia patients over 4 hours a day \n\n caregiver distress scores >= 2 \n\n caregivers of patients in Alzheimer's disease dementia ( mild to moderate stage of dementia, Mini-Mental Status Examination:10 \n\n 26) \n\n ",
+      "exclusion_criteria": ": \n\n illiterate \n\n severe hearing/visual acuity difficulty \n\n cognitive impairment",
+      "brief_summary": "The purpose of this study is to investigate if behavioral intervention for dementia caregivers will decrease caregiver burden in caregivers of patients with dementia. This multicenter, randomized trial will be conducted with 80 dementia caregivers, who will be randomized into two groups. One group consists of 40 participants who will receive behavioral intervention and 40 who will not receive intervention (waitlist control). The waitlist control group will be also provided the same intervention after the intervention group has completed the intervention. The behavioral intervention consists of 90-min-session a day with an interval of two weeks for 2 months. The primary outcome measures are the changes in scores of Zaret's Burden Inventory and Philadelphia Geriatric Center for Moral Scale (PGCMS)."
+    }
+  },
+  "linked_result": {
+    "Alzheimer's Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease",
+      "match_reason": "Exact"
+    },
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Alzheimer's Disease": 1,
+    "Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Alzheimer's Disease": {
+      "disease": "Alzheimer's Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease"
+    },
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    }
+  }
+}

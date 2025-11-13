@@ -1,0 +1,130 @@
+{
+  "generated": "2025-10-22T21:19:20",
+  "trial_id": "NCT01817257",
+  "contextual": {
+    "_id": "NCT01817257",
+    "title": "Anticoagulation Length in Cancer Associated Thrombosis",
+    "text": "Summary: This is a two year, multicentre, mixed methods feasibility study including a randomised controlled two-arm interventional trial, a nested qualitative study, focus groups and a United Kingdom (UK) wide survey exercise.\nInclusion criteria: inclusion criteria: \n\n Receiving LMWH for treatment of CAT for five months \n\n Locally advanced or metastatic cancer \n\n Able to self-administer LMWH, or have LMWH administered by a carer \n\n Able to give informed consent \n\n Age ≥16 years \n\n \nExclusion criteria: : \n\n Receiving drug other than LMWH for CAT \n\n Contraindication to anticoagulation \n\n Fitted with a prosthetic heart valve \n\n Pregnant and/or lactating females",
+    "metadata": {
+      "brief_title": "Anticoagulation Length in Cancer Associated Thrombosis",
+      "phase": "Phase 2",
+      "drugs": "['Low Molecular Weight Heparin (LMWH)']",
+      "drugs_list": [
+        "Low Molecular Weight Heparin (LMWH)"
+      ],
+      "diseases": "['Cancer', 'Thrombosis', 'Venous Thromboembolism', 'Deep Vein Thrombosis', 'Pulmonary Embolus']",
+      "diseases_list": [
+        "Cancer",
+        "Thrombosis",
+        "Venous Thromboembolism",
+        "Deep Vein Thrombosis",
+        "Pulmonary Embolus"
+      ],
+      "enrollment": "2.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Receiving LMWH for treatment of CAT for five months \n\n Locally advanced or metastatic cancer \n\n Able to self-administer LMWH, or have LMWH administered by a carer \n\n Able to give informed consent \n\n Age ≥16 years \n\n ",
+      "exclusion_criteria": ": \n\n Receiving drug other than LMWH for CAT \n\n Contraindication to anticoagulation \n\n Fitted with a prosthetic heart valve \n\n Pregnant and/or lactating females",
+      "brief_summary": "This is a two year, multicentre, mixed methods feasibility study including a randomised controlled two-arm interventional trial, a nested qualitative study, focus groups and a United Kingdom (UK) wide survey exercise."
+    }
+  },
+  "linked_result": {
+    "Cancer": {
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Cancer",
+      "match_reason": "Exact"
+    },
+    "Thrombosis": {
+      "conceptId": "439127006",
+      "preferred_term": "Thrombosis",
+      "fully_specified_name": "Thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Formation and development of a thrombus or blood clot in BLOOD VESSELS.",
+      "best_match_term": "Thrombosis",
+      "match_reason": "Exact"
+    },
+    "Venous Thromboembolism": {
+      "conceptId": "429098002",
+      "preferred_term": "Thromboembolism of vein",
+      "fully_specified_name": "Thromboembolism of vein (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Thromboembolism of vein",
+      "match_reason": "Exact"
+    },
+    "Deep Vein Thrombosis": {
+      "conceptId": "128053003",
+      "preferred_term": "Deep venous thrombosis",
+      "fully_specified_name": "Deep venous thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "A blood clot in a deep vein, predominantly in the lower extremity, but may include the pelvis or upper extremity.",
+      "best_match_term": "Deep vein thrombosis",
+      "match_reason": "Exact"
+    },
+    "Pulmonary Embolus": {
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cancer": 1,
+    "Thrombosis": 1,
+    "Venous Thromboembolism": 1,
+    "Deep Vein Thrombosis": 1,
+    "Pulmonary Embolus": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cancer": {
+      "disease": "Cancer",
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Cancer"
+    },
+    "Thrombosis": {
+      "disease": "Thrombosis",
+      "conceptId": "439127006",
+      "preferred_term": "Thrombosis",
+      "fully_specified_name": "Thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Formation and development of a thrombus or blood clot in BLOOD VESSELS.",
+      "best_match_term": "Thrombosis"
+    },
+    "Venous Thromboembolism": {
+      "disease": "Venous Thromboembolism",
+      "conceptId": "429098002",
+      "preferred_term": "Thromboembolism of vein",
+      "fully_specified_name": "Thromboembolism of vein (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Thromboembolism of vein"
+    },
+    "Deep Vein Thrombosis": {
+      "disease": "Deep Vein Thrombosis",
+      "conceptId": "128053003",
+      "preferred_term": "Deep venous thrombosis",
+      "fully_specified_name": "Deep venous thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "A blood clot in a deep vein, predominantly in the lower extremity, but may include the pelvis or upper extremity.",
+      "best_match_term": "Deep vein thrombosis"
+    },
+    "Pulmonary Embolus": {
+      "disease": "Pulmonary Embolus",
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism"
+    }
+  }
+}

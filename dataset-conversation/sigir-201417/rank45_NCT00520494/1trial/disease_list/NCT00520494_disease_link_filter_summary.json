@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T23:32:08",
+  "trial_id": "NCT00520494",
+  "contextual": {
+    "_id": "NCT00520494",
+    "title": "Efficacy and Safety of Vivaglobin® in Previously Untreated Patients With Primary Immunodeficiency",
+    "text": "Summary: The objective of this study is to assess the efficacy and safety of Vivaglobin in previously untreated patients (PUPs) with primary immunodeficiency (PID) over a 25-week observation period. The purpose is to investigate whether PUPs will respond to subcutaneous immunoglobulin (SCIG) treatment with adequate trough levels without first receiving immunoglobulins by the intravenous route by demonstrating that 100 mg immunoglobulin G/kg body weight (IgG/kg bw) administered on 5 consecutive days (i.e. resulting in a total dose of 500 mg IgG/kg bw) results in an IgG increase to ≥ 5 g/L on Day 12 after initiation of SCIG therapy.\nInclusion criteria: Key inclusion criteria: \n\n Written informed consent, age-adapted \n\n Male or female aged 1 to 70 years \n\n Diagnosis of primary humoral immunodeficiency \n\n No prior immunoglobulin substitution therapy \n\n IgG level of <5 g/L at screening \n\n Women of childbearing potential must use medically approved contraception and must have a negative urine pregnancy test at screening \n\n Key \nExclusion criteria: : \n\n Evidence of serious infection between screening and first treatment \n\n Bleeding disorders that require medical treatments \n\n Any medical disorder causing secondary immune disorders, autoimmune neutropenia, or a clinically significant defect in cell mediated immunity \n\n Any condition likely to interfere with evaluation of the study drug or satisfactory conduct of the trial",
+    "metadata": {
+      "brief_title": "Efficacy and Safety of Vivaglobin® in Previously Untreated Patients With Primary Immunodeficiency",
+      "phase": "Phase 4",
+      "drugs": "['Vivaglobin']",
+      "drugs_list": [
+        "Vivaglobin"
+      ],
+      "diseases": "['Common Variable Immunodeficiency', 'Agammaglobulinemia']",
+      "diseases_list": [
+        "Common Variable Immunodeficiency",
+        "Agammaglobulinemia"
+      ],
+      "enrollment": "18.0",
+      "inclusion_criteria": "Key inclusion criteria: \n\n Written informed consent, age-adapted \n\n Male or female aged 1 to 70 years \n\n Diagnosis of primary humoral immunodeficiency \n\n No prior immunoglobulin substitution therapy \n\n IgG level of <5 g/L at screening \n\n Women of childbearing potential must use medically approved contraception and must have a negative urine pregnancy test at screening \n\n Key ",
+      "exclusion_criteria": ": \n\n Evidence of serious infection between screening and first treatment \n\n Bleeding disorders that require medical treatments \n\n Any medical disorder causing secondary immune disorders, autoimmune neutropenia, or a clinically significant defect in cell mediated immunity \n\n Any condition likely to interfere with evaluation of the study drug or satisfactory conduct of the trial",
+      "brief_summary": "The objective of this study is to assess the efficacy and safety of Vivaglobin in previously untreated patients (PUPs) with primary immunodeficiency (PID) over a 25-week observation period. The purpose is to investigate whether PUPs will respond to subcutaneous immunoglobulin (SCIG) treatment with adequate trough levels without first receiving immunoglobulins by the intravenous route by demonstrating that 100 mg immunoglobulin G/kg body weight (IgG/kg bw) administered on 5 consecutive days (i.e. resulting in a total dose of 500 mg IgG/kg bw) results in an IgG increase to ≥ 5 g/L on Day 12 after initiation of SCIG therapy."
+    }
+  },
+  "linked_result": {
+    "Common Variable Immunodeficiency": {
+      "conceptId": "23238000",
+      "preferred_term": "Common variable agammaglobulinemia",
+      "fully_specified_name": "Common variable agammaglobulinemia (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Common variable immunodeficiency",
+      "match_reason": "Exact"
+    },
+    "Agammaglobulinemia": {
+      "conceptId": "119249001",
+      "preferred_term": "Agammaglobulinemia",
+      "fully_specified_name": "Agammaglobulinemia (finding)",
+      "type": "Clinical finding",
+      "definition": "An immunologic deficiency state characterized by an extremely low level of generally all classes of gamma-globulin in the blood.",
+      "best_match_term": "Agammaglobulinemia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Common Variable Immunodeficiency": 1,
+    "Agammaglobulinemia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Common Variable Immunodeficiency": {
+      "disease": "Common Variable Immunodeficiency",
+      "conceptId": "23238000",
+      "preferred_term": "Common variable agammaglobulinemia",
+      "fully_specified_name": "Common variable agammaglobulinemia (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Common variable immunodeficiency"
+    },
+    "Agammaglobulinemia": {
+      "disease": "Agammaglobulinemia",
+      "conceptId": "119249001",
+      "preferred_term": "Agammaglobulinemia",
+      "fully_specified_name": "Agammaglobulinemia (finding)",
+      "type": "Clinical finding",
+      "definition": "An immunologic deficiency state characterized by an extremely low level of generally all classes of gamma-globulin in the blood.",
+      "best_match_term": "Agammaglobulinemia"
+    }
+  }
+}

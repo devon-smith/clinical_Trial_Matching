@@ -1,0 +1,24 @@
+{
+  "_id": "NCT02323984",
+  "title": "Postoperative Delirium in Hip Arthroplasty Patients",
+  "text": "Summary: Identification of specific circulating microRNAs and microemboli formation (diagnosed by TC Doppler) in both delirious groups and nondelirious group will be our primary target. Delirium assessment through standardized questionnaires will be done at baseline (day of the surgery - pre operatory), immediately after surgery (in post anesthesia care unit) and then every 12 hours in Day 1 and Day2 after surgery. The investigators will use linear mixed models to describe the change patterns overtime, and compare differences at each time point. Inflammatory biomarkers will be explored overtime as well. The investigators will also explore age effect on cognitive function - cognitive reserve - based on the score of the cognitive test administered at baseline.\nInclusion criteria: inclusion criteria: \n\n Male or female, between 30 and 80 years of age \n\n ASA I , II or III \n\n Capable and willing to consent \n\n Participants literate in English language \n\n \nExclusion criteria: : \n\n ASA IV or V \n\n Patients with severe visual or auditory disorder \n\n Illiteracy \n\n Presence of a clinically diagnosed major psychiatric condition such as bipolar disorder, uncontrolled major depression, schizophrenia \n\n Dementia of Alzheimer's type \n\n Parkinson disease \n\n Multiple Sclerosis (MS) \n\n Vascular dementia",
+  "metadata": {
+    "brief_title": "Postoperative Delirium in Hip Arthroplasty Patients",
+    "phase": "",
+    "drugs": "['miRNA Testing, Microemboli Monitoring, Delirium Assessment']",
+    "drugs_list": [
+      "miRNA Testing",
+      "Microemboli Monitoring",
+      "Delirium Assessment"
+    ],
+    "diseases": "['Delirium', 'Postoperative Complications']",
+    "diseases_list": [
+      "Delirium",
+      "Postoperative Complications"
+    ],
+    "enrollment": "49.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Male or female, between 30 and 80 years of age \n\n ASA I , II or III \n\n Capable and willing to consent \n\n Participants literate in English language \n\n ",
+    "exclusion_criteria": ": \n\n ASA IV or V \n\n Patients with severe visual or auditory disorder \n\n Illiteracy \n\n Presence of a clinically diagnosed major psychiatric condition such as bipolar disorder, uncontrolled major depression, schizophrenia \n\n Dementia of Alzheimer's type \n\n Parkinson disease \n\n Multiple Sclerosis (MS) \n\n Vascular dementia",
+    "brief_summary": "Identification of specific circulating microRNAs and microemboli formation (diagnosed by TC Doppler) in both delirious groups and nondelirious group will be our primary target. Delirium assessment through standardized questionnaires will be done at baseline (day of the surgery - pre operatory), immediately after surgery (in post anesthesia care unit) and then every 12 hours in Day 1 and Day2 after surgery. The investigators will use linear mixed models to describe the change patterns overtime, and compare differences at each time point. Inflammatory biomarkers will be explored overtime as well. The investigators will also explore age effect on cognitive function - cognitive reserve - based on the score of the cognitive test administered at baseline."
+  }
+}

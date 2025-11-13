@@ -1,0 +1,21 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_patient_in_hospital_now",
+  "patient_intravenous_antibiotic_therapy_value_recorded_inthefuture_withunit_days",
+  "patient_has_finding_of_infectious_disease_of_abdomen_now",
+  "patient_has_finding_of_abdominal_abscess_now",
+  "patient_has_finding_of_perforation_of_intestine_now",
+  "patient_is_exposed_to_purulent_discharge_now",
+  "patient_has_finding_of_abdominal_involuntary_guarding_now",
+  "patient_has_finding_of_abdominal_rigidity_now",
+  "patient_has_finding_of_abdominal_tenderness_now",
+  "patient_has_finding_of_bowel_sounds_absent_now",
+  "patient_has_undergone_computerized_axial_tomography_now",
+  "patient_has_finding_of_gastrointestinal_perforation_now",
+  "patient_has_undergone_magnetic_resonance_imaging_now",
+  "patient_has_undergone_plain_x_ray_abdomen_now",
+  "patient_has_finding_of_systemic_inflammatory_response_syndrome_now",
+  "patient_has_undergone_ultrasonography_now",
+  "patient_will_undergo_laparoscopy_inthefuture",
+  "patient_will_undergo_laparotomy_inthefuture"
+]

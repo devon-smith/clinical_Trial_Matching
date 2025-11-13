@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T23:42:29",
+  "trial_id": "NCT00391833",
+  "contextual": {
+    "_id": "NCT00391833",
+    "title": "Effect of Panax Ginseng on the Cognitive Performance in Alzheimer's Disease",
+    "text": "Summary: We investigate the clinical efficacy of Panax ginseng in Alzheimer's disease (AD).\nInclusion criteria: inclusion criteria: \n\n Alzheimer's disease \n\n \nExclusion criteria: : \n\n other neurologic disease",
+    "metadata": {
+      "brief_title": "Effect of Panax Ginseng on the Cognitive Performance in Alzheimer's Disease",
+      "phase": "Phase 1; Phase 2",
+      "drugs": "['Panax Ginseng']",
+      "drugs_list": [
+        "Panax Ginseng"
+      ],
+      "diseases": "[\"Alzheimer's Disease\", 'Memory Decline']",
+      "diseases_list": [
+        "Alzheimer's Disease",
+        "Memory Decline"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "inclusion criteria: \n\n Alzheimer's disease \n\n ",
+      "exclusion_criteria": ": \n\n other neurologic disease",
+      "brief_summary": "We investigate the clinical efficacy of Panax ginseng in Alzheimer's disease (AD)."
+    }
+  },
+  "linked_result": {
+    "Alzheimer's Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease",
+      "match_reason": "Exact"
+    },
+    "Memory Decline": {
+      "conceptId": "386807006",
+      "preferred_term": "Memory impairment",
+      "fully_specified_name": "Memory impairment (finding)",
+      "type": "Clinical finding",
+      "definition": "Deterioration in memory function.",
+      "best_match_term": "Memory impairment",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Alzheimer's Disease": 1,
+    "Memory Decline": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Alzheimer's Disease": {
+      "disease": "Alzheimer's Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease"
+    },
+    "Memory Decline": {
+      "disease": "Memory Decline",
+      "conceptId": "386807006",
+      "preferred_term": "Memory impairment",
+      "fully_specified_name": "Memory impairment (finding)",
+      "type": "Clinical finding",
+      "definition": "Deterioration in memory function.",
+      "best_match_term": "Memory impairment"
+    }
+  }
+}

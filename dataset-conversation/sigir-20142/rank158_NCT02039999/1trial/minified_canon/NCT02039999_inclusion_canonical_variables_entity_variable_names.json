@@ -1,0 +1,9 @@
+[
+  "patient_cough_value_recorded_now_withunit_score",
+  "patient_has_finding_of_non_smoker_now",
+  "patient_is_exposed_to_tobacco_now",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_taking_drug_or_medicament_inthepast1months",
+  "patient_has_finding_of_lung_function_testing_normal_now",
+  "patient_pulmonary_function_value_recorded_now_withunit_standard_unit"
+]

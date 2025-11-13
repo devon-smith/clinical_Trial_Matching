@@ -1,0 +1,8 @@
+[
+  "patient_is_undergoing_cardiopulmonary_resuscitation_now",
+  "patient_has_finding_of_traumatic_injury_now",
+  "patient_has_diagnosis_of_acute_non_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_diagnosis_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_finding_of_gastrointestinal_hemorrhage_now",
+  "patient_has_finding_of_shock_now"
+]

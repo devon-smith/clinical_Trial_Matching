@@ -1,0 +1,10 @@
+[
+  "patient_has_finding_of_dementia_now",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_has_diagnosis_of_secondary_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_multiple_injuries_now",
+  "patient_has_finding_of_pathological_fracture_now",
+  "patient_has_finding_of_aphasia_now",
+  "patient_is_exposed_to_acetylcholinesterase_inhibitor_inthepast1months",
+  "patient_is_exposed_to_donepezil_inthepast1months"
+]

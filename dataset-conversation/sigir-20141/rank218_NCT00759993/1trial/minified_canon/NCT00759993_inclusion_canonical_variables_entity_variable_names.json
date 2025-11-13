@@ -1,0 +1,19 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_exposed_to_psychotropic_agent_inthefuture",
+  "patient_is_exposed_to_psychotropic_agent_now",
+  "patient_has_finding_of_weight_increased_inthepast3months",
+  "patient_has_finding_of_weight_increased_now",
+  "patient_has_undergone_history_taking_mental_health_inthehistory",
+  "patient_has_finding_of_serious_physical_health_problem_now",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_able_to_be_pregnant_now",
+  "patient_has_finding_of_contraception_using_injectable_contraceptive_medication_now",
+  "patient_has_finding_of_iud_contraception_now",
+  "patient_has_finding_of_oral_contraception_now",
+  "patient_has_finding_of_postmenopausal_state_now",
+  "patient_has_finding_of_subcutaneous_contraceptive_implant_present_now",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_hospital_patient_now"
+]

@@ -1,0 +1,15 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_has_finding_of_angina_pectoris_inthehistory",
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_is_taking_beta_adrenergic_receptor_antagonist_containing_product_now",
+  "patient_is_exposed_to_dihydropyridine_derivative_calcium_channel_blocker_now",
+  "patient_can_undergo_antianginal_therapy_now",
+  "patient_has_diagnosis_of_type_2_diabetes_mellitus_inthehistory",
+  "patient_has_childbearing_potential_now",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_exposed_to_drug_or_medicament_inthefuture14days"
+]

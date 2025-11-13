@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_can_undergo_anticoagulant_therapy_now",
+  "patients_blood_pressure_is_abnormal_now",
+  "patient_has_diagnosis_of_ischemic_stroke_now",
+  "patient_has_finding_of_poor_hypertension_control_now",
+  "patient_can_undergo_thrombolytic_therapy_now",
+  "patient_has_undergone_ct_of_head_now",
+  "patient_has_undergone_magnetic_resonance_imaging_now",
+  "patient_has_diagnosis_of_subarachnoid_hemorrhage_now"
+]

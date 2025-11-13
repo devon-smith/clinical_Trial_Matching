@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_acute_viral_pharyngitis_now",
+  "patient_has_finding_of_sore_throat_symptom_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_female_now",
+  "patient_sex_is_male_now",
+  "patient_is_undergoing_ambulating_patient_now",
+  "patient_pain_in_throat_value_recorded_now_withunit_verbal_rating_scale"
+]

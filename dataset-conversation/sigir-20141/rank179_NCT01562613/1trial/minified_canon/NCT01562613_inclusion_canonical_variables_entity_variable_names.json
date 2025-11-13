@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_diagnosis_of_hypertensive_disorder_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_is_taking_eprosartan_containing_product_now",
+  "patient_has_intolerance_to_hypotensive_agent_now"
+]

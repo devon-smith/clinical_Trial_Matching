@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T23:42:24",
+  "trial_id": "NCT00246896",
+  "contextual": {
+    "_id": "NCT00246896",
+    "title": "Care Management for Patients With Alzheimer Disease and Their Family Caregivers",
+    "text": "Summary: This is a clinical trial to test the effectiveness of current guideline for the care of older adults with Alzheimer's disease. The study focuses on the primary care setting using a nurse care manager to facilitate guideline-level care. We are hypothesizing that patients who receive guideline-level care will have fewer behavioral problems than those who receive the usual care provided in primary care settings\nInclusion criteria: inclusion criteria: \n\n Alzheimers Disease \n\n \nExclusion criteria: : \n\n Inability to understand English \n\n No telephone",
+    "metadata": {
+      "brief_title": "Care Management for Patients With Alzheimer Disease and Their Family Caregivers",
+      "phase": "",
+      "drugs": "['care management']",
+      "drugs_list": [
+        "care management"
+      ],
+      "diseases": "[\"Alzheimer's Disease\", 'Dementia']",
+      "diseases_list": [
+        "Alzheimer's Disease",
+        "Dementia"
+      ],
+      "enrollment": "220.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Alzheimers Disease \n\n ",
+      "exclusion_criteria": ": \n\n Inability to understand English \n\n No telephone",
+      "brief_summary": "This is a clinical trial to test the effectiveness of current guideline for the care of older adults with Alzheimer's disease. The study focuses on the primary care setting using a nurse care manager to facilitate guideline-level care. We are hypothesizing that patients who receive guideline-level care will have fewer behavioral problems than those who receive the usual care provided in primary care settings"
+    }
+  },
+  "linked_result": {
+    "Alzheimer's Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease",
+      "match_reason": "Exact"
+    },
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Alzheimer's Disease": 1,
+    "Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Alzheimer's Disease": {
+      "disease": "Alzheimer's Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease"
+    },
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    }
+  }
+}

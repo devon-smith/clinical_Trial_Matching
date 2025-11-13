@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-22T20:57:09",
+  "trial_id": "NCT01170559",
+  "contextual": {
+    "_id": "NCT01170559",
+    "title": "Use of Loop Recorders for Diagnosis of Palpitations in A&E",
+    "text": "Summary: Heart rhythm abnormalities underlie one of the common presenting complaints to the A&E and out-patient departments, specifically awareness of heart beats or palpitations. Unless an ECG (electrocardiogram) tracing of the heart rhythm can be recorded while the patient is having symptoms, it is very difficult to determine the cause of the palpitations. The conventional approach is to refer these patients from the emergency departments to the Cardiology outpatients where they undergo repeated short term rhythm monitoring hoping to record the rhythm underlying the patient's complaint. Unfortunately, this often yields no results thus delaying definitive treatment and incurring extra costs of repeated investigations and A&E presentations. This study aims to compare the ability of the conventional approach to establish a definite diagnosis compared to that of an early invasive monitoring approach with a small implantable device that records the heart rhythm at all time for up to 18 months.\nInclusion criteria: inclusion criteria: \n\n Age 18 years or older \n\n Good history of episodic symptomatic sustained palpitations (sudden onset and offset, fast heart beats, may be associated with shortness of breath or dizziness) \n\n Terminates before presentation to hospital \n\n Episodes occur at a frequency of less than once every two weeks \n\n Never previously caught on ECG or ambulatory monitoring \n\n Normal resting ECG \n\n \nExclusion criteria: : \n\n Contraindication to ILR implantation i.e. ongoing oral anticoagulation with INR >1.6, ongoing infection, sepsis or fever, etc. \n\n Palpitations suggestive of extrasystoles (single missed or dropped beats) \n\n Known or suspected severe valvular or myocardial heart disease \n\n An audible heart murmur \n\n Any abnormality on the surface ECG \n\n Thyrotoxicosis \n\n Patients who refuse an ILR when offered will not be included in either limb of the study",
+    "metadata": {
+      "brief_title": "Use of Loop Recorders for Diagnosis of Palpitations in A&E",
+      "phase": "",
+      "drugs": "['Implantable Loop Recorder']",
+      "drugs_list": [
+        "Implantable Loop Recorder"
+      ],
+      "diseases": "['Palpitations']",
+      "diseases_list": [
+        "Palpitations"
+      ],
+      "enrollment": "56.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age 18 years or older \n\n Good history of episodic symptomatic sustained palpitations (sudden onset and offset, fast heart beats, may be associated with shortness of breath or dizziness) \n\n Terminates before presentation to hospital \n\n Episodes occur at a frequency of less than once every two weeks \n\n Never previously caught on ECG or ambulatory monitoring \n\n Normal resting ECG \n\n ",
+      "exclusion_criteria": ": \n\n Contraindication to ILR implantation i.e. ongoing oral anticoagulation with INR >1.6, ongoing infection, sepsis or fever, etc. \n\n Palpitations suggestive of extrasystoles (single missed or dropped beats) \n\n Known or suspected severe valvular or myocardial heart disease \n\n An audible heart murmur \n\n Any abnormality on the surface ECG \n\n Thyrotoxicosis \n\n Patients who refuse an ILR when offered will not be included in either limb of the study",
+      "brief_summary": "Heart rhythm abnormalities underlie one of the common presenting complaints to the A&E and out-patient departments, specifically awareness of heart beats or palpitations. Unless an ECG (electrocardiogram) tracing of the heart rhythm can be recorded while the patient is having symptoms, it is very difficult to determine the cause of the palpitations. The conventional approach is to refer these patients from the emergency departments to the Cardiology outpatients where they undergo repeated short term rhythm monitoring hoping to record the rhythm underlying the patient's complaint. Unfortunately, this often yields no results thus delaying definitive treatment and incurring extra costs of repeated investigations and A&E presentations. This study aims to compare the ability of the conventional approach to establish a definite diagnosis compared to that of an early invasive monitoring approach with a small implantable device that records the heart rhythm at all time for up to 18 months."
+    }
+  },
+  "linked_result": {
+    "Palpitations": {
+      "conceptId": "80313002",
+      "preferred_term": "Palpitations",
+      "fully_specified_name": "Palpitations (finding)",
+      "type": "Clinical finding",
+      "definition": "An unpleasant sensation of irregular and/or forceful beating of the heart.",
+      "best_match_term": "Palpitations",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Palpitations": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Palpitations": {
+      "disease": "Palpitations",
+      "conceptId": "80313002",
+      "preferred_term": "Palpitations",
+      "fully_specified_name": "Palpitations (finding)",
+      "type": "Clinical finding",
+      "definition": "An unpleasant sensation of irregular and/or forceful beating of the heart.",
+      "best_match_term": "Palpitations"
+    }
+  }
+}

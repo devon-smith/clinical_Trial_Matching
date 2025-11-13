@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_smoker_now",
+  "patient_has_finding_of_tobacco_dependence_syndrome_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_fagerstrom_test_for_nicotine_dependence_total_score_value_recorded_now_withunit_score",
+  "patient_alcohol_use_disorders_identification_test_score_value_recorded_now_withunit_score",
+  "patient_alcohol_intake_finding_value_recorded_now_withunit_drinks_per_week"
+]

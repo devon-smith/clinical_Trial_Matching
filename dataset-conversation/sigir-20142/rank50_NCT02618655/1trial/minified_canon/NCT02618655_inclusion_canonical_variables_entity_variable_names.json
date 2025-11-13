@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_fever_inthehistory",
+  "patient_body_temperature_value_recorded_now_withunit_degrees_celsius",
+  "patient_has_diagnosis_of_diagnosis_inthehistory",
+  "patient_has_undergone_laboratory_test_inthehistory",
+  "patient_has_undergone_physical_examination_inthehistory",
+  "patient_has_diagnosis_of_diagnosis_inthepast1weeks",
+  "patient_has_undergone_laboratory_test_inthepast1weeks",
+  "patient_has_undergone_physical_examination_inthepast1weeks"
+]

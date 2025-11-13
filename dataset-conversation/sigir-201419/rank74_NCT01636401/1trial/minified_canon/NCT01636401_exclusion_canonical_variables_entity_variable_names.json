@@ -1,0 +1,7 @@
+[
+  "patient_has_diagnosis_of_asthma_inthehistory",
+  "patient_has_diagnosis_of_asthma_now",
+  "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease_inthehistory",
+  "patient_has_finding_of_upper_respiratory_infection_inthehistory",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now"
+]

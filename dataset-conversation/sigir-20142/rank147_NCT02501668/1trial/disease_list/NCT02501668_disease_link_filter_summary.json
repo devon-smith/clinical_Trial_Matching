@@ -1,0 +1,69 @@
+{
+  "generated": "2025-10-20T22:45:03",
+  "trial_id": "NCT02501668",
+  "contextual": {
+    "_id": "NCT02501668",
+    "title": "The Prevalence of Lung Cancer in Patients With Interstitial Lung Disease",
+    "text": "Summary: The investigators will evaluate the prevalence of lung cancer associated with interstitial lung disease (ILD) and idiopathic pulmonary fibrosis (IPF) utilizing the Korean Health Insurance Review and Assessment Service (HIRA) database, spanning the period from January 2011 to December 2011. The database (HIRA-NPS-2011-0001) was based on random sampling of outpatients from whole population. Patients with ILDs, IPF, connective tissue disorder (CTD), and COPD were identified based on the International Classification of Disease-10 (ICD-10) diagnostic codes.\nInclusion criteria: inclusion criteria: \n\n equal to above 40 years old \n\n \nExclusion criteria: : \n\n none",
+    "metadata": {
+      "brief_title": "The Prevalence of Lung Cancer in Patients With Interstitial Lung Disease",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Lung Diseases, Interstitial', 'Lung Cancer']",
+      "diseases_list": [
+        "Lung Diseases",
+        "Interstitial",
+        "Lung Cancer"
+      ],
+      "enrollment": "1375842.0",
+      "inclusion_criteria": "inclusion criteria: \n\n equal to above 40 years old \n\n ",
+      "exclusion_criteria": ": \n\n none",
+      "brief_summary": "The investigators will evaluate the prevalence of lung cancer associated with interstitial lung disease (ILD) and idiopathic pulmonary fibrosis (IPF) utilizing the Korean Health Insurance Review and Assessment Service (HIRA) database, spanning the period from January 2011 to December 2011. The database (HIRA-NPS-2011-0001) was based on random sampling of outpatients from whole population. Patients with ILDs, IPF, connective tissue disorder (CTD), and COPD were identified based on the International Classification of Disease-10 (ICD-10) diagnostic codes."
+    }
+  },
+  "linked_result": {
+    "Lung Diseases, Interstitial": {
+      "conceptId": "233703007",
+      "preferred_term": "Interstitial lung disease",
+      "fully_specified_name": "Interstitial lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A diverse group of lung diseases that affect the lung parenchyma. They are characterized by an initial inflammation of PULMONARY ALVEOLI that extends to the interstitium and beyond leading to diffuse PULMONARY FIBROSIS. Interstitial lung diseases are classified by their etiology (known or unknown causes), and radiological-pathological features.",
+      "best_match_term": "Interstitial lung disease",
+      "match_reason": "Exact"
+    },
+    "Lung Cancer": {
+      "conceptId": "93880001",
+      "preferred_term": "Primary malignant neoplasm of lung",
+      "fully_specified_name": "Primary malignant neoplasm of lung (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Lung cancer",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Lung Diseases, Interstitial": 1,
+    "Lung Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Lung Diseases, Interstitial": {
+      "disease": "Lung Diseases, Interstitial",
+      "conceptId": "233703007",
+      "preferred_term": "Interstitial lung disease",
+      "fully_specified_name": "Interstitial lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A diverse group of lung diseases that affect the lung parenchyma. They are characterized by an initial inflammation of PULMONARY ALVEOLI that extends to the interstitium and beyond leading to diffuse PULMONARY FIBROSIS. Interstitial lung diseases are classified by their etiology (known or unknown causes), and radiological-pathological features.",
+      "best_match_term": "Interstitial lung disease"
+    },
+    "Lung Cancer": {
+      "disease": "Lung Cancer",
+      "conceptId": "93880001",
+      "preferred_term": "Primary malignant neoplasm of lung",
+      "fully_specified_name": "Primary malignant neoplasm of lung (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Lung cancer"
+    }
+  }
+}

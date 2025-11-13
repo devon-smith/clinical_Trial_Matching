@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_acute_bronchitis_now",
+  "patient_has_finding_of_acute_exacerbation_of_chronic_bronchitis_now",
+  "patient_has_finding_of_acute_sinusitis_now",
+  "patient_has_finding_of_acute_tracheitis_now",
+  "patient_has_finding_of_acute_tracheobronchitis_now",
+  "patient_has_finding_of_chronic_sinusitis_now",
+  "patient_has_finding_of_community_acquired_pneumonia_now",
+  "patient_has_finding_of_respiratory_tract_infection_now"
+]

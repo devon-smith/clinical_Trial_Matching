@@ -1,0 +1,16 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_diabetes_mellitus_inthehistory",
+  "patient_has_diagnosis_of_hypercholesterolemia_inthehistory",
+  "patient_has_diagnosis_of_hypertensive_disorder_inthehistory",
+  "patient_has_diagnosis_of_diabetes_mellitus_inthepast1years",
+  "patient_has_diagnosis_of_hypercholesterolemia_inthepast1years",
+  "patient_has_diagnosis_of_hypertensive_disorder_inthepast1years",
+  "patient_has_diagnosis_of_cerebrovascular_accident_inthehistory",
+  "patient_has_diagnosis_of_transient_cerebral_ischemia_inthehistory",
+  "patient_has_finding_of_cerebrovascular_accident_now",
+  "patients_risk_factor_is_positive_now",
+  "patient_has_finding_of_transient_cerebral_ischemia_now"
+]

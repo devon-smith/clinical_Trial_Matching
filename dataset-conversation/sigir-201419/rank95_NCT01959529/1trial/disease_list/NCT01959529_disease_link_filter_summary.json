@@ -1,0 +1,72 @@
+{
+  "generated": "2025-10-20T22:29:34",
+  "trial_id": "NCT01959529",
+  "contextual": {
+    "_id": "NCT01959529",
+    "title": "A Trial Comparing Cardiovascular Safety of Insulin Degludec Versus Insulin Glargine in Subjects With Type 2 Diabetes at High Risk of Cardiovascular Events",
+    "text": "Summary: This trial is conducted globally. The aim of this trial is to compare cardiovascular safety of insulin degludec versus insulin glargine in subjects with type 2 diabetes at high risk of cardiovascular events.\nInclusion criteria: inclusion criteria: - Type 2 diabetes - Age above or equal to 50 years with predefined previous cardiovascular disease(s) or renal disease or age above or equal to 60 years with predefined cardiovascular risk factors - HbA1c (glycosylated haemoglobin) above or equal to 7.0% or HbA1c below 7.0% and current insulin treatment corresponding to above or equal to 20 U of basal insulin per day - One or more oral or injectable antidiabetic agent(s) \nExclusion criteria: : - An acute coronary or cerebrovascular event in the previous 60 days - Planned coronary, carotid or peripheral artery revascularisation - Chronic heart failure NYHA (New York Heart Association) class IV - Current or past (within the last 5 years) malignant neoplasms (except basal cell and squamous cell skin carcinoma)",
+    "metadata": {
+      "brief_title": "A Trial Comparing Cardiovascular Safety of Insulin Degludec Versus Insulin Glargine in Subjects With Type 2 Diabetes at High Risk of Cardiovascular Events",
+      "phase": "Phase 3",
+      "drugs": "['insulin degludec', 'insulin glargine']",
+      "drugs_list": [
+        "insulin degludec",
+        "insulin glargine"
+      ],
+      "diseases": "['Diabetes', 'Diabetes Mellitus, Type 2']",
+      "diseases_list": [
+        "Diabetes",
+        "Diabetes Mellitus",
+        "Type 2"
+      ],
+      "enrollment": "7637.0",
+      "inclusion_criteria": "inclusion criteria: - Type 2 diabetes - Age above or equal to 50 years with predefined previous cardiovascular disease(s) or renal disease or age above or equal to 60 years with predefined cardiovascular risk factors - HbA1c (glycosylated haemoglobin) above or equal to 7.0% or HbA1c below 7.0% and current insulin treatment corresponding to above or equal to 20 U of basal insulin per day - One or more oral or injectable antidiabetic agent(s) ",
+      "exclusion_criteria": ": - An acute coronary or cerebrovascular event in the previous 60 days - Planned coronary, carotid or peripheral artery revascularisation - Chronic heart failure NYHA (New York Heart Association) class IV - Current or past (within the last 5 years) malignant neoplasms (except basal cell and squamous cell skin carcinoma)",
+      "brief_summary": "This trial is conducted globally. The aim of this trial is to compare cardiovascular safety of insulin degludec versus insulin glargine in subjects with type 2 diabetes at high risk of cardiovascular events."
+    }
+  },
+  "linked_result": {
+    "Diabetes": {
+      "conceptId": "73211009",
+      "preferred_term": "Diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.",
+      "best_match_term": "Diabetes mellitus",
+      "match_reason": "Exact"
+    },
+    "Diabetes Mellitus, Type 2": {
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "Diabetes mellitus type 2",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Diabetes": 1,
+    "Diabetes Mellitus, Type 2": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Diabetes": {
+      "disease": "Diabetes",
+      "conceptId": "73211009",
+      "preferred_term": "Diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.",
+      "best_match_term": "Diabetes mellitus"
+    },
+    "Diabetes Mellitus, Type 2": {
+      "disease": "Diabetes Mellitus, Type 2",
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "Diabetes mellitus type 2"
+    }
+  }
+}

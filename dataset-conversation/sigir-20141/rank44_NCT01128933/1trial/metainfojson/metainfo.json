@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01128933",
+  "contextual": {
+    "_id": "NCT01128933",
+    "title": "Renal Fractional Flow Reserve in Renal Artery Stenting",
+    "text": "Summary: The purpose of the study is to determine potential utility of renal fractional flow reserve in prognosis predicting after renal stent implantation.\nInclusion criteria: inclusion criteria: \n\n At least moderate (60% or more) renal artery stenosis with atheromatic appearance in angiography \n\n Hypertension defined according to WHO criteria \n\n Age 18-75 years \n\n Signed informed consent obtained \n\n \nExclusion criteria: : \n\n Bilateral renal artery stenosis or significant renal artery stenosis in solitary kidney \n\n Contraindications to percutaneous renal angioplasty with stenting \n\n Atrophy of the kidney supplied with stenosed artery \n\n Other well known secondary reason for hypertension \n\n Chronic heart failure NYHA II-IV \n\n Significant valvular heart disease qualified for surgery \n\n Persistent atrial fibrillation \n\n Renal failure with GFR below 30ml/min",
+    "metadata": {
+      "brief_title": "Renal Fractional Flow Reserve in Renal Artery Stenting",
+      "phase": "",
+      "drugs": "['Renal artery stenting']",
+      "drugs_list": [
+        "Renal artery stenting"
+      ],
+      "diseases": "['Renal Artery Stenosis', 'Hypertension']",
+      "diseases_list": [
+        "Renal Artery Stenosis",
+        "Hypertension"
+      ],
+      "enrollment": "45.0",
+      "inclusion_criteria": "inclusion criteria: \n\n At least moderate (60% or more) renal artery stenosis with atheromatic appearance in angiography \n\n Hypertension defined according to WHO criteria \n\n Age 18-75 years \n\n Signed informed consent obtained \n\n ",
+      "exclusion_criteria": ": \n\n Bilateral renal artery stenosis or significant renal artery stenosis in solitary kidney \n\n Contraindications to percutaneous renal angioplasty with stenting \n\n Atrophy of the kidney supplied with stenosed artery \n\n Other well known secondary reason for hypertension \n\n Chronic heart failure NYHA II-IV \n\n Significant valvular heart disease qualified for surgery \n\n Persistent atrial fibrillation \n\n Renal failure with GFR below 30ml/min",
+      "brief_summary": "The purpose of the study is to determine potential utility of renal fractional flow reserve in prognosis predicting after renal stent implantation."
+    }
+  }
+}

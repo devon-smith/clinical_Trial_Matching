@@ -1,0 +1,58 @@
+# Chloroquine and Post Malaria Anaemia Study
+**NCT**: `NCT00473837`
+## Brief Summary
+The pathogenesis of post-malaria anaemia is multifactorial. Iron supplementation remains the mainstay of management of moderate and severe anaemia; however the management of mild anaemia (Hb 80-110g/l) is problematic as population supplementation studies of children in malaria endemic areas demonstrate adverse effects in children with mild anaemia. We hypothesize that the anti-inflammatory, anti-malarial and anti-macrophageal iron loading effects of chloroquine could make it a useful drug in the management of mild post malaria anaemia. To test this hypothesis, we plan to randomize children (aged 12 months to 6 years) with post malaria anaemia (Hb 70-110g/l) to receive a standard anti-malarial treatment, co-artemether . All children with parasitologic cure after three days on treatment will be randomised to receive either weekly chloroquine or weekly placebo starting from day 10 till day 90. By comparing the curve of haemoglobin change between day 3 and day 30 in the placebo arms of the two groups, we will test the effect of chloroquine vs. ACT treatment on macrophageal iron loading and release in acute clinical malaria. By comparing the haemoglobin change between day 3 and day 90 between the weekly chloroquine arms and the weekly placebo arms we will test the longer-term anti-inflammatory and anti- malarial effects of weekly chloroquine prophylaxis. In addition to the primary endpoint, we plan to assess potential mechanisms of action by determining parasite clearance, peripheral cytokine production and iron flux
+## Inclusion Criteria
+inclusion criteria: 
+
+ All children aged 12 months to 6 years in the 13 study villages will be enrolled in the study and followed up for the duration of the study. The inclusion criteria for randomization will be: 
+
+ Children aged 12 months to 6 years; and 
+
+ History of fever in the preceding 48 hours or a measured temperature > 37.5oC plus asexual forms of P. falciparum in the peripheral blood film of 500/μl or above; and 
+
+ Hb <110g/l and >69g/l (Our choice of the upper limit of moderate anaemia (70 - 79g/l) is to enable us assess the response to our interventions of severer forms of anaemia while at the same time reducing the risk of adverse events which might occur with lower levels of Hb).
+## Exclusion Criteria
+: 
+
+ Refusal of parent or guardian to give consent to the child's participation in the study 
+
+ Inability of the subjects to take oral medications 
+
+ Presence of features of severe malaria as defined by WHO50, with the exception of anaemia and parasite density 
+
+ Children who have urgent need for blood transfusion as indicated by the presence of tachypnoea, tachycardia & gallop rhythm, tender hepatomegaly 
+
+ Children with known haemoglobinopathy 
+
+ Children with a weight for height Z score below -3SD of WHO/NCHS standard 
+
+ Enrolment in another research project
+## Full Text
+Summary: The pathogenesis of post-malaria anaemia is multifactorial. Iron supplementation remains the mainstay of management of moderate and severe anaemia; however the management of mild anaemia (Hb 80-110g/l) is problematic as population supplementation studies of children in malaria endemic areas demonstrate adverse effects in children with mild anaemia. We hypothesize that the anti-inflammatory, anti-malarial and anti-macrophageal iron loading effects of chloroquine could make it a useful drug in the management of mild post malaria anaemia. To test this hypothesis, we plan to randomize children (aged 12 months to 6 years) with post malaria anaemia (Hb 70-110g/l) to receive a standard anti-malarial treatment, co-artemether . All children with parasitologic cure after three days on treatment will be randomised to receive either weekly chloroquine or weekly placebo starting from day 10 till day 90. By comparing the curve of haemoglobin change between day 3 and day 30 in the placebo arms of the two groups, we will test the effect of chloroquine vs. ACT treatment on macrophageal iron loading and release in acute clinical malaria. By comparing the haemoglobin change between day 3 and day 90 between the weekly chloroquine arms and the weekly placebo arms we will test the longer-term anti-inflammatory and anti- malarial effects of weekly chloroquine prophylaxis. In addition to the primary endpoint, we plan to assess potential mechanisms of action by determining parasite clearance, peripheral cytokine production and iron flux
+Inclusion criteria: inclusion criteria: 
+
+ All children aged 12 months to 6 years in the 13 study villages will be enrolled in the study and followed up for the duration of the study. The inclusion criteria for randomization will be: 
+
+ Children aged 12 months to 6 years; and 
+
+ History of fever in the preceding 48 hours or a measured temperature > 37.5oC plus asexual forms of P. falciparum in the peripheral blood film of 500/μl or above; and 
+
+ Hb <110g/l and >69g/l (Our choice of the upper limit of moderate anaemia (70 - 79g/l) is to enable us assess the response to our interventions of severer forms of anaemia while at the same time reducing the risk of adverse events which might occur with lower levels of Hb). 
+
+ 
+Exclusion criteria: : 
+
+ Refusal of parent or guardian to give consent to the child's participation in the study 
+
+ Inability of the subjects to take oral medications 
+
+ Presence of features of severe malaria as defined by WHO50, with the exception of anaemia and parasite density 
+
+ Children who have urgent need for blood transfusion as indicated by the presence of tachypnoea, tachycardia & gallop rhythm, tender hepatomegaly 
+
+ Children with known haemoglobinopathy 
+
+ Children with a weight for height Z score below -3SD of WHO/NCHS standard 
+
+ Enrolment in another research project

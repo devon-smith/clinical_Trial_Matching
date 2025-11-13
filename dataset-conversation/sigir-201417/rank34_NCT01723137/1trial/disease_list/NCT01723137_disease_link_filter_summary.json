@@ -1,0 +1,48 @@
+{
+  "generated": "2025-10-20T22:03:16",
+  "trial_id": "NCT01723137",
+  "contextual": {
+    "_id": "NCT01723137",
+    "title": "Measuring Changes in Acute Pain in the Emergency Department Using Patient Reported Scales",
+    "text": "Summary: Patient reported pain, stress, and anxiety measures have been found to be inter-related, but it is not known if they are all associated with receiving opiate medications. The objective of this study is to determine if patients' degree of reported pain, stress, or anxiety is associated with receiving opiate pain medications in the emergency department or at discharge. Alert patients at least 18 years of age and who report pain greater than 3/10 are eligible to participate in the study. Consenting patients complete Visual Analog Scales describing their perceived pain, stress, and anxiety from enrollment until discharge. Demographic data and administration of pain medication is also recorded. Visual Analog Scale scores among patients who received an opioid pain medicine in the emergency department and at discharge will be compared to those who did not.\nInclusion criteria: inclusion criteria: \n\n Reported pain greater than or equal to 3 out of 10 \n\n \nExclusion criteria: : \n\n Less than 18 years of age \n\n Decreased level of consciousness \n\n Inability to answer questions \n\n Prisoner",
+    "metadata": {
+      "brief_title": "Measuring Changes in Acute Pain in the Emergency Department Using Patient Reported Scales",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Acute Pain']",
+      "diseases_list": [
+        "Acute Pain"
+      ],
+      "enrollment": "3630.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Reported pain greater than or equal to 3 out of 10 \n\n ",
+      "exclusion_criteria": ": \n\n Less than 18 years of age \n\n Decreased level of consciousness \n\n Inability to answer questions \n\n Prisoner",
+      "brief_summary": "Patient reported pain, stress, and anxiety measures have been found to be inter-related, but it is not known if they are all associated with receiving opiate medications. The objective of this study is to determine if patients' degree of reported pain, stress, or anxiety is associated with receiving opiate pain medications in the emergency department or at discharge. Alert patients at least 18 years of age and who report pain greater than 3/10 are eligible to participate in the study. Consenting patients complete Visual Analog Scales describing their perceived pain, stress, and anxiety from enrollment until discharge. Demographic data and administration of pain medication is also recorded. Visual Analog Scale scores among patients who received an opioid pain medicine in the emergency department and at discharge will be compared to those who did not."
+    }
+  },
+  "linked_result": {
+    "Acute Pain": {
+      "conceptId": "274663001",
+      "preferred_term": "Acute pain",
+      "fully_specified_name": "Acute pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Intensely discomforting, distressful, or agonizing sensation associated with trauma or disease, with well-defined location, character, and timing.",
+      "best_match_term": "Acute pain",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Acute Pain": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Acute Pain": {
+      "disease": "Acute Pain",
+      "conceptId": "274663001",
+      "preferred_term": "Acute pain",
+      "fully_specified_name": "Acute pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Intensely discomforting, distressful, or agonizing sensation associated with trauma or disease, with well-defined location, character, and timing.",
+      "best_match_term": "Acute pain"
+    }
+  }
+}

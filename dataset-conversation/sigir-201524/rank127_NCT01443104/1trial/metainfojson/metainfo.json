@@ -1,0 +1,27 @@
+{
+  "trial_id": "NCT01443104",
+  "contextual": {
+    "_id": "NCT01443104",
+    "title": "Sirolimus-eluting Stents With Biodegradable Polymer Versus an Everolimus-eluting Stents",
+    "text": "Summary: Coronary artery stents have improved the safety and efficacy of percutaneous coronary intervention for coronary artery disease. Drug-eluting stents have been shown to decrease neointimal hyperplasia and to reduce the rate of restenosis and target-lesion revascularization as compared to bare-metal stents. Drug-eluting stents consist of a metallic platform and a therapeutic substance that is usually released from a polymer matrix. A previous study utilizing a bioresorbable polymer has demonstrated a favorable safety and efficacy profile in a large-scale clinical trial as compared to a first-generation druf-eluting stent (LEADERS trial).~The objective of the study is to compare the safety and efficacy of a sirolimus-eluting stent with a biodegradable polymer with an everolimus-eluting stent with a durable polymer in a prospective multicenter randomized controlled non-inferiority trial in patients undergoing percutaneous coronary intervention in routine clinical practice.\nInclusion criteria: inclusion criteria: \n\n Age ≥18 years \n\n Symptomatic coronary artery disease including patients with chronic stable angina, silent ischemia, and acute coronary syndromes including NSTE-ACS and STE-ACS \n\n Presence of one or more coronary artery stenoses >50% in a native coronary artery or a saphenous bypass graft which can be treated with a stent ranging in diameter from 2.25 to 4.0 mm and can be covered with one or multiple stents \n\n No limitation on the number of treated lesions, and vessels, and lesion length \n\n \nExclusion criteria:  \n\n Pregnancy \n\n Known intolerance to aspirin, clopidogrel, heparin, stainless steel, Sirolimus, Everolimus or contrast material \n\n Inability to provide informed consent \n\n Currently participating in another trial before reaching first endpoint \n\n Planned surgery within 6 months of PCI unless dual antiplatelet therapy is maintained throughout the peri-surgical period",
+    "metadata": {
+      "brief_title": "Sirolimus-eluting Stents With Biodegradable Polymer Versus an Everolimus-eluting Stents",
+      "phase": "",
+      "drugs": "['Sirolimus-eluting stent with a bioresorbable polymer (Orsiro)', 'Everolimus-eluting stent with a durable polymer']",
+      "drugs_list": [
+        "Sirolimus-eluting stent with a bioresorbable polymer (Orsiro)",
+        "Everolimus-eluting stent with a durable polymer"
+      ],
+      "diseases": "['Coronary Artery Disease', 'Angina Pectoris', 'Myocardial Infarction']",
+      "diseases_list": [
+        "Coronary Artery Disease",
+        "Angina Pectoris",
+        "Myocardial Infarction"
+      ],
+      "enrollment": "2119.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age ≥18 years \n\n Symptomatic coronary artery disease including patients with chronic stable angina, silent ischemia, and acute coronary syndromes including NSTE-ACS and STE-ACS \n\n Presence of one or more coronary artery stenoses >50% in a native coronary artery or a saphenous bypass graft which can be treated with a stent ranging in diameter from 2.25 to 4.0 mm and can be covered with one or multiple stents \n\n No limitation on the number of treated lesions, and vessels, and lesion length \n\n ",
+      "exclusion_criteria": " \n\n Pregnancy \n\n Known intolerance to aspirin, clopidogrel, heparin, stainless steel, Sirolimus, Everolimus or contrast material \n\n Inability to provide informed consent \n\n Currently participating in another trial before reaching first endpoint \n\n Planned surgery within 6 months of PCI unless dual antiplatelet therapy is maintained throughout the peri-surgical period",
+      "brief_summary": "Coronary artery stents have improved the safety and efficacy of percutaneous coronary intervention for coronary artery disease. Drug-eluting stents have been shown to decrease neointimal hyperplasia and to reduce the rate of restenosis and target-lesion revascularization as compared to bare-metal stents. Drug-eluting stents consist of a metallic platform and a therapeutic substance that is usually released from a polymer matrix. A previous study utilizing a bioresorbable polymer has demonstrated a favorable safety and efficacy profile in a large-scale clinical trial as compared to a first-generation druf-eluting stent (LEADERS trial).~The objective of the study is to compare the safety and efficacy of a sirolimus-eluting stent with a biodegradable polymer with an everolimus-eluting stent with a durable polymer in a prospective multicenter randomized controlled non-inferiority trial in patients undergoing percutaneous coronary intervention in routine clinical practice."
+    }
+  }
+}

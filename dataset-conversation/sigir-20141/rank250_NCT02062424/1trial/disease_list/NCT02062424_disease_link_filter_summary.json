@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:31:08",
+  "trial_id": "NCT02062424",
+  "contextual": {
+    "_id": "NCT02062424",
+    "title": "Diet and Prevention of Ischemic Heart Disease: a Translational Approach",
+    "text": "Summary: The objective of this study is to test the effect of substitution dietary guidelines that are specifically aimed at the prevention of ischemic heart disease (IHD) on the dietary intake in the general Danish population.\nInclusion criteria: inclusion criteria: \n\n healthy men and women aged 30 to 65 years who has one or more self-assessed ischemic heart disease risk factors at screening: physical inactivity, overweight or obese (BMI ≥ 25/m2 ), waist circumference (≥ 80 cm for women, ≥ 94 cm for men). In addition, the participants should have the motivation and willingness to be randomized to any of the three groups, and to do their best to follow the given protocol . \n\n \nExclusion criteria: : \n\n no internet access or no access to a computer, smoking, pregnancy, or breast-feeding or planning to become pregnant within the next 12 months, a history of cardiovascular disease, type 2 diabetes, chronic disease / disorders that may affect the results of the study, substance abuse within the past 12 months, regular alcohol consumption > 21 units / week for men or > 14 units/ week for women, allergy or intolerance to food groups in the dietary guidelines, supplements with mega doses of nutrients that can have potential impact on ischemic heart disease risk markers (eg . fish oils).",
+    "metadata": {
+      "brief_title": "Diet and Prevention of Ischemic Heart Disease: a Translational Approach",
+      "phase": "",
+      "drugs": "['DIPI']",
+      "drugs_list": [
+        "DIPI"
+      ],
+      "diseases": "['Ischemic Heart Disease']",
+      "diseases_list": [
+        "Ischemic Heart Disease"
+      ],
+      "enrollment": "222.0",
+      "inclusion_criteria": "inclusion criteria: \n\n healthy men and women aged 30 to 65 years who has one or more self-assessed ischemic heart disease risk factors at screening: physical inactivity, overweight or obese (BMI ≥ 25/m2 ), waist circumference (≥ 80 cm for women, ≥ 94 cm for men). In addition, the participants should have the motivation and willingness to be randomized to any of the three groups, and to do their best to follow the given protocol . \n\n ",
+      "exclusion_criteria": ": \n\n no internet access or no access to a computer, smoking, pregnancy, or breast-feeding or planning to become pregnant within the next 12 months, a history of cardiovascular disease, type 2 diabetes, chronic disease / disorders that may affect the results of the study, substance abuse within the past 12 months, regular alcohol consumption > 21 units / week for men or > 14 units/ week for women, allergy or intolerance to food groups in the dietary guidelines, supplements with mega doses of nutrients that can have potential impact on ischemic heart disease risk markers (eg . fish oils).",
+      "brief_summary": "The objective of this study is to test the effect of substitution dietary guidelines that are specifically aimed at the prevention of ischemic heart disease (IHD) on the dietary intake in the general Danish population."
+    }
+  },
+  "linked_result": {
+    "Ischemic Heart Disease": {
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Ischemic Heart Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Ischemic Heart Disease": {
+      "disease": "Ischemic Heart Disease",
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+[
+  "patient_weight_change_value_recorded_inthepast12months_withunit_percent",
+  "patient_has_finding_of_on_special_diet_inthehistory",
+  "patient_has_finding_of_physical_activity_inthehistory",
+  "patients_continuous_use_of_drugs_is_positive_now",
+  "patient_is_exposed_to_nutritional_supplement_now",
+  "patient_has_finding_of_tobacco_smoking_behavior_finding_inthepast7days",
+  "patient_has_finding_of_drinking_binge_inthepast6months",
+  "patient_has_diagnosis_of_eating_disorder_now",
+  "patient_has_diagnosis_of_mental_disorder_now",
+  "patient_has_diagnosis_of_serious_physical_health_problem_now",
+  "patient_has_finding_of_serum_tsh_level_abnormal_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_inthepast12months",
+  "patient_is_lactating_inthepast12months",
+  "patient_has_finding_of_irregular_periods_now",
+  "patients_lactation_is_positive_inthehistory"
+]

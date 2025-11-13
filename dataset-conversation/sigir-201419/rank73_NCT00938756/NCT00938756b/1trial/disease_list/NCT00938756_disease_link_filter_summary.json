@@ -1,0 +1,92 @@
+{
+  "generated": "2025-10-20T22:34:50",
+  "trial_id": "NCT00938756",
+  "contextual": {
+    "_id": "NCT00938756",
+    "title": "Study of Cerebrospinal Fluid Samples in Diagnosing Carcinomatous Meningitis in Patients With Cancer or Meningeal Syndrome",
+    "text": "Summary: RATIONALE: Studying samples of cerebrospinal fluid from patients with cancer or meningeal syndrome may help doctors identify biomarkers related to cancer.~PURPOSE: This clinical trial is studying cerebrospinal fluid samples in diagnosing carcinomatous meningitis in patients with cancer or meningeal syndrome.\nInclusion criteria: DISEASE CHARACTERISTICS: \n\n Meets 1 of the following criteria: \n\n Diagnosis of metastatic breast cancer with evidence suggestive of carcinomatous meningitis, with or without brain metastasis \n\n Other type of cancer with evidence suggestive of carcinomatous meningitis \n\n Meningeal syndrome without context of cancer \n\n PATIENT CHARACTERISTICS: \n\n No other prior cancers \n\n Not pregnant or nursing \n\n PRIOR CONCURRENT THERAPY: \n\n No prior intrathecal treatment \n\n At least 4 weeks since prior interferon \n\n No concurrent participation in another clinical trial\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Study of Cerebrospinal Fluid Samples in Diagnosing Carcinomatous Meningitis in Patients With Cancer or Meningeal Syndrome",
+      "phase": "",
+      "drugs": "['diagnostic laboratory biomarker analysis', 'immunoenzyme technique', 'magnetic resonance imaging']",
+      "drugs_list": [
+        "diagnostic laboratory biomarker analysis",
+        "immunoenzyme technique",
+        "magnetic resonance imaging"
+      ],
+      "diseases": "['Brain and Central Nervous System Tumors', 'Breast Cancer', 'Metastatic Cancer']",
+      "diseases_list": [
+        "Brain and Central Nervous System Tumors",
+        "Breast Cancer",
+        "Metastatic Cancer"
+      ],
+      "enrollment": "80.0",
+      "inclusion_criteria": "DISEASE CHARACTERISTICS: \n\n Meets 1 of the following criteria: \n\n Diagnosis of metastatic breast cancer with evidence suggestive of carcinomatous meningitis, with or without brain metastasis \n\n Other type of cancer with evidence suggestive of carcinomatous meningitis \n\n Meningeal syndrome without context of cancer \n\n PATIENT CHARACTERISTICS: \n\n No other prior cancers \n\n Not pregnant or nursing \n\n PRIOR CONCURRENT THERAPY: \n\n No prior intrathecal treatment \n\n At least 4 weeks since prior interferon \n\n No concurrent participation in another clinical trial",
+      "exclusion_criteria": "",
+      "brief_summary": "RATIONALE: Studying samples of cerebrospinal fluid from patients with cancer or meningeal syndrome may help doctors identify biomarkers related to cancer.~PURPOSE: This clinical trial is studying cerebrospinal fluid samples in diagnosing carcinomatous meningitis in patients with cancer or meningeal syndrome."
+    }
+  },
+  "linked_result": {
+    "Brain and Central Nervous System Tumors": {
+      "conceptId": "126951006",
+      "preferred_term": "Neoplasm of central nervous system",
+      "fully_specified_name": "Neoplasm of central nervous system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Benign and malignant neoplastic processes that arise from or secondarily involve the brain, spinal cord, or meninges.",
+      "best_match_term": "Neoplasm of central nervous system",
+      "match_reason": "Exact"
+    },
+    "Breast Cancer": {
+      "conceptId": "254837009",
+      "preferred_term": "Malignant tumor of breast",
+      "fully_specified_name": "Malignant neoplasm of breast (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the breast. The vast majority of cases are carcinomas arising from the breast parenchyma or the nipple. Malignant breast neoplasms occur more frequently in females than in males.",
+      "best_match_term": "Breast cancer",
+      "match_reason": "Exact"
+    },
+    "Metastatic Cancer": {
+      "conceptId": "128462008",
+      "preferred_term": "Secondary malignant neoplastic disease",
+      "fully_specified_name": "Secondary malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A malignant tumor that has spread from its original (primary) site of growth to another site close to or distant from the primary site.",
+      "best_match_term": "Metastatic cancer",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Brain and Central Nervous System Tumors": 1,
+    "Breast Cancer": 1,
+    "Metastatic Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Brain and Central Nervous System Tumors": {
+      "disease": "Brain and Central Nervous System Tumors",
+      "conceptId": "126951006",
+      "preferred_term": "Neoplasm of central nervous system",
+      "fully_specified_name": "Neoplasm of central nervous system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Benign and malignant neoplastic processes that arise from or secondarily involve the brain, spinal cord, or meninges.",
+      "best_match_term": "Neoplasm of central nervous system"
+    },
+    "Breast Cancer": {
+      "disease": "Breast Cancer",
+      "conceptId": "254837009",
+      "preferred_term": "Malignant tumor of breast",
+      "fully_specified_name": "Malignant neoplasm of breast (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the breast. The vast majority of cases are carcinomas arising from the breast parenchyma or the nipple. Malignant breast neoplasms occur more frequently in females than in males.",
+      "best_match_term": "Breast cancer"
+    },
+    "Metastatic Cancer": {
+      "disease": "Metastatic Cancer",
+      "conceptId": "128462008",
+      "preferred_term": "Secondary malignant neoplastic disease",
+      "fully_specified_name": "Secondary malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A malignant tumor that has spread from its original (primary) site of growth to another site close to or distant from the primary site.",
+      "best_match_term": "Metastatic cancer"
+    }
+  }
+}

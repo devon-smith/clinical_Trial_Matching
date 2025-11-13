@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT02558777",
+  "contextual": {
+    "_id": "NCT02558777",
+    "title": "Pilot Study of a Multicomponent Nurse Intervention to Reduce Delirium in Hospitalized Older Adults",
+    "text": "Summary: Objectives: To analyze if a multicomponent nurse-led intervention randomized clinical trial (MID-Nurse Study) is feasible (Pilot study), and can reduce the incidence, duration, and severity of delirium in hospitalized older adults in an AGU.~Design: Parallel-group Double-blind Randomized Clinical Trial (Pilot Study). Setting: AGU Complejo Hospitalario Universitario from Albacete (Albacete, Spain).~Participants: 50 patients ≥ 65 years hospitalized in the AGU (21 intervention group, 29 control group).~Interventions: After risk factor analysis, all participants in the intervention group (IG) received a daily multicomponent intervention (orientation, sensorial deficit, sleep, mobilization, hydration, nutrition, drugs, elimination, oxygenation, pain) by the intervention nurses. The control group (CG) received usual care.~Measurements: Delirium presence was determined daily with the Confusion Assessment Method (CAM), and delirium severity with the Delirium Rating Scale-Revised-98 (DRS). Mortality, days of hospitalization, use of physical restraint measures, and use of drugs for delirium control (neuroleptics and benzodiacepines) were also recorded.\nInclusion criteria: inclusion criteria: \n\n Patients with an age equal or older than 65 years \n\n Hospitalized at the Acute Geriatric Unit of the Complejo Hospitalario Universitario of Albacete \n\n Valid signed informed consent by the patient or legal representative. \n\n \nExclusion criteria: : \n\n Agonic situation \n\n Non-Spanish speaking \n\n Severe cognitive decline (Reisberg´s Global Deterioration Scale = 7) \n\n Patients sharing the same room with a previously included participant",
+    "metadata": {
+      "brief_title": "Pilot Study of a Multicomponent Nurse Intervention to Reduce Delirium in Hospitalized Older Adults",
+      "phase": "",
+      "drugs": "['Multicomponent nurse-led intervention']",
+      "drugs_list": [
+        "Multicomponent nurse-led intervention"
+      ],
+      "diseases": "['Delirium']",
+      "diseases_list": [
+        "Delirium"
+      ],
+      "enrollment": "50.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients with an age equal or older than 65 years \n\n Hospitalized at the Acute Geriatric Unit of the Complejo Hospitalario Universitario of Albacete \n\n Valid signed informed consent by the patient or legal representative. \n\n ",
+      "exclusion_criteria": ": \n\n Agonic situation \n\n Non-Spanish speaking \n\n Severe cognitive decline (Reisberg´s Global Deterioration Scale = 7) \n\n Patients sharing the same room with a previously included participant",
+      "brief_summary": "Objectives: To analyze if a multicomponent nurse-led intervention randomized clinical trial (MID-Nurse Study) is feasible (Pilot study), and can reduce the incidence, duration, and severity of delirium in hospitalized older adults in an AGU.~Design: Parallel-group Double-blind Randomized Clinical Trial (Pilot Study). Setting: AGU Complejo Hospitalario Universitario from Albacete (Albacete, Spain).~Participants: 50 patients ≥ 65 years hospitalized in the AGU (21 intervention group, 29 control group).~Interventions: After risk factor analysis, all participants in the intervention group (IG) received a daily multicomponent intervention (orientation, sensorial deficit, sleep, mobilization, hydration, nutrition, drugs, elimination, oxygenation, pain) by the intervention nurses. The control group (CG) received usual care.~Measurements: Delirium presence was determined daily with the Confusion Assessment Method (CAM), and delirium severity with the Delirium Rating Scale-Revised-98 (DRS). Mortality, days of hospitalization, use of physical restraint measures, and use of drugs for delirium control (neuroleptics and benzodiacepines) were also recorded."
+    }
+  }
+}

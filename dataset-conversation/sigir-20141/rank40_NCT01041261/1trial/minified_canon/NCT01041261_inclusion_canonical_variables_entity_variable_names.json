@@ -1,0 +1,8 @@
+[
+  "patient_sex_is_female_now",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_has_finding_of_morbid_obesity_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_undergoing_laparoscopic_bypass_of_stomach_now",
+  "patient_has_finding_of_metabolic_syndrome_x_now"
+]

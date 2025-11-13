@@ -1,0 +1,14 @@
+[
+  "patient_has_finding_of_bleeding_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_glomerular_filtration_rate_value_recorded_now_withunit_ml_per_min",
+  "patient_survival_time_value_recorded_now_withunit_years",
+  "patient_has_finding_of_oriented_to_person_now",
+  "patient_has_finding_of_oriented_to_place_now",
+  "patient_has_finding_of_oriented_to_time_now",
+  "patient_has_finding_of_akatamathesia_now",
+  "patient_sex_is_female_now",
+  "patient_is_able_to_be_pregnant_now",
+  "patient_has_finding_of_finding_of_fertility_now",
+  "patient_has_finding_of_fertility_now"
+]

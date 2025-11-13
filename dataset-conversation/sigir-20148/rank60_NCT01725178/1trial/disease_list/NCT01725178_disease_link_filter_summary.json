@@ -1,0 +1,90 @@
+{
+  "generated": "2025-10-20T23:39:39",
+  "trial_id": "NCT01725178",
+  "contextual": {
+    "_id": "NCT01725178",
+    "title": "Train the Brain - Cognitive and Physical Training for Slowing Dementia",
+    "text": "Summary: Train The Brain is aimed at assessing the efficacy of cognitive and physical training in slowing progression to dementia in patients diagnosed with mild cognitive impairment (MCI).\nInclusion criteria: inclusion criteria: \n\n Age between 65 and 89 \n\n Successful completion of primary school \n\n MCI, as Mini Mental State Examination score between 20 and 27 and confirmation through neuropsychological examination by a specialist, according to current guidelines. \n\n \nExclusion criteria: : \n\n Moderate/severe dementia \n\n Clinical signs of depressive disorder or other primary psychiatric disorders \n\n Neoplastic diseases \n\n Neurologic or musculoskeletal deficits barring neuropsychological examination or physical or cognitive training \n\n Severe heart disease \n\n End stage renal disease (eGFR<35 ml/min(1.73 m2) \n\n Severe chronic obstructive pulmonary disease (COPD) and/or respiratory failure \n\n Complicated or decompensated diabetes \n\n Overt peripheral artery disease \n\n Any inability to successfully complete a brain magnetic resonance scan \n\n Epilepsy, drug addiction \n\n Current acute diseases or recent head trauma",
+    "metadata": {
+      "brief_title": "Train the Brain - Cognitive and Physical Training for Slowing Dementia",
+      "phase": "",
+      "drugs": "['Cognitive and Physical training']",
+      "drugs_list": [
+        "Cognitive and Physical training"
+      ],
+      "diseases": "['Mild Cognitive Impairment', 'Dementia', 'Memory Disorders']",
+      "diseases_list": [
+        "Mild Cognitive Impairment",
+        "Dementia",
+        "Memory Disorders"
+      ],
+      "enrollment": "160.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age between 65 and 89 \n\n Successful completion of primary school \n\n MCI, as Mini Mental State Examination score between 20 and 27 and confirmation through neuropsychological examination by a specialist, according to current guidelines. \n\n ",
+      "exclusion_criteria": ": \n\n Moderate/severe dementia \n\n Clinical signs of depressive disorder or other primary psychiatric disorders \n\n Neoplastic diseases \n\n Neurologic or musculoskeletal deficits barring neuropsychological examination or physical or cognitive training \n\n Severe heart disease \n\n End stage renal disease (eGFR<35 ml/min(1.73 m2) \n\n Severe chronic obstructive pulmonary disease (COPD) and/or respiratory failure \n\n Complicated or decompensated diabetes \n\n Overt peripheral artery disease \n\n Any inability to successfully complete a brain magnetic resonance scan \n\n Epilepsy, drug addiction \n\n Current acute diseases or recent head trauma",
+      "brief_summary": "Train The Brain is aimed at assessing the efficacy of cognitive and physical training in slowing progression to dementia in patients diagnosed with mild cognitive impairment (MCI)."
+    }
+  },
+  "linked_result": {
+    "Mild Cognitive Impairment": {
+      "conceptId": "386805003",
+      "preferred_term": "Mild cognitive disorder",
+      "fully_specified_name": "Mild cognitive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "<p>Some forgetfulness can be a normal part of aging. However, some people have more <a href=\"https://medlineplus.gov/memory.html\">memory</a> problems than other people their age. This condition is called mild cognitive impairment, or MCI. People with MCI can take care of themselves and do their normal activities.</p> <p>MCI memory problems may include:</p><ul> <li>Losing things often</li> <li>Forgetting to go to events and appointments</li> <li>Having more trouble coming up with words than other people of the same age</li> </ul> <p>Memory problems can also have other causes, including certain medicines and diseases that affect the blood vessels that supply the brain. Some of the problems brought on by these conditions can be managed or reversed.</p> <p>Your health care provider can do thinking, memory, and language tests to see if you have MCI. You may also need to see a specialist for more tests. Because MCI may be an early sign of <a href=\"https://medlineplus.gov/alzheimersdisease.html\">Alzheimer's disease</a>, it's really important to see your health care provider every 6 to 12 months.</p> <p>At this time, there is no proven drug treatment for MCI. Your health care provider can check to see if you have any changes in your memory or thinking skills over time.</p> <p class=\"\">NIH: National Institute on Aging</p>",
+      "best_match_term": "Mild cognitive impairment",
+      "match_reason": "Exact"
+    },
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    },
+    "Memory Disorders": {
+      "conceptId": "386807006",
+      "preferred_term": "Memory impairment",
+      "fully_specified_name": "Memory impairment (finding)",
+      "type": "Clinical finding",
+      "definition": "Deterioration in memory function.",
+      "best_match_term": "Memory dysfunction",
+      "match_reason": "Ancestor"
+    }
+  },
+  "kept_counts": {
+    "Mild Cognitive Impairment": 1,
+    "Dementia": 1,
+    "Memory Disorders": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Mild Cognitive Impairment": {
+      "disease": "Mild Cognitive Impairment",
+      "conceptId": "386805003",
+      "preferred_term": "Mild cognitive disorder",
+      "fully_specified_name": "Mild cognitive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "<p>Some forgetfulness can be a normal part of aging. However, some people have more <a href=\"https://medlineplus.gov/memory.html\">memory</a> problems than other people their age. This condition is called mild cognitive impairment, or MCI. People with MCI can take care of themselves and do their normal activities.</p> <p>MCI memory problems may include:</p><ul> <li>Losing things often</li> <li>Forgetting to go to events and appointments</li> <li>Having more trouble coming up with words than other people of the same age</li> </ul> <p>Memory problems can also have other causes, including certain medicines and diseases that affect the blood vessels that supply the brain. Some of the problems brought on by these conditions can be managed or reversed.</p> <p>Your health care provider can do thinking, memory, and language tests to see if you have MCI. You may also need to see a specialist for more tests. Because MCI may be an early sign of <a href=\"https://medlineplus.gov/alzheimersdisease.html\">Alzheimer's disease</a>, it's really important to see your health care provider every 6 to 12 months.</p> <p>At this time, there is no proven drug treatment for MCI. Your health care provider can check to see if you have any changes in your memory or thinking skills over time.</p> <p class=\"\">NIH: National Institute on Aging</p>",
+      "best_match_term": "Mild cognitive impairment"
+    },
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    },
+    "Memory Disorders": {
+      "disease": "Memory Disorders",
+      "conceptId": "386807006",
+      "preferred_term": "Memory impairment",
+      "fully_specified_name": "Memory impairment (finding)",
+      "type": "Clinical finding",
+      "definition": "Deterioration in memory function.",
+      "best_match_term": "Memory dysfunction"
+    }
+  }
+}

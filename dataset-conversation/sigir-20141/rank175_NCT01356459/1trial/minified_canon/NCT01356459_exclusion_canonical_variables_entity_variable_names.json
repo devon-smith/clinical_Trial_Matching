@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_spinal_injury_now",
+  "patient_has_suspicion_of_spinal_injury_now",
+  "patient_has_finding_of_pressure_ulcer_of_heel_inthehistory",
+  "patient_has_finding_of_pressure_ulcer_of_sacral_region_inthehistory",
+  "patient_has_finding_of_heel_injury_now",
+  "patient_has_finding_of_traumatic_injury_of_sacrum_now"
+]

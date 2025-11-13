@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+  "patient_has_finding_of_weight_steady_inthepast6months",
+  "patient_body_fat_observable_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_non_smoker_inthepast6months",
+  "patient_has_finding_of_activity_exercise_pattern_inthepast3months",
+  "patient_blood_glucose_level_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patients_liver_function_is_normal_now",
+  "patients_renal_function_is_normal_now",
+  "patient_is_taking_drug_or_medicament_now"
+]

@@ -1,0 +1,7 @@
+[
+  "patient_fetal_gestational_age_value_recorded_inthehistory_withunit_weeks",
+  "patient_has_finding_of_premature_birth_of_newborn_inthehistory",
+  "patient_has_finding_of_birth_inthehistory",
+  "patient_has_suspicion_of_pharyngeal_dysphagia_inthehistory",
+  "patient_has_undergone_videofluoroscopy_swallow_inthehistory"
+]

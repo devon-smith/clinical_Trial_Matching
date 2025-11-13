@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT00628225",
+  "contextual": {
+    "_id": "NCT00628225",
+    "title": "Smoking Cessation in Patients With COPD (SMOCC) in General Practice",
+    "text": "Summary: Background: Smoking cessation is the key element in the treatment of patients with Chronic Obstructive Pulmonary Disease (COPD). The role of the general practice in assisting these patients with successful quitting smoking was suboptimal. Therefore we evaluated the effectiveness of two smoking cessation programs (counseling and nicotine replacement) for smokers with COPD in routine general practice, one with (CNB) and one without (CN) the combination with bupropion-SR, compared to usual care (UC) and explored the role of COPD symptoms in successful smoking cessation.~Method: RCT with 667 patients with COPD, 68 general practices were randomly allocated. The usual care group (UC) consisted of 148 patients (22 practices), the first intervention group (counseling plus nicotine replacement (CN) of 243 patients (21 practices) and the second intervention group of 276 patients (25 practices. Main outcome measure was (biochemically verified) point prevalence.\nInclusion criteria: inclusion criteria: \n\n A software program using Anatomical Therapeutical Chemical (ATC) prescription codes and International Classification of Primary Care (ICPC) diagnosis codes selected potential patients with COPD. Criteria: age >35 years and a diagnosis recorded as COPD or as ICPC code R95/96, or a prescription of at least three times of bronchodilators (ATC code R03a/bc) and/or prescription of at least two times of inhaled anti-inflammatory medication in the past year (ATC code R03). General practitioners (GPs) had to confirm the diagnosis of the selection. Patients were eligible to participate if they met the following criteria: \n\n Current smoking \n\n Suffering from COPD according to the GP's diagnosis \n\n In command of the Dutch language. \n\n \nExclusion criteria: : \n\n Too ill \n\n Under control of a chest physician \n\n Serious physical or psychological comorbidity",
+    "metadata": {
+      "brief_title": "Smoking Cessation in Patients With COPD (SMOCC) in General Practice",
+      "phase": "Phase 4",
+      "drugs": "['Counseling and Nicotine replacement (CN)', 'Counseling, Nicotine replacement and Bupropion (CNB)']",
+      "drugs_list": [
+        "Counseling and Nicotine replacement (CN)",
+        "Counseling",
+        "Nicotine replacement and Bupropion (CNB)"
+      ],
+      "diseases": "['Chronic Obstructive Pulmonary Disease (COPD)']",
+      "diseases_list": [
+        "Chronic Obstructive Pulmonary Disease (COPD)"
+      ],
+      "enrollment": "667.0",
+      "inclusion_criteria": "inclusion criteria: \n\n A software program using Anatomical Therapeutical Chemical (ATC) prescription codes and International Classification of Primary Care (ICPC) diagnosis codes selected potential patients with COPD. Criteria: age >35 years and a diagnosis recorded as COPD or as ICPC code R95/96, or a prescription of at least three times of bronchodilators (ATC code R03a/bc) and/or prescription of at least two times of inhaled anti-inflammatory medication in the past year (ATC code R03). General practitioners (GPs) had to confirm the diagnosis of the selection. Patients were eligible to participate if they met the following criteria: \n\n Current smoking \n\n Suffering from COPD according to the GP's diagnosis \n\n In command of the Dutch language. \n\n ",
+      "exclusion_criteria": ": \n\n Too ill \n\n Under control of a chest physician \n\n Serious physical or psychological comorbidity",
+      "brief_summary": "Background: Smoking cessation is the key element in the treatment of patients with Chronic Obstructive Pulmonary Disease (COPD). The role of the general practice in assisting these patients with successful quitting smoking was suboptimal. Therefore we evaluated the effectiveness of two smoking cessation programs (counseling and nicotine replacement) for smokers with COPD in routine general practice, one with (CNB) and one without (CN) the combination with bupropion-SR, compared to usual care (UC) and explored the role of COPD symptoms in successful smoking cessation.~Method: RCT with 667 patients with COPD, 68 general practices were randomly allocated. The usual care group (UC) consisted of 148 patients (22 practices), the first intervention group (counseling plus nicotine replacement (CN) of 243 patients (21 practices) and the second intervention group of 276 patients (25 practices. Main outcome measure was (biochemically verified) point prevalence."
+    }
+  }
+}

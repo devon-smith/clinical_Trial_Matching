@@ -1,0 +1,12 @@
+;; ===================== PROJECTED CANON (QE) =====================
+;; Each clause below is entailed by Proj = ∃W.F over the canonical vocabulary.
+;; Units appear first for clarity; OR-clauses (SAT-filtered) follow.
+;; ==================================================================
+
+;; Unit Bool constraints (entailed)
+(assert (not patient_is_taking_amlodipine_containing_product_now))
+(assert (not patient_has_finding_of_thrombocytopenic_disorder_now))
+(assert (not patient_has_finding_of_end_stage_renal_disease_now))
+(assert (not patient_has_finding_of_allergy_to_amlodipine_now))
+(assert (not patient_is_pregnant_now))
+(assert (not patient_is_lactating_now))

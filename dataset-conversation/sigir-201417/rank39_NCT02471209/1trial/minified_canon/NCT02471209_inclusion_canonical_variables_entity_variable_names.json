@@ -1,0 +1,10 @@
+[
+  "patient_has_finding_of_acholic_stool_now",
+  "patient_has_finding_of_large_liver_now",
+  "patient_has_finding_of_elevated_total_bilirubin_now",
+  "patient_has_finding_of_serum_bilirubin_raised_now",
+  "patient_has_finding_of_elevated_liver_enzymes_level_now",
+  "patient_has_undergone_ultrasonography_now",
+  "patients_bile_secretion_is_abnormal_now",
+  "patient_has_undergone_nuclear_medicine_imaging_procedure_inthehistory"
+]

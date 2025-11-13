@@ -1,0 +1,48 @@
+{
+  "generated": "2025-10-22T21:22:33",
+  "trial_id": "NCT01913743",
+  "contextual": {
+    "_id": "NCT01913743",
+    "title": "The Effects of Mindsets on the Brain's Response to Food Cues",
+    "text": "Summary: Previous studies have shown that obese individuals exhibit greater reward-related brain activity in response to food cues than lean individuals and our group has shown that successful weight loss maintainers who were previously obese and now maintain a healthy weight have increased control-related activity when viewing food cues. These findings suggest key roles for both reward-related brain areas and inhibitory control regions in eating behavior. However, no studies to date have examined (a) whether the response to food cues (i.e., cue-reactivity) can be changed in obese individuals, (b) which strategies are most effective at altering brain response to food cues, or (c) the neural mechanisms that support such change.~Given the omnipresent environmental cues to eat and the association between heightened reward-responsivity and obesity, it is critical to investigate ways to potentially alter food cue-reactivity in the obese. The most widely employed approach for behavioral weight loss treatment is Cognitive Behavioral Therapy (CBT), which incorporates strategies to control and change cognitions (e.g., avoid desire to eat tempting foods by focusing on something else). This approach is sometimes described as change- focused because modifying negative thoughts is assumed to thereby change associated maladaptive emotions and behaviors. Alternatively, emerging evidence suggests Acceptance and Commitment Therapy (ACT), which teaches participants to recognize and accept their cravings as feelings that need not be acted upon, may also be effective in treating obesity. A third strategy often employed in smoking cessation and substance abuse treatment is to focus on the long-term consequences of behaviors, however this form of treatment is not typically used in behavioral weight loss therapy. Thus although each approach is potentially effective, these treatment approaches differ greatly in the cognitive strategies they employ.~The primary aim of the proposed research is to compare a cognitive strategy used in CBT ('CHANGE'), a cognitive strategy emphasized in ACT ('ACCEPT'), and a cognitive strategy used in smoking cessation ('LATER') relative to a control condition ('NOW'), in their effectiveness in altering reward and inhibitory control responses to food cues among obese individuals.\nInclusion criteria: inclusion criteria: \n\n MRI compatibility \n\n 25-55 yrs old \n\n 25-40 BMI \n\n weight stable \n\n right handed \n\n \nExclusion criteria: : \n\n MRI incompatibility \n\n left handed",
+    "metadata": {
+      "brief_title": "The Effects of Mindsets on the Brain's Response to Food Cues",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Obesity']",
+      "diseases_list": [
+        "Obesity"
+      ],
+      "enrollment": "35.0",
+      "inclusion_criteria": "inclusion criteria: \n\n MRI compatibility \n\n 25-55 yrs old \n\n 25-40 BMI \n\n weight stable \n\n right handed \n\n ",
+      "exclusion_criteria": ": \n\n MRI incompatibility \n\n left handed",
+      "brief_summary": "Previous studies have shown that obese individuals exhibit greater reward-related brain activity in response to food cues than lean individuals and our group has shown that successful weight loss maintainers who were previously obese and now maintain a healthy weight have increased control-related activity when viewing food cues. These findings suggest key roles for both reward-related brain areas and inhibitory control regions in eating behavior. However, no studies to date have examined (a) whether the response to food cues (i.e., cue-reactivity) can be changed in obese individuals, (b) which strategies are most effective at altering brain response to food cues, or (c) the neural mechanisms that support such change.~Given the omnipresent environmental cues to eat and the association between heightened reward-responsivity and obesity, it is critical to investigate ways to potentially alter food cue-reactivity in the obese. The most widely employed approach for behavioral weight loss treatment is Cognitive Behavioral Therapy (CBT), which incorporates strategies to control and change cognitions (e.g., avoid desire to eat tempting foods by focusing on something else). This approach is sometimes described as change- focused because modifying negative thoughts is assumed to thereby change associated maladaptive emotions and behaviors. Alternatively, emerging evidence suggests Acceptance and Commitment Therapy (ACT), which teaches participants to recognize and accept their cravings as feelings that need not be acted upon, may also be effective in treating obesity. A third strategy often employed in smoking cessation and substance abuse treatment is to focus on the long-term consequences of behaviors, however this form of treatment is not typically used in behavioral weight loss therapy. Thus although each approach is potentially effective, these treatment approaches differ greatly in the cognitive strategies they employ.~The primary aim of the proposed research is to compare a cognitive strategy used in CBT ('CHANGE'), a cognitive strategy emphasized in ACT ('ACCEPT'), and a cognitive strategy used in smoking cessation ('LATER') relative to a control condition ('NOW'), in their effectiveness in altering reward and inhibitory control responses to food cues among obese individuals."
+    }
+  },
+  "linked_result": {
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "generated": "2025-10-20T23:07:03",
+  "trial_id": "NCT00129467",
+  "contextual": {
+    "_id": "NCT00129467",
+    "title": "Methylphenidate for Depressed Cancer Patients Receiving Palliative Care",
+    "text": "Summary: The purpose of this study is to determine whether methylphenidate is an effective treatment for depression and to document the safety and tolerability of methylphenidate in combination with an Selective Serotonin Reuptake Inhibitor (SSRI) in SSRI treated, terminally ill, hospice and palliative care cancer patients. The investigators hypothesize that depressed hospice and palliative care patients will be more likely to have a 50% reduction in scores on a clinical measure of depression after treatment with Methylphenidate plus an SSRI compared to those patients who are taking a placebo plus an SSRI.\nInclusion criteria: inclusion criteria: \n\n Inclusion: \n\n Either enrolled in the OHSU radiology/oncology clinic or VA palliative care, and living within 120 miles of the Portland VAMC. \n\n Life-limiting disease is any type of solid or blood cancer. \n\n Eighteen years of age or older. \n\n Life expectancy of 1 year or less as reflected by hospice admission or palliative care status. Although exact life expectancy can not be predicted, actively dying patients with estimated life expectancy of < 10 days are unlikely to be enrolled. \n\n Diagnosis of major depression disorder as determined by the Structured Clinical Interview for Diagnosis (SCID). \n\n Significant depressive cognitive symptomatology as determined by a MADRS greater than 19. \n\n Currently taking an SSRI but still depressed enough to meet eligibility criteria or not taking SSRI but depressed enough to start on SSRI. \n\n Willing and able to give informed consent to participate in this study as demonstrated by the MacArthur Competence Assessment Tool for clinical research. \n\n Speaks/understands English. \n\n For patients at home who cannot self-administer medications, has a caregiver who can assist with administering medication. \n\n \nExclusion criteria: : \n\n Exclusion: \n\n Dementia or Delirium as determined by the Short Portable Mental Status Questionnaire (SPMSQ) score of less than 7. \n\n Diagnosis of delirium as determined by the Confusional Assessment Method (CAM). \n\n Any of the following Brief Psychiatric Rating Scale (BPRS) items rated 4 -, elated mood, suspiciousness, hallucinations, excitement, distractibility or motor hyperactivity. \n\n Severe insomnia. \n\n Severe anxiety. \n\n Significant suicidal ideation. \n\n History of current mental disorder in which depressive symptoms occur, but for which psychostimulants are contraindicated (schizophrenia and bipolar disorder will be based on history; active psychotic symptoms on selected BPRS items). \n\n History of stimulant abuse or other active, severe substance abuse. \n\n Contraindications to methylphenidate or an SSRI including significant cardiac arrhythmias; uncontrolled, severe hypertension; moderate-severe angina; seizure disorder; severe COPD; use of medications such as Levodopa, monoamine oxidase inhibitors, and lithium; diagnosis of narrow-angle glaucoma; or history of SSRI-induced hyponatremia,. \n\n Physical symptoms including increased blood pressure (DBP greater than 115, SBP greater than 180), pulse greater than 120, irregular pulse, or chest pain consistent with angina. \n\n Treatment for depression with a non-SSRI antidepressant including Bupropion and Venlafaxine during protocol. \n\n Known serum creatinine > 3.0, or severe liver disease as reflected by jaundice or hepatic encephalopathy. \n\n Unable to swallow pills, however if patient has gastrostomy tube or feeding tube in place the study medicines may be administered by this route. Pills may be poured into food. \n\n Receiving hospice care in a skilled nursing facility.",
+    "metadata": {
+      "brief_title": "Methylphenidate for Depressed Cancer Patients Receiving Palliative Care",
+      "phase": "",
+      "drugs": "['Methylphenidate', 'Placebo', 'Selective Serotonin Uptake Inhibitor (SSRI)']",
+      "drugs_list": [
+        "Methylphenidate",
+        "Placebo",
+        "Selective Serotonin Uptake Inhibitor (SSRI)"
+      ],
+      "diseases": "['Depression', 'Palliative Care', 'Cancer', 'Mental Disorder']",
+      "diseases_list": [
+        "Depression",
+        "Palliative Care",
+        "Cancer",
+        "Mental Disorder"
+      ],
+      "enrollment": "47.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Inclusion: \n\n Either enrolled in the OHSU radiology/oncology clinic or VA palliative care, and living within 120 miles of the Portland VAMC. \n\n Life-limiting disease is any type of solid or blood cancer. \n\n Eighteen years of age or older. \n\n Life expectancy of 1 year or less as reflected by hospice admission or palliative care status. Although exact life expectancy can not be predicted, actively dying patients with estimated life expectancy of < 10 days are unlikely to be enrolled. \n\n Diagnosis of major depression disorder as determined by the Structured Clinical Interview for Diagnosis (SCID). \n\n Significant depressive cognitive symptomatology as determined by a MADRS greater than 19. \n\n Currently taking an SSRI but still depressed enough to meet eligibility criteria or not taking SSRI but depressed enough to start on SSRI. \n\n Willing and able to give informed consent to participate in this study as demonstrated by the MacArthur Competence Assessment Tool for clinical research. \n\n Speaks/understands English. \n\n For patients at home who cannot self-administer medications, has a caregiver who can assist with administering medication. \n\n ",
+      "exclusion_criteria": ": \n\n Exclusion: \n\n Dementia or Delirium as determined by the Short Portable Mental Status Questionnaire (SPMSQ) score of less than 7. \n\n Diagnosis of delirium as determined by the Confusional Assessment Method (CAM). \n\n Any of the following Brief Psychiatric Rating Scale (BPRS) items rated 4 -, elated mood, suspiciousness, hallucinations, excitement, distractibility or motor hyperactivity. \n\n Severe insomnia. \n\n Severe anxiety. \n\n Significant suicidal ideation. \n\n History of current mental disorder in which depressive symptoms occur, but for which psychostimulants are contraindicated (schizophrenia and bipolar disorder will be based on history; active psychotic symptoms on selected BPRS items). \n\n History of stimulant abuse or other active, severe substance abuse. \n\n Contraindications to methylphenidate or an SSRI including significant cardiac arrhythmias; uncontrolled, severe hypertension; moderate-severe angina; seizure disorder; severe COPD; use of medications such as Levodopa, monoamine oxidase inhibitors, and lithium; diagnosis of narrow-angle glaucoma; or history of SSRI-induced hyponatremia,. \n\n Physical symptoms including increased blood pressure (DBP greater than 115, SBP greater than 180), pulse greater than 120, irregular pulse, or chest pain consistent with angina. \n\n Treatment for depression with a non-SSRI antidepressant including Bupropion and Venlafaxine during protocol. \n\n Known serum creatinine > 3.0, or severe liver disease as reflected by jaundice or hepatic encephalopathy. \n\n Unable to swallow pills, however if patient has gastrostomy tube or feeding tube in place the study medicines may be administered by this route. Pills may be poured into food. \n\n Receiving hospice care in a skilled nursing facility.",
+      "brief_summary": "The purpose of this study is to determine whether methylphenidate is an effective treatment for depression and to document the safety and tolerability of methylphenidate in combination with an Selective Serotonin Reuptake Inhibitor (SSRI) in SSRI treated, terminally ill, hospice and palliative care cancer patients. The investigators hypothesize that depressed hospice and palliative care patients will be more likely to have a 50% reduction in scores on a clinical measure of depression after treatment with Methylphenidate plus an SSRI compared to those patients who are taking a placebo plus an SSRI."
+    }
+  },
+  "linked_result": {
+    "Depression": {
+      "conceptId": "35489007",
+      "preferred_term": "Depressive disorder",
+      "fully_specified_name": "Depressive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "An affective disorder manifested by either a dysphoric mood or loss of interest or pleasure in usual activities. The mood disturbance is prominent and relatively persistent.",
+      "best_match_term": "Depression",
+      "match_reason": "Exact"
+    },
+    "Palliative Care": {
+      "conceptId": "103735009",
+      "preferred_term": "Palliative care",
+      "fully_specified_name": "Palliative care (regime/therapy)",
+      "type": "Regime / therapy",
+      "definition": "Care alleviating symptoms without curing the underlying disease. (Stedman, 25th ed)",
+      "best_match_term": "Palliative care",
+      "match_reason": "Exact"
+    },
+    "Cancer": {
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Cancer",
+      "match_reason": "Exact"
+    },
+    "Mental Disorder": {
+      "conceptId": "74732009",
+      "preferred_term": "Mental disorder",
+      "fully_specified_name": "Mental disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "Psychiatric illness or diseases manifested by breakdowns in the adaptational process expressed primarily as abnormalities of thought, feeling, and behavior producing either distress or impairment of function.",
+      "best_match_term": "Mental disorder",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Depression": 1,
+    "Palliative Care": 1,
+    "Cancer": 1,
+    "Mental Disorder": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Depression": {
+      "disease": "Depression",
+      "conceptId": "35489007",
+      "preferred_term": "Depressive disorder",
+      "fully_specified_name": "Depressive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "An affective disorder manifested by either a dysphoric mood or loss of interest or pleasure in usual activities. The mood disturbance is prominent and relatively persistent.",
+      "best_match_term": "Depression"
+    },
+    "Palliative Care": {
+      "disease": "Palliative Care",
+      "conceptId": "103735009",
+      "preferred_term": "Palliative care",
+      "fully_specified_name": "Palliative care (regime/therapy)",
+      "type": "Regime / therapy",
+      "definition": "Care alleviating symptoms without curing the underlying disease. (Stedman, 25th ed)",
+      "best_match_term": "Palliative care"
+    },
+    "Cancer": {
+      "disease": "Cancer",
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Cancer"
+    },
+    "Mental Disorder": {
+      "disease": "Mental Disorder",
+      "conceptId": "74732009",
+      "preferred_term": "Mental disorder",
+      "fully_specified_name": "Mental disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "Psychiatric illness or diseases manifested by breakdowns in the adaptational process expressed primarily as abnormalities of thought, feeling, and behavior producing either distress or impairment of function.",
+      "best_match_term": "Mental disorder"
+    }
+  }
+}

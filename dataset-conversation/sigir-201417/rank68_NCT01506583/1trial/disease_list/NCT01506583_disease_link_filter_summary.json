@@ -1,0 +1,168 @@
+{
+  "generated": "2025-10-22T21:07:19",
+  "trial_id": "NCT01506583",
+  "contextual": {
+    "_id": "NCT01506583",
+    "title": "Clinical Evaluation of QFlu Combo Test",
+    "text": "Summary: Currently effective antivials for influenza treatment are two influenza viral neuraminidase inhibitors, oseltamivir (Tamiflu) and zanamivir (Relenza). Resistance to these drugs is reflected by reduced susceptibility of viral neuraminidase to these drugs. The hypothesis is that the signal ratio of two reagents (with or without a single concentration of the drug) correlates the IC50 value, an accurate measurement of drug resistance but impractical for clinical use.\nInclusion criteria: inclusion criteria: \n\n Those who exhibit flu-like symptom(s) during a flu season and who (or whose guardians) are willing to participate in the study.\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Clinical Evaluation of QFlu Combo Test",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Cough', 'Myalgia', 'Nasal Obstruction', 'Sore Throat', 'Headache', 'Fatigue', 'Fever']",
+      "diseases_list": [
+        "Cough",
+        "Myalgia",
+        "Nasal Obstruction",
+        "Sore Throat",
+        "Headache",
+        "Fatigue",
+        "Fever"
+      ],
+      "enrollment": "506.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Those who exhibit flu-like symptom(s) during a flu season and who (or whose guardians) are willing to participate in the study.",
+      "exclusion_criteria": "",
+      "brief_summary": "Currently effective antivials for influenza treatment are two influenza viral neuraminidase inhibitors, oseltamivir (Tamiflu) and zanamivir (Relenza). Resistance to these drugs is reflected by reduced susceptibility of viral neuraminidase to these drugs. The hypothesis is that the signal ratio of two reagents (with or without a single concentration of the drug) correlates the IC50 value, an accurate measurement of drug resistance but impractical for clinical use."
+    }
+  },
+  "linked_result": {
+    "Cough": {
+      "conceptId": "49727002",
+      "preferred_term": "Cough",
+      "fully_specified_name": "Cough (finding)",
+      "type": "Clinical finding",
+      "definition": "A sudden, audible expulsion of air from the lungs through a partially closed glottis, preceded by inhalation. It is a protective response that serves to clear the trachea, bronchi, and/or lungs of irritants and secretions, or to prevent aspiration of foreign materials into the lungs.",
+      "best_match_term": "Cough",
+      "match_reason": "Exact"
+    },
+    "Myalgia": {
+      "conceptId": "68962001",
+      "preferred_term": "Muscle pain",
+      "fully_specified_name": "Muscle pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Painful sensation in the muscles.",
+      "best_match_term": "Myalgia",
+      "match_reason": "Exact"
+    },
+    "Nasal Obstruction": {
+      "conceptId": "232209000",
+      "preferred_term": "Nasal obstruction",
+      "fully_specified_name": "Nasal obstruction (finding)",
+      "type": "Clinical finding",
+      "definition": "Any hindrance to the passage of air into and out of the nose. The obstruction may be unilateral or bilateral, and may involve any part of the NASAL CAVITY.",
+      "best_match_term": "Nasal obstruction",
+      "match_reason": "Exact"
+    },
+    "Sore Throat": {
+      "conceptId": "162397003",
+      "preferred_term": "Pain in throat",
+      "fully_specified_name": "Pain in throat (finding)",
+      "type": "Clinical finding",
+      "definition": "Any kind of inflammatory process of the tonsils, pharynx, or/and larynx characterized by pain in swallowing.",
+      "best_match_term": "Sore throat",
+      "match_reason": "Exact"
+    },
+    "Headache": {
+      "conceptId": "25064002",
+      "preferred_term": "Headache",
+      "fully_specified_name": "Headache (finding)",
+      "type": "Clinical finding",
+      "definition": "The symptom of PAIN in the cranial region. It may be an isolated benign occurrence or manifestation of a wide variety of HEADACHE DISORDERS.",
+      "best_match_term": "Headache",
+      "match_reason": "Exact"
+    },
+    "Fatigue": {
+      "conceptId": "84229001",
+      "preferred_term": "Fatigue",
+      "fully_specified_name": "Fatigue (finding)",
+      "type": "Clinical finding",
+      "definition": "The state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli.",
+      "best_match_term": "Fatigue",
+      "match_reason": "Exact"
+    },
+    "Fever": {
+      "conceptId": "386661006",
+      "preferred_term": "Fever",
+      "fully_specified_name": "Fever (finding)",
+      "type": "Clinical finding",
+      "definition": "An abnormal elevation of body temperature, usually as a result of a pathologic process.",
+      "best_match_term": "Fever",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cough": 1,
+    "Myalgia": 1,
+    "Nasal Obstruction": 1,
+    "Sore Throat": 1,
+    "Headache": 1,
+    "Fatigue": 1,
+    "Fever": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cough": {
+      "disease": "Cough",
+      "conceptId": "49727002",
+      "preferred_term": "Cough",
+      "fully_specified_name": "Cough (finding)",
+      "type": "Clinical finding",
+      "definition": "A sudden, audible expulsion of air from the lungs through a partially closed glottis, preceded by inhalation. It is a protective response that serves to clear the trachea, bronchi, and/or lungs of irritants and secretions, or to prevent aspiration of foreign materials into the lungs.",
+      "best_match_term": "Cough"
+    },
+    "Myalgia": {
+      "disease": "Myalgia",
+      "conceptId": "68962001",
+      "preferred_term": "Muscle pain",
+      "fully_specified_name": "Muscle pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Painful sensation in the muscles.",
+      "best_match_term": "Myalgia"
+    },
+    "Nasal Obstruction": {
+      "disease": "Nasal Obstruction",
+      "conceptId": "232209000",
+      "preferred_term": "Nasal obstruction",
+      "fully_specified_name": "Nasal obstruction (finding)",
+      "type": "Clinical finding",
+      "definition": "Any hindrance to the passage of air into and out of the nose. The obstruction may be unilateral or bilateral, and may involve any part of the NASAL CAVITY.",
+      "best_match_term": "Nasal obstruction"
+    },
+    "Sore Throat": {
+      "disease": "Sore Throat",
+      "conceptId": "162397003",
+      "preferred_term": "Pain in throat",
+      "fully_specified_name": "Pain in throat (finding)",
+      "type": "Clinical finding",
+      "definition": "Any kind of inflammatory process of the tonsils, pharynx, or/and larynx characterized by pain in swallowing.",
+      "best_match_term": "Sore throat"
+    },
+    "Headache": {
+      "disease": "Headache",
+      "conceptId": "25064002",
+      "preferred_term": "Headache",
+      "fully_specified_name": "Headache (finding)",
+      "type": "Clinical finding",
+      "definition": "The symptom of PAIN in the cranial region. It may be an isolated benign occurrence or manifestation of a wide variety of HEADACHE DISORDERS.",
+      "best_match_term": "Headache"
+    },
+    "Fatigue": {
+      "disease": "Fatigue",
+      "conceptId": "84229001",
+      "preferred_term": "Fatigue",
+      "fully_specified_name": "Fatigue (finding)",
+      "type": "Clinical finding",
+      "definition": "The state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli.",
+      "best_match_term": "Fatigue"
+    },
+    "Fever": {
+      "disease": "Fever",
+      "conceptId": "386661006",
+      "preferred_term": "Fever",
+      "fully_specified_name": "Fever (finding)",
+      "type": "Clinical finding",
+      "definition": "An abnormal elevation of body temperature, usually as a result of a pathologic process.",
+      "best_match_term": "Fever"
+    }
+  }
+}

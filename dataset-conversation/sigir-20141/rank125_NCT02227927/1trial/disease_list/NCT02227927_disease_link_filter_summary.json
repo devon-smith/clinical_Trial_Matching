@@ -1,0 +1,90 @@
+{
+  "generated": "2025-10-22T21:00:43",
+  "trial_id": "NCT02227927",
+  "contextual": {
+    "_id": "NCT02227927",
+    "title": "Treatment Use of Domperidone for Gastroparesis",
+    "text": "Summary: Domperidone is a drug that may be of benefit to individuals with gastroesophageal reflux disease (GERD), with upper GI symptoms, gastroparesis, and chronic constipation.~This is a long-term treatment program for prescription of this drug to all patients who, in the investigators' judgement, could benefit from its use.\nInclusion criteria: inclusion criteria: \n\n Male or female \n\n Age 18 and older \n\n Symptoms or manifestations secondary to GERD (e.g., persistent esophagitis, heartburn, upper airway signs or symptoms or respiratory symptoms), gastrointestinal motility disorders such as nausea, vomiting, severe dyspepsia or severe chronic constipation that are refractory to standard therapy. \n\n Patients must have a comprehensive evaluation to eliminate other causes of their symptoms. \n\n Patient has signed informed consent for the administration of domperidone that informs the patient of potential adverse events including: \n\n increased prolactin levels \n\n extrapyramidal side effects \n\n breast changes \n\n cardiac arrhythmias including QT prolongation and death \n\n There is a potential for increased risk of adverse events with the drugs listed in the domperidone protocol addendum. \n\n \nExclusion criteria: : \n\n History of, or current, arrhythmias including ventricular tachycardia, ventricular fibrillation and Torsade des Pointes. Patients with minor forms of ectopy (PACs) are not necessarily excluded. \n\n Clinically significant bradycardia, sinus node dysfunction, or heart block. Prolonged QTc (QTc> 450 milliseconds for males, QTc>470 milliseconds for females). \n\n Clinically significant electrolyte disorders. \n\n Gastrointestinal hemorrhage or obstruction \n\n Presence of a prolactinoma (prolactin-releasing pituitary tumor). \n\n Pregnant or breast feeding female \n\n Known allergy to domperidone",
+    "metadata": {
+      "brief_title": "Treatment Use of Domperidone for Gastroparesis",
+      "phase": "",
+      "drugs": "['Domperidone']",
+      "drugs_list": [
+        "Domperidone"
+      ],
+      "diseases": "['Gastroesophageal Reflux Disease', 'GERD', 'Gastroparesis']",
+      "diseases_list": [
+        "Gastroesophageal Reflux Disease",
+        "GERD",
+        "Gastroparesis"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "inclusion criteria: \n\n Male or female \n\n Age 18 and older \n\n Symptoms or manifestations secondary to GERD (e.g., persistent esophagitis, heartburn, upper airway signs or symptoms or respiratory symptoms), gastrointestinal motility disorders such as nausea, vomiting, severe dyspepsia or severe chronic constipation that are refractory to standard therapy. \n\n Patients must have a comprehensive evaluation to eliminate other causes of their symptoms. \n\n Patient has signed informed consent for the administration of domperidone that informs the patient of potential adverse events including: \n\n increased prolactin levels \n\n extrapyramidal side effects \n\n breast changes \n\n cardiac arrhythmias including QT prolongation and death \n\n There is a potential for increased risk of adverse events with the drugs listed in the domperidone protocol addendum. \n\n ",
+      "exclusion_criteria": ": \n\n History of, or current, arrhythmias including ventricular tachycardia, ventricular fibrillation and Torsade des Pointes. Patients with minor forms of ectopy (PACs) are not necessarily excluded. \n\n Clinically significant bradycardia, sinus node dysfunction, or heart block. Prolonged QTc (QTc> 450 milliseconds for males, QTc>470 milliseconds for females). \n\n Clinically significant electrolyte disorders. \n\n Gastrointestinal hemorrhage or obstruction \n\n Presence of a prolactinoma (prolactin-releasing pituitary tumor). \n\n Pregnant or breast feeding female \n\n Known allergy to domperidone",
+      "brief_summary": "Domperidone is a drug that may be of benefit to individuals with gastroesophageal reflux disease (GERD), with upper GI symptoms, gastroparesis, and chronic constipation.~This is a long-term treatment program for prescription of this drug to all patients who, in the investigators' judgement, could benefit from its use."
+    }
+  },
+  "linked_result": {
+    "Gastroesophageal Reflux Disease": {
+      "conceptId": "235595009",
+      "preferred_term": "Gastroesophageal reflux disease",
+      "fully_specified_name": "Gastroesophageal reflux disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.",
+      "best_match_term": "Gastroesophageal reflux disease",
+      "match_reason": "Exact"
+    },
+    "GERD": {
+      "conceptId": "235595009",
+      "preferred_term": "Gastroesophageal reflux disease",
+      "fully_specified_name": "Gastroesophageal reflux disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.",
+      "best_match_term": "Gastroesophageal reflux disease",
+      "match_reason": "Exact"
+    },
+    "Gastroparesis": {
+      "conceptId": "235675006",
+      "preferred_term": "Gastroparesis syndrome",
+      "fully_specified_name": "Gastroparesis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Chronic delayed gastric emptying. Gastroparesis may be caused by motor dysfunction or paralysis of STOMACH muscles or may be associated with other systemic diseases such as DIABETES MELLITUS.",
+      "best_match_term": "Gastroparesis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Gastroesophageal Reflux Disease": 1,
+    "GERD": 1,
+    "Gastroparesis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Gastroesophageal Reflux Disease": {
+      "disease": "Gastroesophageal Reflux Disease",
+      "conceptId": "235595009",
+      "preferred_term": "Gastroesophageal reflux disease",
+      "fully_specified_name": "Gastroesophageal reflux disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.",
+      "best_match_term": "Gastroesophageal reflux disease"
+    },
+    "GERD": {
+      "disease": "GERD",
+      "conceptId": "235595009",
+      "preferred_term": "Gastroesophageal reflux disease",
+      "fully_specified_name": "Gastroesophageal reflux disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.",
+      "best_match_term": "Gastroesophageal reflux disease"
+    },
+    "Gastroparesis": {
+      "disease": "Gastroparesis",
+      "conceptId": "235675006",
+      "preferred_term": "Gastroparesis syndrome",
+      "fully_specified_name": "Gastroparesis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Chronic delayed gastric emptying. Gastroparesis may be caused by motor dysfunction or paralysis of STOMACH muscles or may be associated with other systemic diseases such as DIABETES MELLITUS.",
+      "best_match_term": "Gastroparesis"
+    }
+  }
+}

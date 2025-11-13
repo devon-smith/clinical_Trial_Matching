@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_acute_heart_failure_now",
+  "patient_has_symptoms_of_dyspnea_now",
+  "patient_has_symptoms_of_edema_now",
+  "patient_has_symptoms_of_fatigue_now",
+  "patient_has_clinical_signs_of_hypervolemia_now",
+  "patient_has_finding_of_pulmonary_edema_now",
+  "patient_left_ventricular_ejection_fraction_value_recorded_inthepast1months_withunit_percent",
+  "patients_systolic_blood_pressure_is_positive_inthehistory",
+  "patient_brain_natriuretic_peptide_measurement_value_recorded_inthehistory_withunit_picograms_per_milliliter"
+]

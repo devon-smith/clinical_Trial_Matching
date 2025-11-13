@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT00129233",
+  "contextual": {
+    "_id": "NCT00129233",
+    "title": "Comparison of Valsartan With Amlodipine in Hypertensive Patients With Glucose Intolerance",
+    "text": "Summary: Various guidelines recommended angiotensin converting enzyme (ACE) inhibitors or angiotensin Ⅱ receptor-1 blockers (ARBs) for hypertensive patients with diabetes on the basis of the cardiac- and reno-protective effects of these drugs. However, these recommendations could not be extrapolated to Japanese patients, because Japan has been known as a country with a low incidence of coronary artery disease and a high incidence of cerebrovascular disease. Furthermore, calcium channel blockers (CCBs) also were protective against renal function as well as ACE inhibitors in Japanese diabetic hypertensive patients. This study will test whether ARBs or CCBs are superior in treating Japanese diabetic hypertensive patients.\nInclusion criteria: inclusion criteria: \n\n Clinical diagnosis of hypertension \n\n Clinical diagnosis of type 2 diabetes or impaired glucose tolerance \n\n \nExclusion criteria: : \n\n History of congestive heart failure, myocardial infarction, or coronary revascularization in the recent 6 months. \n\n Taking calcium channel blocker for the purpose of angina pectoris \n\n Reduced ejection fraction (< 40%) \n\n Second- or third-degree of atrioventricular block \n\n Severe hypertension (> 200/110 mmHg) or secondary hypertension \n\n History of stroke in the recent 6 months \n\n Serum creatinine > 2.5 mg/dl \n\n Estimated survival duration less than 3 years due to other conditions \n\n Pregnant woman or possibly pregnant woman",
+    "metadata": {
+      "brief_title": "Comparison of Valsartan With Amlodipine in Hypertensive Patients With Glucose Intolerance",
+      "phase": "Phase 4",
+      "drugs": "['Valsartan', 'Amlodipine']",
+      "drugs_list": [
+        "Valsartan",
+        "Amlodipine"
+      ],
+      "diseases": "['Hypertension', 'Type 2 Diabetes Mellitus']",
+      "diseases_list": [
+        "Hypertension",
+        "Type 2 Diabetes Mellitus"
+      ],
+      "enrollment": "1150.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Clinical diagnosis of hypertension \n\n Clinical diagnosis of type 2 diabetes or impaired glucose tolerance \n\n ",
+      "exclusion_criteria": ": \n\n History of congestive heart failure, myocardial infarction, or coronary revascularization in the recent 6 months. \n\n Taking calcium channel blocker for the purpose of angina pectoris \n\n Reduced ejection fraction (< 40%) \n\n Second- or third-degree of atrioventricular block \n\n Severe hypertension (> 200/110 mmHg) or secondary hypertension \n\n History of stroke in the recent 6 months \n\n Serum creatinine > 2.5 mg/dl \n\n Estimated survival duration less than 3 years due to other conditions \n\n Pregnant woman or possibly pregnant woman",
+      "brief_summary": "Various guidelines recommended angiotensin converting enzyme (ACE) inhibitors or angiotensin Ⅱ receptor-1 blockers (ARBs) for hypertensive patients with diabetes on the basis of the cardiac- and reno-protective effects of these drugs. However, these recommendations could not be extrapolated to Japanese patients, because Japan has been known as a country with a low incidence of coronary artery disease and a high incidence of cerebrovascular disease. Furthermore, calcium channel blockers (CCBs) also were protective against renal function as well as ACE inhibitors in Japanese diabetic hypertensive patients. This study will test whether ARBs or CCBs are superior in treating Japanese diabetic hypertensive patients."
+    }
+  }
+}

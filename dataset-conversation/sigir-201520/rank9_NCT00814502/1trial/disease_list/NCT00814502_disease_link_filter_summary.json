@@ -1,0 +1,132 @@
+{
+  "generated": "2025-10-20T22:54:02",
+  "trial_id": "NCT00814502",
+  "contextual": {
+    "_id": "NCT00814502",
+    "title": "Zolpidem CR and Hospitalized Patients With Dementia",
+    "text": "Summary: The purpose of this research study is to compare the effectiveness of Zolpidem CR to that of placebo in improving sleep efficiency in people with dementia admitted to the hospital because of their symptoms. You can participate in this study if you have dementia of the Alzheimer's type or vascular dementia. This study involves placebo; a placebo is a tablet that looks exactly like Zolpidem CR, the study drug, but contains no active study drug. We will use placebos to see if the study results are due to the study drug or due to other reasons. Zolpidem CR is also called Ambien CR and is widely available by prescription. Zolpidem CR is approved by the U.S. Food and Drug Administration (FDA) for the short-term treatment of insomnia (trouble falling or staying asleep).\nInclusion criteria: inclusion criteria: \n\n Age between 60-99 years \n\n Clinical diagnosis of Dementia of the Alzheimer's type or Vascular Dementia \n\n Only subjects with Mini Mental Status Examination scores of greater or equal to 10 will be enrolled. \n\n \nExclusion criteria: : \n\n Subjects who are too agitated to be able to wear the activity monitors; \n\n Subjects who are actively suicidal or homicidal or for whom the clinical treatment team considers participation in the study to be unsuitable; \n\n Subjects with untreated primary sleep disorders; \n\n Subjects who receive hypnotic medications during their participation in the study; Subjects who received hypnotic medications prior to enrollment may participate in the study if they agree to stop receiving hypnotic medications (with their attending physician's approval); \n\n Subjects who are receiving over the counter sleep aids; \n\n Subjects who can not commit to abstaining from alcohol use while in the study; \n\n Subjects with known anaphylactic reaction or angioedema with Zolpidem CR.",
+    "metadata": {
+      "brief_title": "Zolpidem CR and Hospitalized Patients With Dementia",
+      "phase": "",
+      "drugs": "['Zolpidem CR', 'Placebo']",
+      "drugs_list": [
+        "Zolpidem CR",
+        "Placebo"
+      ],
+      "diseases": "['Dementia', 'Alzheimer Disease', 'Dementia, Vascular', 'Sleep Disorders', 'Circadian Dysregulation']",
+      "diseases_list": [
+        "Dementia",
+        "Alzheimer Disease",
+        "Dementia",
+        "Vascular",
+        "Sleep Disorders",
+        "Circadian Dysregulation"
+      ],
+      "enrollment": "20.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age between 60-99 years \n\n Clinical diagnosis of Dementia of the Alzheimer's type or Vascular Dementia \n\n Only subjects with Mini Mental Status Examination scores of greater or equal to 10 will be enrolled. \n\n ",
+      "exclusion_criteria": ": \n\n Subjects who are too agitated to be able to wear the activity monitors; \n\n Subjects who are actively suicidal or homicidal or for whom the clinical treatment team considers participation in the study to be unsuitable; \n\n Subjects with untreated primary sleep disorders; \n\n Subjects who receive hypnotic medications during their participation in the study; Subjects who received hypnotic medications prior to enrollment may participate in the study if they agree to stop receiving hypnotic medications (with their attending physician's approval); \n\n Subjects who are receiving over the counter sleep aids; \n\n Subjects who can not commit to abstaining from alcohol use while in the study; \n\n Subjects with known anaphylactic reaction or angioedema with Zolpidem CR.",
+      "brief_summary": "The purpose of this research study is to compare the effectiveness of Zolpidem CR to that of placebo in improving sleep efficiency in people with dementia admitted to the hospital because of their symptoms. You can participate in this study if you have dementia of the Alzheimer's type or vascular dementia. This study involves placebo; a placebo is a tablet that looks exactly like Zolpidem CR, the study drug, but contains no active study drug. We will use placebos to see if the study results are due to the study drug or due to other reasons. Zolpidem CR is also called Ambien CR and is widely available by prescription. Zolpidem CR is approved by the U.S. Food and Drug Administration (FDA) for the short-term treatment of insomnia (trouble falling or staying asleep)."
+    }
+  },
+  "linked_result": {
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    },
+    "Alzheimer Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease",
+      "match_reason": "Exact"
+    },
+    "Dementia, Vascular": {
+      "conceptId": "429998004",
+      "preferred_term": "Vascular dementia",
+      "fully_specified_name": "Vascular dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imprecise term referring to dementia associated with CEREBROVASCULAR DISORDERS, including CEREBRAL INFARCTION (single or multiple), and conditions associated with chronic BRAIN ISCHEMIA. Diffuse, cortical, and subcortical subtypes have been described. (From Gerontol Geriatr 1998 Feb;31(1):36-44)",
+      "best_match_term": "Vascular dementia",
+      "match_reason": "Exact"
+    },
+    "Sleep Disorders": {
+      "conceptId": "39898005",
+      "preferred_term": "Sleep disorder",
+      "fully_specified_name": "Sleep disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "Conditions characterized by disturbances of usual sleep patterns or behaviors. SLEEP WAKE DISORDERS may be divided into three major categories: DYSSOMNIAS (i.e. disorders characterized by insomnia or hypersomnia), PARASOMNIAS (abnormal sleep behaviors), and SLEEP WAKE DISORDERS secondary to medical or psychiatric disorders. (From Thorpy, Sleep Disorders Medicine, 1994, p187)",
+      "best_match_term": "Sleep disorder",
+      "match_reason": "Exact"
+    },
+    "Circadian Dysregulation": {
+      "conceptId": "271794005",
+      "preferred_term": "Disorder of sleep-wake cycle",
+      "fully_specified_name": "Disorder of sleep-wake cycle (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Circadian dysregulation",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Dementia": 1,
+    "Alzheimer Disease": 1,
+    "Dementia, Vascular": 1,
+    "Sleep Disorders": 1,
+    "Circadian Dysregulation": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    },
+    "Alzheimer Disease": {
+      "disease": "Alzheimer Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease"
+    },
+    "Dementia, Vascular": {
+      "disease": "Dementia, Vascular",
+      "conceptId": "429998004",
+      "preferred_term": "Vascular dementia",
+      "fully_specified_name": "Vascular dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imprecise term referring to dementia associated with CEREBROVASCULAR DISORDERS, including CEREBRAL INFARCTION (single or multiple), and conditions associated with chronic BRAIN ISCHEMIA. Diffuse, cortical, and subcortical subtypes have been described. (From Gerontol Geriatr 1998 Feb;31(1):36-44)",
+      "best_match_term": "Vascular dementia"
+    },
+    "Sleep Disorders": {
+      "disease": "Sleep Disorders",
+      "conceptId": "39898005",
+      "preferred_term": "Sleep disorder",
+      "fully_specified_name": "Sleep disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "Conditions characterized by disturbances of usual sleep patterns or behaviors. SLEEP WAKE DISORDERS may be divided into three major categories: DYSSOMNIAS (i.e. disorders characterized by insomnia or hypersomnia), PARASOMNIAS (abnormal sleep behaviors), and SLEEP WAKE DISORDERS secondary to medical or psychiatric disorders. (From Thorpy, Sleep Disorders Medicine, 1994, p187)",
+      "best_match_term": "Sleep disorder"
+    },
+    "Circadian Dysregulation": {
+      "disease": "Circadian Dysregulation",
+      "conceptId": "271794005",
+      "preferred_term": "Disorder of sleep-wake cycle",
+      "fully_specified_name": "Disorder of sleep-wake cycle (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Circadian dysregulation"
+    }
+  }
+}

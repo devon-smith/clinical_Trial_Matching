@@ -1,0 +1,8 @@
+[
+  "patient_has_diagnosis_of_acute_coronary_syndrome_now",
+  "patient_has_diagnosis_of_ischemic_stroke_now",
+  "patient_has_diagnosis_of_non_q_wave_myocardial_infarction_now",
+  "patient_has_diagnosis_of_acute_coronary_syndrome_inthehistory",
+  "patient_has_diagnosis_of_ischemic_stroke_inthehistory",
+  "patient_has_diagnosis_of_non_q_wave_myocardial_infarction_inthehistory"
+]

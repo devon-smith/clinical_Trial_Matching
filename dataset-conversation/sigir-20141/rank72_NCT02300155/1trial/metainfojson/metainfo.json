@@ -1,0 +1,29 @@
+{
+  "trial_id": "NCT02300155",
+  "contextual": {
+    "_id": "NCT02300155",
+    "title": "Improving Multivitamin Supplementation to Pregnant Women",
+    "text": "Summary: The purpose of this study is to compare the tolerability of Pregvit® to a common prenatal vitamin (Orifer® F) among pregnant women with morning sickness or those suffering from a variety of conditions.\nInclusion criteria: inclusion criteria: \n\n Any woman who discontinued her standard vitamins due to gastrointestinal symptoms or due to the tablet size, with one ofthe following conditions: \n\n Morning sickness. \n\n Gastrointestinal disorders: Crohn's disease, ulcerative colitis, peptic or duodenal ulcer, irritable colon, celiac disease. \n\n Iron deficiency anemia. \n\n Hypothyroidism. \n\n Depression. \n\n \nExclusion criteria: : \n\n Women who do not agree to consent to this protocol. \n\n Women with a known hypersensitivity to any of the ingredients of Pregvit®, or Orifer® F.",
+    "metadata": {
+      "brief_title": "Improving Multivitamin Supplementation to Pregnant Women",
+      "phase": "Phase 4",
+      "drugs": "['Pregvit®', 'Orifer F®']",
+      "drugs_list": [
+        "Pregvit®",
+        "Orifer F®"
+      ],
+      "diseases": "['Pregnancy', 'Morning Sickness', 'Nausea', 'Vomiting', 'Hyperemesis Gravidarum']",
+      "diseases_list": [
+        "Pregnancy",
+        "Morning Sickness",
+        "Nausea",
+        "Vomiting",
+        "Hyperemesis Gravidarum"
+      ],
+      "enrollment": "1370.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Any woman who discontinued her standard vitamins due to gastrointestinal symptoms or due to the tablet size, with one ofthe following conditions: \n\n Morning sickness. \n\n Gastrointestinal disorders: Crohn's disease, ulcerative colitis, peptic or duodenal ulcer, irritable colon, celiac disease. \n\n Iron deficiency anemia. \n\n Hypothyroidism. \n\n Depression. \n\n ",
+      "exclusion_criteria": ": \n\n Women who do not agree to consent to this protocol. \n\n Women with a known hypersensitivity to any of the ingredients of Pregvit®, or Orifer® F.",
+      "brief_summary": "The purpose of this study is to compare the tolerability of Pregvit® to a common prenatal vitamin (Orifer® F) among pregnant women with morning sickness or those suffering from a variety of conditions."
+    }
+  }
+}

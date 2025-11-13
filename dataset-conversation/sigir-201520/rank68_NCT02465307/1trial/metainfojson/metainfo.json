@@ -1,0 +1,29 @@
+{
+  "trial_id": "NCT02465307",
+  "contextual": {
+    "_id": "NCT02465307",
+    "title": "Intelligent Intensive Care Unit",
+    "text": "Summary: Delirium, as a common complication of hospitalization, poses significant health problems in hospitalized patients. Though about a third of delirium cases can benefit from intervention, detecting and predicting delirium is still very limited in practice. A common characterization of delirium is change in activity level, causing patients to become hyperactive or hypoactive which is manifested in facial expressions and total body movements. This pilot study is designed to test the feasibility of a delirium detection system using movement data obtained from 3-axis wearable accelerometers and commercially available camera with facial recognition video system in conjunction with electronics medical record (EMR) data to analyze the relation of whole-body movement and facial expressions with delirium.\nInclusion criteria: inclusion criteria (ICU Patients): \n\n Intensive care unit patient \n\n 18 years of age or older \n\n \nExclusion criteria:  (ICU Patients): \n\n Anticipated intensive care unit stay less than one day \n\n Less than 18 years of age \n\n Inability to wear a motion sensor watch (ActiGraph) \n\n inclusion criteria (Healthy Controls): \n\n 18 years of age or older. \n\n sleeps in home environment \n\n ",
+    "metadata": {
+      "brief_title": "Intelligent Intensive Care Unit",
+      "phase": "",
+      "drugs": "['Confusion Assessment Method', 'Accelerometer', 'Commercially available camera', 'Internet Pod (iPod)', 'Cortisol Swab']",
+      "drugs_list": [
+        "Confusion Assessment Method",
+        "Accelerometer",
+        "Commercially available camera",
+        "Internet Pod (iPod)",
+        "Cortisol Swab"
+      ],
+      "diseases": "['Delirium', 'Confusion']",
+      "diseases_list": [
+        "Delirium",
+        "Confusion"
+      ],
+      "enrollment": "130.0",
+      "inclusion_criteria": "inclusion criteria (ICU Patients): \n\n Intensive care unit patient \n\n 18 years of age or older \n\n ",
+      "exclusion_criteria": " (ICU Patients): \n\n Anticipated intensive care unit stay less than one day \n\n Less than 18 years of age \n\n Inability to wear a motion sensor watch (ActiGraph) \n\n inclusion criteria (Healthy Controls): \n\n 18 years of age or older. \n\n sleeps in home environment \n\n ",
+      "brief_summary": "Delirium, as a common complication of hospitalization, poses significant health problems in hospitalized patients. Though about a third of delirium cases can benefit from intervention, detecting and predicting delirium is still very limited in practice. A common characterization of delirium is change in activity level, causing patients to become hyperactive or hypoactive which is manifested in facial expressions and total body movements. This pilot study is designed to test the feasibility of a delirium detection system using movement data obtained from 3-axis wearable accelerometers and commercially available camera with facial recognition video system in conjunction with electronics medical record (EMR) data to analyze the relation of whole-body movement and facial expressions with delirium."
+    }
+  }
+}

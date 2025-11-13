@@ -1,0 +1,23 @@
+[
+  "patient_has_taken_angiotensin_ii_receptor_antagonist_containing_product_inthehistory",
+  "patient_will_undergo_coronary_artery_bypass_graft_inthefuture",
+  "patient_has_diagnosis_of_ischemic_heart_disease_inthehistory",
+  "patient_will_undergo_percutaneous_coronary_intervention_inthefuture",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+  "patient_has_finding_of_malignant_hypertension_now",
+  "patient_has_finding_of_secondary_hypertension_now",
+  "patient_is_pregnant_now",
+  "patient_has_childbearing_potential_now",
+  "patient_has_diagnosis_of_angina_pectoris_inthehistory",
+  "patient_has_undergone_coronary_angioplasty_inthehistory",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_has_diagnosis_of_heart_failure_inthehistory",
+  "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_cardiac_arrhythmia_now",
+  "patient_has_finding_of_complete_atrioventricular_block_now",
+  "patient_has_finding_of_second_degree_atrioventricular_block_now",
+  "patient_creatinine_measurement_serum_value_recorded_now_withunit_mg_per_dl",
+  "patient_has_finding_of_renal_impairment_now",
+  "patient_has_finding_of_cirrhosis_of_liver_now",
+  "patient_has_finding_of_hepatic_failure_now"
+]

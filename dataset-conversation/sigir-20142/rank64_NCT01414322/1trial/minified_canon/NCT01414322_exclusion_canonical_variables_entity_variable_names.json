@@ -1,0 +1,7 @@
+[
+  "patient_is_exposed_to_bronchodilator_inthepast1hours",
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_has_finding_of_skin_lesion_now",
+  "patient_has_diagnosis_of_cystic_fibrosis_now",
+  "patient_has_finding_of_hemodynamic_instability_now"
+]

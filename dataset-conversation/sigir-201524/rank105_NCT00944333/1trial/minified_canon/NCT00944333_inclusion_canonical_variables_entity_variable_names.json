@@ -1,0 +1,11 @@
+[
+  "patient_has_diagnosis_of_angina_pectoris_now",
+  "patient_is_taking_drug_eluting_stent_now",
+  "patient_has_diagnosis_of_preinfarction_syndrome_now",
+  "patient_has_diagnosis_of_silent_myocardial_ischemia_now",
+  "patient_has_finding_of_stricture_of_artery_now",
+  "patient_stricture_of_artery_value_recorded_now_withunit_percent",
+  "patient_is_taking_second_generation_drug_eluting_stent_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_finding_of_lesion_now"
+]

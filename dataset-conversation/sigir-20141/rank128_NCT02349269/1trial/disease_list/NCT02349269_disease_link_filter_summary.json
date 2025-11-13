@@ -1,0 +1,88 @@
+{
+  "generated": "2025-10-22T20:58:57",
+  "trial_id": "NCT02349269",
+  "contextual": {
+    "_id": "NCT02349269",
+    "title": "Postoperative Atrial Fibrillation and Long-term Survival",
+    "text": "Summary: The aim of the investigators trial was to evaluate association between new onset postoperative atrial fibrillation (POAF) and late cardiovascular morbidity and mortality.\nInclusion criteria: inclusion criteria: \n\n previously cardiac operation, CABG or AVR \n\n \nExclusion criteria: : \n\n Previous Atrial fibrillation",
+    "metadata": {
+      "brief_title": "Postoperative Atrial Fibrillation and Long-term Survival",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Death', 'Stroke', 'Myocardial Infarction']",
+      "diseases_list": [
+        "Death",
+        "Stroke",
+        "Myocardial Infarction"
+      ],
+      "enrollment": "519.0",
+      "inclusion_criteria": "inclusion criteria: \n\n previously cardiac operation, CABG or AVR \n\n ",
+      "exclusion_criteria": ": \n\n Previous Atrial fibrillation",
+      "brief_summary": "The aim of the investigators trial was to evaluate association between new onset postoperative atrial fibrillation (POAF) and late cardiovascular morbidity and mortality."
+    }
+  },
+  "linked_result": {
+    "Death": {
+      "conceptId": "419099009",
+      "preferred_term": "Dead",
+      "fully_specified_name": "Dead (finding)",
+      "type": "Clinical finding",
+      "definition": "Based on an ECOG score of 5",
+      "best_match_term": "Died",
+      "match_reason": "Exact"
+    },
+    "Stroke": {
+      "conceptId": "230690007",
+      "preferred_term": "Cerebrovascular accident",
+      "fully_specified_name": "Cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)",
+      "best_match_term": "Stroke",
+      "match_reason": "Exact"
+    },
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Death": 1,
+    "Stroke": 1,
+    "Myocardial Infarction": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Death": {
+      "disease": "Death",
+      "conceptId": "419099009",
+      "preferred_term": "Dead",
+      "fully_specified_name": "Dead (finding)",
+      "type": "Clinical finding",
+      "definition": "Based on an ECOG score of 5",
+      "best_match_term": "Died"
+    },
+    "Stroke": {
+      "disease": "Stroke",
+      "conceptId": "230690007",
+      "preferred_term": "Cerebrovascular accident",
+      "fully_specified_name": "Cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)",
+      "best_match_term": "Stroke"
+    },
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    }
+  }
+}

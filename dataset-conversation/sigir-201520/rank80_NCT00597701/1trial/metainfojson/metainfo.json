@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT00597701",
+  "contextual": {
+    "_id": "NCT00597701",
+    "title": "Treating Alcohol Withdrawal With Oral Baclofen",
+    "text": "Summary: The purpose of this study is determine if subjects with alcohol withdrawal who receive oral baclofen, plus standard benzodiazepine therapy, will experience less severe withdrawal symptoms than those who receive placebo plus standard benzodiazepine therapy.Subjects with alcohol withdrawal syndrome(AWS)who receive baclofen plus standard benzodiazepine therapy will experience fewer complications of AWS (as measured by use of additional sedatives, restraints, and/or intensive care unit [ICU] admissions) compared with subjects who receive placebo plus standard benzodiazepine therapy.\nInclusion criteria: inclusion criteria: \n\n Meet Diagnostic and Statistical Manual, 4th version, revised (DSMr-IV) criteria for alcohol withdrawal syndrome (AWS). \n\n Be an inpatient at St. Mary's Medical Center (SMMC) or Miller Dwan Medical Center (MDMC) at time of study enrollment. \n\n Have an alcohol withdrawal score as measured by standard SMMC or MDMC inpatient protocol sufficient to trigger the use of benzodiazepine withdrawal therapy. \n\n Agree to abstain for alcohol for duration of study. \n\n Be able to provide informed consent. \n\n \nExclusion criteria: : \n\n The patient must not have any other active drug dependence in addition to alcohol. \n\n Be unwilling or unable to forgo alcohol for the duration of the study. \n\n Be using baclofen at the time of study enrollment. \n\n Be using benzodiazepines for any reason other than acute alcohol withdrawal syndrome at time of study enrollment. \n\n have known baclofen or benzodiazepine sensitivity. \n\n Be unable to take oral (PO) meds. \n\n Be unable to complete one of two consenting procedures. \n\n Be pregnant or breastfeeding. \n\n Have a serum creatine level > 2.0. \n\n Have a history of non alcoholic withdrawal seizures.",
+    "metadata": {
+      "brief_title": "Treating Alcohol Withdrawal With Oral Baclofen",
+      "phase": "",
+      "drugs": "['Baclofen', 'Placebo', 'Lorazepam']",
+      "drugs_list": [
+        "Baclofen",
+        "Placebo",
+        "Lorazepam"
+      ],
+      "diseases": "['Alcohol Withdrawal Delirium']",
+      "diseases_list": [
+        "Alcohol Withdrawal Delirium"
+      ],
+      "enrollment": "79.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Meet Diagnostic and Statistical Manual, 4th version, revised (DSMr-IV) criteria for alcohol withdrawal syndrome (AWS). \n\n Be an inpatient at St. Mary's Medical Center (SMMC) or Miller Dwan Medical Center (MDMC) at time of study enrollment. \n\n Have an alcohol withdrawal score as measured by standard SMMC or MDMC inpatient protocol sufficient to trigger the use of benzodiazepine withdrawal therapy. \n\n Agree to abstain for alcohol for duration of study. \n\n Be able to provide informed consent. \n\n ",
+      "exclusion_criteria": ": \n\n The patient must not have any other active drug dependence in addition to alcohol. \n\n Be unwilling or unable to forgo alcohol for the duration of the study. \n\n Be using baclofen at the time of study enrollment. \n\n Be using benzodiazepines for any reason other than acute alcohol withdrawal syndrome at time of study enrollment. \n\n have known baclofen or benzodiazepine sensitivity. \n\n Be unable to take oral (PO) meds. \n\n Be unable to complete one of two consenting procedures. \n\n Be pregnant or breastfeeding. \n\n Have a serum creatine level > 2.0. \n\n Have a history of non alcoholic withdrawal seizures.",
+      "brief_summary": "The purpose of this study is determine if subjects with alcohol withdrawal who receive oral baclofen, plus standard benzodiazepine therapy, will experience less severe withdrawal symptoms than those who receive placebo plus standard benzodiazepine therapy.Subjects with alcohol withdrawal syndrome(AWS)who receive baclofen plus standard benzodiazepine therapy will experience fewer complications of AWS (as measured by use of additional sedatives, restraints, and/or intensive care unit [ICU] admissions) compared with subjects who receive placebo plus standard benzodiazepine therapy."
+    }
+  }
+}

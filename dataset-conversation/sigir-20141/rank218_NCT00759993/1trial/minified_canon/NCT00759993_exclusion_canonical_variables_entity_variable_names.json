@@ -1,0 +1,21 @@
+[
+  "patient_has_diagnosis_of_mental_disorder_now",
+  "patient_has_finding_of_at_risk_for_suicide_now",
+  "patient_has_finding_of_insulin_resistance_inthefuture",
+  "patient_has_finding_of_insulin_resistance_now",
+  "patient_has_finding_of_diabetes_mellitus_now",
+  "patient_has_finding_of_hypercortisolism_now",
+  "patient_has_finding_of_hypothyroidism_now",
+  "patient_has_finding_of_weight_decreased_now",
+  "patient_has_finding_of_weight_increased_now",
+  "patient_body_weight_value_recorded_inthepast2months_withunit_kg",
+  "patient_has_finding_of_weight_decreased_inthepast2months",
+  "patient_is_undergoing_clinical_trial_now",
+  "patient_has_finding_of_disease_now",
+  "patient_has_finding_of_patient_s_condition_unstable_now",
+  "patient_has_undergone_physical_examination_now_outcome_is_abnormal",
+  "patient_is_exposed_to_bupropion_hydrochloride_now",
+  "patient_is_exposed_to_metformin_now",
+  "patient_is_exposed_to_molindone_hydrochloride_now",
+  "patient_is_exposed_to_psychostimulant_now"
+]

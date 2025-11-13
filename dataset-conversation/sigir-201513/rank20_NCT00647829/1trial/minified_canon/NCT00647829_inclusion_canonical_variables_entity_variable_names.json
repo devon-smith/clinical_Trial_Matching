@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_moderate_pain_now",
+  "patient_has_finding_of_mouth_breathing_now",
+  "patient_pain_value_recorded_now_withunit_millimeter",
+  "patient_has_finding_of_severe_pain_now",
+  "patient_visual_analog_scale_score_value_recorded_now_withunit_millimeter",
+  "patients_deglutition_is_positive_now"
+]

@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_has_undergone_thrombolytic_therapy_inthehistory",
+  "patient_has_finding_of_stenosis_of_artery_now",
+  "patient_has_finding_of_hemodynamic_instability_now",
+  "patient_is_exposed_to_inotropic_agent_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_glomerular_filtration_rate_value_recorded_now_withunit_milliliters_per_minute",
+  "patient_has_finding_of_renal_insufficiency_now",
+  "patient_can_undergo_cardiac_mri_now"
+]

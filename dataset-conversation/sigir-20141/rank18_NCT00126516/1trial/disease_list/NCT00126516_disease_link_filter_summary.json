@@ -1,0 +1,71 @@
+{
+  "generated": "2025-10-22T21:28:07",
+  "trial_id": "NCT00126516",
+  "contextual": {
+    "_id": "NCT00126516",
+    "title": "Angiotensin II Receptor Blockers (ARB) and ACE Inhibitors (ACEI) on Silent Brain Infarction and Cognitive Decline",
+    "text": "Summary: The purpose of this study is to elucidate whether or not angiotensin II receptor blockers (ARB) are more beneficial or equal to angiotensin converting enzyme inhibitors (ACEI) on development or progression of silent brain infarction and cognitive decline in Japanese patients with essential hypertension in the elderly.\nInclusion criteria: inclusion criteria: \n\n Patients with essential hypertension (systolic blood pressure>=140 mmHg and/or diastolic blood pressure>=90, or treated with antihypertensive drugs) \n\n Patients with any finding of stroke, silent brain infarction, and white matter lesion on magnetic resonance imaging \n\n \nExclusion criteria: : \n\n Secondary hypertension \n\n Atrial fibrillation \n\n History or signs of cerebral disorders other than cerebrovascular disease \n\n Malignant tumor \n\n Chronic renal failure \n\n Severe congestive heart failure \n\n Hyperkalemia \n\n Stenosis of bilateral renal artery",
+    "metadata": {
+      "brief_title": "Angiotensin II Receptor Blockers (ARB) and ACE Inhibitors (ACEI) on Silent Brain Infarction and Cognitive Decline",
+      "phase": "Phase 4",
+      "drugs": "['Angiotensin II Receptor Antagonists', 'Angiotensin-converting Enzyme Inhibitors']",
+      "drugs_list": [
+        "Angiotensin II Receptor Antagonists",
+        "Angiotensin-converting Enzyme Inhibitors"
+      ],
+      "diseases": "['Brain Infarction', 'Hypertension']",
+      "diseases_list": [
+        "Brain Infarction",
+        "Hypertension"
+      ],
+      "enrollment": "395.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients with essential hypertension (systolic blood pressure>=140 mmHg and/or diastolic blood pressure>=90, or treated with antihypertensive drugs) \n\n Patients with any finding of stroke, silent brain infarction, and white matter lesion on magnetic resonance imaging \n\n ",
+      "exclusion_criteria": ": \n\n Secondary hypertension \n\n Atrial fibrillation \n\n History or signs of cerebral disorders other than cerebrovascular disease \n\n Malignant tumor \n\n Chronic renal failure \n\n Severe congestive heart failure \n\n Hyperkalemia \n\n Stenosis of bilateral renal artery",
+      "brief_summary": "The purpose of this study is to elucidate whether or not angiotensin II receptor blockers (ARB) are more beneficial or equal to angiotensin converting enzyme inhibitors (ACEI) on development or progression of silent brain infarction and cognitive decline in Japanese patients with essential hypertension in the elderly."
+    }
+  },
+  "linked_result": {
+    "Brain Infarction": {
+      "conceptId": "432504007",
+      "preferred_term": "Cerebral infarction",
+      "fully_specified_name": "Cerebral infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "The formation of an area of NECROSIS in the CEREBRUM caused by an insufficiency of arterial or venous blood flow. Infarcts of the cerebrum are generally classified by hemisphere (i.e., left vs. right), lobe (e.g., frontal lobe infarction), arterial distribution (e.g., INFARCTION, ANTERIOR CEREBRAL ARTERY), and etiology (e.g., embolic infarction).",
+      "best_match_term": "Cerebral infarction",
+      "match_reason": "Exact"
+    },
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Brain Infarction": 1,
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Brain Infarction": {
+      "disease": "Brain Infarction",
+      "conceptId": "432504007",
+      "preferred_term": "Cerebral infarction",
+      "fully_specified_name": "Cerebral infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "The formation of an area of NECROSIS in the CEREBRUM caused by an insufficiency of arterial or venous blood flow. Infarcts of the cerebrum are generally classified by hemisphere (i.e., left vs. right), lobe (e.g., frontal lobe infarction), arterial distribution (e.g., INFARCTION, ANTERIOR CEREBRAL ARTERY), and etiology (e.g., embolic infarction).",
+      "best_match_term": "Cerebral infarction"
+    },
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

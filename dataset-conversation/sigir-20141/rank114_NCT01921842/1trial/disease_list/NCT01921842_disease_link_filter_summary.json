@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-22T20:54:59",
+  "trial_id": "NCT01921842",
+  "contextual": {
+    "_id": "NCT01921842",
+    "title": "Child Care Wellness Study on Nutrition and Physical Activity",
+    "text": "Summary: The study is an evaluation of a nutrition and physical activity intervention in child care centers in NC, CA, and CT.\nInclusion criteria: inclusion criteria: \n\n In each of the three geographical areas (NC, CA, CT), two pairs of community-based child care centers in urban areas with English-speaking directors, kitchens, and with 50-60 children between the ages of 2 and 5 years, 35% of whom are eligible for subsidy. \n\n \nExclusion criteria: : \n\n If the randomly selected child care center has an open case of child abuse or neglect.",
+    "metadata": {
+      "brief_title": "Child Care Wellness Study on Nutrition and Physical Activity",
+      "phase": "",
+      "drugs": "['NAP-SACC Child Care Wellness Program']",
+      "drugs_list": [
+        "NAP-SACC Child Care Wellness Program"
+      ],
+      "diseases": "['Overweight', 'Obesity']",
+      "diseases_list": [
+        "Overweight",
+        "Obesity"
+      ],
+      "enrollment": "18.0",
+      "inclusion_criteria": "inclusion criteria: \n\n In each of the three geographical areas (NC, CA, CT), two pairs of community-based child care centers in urban areas with English-speaking directors, kitchens, and with 50-60 children between the ages of 2 and 5 years, 35% of whom are eligible for subsidy. \n\n ",
+      "exclusion_criteria": ": \n\n If the randomly selected child care center has an open case of child abuse or neglect.",
+      "brief_summary": "The study is an evaluation of a nutrition and physical activity intervention in child care centers in NC, CA, and CT."
+    }
+  },
+  "linked_result": {
+    "Overweight": {
+      "conceptId": "238131007",
+      "preferred_term": "Overweight",
+      "fully_specified_name": "Overweight (finding)",
+      "type": "Clinical finding",
+      "definition": "A status with BODY WEIGHT that is above certain standards. In the scale of BODY MASS INDEX, overweight is defined as having a BMI of 25.0-29.9 kg/m2. Overweight may or may not be due to increases in body fat (ADIPOSE TISSUE), hence overweight does not equal over fat.",
+      "best_match_term": "Overweight",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Overweight": 1,
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Overweight": {
+      "disease": "Overweight",
+      "conceptId": "238131007",
+      "preferred_term": "Overweight",
+      "fully_specified_name": "Overweight (finding)",
+      "type": "Clinical finding",
+      "definition": "A status with BODY WEIGHT that is above certain standards. In the scale of BODY MASS INDEX, overweight is defined as having a BMI of 25.0-29.9 kg/m2. Overweight may or may not be due to increases in body fat (ADIPOSE TISSUE), hence overweight does not equal over fat.",
+      "best_match_term": "Overweight"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

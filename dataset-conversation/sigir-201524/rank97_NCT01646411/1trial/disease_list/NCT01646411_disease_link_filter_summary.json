@@ -1,0 +1,68 @@
+{
+  "generated": "2025-10-20T23:02:25",
+  "trial_id": "NCT01646411",
+  "contextual": {
+    "_id": "NCT01646411",
+    "title": "300 Antibody Diagnostic Test Kit",
+    "text": "Summary: For the development of a Point of Care IVD test kit for acute phase disease detection against a variety of bacterial and viral infections. Phase one includes 100 clinical diagnosed positive and 200 clinically normal serum and whole blood matched specimens for specificity and sensitivity determination for each marker. The positive samples must be IgM positive using any FDA cleared ELISA test kit. The negatives samples must be negative for IgM.\nInclusion criteria: inclusion criteria: \n\n current acute infection \n\n age 18-70 \n\n male or female \n\n any race \n\n currently active symptoms\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "300 Antibody Diagnostic Test Kit",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Acute Bacterial Infections', 'Acute Viral Infections']",
+      "diseases_list": [
+        "Acute Bacterial Infections",
+        "Acute Viral Infections"
+      ],
+      "enrollment": "300.0",
+      "inclusion_criteria": "inclusion criteria: \n\n current acute infection \n\n age 18-70 \n\n male or female \n\n any race \n\n currently active symptoms",
+      "exclusion_criteria": "",
+      "brief_summary": "For the development of a Point of Care IVD test kit for acute phase disease detection against a variety of bacterial and viral infections. Phase one includes 100 clinical diagnosed positive and 200 clinically normal serum and whole blood matched specimens for specificity and sensitivity determination for each marker. The positive samples must be IgM positive using any FDA cleared ELISA test kit. The negatives samples must be negative for IgM."
+    }
+  },
+  "linked_result": {
+    "Acute Bacterial Infections": {
+      "conceptId": "87628006",
+      "preferred_term": "Bacterial infectious disease",
+      "fully_specified_name": "Bacterial infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections by bacteria, general or unspecified.",
+      "best_match_term": "Bacterial infection",
+      "match_reason": "Ancestor"
+    },
+    "Acute Viral Infections": {
+      "conceptId": "409631000",
+      "preferred_term": "Acute viral disease",
+      "fully_specified_name": "Acute viral disease (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Acute viral disease (disorder)",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Acute Bacterial Infections": 1,
+    "Acute Viral Infections": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Acute Bacterial Infections": {
+      "disease": "Acute Bacterial Infections",
+      "conceptId": "87628006",
+      "preferred_term": "Bacterial infectious disease",
+      "fully_specified_name": "Bacterial infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections by bacteria, general or unspecified.",
+      "best_match_term": "Bacterial infection"
+    },
+    "Acute Viral Infections": {
+      "disease": "Acute Viral Infections",
+      "conceptId": "409631000",
+      "preferred_term": "Acute viral disease",
+      "fully_specified_name": "Acute viral disease (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Acute viral disease (disorder)"
+    }
+  }
+}

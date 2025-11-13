@@ -1,0 +1,54 @@
+# EEG-Based Brain-Computer Interface Project for Individuals With Amyotrophic Lateral Sclerosis (ALS)
+**NCT**: `NCT00718458`
+## Brief Summary
+Amyotrophic lateral sclerosis (ALS) is a progressive neuromuscular condition characterized by weakness, muscle wasting, fasciculations and increased reflexes. Depending on the site of onset, individuals with ALS progressively lose control of their skeletal muscles; bulbar or the extremities. As symptoms worsen and spread, muscle atrophy becomes apparent and upper motor neuron symptoms such as spasticity complicate gait (in lower limb involvement) and manual dexterity (in upper limb involvement). The patients progress to a state of profound disability and have great difficulty in communicating; some may even be entirely locked in to their bodies. The capacity for simple communication could greatly improve their quality of life.~New technologies are giving people with disabilities alternate communication and control options. One such instrument is the EEG-based Brain-Computer Interface (BCI) which can provide both communication and control functions to those who have lost muscle control. By recording electroencephalographic (EEG) signals or brain waves from the scalp and then decoding them, the Wadsworth BCI allows people to make selections on a computer screen [i] In this study we will be investigating the feasibility of using EEG-based Brain-Computer Interface technology as a communication solution for individuals with ALS. The specific question addressed will be: Can individuals with ALS use the BCI for communication when they present with extreme loss of neuromuscular control and severe communication impairments? The goal of the project is to determine whether this device is a practical and realistic means for individuals with ALS to communicate. The study is intended to evaluate both the complexity of the system and the degree to which each participant will be able to communicate. Trials will consist of asking the subject to follow a series of simple instructions and complete certain tasks while using the BCI.~This study design requires that the individual live in the Philadelphia region. Please contact the Wadsworth Center of the New York State Department of Health and State University of New York at Albany directly if you reside outside of this area.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Medical Subjects: 
+
+ Be able to give consent themselves or via a legally authorized representative. 
+
+ Diagnosed with a neuromuscular disease and have limited ability to communicate. 
+
+ Be able to see visual cues such as targets or letters presented on the screen, and/or ability to hear auditory cues such as tones or words presented through speakers or earphones. 
+
+ Be able to understand and remember instructions concerning participation. 
+
+ Healthy control subjects: 
+
+ Be able to consent to give consent themselves or via a legally authorized representative. 
+
+ Be able to see visual cues such as targets or letters presented on the screen, and/or ability to hear auditory cues such as tones or words presented through speakers or earphones. 
+
+ Be able to understand and remember instructions concerning participation.
+## Exclusion Criteria
+: 
+
+ Individuals with cognitive impairments that would impact their ability to follow the instructions
+## Full Text
+Summary: Amyotrophic lateral sclerosis (ALS) is a progressive neuromuscular condition characterized by weakness, muscle wasting, fasciculations and increased reflexes. Depending on the site of onset, individuals with ALS progressively lose control of their skeletal muscles; bulbar or the extremities. As symptoms worsen and spread, muscle atrophy becomes apparent and upper motor neuron symptoms such as spasticity complicate gait (in lower limb involvement) and manual dexterity (in upper limb involvement). The patients progress to a state of profound disability and have great difficulty in communicating; some may even be entirely locked in to their bodies. The capacity for simple communication could greatly improve their quality of life.~New technologies are giving people with disabilities alternate communication and control options. One such instrument is the EEG-based Brain-Computer Interface (BCI) which can provide both communication and control functions to those who have lost muscle control. By recording electroencephalographic (EEG) signals or brain waves from the scalp and then decoding them, the Wadsworth BCI allows people to make selections on a computer screen [i] In this study we will be investigating the feasibility of using EEG-based Brain-Computer Interface technology as a communication solution for individuals with ALS. The specific question addressed will be: Can individuals with ALS use the BCI for communication when they present with extreme loss of neuromuscular control and severe communication impairments? The goal of the project is to determine whether this device is a practical and realistic means for individuals with ALS to communicate. The study is intended to evaluate both the complexity of the system and the degree to which each participant will be able to communicate. Trials will consist of asking the subject to follow a series of simple instructions and complete certain tasks while using the BCI.~This study design requires that the individual live in the Philadelphia region. Please contact the Wadsworth Center of the New York State Department of Health and State University of New York at Albany directly if you reside outside of this area.
+Inclusion criteria: inclusion criteria: 
+
+ Medical Subjects: 
+
+ Be able to give consent themselves or via a legally authorized representative. 
+
+ Diagnosed with a neuromuscular disease and have limited ability to communicate. 
+
+ Be able to see visual cues such as targets or letters presented on the screen, and/or ability to hear auditory cues such as tones or words presented through speakers or earphones. 
+
+ Be able to understand and remember instructions concerning participation. 
+
+ Healthy control subjects: 
+
+ Be able to consent to give consent themselves or via a legally authorized representative. 
+
+ Be able to see visual cues such as targets or letters presented on the screen, and/or ability to hear auditory cues such as tones or words presented through speakers or earphones. 
+
+ Be able to understand and remember instructions concerning participation. 
+
+ 
+Exclusion criteria: : 
+
+ Individuals with cognitive impairments that would impact their ability to follow the instructions

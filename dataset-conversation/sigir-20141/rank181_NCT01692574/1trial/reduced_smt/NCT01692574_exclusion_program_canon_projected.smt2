@@ -1,0 +1,31 @@
+;; ===================== PROJECTED CANON (QE) =====================
+;; Each clause below is entailed by Proj = ∃W.F over the canonical vocabulary.
+;; Units appear first for clarity; OR-clauses (SAT-filtered) follow.
+;; ==================================================================
+
+;; Unit Bool constraints (entailed)
+(assert (not patient_is_exposed_to_anti_psychotic_agent_now))
+(assert (not patient_is_taking_monoamine_oxidase_inhibitor_containing_product_now))
+(assert (not patient_is_taking_paroxetine_containing_product_now))
+(assert (not patient_is_exposed_to_tricyclic_antidepressant_now))
+(assert (not patient_has_finding_of_severe_depression_now))
+(assert (not patient_has_finding_of_suicidal_thoughts_now))
+(assert (not patient_has_diagnosis_of_diabetes_mellitus_now))
+(assert (not patient_has_finding_of_alcohol_abuse_now))
+(assert (not patient_has_finding_of_alcohol_dependence_now))
+(assert (not patient_has_finding_of_finding_relating_to_drug_misuse_behavior_now))
+(assert (not patient_has_finding_of_psychoactive_substance_dependence_now))
+(assert (not patient_has_finding_of_disease_of_liver_now))
+(assert (not patient_has_finding_of_kidney_disease_now))
+(assert (not patient_is_pregnant_now))
+(assert (not patient_is_lactating_now))
+(assert (not patient_has_diagnosis_of_anorexia_nervosa_inthepast5years))
+(assert (not patient_has_diagnosis_of_anorexia_nervosa_now))
+(assert (not patient_has_diagnosis_of_bulimia_nervosa_inthepast5years))
+(assert (not patient_has_diagnosis_of_bulimia_nervosa_now))
+(assert (not patient_has_finding_of_psychotic_symptom_finding_inthepast12months))
+(assert (not patient_has_diagnosis_of_mood_disorder_due_to_a_general_medical_condition_now))
+(assert (not patient_has_diagnosis_of_bipolar_disorder_inthehistory))
+(assert (not patient_has_finding_of_injury_of_head_inthehistory))
+(assert (not patient_has_finding_of_tobacco_smoking_behavior_finding_inthepast3months))
+(assert (not patient_will_undergo_bariatric_operative_procedure_inthefuture))

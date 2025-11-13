@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_exposed_to_cetuximab_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_is_exposed_to_panitumumab_now",
+  "patient_will_undergo_cetuximab_containing_product_inthefuture",
+  "patient_will_undergo_panitumumab_containing_product_inthefuture",
+  "patient_is_taking_drug_vehicle_now"
+]

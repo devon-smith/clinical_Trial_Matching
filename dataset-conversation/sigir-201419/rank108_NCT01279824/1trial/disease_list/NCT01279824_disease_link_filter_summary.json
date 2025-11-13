@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:34:48",
+  "trial_id": "NCT01279824",
+  "contextual": {
+    "_id": "NCT01279824",
+    "title": "Adjunctive Neuromuscular Electrical Stimulation for the Rehabilitation of Swallowing",
+    "text": "Summary: Neuromuscular Electrical stimulation (NMES) for swallowing has recently been proposed for the treatment of dysphagia post stroke and is clinically receiving favor as a treatment modality, in the absence of strong research support. This study aims to investigate the effect of NMES therapy for dysphagia upon recovery of swallowing function following stroke. The study will follow a pilot randomized controlled trial design. Fifty one patients admitted to a sub-acute rehabilitation facility will be clinically screened for dysphagia, and randomized into one of three groups, NMES, sham NMES or usual care -behavioral swallowing therapy arm. All patients will be treated for one hour per day for 3 weeks, and their progress and outcome will be monitored. The results will add to the preliminary data on the effectiveness of this form of swallowing treatment for patients following stroke, and has the potential to enable more efficient allocation of resources to post-acute rehabilitation and thus benefit afforded to stroke patients, and the community.\nInclusion criteria: inclusion criteria: \n\n Stroke identified by neurological and radiological examination \n\n Oropharyngeal dysphagia as confirmed by clinical and radiological examination \n\n No prior history of oropharyngeal dysphagia by patient and/or caregiver report \n\n No previous head/neck surgery or trauma that may impact swallowing ability \n\n No other/concomitant neurological disorders (e.g. Parkinson's disease) that would impact oropharyngeal swallowing ability. This does not include post-stroke deficits. \n\n Physician and patient/family agreement to participate. \n\n \nExclusion criteria: : \n\n Exposed to previous behavioral or NMES swallowing therapy within 6 months of admission \n\n Presence of progressive neurological disorder, such as ALS; Parkinson's or other neurologic disorders within the last 6 months; \n\n History of neurosurgery (either ablative or stimulatory), encephalitis or significant head trauma. \n\n History of a significant medical condition such as heart, liver, or renal disease; history or evidence of malignancy within the past 5 years other than excised basal cell carcinoma. \n\n Because of FDA Warnings, patients with cardiac demand pace makers will be excluded. \n\n Patients with evidence of significant cognitive impairment or dementia as reflected in a Mini-Mental test less than 23 and/or a score of 50% or less on the comprehension quotient on the Western Aphasia Battery.",
+    "metadata": {
+      "brief_title": "Adjunctive Neuromuscular Electrical Stimulation for the Rehabilitation of Swallowing",
+      "phase": "Phase 2; Phase 3",
+      "drugs": "['swallowing therapy']",
+      "drugs_list": [
+        "swallowing therapy"
+      ],
+      "diseases": "['Dysphagia']",
+      "diseases_list": [
+        "Dysphagia"
+      ],
+      "enrollment": "53.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Stroke identified by neurological and radiological examination \n\n Oropharyngeal dysphagia as confirmed by clinical and radiological examination \n\n No prior history of oropharyngeal dysphagia by patient and/or caregiver report \n\n No previous head/neck surgery or trauma that may impact swallowing ability \n\n No other/concomitant neurological disorders (e.g. Parkinson's disease) that would impact oropharyngeal swallowing ability. This does not include post-stroke deficits. \n\n Physician and patient/family agreement to participate. \n\n ",
+      "exclusion_criteria": ": \n\n Exposed to previous behavioral or NMES swallowing therapy within 6 months of admission \n\n Presence of progressive neurological disorder, such as ALS; Parkinson's or other neurologic disorders within the last 6 months; \n\n History of neurosurgery (either ablative or stimulatory), encephalitis or significant head trauma. \n\n History of a significant medical condition such as heart, liver, or renal disease; history or evidence of malignancy within the past 5 years other than excised basal cell carcinoma. \n\n Because of FDA Warnings, patients with cardiac demand pace makers will be excluded. \n\n Patients with evidence of significant cognitive impairment or dementia as reflected in a Mini-Mental test less than 23 and/or a score of 50% or less on the comprehension quotient on the Western Aphasia Battery.",
+      "brief_summary": "Neuromuscular Electrical stimulation (NMES) for swallowing has recently been proposed for the treatment of dysphagia post stroke and is clinically receiving favor as a treatment modality, in the absence of strong research support. This study aims to investigate the effect of NMES therapy for dysphagia upon recovery of swallowing function following stroke. The study will follow a pilot randomized controlled trial design. Fifty one patients admitted to a sub-acute rehabilitation facility will be clinically screened for dysphagia, and randomized into one of three groups, NMES, sham NMES or usual care -behavioral swallowing therapy arm. All patients will be treated for one hour per day for 3 weeks, and their progress and outcome will be monitored. The results will add to the preliminary data on the effectiveness of this form of swallowing treatment for patients following stroke, and has the potential to enable more efficient allocation of resources to post-acute rehabilitation and thus benefit afforded to stroke patients, and the community."
+    }
+  },
+  "linked_result": {
+    "Dysphagia": {
+      "conceptId": "40739000",
+      "preferred_term": "Dysphagia",
+      "fully_specified_name": "Dysphagia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Difficulty in SWALLOWING which may result from neuromuscular disorder or mechanical obstruction. Dysphagia is classified into two distinct types: oropharyngeal dysphagia due to malfunction of the PHARYNX and UPPER ESOPHAGEAL SPHINCTER; and esophageal dysphagia due to malfunction of the ESOPHAGUS.",
+      "best_match_term": "Dysphagia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Dysphagia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dysphagia": {
+      "disease": "Dysphagia",
+      "conceptId": "40739000",
+      "preferred_term": "Dysphagia",
+      "fully_specified_name": "Dysphagia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Difficulty in SWALLOWING which may result from neuromuscular disorder or mechanical obstruction. Dysphagia is classified into two distinct types: oropharyngeal dysphagia due to malfunction of the PHARYNX and UPPER ESOPHAGEAL SPHINCTER; and esophageal dysphagia due to malfunction of the ESOPHAGUS.",
+      "best_match_term": "Dysphagia"
+    }
+  }
+}

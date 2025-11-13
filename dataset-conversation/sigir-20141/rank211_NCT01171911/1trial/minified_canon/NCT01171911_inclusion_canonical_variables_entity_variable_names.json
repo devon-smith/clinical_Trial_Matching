@@ -1,0 +1,9 @@
+[
+  "patient_has_diagnosis_of_non_q_wave_myocardial_infarction_now",
+  "patient_has_diagnosis_of_preinfarction_syndrome_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_heart_rate_value_recorded_now_withunit_beats_per_minute",
+  "patient_has_finding_of_conduction_disorder_of_the_heart_now"
+]

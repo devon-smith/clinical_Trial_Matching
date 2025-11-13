@@ -1,0 +1,9 @@
+[
+  "patient_has_diagnosis_of_sickle_cell_beta_thalassemia_now",
+  "patient_has_diagnosis_of_sickle_cell_hemoglobin_c_disease_now",
+  "patient_has_diagnosis_of_sickle_cell_hemoglobin_ss_disease_now",
+  "patient_has_finding_of_acute_chest_syndrome_now",
+  "patient_has_finding_of_fever_inthepast24hours",
+  "patient_phospholipase_a_2_value_recorded_inthepast24hours_withunit_ng_per_ml",
+  "patient_has_undergone_plain_chest_x_ray_inthepast12hours_outcome_is_negative"
+]

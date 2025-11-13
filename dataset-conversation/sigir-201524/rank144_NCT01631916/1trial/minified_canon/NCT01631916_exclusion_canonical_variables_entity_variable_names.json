@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_asthma_now",
+  "patient_has_finding_of_chronic_lung_disease_now",
+  "patient_has_finding_of_immunodeficiency_disorder_now",
+  "patient_has_finding_of_disease_now",
+  "patient_has_finding_of_wheezing_now",
+  "patient_inpatient_stay_value_recorded_inthepast14days_withunit_count",
+  "patient_has_finding_of_pleural_effusion_now"
+]

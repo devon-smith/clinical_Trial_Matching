@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT01322958",
+  "contextual": {
+    "_id": "NCT01322958",
+    "title": "Sonographic Assessment and Visualization of Ectopics in Emergency Medicine",
+    "text": "Summary: Observational study of the use of ultrasound by emergency physicians in the evaluation of patients at risk of ectopic pregnancy.\nInclusion criteria: inclusion criteria: \n\n pregnant females in 1st trimester \n\n present to emergency department \n\n complaint of abdominal/pelvic pain or vaginal bleeding \n\n \nExclusion criteria: : \n\n previous ultrasound diagnostic of location of pregnancy",
+    "metadata": {
+      "brief_title": "Sonographic Assessment and Visualization of Ectopics in Emergency Medicine",
+      "phase": "",
+      "drugs": "['Pelvic Ultrasound']",
+      "drugs_list": [
+        "Pelvic Ultrasound"
+      ],
+      "diseases": "['Ectopic Pregnancy']",
+      "diseases_list": [
+        "Ectopic Pregnancy"
+      ],
+      "enrollment": "600.0",
+      "inclusion_criteria": "inclusion criteria: \n\n pregnant females in 1st trimester \n\n present to emergency department \n\n complaint of abdominal/pelvic pain or vaginal bleeding \n\n ",
+      "exclusion_criteria": ": \n\n previous ultrasound diagnostic of location of pregnancy",
+      "brief_summary": "Observational study of the use of ultrasound by emergency physicians in the evaluation of patients at risk of ectopic pregnancy."
+    }
+  }
+}

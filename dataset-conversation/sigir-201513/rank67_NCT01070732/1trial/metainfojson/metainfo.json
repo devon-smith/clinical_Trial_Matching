@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01070732",
+  "contextual": {
+    "_id": "NCT01070732",
+    "title": "Paracetamol as Antipyretic and Analgesic Medication",
+    "text": "Summary: The present study is aiming to unravel the clinical efficacy of intravenously administered paracetamol as antipyretic and analgesic medication in various medical conditions.\nInclusion criteria: inclusion criteria: \n\n Age greater than or equal to 18 years \n\n Written informed consent by the patients \n\n Medical condition necessitating the administration of antipyretic or analgesic medications \n\n \nExclusion criteria: : \n\n Αge lower than 18 years \n\n Lack of informed consent \n\n History of liver cirrhosis \n\n Blood creatinine greater than 3mg/dl \n\n Blood AST greater than 3 times the upper normal level according to the lab of the participating hospital \n\n History of hypersensitivity to non-steroidal ant-inflammatory drugs \n\n History of abuse of analgesics \n\n Pregnancy or lactation \n\n Fulminant hemorrhage of the upper or lower digestive tract \n\n Thrombocytopenia defined as less than 50000 platelets/μl",
+    "metadata": {
+      "brief_title": "Paracetamol as Antipyretic and Analgesic Medication",
+      "phase": "Phase 4",
+      "drugs": "['Paracetamol']",
+      "drugs_list": [
+        "Paracetamol"
+      ],
+      "diseases": "['Fever', 'Analgesia']",
+      "diseases_list": [
+        "Fever",
+        "Analgesia"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age greater than or equal to 18 years \n\n Written informed consent by the patients \n\n Medical condition necessitating the administration of antipyretic or analgesic medications \n\n ",
+      "exclusion_criteria": ": \n\n Αge lower than 18 years \n\n Lack of informed consent \n\n History of liver cirrhosis \n\n Blood creatinine greater than 3mg/dl \n\n Blood AST greater than 3 times the upper normal level according to the lab of the participating hospital \n\n History of hypersensitivity to non-steroidal ant-inflammatory drugs \n\n History of abuse of analgesics \n\n Pregnancy or lactation \n\n Fulminant hemorrhage of the upper or lower digestive tract \n\n Thrombocytopenia defined as less than 50000 platelets/μl",
+      "brief_summary": "The present study is aiming to unravel the clinical efficacy of intravenously administered paracetamol as antipyretic and analgesic medication in various medical conditions."
+    }
+  }
+}

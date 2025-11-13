@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-22T21:04:30",
+  "trial_id": "NCT01862159",
+  "contextual": {
+    "_id": "NCT01862159",
+    "title": "Risk Factors Predicting Serious Complications With Laparoscopic Gastric Bypass Surgery",
+    "text": "Summary: The rate of serious complications are relatively low in bariatric surgery today, but still 3-4 % will suffer from a serious complication. There are factors known before the surgery or during the operation that are likely to increase the risk for a serious complication. If the investigators are aware of these we can optimize the patients risk factors prior to the operation or at least increase the awareness of the increased risk in some patients given the presence of risk factors.\nInclusion criteria: inclusion criteria: \n\n Undergoing laparoscopic gastric bypass surgery and included in the Scandinavian Obesity Surgery Registry \n\n \nExclusion criteria: : \n\n Undergoing other bariatric procedure than laparoscopic gastric bypass. Revisional surgery is excluded. \n\n Lost to follow up.",
+    "metadata": {
+      "brief_title": "Risk Factors Predicting Serious Complications With Laparoscopic Gastric Bypass Surgery",
+      "phase": "",
+      "drugs": "['laparoscopic gastric bypass surgery']",
+      "drugs_list": [
+        "laparoscopic gastric bypass surgery"
+      ],
+      "diseases": "['Postoperative Complications']",
+      "diseases_list": [
+        "Postoperative Complications"
+      ],
+      "enrollment": "25038.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Undergoing laparoscopic gastric bypass surgery and included in the Scandinavian Obesity Surgery Registry \n\n ",
+      "exclusion_criteria": ": \n\n Undergoing other bariatric procedure than laparoscopic gastric bypass. Revisional surgery is excluded. \n\n Lost to follow up.",
+      "brief_summary": "The rate of serious complications are relatively low in bariatric surgery today, but still 3-4 % will suffer from a serious complication. There are factors known before the surgery or during the operation that are likely to increase the risk for a serious complication. If the investigators are aware of these we can optimize the patients risk factors prior to the operation or at least increase the awareness of the increased risk in some patients given the presence of risk factors."
+    }
+  },
+  "linked_result": {
+    "Postoperative Complications": {
+      "conceptId": "385486001",
+      "preferred_term": "Postoperative complication",
+      "fully_specified_name": "Postoperative complication (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.",
+      "best_match_term": "Postoperative complication",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Postoperative Complications": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Postoperative Complications": {
+      "disease": "Postoperative Complications",
+      "conceptId": "385486001",
+      "preferred_term": "Postoperative complication",
+      "fully_specified_name": "Postoperative complication (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.",
+      "best_match_term": "Postoperative complication"
+    }
+  }
+}

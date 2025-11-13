@@ -1,0 +1,46 @@
+# Long-term Treatment for Cancer Patients With Deep Venous Thrombosis or Pulmonary Embolism
+**NCT**: `NCT01164046`
+## Brief Summary
+Background~Patients with cancer and a first deep venous thrombosis of the leg or pulmonary embolism (venous thromboembolism, VTE) are generally treated with low molecular weight heparin (LMWH)injections for 6 months, since this treatment is associated with a reduced incidence of recurrent VTE compared to vitamin K antagonists (VKA). It is recommended that patients with active malignancy (metastatic cancer and/or ongoing cancer treatment)continue anticoagulant treatment. However, it is unknown whether LMWH is still superior compared to VKA for the long-term anticoagulant treatment.~Aim~The aim of this study is to evaluate whether low-molecular-weight heparin more effectively reduces recurrent VTE compared to vitamin K antagonists in patients with cancer who have already completed 6 to 12 months of anticoagulant treatment because of deep venous thrombosis of the leg or pulmonary embolism.~Hypothesis~The investigators hypothesize that LMWH is more effective compared to VKA in the long-term treatment of VTE in cancer patients who have already been treated for 6-12 months with anticoagulants.~Design~This is a multicenter, multinational, randomized, open label trial.~Patients~Patients with a malignancy (all types, solid and hematological) who have received 6-12 months of anticoagulation for VTE and have an indication for continuing anticoagulation, will be randomly assigned to six additional months of LMWH or VKA. LMWH will be administered in a weight-adjusted scheme, with 65-75% of therapeutic doses. All types of LMWH and VKA are allowed, as long as weight adjusted dosing is possible for LMWH. The target INR will be 2.0-3.0. The primary efficacy outcome is symptomatic recurrent VTE, i.e. deep vein thrombosis and pulmonary embolism. The primary safety outcome is major bleeding.~Sample size~A total of 65 to 87 recurrent VTE events are needed to show a 50% reduction with LMWH as compared to VKA (type I error 0.05, two-sided, power respectively 80 and 90%). To observe 75 events, with a 10% event rate per half year in the VKA arm and 5% in the LMWH arm a total of 1000 patients will need to be included.~Organisation~Outcomes will be adjudicated by a central adjudication committee. A steering committee will be formed, preferably consisting of one member of every participating center. An electronic case report form will be used for data collection. Also, an electronic trial master file will be used.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Patients with cancer and confirmed pulmonary embolism (PE) or deep vein thrombosis (DVT) of the leg who have been treated for minimally 6 and maximally 12 months with therapeutic doses of anticoagulants, i.e. LMWH or VKA or a new anticoagulant in a trial 
+
+ Written informed consent 
+
+ Indication for long-term anticoagulant therapy (e.g. because of metastasized disease, chemotherapy)
+## Exclusion Criteria
+: 
+
+ Legal age limitations (country specific), minimum age at least 18 years 
+
+ Indications for anticoagulant therapy other than DVT or PE 
+
+ Any contraindication listed in the local labeling of LMWH or VKA 
+
+ Childbearing potential without proper contraceptive measures, pregnancy or breastfeeding 
+
+ Life expectancy <3 months
+## Full Text
+Summary: Background~Patients with cancer and a first deep venous thrombosis of the leg or pulmonary embolism (venous thromboembolism, VTE) are generally treated with low molecular weight heparin (LMWH)injections for 6 months, since this treatment is associated with a reduced incidence of recurrent VTE compared to vitamin K antagonists (VKA). It is recommended that patients with active malignancy (metastatic cancer and/or ongoing cancer treatment)continue anticoagulant treatment. However, it is unknown whether LMWH is still superior compared to VKA for the long-term anticoagulant treatment.~Aim~The aim of this study is to evaluate whether low-molecular-weight heparin more effectively reduces recurrent VTE compared to vitamin K antagonists in patients with cancer who have already completed 6 to 12 months of anticoagulant treatment because of deep venous thrombosis of the leg or pulmonary embolism.~Hypothesis~The investigators hypothesize that LMWH is more effective compared to VKA in the long-term treatment of VTE in cancer patients who have already been treated for 6-12 months with anticoagulants.~Design~This is a multicenter, multinational, randomized, open label trial.~Patients~Patients with a malignancy (all types, solid and hematological) who have received 6-12 months of anticoagulation for VTE and have an indication for continuing anticoagulation, will be randomly assigned to six additional months of LMWH or VKA. LMWH will be administered in a weight-adjusted scheme, with 65-75% of therapeutic doses. All types of LMWH and VKA are allowed, as long as weight adjusted dosing is possible for LMWH. The target INR will be 2.0-3.0. The primary efficacy outcome is symptomatic recurrent VTE, i.e. deep vein thrombosis and pulmonary embolism. The primary safety outcome is major bleeding.~Sample size~A total of 65 to 87 recurrent VTE events are needed to show a 50% reduction with LMWH as compared to VKA (type I error 0.05, two-sided, power respectively 80 and 90%). To observe 75 events, with a 10% event rate per half year in the VKA arm and 5% in the LMWH arm a total of 1000 patients will need to be included.~Organisation~Outcomes will be adjudicated by a central adjudication committee. A steering committee will be formed, preferably consisting of one member of every participating center. An electronic case report form will be used for data collection. Also, an electronic trial master file will be used.
+Inclusion criteria: inclusion criteria: 
+
+ Patients with cancer and confirmed pulmonary embolism (PE) or deep vein thrombosis (DVT) of the leg who have been treated for minimally 6 and maximally 12 months with therapeutic doses of anticoagulants, i.e. LMWH or VKA or a new anticoagulant in a trial 
+
+ Written informed consent 
+
+ Indication for long-term anticoagulant therapy (e.g. because of metastasized disease, chemotherapy) 
+
+ 
+Exclusion criteria: : 
+
+ Legal age limitations (country specific), minimum age at least 18 years 
+
+ Indications for anticoagulant therapy other than DVT or PE 
+
+ Any contraindication listed in the local labeling of LMWH or VKA 
+
+ Childbearing potential without proper contraceptive measures, pregnancy or breastfeeding 
+
+ Life expectancy <3 months

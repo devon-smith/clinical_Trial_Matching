@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT00479908",
+  "contextual": {
+    "_id": "NCT00479908",
+    "title": "Blood Pressure Interaction Between Sildenafil and Sublingual Glyceryl Trinitrate (GTN) in Men With Angina",
+    "text": "Summary: The purpose of the study is to determine for how long sildenafil potentiates the blood pressure reduction that occurs with glyceryl trinitrate in men with angina.\nInclusion criteria: inclusion criteria: \n\n Male \n\n Stable angina with one of: \n\n Classical history of exertional angina pectoris \n\n Previous diagnostic exercise test \n\n Angiographic evidence of CAD \n\n Aged 30 to 80 years \n\n Weight between 60 and 100 Kg \n\n \nExclusion criteria: : \n\n Regular treatment with long-acting nitrates or nicorandil where these cannot be withdrawn 72 hours prior to the study \n\n Myocardial infarction, unstable angina, stroke or transient cerebral ischaemia within 3 months \n\n Systolic BP > 170 mmHg or diastolic BP > 100 mmHg \n\n Systolic BP < 100 mmHg or diastolic BP < 60 mmHg \n\n Orthostatic hypotension (> 20 mmHg fall in systolic BP on standing) \n\n Diabetes treated with oral hypoglycaemic agents or insulin \n\n Any clinically significant disease other than stable angina, excepting other cardiovascular disease risk factors, e.g. smoking, hypercholesterolaemia and diet-controlled diabetes \n\n Taking any drug that interacts with sildenafil \n\n Evidence of drug abuse",
+    "metadata": {
+      "brief_title": "Blood Pressure Interaction Between Sildenafil and Sublingual Glyceryl Trinitrate (GTN) in Men With Angina",
+      "phase": "Phase 4",
+      "drugs": "['Sildenafil citrate', 'Glyceryl trinitrate']",
+      "drugs_list": [
+        "Sildenafil citrate",
+        "Glyceryl trinitrate"
+      ],
+      "diseases": "['Angina Pectoris']",
+      "diseases_list": [
+        "Angina Pectoris"
+      ],
+      "enrollment": "20.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Male \n\n Stable angina with one of: \n\n Classical history of exertional angina pectoris \n\n Previous diagnostic exercise test \n\n Angiographic evidence of CAD \n\n Aged 30 to 80 years \n\n Weight between 60 and 100 Kg \n\n ",
+      "exclusion_criteria": ": \n\n Regular treatment with long-acting nitrates or nicorandil where these cannot be withdrawn 72 hours prior to the study \n\n Myocardial infarction, unstable angina, stroke or transient cerebral ischaemia within 3 months \n\n Systolic BP > 170 mmHg or diastolic BP > 100 mmHg \n\n Systolic BP < 100 mmHg or diastolic BP < 60 mmHg \n\n Orthostatic hypotension (> 20 mmHg fall in systolic BP on standing) \n\n Diabetes treated with oral hypoglycaemic agents or insulin \n\n Any clinically significant disease other than stable angina, excepting other cardiovascular disease risk factors, e.g. smoking, hypercholesterolaemia and diet-controlled diabetes \n\n Taking any drug that interacts with sildenafil \n\n Evidence of drug abuse",
+      "brief_summary": "The purpose of the study is to determine for how long sildenafil potentiates the blood pressure reduction that occurs with glyceryl trinitrate in men with angina."
+    }
+  }
+}

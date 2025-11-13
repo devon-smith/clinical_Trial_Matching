@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01700257",
+  "contextual": {
+    "_id": "NCT01700257",
+    "title": "Lung Cancer Screening Study With Low-dose CT Scan and Blood Biomarker",
+    "text": "Summary: Lung cancer is the number one cancer killer in the USA. Early stage lung cancer is asymptomatic. Most patients with lung cancer are usually symptomatic at diagnosis and already have advanced stage disease. Low dose CT screening (LDCT) for high risk individuals has recently been shown to decrease lung cancer mortality by 20%. However, 4 out of 5 lung cancer deaths are not prevented with LDCT screening alone.\nInclusion criteria: inclusion criteria: \n\n Smokers or former smokers \n\n At least 20 pack year history of smoking \n\n Ages 50 - 75 \n\n \nExclusion criteria: : \n\n Had a CT scan of chest within last 24 months \n\n History of any cancer within 10 yrs (except skin cancer or cervical cancer) \n\n A serious illness that decreases life expectancy to less than 5 years \n\n Any current use of Oxygen \n\n Uncontrolled congestive heart failure or cardiac arrhythmia that would prevent surgery for a lung lesion \n\n Severe COPD or dyspnea that would prevent lung surgery or stereotactic body radiotherapy",
+    "metadata": {
+      "brief_title": "Lung Cancer Screening Study With Low-dose CT Scan and Blood Biomarker",
+      "phase": "",
+      "drugs": "['CT scan & Early CDT Lung test', 'CT scan & Early CDT Lung test']",
+      "drugs_list": [
+        "CT scan & Early CDT Lung test",
+        "CT scan & Early CDT Lung test"
+      ],
+      "diseases": "['High Risk of Developing Lung Cancer']",
+      "diseases_list": [
+        "High Risk of Developing Lung Cancer"
+      ],
+      "enrollment": "1361.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Smokers or former smokers \n\n At least 20 pack year history of smoking \n\n Ages 50 - 75 \n\n ",
+      "exclusion_criteria": ": \n\n Had a CT scan of chest within last 24 months \n\n History of any cancer within 10 yrs (except skin cancer or cervical cancer) \n\n A serious illness that decreases life expectancy to less than 5 years \n\n Any current use of Oxygen \n\n Uncontrolled congestive heart failure or cardiac arrhythmia that would prevent surgery for a lung lesion \n\n Severe COPD or dyspnea that would prevent lung surgery or stereotactic body radiotherapy",
+      "brief_summary": "Lung cancer is the number one cancer killer in the USA. Early stage lung cancer is asymptomatic. Most patients with lung cancer are usually symptomatic at diagnosis and already have advanced stage disease. Low dose CT screening (LDCT) for high risk individuals has recently been shown to decrease lung cancer mortality by 20%. However, 4 out of 5 lung cancer deaths are not prevented with LDCT screening alone."
+    }
+  }
+}

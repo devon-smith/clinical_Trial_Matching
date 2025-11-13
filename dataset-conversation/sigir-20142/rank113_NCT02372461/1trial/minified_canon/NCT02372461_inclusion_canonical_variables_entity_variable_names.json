@@ -1,0 +1,6 @@
+[
+  "patient_has_finding_of_cough_inthehistory",
+  "patient_has_finding_of_difficulty_breathing_inthehistory",
+  "patient_age_value_recorded_now_in_months",
+  "patient_respiratory_rate_value_recorded_now_withunit_breaths_per_minute"
+]

@@ -1,0 +1,50 @@
+# Evaluation of ST2 and IL-33 in Patients Presenting to the Emergency Department With Trouble Breathing
+**NCT**: `NCT00707811`
+## Brief Summary
+Trouble breathing (dyspnea) is a nonspecific symptom associated with many diseases such as chronic obstructive pulmonary disease (lung disorder in which the flow of air to the lungs is blocked), asthma, pneumonia, pulmonary hypertension (high blood pressure in the lungs), congestive heart failure (fluid build-up in the lungs because the heart is not pumping normally) and pulmonary embolism (blood clot in the lungs). The purpose of this study is to test two blood markers called ST2 and IL-33. Blood markers are proteins or other compounds in your blood that physicians use to diagnose different diseases and to determine what the course of an illness will be. In preliminary research studies, ST2 and IL-33 have been elevated in patients with a wide variety of diseases where the lungs are the primary organs involved. This research study will further investigate the ability of ST2 and IL-33 to predict the severity of disease and the possible use of ST2 and IL-33 in the diagnosis of various lung diseases.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Presenting to the Emergency Department with signs and symptoms of dyspnea (short of breath, tachypnea, hyperventilation, etc) within the last 24 hours 
+
+ Normal cardiac output as measured by noninvasive bioimpedance 
+
+ Greater than or equal to 18 years of age 
+
+ Patient or legal representative willing and able to provide informed consent and comply with study procedures
+## Exclusion Criteria
+: 
+
+ A history of congestive heart failure and a BNP > 500pg/mL (or NTproBNP > 900pg/mL) if obtained by the treating physician 
+
+ Treating physician suspects patient has new onset congestive heart failure 
+
+ ECG changes diagnostic of acute myocardial ischemia/infarction 
+
+ Ischemic chest pain within the prior 24 hours by history 
+
+ Obvious chest trauma
+## Full Text
+Summary: Trouble breathing (dyspnea) is a nonspecific symptom associated with many diseases such as chronic obstructive pulmonary disease (lung disorder in which the flow of air to the lungs is blocked), asthma, pneumonia, pulmonary hypertension (high blood pressure in the lungs), congestive heart failure (fluid build-up in the lungs because the heart is not pumping normally) and pulmonary embolism (blood clot in the lungs). The purpose of this study is to test two blood markers called ST2 and IL-33. Blood markers are proteins or other compounds in your blood that physicians use to diagnose different diseases and to determine what the course of an illness will be. In preliminary research studies, ST2 and IL-33 have been elevated in patients with a wide variety of diseases where the lungs are the primary organs involved. This research study will further investigate the ability of ST2 and IL-33 to predict the severity of disease and the possible use of ST2 and IL-33 in the diagnosis of various lung diseases.
+Inclusion criteria: inclusion criteria: 
+
+ Presenting to the Emergency Department with signs and symptoms of dyspnea (short of breath, tachypnea, hyperventilation, etc) within the last 24 hours 
+
+ Normal cardiac output as measured by noninvasive bioimpedance 
+
+ Greater than or equal to 18 years of age 
+
+ Patient or legal representative willing and able to provide informed consent and comply with study procedures 
+
+ 
+Exclusion criteria: : 
+
+ A history of congestive heart failure and a BNP > 500pg/mL (or NTproBNP > 900pg/mL) if obtained by the treating physician 
+
+ Treating physician suspects patient has new onset congestive heart failure 
+
+ ECG changes diagnostic of acute myocardial ischemia/infarction 
+
+ Ischemic chest pain within the prior 24 hours by history 
+
+ Obvious chest trauma

@@ -1,0 +1,14 @@
+[
+  "patient_has_finding_of_american_society_of_anesthesiologists_physical_status_class_4_now",
+  "patient_has_finding_of_american_society_of_anesthesiologists_physical_status_class_5_now",
+  "patient_has_finding_of_auditory_dysfunction_now",
+  "patient_has_finding_of_disorder_of_vision_now",
+  "patient_has_finding_of_illiteracy_now",
+  "patient_has_diagnosis_of_bipolar_disorder_inthehistory",
+  "patient_has_diagnosis_of_major_depressive_disorder_inthehistory",
+  "patient_has_diagnosis_of_schizophrenia_inthehistory",
+  "patient_has_finding_of_dementia_now",
+  "patient_has_diagnosis_of_parkinson_s_disease_now",
+  "patient_has_diagnosis_of_multiple_sclerosis_now",
+  "patient_has_diagnosis_of_vascular_dementia_now"
+]

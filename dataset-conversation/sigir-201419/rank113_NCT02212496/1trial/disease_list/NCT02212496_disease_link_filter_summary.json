@@ -1,0 +1,68 @@
+{
+  "generated": "2025-10-22T20:56:43",
+  "trial_id": "NCT02212496",
+  "contextual": {
+    "_id": "NCT02212496",
+    "title": "Identification the Cause of Cerebral Infarction in Patients With Cancer",
+    "text": "Summary: Although there has been increasing interest in the association between cancer and cerebrovascular disease, the underlying pathophysiology of stroke in cancer patients is still not fully understood. The aim of this study is to investigate the stroke mechanisms in patients with cancer-associated stroke.\nInclusion criteria: inclusion criteria: \n\n Subjects with acute ischemic stroke who presented within 7 days from symptom onset \n\n Subjects who had embolic infarction outside the perforator territory revealed by diffusion-weighted imaging \n\n Subjects with undetermined cause of stroke despite of initial evaluation including electrocardiogram and brain imaging upon admission \n\n Subjects who performed brain magnetic resonance image (MRI) and MR angiography (MRA), cardiac work-ups (12-lead electrocardiography, transthoracic and/or transesophageal echocardiography with injection of agitated saline (or agitated saline transcranial Doppler monitoring), and 24-hour Holter and/or telemonitoring) \n\n Subjects with informed consent \n\n \nExclusion criteria: : \n\n Subjects with single subcortical infarction \n\n Subjects with primary brain tumor \n\n Inability to perform comprehensive studies \n\n Refusal or withdrawal of the consent",
+    "metadata": {
+      "brief_title": "Identification the Cause of Cerebral Infarction in Patients With Cancer",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Cryptogenic Embolic Stroke', 'Active Cancer']",
+      "diseases_list": [
+        "Cryptogenic Embolic Stroke",
+        "Active Cancer"
+      ],
+      "enrollment": "118.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Subjects with acute ischemic stroke who presented within 7 days from symptom onset \n\n Subjects who had embolic infarction outside the perforator territory revealed by diffusion-weighted imaging \n\n Subjects with undetermined cause of stroke despite of initial evaluation including electrocardiogram and brain imaging upon admission \n\n Subjects who performed brain magnetic resonance image (MRI) and MR angiography (MRA), cardiac work-ups (12-lead electrocardiography, transthoracic and/or transesophageal echocardiography with injection of agitated saline (or agitated saline transcranial Doppler monitoring), and 24-hour Holter and/or telemonitoring) \n\n Subjects with informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Subjects with single subcortical infarction \n\n Subjects with primary brain tumor \n\n Inability to perform comprehensive studies \n\n Refusal or withdrawal of the consent",
+      "brief_summary": "Although there has been increasing interest in the association between cancer and cerebrovascular disease, the underlying pathophysiology of stroke in cancer patients is still not fully understood. The aim of this study is to investigate the stroke mechanisms in patients with cancer-associated stroke."
+    }
+  },
+  "linked_result": {
+    "Cryptogenic Embolic Stroke": {
+      "conceptId": "371041009",
+      "preferred_term": "Embolic stroke",
+      "fully_specified_name": "Embolic stroke (disorder)",
+      "type": "Clinical finding",
+      "definition": "An ischemic stroke due to a blood clot, emboli or other types of blockage which forms somewhere other than the brain and subsequently travels near and restricts blood flow to the brain. Most often the origin of the clot is from the heart and is referred to as cardioembolic stroke.",
+      "best_match_term": "Embolic stroke",
+      "match_reason": "Ancestor"
+    },
+    "Active Cancer": {
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Cancer",
+      "match_reason": "Ancestor"
+    }
+  },
+  "kept_counts": {
+    "Cryptogenic Embolic Stroke": 1,
+    "Active Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cryptogenic Embolic Stroke": {
+      "disease": "Cryptogenic Embolic Stroke",
+      "conceptId": "371041009",
+      "preferred_term": "Embolic stroke",
+      "fully_specified_name": "Embolic stroke (disorder)",
+      "type": "Clinical finding",
+      "definition": "An ischemic stroke due to a blood clot, emboli or other types of blockage which forms somewhere other than the brain and subsequently travels near and restricts blood flow to the brain. Most often the origin of the clot is from the heart and is referred to as cardioembolic stroke.",
+      "best_match_term": "Embolic stroke"
+    },
+    "Active Cancer": {
+      "disease": "Active Cancer",
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Cancer"
+    }
+  }
+}

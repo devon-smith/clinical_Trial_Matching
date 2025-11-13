@@ -1,0 +1,12 @@
+[
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_finding_of_disease_now",
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_has_finding_of_weight_decreased_now",
+  "patient_has_finding_of_weight_fluctuates_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_fasting_blood_glucose_measurement_value_recorded_now_withunit_milligrams_per_deciliter"
+]

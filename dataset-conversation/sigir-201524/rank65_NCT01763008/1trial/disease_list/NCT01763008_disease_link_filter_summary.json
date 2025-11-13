@@ -1,0 +1,111 @@
+{
+  "generated": "2025-10-20T23:45:37",
+  "trial_id": "NCT01763008",
+  "contextual": {
+    "_id": "NCT01763008",
+    "title": "A Study of the Safety and Effectiveness of Doripenem in Filipino Patients With Nosocomial Pneumonia, Complicated Intra-Abdominal Infections and Complicated Urinary Tract Infections",
+    "text": "Summary: The purpose of this study is to assess the safety and effectiveness of doripenem treatment among Filipino patients with nosocomial pneumonia, complicated intra-abdominal infections, and complicated urinary tract infection.\nInclusion criteria: inclusion criteria: \n\n Patients who are diagnosed with nosocomial pneumonia including ventilator-associated pneumonia, complicated intra-abdominal infections or complicated urinary tract infection \n\n Patients who are eligible for doripenem treatment \n\n \nExclusion criteria: : \n\n Pregnant or lactating females \n\n Patients with hypersensitivity to doripenem and/or its derivatives \n\n Known at study entry to have an infection caused by pathogen(s) resistant to doripenem \n\n Patients taking probenecid \n\n History of severe allergies to certain antibiotics such as penicillins, cephalosporins, and carbapenems \n\n Severe impairment of renal function including a calculated creatinine clearance of less than 10 mL per minute, requirement for peritoneal dialysis, hemodialysis or hemofiltration, or oliguria (less than 20 mL urine output per hour over 24 hours)",
+    "metadata": {
+      "brief_title": "A Study of the Safety and Effectiveness of Doripenem in Filipino Patients With Nosocomial Pneumonia, Complicated Intra-Abdominal Infections and Complicated Urinary Tract Infections",
+      "phase": "",
+      "drugs": "['No intervention']",
+      "drugs_list": [
+        "No intervention"
+      ],
+      "diseases": "['Pneumonia, Bacterial', 'Nosocomial Infection', 'Intraabdominal Infections', 'Urinary Tract Infection']",
+      "diseases_list": [
+        "Pneumonia",
+        "Bacterial",
+        "Nosocomial Infection",
+        "Intraabdominal Infections",
+        "Urinary Tract Infection"
+      ],
+      "enrollment": "170.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients who are diagnosed with nosocomial pneumonia including ventilator-associated pneumonia, complicated intra-abdominal infections or complicated urinary tract infection \n\n Patients who are eligible for doripenem treatment \n\n ",
+      "exclusion_criteria": ": \n\n Pregnant or lactating females \n\n Patients with hypersensitivity to doripenem and/or its derivatives \n\n Known at study entry to have an infection caused by pathogen(s) resistant to doripenem \n\n Patients taking probenecid \n\n History of severe allergies to certain antibiotics such as penicillins, cephalosporins, and carbapenems \n\n Severe impairment of renal function including a calculated creatinine clearance of less than 10 mL per minute, requirement for peritoneal dialysis, hemodialysis or hemofiltration, or oliguria (less than 20 mL urine output per hour over 24 hours)",
+      "brief_summary": "The purpose of this study is to assess the safety and effectiveness of doripenem treatment among Filipino patients with nosocomial pneumonia, complicated intra-abdominal infections, and complicated urinary tract infection."
+    }
+  },
+  "linked_result": {
+    "Pneumonia, Bacterial": {
+      "conceptId": "53084003",
+      "preferred_term": "Bacterial pneumonia",
+      "fully_specified_name": "Bacterial pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the lung parenchyma that is caused by bacterial infections.",
+      "best_match_term": "Bacterial pneumonia",
+      "match_reason": "Exact"
+    },
+    "Nosocomial Infection": {
+      "conceptId": "408678008",
+      "preferred_term": "Healthcare associated infectious disease",
+      "fully_specified_name": "Healthcare associated infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Any infection which a patient contracts in a health-care institution.",
+      "best_match_term": "Nosocomial infection",
+      "match_reason": "Exact"
+    },
+    "Intraabdominal Infections": {
+      "conceptId": "128070006",
+      "preferred_term": "Infectious disease of abdomen",
+      "fully_specified_name": "Infectious disease of abdomen (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection within the PERITONEAL CAVITY. A frequent cause is an ANASTOMOTIC LEAK following surgery.",
+      "best_match_term": "Abdominal infection",
+      "match_reason": "Exact"
+    },
+    "Urinary Tract Infection": {
+      "conceptId": "68566005",
+      "preferred_term": "Urinary tract infectious disease",
+      "fully_specified_name": "Urinary tract infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.",
+      "best_match_term": "Urinary tract infection",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Pneumonia, Bacterial": 1,
+    "Nosocomial Infection": 1,
+    "Intraabdominal Infections": 1,
+    "Urinary Tract Infection": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Pneumonia, Bacterial": {
+      "disease": "Pneumonia, Bacterial",
+      "conceptId": "53084003",
+      "preferred_term": "Bacterial pneumonia",
+      "fully_specified_name": "Bacterial pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the lung parenchyma that is caused by bacterial infections.",
+      "best_match_term": "Bacterial pneumonia"
+    },
+    "Nosocomial Infection": {
+      "disease": "Nosocomial Infection",
+      "conceptId": "408678008",
+      "preferred_term": "Healthcare associated infectious disease",
+      "fully_specified_name": "Healthcare associated infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Any infection which a patient contracts in a health-care institution.",
+      "best_match_term": "Nosocomial infection"
+    },
+    "Intraabdominal Infections": {
+      "disease": "Intraabdominal Infections",
+      "conceptId": "128070006",
+      "preferred_term": "Infectious disease of abdomen",
+      "fully_specified_name": "Infectious disease of abdomen (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection within the PERITONEAL CAVITY. A frequent cause is an ANASTOMOTIC LEAK following surgery.",
+      "best_match_term": "Abdominal infection"
+    },
+    "Urinary Tract Infection": {
+      "disease": "Urinary Tract Infection",
+      "conceptId": "68566005",
+      "preferred_term": "Urinary tract infectious disease",
+      "fully_specified_name": "Urinary tract infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.",
+      "best_match_term": "Urinary tract infection"
+    }
+  }
+}

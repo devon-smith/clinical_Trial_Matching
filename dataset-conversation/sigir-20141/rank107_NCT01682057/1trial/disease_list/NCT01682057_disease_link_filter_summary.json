@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:30:39",
+  "trial_id": "NCT01682057",
+  "contextual": {
+    "_id": "NCT01682057",
+    "title": "A Multicenter Study to Evaluate the ROX Anastomotic Coupler System (ACS) In Patients With Severe Hypertension",
+    "text": "Summary: The purpose of this study is to evaluate the safety and performance of the ROX Anastomotic Coupler System (ACS) in patients with severe hypertension.\nInclusion criteria: inclusion criteria: \n\n Diagnosis of severe hypertension must be made on the basis of current findings, medical history, and physical examination \n\n \nExclusion criteria: : \n\n Any serious medical condition that may adversely affect the patient's safety, limit the subject's ability to participate in the study, comply with follow-up requirements or impact the scientific integrity of the study.",
+    "metadata": {
+      "brief_title": "A Multicenter Study to Evaluate the ROX Anastomotic Coupler System (ACS) In Patients With Severe Hypertension",
+      "phase": "Phase 2",
+      "drugs": "['ROX ANASTOMOTIC COUPLER SYSTEM (ACS)', 'ROX Anastomotic Coupler System (ACS)']",
+      "drugs_list": [
+        "ROX ANASTOMOTIC COUPLER SYSTEM (ACS)",
+        "ROX Anastomotic Coupler System (ACS)"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "8.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Diagnosis of severe hypertension must be made on the basis of current findings, medical history, and physical examination \n\n ",
+      "exclusion_criteria": ": \n\n Any serious medical condition that may adversely affect the patient's safety, limit the subject's ability to participate in the study, comply with follow-up requirements or impact the scientific integrity of the study.",
+      "brief_summary": "The purpose of this study is to evaluate the safety and performance of the ROX Anastomotic Coupler System (ACS) in patients with severe hypertension."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

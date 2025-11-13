@@ -1,0 +1,5 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+  "patient_intraabdominal_pressure_value_recorded_now_withunit_millimeters_of_mercury"
+]

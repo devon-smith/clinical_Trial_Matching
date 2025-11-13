@@ -1,0 +1,71 @@
+{
+  "generated": "2025-10-20T22:32:15",
+  "trial_id": "NCT00008853",
+  "contextual": {
+    "_id": "NCT00008853",
+    "title": "Evaluation of Two Type III GBS Polysaccharide-Tetanus Toxoid Conjugate Vaccines",
+    "text": "Summary: The purpose of this study is to test the safety and favorable immune response to an anti-streptococcal vaccine (a vaccine that treats a common bacterial infection) in healthy non-pregnant women.~Group B Streptococcus (GBS) continues to be the single most frequent cause of life-threatening bacterial infection during the first 2 months of life. Further, GBS pregnancy-related morbidity afflicts more than 50,000 women annually in the US. Therefore, active immunization of women is an appealing strategy for the prevention of GBS disease in pregnant women and their infants during the first 3 months of infant life.\nInclusion criteria: This information currently is not available.\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Evaluation of Two Type III GBS Polysaccharide-Tetanus Toxoid Conjugate Vaccines",
+      "phase": "Phase 1",
+      "drugs": "['GBS III-TT-SSI', 'GBS III-TT-MPHL']",
+      "drugs_list": [
+        "GBS III-TT-SSI",
+        "GBS III-TT-MPHL"
+      ],
+      "diseases": "['Bacterial Infections', 'Group B Streptococcus']",
+      "diseases_list": [
+        "Bacterial Infections",
+        "Group B Streptococcus"
+      ],
+      "enrollment": "65.0",
+      "inclusion_criteria": "This information currently is not available.",
+      "exclusion_criteria": "",
+      "brief_summary": "The purpose of this study is to test the safety and favorable immune response to an anti-streptococcal vaccine (a vaccine that treats a common bacterial infection) in healthy non-pregnant women.~Group B Streptococcus (GBS) continues to be the single most frequent cause of life-threatening bacterial infection during the first 2 months of life. Further, GBS pregnancy-related morbidity afflicts more than 50,000 women annually in the US. Therefore, active immunization of women is an appealing strategy for the prevention of GBS disease in pregnant women and their infants during the first 3 months of infant life."
+    }
+  },
+  "linked_result": {
+    "Bacterial Infections": {
+      "conceptId": "87628006",
+      "preferred_term": "Bacterial infectious disease",
+      "fully_specified_name": "Bacterial infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections by bacteria, general or unspecified.",
+      "best_match_term": "Bacterial infection",
+      "match_reason": "Exact"
+    },
+    "Group B Streptococcus": {
+      "conceptId": "426933007",
+      "preferred_term": "Streptococcus agalactiae infection",
+      "fully_specified_name": "Streptococcus agalactiae infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Group B Streptococcus, also known as Streptococcus agalactiae, colonizes the vaginal and gastrointestinal tracts of up to 45% of healthy women and may infect neonates in utero or during delivery, causing neonatal sepsis in 1-2% of colonized neonates. GBS infection may also occur in nonpregnant (particularly elderly) adults with underlying medical conditions, presenting as urinary tract infection, pneumonia, or soft-tissue infection.",
+      "best_match_term": "Infection due to Streptococcus group B",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Bacterial Infections": 1,
+    "Group B Streptococcus": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Bacterial Infections": {
+      "disease": "Bacterial Infections",
+      "conceptId": "87628006",
+      "preferred_term": "Bacterial infectious disease",
+      "fully_specified_name": "Bacterial infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections by bacteria, general or unspecified.",
+      "best_match_term": "Bacterial infection"
+    },
+    "Group B Streptococcus": {
+      "disease": "Group B Streptococcus",
+      "conceptId": "426933007",
+      "preferred_term": "Streptococcus agalactiae infection",
+      "fully_specified_name": "Streptococcus agalactiae infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Group B Streptococcus, also known as Streptococcus agalactiae, colonizes the vaginal and gastrointestinal tracts of up to 45% of healthy women and may infect neonates in utero or during delivery, causing neonatal sepsis in 1-2% of colonized neonates. GBS infection may also occur in nonpregnant (particularly elderly) adults with underlying medical conditions, presenting as urinary tract infection, pneumonia, or soft-tissue infection.",
+      "best_match_term": "Infection due to Streptococcus group B"
+    }
+  }
+}

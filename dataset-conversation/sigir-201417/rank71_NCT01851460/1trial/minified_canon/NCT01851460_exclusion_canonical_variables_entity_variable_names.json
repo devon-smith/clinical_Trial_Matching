@@ -1,0 +1,10 @@
+[
+  "patient_can_undergo_excision_now",
+  "patient_is_exposed_to_lupus_anticoagulant_now",
+  "patient_partial_thromboplastin_time_activated_value_recorded_now_withunit_seconds",
+  "patient_prothrombin_time_value_recorded_now_withunit_seconds",
+  "patient_has_finding_of_platelet_count_finding_now",
+  "patient_platelet_count_finding_value_recorded_now_withunit_per_cubic_millimeter",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_disease_condition_finding_now"
+]

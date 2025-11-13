@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT00873535",
+  "contextual": {
+    "_id": "NCT00873535",
+    "title": "Effect of Varenicline on Reactivity to Smoking and Drinking Cues",
+    "text": "Summary: Alcohol and nicotine dependence are often co-morbid, with 85% of alcoholics also smoking. However, very little research has been conducted into the nature of this co-occurrence. Thus, the main aim of this study is to assess differences in alcohol and tobacco consumption and cue-induced craving in treatment-seeking smokers after two weeks treatment of varenicline.~Hypotheses~Two weeks of varenicline treatment will significantly decrease cue-induced tobacco craving compared to placebo (Due to the actions of varenicline on alpha-4-beta-2 receptors and its downstream effect on dopamine release).~Varenicline will decrease cue-induced alcohol craving compared to placebo.~The impact of Varenicline on cue-induced alcohol craving will be greater in heavy drinkers compared to social drinkers.\nInclusion criteria: inclusion criteria: Heavy Smokers/Heavy Drinkers \n\n Treatment seeking smokers \n\n Age 18 to 65 years \n\n Smoke ≥ 10 cigarettes per day \n\n Fagerstrom Test of Nicotine Dependence score > 3 \n\n Alcohol Use Disorders Identification Test (AUDIT) > 8 \n\n Drink > 25 drinks per week for males or > 20 drinks per week for females \n\n Able to provide written informed consent \n\n inclusion criteria (Heavy Smokers/Social Drinkers): \n\n Treatment seeking smokers \n\n Age 18 to 65 years \n\n Smoke ≥ 10 cigarettes per day \n\n Fagerstrom Test of Nicotine Dependence score > 3 \n\n Alcohol Use Disorders Identification Test(AUDIT) < 8 \n\n Drink < 14 drinks per week for males or < 9 drinks per week for females \n\n Able to provide written informed consent \n\n \nExclusion criteria:  (Heavy Smokers/Heavy Drinkers): \n\n Any medical condition requiring immediate investigation or treatment \n\n Beck Depression Inventory score >16 \n\n Insulin-dependent diabetes \n\n Drink > 70 standard alcoholic drinks per week for males or drink > 52 standard alcoholic drinks per week for females \n\n Pregnancy or lactation \n\n Current DSM-IV Axis 1 psychiatric disorder \n\n Regular use of any therapeutic or recreational psychoactive drug use during the last three months or other substance use disorder, with the exception of tobacco and alcohol. \n\n ",
+    "metadata": {
+      "brief_title": "Effect of Varenicline on Reactivity to Smoking and Drinking Cues",
+      "phase": "",
+      "drugs": "['Varenicline', 'Placebo']",
+      "drugs_list": [
+        "Varenicline",
+        "Placebo"
+      ],
+      "diseases": "['Tobacco Dependence', 'Alcohol Dependence']",
+      "diseases_list": [
+        "Tobacco Dependence",
+        "Alcohol Dependence"
+      ],
+      "enrollment": "48.0",
+      "inclusion_criteria": "inclusion criteria: Heavy Smokers/Heavy Drinkers \n\n Treatment seeking smokers \n\n Age 18 to 65 years \n\n Smoke ≥ 10 cigarettes per day \n\n Fagerstrom Test of Nicotine Dependence score > 3 \n\n Alcohol Use Disorders Identification Test (AUDIT) > 8 \n\n Drink > 25 drinks per week for males or > 20 drinks per week for females \n\n Able to provide written informed consent \n\n inclusion criteria (Heavy Smokers/Social Drinkers): \n\n Treatment seeking smokers \n\n Age 18 to 65 years \n\n Smoke ≥ 10 cigarettes per day \n\n Fagerstrom Test of Nicotine Dependence score > 3 \n\n Alcohol Use Disorders Identification Test(AUDIT) < 8 \n\n Drink < 14 drinks per week for males or < 9 drinks per week for females \n\n Able to provide written informed consent \n\n ",
+      "exclusion_criteria": " (Heavy Smokers/Heavy Drinkers): \n\n Any medical condition requiring immediate investigation or treatment \n\n Beck Depression Inventory score >16 \n\n Insulin-dependent diabetes \n\n Drink > 70 standard alcoholic drinks per week for males or drink > 52 standard alcoholic drinks per week for females \n\n Pregnancy or lactation \n\n Current DSM-IV Axis 1 psychiatric disorder \n\n Regular use of any therapeutic or recreational psychoactive drug use during the last three months or other substance use disorder, with the exception of tobacco and alcohol. \n\n ",
+      "brief_summary": "Alcohol and nicotine dependence are often co-morbid, with 85% of alcoholics also smoking. However, very little research has been conducted into the nature of this co-occurrence. Thus, the main aim of this study is to assess differences in alcohol and tobacco consumption and cue-induced craving in treatment-seeking smokers after two weeks treatment of varenicline.~Hypotheses~Two weeks of varenicline treatment will significantly decrease cue-induced tobacco craving compared to placebo (Due to the actions of varenicline on alpha-4-beta-2 receptors and its downstream effect on dopamine release).~Varenicline will decrease cue-induced alcohol craving compared to placebo.~The impact of Varenicline on cue-induced alcohol craving will be greater in heavy drinkers compared to social drinkers."
+    }
+  }
+}

@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_illness_now",
+  "patient_has_finding_of_secondary_malignant_neoplasm_of_brain_now",
+  "patient_has_finding_of_secondary_malignant_neoplastic_disease_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_is_exposed_to_drug_or_medicament_now"
+]

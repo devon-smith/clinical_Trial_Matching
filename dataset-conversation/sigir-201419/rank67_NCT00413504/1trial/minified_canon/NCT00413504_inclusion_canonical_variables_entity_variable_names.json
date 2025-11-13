@@ -1,0 +1,15 @@
+[
+  "patient_has_undergone_anticoagulant_therapy_inthehistory",
+  "patient_has_finding_of_bleeding_inthehistory",
+  "patient_international_normalized_ratio_value_recorded_inthehistory_withunit_ratio",
+  "patient_has_diagnosis_of_thromboembolism_of_vein_inthehistory",
+  "patient_has_finding_of_warfarin_side_effects_inthehistory",
+  "patient_is_undergoing_anticoagulant_therapy_now",
+  "patient_has_finding_of_bleeding_now",
+  "patient_international_normalized_ratio_value_recorded_now_withunit_ratio",
+  "patient_has_diagnosis_of_thromboembolism_of_vein_now",
+  "patient_has_finding_of_warfarin_side_effects_now",
+  "patient_international_normalized_ratio_value_recorded_now_withunit_none",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_age_value_recorded_now_in_years"
+]

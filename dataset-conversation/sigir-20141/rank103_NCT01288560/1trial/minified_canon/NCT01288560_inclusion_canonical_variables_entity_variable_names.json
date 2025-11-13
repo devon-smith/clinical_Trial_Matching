@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_coronary_angiography_inthehistory",
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+  "patient_has_suspicion_of_coronary_arteriosclerosis_now",
+  "patient_has_undergone_imaging_inthehistory",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_myocardial_ischemia_now",
+  "patient_has_finding_of_left_ventricular_cardiac_dysfunction_now",
+  "patient_left_ventricular_ejection_fraction_value_recorded_inthepast6months_withunit_percent"
+]

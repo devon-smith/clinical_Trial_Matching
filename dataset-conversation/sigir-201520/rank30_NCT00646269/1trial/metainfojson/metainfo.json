@@ -1,0 +1,27 @@
+{
+  "trial_id": "NCT00646269",
+  "contextual": {
+    "_id": "NCT00646269",
+    "title": "Efficacy Assessment of Three Non Pharmacological Therapies in Alzheimer's Disease",
+    "text": "Summary: ETNA3 is a multicentric randomised clinical trial conducted in France to evaluate the impact of cognitive training, reminiscence therapy and a made-to-measure program on the progression rate of dementia.\nInclusion criteria: inclusion criteria: \n\n Patients in the mild to moderate stages of Alzheimer's Disease : MMSE score between 16 and 26 ; and stages 3 to 5 of the Global Deterioration Scale \n\n Patients over 50 years of age \n\n Patients with social security affiliation \n\n \nExclusion criteria: : \n\n Patients suffering other type of dementia \n\n Institutionalized patients \n\n Patients with psychiatric disorder \n\n Patients with severe pathology in the terminal stages \n\n Patients receiving non pharmacological therapies other than that proposed in the study \n\n Enrollment in a pharmacological trial in the first 6 months",
+    "metadata": {
+      "brief_title": "Efficacy Assessment of Three Non Pharmacological Therapies in Alzheimer's Disease",
+      "phase": "Phase 3",
+      "drugs": "['Standard intervention protocol', 'Standard intervention protocol + Cognitive training therapy', 'Standard intervention protocol + Reminiscence therapy', 'Standard intervention protocol + Made-to-measure program']",
+      "drugs_list": [
+        "Standard intervention protocol",
+        "Standard intervention protocol + Cognitive training therapy",
+        "Standard intervention protocol + Reminiscence therapy",
+        "Standard intervention protocol + Made-to-measure program"
+      ],
+      "diseases": "[\"Alzheimer's Disease\"]",
+      "diseases_list": [
+        "Alzheimer's Disease"
+      ],
+      "enrollment": "640.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients in the mild to moderate stages of Alzheimer's Disease : MMSE score between 16 and 26 ; and stages 3 to 5 of the Global Deterioration Scale \n\n Patients over 50 years of age \n\n Patients with social security affiliation \n\n ",
+      "exclusion_criteria": ": \n\n Patients suffering other type of dementia \n\n Institutionalized patients \n\n Patients with psychiatric disorder \n\n Patients with severe pathology in the terminal stages \n\n Patients receiving non pharmacological therapies other than that proposed in the study \n\n Enrollment in a pharmacological trial in the first 6 months",
+      "brief_summary": "ETNA3 is a multicentric randomised clinical trial conducted in France to evaluate the impact of cognitive training, reminiscence therapy and a made-to-measure program on the progression rate of dementia."
+    }
+  }
+}

@@ -1,0 +1,12 @@
+[
+  "patient_has_diagnosis_of_relapsing_remitting_multiple_sclerosis_now",
+  "patient_has_finding_of_multiple_sclerosis_inthehistory",
+  "patient_has_finding_of_finding_of_lesion_now",
+  "patient_has_undergone_magnetic_resonance_imaging_inthehistory",
+  "patient_has_undergone_immunosuppressive_therapy_inthehistory",
+  "patient_disability_value_recorded_now_withunit_score",
+  "patient_has_childbearing_potential_now",
+  "patient_sex_is_male_now",
+  "patient_has_finding_of_contraception_inthefuture",
+  "patient_has_finding_of_contraception_now"
+]

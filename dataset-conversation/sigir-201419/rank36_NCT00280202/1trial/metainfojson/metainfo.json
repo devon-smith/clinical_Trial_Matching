@@ -1,0 +1,29 @@
+{
+  "trial_id": "NCT00280202",
+  "contextual": {
+    "_id": "NCT00280202",
+    "title": "Detection of Genetic Markers of Lung Cancer",
+    "text": "Summary: The purpose of this research study is to determine the genetic changes and immunologic changes that are involved in the development and progression of bronchogenic lung cancer.\nInclusion criteria: inclusion criteria: \n\n Histologic confirmation of lung cancer, lung metastases from a primary site other than lung, mesothelioma or a radiographic lesion highly suspicious for malignancy \n\n Written informed consent. \n\n Must be scheduled for a biopsy or surgical resection \n\n \nExclusion criteria: : \n\n None",
+    "metadata": {
+      "brief_title": "Detection of Genetic Markers of Lung Cancer",
+      "phase": "",
+      "drugs": "['Biopsy of the major carinal area', 'Biopsy of abnormal & suspicious areas of the bronchial tree', 'Evaluation of the tumor for DNA mutations', 'Bronchoalveolar Lavage (BAL) for cytokine analysis', 'Correlation of flow cytometric & RT PCR for TNM stage', 'Analysis of lymph nodes']",
+      "drugs_list": [
+        "Biopsy of the major carinal area",
+        "Biopsy of abnormal & suspicious areas of the bronchial tree",
+        "Evaluation of the tumor for DNA mutations",
+        "Bronchoalveolar Lavage (BAL) for cytokine analysis",
+        "Correlation of flow cytometric & RT PCR for TNM stage",
+        "Analysis of lymph nodes"
+      ],
+      "diseases": "['Lung Cancer']",
+      "diseases_list": [
+        "Lung Cancer"
+      ],
+      "enrollment": "6000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Histologic confirmation of lung cancer, lung metastases from a primary site other than lung, mesothelioma or a radiographic lesion highly suspicious for malignancy \n\n Written informed consent. \n\n Must be scheduled for a biopsy or surgical resection \n\n ",
+      "exclusion_criteria": ": \n\n None",
+      "brief_summary": "The purpose of this research study is to determine the genetic changes and immunologic changes that are involved in the development and progression of bronchogenic lung cancer."
+    }
+  }
+}

@@ -1,0 +1,23 @@
+[
+  "patient_can_undergo_biopsy_now",
+  "patient_has_finding_of_finding_of_lesion_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_has_undergone_computerized_axial_tomography_inthehistory",
+  "patient_has_undergone_computerized_axial_tomography_of_brain_inthehistory",
+  "patient_has_undergone_mri_of_brain_and_brain_stem_inthehistory",
+  "patient_has_undergone_plain_chest_x_ray_inthehistory",
+  "patient_has_undergone_radioisotope_scan_of_bone_inthehistory",
+  "patient_has_diagnosis_of_disease_now",
+  "patient_has_finding_of_patient_unsuitable_for_procedure_due_to_medical_condition_now",
+  "patient_can_undergo_surgical_procedure_now",
+  "patient_lesion_of_lung_value_recorded_now_withunit_count",
+  "patient_has_finding_of_secondary_malignant_neoplasm_of_bronchopulmonary_lymph_nodes_now",
+  "patient_has_finding_of_secondary_malignant_neoplasm_of_mediastinal_lymph_nodes_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patients_pulmonary_function_is_normal_now",
+  "patient_has_undergone_stereotactic_radiotherapy_inthehistory",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_childbearing_potential_now",
+  "patient_sex_is_male_now",
+  "patient_has_finding_of_contraception_now"
+]

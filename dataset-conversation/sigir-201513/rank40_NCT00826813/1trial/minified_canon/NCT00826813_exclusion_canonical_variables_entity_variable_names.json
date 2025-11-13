@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_esophageal_fistula_now",
+  "patient_has_finding_of_obstruction_of_trachea_now",
+  "patient_platelet_count_finding_value_recorded_now_withunit_per_cubic_millimeter",
+  "patient_white_blood_cell_count_value_recorded_now_withunit_per_cubic_millimeter",
+  "patient_is_undergoing_chemotherapy_now",
+  "patient_is_undergoing_surgical_procedure_now"
+]

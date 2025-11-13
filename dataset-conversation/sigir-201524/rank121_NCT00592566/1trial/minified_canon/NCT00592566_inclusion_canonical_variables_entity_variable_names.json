@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_leptospirosis_now",
+  "patient_has_finding_of_disorder_due_to_infection_now",
+  "patient_has_finding_of_fever_now",
+  "patient_oral_temperature_value_recorded_now_withunit_degrees_celsius",
+  "patient_has_finding_of_hemoptysis_now",
+  "patient_has_finding_of_pulmonary_hemorrhage_now"
+]

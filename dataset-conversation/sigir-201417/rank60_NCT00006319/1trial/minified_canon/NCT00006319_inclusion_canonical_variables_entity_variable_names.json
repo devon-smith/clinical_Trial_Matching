@@ -1,0 +1,10 @@
+[
+  "patient_has_finding_of_primary_immune_deficiency_disorder_inthehistory",
+  "patient_has_clinical_signs_of_primary_immune_deficiency_disorder_now",
+  "patient_has_symptoms_of_primary_immune_deficiency_disorder_now",
+  "patients_human_immunodeficiency_virus_infection_is_negative_now",
+  "patient_has_finding_of_immunodeficiency_disorder_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_exposed_to_blood_now",
+  "patient_has_diagnosis_of_scid_due_to_absent_adenosine_deaminase_now"
+]

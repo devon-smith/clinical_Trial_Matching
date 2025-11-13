@@ -1,0 +1,13 @@
+[
+  "patient_has_taken_dalteparin_containing_product_inthehistory",
+  "patient_has_taken_enoxaparin_containing_product_inthehistory",
+  "patient_has_taken_fondaparinux_containing_product_inthehistory",
+  "patient_is_exposed_to_anticoagulant_inthehistory",
+  "patient_has_diagnosis_of_deep_venous_thrombosis_now",
+  "patient_has_diagnosis_of_pulmonary_embolism_now",
+  "patient_has_diagnosis_of_deep_venous_thrombosis_inthepast6months",
+  "patient_has_undergone_emergency_department_patient_visit_inthepast6months",
+  "patient_has_diagnosis_of_pulmonary_embolism_inthepast6months",
+  "patient_has_undergone_seen_in_hospital_outpatient_department_inthepast6months",
+  "patient_has_undergone_patient_transfer_to_another_health_care_facility_now"
+]

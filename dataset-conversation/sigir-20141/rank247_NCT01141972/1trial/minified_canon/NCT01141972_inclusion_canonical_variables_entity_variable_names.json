@@ -1,0 +1,12 @@
+[
+  "patient_sex_is_female_now",
+  "patients_menopause_is_positive_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+  "patient_has_symptoms_of_menopausal_symptom_now",
+  "patient_menopausal_symptom_value_recorded_now_withunit_count",
+  "patient_amenorrhea_value_recorded_inthepast1years_withunit_days",
+  "patient_has_finding_of_decreased_vitamin_d_now",
+  "patient_decreased_vitamin_d_value_recorded_now_withunit_nanograms_per_milliliter",
+  "patient_has_finding_of_weight_steady_inthepast3months"
+]

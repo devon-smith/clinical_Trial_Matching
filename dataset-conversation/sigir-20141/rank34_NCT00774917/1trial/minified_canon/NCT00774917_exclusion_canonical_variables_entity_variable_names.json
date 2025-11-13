@@ -1,0 +1,20 @@
+[
+  "patient_has_diagnosis_of_acute_st_segment_elevation_myocardial_infarction_inthepast48hours",
+  "patient_vessel_outside_diameter_value_recorded_now_withunit_millimeter",
+  "patient_has_finding_of_left_main_coronary_artery_disease_now",
+  "patient_left_main_coronary_artery_disease_stenosis_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_finding_of_lesion_now",
+  "patient_is_exposed_to_graft_now",
+  "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+  "patient_creatinine_level_finding_value_recorded_now_withunit_mg_per_dl",
+  "patient_has_finding_of_renal_impairment_now",
+  "patient_has_undergone_transplantation_of_heart_inthehistory",
+  "patient_has_finding_of_allergy_to_aspirin_now",
+  "patient_has_finding_of_allergy_to_contrast_media_now",
+  "patient_has_finding_of_allergy_to_heparin_now",
+  "patient_has_finding_of_cerebrovascular_accident_inthepast6months",
+  "patient_has_finding_of_intracranial_hemorrhage_inthepast6months",
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_is_undergoing_clinical_drug_trial_now",
+  "patient_age_value_recorded_now_in_months"
+]

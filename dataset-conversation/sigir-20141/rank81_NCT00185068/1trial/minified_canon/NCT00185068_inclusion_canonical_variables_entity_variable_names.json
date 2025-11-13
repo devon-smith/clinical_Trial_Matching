@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_systolic_hypertension_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_has_childbearing_potential_now",
+  "patient_has_undergone_hysterectomy_inthehistory",
+  "patient_has_undergone_ligation_of_fallopian_tube_inthehistory"
+]

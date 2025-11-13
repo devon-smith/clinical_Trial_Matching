@@ -1,0 +1,18 @@
+# Theory-Based Interventions for Smoking and Obesity (Challenge) Trial
+**NCT**: `NCT00040287`
+## Brief Summary
+The purpose of this study is to examine a new theory for understanding the processes that govern behavior change by observing how people's beliefs and feelings about smoking cessation or weight loss change as they participate in smoking cessation or weight control programs. This study also seeks to improve the ability of treatment programs to help people maintain changes in their behavior.
+## Inclusion Criteria
+Eligibility criteria for the smoking cessation studies were: between 18 and 60 years old, a minimum 2-year history of smoking, a current level of smoking > 10 cigarettes per day, and agreement to participate in the study. 
+
+ Eligibility requirements for the weight loss studies were: between 18 and 60 years old, body mass index (weight/height2) > 27.0, 20 percent or more above desirable weight according to medical standards, and consent to participate. 
+
+ Smokers and overweight persons were excluded if currently being treated by a physician for a serious physical or psychological disorder (e.g., heart disease, cancer, depression). Women were excluded if currently pregnant, pregnant in the last 6 months, or intending to become pregnant in the next 18 months. People who were overweight and who also smoked were considered eligible for participation in either weight loss or smoking cessation programs. However, they received treatment only for the particular behavior problem targeted by the study they chose to participate in.
+## Full Text
+Summary: The purpose of this study is to examine a new theory for understanding the processes that govern behavior change by observing how people's beliefs and feelings about smoking cessation or weight loss change as they participate in smoking cessation or weight control programs. This study also seeks to improve the ability of treatment programs to help people maintain changes in their behavior.
+Inclusion criteria: Eligibility criteria for the smoking cessation studies were: between 18 and 60 years old, a minimum 2-year history of smoking, a current level of smoking > 10 cigarettes per day, and agreement to participate in the study. 
+
+ Eligibility requirements for the weight loss studies were: between 18 and 60 years old, body mass index (weight/height2) > 27.0, 20 percent or more above desirable weight according to medical standards, and consent to participate. 
+
+ Smokers and overweight persons were excluded if currently being treated by a physician for a serious physical or psychological disorder (e.g., heart disease, cancer, depression). Women were excluded if currently pregnant, pregnant in the last 6 months, or intending to become pregnant in the next 18 months. People who were overweight and who also smoked were considered eligible for participation in either weight loss or smoking cessation programs. However, they received treatment only for the particular behavior problem targeted by the study they chose to participate in.
+Exclusion criteria:

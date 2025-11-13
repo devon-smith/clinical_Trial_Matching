@@ -1,0 +1,71 @@
+{
+  "generated": "2025-10-20T23:37:02",
+  "trial_id": "NCT00513500",
+  "contextual": {
+    "_id": "NCT00513500",
+    "title": "Zambia Integrated Management of Malaria and Pneumonia Study",
+    "text": "Summary: The purpose of the study is to demonstrate the effectiveness and feasibility of community-based management of pneumonia and malaria by community health workers (CHWs) in a rural district of Zambia.\nInclusion criteria: inclusion criteria: \n\n Age between 6 months and 5 years \n\n Present with history of fever or reported fever \n\n Present with cough or difficult breathing \n\n \nExclusion criteria: : \n\n Age below 6 months and above 5 years \n\n Presence of signs and symptoms of severe illness",
+    "metadata": {
+      "brief_title": "Zambia Integrated Management of Malaria and Pneumonia Study",
+      "phase": "",
+      "drugs": "['Coartem and amoxicillin', 'Coartem']",
+      "drugs_list": [
+        "Coartem and amoxicillin",
+        "Coartem"
+      ],
+      "diseases": "['Pneumonia', 'Malaria']",
+      "diseases_list": [
+        "Pneumonia",
+        "Malaria"
+      ],
+      "enrollment": "3125.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age between 6 months and 5 years \n\n Present with history of fever or reported fever \n\n Present with cough or difficult breathing \n\n ",
+      "exclusion_criteria": ": \n\n Age below 6 months and above 5 years \n\n Presence of signs and symptoms of severe illness",
+      "brief_summary": "The purpose of the study is to demonstrate the effectiveness and feasibility of community-based management of pneumonia and malaria by community health workers (CHWs) in a rural district of Zambia."
+    }
+  },
+  "linked_result": {
+    "Pneumonia": {
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia",
+      "match_reason": "Exact"
+    },
+    "Malaria": {
+      "conceptId": "61462000",
+      "preferred_term": "Malaria",
+      "fully_specified_name": "Malaria (disorder)",
+      "type": "Clinical finding",
+      "definition": "A protozoan disease caused in humans by four species of the PLASMODIUM genus: PLASMODIUM FALCIPARUM; PLASMODIUM VIVAX; PLASMODIUM OVALE; and PLASMODIUM MALARIAE; and transmitted by the bite of an infected female mosquito of the genus ANOPHELES. Malaria is endemic in parts of Asia, Africa, Central and South America, Oceania, and certain Caribbean islands. It is characterized by extreme exhaustion associated with paroxysms of high FEVER; SWEATING; shaking CHILLS; and ANEMIA. Malaria in ANIMALS is caused by other species of plasmodia.",
+      "best_match_term": "Malaria",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Pneumonia": 1,
+    "Malaria": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Pneumonia": {
+      "disease": "Pneumonia",
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia"
+    },
+    "Malaria": {
+      "disease": "Malaria",
+      "conceptId": "61462000",
+      "preferred_term": "Malaria",
+      "fully_specified_name": "Malaria (disorder)",
+      "type": "Clinical finding",
+      "definition": "A protozoan disease caused in humans by four species of the PLASMODIUM genus: PLASMODIUM FALCIPARUM; PLASMODIUM VIVAX; PLASMODIUM OVALE; and PLASMODIUM MALARIAE; and transmitted by the bite of an infected female mosquito of the genus ANOPHELES. Malaria is endemic in parts of Asia, Africa, Central and South America, Oceania, and certain Caribbean islands. It is characterized by extreme exhaustion associated with paroxysms of high FEVER; SWEATING; shaking CHILLS; and ANEMIA. Malaria in ANIMALS is caused by other species of plasmodia.",
+      "best_match_term": "Malaria"
+    }
+  }
+}

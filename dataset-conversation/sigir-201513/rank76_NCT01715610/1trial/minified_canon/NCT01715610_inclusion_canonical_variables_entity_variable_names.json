@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_peritonsillar_abscess_inthehistory",
+  "patient_has_finding_of_peritonsillar_abscess_drained_inthehistory",
+  "patient_has_finding_of_peritonsillar_abscess_purulence_obtained_inthehistory"
+]

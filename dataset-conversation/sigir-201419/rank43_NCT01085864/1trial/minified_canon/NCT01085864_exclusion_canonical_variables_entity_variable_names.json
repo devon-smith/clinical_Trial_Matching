@@ -1,0 +1,11 @@
+[
+  "patient_lung_mass_value_recorded_now_withunit_millimeters",
+  "patient_has_finding_of_multiple_nodules_of_lung_now",
+  "patient_has_finding_of_obstruction_now",
+  "patient_has_undergone_computerized_axial_tomography_now",
+  "patient_has_finding_of_lung_mass_now",
+  "patient_has_diagnosis_of_malignant_neoplasm_of_skin_inthehistory",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+  "patient_age_value_recorded_now_in_months",
+  "patient_longevity_value_recorded_now_withunit_months"
+]

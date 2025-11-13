@@ -1,0 +1,15 @@
+[
+  "patient_has_finding_of_disorder_due_to_infection_now",
+  "patient_is_undergoing_biological_treatment_now",
+  "patient_is_undergoing_chemotherapy_now",
+  "patient_is_undergoing_hormone_therapy_now",
+  "patient_is_undergoing_immunological_therapy_now",
+  "patient_has_diagnosis_of_arthritis_inthehistory",
+  "patient_has_diagnosis_of_calcinosis_inthehistory",
+  "patient_has_diagnosis_of_esophageal_dysmotility_inthehistory",
+  "patient_has_diagnosis_of_lupus_erythematosus_inthehistory",
+  "patient_has_diagnosis_of_raynaud_s_phenomenon_inthehistory",
+  "patient_has_diagnosis_of_sclerodactyly_inthehistory",
+  "patient_has_diagnosis_of_telangiectasia_disorder_inthehistory",
+  "patient_can_undergo_chemotherapy_now"
+]

@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_bilateral_renal_artery_stenosis_now",
+  "patient_has_finding_of_renal_artery_stenosis_now",
+  "patient_can_undergo_insertion_of_arterial_stent_now",
+  "patient_can_undergo_percutaneous_transluminal_angioplasty_of_renal_artery_now",
+  "patient_has_finding_of_atrophy_of_kidney_now",
+  "patient_has_diagnosis_of_hypertensive_disorder_now",
+  "patient_has_finding_of_chronic_heart_failure_now",
+  "patient_has_finding_of_heart_valve_disorder_now",
+  "patient_has_finding_of_persistent_atrial_fibrillation_now",
+  "patient_has_finding_of_renal_failure_syndrome_now"
+]

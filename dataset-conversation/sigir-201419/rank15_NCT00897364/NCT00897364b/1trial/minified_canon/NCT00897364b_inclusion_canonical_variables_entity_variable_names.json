@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_ex_smoker_now",
+  "patient_has_finding_of_sputum_cytology_now",
+  "patient_cigarette_pack_years_value_recorded_now_withunit_pack_years",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent_predicted",
+  "patient_has_diagnosis_of_primary_malignant_neoplasm_of_lung_now",
+  "patient_has_finding_of_smoker_now",
+  "patient_has_diagnosis_of_malignant_tumor_of_neck_inthehistory"
+]

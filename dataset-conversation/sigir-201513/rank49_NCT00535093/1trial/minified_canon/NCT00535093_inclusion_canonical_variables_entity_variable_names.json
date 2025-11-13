@@ -1,0 +1,10 @@
+[
+  "patient_has_symptoms_of_sore_throat_symptom_now",
+  "patient_centor_criteria_score_value_recorded_now_withunit_count",
+  "patient_has_finding_of_cervical_lymphadenopathy_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_exudate_on_tonsils_now",
+  "patient_has_finding_of_fever_inthehistory",
+  "patient_has_finding_of_fever_now",
+  "patient_age_value_recorded_now_in_years"
+]

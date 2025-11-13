@@ -1,0 +1,13 @@
+[
+  "patient_has_diagnosis_of_secondary_malignant_neoplastic_disease_now",
+  "patient_has_diagnosis_of_tumor_of_advanced_extent_now",
+  "patient_has_diagnosis_of_tumor_surgically_unresectable_now",
+  "patient_has_undergone_computerized_axial_tomography_now",
+  "patient_has_undergone_magnetic_resonance_imaging_now",
+  "patient_has_undergone_plain_radiography_now",
+  "patient_has_undergone_ultrasonography_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_chemotherapy_inthehistory",
+  "patient_has_undergone_hormone_therapy_inthehistory",
+  "patient_has_undergone_immunological_therapy_inthehistory"
+]

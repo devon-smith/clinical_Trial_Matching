@@ -1,0 +1,18 @@
+[
+  "patient_has_finding_of_aids_now",
+  "patient_has_finding_of_cytomegaloviral_retinitis_now",
+  "patient_has_finding_of_cytomegalovirus_infection_now",
+  "patient_can_undergo_immunosuppressive_therapy_now",
+  "patient_has_finding_of_transplant_present_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_congenital_cytomegalovirus_infection_now",
+  "patient_has_finding_of_immunodeficiency_disorder_now",
+  "patient_has_finding_of_primary_immune_deficiency_disorder_now",
+  "patient_has_finding_of_allergy_to_acyclovir_now",
+  "patient_has_finding_of_allergy_to_ganciclovir_now",
+  "patient_is_taking_alkylating_agent_containing_product_now",
+  "patient_is_taking_cytokine_containing_product_now",
+  "patient_is_taking_foscarnet_containing_product_now",
+  "patient_is_taking_interferon_containing_product_now",
+  "patient_is_taking_nucleoside_analog_containing_product_now"
+]

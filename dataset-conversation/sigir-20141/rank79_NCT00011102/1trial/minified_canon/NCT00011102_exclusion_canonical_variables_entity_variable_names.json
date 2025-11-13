@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_chronic_disease_now",
+  "patients_dietary_intake_is_positive_inthehistory",
+  "patient_has_finding_of_mental_disorder_now",
+  "patient_is_pregnant_now",
+  "patient_is_pregnant_inthepast12months",
+  "patient_is_exposed_to_drug_or_medicament_inthepast3months"
+]

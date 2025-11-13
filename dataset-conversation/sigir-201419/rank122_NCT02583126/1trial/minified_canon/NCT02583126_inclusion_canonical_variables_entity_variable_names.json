@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_chemotherapy_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_nausea_and_vomiting_now",
+  "patient_has_finding_of_hearing_loss_now"
+]

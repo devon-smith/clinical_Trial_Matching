@@ -1,0 +1,7 @@
+[
+  "patients_segment_deviation_is_abnormal_now",
+  "patients_troponin_is_abnormal_now",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_finding_of_hemodynamic_instability_now",
+  "patient_age_value_recorded_now_in_years"
+]

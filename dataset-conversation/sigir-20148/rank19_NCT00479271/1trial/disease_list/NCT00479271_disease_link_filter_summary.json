@@ -1,0 +1,59 @@
+{
+  "generated": "2025-10-20T23:42:45",
+  "trial_id": "NCT00479271",
+  "contextual": {
+    "_id": "NCT00479271",
+    "title": "Evaluating the Effectiveness of a Community Based Intervention for Persons With Dementia and Their Caregivers in a Developing Country",
+    "text": "Summary: The aim of this trial was to apply a home based, flexible, stepped-care intervention designed to improve the awareness and knowledge of family caregivers regarding dementia, to maximise their caregiving resources and to improve their caregiving skills. A Randomized Controlled Trial (RCT) will be used to evaluate the same wherein the intervention group will get the services immediately and the control arm would receive the same after a period of 6 months.\nInclusion criteria: inclusion criteria: \n\n All probable cases will be examined by a trained clinician (AD) to confirm the diagnosis of dementia according to DSM IV criteria and graded using the Clinical Dementia Rating (CDR) Scale. \n\n CDR mild and moderate dementia. \n\n The principal caregiver, as identified by the family, was enrolled for the trial. The principal caregiver was generally the spouse, although in some instances another family member was the principal caregiver, particularly when the spouse was not in a position to care. \n\n \nExclusion criteria: : \n\n CDR severe dementia or severe co-morbid physical health conditions.",
+    "metadata": {
+      "brief_title": "Evaluating the Effectiveness of a Community Based Intervention for Persons With Dementia and Their Caregivers in a Developing Country",
+      "phase": "",
+      "drugs": "['Home based, flexible, stepped care intervention', 'Home based, flexible, stepped care intervention after 6 months. Families will be free to choose any health care they desire during the waiting period.']",
+      "drugs_list": [
+        "Home based",
+        "flexible",
+        "stepped care intervention",
+        "Home based",
+        "flexible",
+        "stepped care intervention after 6 months. Families will be free to choose any health care they desire during the waiting period."
+      ],
+      "diseases": "['Dementia', 'Behavioral Symptoms', 'Mental Health']",
+      "diseases_list": [
+        "Dementia",
+        "Behavioral Symptoms",
+        "Mental Health"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "inclusion criteria: \n\n All probable cases will be examined by a trained clinician (AD) to confirm the diagnosis of dementia according to DSM IV criteria and graded using the Clinical Dementia Rating (CDR) Scale. \n\n CDR mild and moderate dementia. \n\n The principal caregiver, as identified by the family, was enrolled for the trial. The principal caregiver was generally the spouse, although in some instances another family member was the principal caregiver, particularly when the spouse was not in a position to care. \n\n ",
+      "exclusion_criteria": ": \n\n CDR severe dementia or severe co-morbid physical health conditions.",
+      "brief_summary": "The aim of this trial was to apply a home based, flexible, stepped-care intervention designed to improve the awareness and knowledge of family caregivers regarding dementia, to maximise their caregiving resources and to improve their caregiving skills. A Randomized Controlled Trial (RCT) will be used to evaluate the same wherein the intervention group will get the services immediately and the control arm would receive the same after a period of 6 months."
+    }
+  },
+  "linked_result": {
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    },
+    "Behavioral Symptoms": null,
+    "Mental Health": null
+  },
+  "kept_counts": {
+    "Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    }
+  }
+}

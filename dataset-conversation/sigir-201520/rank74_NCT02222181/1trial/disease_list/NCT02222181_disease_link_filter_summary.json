@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-22T21:05:08",
+  "trial_id": "NCT02222181",
+  "contextual": {
+    "_id": "NCT02222181",
+    "title": "Impact of Pharmacotherapy Management in Patients With Alzheimer's Disease",
+    "text": "Summary: In Brazil, patients with Alzheimer's disease (AD) receiving free drugs of government. Even having access to, little is known about the effectiveness, safety and adherence of drug therapy in this group of patients. The research aims to promote adherence and develop strategies to address Drug-Related Problems (DRP's) in AD patients elderly of reference centre for the Elderly of Araraquara. The clinical parameters will be assessed at the beginning and after the educational intervention period from April 2014 to April 2015.\nInclusion criteria: inclusion criteria: \n\n Elderly patients who are assisted in CRIA, diagnosed with Alzheimer's in use of rivastigmine or donepezil or galantamine, assisted by the Program for special drugs. \n\n Be resident in the city of Araraquara / SP \n\n Accept part of pharmacotherapeutic follow-up; \n\n Sign the Statement of Informed Consent Form (ICF). \n\n \nExclusion criteria: : \n\n Fold over pharmacotherapy follow-up; \n\n Being institutionalized; \n\n Patients unable to respond to collection instruments MMSE and CDR data; \n\n Patient without phone contact.",
+    "metadata": {
+      "brief_title": "Impact of Pharmacotherapy Management in Patients With Alzheimer's Disease",
+      "phase": "",
+      "drugs": "['Pharmacotherapy Management']",
+      "drugs_list": [
+        "Pharmacotherapy Management"
+      ],
+      "diseases": "[\"Alzheimer's Disease\"]",
+      "diseases_list": [
+        "Alzheimer's Disease"
+      ],
+      "enrollment": "55.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Elderly patients who are assisted in CRIA, diagnosed with Alzheimer's in use of rivastigmine or donepezil or galantamine, assisted by the Program for special drugs. \n\n Be resident in the city of Araraquara / SP \n\n Accept part of pharmacotherapeutic follow-up; \n\n Sign the Statement of Informed Consent Form (ICF). \n\n ",
+      "exclusion_criteria": ": \n\n Fold over pharmacotherapy follow-up; \n\n Being institutionalized; \n\n Patients unable to respond to collection instruments MMSE and CDR data; \n\n Patient without phone contact.",
+      "brief_summary": "In Brazil, patients with Alzheimer's disease (AD) receiving free drugs of government. Even having access to, little is known about the effectiveness, safety and adherence of drug therapy in this group of patients. The research aims to promote adherence and develop strategies to address Drug-Related Problems (DRP's) in AD patients elderly of reference centre for the Elderly of Araraquara. The clinical parameters will be assessed at the beginning and after the educational intervention period from April 2014 to April 2015."
+    }
+  },
+  "linked_result": {
+    "Alzheimer's Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Alzheimer's Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Alzheimer's Disease": {
+      "disease": "Alzheimer's Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease"
+    }
+  }
+}

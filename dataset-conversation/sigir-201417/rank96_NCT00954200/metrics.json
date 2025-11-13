@@ -1,0 +1,13 @@
+{
+  "canonical_nct_id": "NCT00954200",
+  "status": "eliminated",
+  "rep_trial_id": 1597,
+  "rep_status": "eliminated",
+  "total_clauses": 1,
+  "unsat_any": 1,
+  "unsat_explicit": 0,
+  "frac_unsat_any": 1.0,
+  "pct_unsat_any": 100.0,
+  "pct_unsat_explicit": 0.0,
+  "best_sub_rank": 99
+}

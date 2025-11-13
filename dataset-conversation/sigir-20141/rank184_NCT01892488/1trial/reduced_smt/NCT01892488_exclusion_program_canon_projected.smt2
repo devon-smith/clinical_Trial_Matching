@@ -1,0 +1,30 @@
+;; ===================== PROJECTED CANON (QE) =====================
+;; Each clause below is entailed by Proj = ∃W.F over the canonical vocabulary.
+;; Units appear first for clarity; OR-clauses (SAT-filtered) follow.
+;; ==================================================================
+
+;; Unit Bool constraints (entailed)
+(assert (not patient_is_undergoing_assisted_breathing_now))
+(assert (not patient_has_finding_of_clouded_consciousness_now))
+(assert (not patient_has_finding_of_respiratory_acidosis_now))
+(assert (not patient_has_finding_of_fever_now))
+(assert (not patient_has_finding_of_decreased_liver_function_now))
+(assert (not patient_has_finding_of_renal_impairment_now))
+(assert (not patient_has_hypersensitivity_to_allergic_reaction_caused_by_penicillin_now))
+(assert (not patient_has_hypersensitivity_to_allergy_to_cephalosporin_antibacterial_now))
+(assert (not patient_has_suspicion_of_allergy_to_cephalosporin_antibacterial_now))
+(assert (not patient_has_suspicion_of_allergy_to_penicillin_now))
+(assert (not patient_has_hypersensitivity_to_sultamicillin_now))
+(assert (not patient_has_intolerance_to_sultamicillin_now))
+(assert (not patient_has_suspicion_of_sultamicillin_now))
+(assert (not patient_has_undergone_administration_of_antineoplastic_agent_inthepast28days))
+(assert (not patient_has_finding_of_asplenia_now))
+(assert (not patient_has_finding_of_human_immunodeficiency_virus_infection_now))
+(assert (not patient_has_finding_of_immunosuppression_now))
+(assert (not patient_is_undergoing_immunosuppressive_therapy_now))
+(assert (not patient_has_finding_of_malignant_tumor_of_lymphoid_hemopoietic_and_related_tissue_now))
+(assert (not patient_has_finding_of_neutropenia_now))
+(assert (not patient_has_finding_of_secondary_malignant_neoplastic_disease_now))
+(assert (not patient_has_finding_of_methicillin_resistant_staphylococcus_aureus_infection_now))
+(assert (not patient_has_diagnosis_of_bronchiectasis_now))
+(assert (not patient_has_diagnosis_of_infectious_mononucleosis_now))

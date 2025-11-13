@@ -1,0 +1,71 @@
+{
+  "generated": "2025-10-20T23:30:50",
+  "trial_id": "NCT01724567",
+  "contextual": {
+    "_id": "NCT01724567",
+    "title": "Copenhagen Study of Obese Patients With Ischemic Heart Disease Undergoing Low Energy Diet or Interval Training",
+    "text": "Summary: The purpose of the study is to make a head-to-head comparison of weight loss and interval training as methods of secondary prevention in overweight patients with ischemic heart disease.\nInclusion criteria: inclusion criteria: \n\n Stable Ischemic Heart Disease \n\n BMI 28 - 40 kg/m2 \n\n \nExclusion criteria: : \n\n Known Diabetes Mellitus \n\n Repeated Fasting plasma glucose ≥ 7 mmol/L or Hba1c > 7 % \n\n Severe or moderate valve disease \n\n Main stem stenosis \n\n Severe heart failure, Ejection Fraction < 35 % \n\n Physical or mental disability which are expected to prevent completion of intervention \n\n Severe Chronic obstructive Pulmonary Disease (COPD) (FEV1 < 50 % of expected) or asthma \n\n Active cancer \n\n Severe kidney (GFR < 40 ml/hour) or severe liver disease \n\n Severe ischemia or arrhythmias during exercise test \n\n 2. or 3. degree atrio-ventricular (AV) block, not protected by pacemaker \n\n Organised training more than 2 times a week prior to inclusion \n\n Significant weight loss or weight gain (> 5 %)3 month prior to inclusion \n\n Not able to comprehend written and oral informed consent \n\n Hormone treatment",
+    "metadata": {
+      "brief_title": "Copenhagen Study of Obese Patients With Ischemic Heart Disease Undergoing Low Energy Diet or Interval Training",
+      "phase": "",
+      "drugs": "['Interval Training', 'Weight Loss']",
+      "drugs_list": [
+        "Interval Training",
+        "Weight Loss"
+      ],
+      "diseases": "['Ischemic Heart Disease', 'Obesity']",
+      "diseases_list": [
+        "Ischemic Heart Disease",
+        "Obesity"
+      ],
+      "enrollment": "70.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Stable Ischemic Heart Disease \n\n BMI 28 - 40 kg/m2 \n\n ",
+      "exclusion_criteria": ": \n\n Known Diabetes Mellitus \n\n Repeated Fasting plasma glucose ≥ 7 mmol/L or Hba1c > 7 % \n\n Severe or moderate valve disease \n\n Main stem stenosis \n\n Severe heart failure, Ejection Fraction < 35 % \n\n Physical or mental disability which are expected to prevent completion of intervention \n\n Severe Chronic obstructive Pulmonary Disease (COPD) (FEV1 < 50 % of expected) or asthma \n\n Active cancer \n\n Severe kidney (GFR < 40 ml/hour) or severe liver disease \n\n Severe ischemia or arrhythmias during exercise test \n\n 2. or 3. degree atrio-ventricular (AV) block, not protected by pacemaker \n\n Organised training more than 2 times a week prior to inclusion \n\n Significant weight loss or weight gain (> 5 %)3 month prior to inclusion \n\n Not able to comprehend written and oral informed consent \n\n Hormone treatment",
+      "brief_summary": "The purpose of the study is to make a head-to-head comparison of weight loss and interval training as methods of secondary prevention in overweight patients with ischemic heart disease."
+    }
+  },
+  "linked_result": {
+    "Ischemic Heart Disease": {
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Ischemic Heart Disease": 1,
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Ischemic Heart Disease": {
+      "disease": "Ischemic Heart Disease",
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_hemodynamic_instability_now",
+  "patient_human_chorionic_gonadotropin_measurement_value_recorded_now_withunit_milli_international_units_per_milliliter",
+  "patient_has_finding_of_complete_miscarriage_inthehistory",
+  "patient_has_undergone_termination_of_pregnancy_inthehistory",
+  "patient_has_diagnosis_of_gestational_trophoblastic_disease_now",
+  "patient_has_finding_of_allergy_to_methotrexate_now",
+  "patient_can_undergo_transfusion_of_blood_product_now"
+]

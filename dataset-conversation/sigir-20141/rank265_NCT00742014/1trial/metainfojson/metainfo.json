@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT00742014",
+  "contextual": {
+    "_id": "NCT00742014",
+    "title": "The Assessment of Right Ventricular Contractility in Response to Sildenafil",
+    "text": "Summary: The primary objective of this study is to examine the effects of Sildenafil, administered during cardiac catheterization, on right ventricular contractility in children with pulmonary arterial hypertension.\nInclusion criteria: inclusion criteria: \n\n Significant pulmonary arterial hypertension (mean pulmonary artery pressure > 25 mm Hg) \n\n Patients aged 4-18 years \n\n Routine cardiac catheterization clinically indicated for deciding therapeutic treatment \n\n Informed assent/consent from patient/parent \n\n \nExclusion criteria: : \n\n Suprasystemic pulmonary artery pressures \n\n Evidence of right heart failure \n\n History of ventricular arrhythmia \n\n Known vascular access arrhythmia \n\n Contraindication to Sildenafil \n\n Concurrent inotropic / PDE administration \n\n Other medical, psychological or social circumstances which complicate a regular participation in the study, and/or increase the risk for the patients themselves \n\n No consent/assent \n\n Pregnancy or unwillingness to comply with contraceptive advice",
+    "metadata": {
+      "brief_title": "The Assessment of Right Ventricular Contractility in Response to Sildenafil",
+      "phase": "Phase 3",
+      "drugs": "['Sildenafil']",
+      "drugs_list": [
+        "Sildenafil"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "10.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Significant pulmonary arterial hypertension (mean pulmonary artery pressure > 25 mm Hg) \n\n Patients aged 4-18 years \n\n Routine cardiac catheterization clinically indicated for deciding therapeutic treatment \n\n Informed assent/consent from patient/parent \n\n ",
+      "exclusion_criteria": ": \n\n Suprasystemic pulmonary artery pressures \n\n Evidence of right heart failure \n\n History of ventricular arrhythmia \n\n Known vascular access arrhythmia \n\n Contraindication to Sildenafil \n\n Concurrent inotropic / PDE administration \n\n Other medical, psychological or social circumstances which complicate a regular participation in the study, and/or increase the risk for the patients themselves \n\n No consent/assent \n\n Pregnancy or unwillingness to comply with contraceptive advice",
+      "brief_summary": "The primary objective of this study is to examine the effects of Sildenafil, administered during cardiac catheterization, on right ventricular contractility in children with pulmonary arterial hypertension."
+    }
+  }
+}

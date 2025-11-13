@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T22:57:41",
+  "trial_id": "NCT01950026",
+  "contextual": {
+    "_id": "NCT01950026",
+    "title": "Temperature Skin Check After Cryotherapy Application",
+    "text": "Summary: The aim of this study was to reheat the skin in different ethnic groups after application of cryotherapy.\nInclusion criteria: inclusion criteria: \n\n belong to ethnic groups requested \n\n \nExclusion criteria: : \n\n suffering any change in skin sensitivity, illness of an infectious nature or previously diagnosed diseases that respond negatively to the use of cold",
+    "metadata": {
+      "brief_title": "Temperature Skin Check After Cryotherapy Application",
+      "phase": "Phase 3",
+      "drugs": "['cryotherapy application']",
+      "drugs_list": [
+        "cryotherapy application"
+      ],
+      "diseases": "['Body Temperature Changes']",
+      "diseases_list": [
+        "Body Temperature Changes"
+      ],
+      "enrollment": "24.0",
+      "inclusion_criteria": "inclusion criteria: \n\n belong to ethnic groups requested \n\n ",
+      "exclusion_criteria": ": \n\n suffering any change in skin sensitivity, illness of an infectious nature or previously diagnosed diseases that respond negatively to the use of cold",
+      "brief_summary": "The aim of this study was to reheat the skin in different ethnic groups after application of cryotherapy."
+    }
+  },
+  "linked_result": {
+    "Body Temperature Changes": {
+      "conceptId": "123979008",
+      "preferred_term": "Abnormal body temperature",
+      "fully_specified_name": "Abnormal body temperature (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Abnormal body temperature",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Body Temperature Changes": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Body Temperature Changes": {
+      "disease": "Body Temperature Changes",
+      "conceptId": "123979008",
+      "preferred_term": "Abnormal body temperature",
+      "fully_specified_name": "Abnormal body temperature (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Abnormal body temperature"
+    }
+  }
+}

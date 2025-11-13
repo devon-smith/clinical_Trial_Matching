@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_body_weight_value_recorded_now_withunit_kg",
+  "patient_has_finding_of_obesity_now",
+  "patient_has_finding_of_acanthosis_nigricans_now",
+  "patient_has_finding_of_dyslipidemia_now",
+  "patient_has_finding_of_elevated_blood_pressure_now",
+  "patient_has_finding_of_insulin_resistance_now",
+  "patient_has_finding_of_type_2_diabetes_mellitus_inthehistory"
+]

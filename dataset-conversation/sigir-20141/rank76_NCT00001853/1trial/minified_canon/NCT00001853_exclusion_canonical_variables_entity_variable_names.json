@@ -1,0 +1,8 @@
+[
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_is_undergoing_thyroid_hormone_replacement_therapy_now",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now"
+]

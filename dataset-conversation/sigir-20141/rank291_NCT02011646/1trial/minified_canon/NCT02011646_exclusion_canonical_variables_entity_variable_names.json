@@ -1,0 +1,9 @@
+[
+  "patient_has_diagnosis_of_anorexia_nervosa_now",
+  "patient_has_diagnosis_of_binge_eating_disorder_now",
+  "patient_has_diagnosis_of_bulimia_nervosa_now",
+  "patient_has_finding_of_dissatisfaction_with_body_image_now",
+  "patient_body_mass_index_centile_value_recorded_now_withunit_percentile",
+  "patient_has_finding_of_body_weight_now",
+  "patient_has_finding_of_normal_weight_now"
+]

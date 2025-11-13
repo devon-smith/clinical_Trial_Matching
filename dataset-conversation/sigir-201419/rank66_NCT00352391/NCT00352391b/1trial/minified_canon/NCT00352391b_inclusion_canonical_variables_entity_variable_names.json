@@ -1,0 +1,21 @@
+[
+  "patient_has_diagnosis_of_squamous_cell_carcinoma_of_head_and_neck_now",
+  "patient_has_undergone_surgical_procedure_inthehistory",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_infectious_disease_of_lung_now",
+  "patient_bilirubin_total_measurement_value_recorded_now_withunit_mg_percent",
+  "patient_creatinine_level_finding_value_recorded_now_withunit_mg_percent",
+  "patient_granulocyte_count_value_recorded_now_withunit_count",
+  "patient_platelet_count_value_recorded_now_withunit_count",
+  "patient_has_undergone_biopsy_now",
+  "patient_has_undergone_bronchoscopy_now",
+  "patient_will_undergo_biopsy_inthefuture",
+  "patient_will_undergo_collection_of_blood_specimen_for_laboratory_inthefuture",
+  "patient_will_undergo_follow_up_visit_inthefuture",
+  "patient_cigarette_pack_years_value_recorded_inthehistory_withunit_pack_years",
+  "patient_has_finding_of_ex_smoker_now",
+  "patient_has_finding_of_smoker_now",
+  "patient_has_finding_of_tobacco_smoking_behavior_finding_inthehistory",
+  "patient_can_undergo_laryngoscopy_now"
+]

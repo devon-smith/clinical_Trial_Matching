@@ -1,0 +1,17 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_pregnant_now",
+  "patient_is_taking_coagulation_factor_xa_inhibitor_containing_product_now",
+  "patient_is_taking_direct_thrombin_inhibitor_containing_product_now",
+  "patient_has_finding_of_bleeding_now",
+  "patient_creatinine_renal_clearance_value_recorded_now_withunit_milliliters_per_minute",
+  "patient_has_finding_of_high_risk_of_bleeding_now",
+  "patient_has_finding_of_peptic_ulcer_now",
+  "patient_platelet_count_finding_value_recorded_now_withunit_per_cubic_millimeter",
+  "patient_has_finding_of_poor_hypertension_control_now",
+  "patient_has_finding_of_cardiogenic_shock_now",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_has_finding_of_disease_now",
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_has_finding_of_social_context_finding_now"
+]

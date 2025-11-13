@@ -1,0 +1,150 @@
+{
+  "generated": "2025-10-20T22:46:05",
+  "trial_id": "NCT00368095",
+  "contextual": {
+    "_id": "NCT00368095",
+    "title": "Rajavithi Health Promotion Project (Population Base Cohort)",
+    "text": "Summary: Metabolic Syndrome (hypertension, diabetes mellitus, obesity, cerebrovascular-cardiovascular disease) In Community Survey was performed in central Bangkok.~Prospective Cohort and intensive educated intervention (health promotion program in specific high risk groups) were performed. The aim of the study is to identify high risk patients who can develop serious complications from metabolic syndrome. An analysis of health outcomes in multiple dimensions will be performed.\nInclusion criteria: inclusion criteria: \n\n Age 16 years or more \n\n Informed consent \n\n Living in selected community (Health Promotion area of Rajavithi Hospital)\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Rajavithi Health Promotion Project (Population Base Cohort)",
+      "phase": "",
+      "drugs": "['Intensive Education for Metabolic Syndrome Patients']",
+      "drugs_list": [
+        "Intensive Education for Metabolic Syndrome Patients"
+      ],
+      "diseases": "['Diabetes Mellitus', 'Hypertension', 'Dyslipidemia', 'Obesity', 'Cardiovascular Disease', 'Coronary Artery Disease']",
+      "diseases_list": [
+        "Diabetes Mellitus",
+        "Hypertension",
+        "Dyslipidemia",
+        "Obesity",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease"
+      ],
+      "enrollment": "2000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age 16 years or more \n\n Informed consent \n\n Living in selected community (Health Promotion area of Rajavithi Hospital)",
+      "exclusion_criteria": "",
+      "brief_summary": "Metabolic Syndrome (hypertension, diabetes mellitus, obesity, cerebrovascular-cardiovascular disease) In Community Survey was performed in central Bangkok.~Prospective Cohort and intensive educated intervention (health promotion program in specific high risk groups) were performed. The aim of the study is to identify high risk patients who can develop serious complications from metabolic syndrome. An analysis of health outcomes in multiple dimensions will be performed."
+    }
+  },
+  "linked_result": {
+    "Diabetes Mellitus": {
+      "conceptId": "73211009",
+      "preferred_term": "Diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.",
+      "best_match_term": "Diabetes mellitus",
+      "match_reason": "Exact"
+    },
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Dyslipidemia": {
+      "conceptId": "370992007",
+      "preferred_term": "Dyslipidemia",
+      "fully_specified_name": "Dyslipidemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Abnormalities in the serum levels of LIPIDS, including overproduction or deficiency. Abnormal serum lipid profiles may include high total CHOLESTEROL, high TRIGLYCERIDES, low HIGH DENSITY LIPOPROTEIN CHOLESTEROL, and elevated LOW DENSITY LIPOPROTEIN CHOLESTEROL.",
+      "best_match_term": "Dyslipidemia",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    },
+    "Cardiovascular Disease": {
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease",
+      "match_reason": "Exact"
+    },
+    "Coronary Artery Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary artery disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Diabetes Mellitus": 1,
+    "Hypertension": 1,
+    "Dyslipidemia": 1,
+    "Obesity": 1,
+    "Cardiovascular Disease": 1,
+    "Coronary Artery Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Diabetes Mellitus": {
+      "disease": "Diabetes Mellitus",
+      "conceptId": "73211009",
+      "preferred_term": "Diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.",
+      "best_match_term": "Diabetes mellitus"
+    },
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Dyslipidemia": {
+      "disease": "Dyslipidemia",
+      "conceptId": "370992007",
+      "preferred_term": "Dyslipidemia",
+      "fully_specified_name": "Dyslipidemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Abnormalities in the serum levels of LIPIDS, including overproduction or deficiency. Abnormal serum lipid profiles may include high total CHOLESTEROL, high TRIGLYCERIDES, low HIGH DENSITY LIPOPROTEIN CHOLESTEROL, and elevated LOW DENSITY LIPOPROTEIN CHOLESTEROL.",
+      "best_match_term": "Dyslipidemia"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    },
+    "Cardiovascular Disease": {
+      "disease": "Cardiovascular Disease",
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease"
+    },
+    "Coronary Artery Disease": {
+      "disease": "Coronary Artery Disease",
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary artery disease"
+    }
+  }
+}

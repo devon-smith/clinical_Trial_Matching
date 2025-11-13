@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_purulent_sputum_now",
+  "patient_has_finding_of_respiratory_crackles_now"
+]

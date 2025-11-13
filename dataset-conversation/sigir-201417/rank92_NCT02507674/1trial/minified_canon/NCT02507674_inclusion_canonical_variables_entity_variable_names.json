@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_abdominal_pain_now",
+  "patient_has_undergone_ct_of_abdomen_inthehistory",
+  "patient_has_undergone_ultrasonography_of_abdomen_inthehistory"
+]

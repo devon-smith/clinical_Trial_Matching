@@ -1,0 +1,20 @@
+[
+  "patient_has_finding_of_left_main_coronary_artery_disease_now",
+  "patient_has_finding_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_finding_of_stricture_of_artery_now",
+  "patient_can_undergo_percutaneous_coronary_intervention_now",
+  "patient_has_finding_of_no_reflow_vascular_flow_now",
+  "patient_has_finding_of_heart_valve_disorder_now",
+  "patient_has_finding_of_finding_of_lesion_now",
+  "patient_has_undergone_therapeutic_procedure_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_longevity_value_recorded_now_withunit_years",
+  "patient_has_finding_of_anaphylaxis_inthehistory",
+  "patient_has_finding_of_blood_coagulation_disorder_inthehistory",
+  "patient_has_finding_of_gastrointestinal_hemorrhage_inthepast3months",
+  "patient_has_finding_of_genitourinary_tract_hemorrhage_inthepast3months",
+  "patient_will_undergo_optional_surgery_inthefuture",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_pregnant_inthefuture",
+  "patient_is_able_to_be_pregnant_inthefuture"
+]

@@ -1,0 +1,48 @@
+{
+  "generated": "2025-10-20T23:44:11",
+  "trial_id": "NCT00390819",
+  "contextual": {
+    "_id": "NCT00390819",
+    "title": "Epidemiology of Community Acquired Pneumonia in North Israel",
+    "text": "Summary: Pneumonia in general and CAP in particular is considered as one of the most common bacterial infections, associated with high rates of morbidity and mortality and is highly significant economically since all respiratory infections, and pneumonia especially, cause about 80% of antimicrobials use in the community. The high frequency of respiratory infections and the excessive use of antimicrobials are major contributors to the development of pathogens resistant to antimicrobials. In addition, in CAP almost all patients are treated empirically, without identification of causing pathogen.~Aim of study: To identify common pathogens causing CAP in hospitalized patients in north Israel.\nInclusion criteria: inclusion criteria: \n\n Community acquired pneumonia \n\n Hospitalization \n\n \nExclusion criteria: : \n\n Immunocompromised patients \n\n Patients under chemotherapy treatment \n\n Patients under steroids treament",
+    "metadata": {
+      "brief_title": "Epidemiology of Community Acquired Pneumonia in North Israel",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Community Acquired Pneumonia']",
+      "diseases_list": [
+        "Community Acquired Pneumonia"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Community acquired pneumonia \n\n Hospitalization \n\n ",
+      "exclusion_criteria": ": \n\n Immunocompromised patients \n\n Patients under chemotherapy treatment \n\n Patients under steroids treament",
+      "brief_summary": "Pneumonia in general and CAP in particular is considered as one of the most common bacterial infections, associated with high rates of morbidity and mortality and is highly significant economically since all respiratory infections, and pneumonia especially, cause about 80% of antimicrobials use in the community. The high frequency of respiratory infections and the excessive use of antimicrobials are major contributors to the development of pathogens resistant to antimicrobials. In addition, in CAP almost all patients are treated empirically, without identification of causing pathogen.~Aim of study: To identify common pathogens causing CAP in hospitalized patients in north Israel."
+    }
+  },
+  "linked_result": {
+    "Community Acquired Pneumonia": {
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Community Acquired Pneumonia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Community Acquired Pneumonia": {
+      "disease": "Community Acquired Pneumonia",
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_id": "NCT01817257",
+  "title": "Anticoagulation Length in Cancer Associated Thrombosis",
+  "text": "Summary: This is a two year, multicentre, mixed methods feasibility study including a randomised controlled two-arm interventional trial, a nested qualitative study, focus groups and a United Kingdom (UK) wide survey exercise.\nInclusion criteria: inclusion criteria: \n\n Receiving LMWH for treatment of CAT for five months \n\n Locally advanced or metastatic cancer \n\n Able to self-administer LMWH, or have LMWH administered by a carer \n\n Able to give informed consent \n\n Age ≥16 years \n\n \nExclusion criteria: : \n\n Receiving drug other than LMWH for CAT \n\n Contraindication to anticoagulation \n\n Fitted with a prosthetic heart valve \n\n Pregnant and/or lactating females",
+  "metadata": {
+    "brief_title": "Anticoagulation Length in Cancer Associated Thrombosis",
+    "phase": "Phase 2",
+    "drugs": "['Low Molecular Weight Heparin (LMWH)']",
+    "drugs_list": [
+      "Low Molecular Weight Heparin (LMWH)"
+    ],
+    "diseases": "['Cancer', 'Thrombosis', 'Venous Thromboembolism', 'Deep Vein Thrombosis', 'Pulmonary Embolus']",
+    "diseases_list": [
+      "Cancer",
+      "Thrombosis",
+      "Venous Thromboembolism",
+      "Deep Vein Thrombosis",
+      "Pulmonary Embolus"
+    ],
+    "enrollment": "2.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Receiving LMWH for treatment of CAT for five months \n\n Locally advanced or metastatic cancer \n\n Able to self-administer LMWH, or have LMWH administered by a carer \n\n Able to give informed consent \n\n Age ≥16 years \n\n ",
+    "exclusion_criteria": ": \n\n Receiving drug other than LMWH for CAT \n\n Contraindication to anticoagulation \n\n Fitted with a prosthetic heart valve \n\n Pregnant and/or lactating females",
+    "brief_summary": "This is a two year, multicentre, mixed methods feasibility study including a randomised controlled two-arm interventional trial, a nested qualitative study, focus groups and a United Kingdom (UK) wide survey exercise."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "generated": "2025-10-20T23:27:43",
+  "trial_id": "NCT00124969",
+  "contextual": {
+    "_id": "NCT00124969",
+    "title": "Influence of Amlodipine on the Mortality of Patients With End-Stage Renal Failure",
+    "text": "Summary: Patients with end-stage renal failure have a markedly higher mortality because of cardiovascular events in comparison with the normal population. Disorders in the calcium metabolism, such as calcification of the vessel walls, occur very frequently. There are indications that calcium channel blockers are capable of lowering the cardiovascular mortality in patients with end-stage renal failure.~It is intended to carry out a prospective, randomized, double-blind, placebo-controlled, multicenter study in order to find out if the calcium channel blocker amlodipine is able to reduce the mortality of patients with end-stage renal failure.~The investigation will be carried out after suitable explanation and written informed consent in 356 patients aged between 18 and 90 years with end-stage renal failure and chronic haemodialysis treatment. The patients will be randomized to either treatment with amlodipine 10 mg/day or placebo. The occurrence of events will be documented and evaluated prospectively over a period of 30 months.\nInclusion criteria: inclusion criteria: \n\n End-stage renal disease \n\n Hemodialysis \n\n Hypertension \n\n Written informed consent \n\n \nExclusion criteria: : \n\n Hypotension of less than 90 mmHg systolic \n\n High-grade aortic stenosis \n\n Heart failure of NYHA stage III and IV \n\n Acute myocardial infarction (within the last 4 weeks) \n\n Acute heart failure \n\n Known allergy to the medicament amlodipine or other constituents of the medicament \n\n Severe disorders of liver function \n\n Pregnancy and breast-feeding",
+    "metadata": {
+      "brief_title": "Influence of Amlodipine on the Mortality of Patients With End-Stage Renal Failure",
+      "phase": "Phase 4",
+      "drugs": "['Amlodipine', 'Placebo']",
+      "drugs_list": [
+        "Amlodipine",
+        "Placebo"
+      ],
+      "diseases": "['Kidney Failure, Chronic']",
+      "diseases_list": [
+        "Kidney Failure",
+        "Chronic"
+      ],
+      "enrollment": "356.0",
+      "inclusion_criteria": "inclusion criteria: \n\n End-stage renal disease \n\n Hemodialysis \n\n Hypertension \n\n Written informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Hypotension of less than 90 mmHg systolic \n\n High-grade aortic stenosis \n\n Heart failure of NYHA stage III and IV \n\n Acute myocardial infarction (within the last 4 weeks) \n\n Acute heart failure \n\n Known allergy to the medicament amlodipine or other constituents of the medicament \n\n Severe disorders of liver function \n\n Pregnancy and breast-feeding",
+      "brief_summary": "Patients with end-stage renal failure have a markedly higher mortality because of cardiovascular events in comparison with the normal population. Disorders in the calcium metabolism, such as calcification of the vessel walls, occur very frequently. There are indications that calcium channel blockers are capable of lowering the cardiovascular mortality in patients with end-stage renal failure.~It is intended to carry out a prospective, randomized, double-blind, placebo-controlled, multicenter study in order to find out if the calcium channel blocker amlodipine is able to reduce the mortality of patients with end-stage renal failure.~The investigation will be carried out after suitable explanation and written informed consent in 356 patients aged between 18 and 90 years with end-stage renal failure and chronic haemodialysis treatment. The patients will be randomized to either treatment with amlodipine 10 mg/day or placebo. The occurrence of events will be documented and evaluated prospectively over a period of 30 months."
+    }
+  },
+  "linked_result": {
+    "Kidney Failure, Chronic": {
+      "conceptId": "90688005",
+      "preferred_term": "Chronic renal failure",
+      "fully_specified_name": "Chronic renal failure syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Chronic renal failure",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Kidney Failure, Chronic": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Kidney Failure, Chronic": {
+      "disease": "Kidney Failure, Chronic",
+      "conceptId": "90688005",
+      "preferred_term": "Chronic renal failure",
+      "fully_specified_name": "Chronic renal failure syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Chronic renal failure"
+    }
+  }
+}

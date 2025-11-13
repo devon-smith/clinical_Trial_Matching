@@ -1,0 +1,113 @@
+{
+  "generated": "2025-10-22T21:04:22",
+  "trial_id": "NCT00000499",
+  "contextual": {
+    "_id": "NCT00000499",
+    "title": "Systolic Hypertension in the Elderly Program (SHEP) (Pilot Study)",
+    "text": "Summary: The SHEP Pilot Study had six objectives, each designed to develop and test critical components of a full scale trial directed at the health consequences of treating isolated systolic hypertension (ISH) in the elderly.~l. To estimate and compare the yield of participants for randomization into a clinical trial from various community groups using various recruitment techniques.~2. To estimate compliance with the visit schedule and to the prescribed double-blind regimens.~3. To estimate and compare the effectiveness of specified antihypertensive medications in reducing the blood pressure.~4. To estimate and compare the unwanted effects of specified antihypertensive medication in an elderly population.~5. To evaluate the feasibility and effectiveness of periodic behavioral assessment in this population.~6. To develop and test methods of ascertaining stroke and other disease endpoints.\nInclusion criteria: Men and women, aged 60 or over. Isolated systolic hypertension. Normal diastolic pressure of less than 90 mm Hg.\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Systolic Hypertension in the Elderly Program (SHEP) (Pilot Study)",
+      "phase": "Phase 2",
+      "drugs": "['chlorthalidone', 'reserpine', 'hydralazine', 'metoprolol']",
+      "drugs_list": [
+        "chlorthalidone",
+        "reserpine",
+        "hydralazine",
+        "metoprolol"
+      ],
+      "diseases": "['Cardiovascular Diseases', 'Heart Diseases', 'Hypertension', 'Vascular Diseases']",
+      "diseases_list": [
+        "Cardiovascular Diseases",
+        "Heart Diseases",
+        "Hypertension",
+        "Vascular Diseases"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "Men and women, aged 60 or over. Isolated systolic hypertension. Normal diastolic pressure of less than 90 mm Hg.",
+      "exclusion_criteria": "",
+      "brief_summary": "The SHEP Pilot Study had six objectives, each designed to develop and test critical components of a full scale trial directed at the health consequences of treating isolated systolic hypertension (ISH) in the elderly.~l. To estimate and compare the yield of participants for randomization into a clinical trial from various community groups using various recruitment techniques.~2. To estimate compliance with the visit schedule and to the prescribed double-blind regimens.~3. To estimate and compare the effectiveness of specified antihypertensive medications in reducing the blood pressure.~4. To estimate and compare the unwanted effects of specified antihypertensive medication in an elderly population.~5. To evaluate the feasibility and effectiveness of periodic behavioral assessment in this population.~6. To develop and test methods of ascertaining stroke and other disease endpoints."
+    }
+  },
+  "linked_result": {
+    "Cardiovascular Diseases": {
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease",
+      "match_reason": "Exact"
+    },
+    "Heart Diseases": {
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease",
+      "match_reason": "Exact"
+    },
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Vascular Diseases": {
+      "conceptId": "27550009",
+      "preferred_term": "Vascular disorder",
+      "fully_specified_name": "Disorder of blood vessel (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological processes involving any of the BLOOD VESSELS in the cardiac or peripheral circulation. They include diseases of ARTERIES; VEINS; and rest of the vasculature system in the body.",
+      "best_match_term": "Vascular disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cardiovascular Diseases": 1,
+    "Heart Diseases": 1,
+    "Hypertension": 1,
+    "Vascular Diseases": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cardiovascular Diseases": {
+      "disease": "Cardiovascular Diseases",
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease"
+    },
+    "Heart Diseases": {
+      "disease": "Heart Diseases",
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease"
+    },
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Vascular Diseases": {
+      "disease": "Vascular Diseases",
+      "conceptId": "27550009",
+      "preferred_term": "Vascular disorder",
+      "fully_specified_name": "Disorder of blood vessel (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological processes involving any of the BLOOD VESSELS in the cardiac or peripheral circulation. They include diseases of ARTERIES; VEINS; and rest of the vasculature system in the body.",
+      "best_match_term": "Vascular disease"
+    }
+  }
+}

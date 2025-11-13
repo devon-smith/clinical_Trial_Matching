@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT00171561",
+  "contextual": {
+    "_id": "NCT00171561",
+    "title": "Valsartan/Hydrochlorothiazide Combination vs Amlodipine in Patients With Hypertension, Diabetes, and Albuminuria.",
+    "text": "Summary: The purpose of this study is assess if treatment with valsartan and a diuretic, hydrochlorothiazide, has beneficial effects in people with high blood pressure, diabetes, and albuminuria (protein in the urine) compared with amlodipine. In particular, the study will assess whether the treatment will decrease the stiffness of the blood vessels.\nInclusion criteria: inclusion criteria: \n\n type 2 diabetes \n\n elevated blood pressure and pulse pressure \n\n albuminuria \n\n \nExclusion criteria: : \n\n Severe hypertension \n\n History of stroke, myocardial infarction, heart failure, chest pain, abnormal heart rhythm \n\n Liver, kidney (not caused by diabetes), or pancreas disease \n\n Type 1 diabetes or uncontrolled type 2 diabetes \n\n Allergy to certain medications used to treat high blood pressure \n\n Other protocol-defined inclusion/",
+    "metadata": {
+      "brief_title": "Valsartan/Hydrochlorothiazide Combination vs Amlodipine in Patients With Hypertension, Diabetes, and Albuminuria.",
+      "phase": "Phase 4",
+      "drugs": "['valsartan/hydrochlorothiazide']",
+      "drugs_list": [
+        "valsartan/hydrochlorothiazide"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "144.0",
+      "inclusion_criteria": "inclusion criteria: \n\n type 2 diabetes \n\n elevated blood pressure and pulse pressure \n\n albuminuria \n\n ",
+      "exclusion_criteria": ": \n\n Severe hypertension \n\n History of stroke, myocardial infarction, heart failure, chest pain, abnormal heart rhythm \n\n Liver, kidney (not caused by diabetes), or pancreas disease \n\n Type 1 diabetes or uncontrolled type 2 diabetes \n\n Allergy to certain medications used to treat high blood pressure \n\n Other protocol-defined inclusion/",
+      "brief_summary": "The purpose of this study is assess if treatment with valsartan and a diuretic, hydrochlorothiazide, has beneficial effects in people with high blood pressure, diabetes, and albuminuria (protein in the urine) compared with amlodipine. In particular, the study will assess whether the treatment will decrease the stiffness of the blood vessels."
+    }
+  }
+}

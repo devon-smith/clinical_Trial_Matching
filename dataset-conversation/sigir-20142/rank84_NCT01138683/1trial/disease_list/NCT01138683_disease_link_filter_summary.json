@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-22T20:54:38",
+  "trial_id": "NCT01138683",
+  "contextual": {
+    "_id": "NCT01138683",
+    "title": "Cardiorenal Interactions During Treatment of Acute Decompensated Heart Failure: Diuretics Versus Ultrafiltration",
+    "text": "Summary: The CRUF trial is a prospective randomized monocentric trial comparing different impact of diuretics versus ultrafiltration on renal congestion, plasma refill rate, echocardiographic filling pressures, neurohormonal activation and biomarkers of Acute Kidney Injury (AKI).\nInclusion criteria: inclusion criteria: \n\n >18 years old \n\n Severe systolic heart failure with ejection fraction <40% \n\n And Hospitalisation for decompensated heart failure \n\n And New York Heart Association (NYHA) III or IV \n\n And 1 of the following: \n\n Jugular vein distension>6cm \n\n Tissue Doppler mitral annulus lateral>12 or medial>15 \n\n Chest X-ray: pulmonary edema or pleural effusion \n\n \nExclusion criteria: : \n\n Need for inotropic or vasopressive agents \n\n Use of intravenous (IV) contrast media \n\n Acute coronary syndrome \n\n Need of dialysis \n\n Severe co-morbidity \n\n Contra-indications for anticoagulation \n\n Pregnancy",
+    "metadata": {
+      "brief_title": "Cardiorenal Interactions During Treatment of Acute Decompensated Heart Failure: Diuretics Versus Ultrafiltration",
+      "phase": "Phase 3",
+      "drugs": "['ultrafiltration', 'diuretics']",
+      "drugs_list": [
+        "ultrafiltration",
+        "diuretics"
+      ],
+      "diseases": "['Acute Decompensated Heart Failure']",
+      "diseases_list": [
+        "Acute Decompensated Heart Failure"
+      ],
+      "enrollment": "1.0",
+      "inclusion_criteria": "inclusion criteria: \n\n >18 years old \n\n Severe systolic heart failure with ejection fraction <40% \n\n And Hospitalisation for decompensated heart failure \n\n And New York Heart Association (NYHA) III or IV \n\n And 1 of the following: \n\n Jugular vein distension>6cm \n\n Tissue Doppler mitral annulus lateral>12 or medial>15 \n\n Chest X-ray: pulmonary edema or pleural effusion \n\n ",
+      "exclusion_criteria": ": \n\n Need for inotropic or vasopressive agents \n\n Use of intravenous (IV) contrast media \n\n Acute coronary syndrome \n\n Need of dialysis \n\n Severe co-morbidity \n\n Contra-indications for anticoagulation \n\n Pregnancy",
+      "brief_summary": "The CRUF trial is a prospective randomized monocentric trial comparing different impact of diuretics versus ultrafiltration on renal congestion, plasma refill rate, echocardiographic filling pressures, neurohormonal activation and biomarkers of Acute Kidney Injury (AKI)."
+    }
+  },
+  "linked_result": {
+    "Acute Decompensated Heart Failure": {
+      "conceptId": "195111005",
+      "preferred_term": "Decompensated cardiac failure",
+      "fully_specified_name": "Decompensated cardiac failure (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Decompensated cardiac failure",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Acute Decompensated Heart Failure": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Acute Decompensated Heart Failure": {
+      "disease": "Acute Decompensated Heart Failure",
+      "conceptId": "195111005",
+      "preferred_term": "Decompensated cardiac failure",
+      "fully_specified_name": "Decompensated cardiac failure (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Decompensated cardiac failure"
+    }
+  }
+}

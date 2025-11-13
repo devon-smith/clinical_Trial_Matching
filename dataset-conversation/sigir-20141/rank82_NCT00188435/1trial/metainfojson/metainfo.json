@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT00188435",
+  "contextual": {
+    "_id": "NCT00188435",
+    "title": "Comparison of CXR and MnDCT",
+    "text": "Summary: A comparison of chest x-ray (CXR) and Minimum dose CT (MnDCT) in the acutely ill patient. The hypothesis is that MnDCT is more sensitive than CXR in the detection of acute findings in the acutely ill patient.\nInclusion criteria: inclusion criteria: \n\n All patients admitted for investigation of acute pulmonary embolus \n\n \nExclusion criteria: : \n\n none",
+    "metadata": {
+      "brief_title": "Comparison of CXR and MnDCT",
+      "phase": "Phase 1",
+      "drugs": "['Minimum Dose CT']",
+      "drugs_list": [
+        "Minimum Dose CT"
+      ],
+      "diseases": "['Acute Dyspnoea']",
+      "diseases_list": [
+        "Acute Dyspnoea"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n All patients admitted for investigation of acute pulmonary embolus \n\n ",
+      "exclusion_criteria": ": \n\n none",
+      "brief_summary": "A comparison of chest x-ray (CXR) and Minimum dose CT (MnDCT) in the acutely ill patient. The hypothesis is that MnDCT is more sensitive than CXR in the detection of acute findings in the acutely ill patient."
+    }
+  }
+}

@@ -1,0 +1,7 @@
+[
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+  "patient_age_value_recorded_now_in_years",
+  "patient_longevity_value_recorded_now_withunit_months",
+  "patient_has_diagnosis_of_major_depressive_disorder_now",
+  "patient_depression_screening_using_phq_9_patient_health_questionnaire_9_score_value_recorded_now_withunit_score"
+]

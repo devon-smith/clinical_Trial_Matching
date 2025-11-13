@@ -1,0 +1,22 @@
+[
+  "patient_axillary_temperature_value_recorded_inthepast1days_withunit_degrees_celsius",
+  "patient_has_finding_of_chest_wall_retraction_now",
+  "patient_core_body_temperature_value_recorded_inthepast1days_withunit_degrees_celsius",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_cyanosis_now",
+  "patient_has_finding_of_feeding_poor_now",
+  "patient_has_finding_of_fever_inthepast1days",
+  "patient_hemoglobin_saturation_with_oxygen_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_hypoxia_now",
+  "patient_has_undergone_intravenous_antibiotic_therapy_now",
+  "patient_has_finding_of_lethargy_now",
+  "patient_can_undergo_oral_antibiotic_therapy_now",
+  "patient_has_undergone_plain_chest_x_ray_now_outcome_is_abnormal",
+  "patient_has_diagnosis_of_pneumonia_now",
+  "patient_respiratory_rate_value_recorded_now_withunit_breaths_per_minute",
+  "patient_has_finding_of_retraction_now",
+  "patient_axillary_temperature_value_recorded_now_withunit_degrees_celsius",
+  "patient_core_body_temperature_value_recorded_now_withunit_degrees_celsius",
+  "patient_has_finding_of_cough_inthehistory",
+  "patient_has_finding_of_fever_now"
+]

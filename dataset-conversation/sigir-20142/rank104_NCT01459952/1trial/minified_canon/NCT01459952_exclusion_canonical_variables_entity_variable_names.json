@@ -1,0 +1,13 @@
+[
+  "patient_is_exposed_to_ascorbic_acid_inthepast3months",
+  "patient_is_exposed_to_avocado_inthepast3months",
+  "patient_has_taken_ginger_product_inthepast3months",
+  "patient_is_exposed_to_nutritional_supplement_inthepast3months",
+  "patient_is_exposed_to_soya_bean_inthepast3months",
+  "patient_is_exposed_to_vitamin_inthepast3months",
+  "patient_is_exposed_to_alcohol_now",
+  "patient_has_finding_of_mental_disorder_now",
+  "patient_has_finding_of_allergic_disposition_now",
+  "patient_has_undergone_clinical_trial_inthehistory",
+  "patient_is_undergoing_clinical_trial_now"
+]

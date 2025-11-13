@@ -1,0 +1,244 @@
+import json
+import sqlite3
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple, Union
+
+from rag_retriever import EligibilityRAG
+
+DEFAULT_DB_PATH = Path(__file__).with_name("trial_data.sqlite")
+
+
+class TrialMatcher:
+    def __init__(self, db_path: Union[Path, str] = DEFAULT_DB_PATH):
+        """Initialize the matcher with a deterministic TrialDB backend."""
+        self.db_path = str(db_path)
+        self.rag = EligibilityRAG(self.db_path)
+
+    def _connect(self) -> sqlite3.Connection:
+        conn = sqlite3.connect(self.db_path)
+        conn.row_factory = sqlite3.Row
+        return conn
+
+    def load_patient_attributes(self, patient_id: str) -> Dict[str, object]:
+        """
+        Load canonical patient facts from the SIGIR dataset that have been ingested into TrialDB.
+        """
+        conn = self._connect()
+        cursor = conn.cursor()
+        cursor.execute(
+            """
+            SELECT attribute_name, value, value_type
+            FROM patient_attributes
+            WHERE patient_id = ?
+            """,
+            (patient_id,),
+        )
+        attributes: Dict[str, object] = {}
+        for row in cursor.fetchall():
+            attr_name = row["attribute_name"]
+            value = self._deserialize_value(row["value"], row["value_type"])
+            current = attributes.get(attr_name)
+            if isinstance(current, bool) and isinstance(value, bool):
+                attributes[attr_name] = current or value
+            else:
+                attributes[attr_name] = value
+        conn.close()
+        return attributes
+
+    def evaluate_trial(self, patient_attrs: Dict[str, object], nct_id: str) -> Tuple[str, List[str]]:
+        """
+        Evaluate whether a patient definition satisfies the eligibility criteria stored in TrialDB.
+
+        Returns:
+            Tuple of (status, missing_attributes)
+            status: 'PASS' | 'FAIL' | 'MISSING'
+            missing_attributes: List of attribute names needed
+        """
+        conn = self._connect()
+        cursor = conn.cursor()
+        cursor.execute(
+            """
+            SELECT criterion_type, criterion_value, value_type, comparison, is_inclusion
+            FROM criteria
+            WHERE nct_id = ?
+            """,
+            (nct_id,),
+        )
+        trial_criteria = cursor.fetchall()
+        conn.close()
+
+        missing: List[str] = []
+        for criterion in trial_criteria:
+            attribute = criterion["criterion_type"]
+            expected_value = criterion["criterion_value"]
+            value_type = criterion["value_type"]
+            comparison = criterion["comparison"]
+            is_inclusion = bool(criterion["is_inclusion"])
+
+            if attribute not in patient_attrs:
+                missing.append(attribute)
+                continue
+
+            patient_value = patient_attrs[attribute]
+            satisfied = self._evaluate_criterion(
+                attribute,
+                patient_value,
+                expected_value,
+                value_type,
+                comparison,
+            )
+
+            if is_inclusion and not satisfied:
+                return ("FAIL", [])
+            if not is_inclusion and satisfied:
+                return ("FAIL", [])
+
+        if missing:
+            return ("MISSING", missing)
+        return ("PASS", [])
+
+    def evaluate_patient(self, patient_id: str) -> Dict[str, Tuple[str, List[str]]]:
+        """
+        Convenience helper: load the patient's canonical attributes from TrialDB and score all trials.
+        """
+        patient_attrs = self.load_patient_attributes(patient_id)
+        return self.get_all_matches(patient_attrs)
+
+    def rag_rank_patient(self, patient_id: str, top_n: int = 10) -> List[Tuple[str, float]]:
+        """Rank trials by semantic similarity between the patient note and eligibility text."""
+        note = self._fetch_patient_note(patient_id)
+        if not note.strip():
+            return []
+        return self.rag.score_patient(note, top_n=top_n)
+
+    def get_all_matches(self, patient_attrs: Dict[str, object]) -> Dict[str, Tuple[str, List[str]]]:
+        """
+        Evaluate patient against all trials stored in TrialDB.
+        """
+        conn = self._connect()
+        cursor = conn.cursor()
+        cursor.execute("SELECT nct_id FROM trials")
+        trial_ids = [row[0] for row in cursor.fetchall()]
+        conn.close()
+
+        results: Dict[str, Tuple[str, List[str]]] = {}
+        for nct_id in trial_ids:
+            results[nct_id] = self.evaluate_trial(patient_attrs, nct_id)
+        return results
+
+    def _deserialize_value(self, raw_value: Optional[str], value_type: Optional[str]) -> object:
+        """Convert JSON stored values back into Python types."""
+        decoded: object
+        if raw_value is None:
+            decoded = None
+        else:
+            try:
+                decoded = json.loads(raw_value)
+            except (json.JSONDecodeError, TypeError):
+                decoded = raw_value
+
+        if value_type is None:
+            return decoded
+
+        value_type = value_type.lower()
+        try:
+            if value_type in {"int", "integer"} and decoded is not None:
+                return int(decoded)
+            if value_type in {"float", "double"} and decoded is not None:
+                return float(decoded)
+            if value_type == "bool":
+                if isinstance(decoded, bool):
+                    return decoded
+                if isinstance(decoded, str):
+                    return decoded.strip().lower() in {"true", "1", "yes"}
+        except (ValueError, TypeError):
+            return decoded
+        return decoded
+
+    def _evaluate_criterion(
+        self,
+        criterion_type: str,
+        patient_value: object,
+        criterion_value: str,
+        value_type: Optional[str],
+        comparison: Optional[str],
+    ) -> bool:
+        """
+        Deterministic evaluation logic for each criterion template.
+        """
+        comparison = (comparison or "equals").lower()
+        value_type = (value_type or "").lower()
+        patient_value = self._normalize_patient_value(patient_value, value_type)
+
+        if criterion_type == "age" or (value_type in {"int", "float"} and "-" in str(criterion_value)):
+            return self._evaluate_range(patient_value, criterion_value)
+
+        if criterion_type == "gender":
+            return str(patient_value).upper() == str(criterion_value).upper()
+
+        if criterion_type == "diagnosis":
+            return str(criterion_value).lower() in str(patient_value).lower()
+
+        if value_type == "bool":
+            expected = criterion_value.strip().lower() in {"true", "1", "yes"}
+            return bool(patient_value) == expected
+
+        if comparison == "equals":
+            return str(patient_value).lower() == str(criterion_value).lower()
+
+        return False
+
+    def _normalize_patient_value(self, patient_value: object, value_type: str) -> object:
+        if value_type in {"int", "float"}:
+            try:
+                return float(patient_value)
+            except (TypeError, ValueError):
+                return patient_value
+        if value_type == "bool":
+            if isinstance(patient_value, bool):
+                return patient_value
+            if isinstance(patient_value, str):
+                return patient_value.strip().lower() in {"true", "1", "yes"}
+        return patient_value
+
+    def _evaluate_range(self, patient_value: object, criterion_value: str) -> bool:
+        try:
+            min_str, max_str = criterion_value.split("-")
+            min_val = float(min_str.strip())
+            max_val = float(max_str.strip())
+            patient_num = float(patient_value)
+            return min_val <= patient_num <= max_val
+        except (ValueError, TypeError):
+            return False
+
+    def _fetch_patient_note(self, patient_id: str) -> str:
+        conn = self._connect()
+        cursor = conn.cursor()
+        cursor.execute("SELECT note FROM patients WHERE patient_id = ?", (patient_id,))
+        row = cursor.fetchone()
+        conn.close()
+        return row["note"] if row and row["note"] else ""
+
+
+def run_test_cases():
+    """
+    Smoke tests to ensure deterministic behavior when working with the SIGIR dataset.
+    These tests assume `setup_database.py --reset` and `load_trial_data.py` have already run.
+    """
+    matcher = TrialMatcher()
+
+    patient_attrs = matcher.load_patient_attributes("sigir-20141")
+    assert patient_attrs, "Expected patient attributes for sigir-20141"
+
+    result = matcher.evaluate_trial(patient_attrs, "NCT00133328")
+    assert result[0] in {"PASS", "MISSING", "FAIL"}
+    print(f"Trial NCT00133328 evaluation for sigir-20141: {result}")
+
+    # Ensure the helper can score an entire patient without raising errors.
+    patient_results = matcher.evaluate_patient("sigir-20141")
+    assert "NCT00133328" in patient_results
+    print("evaluate_patient produced", len(patient_results), "trial outcomes")
+
+
+if __name__ == "__main__":
+    run_test_cases()

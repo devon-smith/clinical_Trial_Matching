@@ -1,0 +1,6 @@
+[
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_survival_time_value_recorded_now_withunit_days",
+  "patient_tracheal_mucus_value_recorded_now_withunit_cubic_centimeter_per_4_hours"
+]

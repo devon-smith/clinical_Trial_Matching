@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_months",
+  "patient_has_finding_of_average_intellect_now",
+  "patient_has_finding_of_fit_and_well_now",
+  "patient_has_undergone_physical_examination_now",
+  "patient_body_temperature_value_recorded_now_withunit_celsius"
+]

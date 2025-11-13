@@ -1,0 +1,91 @@
+{
+  "generated": "2025-10-22T20:52:41",
+  "trial_id": "NCT00000506",
+  "contextual": {
+    "_id": "NCT00000506",
+    "title": "Cardiovascular System in Obesity: Effect of Treatment",
+    "text": "Summary: To determine the long-term efficacy of the combination therapy of phentermine and fenfluramine in conjunction with diet, exercise, and behavior modification in the treatment of simple, moderate obesity.\nInclusion criteria: Men and women, ages 18 to 60. Body weight was 130 to 180 percent of ideal body weight.\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Cardiovascular System in Obesity: Effect of Treatment",
+      "phase": "Phase 2",
+      "drugs": "['fenfluramine', 'phentermine']",
+      "drugs_list": [
+        "fenfluramine",
+        "phentermine"
+      ],
+      "diseases": "['Heart Diseases', 'Obesity', 'Vascular Diseases']",
+      "diseases_list": [
+        "Heart Diseases",
+        "Obesity",
+        "Vascular Diseases"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "Men and women, ages 18 to 60. Body weight was 130 to 180 percent of ideal body weight.",
+      "exclusion_criteria": "",
+      "brief_summary": "To determine the long-term efficacy of the combination therapy of phentermine and fenfluramine in conjunction with diet, exercise, and behavior modification in the treatment of simple, moderate obesity."
+    }
+  },
+  "linked_result": {
+    "Heart Diseases": {
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    },
+    "Vascular Diseases": {
+      "conceptId": "27550009",
+      "preferred_term": "Vascular disorder",
+      "fully_specified_name": "Disorder of blood vessel (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological processes involving any of the BLOOD VESSELS in the cardiac or peripheral circulation. They include diseases of ARTERIES; VEINS; and rest of the vasculature system in the body.",
+      "best_match_term": "Vascular disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Heart Diseases": 1,
+    "Obesity": 1,
+    "Vascular Diseases": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Heart Diseases": {
+      "disease": "Heart Diseases",
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    },
+    "Vascular Diseases": {
+      "disease": "Vascular Diseases",
+      "conceptId": "27550009",
+      "preferred_term": "Vascular disorder",
+      "fully_specified_name": "Disorder of blood vessel (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological processes involving any of the BLOOD VESSELS in the cardiac or peripheral circulation. They include diseases of ARTERIES; VEINS; and rest of the vasculature system in the body.",
+      "best_match_term": "Vascular disease"
+    }
+  }
+}

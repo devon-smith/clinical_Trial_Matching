@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_acute_coronary_syndrome_now",
+  "patient_has_diagnosis_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_undergone_electrocardiographic_procedure_now",
+  "patient_inverted_t_wave_value_recorded_now_withunit_millivolts",
+  "patient_pain_assessment_value_recorded_now_withunit_score",
+  "patient_segment_deviation_value_recorded_now_withunit_millivolts"
+]

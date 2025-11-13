@@ -1,0 +1,27 @@
+{
+  "trial_id": "NCT01867983",
+  "contextual": {
+    "_id": "NCT01867983",
+    "title": "Comparative Effectiveness of Adding Weight Control to Smoking Cessation Quitlines",
+    "text": "Summary: This randomized controlled trial compares the effectiveness for both smoking cessation and weight control of two alternative combined interventions offered via telephone quitline, as compared to standard of care quitline treatment addressing cessation alone. The interventions to be compared are cessation treatment alone versus cessation treatment combined with weight control treatment added either simultaneously or sequentially.\nInclusion criteria: inclusion criteria: \n\n Participating Client \n\n Not Re-Enrolling \n\n USA Resident \n\n Wants to quit in the next 30 days \n\n Use Cigarettes (other types ok, but must use cigarettes) \n\n 18 years or older \n\n Speak English \n\n Provide Phone \n\n Provide Email Address \n\n Use 10 cigarettes per day or more \n\n BMI of 18.5 or above \n\n No history of anorexia or bulimia \n\n \nExclusion criteria: : \n\n Pregnant or Planning Pregnancy within 3 months \n\n Diabetic \n\n Previous weight loss surgery or planning weight loss surgery in next 12 months",
+    "metadata": {
+      "brief_title": "Comparative Effectiveness of Adding Weight Control to Smoking Cessation Quitlines",
+      "phase": "",
+      "drugs": "['Weight gain prevention and smoking cessation', 'Smoking cessation']",
+      "drugs_list": [
+        "Weight gain prevention and smoking cessation",
+        "Smoking cessation"
+      ],
+      "diseases": "['Cigarette Smoking', 'Overweight', 'Obesity']",
+      "diseases_list": [
+        "Cigarette Smoking",
+        "Overweight",
+        "Obesity"
+      ],
+      "enrollment": "2540.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Participating Client \n\n Not Re-Enrolling \n\n USA Resident \n\n Wants to quit in the next 30 days \n\n Use Cigarettes (other types ok, but must use cigarettes) \n\n 18 years or older \n\n Speak English \n\n Provide Phone \n\n Provide Email Address \n\n Use 10 cigarettes per day or more \n\n BMI of 18.5 or above \n\n No history of anorexia or bulimia \n\n ",
+      "exclusion_criteria": ": \n\n Pregnant or Planning Pregnancy within 3 months \n\n Diabetic \n\n Previous weight loss surgery or planning weight loss surgery in next 12 months",
+      "brief_summary": "This randomized controlled trial compares the effectiveness for both smoking cessation and weight control of two alternative combined interventions offered via telephone quitline, as compared to standard of care quitline treatment addressing cessation alone. The interventions to be compared are cessation treatment alone versus cessation treatment combined with weight control treatment added either simultaneously or sequentially."
+    }
+  }
+}

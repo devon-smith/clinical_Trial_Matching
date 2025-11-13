@@ -1,0 +1,28 @@
+{
+  "trial_id": "NCT00681824",
+  "contextual": {
+    "_id": "NCT00681824",
+    "title": "Fibrin Sealant for the Sealing of Dura Sutures",
+    "text": "Summary: The purpose of this study is to investigate the efficacy and safety of FS VH S/D 500 s-apr, a double virus-inactivated biological two-component fibrin sealant, for use in posterior fossa surgery as an adjunct to dura and dura substitute sutures in preventing postoperative cerebrospinal fluid (CSF) leakage.\nInclusion criteria: inclusion criteria: \n\n Preoperative inclusion criteria: \n\n Subjects undergoing elective craniotomy / craniectomy for pathological processes in the posterior fossa (such as benign and malignant tumors, vascular malformations, and Chiari 1 malformations) that result in dura defects requiring dura substitution for closure and who are able and willing to comply with the procedures required by the protocol \n\n Signed and dated written informed consent from the subject or from his/her legal representative prior to any study-related procedures \n\n Age >= 3 years, either gender \n\n Intraoperative inclusion criteria: \n\n Surgical Wound Classification Class I and Risk Index Category (RIC) <= 2. Penetration of mastoid air cells during partial mastoidectomy is permitted and will be recorded. \n\n A patch of autologous fascia or pericranium or suturable collagen-based dura substitute was cut to size and then sutured into the dura defect. \n\n The hem of native dura exposed along and under the craniotomy edge is wide enough to facilitate suturing and to allow for sufficient surface area for adherence of the investigational product. \n\n \nExclusion criteria: : \n\n Preoperative ",
+    "metadata": {
+      "brief_title": "Fibrin Sealant for the Sealing of Dura Sutures",
+      "phase": "Phase 2",
+      "drugs": "['Fibrin Sealant, Vapor Heated, Solvent/Detergent-treated with 500 IU/mL thrombin and synthetic aprotinin (FS VH S/D 500 s-apr)', 'Standard of care']",
+      "drugs_list": [
+        "Fibrin Sealant",
+        "Vapor Heated",
+        "Solvent/Detergent-treated with 500 IU/mL thrombin and synthetic aprotinin (FS VH S/D 500 s-apr)",
+        "Standard of care"
+      ],
+      "diseases": "['Pathological Processes in the Posterior Fossa', 'Dura Defects']",
+      "diseases_list": [
+        "Pathological Processes in the Posterior Fossa",
+        "Dura Defects"
+      ],
+      "enrollment": "95.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Preoperative inclusion criteria: \n\n Subjects undergoing elective craniotomy / craniectomy for pathological processes in the posterior fossa (such as benign and malignant tumors, vascular malformations, and Chiari 1 malformations) that result in dura defects requiring dura substitution for closure and who are able and willing to comply with the procedures required by the protocol \n\n Signed and dated written informed consent from the subject or from his/her legal representative prior to any study-related procedures \n\n Age >= 3 years, either gender \n\n Intraoperative inclusion criteria: \n\n Surgical Wound Classification Class I and Risk Index Category (RIC) <= 2. Penetration of mastoid air cells during partial mastoidectomy is permitted and will be recorded. \n\n A patch of autologous fascia or pericranium or suturable collagen-based dura substitute was cut to size and then sutured into the dura defect. \n\n The hem of native dura exposed along and under the craniotomy edge is wide enough to facilitate suturing and to allow for sufficient surface area for adherence of the investigational product. \n\n ",
+      "exclusion_criteria": ": \n\n Preoperative ",
+      "brief_summary": "The purpose of this study is to investigate the efficacy and safety of FS VH S/D 500 s-apr, a double virus-inactivated biological two-component fibrin sealant, for use in posterior fossa surgery as an adjunct to dura and dura substitute sutures in preventing postoperative cerebrospinal fluid (CSF) leakage."
+    }
+  }
+}

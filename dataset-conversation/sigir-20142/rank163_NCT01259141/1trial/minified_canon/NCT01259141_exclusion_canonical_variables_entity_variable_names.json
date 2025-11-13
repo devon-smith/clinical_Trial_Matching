@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_time_of_symptom_onset_value_recorded_now_withunit_days",
+  "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+  "patient_duration_of_inpatient_stay_value_recorded_inthepast90days_withunit_days",
+  "patient_has_finding_of_inpatient_stay_inthepast90days",
+  "patient_has_finding_of_lives_in_a_nursing_home_now",
+  "patient_has_taken_macrolide_antibacterial_inthehistory",
+  "patient_has_taken_quinolone_antibacterial_inthehistory"
+]

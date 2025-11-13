@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T22:17:04",
+  "trial_id": "NCT00674726",
+  "contextual": {
+    "_id": "NCT00674726",
+    "title": "Study on the Difference of Axilo-rectal Temperature in Appendicitis",
+    "text": "Summary: The investigators are studying prospectively the difference in axilo-rectal temperature in patients with acute appendicitis and using as a control group patients consulting with acute gastroenteritis at our emergency unit.\nInclusion criteria: inclusion criteria: \n\n Patients with acute appendicitis \n\n Patients with acute gastroenteritis \n\n Patients older than 15 years of age \n\n \nExclusion criteria: : \n\n Other acute abdominal diseases",
+    "metadata": {
+      "brief_title": "Study on the Difference of Axilo-rectal Temperature in Appendicitis",
+      "phase": "",
+      "drugs": "['Observation and measurement of axilo-rectal temperature']",
+      "drugs_list": [
+        "Observation and measurement of axilo-rectal temperature"
+      ],
+      "diseases": "['Appendicitis', 'Gastroenteritis']",
+      "diseases_list": [
+        "Appendicitis",
+        "Gastroenteritis"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients with acute appendicitis \n\n Patients with acute gastroenteritis \n\n Patients older than 15 years of age \n\n ",
+      "exclusion_criteria": ": \n\n Other acute abdominal diseases",
+      "brief_summary": "The investigators are studying prospectively the difference in axilo-rectal temperature in patients with acute appendicitis and using as a control group patients consulting with acute gastroenteritis at our emergency unit."
+    }
+  },
+  "linked_result": {
+    "Appendicitis": {
+      "conceptId": "74400008",
+      "preferred_term": "Appendicitis",
+      "fully_specified_name": "Appendicitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Acute inflammation of the APPENDIX. Acute appendicitis is classified as simple, gangrenous, or perforated.",
+      "best_match_term": "Appendicitis",
+      "match_reason": "Exact"
+    },
+    "Gastroenteritis": {
+      "conceptId": "25374005",
+      "preferred_term": "Gastroenteritis",
+      "fully_specified_name": "Gastroenteritis (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM. Causes of gastroenteritis are many including genetic, infection, HYPERSENSITIVITY, drug effects, and CANCER.",
+      "best_match_term": "Gastroenteritis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Appendicitis": 1,
+    "Gastroenteritis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Appendicitis": {
+      "disease": "Appendicitis",
+      "conceptId": "74400008",
+      "preferred_term": "Appendicitis",
+      "fully_specified_name": "Appendicitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Acute inflammation of the APPENDIX. Acute appendicitis is classified as simple, gangrenous, or perforated.",
+      "best_match_term": "Appendicitis"
+    },
+    "Gastroenteritis": {
+      "disease": "Gastroenteritis",
+      "conceptId": "25374005",
+      "preferred_term": "Gastroenteritis",
+      "fully_specified_name": "Gastroenteritis (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM. Causes of gastroenteritis are many including genetic, infection, HYPERSENSITIVITY, drug effects, and CANCER.",
+      "best_match_term": "Gastroenteritis"
+    }
+  }
+}

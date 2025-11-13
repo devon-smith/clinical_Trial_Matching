@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT01950026",
+  "contextual": {
+    "_id": "NCT01950026",
+    "title": "Temperature Skin Check After Cryotherapy Application",
+    "text": "Summary: The aim of this study was to reheat the skin in different ethnic groups after application of cryotherapy.\nInclusion criteria: inclusion criteria: \n\n belong to ethnic groups requested \n\n \nExclusion criteria: : \n\n suffering any change in skin sensitivity, illness of an infectious nature or previously diagnosed diseases that respond negatively to the use of cold",
+    "metadata": {
+      "brief_title": "Temperature Skin Check After Cryotherapy Application",
+      "phase": "Phase 3",
+      "drugs": "['cryotherapy application']",
+      "drugs_list": [
+        "cryotherapy application"
+      ],
+      "diseases": "['Body Temperature Changes']",
+      "diseases_list": [
+        "Body Temperature Changes"
+      ],
+      "enrollment": "24.0",
+      "inclusion_criteria": "inclusion criteria: \n\n belong to ethnic groups requested \n\n ",
+      "exclusion_criteria": ": \n\n suffering any change in skin sensitivity, illness of an infectious nature or previously diagnosed diseases that respond negatively to the use of cold",
+      "brief_summary": "The aim of this study was to reheat the skin in different ethnic groups after application of cryotherapy."
+    }
+  }
+}

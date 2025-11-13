@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-22T21:26:54",
+  "trial_id": "NCT01566929",
+  "contextual": {
+    "_id": "NCT01566929",
+    "title": "Weight Management Intervention for Obese Women and the Live Birth Outcome of in Vitro Fertilization (IVF)",
+    "text": "Summary: The primary aim of the study is to evaluate if weight management intervention for obese women (BMI≥30<35 kg/m2) prior to IVF improves the outcome assessed as live birth per participating woman, as compared to women where no intervention was made.\nInclusion criteria: inclusion criteria \n\n Indication for IVF/ICSI for the couple \n\n Woman's age >18< 38 years at randomization \n\n First, second or third IVF/ICSI treatment \n\n BMI > or = 30.0 <35.0 kg/m2 \n\n Willing to participate and to sign informed consent \n\n \nExclusion criteria: : \n\n Diabetes mellitus treated with insulin \n\n Oocyte or sperm donation planned \n\n Preimplantation genetic diagnosis (PGD) treatment planned \n\n Azoospermia known at randomization \n\n Patient not having adequate knowledge of Swedish (to understand patient information and questionnaires) \n\n QEWP-R questionnaire indicating binge eating disorder for the woman \n\n Previous participation in the study",
+    "metadata": {
+      "brief_title": "Weight Management Intervention for Obese Women and the Live Birth Outcome of in Vitro Fertilization (IVF)",
+      "phase": "",
+      "drugs": "['Low calorie diet treatment']",
+      "drugs_list": [
+        "Low calorie diet treatment"
+      ],
+      "diseases": "['Infertility', 'Obesity']",
+      "diseases_list": [
+        "Infertility",
+        "Obesity"
+      ],
+      "enrollment": "317.0",
+      "inclusion_criteria": "inclusion criteria \n\n Indication for IVF/ICSI for the couple \n\n Woman's age >18< 38 years at randomization \n\n First, second or third IVF/ICSI treatment \n\n BMI > or = 30.0 <35.0 kg/m2 \n\n Willing to participate and to sign informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Diabetes mellitus treated with insulin \n\n Oocyte or sperm donation planned \n\n Preimplantation genetic diagnosis (PGD) treatment planned \n\n Azoospermia known at randomization \n\n Patient not having adequate knowledge of Swedish (to understand patient information and questionnaires) \n\n QEWP-R questionnaire indicating binge eating disorder for the woman \n\n Previous participation in the study",
+      "brief_summary": "The primary aim of the study is to evaluate if weight management intervention for obese women (BMI≥30<35 kg/m2) prior to IVF improves the outcome assessed as live birth per participating woman, as compared to women where no intervention was made."
+    }
+  },
+  "linked_result": {
+    "Infertility": {
+      "conceptId": "8619003",
+      "preferred_term": "Infertile",
+      "fully_specified_name": "Infertile (finding)",
+      "type": "Clinical finding",
+      "definition": "A reduced or absent capacity to reproduce.",
+      "best_match_term": "Infertile",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Infertility": 1,
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Infertility": {
+      "disease": "Infertility",
+      "conceptId": "8619003",
+      "preferred_term": "Infertile",
+      "fully_specified_name": "Infertile (finding)",
+      "type": "Clinical finding",
+      "definition": "A reduced or absent capacity to reproduce.",
+      "best_match_term": "Infertile"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

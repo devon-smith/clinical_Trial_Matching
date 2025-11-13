@@ -1,0 +1,7 @@
+[
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_finding_of_st_segment_depression_now",
+  "patient_has_finding_of_st_segment_elevation_now",
+  "patient_has_undergone_coronary_angiography_now",
+  "patient_has_undergone_percutaneous_coronary_intervention_now"
+]

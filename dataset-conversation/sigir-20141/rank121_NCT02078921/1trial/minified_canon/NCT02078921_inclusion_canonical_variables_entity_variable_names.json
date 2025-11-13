@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_coronary_angiography_inthehistory_outcome_is_positive",
+  "patient_has_undergone_electrocardiogram_with_exercise_test_inthehistory_outcome_is_positive",
+  "patient_has_undergone_radionuclide_myocardial_perfusion_study_inthehistory_outcome_is_positive",
+  "patient_st_segment_depression_value_recorded_inthehistory_withunit_millimeter",
+  "patient_has_undergone_stress_echocardiography_using_dobutamine_inthehistory_outcome_is_positive",
+  "patient_has_undergone_coronary_angiography_inthehistory",
+  "patient_has_undergone_electrocardiogram_with_exercise_test_inthehistory",
+  "patient_has_undergone_radionuclide_myocardial_perfusion_study_inthehistory",
+  "patient_has_undergone_stress_echocardiography_using_dobutamine_inthehistory"
+]

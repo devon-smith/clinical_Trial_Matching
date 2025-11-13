@@ -1,0 +1,130 @@
+{
+  "generated": "2025-10-20T22:02:12",
+  "trial_id": "NCT01855698",
+  "contextual": {
+    "_id": "NCT01855698",
+    "title": "PENELOPE Observational Study: Prophylaxis and Treatment of Arterial and Venous Thromboembolism",
+    "text": "Summary: The primary objective of the study is to assess efficacy and safety of different prophylactic or therapeutic antithrombotic approaches in patients with hematologic neoplasms and platelet count <50 x109/L, including unfractionated or low molecular weight heparin, fondaparinux, anti-vitamin K agents, antiplatelet agents, novel oral anticoagulants, fibrinolytic agents, with or without a policy of platelet transfusion. Cases with arterial or venous thromboembolism managed with observation or use of vena cava filters in patients with venous thromboembolism will be included too.\nInclusion criteria: inclusion criteria: \n\n Potential subjects must satisfy all of the following criteria to be enrolled in the study: \n\n diagnosis of hematologic neoplasm (acute leukemia, myelodysplastic syndrome, lymphoma, multiple myeloma, chronic myeloid leukemia, Ph-negative chronic myeloproliferative neoplasms) independently of the stage of disease or treatment (including transplant procedures); \n\n platelet count <50 x109/L at the time of starting antithrombotic prophylaxis or \n\n platelet count <50 x109/L at the time of diagnosis of arterial or venous thromboembolism objectively proven or \n\n platelet count >50 x109/L at time of thrombosis but subsequent thrombocytopenia <50 x109/L while receiving antithrombotic treatment; \n\n diagnosis of arterial thrombosis include acute coronary syndrome, ischemic stroke (including major and minor stroke), peripheral arterial thrombosis, retinal arterial thrombosis; \n\n diagnosis of venous thrombosis include thrombosis of deep veins of the limbs and the abdomen, superficial veins of limbs, cerebral and splanchnic veins, retinal vein, and pulmonary embolism. Splanchnic venous thrombosis include occlusion of hepatic, portal, mesenteric, and splenic veins. \n\n \nExclusion criteria: : \n\n The following situations will not be criteria of inclusion neither outcomes of interest: \n\n transient ischemic attack without CT and/or NMR signs; \n\n superficial vein thrombosis without Doppler ultrasound examination showing evidence of thrombosis; \n\n antithrombotic prophylaxis only local for central venous lines (i.e. CVC flushing with heparin); \n\n occlusion of the central venous catheter (notice that CVC-related deep venous thrombosis, i.e. thrombosis of the deep veins where the central line is placed, will be a criterion of inclusion or an outcome of antithrombotic prophylaxis).",
+    "metadata": {
+      "brief_title": "PENELOPE Observational Study: Prophylaxis and Treatment of Arterial and Venous Thromboembolism",
+      "phase": "",
+      "drugs": "['Observation']",
+      "drugs_list": [
+        "Observation"
+      ],
+      "diseases": "['Hematologic Neoplasm', 'Acute Leukemia', 'Myelodysplastic Syndrome', 'Lymphoma', 'Multiple Myeloma']",
+      "diseases_list": [
+        "Hematologic Neoplasm",
+        "Acute Leukemia",
+        "Myelodysplastic Syndrome",
+        "Lymphoma",
+        "Multiple Myeloma"
+      ],
+      "enrollment": "99.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Potential subjects must satisfy all of the following criteria to be enrolled in the study: \n\n diagnosis of hematologic neoplasm (acute leukemia, myelodysplastic syndrome, lymphoma, multiple myeloma, chronic myeloid leukemia, Ph-negative chronic myeloproliferative neoplasms) independently of the stage of disease or treatment (including transplant procedures); \n\n platelet count <50 x109/L at the time of starting antithrombotic prophylaxis or \n\n platelet count <50 x109/L at the time of diagnosis of arterial or venous thromboembolism objectively proven or \n\n platelet count >50 x109/L at time of thrombosis but subsequent thrombocytopenia <50 x109/L while receiving antithrombotic treatment; \n\n diagnosis of arterial thrombosis include acute coronary syndrome, ischemic stroke (including major and minor stroke), peripheral arterial thrombosis, retinal arterial thrombosis; \n\n diagnosis of venous thrombosis include thrombosis of deep veins of the limbs and the abdomen, superficial veins of limbs, cerebral and splanchnic veins, retinal vein, and pulmonary embolism. Splanchnic venous thrombosis include occlusion of hepatic, portal, mesenteric, and splenic veins. \n\n ",
+      "exclusion_criteria": ": \n\n The following situations will not be criteria of inclusion neither outcomes of interest: \n\n transient ischemic attack without CT and/or NMR signs; \n\n superficial vein thrombosis without Doppler ultrasound examination showing evidence of thrombosis; \n\n antithrombotic prophylaxis only local for central venous lines (i.e. CVC flushing with heparin); \n\n occlusion of the central venous catheter (notice that CVC-related deep venous thrombosis, i.e. thrombosis of the deep veins where the central line is placed, will be a criterion of inclusion or an outcome of antithrombotic prophylaxis).",
+      "brief_summary": "The primary objective of the study is to assess efficacy and safety of different prophylactic or therapeutic antithrombotic approaches in patients with hematologic neoplasms and platelet count <50 x109/L, including unfractionated or low molecular weight heparin, fondaparinux, anti-vitamin K agents, antiplatelet agents, novel oral anticoagulants, fibrinolytic agents, with or without a policy of platelet transfusion. Cases with arterial or venous thromboembolism managed with observation or use of vena cava filters in patients with venous thromboembolism will be included too."
+    }
+  },
+  "linked_result": {
+    "Hematologic Neoplasm": {
+      "conceptId": "129154003",
+      "preferred_term": "Hematologic neoplasm",
+      "fully_specified_name": "Hematologic neoplasm (disorder)",
+      "type": "Clinical finding",
+      "definition": "Neoplasms located in the blood and blood-forming tissue (the bone marrow and lymphatic tissue). The commonest forms are the various types of LEUKEMIA, of LYMPHOMA, and of the progressive, life-threatening forms of the MYELODYSPLASTIC SYNDROMES.",
+      "best_match_term": "Hematologic neoplasm",
+      "match_reason": "Exact"
+    },
+    "Acute Leukemia": {
+      "conceptId": "91855006",
+      "preferred_term": "Acute leukemia",
+      "fully_specified_name": "Acute leukemia, disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A clonal (malignant) hematopoietic disorder with an acute onset, affecting the bone marrow and the peripheral blood. The malignant cells show minimal differentiation and are called blasts, either myeloid blasts (myeloblasts) or lymphoid blasts (lymphoblasts).",
+      "best_match_term": "Acute leukemia",
+      "match_reason": "Exact"
+    },
+    "Myelodysplastic Syndrome": {
+      "conceptId": "109995007",
+      "preferred_term": "Myelodysplastic syndrome (clinical)",
+      "fully_specified_name": "Myelodysplastic syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "Clonal hematopoietic stem cell disorders characterized by dysplasia in one or more hematopoietic cell lineages. They predominantly affect patients over 60, are considered preleukemic conditions, and have high probability of transformation into ACUTE MYELOID LEUKEMIA.",
+      "best_match_term": "Myelodysplastic syndrome",
+      "match_reason": "Exact"
+    },
+    "Lymphoma": {
+      "conceptId": "118600007",
+      "preferred_term": "Malignant lymphoma (clinical)",
+      "fully_specified_name": "Malignant lymphoma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A general term for various neoplastic diseases of the lymphoid tissue.",
+      "best_match_term": "Lymphoma",
+      "match_reason": "Exact"
+    },
+    "Multiple Myeloma": {
+      "conceptId": "109989006",
+      "preferred_term": "Multiple myeloma",
+      "fully_specified_name": "Multiple myeloma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A malignancy of mature PLASMA CELLS engaging in monoclonal immunoglobulin production. It is characterized by hyperglobulinemia, excess Bence-Jones proteins (free monoclonal IMMUNOGLOBULIN LIGHT CHAINS) in the urine, skeletal destruction, bone pain, and fractures. Other features include ANEMIA; HYPERCALCEMIA; and RENAL INSUFFICIENCY.",
+      "best_match_term": "Multiple myeloma",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hematologic Neoplasm": 1,
+    "Acute Leukemia": 1,
+    "Myelodysplastic Syndrome": 1,
+    "Lymphoma": 1,
+    "Multiple Myeloma": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hematologic Neoplasm": {
+      "disease": "Hematologic Neoplasm",
+      "conceptId": "129154003",
+      "preferred_term": "Hematologic neoplasm",
+      "fully_specified_name": "Hematologic neoplasm (disorder)",
+      "type": "Clinical finding",
+      "definition": "Neoplasms located in the blood and blood-forming tissue (the bone marrow and lymphatic tissue). The commonest forms are the various types of LEUKEMIA, of LYMPHOMA, and of the progressive, life-threatening forms of the MYELODYSPLASTIC SYNDROMES.",
+      "best_match_term": "Hematologic neoplasm"
+    },
+    "Acute Leukemia": {
+      "disease": "Acute Leukemia",
+      "conceptId": "91855006",
+      "preferred_term": "Acute leukemia",
+      "fully_specified_name": "Acute leukemia, disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A clonal (malignant) hematopoietic disorder with an acute onset, affecting the bone marrow and the peripheral blood. The malignant cells show minimal differentiation and are called blasts, either myeloid blasts (myeloblasts) or lymphoid blasts (lymphoblasts).",
+      "best_match_term": "Acute leukemia"
+    },
+    "Myelodysplastic Syndrome": {
+      "disease": "Myelodysplastic Syndrome",
+      "conceptId": "109995007",
+      "preferred_term": "Myelodysplastic syndrome (clinical)",
+      "fully_specified_name": "Myelodysplastic syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "Clonal hematopoietic stem cell disorders characterized by dysplasia in one or more hematopoietic cell lineages. They predominantly affect patients over 60, are considered preleukemic conditions, and have high probability of transformation into ACUTE MYELOID LEUKEMIA.",
+      "best_match_term": "Myelodysplastic syndrome"
+    },
+    "Lymphoma": {
+      "disease": "Lymphoma",
+      "conceptId": "118600007",
+      "preferred_term": "Malignant lymphoma (clinical)",
+      "fully_specified_name": "Malignant lymphoma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A general term for various neoplastic diseases of the lymphoid tissue.",
+      "best_match_term": "Lymphoma"
+    },
+    "Multiple Myeloma": {
+      "disease": "Multiple Myeloma",
+      "conceptId": "109989006",
+      "preferred_term": "Multiple myeloma",
+      "fully_specified_name": "Multiple myeloma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A malignancy of mature PLASMA CELLS engaging in monoclonal immunoglobulin production. It is characterized by hyperglobulinemia, excess Bence-Jones proteins (free monoclonal IMMUNOGLOBULIN LIGHT CHAINS) in the urine, skeletal destruction, bone pain, and fractures. Other features include ANEMIA; HYPERCALCEMIA; and RENAL INSUFFICIENCY.",
+      "best_match_term": "Multiple myeloma"
+    }
+  }
+}

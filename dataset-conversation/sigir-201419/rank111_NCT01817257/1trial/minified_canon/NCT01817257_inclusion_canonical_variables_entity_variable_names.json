@@ -1,0 +1,8 @@
+[
+  "patient_low_molecular_weight_heparin_containing_product_value_recorded_inthehistory_withunit_months",
+  "patient_is_taking_low_molecular_weight_heparin_containing_product_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_has_diagnosis_of_thrombosis_now",
+  "patient_has_finding_of_secondary_malignant_neoplastic_disease_now",
+  "patient_age_value_recorded_now_in_years"
+]

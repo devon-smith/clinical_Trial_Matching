@@ -1,0 +1,100 @@
+{
+  "generated": "2025-10-20T22:42:11",
+  "trial_id": "NCT00001776",
+  "contextual": {
+    "_id": "NCT00001776",
+    "title": "Effects of Brain Stimulation on Learning and Reasoning",
+    "text": "Summary: Imaging studies of the brain have revealed the different areas involved in the processes of learning and reasoning. However, the specific role these regions play in these processes, or if stimulating these areas can improve these processes is unknown.~Researchers would like to use repetitive transcranial stimulation (rTMS) to better understand the roles of individual brain regions on the processes of learning and reasoning. Repetitive transcranial magnetic stimulation (rTMS) involves the placement of a cooled electromagnet with a figure-eight coil on the patient's scalp, and rapidly turning on and off the magnetic flux. This permits non-invasive, relatively localized stimulation of the surface of the brain (cerebral cortex). The effect of magnetic stimulation varies, depending upon the location, intensity and frequency of the magnetic pulses.~The purpose of this study is to use rTMS to help determine the roles of different brain regions in the development of implicit learning of motor sequences and analogic reasoning. In addition, researchers hope to evaluate if stimulation of these regions speeds up the process of learning or analogic reasoning.\nInclusion criteria: inclusion criteria \n\n Right handed normal volunteers (18-65 years old). \n\n Patients with Parkinson's disease off medication. \n\n Patients with cerebellar deficits. \n\n Patients with frontal lobe lesions. \n\n Patients with frontal lobe dementia. \n\n \nExclusion criteria:  \n\n Subjects with personal or family history of seizures or other neurological disorders. \n\n Pregnant women. \n\n Volunteers or patients with severe coronary artery disease. \n\n Metal in the cranium except mouth. \n\n Intracardiac lines. \n\n Increased intracranial pressure as evaluated by clinical means. \n\n Cardiac pacemakers. \n\n Intake of neuroleptics.",
+    "metadata": {
+      "brief_title": "Effects of Brain Stimulation on Learning and Reasoning",
+      "phase": "",
+      "drugs": "['Cadwell Rapid Rate Magnetic Stimulator']",
+      "drugs_list": [
+        "Cadwell Rapid Rate Magnetic Stimulator"
+      ],
+      "diseases": "['Cerebellar Disease', 'Dementia', 'Healthy', \"Parkinson's Disease\"]",
+      "diseases_list": [
+        "Cerebellar Disease",
+        "Dementia",
+        "Healthy",
+        "Parkinson's Disease"
+      ],
+      "enrollment": "122.0",
+      "inclusion_criteria": "inclusion criteria \n\n Right handed normal volunteers (18-65 years old). \n\n Patients with Parkinson's disease off medication. \n\n Patients with cerebellar deficits. \n\n Patients with frontal lobe lesions. \n\n Patients with frontal lobe dementia. \n\n ",
+      "exclusion_criteria": " \n\n Subjects with personal or family history of seizures or other neurological disorders. \n\n Pregnant women. \n\n Volunteers or patients with severe coronary artery disease. \n\n Metal in the cranium except mouth. \n\n Intracardiac lines. \n\n Increased intracranial pressure as evaluated by clinical means. \n\n Cardiac pacemakers. \n\n Intake of neuroleptics.",
+      "brief_summary": "Imaging studies of the brain have revealed the different areas involved in the processes of learning and reasoning. However, the specific role these regions play in these processes, or if stimulating these areas can improve these processes is unknown.~Researchers would like to use repetitive transcranial stimulation (rTMS) to better understand the roles of individual brain regions on the processes of learning and reasoning. Repetitive transcranial magnetic stimulation (rTMS) involves the placement of a cooled electromagnet with a figure-eight coil on the patient's scalp, and rapidly turning on and off the magnetic flux. This permits non-invasive, relatively localized stimulation of the surface of the brain (cerebral cortex). The effect of magnetic stimulation varies, depending upon the location, intensity and frequency of the magnetic pulses.~The purpose of this study is to use rTMS to help determine the roles of different brain regions in the development of implicit learning of motor sequences and analogic reasoning. In addition, researchers hope to evaluate if stimulation of these regions speeds up the process of learning or analogic reasoning."
+    }
+  },
+  "linked_result": {
+    "Cerebellar Disease": {
+      "conceptId": "223176004",
+      "preferred_term": "Cerebellar disorder",
+      "fully_specified_name": "Cerebellar disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "Diseases that affect the structure or function of the cerebellum. Cardinal manifestations of cerebellar dysfunction include dysmetria, GAIT ATAXIA, and MUSCLE HYPOTONIA.",
+      "best_match_term": "Cerebellar disorder (disorder)",
+      "match_reason": "Exact"
+    },
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    },
+    "Healthy": {
+      "conceptId": "102499006",
+      "preferred_term": "Fit and well",
+      "fully_specified_name": "Fit and well (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "State of being healthy",
+      "match_reason": "Exact"
+    },
+    "Parkinson's Disease": {
+      "conceptId": "49049000",
+      "preferred_term": "Parkinson's disease",
+      "fully_specified_name": "Parkinson's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A progressive, degenerative neurologic disease characterized by a TREMOR that is maximal at rest, retropulsion (i.e. a tendency to fall backwards), rigidity, stooped posture, slowness of voluntary movements, and a masklike facial expression. Pathologic features include loss of melanin containing neurons in the substantia nigra and other pigmented nuclei of the brainstem. LEWY BODIES are present in the substantia nigra and locus coeruleus but may also be found in a related condition (LEWY BODY DISEASE, DIFFUSE) characterized by dementia in combination with varying degrees of parkinsonism. (Adams et al., Principles of Neurology, 6th ed, p1059, pp1067-75)",
+      "best_match_term": "Parkinson's disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cerebellar Disease": 1,
+    "Dementia": 1,
+    "Parkinson's Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cerebellar Disease": {
+      "disease": "Cerebellar Disease",
+      "conceptId": "223176004",
+      "preferred_term": "Cerebellar disorder",
+      "fully_specified_name": "Cerebellar disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "Diseases that affect the structure or function of the cerebellum. Cardinal manifestations of cerebellar dysfunction include dysmetria, GAIT ATAXIA, and MUSCLE HYPOTONIA.",
+      "best_match_term": "Cerebellar disorder (disorder)"
+    },
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    },
+    "Parkinson's Disease": {
+      "disease": "Parkinson's Disease",
+      "conceptId": "49049000",
+      "preferred_term": "Parkinson's disease",
+      "fully_specified_name": "Parkinson's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A progressive, degenerative neurologic disease characterized by a TREMOR that is maximal at rest, retropulsion (i.e. a tendency to fall backwards), rigidity, stooped posture, slowness of voluntary movements, and a masklike facial expression. Pathologic features include loss of melanin containing neurons in the substantia nigra and other pigmented nuclei of the brainstem. LEWY BODIES are present in the substantia nigra and locus coeruleus but may also be found in a related condition (LEWY BODY DISEASE, DIFFUSE) characterized by dementia in combination with varying degrees of parkinsonism. (Adams et al., Principles of Neurology, 6th ed, p1059, pp1067-75)",
+      "best_match_term": "Parkinson's disease"
+    }
+  }
+}

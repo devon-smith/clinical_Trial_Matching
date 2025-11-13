@@ -1,0 +1,131 @@
+{
+  "generated": "2025-10-22T21:26:18",
+  "trial_id": "NCT02300155",
+  "contextual": {
+    "_id": "NCT02300155",
+    "title": "Improving Multivitamin Supplementation to Pregnant Women",
+    "text": "Summary: The purpose of this study is to compare the tolerability of Pregvit® to a common prenatal vitamin (Orifer® F) among pregnant women with morning sickness or those suffering from a variety of conditions.\nInclusion criteria: inclusion criteria: \n\n Any woman who discontinued her standard vitamins due to gastrointestinal symptoms or due to the tablet size, with one ofthe following conditions: \n\n Morning sickness. \n\n Gastrointestinal disorders: Crohn's disease, ulcerative colitis, peptic or duodenal ulcer, irritable colon, celiac disease. \n\n Iron deficiency anemia. \n\n Hypothyroidism. \n\n Depression. \n\n \nExclusion criteria: : \n\n Women who do not agree to consent to this protocol. \n\n Women with a known hypersensitivity to any of the ingredients of Pregvit®, or Orifer® F.",
+    "metadata": {
+      "brief_title": "Improving Multivitamin Supplementation to Pregnant Women",
+      "phase": "Phase 4",
+      "drugs": "['Pregvit®', 'Orifer F®']",
+      "drugs_list": [
+        "Pregvit®",
+        "Orifer F®"
+      ],
+      "diseases": "['Pregnancy', 'Morning Sickness', 'Nausea', 'Vomiting', 'Hyperemesis Gravidarum']",
+      "diseases_list": [
+        "Pregnancy",
+        "Morning Sickness",
+        "Nausea",
+        "Vomiting",
+        "Hyperemesis Gravidarum"
+      ],
+      "enrollment": "1370.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Any woman who discontinued her standard vitamins due to gastrointestinal symptoms or due to the tablet size, with one ofthe following conditions: \n\n Morning sickness. \n\n Gastrointestinal disorders: Crohn's disease, ulcerative colitis, peptic or duodenal ulcer, irritable colon, celiac disease. \n\n Iron deficiency anemia. \n\n Hypothyroidism. \n\n Depression. \n\n ",
+      "exclusion_criteria": ": \n\n Women who do not agree to consent to this protocol. \n\n Women with a known hypersensitivity to any of the ingredients of Pregvit®, or Orifer® F.",
+      "brief_summary": "The purpose of this study is to compare the tolerability of Pregvit® to a common prenatal vitamin (Orifer® F) among pregnant women with morning sickness or those suffering from a variety of conditions."
+    }
+  },
+  "linked_result": {
+    "Pregnancy": {
+      "conceptId": "289908002",
+      "preferred_term": "Pregnancy",
+      "fully_specified_name": "Pregnancy, function (observable entity)",
+      "type": "Observable entity",
+      "definition": "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.",
+      "best_match_term": "Pregnancy",
+      "match_reason": "Exact"
+    },
+    "Morning Sickness": {
+      "conceptId": "51885006",
+      "preferred_term": "Morning sickness",
+      "fully_specified_name": "Morning sickness (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Morning sickness",
+      "match_reason": "Exact"
+    },
+    "Nausea": {
+      "conceptId": "422587007",
+      "preferred_term": "Nausea",
+      "fully_specified_name": "Nausea (finding)",
+      "type": "Clinical finding",
+      "definition": "An unpleasant sensation in the stomach usually accompanied by the urge to vomit. Common causes are early pregnancy, sea and motion sickness, emotional stress, intense pain, food poisoning, and various enteroviruses.",
+      "best_match_term": "Nausea",
+      "match_reason": "Exact"
+    },
+    "Vomiting": {
+      "conceptId": "422400008",
+      "preferred_term": "Vomiting",
+      "fully_specified_name": "Vomiting (disorder)",
+      "type": "Clinical finding",
+      "definition": "The forcible expulsion of the contents of the STOMACH through the MOUTH.",
+      "best_match_term": "Vomiting",
+      "match_reason": "Exact"
+    },
+    "Hyperemesis Gravidarum": {
+      "conceptId": "14094001",
+      "preferred_term": "Hyperemesis gravidarum",
+      "fully_specified_name": "Excessive vomiting in pregnancy (disorder)",
+      "type": "Clinical finding",
+      "definition": "Intractable VOMITING that develops in early PREGNANCY and persists. This can lead to DEHYDRATION and WEIGHT LOSS.",
+      "best_match_term": "Hyperemesis gravidarum",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Pregnancy": 1,
+    "Morning Sickness": 1,
+    "Nausea": 1,
+    "Vomiting": 1,
+    "Hyperemesis Gravidarum": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Pregnancy": {
+      "disease": "Pregnancy",
+      "conceptId": "289908002",
+      "preferred_term": "Pregnancy",
+      "fully_specified_name": "Pregnancy, function (observable entity)",
+      "type": "Observable entity",
+      "definition": "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.",
+      "best_match_term": "Pregnancy"
+    },
+    "Morning Sickness": {
+      "disease": "Morning Sickness",
+      "conceptId": "51885006",
+      "preferred_term": "Morning sickness",
+      "fully_specified_name": "Morning sickness (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Morning sickness"
+    },
+    "Nausea": {
+      "disease": "Nausea",
+      "conceptId": "422587007",
+      "preferred_term": "Nausea",
+      "fully_specified_name": "Nausea (finding)",
+      "type": "Clinical finding",
+      "definition": "An unpleasant sensation in the stomach usually accompanied by the urge to vomit. Common causes are early pregnancy, sea and motion sickness, emotional stress, intense pain, food poisoning, and various enteroviruses.",
+      "best_match_term": "Nausea"
+    },
+    "Vomiting": {
+      "disease": "Vomiting",
+      "conceptId": "422400008",
+      "preferred_term": "Vomiting",
+      "fully_specified_name": "Vomiting (disorder)",
+      "type": "Clinical finding",
+      "definition": "The forcible expulsion of the contents of the STOMACH through the MOUTH.",
+      "best_match_term": "Vomiting"
+    },
+    "Hyperemesis Gravidarum": {
+      "disease": "Hyperemesis Gravidarum",
+      "conceptId": "14094001",
+      "preferred_term": "Hyperemesis gravidarum",
+      "fully_specified_name": "Excessive vomiting in pregnancy (disorder)",
+      "type": "Clinical finding",
+      "definition": "Intractable VOMITING that develops in early PREGNANCY and persists. This can lead to DEHYDRATION and WEIGHT LOSS.",
+      "best_match_term": "Hyperemesis gravidarum"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "generated": "2025-10-22T21:25:47",
+  "trial_id": "NCT00539487",
+  "contextual": {
+    "_id": "NCT00539487",
+    "title": "Observational Non-interventional Study (Anwendungsbeobachtung) With Telmisartan in High-risk Hypertensives",
+    "text": "Summary: This observational non-interventional study will assess (under conditions of clinical practice in daily routine) the antihypertensive efficacy of telmisartan treatment with or without active promotion of lifestyle changes in hypertensive patients at high cardiovascular risk\nInclusion criteria: inclusion criteria: \n\n patients with essential hypertension aged >/= 18 years with one of the following risk factors: history of coronary artery disease or stroke/TIA or peripheral artery disease or diabetes mellitus. \n\n \nExclusion criteria: : \n\n according to SPC",
+    "metadata": {
+      "brief_title": "Observational Non-interventional Study (Anwendungsbeobachtung) With Telmisartan in High-risk Hypertensives",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Hypertension', 'Obesity']",
+      "diseases_list": [
+        "Hypertension",
+        "Obesity"
+      ],
+      "enrollment": "5827.0",
+      "inclusion_criteria": "inclusion criteria: \n\n patients with essential hypertension aged >/= 18 years with one of the following risk factors: history of coronary artery disease or stroke/TIA or peripheral artery disease or diabetes mellitus. \n\n ",
+      "exclusion_criteria": ": \n\n according to SPC",
+      "brief_summary": "This observational non-interventional study will assess (under conditions of clinical practice in daily routine) the antihypertensive efficacy of telmisartan treatment with or without active promotion of lifestyle changes in hypertensive patients at high cardiovascular risk"
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1,
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "generated": "2025-10-20T22:49:24",
+  "trial_id": "NCT01356459",
+  "contextual": {
+    "_id": "NCT01356459",
+    "title": "Pressure Ulcer Prevention in Intensive Care Unit (ICU)",
+    "text": "Summary: The study is designed as a randomised controlled trial of trauma patients admitted to the Royal Melbourne Hospital (RMH) Emergency Department (ED) and subsequently transferred to the Intensive Care Unit (ICU). Patients meeting the study inclusion criteria will be randomly allocated to either the control group that will receive usual pressure ulcer prevention strategies or the trial group that will receive usual care plus have a Mepilex Border Sacrum dressing applied to their sacrum and Mepilex Boarder Heel dressing applied to each heel in the ED.~Hypothesis:Patients treated with Mepilex Border dressings will have a lower incidence rate of sacral and heel pressure ulcer development than patients receiving standard care.\nInclusion criteria: inclusion criteria: \n\n ED and ICU admission for critical illness and/or major trauma Over 18 years old \n\n \nExclusion criteria: : \n\n Less than 18 years old Suspected or actual spinal injury Pre-existing sacral or heel pressure ulcer Trauma to sacral and/or heel area",
+    "metadata": {
+      "brief_title": "Pressure Ulcer Prevention in Intensive Care Unit (ICU)",
+      "phase": "",
+      "drugs": "['Mepilex Border Dressing']",
+      "drugs_list": [
+        "Mepilex Border Dressing"
+      ],
+      "diseases": "['Pressure Ulcers']",
+      "diseases_list": [
+        "Pressure Ulcers"
+      ],
+      "enrollment": "440.0",
+      "inclusion_criteria": "inclusion criteria: \n\n ED and ICU admission for critical illness and/or major trauma Over 18 years old \n\n ",
+      "exclusion_criteria": ": \n\n Less than 18 years old Suspected or actual spinal injury Pre-existing sacral or heel pressure ulcer Trauma to sacral and/or heel area",
+      "brief_summary": "The study is designed as a randomised controlled trial of trauma patients admitted to the Royal Melbourne Hospital (RMH) Emergency Department (ED) and subsequently transferred to the Intensive Care Unit (ICU). Patients meeting the study inclusion criteria will be randomly allocated to either the control group that will receive usual pressure ulcer prevention strategies or the trial group that will receive usual care plus have a Mepilex Border Sacrum dressing applied to their sacrum and Mepilex Boarder Heel dressing applied to each heel in the ED.~Hypothesis:Patients treated with Mepilex Border dressings will have a lower incidence rate of sacral and heel pressure ulcer development than patients receiving standard care."
+    }
+  },
+  "linked_result": {
+    "Pressure Ulcers": null
+  },
+  "kept_counts": {},
+  "final_selected_concept_by_disease": {}
+}

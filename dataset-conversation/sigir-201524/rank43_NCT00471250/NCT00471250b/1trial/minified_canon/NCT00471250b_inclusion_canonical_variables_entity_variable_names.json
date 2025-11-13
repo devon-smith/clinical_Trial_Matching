@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_respiratory_tract_infection_now",
+  "patient_has_suspicion_of_respiratory_tract_infection_now",
+  "patients_susceptibility_to_infections_is_abnormal_now",
+  "patients_susceptibility_to_infections_is_positive_now",
+  "patient_is_undergoing_procedure_now",
+  "patient_can_undergo_procedure_inthefuture",
+  "patient_can_undergo_collection_of_blood_specimen_for_laboratory_now"
+]

@@ -1,0 +1,17 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_chronic_constipation_now",
+  "patient_has_finding_of_esophagitis_now",
+  "patient_has_diagnosis_of_gastroesophageal_reflux_disease_now",
+  "patient_has_finding_of_heartburn_now",
+  "patient_has_finding_of_nausea_now",
+  "patient_has_finding_of_vomiting_now",
+  "patient_has_finding_of_breast_changes_now",
+  "patient_has_finding_of_dead_now",
+  "patient_is_exposed_to_domperidone_now",
+  "patient_has_finding_of_increased_prolactin_level_now",
+  "patient_has_finding_of_prolonged_qt_interval_now",
+  "patient_has_signed_informed_consent_for_domperidone_administration_now@@informed_of_potential_adverse_events"
+]

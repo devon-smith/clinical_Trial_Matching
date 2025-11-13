@@ -1,0 +1,12 @@
+[
+  "patient_has_undergone_acupuncture_inthehistory",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_adenoid_excision_inthehistory",
+  "patient_has_undergone_surgical_procedure_inthehistory",
+  "patient_has_undergone_tonsillectomy_inthehistory",
+  "patient_has_undergone_uvulopalatopharyngoplasty_inthehistory",
+  "patient_has_finding_of_blood_coagulation_disorder_inthehistory",
+  "patient_has_diagnosis_of_kidney_disease_inthehistory",
+  "patient_has_diagnosis_of_liver_problem_inthehistory",
+  "patient_is_pregnant_now"
+]

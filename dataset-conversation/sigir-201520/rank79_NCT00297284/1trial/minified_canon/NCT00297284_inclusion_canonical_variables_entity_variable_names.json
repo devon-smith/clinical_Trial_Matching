@@ -1,0 +1,11 @@
+[
+  "patient_has_diagnosis_of_systemic_lupus_erythematosus_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_verbal_intelligence_quotient_value_recorded_now_withunit_score",
+  "patient_has_finding_of_impaired_cognition_now",
+  "patient_has_finding_of_impairment_of_hand_function_now",
+  "patient_has_finding_of_severe_hearing_loss_now",
+  "patient_has_finding_of_severe_visual_impairment_now",
+  "patient_has_finding_of_normal_blood_pressure_now",
+  "patient_has_finding_of_cardiac_arrhythmia_now"
+]

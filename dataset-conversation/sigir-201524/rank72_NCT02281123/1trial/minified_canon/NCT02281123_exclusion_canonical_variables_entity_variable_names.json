@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_inthehistory_in_years",
+  "patient_time_of_symptom_onset_value_recorded_inthehistory_withunit_years",
+  "patient_has_finding_of_chikungunya_fever_now",
+  "patient_time_symptom_lasts_value_recorded_now_withunit_days",
+  "patient_has_finding_of_joint_pain_now",
+  "patient_has_diagnosis_of_arthritis_inthehistory",
+  "patient_is_exposed_to_non_steroidal_anti_inflammatory_agent_inthehistory"
+]

@@ -1,0 +1,8 @@
+[
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_activity_of_daily_living_value_recorded_now_withunit_count",
+  "patient_is_taking_psychotropic_agent_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_has_a_carer_now",
+  "patient_is_exposed_to_psychotropic_agent_now"
+]

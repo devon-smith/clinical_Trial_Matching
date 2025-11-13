@@ -1,0 +1,12 @@
+[
+  "patient_has_diagnosis_of_asthma_inthehistory",
+  "patient_has_diagnosis_of_bronchiectasis_inthehistory",
+  "patient_has_diagnosis_of_disorder_of_respiratory_system_inthehistory",
+  "patient_has_finding_of_developmental_academic_disorder_now",
+  "patient_has_finding_of_mental_disorder_now",
+  "patient_has_finding_of_traumatic_and_or_non_traumatic_brain_injury_now",
+  "patient_is_exposed_to_steroid_now",
+  "patient_has_finding_of_never_smoked_tobacco_now",
+  "patient_has_finding_of_cutaneous_hypersensitivity_now",
+  "patient_weal_value_recorded_now_withunit_millimeter"
+]

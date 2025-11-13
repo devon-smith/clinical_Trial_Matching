@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT02295254",
+  "contextual": {
+    "_id": "NCT02295254",
+    "title": "Microbiome Changes in Travelers to Tropical Destinations",
+    "text": "Summary: The human gut contain a wide range of microorganisms creating the gut microbiome. The microbiome has great impact on metabolic and immunologic processes and responses. Travelers who travel to tropical destinations where the intestinal infection risk is high are prone to microbiome changes. During the current study the travelers will give feces specimen before and after the travel and their microbiome will be analyzed.\nInclusion criteria: inclusion criteria: \n\n Travelers who intended to travel to tropical areas \n\n Good general health \n\n \nExclusion criteria: : \n\n Medication consumption \n\n Background diseases",
+    "metadata": {
+      "brief_title": "Microbiome Changes in Travelers to Tropical Destinations",
+      "phase": "",
+      "drugs": "['feces sample']",
+      "drugs_list": [
+        "feces sample"
+      ],
+      "diseases": "['Intestinal Diseases']",
+      "diseases_list": [
+        "Intestinal Diseases"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Travelers who intended to travel to tropical areas \n\n Good general health \n\n ",
+      "exclusion_criteria": ": \n\n Medication consumption \n\n Background diseases",
+      "brief_summary": "The human gut contain a wide range of microorganisms creating the gut microbiome. The microbiome has great impact on metabolic and immunologic processes and responses. Travelers who travel to tropical destinations where the intestinal infection risk is high are prone to microbiome changes. During the current study the travelers will give feces specimen before and after the travel and their microbiome will be analyzed."
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "generated": "2025-10-20T23:45:40",
+  "trial_id": "NCT01997047",
+  "contextual": {
+    "_id": "NCT01997047",
+    "title": "Diagnosing Pneumonia Under Low-resource Conditions",
+    "text": "Summary: Pneumonia is the commonest cause of death in children worldwide, killing 1.5 million children under the age of 5 years, every year. This is more than the number of children dying from AIDS, malaria and tuberculosis combined. The current diagnostic and management protocols for managing serious respiratory diseases in children are 30 years old and are greatly in need of updating. The successful establishment of useful clinical management criteria for children with respiratory diseases will have benefits for children in low resource regions around the world. The goals of the study are:~To determine if children with respiratory distress can be reliably diagnosed under low-resource conditions.~To identify the clinical tests that best differentiate pneumonia from wheezy diseases. These will be used to establish updated diagnostic criteria for common pediatric lung diseases that broaden the current pneumonia algorithm by adding another for wheezy illnesses.~The ultimate objective is to improve the management and outcome of acute respiratory conditions in children.~Investigators also wish to test the efficacy of a locally developed cell phone oximeter probe in a low resource setting.\nInclusion criteria: inclusion criteria: \n\n All children below 5 exceeding WHO age-dependent tachypnea criteria. \n\n \nExclusion criteria: : \n\n None",
+    "metadata": {
+      "brief_title": "Diagnosing Pneumonia Under Low-resource Conditions",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Asthma', 'Pneumonia', 'Bronchiolitis']",
+      "diseases_list": [
+        "Asthma",
+        "Pneumonia",
+        "Bronchiolitis"
+      ],
+      "enrollment": "502.0",
+      "inclusion_criteria": "inclusion criteria: \n\n All children below 5 exceeding WHO age-dependent tachypnea criteria. \n\n ",
+      "exclusion_criteria": ": \n\n None",
+      "brief_summary": "Pneumonia is the commonest cause of death in children worldwide, killing 1.5 million children under the age of 5 years, every year. This is more than the number of children dying from AIDS, malaria and tuberculosis combined. The current diagnostic and management protocols for managing serious respiratory diseases in children are 30 years old and are greatly in need of updating. The successful establishment of useful clinical management criteria for children with respiratory diseases will have benefits for children in low resource regions around the world. The goals of the study are:~To determine if children with respiratory distress can be reliably diagnosed under low-resource conditions.~To identify the clinical tests that best differentiate pneumonia from wheezy diseases. These will be used to establish updated diagnostic criteria for common pediatric lung diseases that broaden the current pneumonia algorithm by adding another for wheezy illnesses.~The ultimate objective is to improve the management and outcome of acute respiratory conditions in children.~Investigators also wish to test the efficacy of a locally developed cell phone oximeter probe in a low resource setting."
+    }
+  },
+  "linked_result": {
+    "Asthma": {
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Asthma",
+      "match_reason": "Exact"
+    },
+    "Pneumonia": {
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia",
+      "match_reason": "Exact"
+    },
+    "Bronchiolitis": {
+      "conceptId": "4120002",
+      "preferred_term": "Bronchiolitis",
+      "fully_specified_name": "Bronchiolitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the BRONCHIOLES.",
+      "best_match_term": "Bronchiolitis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Asthma": 1,
+    "Pneumonia": 1,
+    "Bronchiolitis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Asthma": {
+      "disease": "Asthma",
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Asthma"
+    },
+    "Pneumonia": {
+      "disease": "Pneumonia",
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia"
+    },
+    "Bronchiolitis": {
+      "disease": "Bronchiolitis",
+      "conceptId": "4120002",
+      "preferred_term": "Bronchiolitis",
+      "fully_specified_name": "Bronchiolitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the BRONCHIOLES.",
+      "best_match_term": "Bronchiolitis"
+    }
+  }
+}

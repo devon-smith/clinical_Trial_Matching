@@ -1,0 +1,9 @@
+[
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_has_undergone_ultrasonography_inthehistory",
+  "patient_has_pregnancy_of_unknown_location_now@@persistent",
+  "patient_has_finding_of_hemodynamically_stable_now",
+  "patient_hemoglobin_concentration_dipstick_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_age_value_recorded_now_in_years"
+]

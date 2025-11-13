@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_pregnant_now",
+  "patient_has_diagnosis_of_disease_now",
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_has_taken_autonomic_agent_inthepast24hours",
+  "patient_is_exposed_to_autonomic_agent_inthepast24hours"
+]

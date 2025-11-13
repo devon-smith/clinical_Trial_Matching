@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_inthehistory",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now",
+  "patient_forced_expired_volume_in_1_second_value_recorded_inthehistory_withunit_percent_of_predicted",
+  "patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_inthehistory_withunit_ratio",
+  "patient_cigarette_pack_years_value_recorded_inthehistory_withunit_pack_years",
+  "patient_has_finding_of_cigarette_smoker_inthehistory",
+  "patient_has_finding_of_cigarette_smoker_now",
+  "patient_is_exposed_to_beta_adrenergic_receptor_agonist_now",
+  "patient_can_undergo_ellipta_inhaler_now"
+]

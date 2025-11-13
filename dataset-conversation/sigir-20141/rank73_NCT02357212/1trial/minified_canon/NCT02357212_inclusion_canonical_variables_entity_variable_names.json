@@ -1,0 +1,18 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_female_now",
+  "patient_has_diagnosis_of_acute_coronary_syndrome_inthehistory",
+  "patient_has_symptoms_of_chest_discomfort_inthehistory",
+  "patient_creatine_kinase_mb_measurement_value_recorded_now_withunit_nanograms_per_milliliter",
+  "patient_myocardial_infarction_timi_risk_score_value_recorded_now",
+  "patient_n_terminal_pro_brain_natriuretic_peptide_level_value_recorded_now_withunit_picograms_per_milliliter",
+  "patient_st_segment_depression_value_recorded_now_withunit_millimeters",
+  "patient_troponin_t_measurement_value_recorded_now_withunit_nanograms_per_milliliter",
+  "patient_has_diagnosis_of_acute_coronary_syndrome_inthepast48hours",
+  "patient_has_finding_of_chest_discomfort_now",
+  "patient_has_symptoms_of_chest_discomfort_now",
+  "patient_myocardial_infarction_value_recorded_now_withunit_timi_risk_score",
+  "patient_cardiac_enzyme_value_recorded_now_withunit_unit",
+  "patient_has_undergone_surgical_procedure_inthehistory",
+  "patient_is_exposed_to_cardiac_enzyme_now"
+]

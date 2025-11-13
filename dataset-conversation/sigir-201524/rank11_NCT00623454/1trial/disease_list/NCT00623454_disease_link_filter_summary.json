@@ -1,0 +1,30 @@
+{
+  "generated": "2025-10-20T23:28:39",
+  "trial_id": "NCT00623454",
+  "contextual": {
+    "_id": "NCT00623454",
+    "title": "Non Cardiac Chest Pain and Benign Palpitations",
+    "text": "Summary: All Patients between 18 and 65 years are asked 6 month after investigation for chest pain or palpitation at Cardiological Out-patient Clinic, Molde Hospital, about if they still have symptoms of chest pain or palpitation. If they still have some of the symptoms they are invited to participate in a coping course to learn a better way to deal with their symptoms.~The coping course consist of three sessions of cognitive behaviour therapy.\nInclusion criteria: inclusion criteria: \n\n investigated for chest pain or palpitation 6 month ago at Cardiological Out-patient Clinic, Molde Hospital \n\n suffer of chest pain or palpitations \n\n \nExclusion criteria: : \n\n do not speak norwegian properly \n\n mentally retarded \n\n psychosis last 6 month \n\n current alcohol or drug misuse",
+    "metadata": {
+      "brief_title": "Non Cardiac Chest Pain and Benign Palpitations",
+      "phase": "Phase 4",
+      "drugs": "['Cognitive behaviour therapy']",
+      "drugs_list": [
+        "Cognitive behaviour therapy"
+      ],
+      "diseases": "['Anxiety/Depression in Cardiological Unit']",
+      "diseases_list": [
+        "Anxiety/Depression in Cardiological Unit"
+      ],
+      "enrollment": "40.0",
+      "inclusion_criteria": "inclusion criteria: \n\n investigated for chest pain or palpitation 6 month ago at Cardiological Out-patient Clinic, Molde Hospital \n\n suffer of chest pain or palpitations \n\n ",
+      "exclusion_criteria": ": \n\n do not speak norwegian properly \n\n mentally retarded \n\n psychosis last 6 month \n\n current alcohol or drug misuse",
+      "brief_summary": "All Patients between 18 and 65 years are asked 6 month after investigation for chest pain or palpitation at Cardiological Out-patient Clinic, Molde Hospital, about if they still have symptoms of chest pain or palpitation. If they still have some of the symptoms they are invited to participate in a coping course to learn a better way to deal with their symptoms.~The coping course consist of three sessions of cognitive behaviour therapy."
+    }
+  },
+  "linked_result": {
+    "Anxiety/Depression in Cardiological Unit": null
+  },
+  "kept_counts": {},
+  "final_selected_concept_by_disease": {}
+}

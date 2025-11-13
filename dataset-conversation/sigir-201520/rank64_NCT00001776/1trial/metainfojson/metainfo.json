@@ -1,0 +1,27 @@
+{
+  "trial_id": "NCT00001776",
+  "contextual": {
+    "_id": "NCT00001776",
+    "title": "Effects of Brain Stimulation on Learning and Reasoning",
+    "text": "Summary: Imaging studies of the brain have revealed the different areas involved in the processes of learning and reasoning. However, the specific role these regions play in these processes, or if stimulating these areas can improve these processes is unknown.~Researchers would like to use repetitive transcranial stimulation (rTMS) to better understand the roles of individual brain regions on the processes of learning and reasoning. Repetitive transcranial magnetic stimulation (rTMS) involves the placement of a cooled electromagnet with a figure-eight coil on the patient's scalp, and rapidly turning on and off the magnetic flux. This permits non-invasive, relatively localized stimulation of the surface of the brain (cerebral cortex). The effect of magnetic stimulation varies, depending upon the location, intensity and frequency of the magnetic pulses.~The purpose of this study is to use rTMS to help determine the roles of different brain regions in the development of implicit learning of motor sequences and analogic reasoning. In addition, researchers hope to evaluate if stimulation of these regions speeds up the process of learning or analogic reasoning.\nInclusion criteria: inclusion criteria \n\n Right handed normal volunteers (18-65 years old). \n\n Patients with Parkinson's disease off medication. \n\n Patients with cerebellar deficits. \n\n Patients with frontal lobe lesions. \n\n Patients with frontal lobe dementia. \n\n \nExclusion criteria:  \n\n Subjects with personal or family history of seizures or other neurological disorders. \n\n Pregnant women. \n\n Volunteers or patients with severe coronary artery disease. \n\n Metal in the cranium except mouth. \n\n Intracardiac lines. \n\n Increased intracranial pressure as evaluated by clinical means. \n\n Cardiac pacemakers. \n\n Intake of neuroleptics.",
+    "metadata": {
+      "brief_title": "Effects of Brain Stimulation on Learning and Reasoning",
+      "phase": "",
+      "drugs": "['Cadwell Rapid Rate Magnetic Stimulator']",
+      "drugs_list": [
+        "Cadwell Rapid Rate Magnetic Stimulator"
+      ],
+      "diseases": "['Cerebellar Disease', 'Dementia', 'Healthy', \"Parkinson's Disease\"]",
+      "diseases_list": [
+        "Cerebellar Disease",
+        "Dementia",
+        "Healthy",
+        "Parkinson's Disease"
+      ],
+      "enrollment": "122.0",
+      "inclusion_criteria": "inclusion criteria \n\n Right handed normal volunteers (18-65 years old). \n\n Patients with Parkinson's disease off medication. \n\n Patients with cerebellar deficits. \n\n Patients with frontal lobe lesions. \n\n Patients with frontal lobe dementia. \n\n ",
+      "exclusion_criteria": " \n\n Subjects with personal or family history of seizures or other neurological disorders. \n\n Pregnant women. \n\n Volunteers or patients with severe coronary artery disease. \n\n Metal in the cranium except mouth. \n\n Intracardiac lines. \n\n Increased intracranial pressure as evaluated by clinical means. \n\n Cardiac pacemakers. \n\n Intake of neuroleptics.",
+      "brief_summary": "Imaging studies of the brain have revealed the different areas involved in the processes of learning and reasoning. However, the specific role these regions play in these processes, or if stimulating these areas can improve these processes is unknown.~Researchers would like to use repetitive transcranial stimulation (rTMS) to better understand the roles of individual brain regions on the processes of learning and reasoning. Repetitive transcranial magnetic stimulation (rTMS) involves the placement of a cooled electromagnet with a figure-eight coil on the patient's scalp, and rapidly turning on and off the magnetic flux. This permits non-invasive, relatively localized stimulation of the surface of the brain (cerebral cortex). The effect of magnetic stimulation varies, depending upon the location, intensity and frequency of the magnetic pulses.~The purpose of this study is to use rTMS to help determine the roles of different brain regions in the development of implicit learning of motor sequences and analogic reasoning. In addition, researchers hope to evaluate if stimulation of these regions speeds up the process of learning or analogic reasoning."
+    }
+  }
+}

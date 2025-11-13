@@ -1,0 +1,218 @@
+{
+  "generated": "2025-10-20T22:45:52",
+  "trial_id": "NCT00005134",
+  "contextual": {
+    "_id": "NCT00005134",
+    "title": "Strong Heart Study",
+    "text": "Summary: To determine morbidity and mortality from cardiovascular disease among American Indians and to compare cardiovascular disease risk factor levels among Indian groups living in different geographic areas.\nInclusion criteria: No eligibility criteria\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Strong Heart Study",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Cardiovascular Diseases', 'Heart Diseases', 'Atherosclerosis', 'Asthma', 'Carotid Artery Diseases', 'Coronary Disease', 'Hypercholesterolemia', 'Hypertension', 'Diabetes Mellitus', 'Obesity']",
+      "diseases_list": [
+        "Cardiovascular Diseases",
+        "Heart Diseases",
+        "Atherosclerosis",
+        "Asthma",
+        "Carotid Artery Diseases",
+        "Coronary Disease",
+        "Hypercholesterolemia",
+        "Hypertension",
+        "Diabetes Mellitus",
+        "Obesity"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "No eligibility criteria",
+      "exclusion_criteria": "",
+      "brief_summary": "To determine morbidity and mortality from cardiovascular disease among American Indians and to compare cardiovascular disease risk factor levels among Indian groups living in different geographic areas."
+    }
+  },
+  "linked_result": {
+    "Cardiovascular Diseases": {
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease",
+      "match_reason": "Exact"
+    },
+    "Heart Diseases": {
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease",
+      "match_reason": "Exact"
+    },
+    "Atherosclerosis": {
+      "conceptId": "441574008",
+      "preferred_term": "Atherosclerosis of artery",
+      "fully_specified_name": "Atherosclerosis of artery (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Atherosclerosis artery",
+      "match_reason": "Ancestor"
+    },
+    "Asthma": {
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Asthma",
+      "match_reason": "Exact"
+    },
+    "Carotid Artery Diseases": {
+      "conceptId": "371160000",
+      "preferred_term": "Disorder of carotid artery",
+      "fully_specified_name": "Disorder of carotid artery (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CAROTID ARTERIES, including the common, internal, and external carotid arteries. ATHEROSCLEROSIS and TRAUMA are relatively frequent causes of carotid artery pathology.",
+      "best_match_term": "Disease of carotid artery",
+      "match_reason": "Exact"
+    },
+    "Coronary Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary heart disease",
+      "match_reason": "Ancestor"
+    },
+    "Hypercholesterolemia": {
+      "conceptId": "13644009",
+      "preferred_term": "Hypercholesterolemia",
+      "fully_specified_name": "Hypercholesterolemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A condition with abnormally high levels of CHOLESTEROL in the blood. It is defined as a cholesterol value exceeding the 95th percentile for the population.",
+      "best_match_term": "Hypercholesterolemia",
+      "match_reason": "Exact"
+    },
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Diabetes Mellitus": {
+      "conceptId": "73211009",
+      "preferred_term": "Diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.",
+      "best_match_term": "Diabetes mellitus",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cardiovascular Diseases": 1,
+    "Heart Diseases": 1,
+    "Atherosclerosis": 1,
+    "Asthma": 1,
+    "Carotid Artery Diseases": 1,
+    "Hypercholesterolemia": 1,
+    "Hypertension": 1,
+    "Diabetes Mellitus": 1,
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cardiovascular Diseases": {
+      "disease": "Cardiovascular Diseases",
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease"
+    },
+    "Heart Diseases": {
+      "disease": "Heart Diseases",
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease"
+    },
+    "Atherosclerosis": {
+      "disease": "Atherosclerosis",
+      "conceptId": "441574008",
+      "preferred_term": "Atherosclerosis of artery",
+      "fully_specified_name": "Atherosclerosis of artery (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Atherosclerosis artery"
+    },
+    "Asthma": {
+      "disease": "Asthma",
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Asthma"
+    },
+    "Carotid Artery Diseases": {
+      "disease": "Carotid Artery Diseases",
+      "conceptId": "371160000",
+      "preferred_term": "Disorder of carotid artery",
+      "fully_specified_name": "Disorder of carotid artery (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CAROTID ARTERIES, including the common, internal, and external carotid arteries. ATHEROSCLEROSIS and TRAUMA are relatively frequent causes of carotid artery pathology.",
+      "best_match_term": "Disease of carotid artery"
+    },
+    "Hypercholesterolemia": {
+      "disease": "Hypercholesterolemia",
+      "conceptId": "13644009",
+      "preferred_term": "Hypercholesterolemia",
+      "fully_specified_name": "Hypercholesterolemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A condition with abnormally high levels of CHOLESTEROL in the blood. It is defined as a cholesterol value exceeding the 95th percentile for the population.",
+      "best_match_term": "Hypercholesterolemia"
+    },
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Diabetes Mellitus": {
+      "disease": "Diabetes Mellitus",
+      "conceptId": "73211009",
+      "preferred_term": "Diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.",
+      "best_match_term": "Diabetes mellitus"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

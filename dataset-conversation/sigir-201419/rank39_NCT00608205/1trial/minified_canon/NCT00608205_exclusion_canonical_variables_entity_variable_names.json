@@ -1,0 +1,15 @@
+[
+  "patient_has_diagnosis_of_primary_malignant_neoplasm_of_accessory_sinus_now",
+  "patient_has_diagnosis_of_primary_malignant_neoplasm_of_nasopharynx_now",
+  "patient_has_finding_of_angina_control_poor_now",
+  "patient_has_finding_of_disorder_due_to_infection_now",
+  "patient_has_finding_of_jaundice_now",
+  "patient_has_finding_of_preinfarction_syndrome_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+  "patient_has_finding_of_at_risk_for_noncompliance_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patients_breastfeeding_is_positive_now",
+  "patient_has_childbearing_potential_now",
+  "patient_has_finding_of_contraception_now"
+]

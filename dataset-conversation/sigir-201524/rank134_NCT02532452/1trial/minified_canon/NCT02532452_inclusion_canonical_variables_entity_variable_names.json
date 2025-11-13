@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_patient_immunocompromised_now",
+  "patient_has_finding_of_viral_disease_now",
+  "patient_age_value_recorded_now_in_days",
+  "patient_has_undergone_hemopoietic_stem_cell_transplant_inthehistory",
+  "patient_has_undergone_infusion_inthehistory",
+  "patient_is_undergoing_administration_of_steroid_now",
+  "patient_prednisone_value_recorded_now_withunit_mg_per_kg",
+  "patient_steroid_value_recorded_now_withunit_mg_per_kg_equivalent",
+  "patient_can_undergo_infusion_now"
+]

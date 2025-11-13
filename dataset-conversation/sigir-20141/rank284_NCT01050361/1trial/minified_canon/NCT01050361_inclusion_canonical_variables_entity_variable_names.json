@@ -1,0 +1,17 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_hypertensive_disorder_now",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_finding_of_obesity_now",
+  "patient_has_finding_of_renal_insufficiency_now",
+  "patient_has_finding_of_tobacco_user_now",
+  "patient_has_finding_of_hypercholesterolemia_now",
+  "patient_has_finding_of_sleep_apnea_now",
+  "patient_has_diagnosis_of_congestive_heart_failure_now",
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_has_finding_of_stented_coronary_artery_now",
+  "patient_has_finding_of_heart_valve_disorder_now",
+  "patient_has_finding_of_cerebrovascular_accident_inthehistory",
+  "patient_has_finding_of_transient_cerebral_ischemia_inthehistory"
+]

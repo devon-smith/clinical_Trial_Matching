@@ -1,0 +1,48 @@
+{
+  "generated": "2025-10-20T22:19:21",
+  "trial_id": "NCT02264483",
+  "contextual": {
+    "_id": "NCT02264483",
+    "title": "Low-dose CT for Diagnosis of Pneumonia in COPD Exacerbations and Comparison of the Inflammatory Profile.",
+    "text": "Summary: * Hypothesis: There is an underdiagnosis of pneumonia in COPD (Chronic Obstructive Pulmonary Disease) exacerbations which could be demonstrated by performing low-dose chest CT. Differences in the inflammatory profile in sputum and blood in patients with and without pneumonia can be seen.~* Objective: To assess the degree of underdiagnosis of pneumonia in COPD exacerbations, using chest low-dose CT and to compare clinical and inflammatory differences in blood and sputum between patients with and without pneumonia.~*Material and Methods: Prospective observational study including 75 patients with the diagnosis of COPD at the time of an exacerbation and with criteria for a respiratory tract infection. At the time of inclusion clinical features, blood and sputum analysis, chest X-ray and chest low-dose CT are performed. The investigators divide the patients into two groups according to the existence of pneumonia and the inflammatory pattern in blood (inflammatory markers) and sputum (cell populations and inflammatory markers) is compared between the two branches.\nInclusion criteria: inclusion criteria \n\n clinical and spirometric diagnosis of COPD. \n\n for study group: clinical symptoms of exacerbation and infection of low airway. \n\n Signed informed consent. \n\n \nExclusion criteria:  \n\n No acceptance of informed consent. \n\n The STUDY GROUP: treatment with antibiotic more tan 2 days before consultation. \n\n Another entity known pulmonology other than COPD (non-obstructive disorders, bronchiectasis, interstitial lung disease patients, severe pulmonary hypertension, hypoventilation). \n\n Chronic treatment with oral corticosteroids or immunosuppressive drug. \n\n severe organ comorbidity such as cancer in advanced or terminal phase, pulmonary tuberculosis with important involvement, severe pneumoconiosis. \n\n Severe alteration of nutritional status. \n\n Heart disease evolved. \n\n Limitation for understanding the study (including psychiatric disorder, language problem, social or cultural differences, etc.).",
+    "metadata": {
+      "brief_title": "Low-dose CT for Diagnosis of Pneumonia in COPD Exacerbations and Comparison of the Inflammatory Profile.",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['COPD Exacerbation']",
+      "diseases_list": [
+        "COPD Exacerbation"
+      ],
+      "enrollment": "150.0",
+      "inclusion_criteria": "inclusion criteria \n\n clinical and spirometric diagnosis of COPD. \n\n for study group: clinical symptoms of exacerbation and infection of low airway. \n\n Signed informed consent. \n\n ",
+      "exclusion_criteria": " \n\n No acceptance of informed consent. \n\n The STUDY GROUP: treatment with antibiotic more tan 2 days before consultation. \n\n Another entity known pulmonology other than COPD (non-obstructive disorders, bronchiectasis, interstitial lung disease patients, severe pulmonary hypertension, hypoventilation). \n\n Chronic treatment with oral corticosteroids or immunosuppressive drug. \n\n severe organ comorbidity such as cancer in advanced or terminal phase, pulmonary tuberculosis with important involvement, severe pneumoconiosis. \n\n Severe alteration of nutritional status. \n\n Heart disease evolved. \n\n Limitation for understanding the study (including psychiatric disorder, language problem, social or cultural differences, etc.).",
+      "brief_summary": "* Hypothesis: There is an underdiagnosis of pneumonia in COPD (Chronic Obstructive Pulmonary Disease) exacerbations which could be demonstrated by performing low-dose chest CT. Differences in the inflammatory profile in sputum and blood in patients with and without pneumonia can be seen.~* Objective: To assess the degree of underdiagnosis of pneumonia in COPD exacerbations, using chest low-dose CT and to compare clinical and inflammatory differences in blood and sputum between patients with and without pneumonia.~*Material and Methods: Prospective observational study including 75 patients with the diagnosis of COPD at the time of an exacerbation and with criteria for a respiratory tract infection. At the time of inclusion clinical features, blood and sputum analysis, chest X-ray and chest low-dose CT are performed. The investigators divide the patients into two groups according to the existence of pneumonia and the inflammatory pattern in blood (inflammatory markers) and sputum (cell populations and inflammatory markers) is compared between the two branches."
+    }
+  },
+  "linked_result": {
+    "COPD Exacerbation": {
+      "conceptId": "195951007",
+      "preferred_term": "Acute exacerbation of chronic obstructive airways disease",
+      "fully_specified_name": "Acute exacerbation of chronic obstructive airways disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Evidence of chronic obstructive pulmonary disease with acute exacerbation.",
+      "best_match_term": "Acute exacerbation of COPD",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "COPD Exacerbation": 1
+  },
+  "final_selected_concept_by_disease": {
+    "COPD Exacerbation": {
+      "disease": "COPD Exacerbation",
+      "conceptId": "195951007",
+      "preferred_term": "Acute exacerbation of chronic obstructive airways disease",
+      "fully_specified_name": "Acute exacerbation of chronic obstructive airways disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Evidence of chronic obstructive pulmonary disease with acute exacerbation.",
+      "best_match_term": "Acute exacerbation of COPD"
+    }
+  }
+}

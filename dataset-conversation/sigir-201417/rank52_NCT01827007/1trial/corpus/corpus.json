@@ -1,0 +1,21 @@
+{
+  "_id": "NCT01827007",
+  "title": "Assessment of Fluid Responsiveness by Elevation of PEEP in Patients With Septic Shock",
+  "text": "Summary: The aim of the study is to evaluate whether fluid responsiveness of the critically ill patient can be assessed by analysing the PEEP-induced hemodynamic effects to systolic blood pressure, pulse pressure, aortic blood flow, aortic time-velocity integral and left ventricular end diastolic area measured with transesophageal echocardiography (PEEP-test). The chances are compared to increase of CI after volume expansion (gold standard). In clinical practise, it would be especially relevant if PEEP-induced changes in arterial pressure variations could be used in evaluation of volume status and fluid responsiveness. However, as ECHO-derived variables are used in greater extent to guide the treatment with inappropriate evidence, the simultaneous registration of ECHO-derived hemodynamic measurements is essential in the study design.\nInclusion criteria: inclusion criteria:• Written informed consent by patient or relative \n\n Time in ICU < 48 hours \n\n Septic shock \n\n Pulmonary artery catheter and radial arterial catheter \n\n Age 18 - 75 years \n\n Sinus rhythm \n\n Need for norepinephrine over 0.1 ug/kg/min but otherwise hemodynamically stable i.e no need to change the dose over the last 15min period before the study \n\n Mechanical ventilation with sedation \n\n Pwcp <18 mmHg \n\n \nExclusion criteria: : \n\n Contraindication to elevation of PEEP ( elevated intracranial pressure, pulmonary hypertension or other contraindication ) \n\n Contraindication to fluid challenge \n\n Contraindication to TEE \n\n Previous heart failure, heart valve stenosis of insufficiency",
+  "metadata": {
+    "brief_title": "Assessment of Fluid Responsiveness by Elevation of PEEP in Patients With Septic Shock",
+    "phase": "",
+    "drugs": "['Volume expansion with gelofusine']",
+    "drugs_list": [
+      "Volume expansion with gelofusine"
+    ],
+    "diseases": "['Septic Shock']",
+    "diseases_list": [
+      "Septic Shock"
+    ],
+    "enrollment": "20.0",
+    "inclusion_criteria": "inclusion criteria:• Written informed consent by patient or relative \n\n Time in ICU < 48 hours \n\n Septic shock \n\n Pulmonary artery catheter and radial arterial catheter \n\n Age 18 - 75 years \n\n Sinus rhythm \n\n Need for norepinephrine over 0.1 ug/kg/min but otherwise hemodynamically stable i.e no need to change the dose over the last 15min period before the study \n\n Mechanical ventilation with sedation \n\n Pwcp <18 mmHg \n\n ",
+    "exclusion_criteria": ": \n\n Contraindication to elevation of PEEP ( elevated intracranial pressure, pulmonary hypertension or other contraindication ) \n\n Contraindication to fluid challenge \n\n Contraindication to TEE \n\n Previous heart failure, heart valve stenosis of insufficiency",
+    "brief_summary": "The aim of the study is to evaluate whether fluid responsiveness of the critically ill patient can be assessed by analysing the PEEP-induced hemodynamic effects to systolic blood pressure, pulse pressure, aortic blood flow, aortic time-velocity integral and left ventricular end diastolic area measured with transesophageal echocardiography (PEEP-test). The chances are compared to increase of CI after volume expansion (gold standard). In clinical practise, it would be especially relevant if PEEP-induced changes in arterial pressure variations could be used in evaluation of volume status and fluid responsiveness. However, as ECHO-derived variables are used in greater extent to guide the treatment with inappropriate evidence, the simultaneous registration of ECHO-derived hemodynamic measurements is essential in the study design."
+  }
+}

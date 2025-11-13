@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:30:25",
+  "trial_id": "NCT01494870",
+  "contextual": {
+    "_id": "NCT01494870",
+    "title": "Management of Acute Myocardial Infarction in the Presence of Left Bundle Branch Block",
+    "text": "Summary: The primary objective of this study is to propose new treatment algorithm (strategy) for patients with Acute Coronary Syndrome (ACS) and left bundle-branch block (LBBB).\nInclusion criteria: inclusion criteria: \n\n Age 18 - 75 years \n\n Ischemic discomfort (ie, ischemic chest pain or equivalent) at rest ≥20 minutes within previous 24 hours. \n\n Any (new, presumably new, or old) LBBB on the prehospital (ambulance) or admission ECG. \n\n Urgent coronary angiography (followed, when indicated, by PCI), ideally within 90 minutes after admission \n\n \nExclusion criteria: : \n\n all-comers design",
+    "metadata": {
+      "brief_title": "Management of Acute Myocardial Infarction in the Presence of Left Bundle Branch Block",
+      "phase": "",
+      "drugs": "['PCI']",
+      "drugs_list": [
+        "PCI"
+      ],
+      "diseases": "['Acute Coronary Syndrome']",
+      "diseases_list": [
+        "Acute Coronary Syndrome"
+      ],
+      "enrollment": "300.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age 18 - 75 years \n\n Ischemic discomfort (ie, ischemic chest pain or equivalent) at rest ≥20 minutes within previous 24 hours. \n\n Any (new, presumably new, or old) LBBB on the prehospital (ambulance) or admission ECG. \n\n Urgent coronary angiography (followed, when indicated, by PCI), ideally within 90 minutes after admission \n\n ",
+      "exclusion_criteria": ": \n\n all-comers design",
+      "brief_summary": "The primary objective of this study is to propose new treatment algorithm (strategy) for patients with Acute Coronary Syndrome (ACS) and left bundle-branch block (LBBB)."
+    }
+  },
+  "linked_result": {
+    "Acute Coronary Syndrome": {
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Acute Coronary Syndrome": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Acute Coronary Syndrome": {
+      "disease": "Acute Coronary Syndrome",
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome"
+    }
+  }
+}

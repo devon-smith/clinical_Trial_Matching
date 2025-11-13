@@ -1,0 +1,22 @@
+{
+  "_id": "NCT00536224",
+  "title": "Chest Pain Observation Unit Risk Reduction Trial",
+  "text": "Summary: The purpose of this study is to determine whether a brief counseling intervention initiated in the chest pain observation unit has a significant impact upon the health attitudes (readiness to change) and cardiovascular risk-related behaviors (diet, exercise, and smoking) of emergency department patients.\nInclusion criteria: inclusion criteria: \n\n At least one modifiable cardiovascular risk factor (smoking, hyperlipidemia, hypertension, diabetes mellitus, obesity) \n\n \nExclusion criteria: : \n\n Patients who rule-in for myocardial ischemia at initial testing \n\n Terminally ill (expected to survive less than 3 months) \n\n Unavailable for 6-month follow-up \n\n Cannot be contacted by telephone \n\n Institutionalized persons (prisoners, nursing home residents) \n\n Unable to provide informed consent (impaired mental status, unable to speak English)",
+  "metadata": {
+    "brief_title": "Chest Pain Observation Unit Risk Reduction Trial",
+    "phase": "",
+    "drugs": "['Full counseling', 'Minimal counseling']",
+    "drugs_list": [
+      "Full counseling",
+      "Minimal counseling"
+    ],
+    "diseases": "['Chest Pain']",
+    "diseases_list": [
+      "Chest Pain"
+    ],
+    "enrollment": "140.0",
+    "inclusion_criteria": "inclusion criteria: \n\n At least one modifiable cardiovascular risk factor (smoking, hyperlipidemia, hypertension, diabetes mellitus, obesity) \n\n ",
+    "exclusion_criteria": ": \n\n Patients who rule-in for myocardial ischemia at initial testing \n\n Terminally ill (expected to survive less than 3 months) \n\n Unavailable for 6-month follow-up \n\n Cannot be contacted by telephone \n\n Institutionalized persons (prisoners, nursing home residents) \n\n Unable to provide informed consent (impaired mental status, unable to speak English)",
+    "brief_summary": "The purpose of this study is to determine whether a brief counseling intervention initiated in the chest pain observation unit has a significant impact upon the health attitudes (readiness to change) and cardiovascular risk-related behaviors (diet, exercise, and smoking) of emergency department patients."
+  }
+}

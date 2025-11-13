@@ -1,0 +1,92 @@
+{
+  "generated": "2025-10-20T23:44:53",
+  "trial_id": "NCT01071421",
+  "contextual": {
+    "_id": "NCT01071421",
+    "title": "Sleep Apnea Syndrome and Community Acquired Pneumonia",
+    "text": "Summary: The association of sleep apnea-hypopnea syndrome (SAHS) with the infections of the lower airway has not been studied. The aspiration of secretions of the upper airway and the colonization by microorganisms is considered a main event in most of the cases of community acquired pneumonia (CAP) , and specially in the nosocomial pneumonia. The silent aspiration to the lower airway is a common phenomenon in normal subjects during the sleep and some studies has reported that the patients with SAHS present an increase of the risk to pharyngeal aspirations. In fact, the presence of nasal and bronchial inflammation in patients with SAHS is a recognized event. The patients with SAHS could have a risk increased to develop pneumonia due to predisposition to the pharyngeal microaspiration to lower airways during the sleep and other mechanical factors associated. The prevalence of SAHS in patients with CAP could be increased as regards the data published for the same Spanish population. The presence of an apnea-hypopnea index (AHI) could be a risk factor not only to to CAP but to to present a unfavorable clinical evolution in comparison to patients with CAP with a normal AHI. The aim of this study will establish a relation between SAHS and the pneumonia risk.\nInclusion criteria: Group A: \n\n inclusion criteria: \n\n Hospital admission and Community acquired pneumonia \n\n \nExclusion criteria: : \n\n Nosocomial infections \n\n Low level of conscientiousness \n\n Neurological disease \n\n Impossibility to complete the questionnaires \n\n Group B \n\n inclusion criteria: \n\n Hospital admission and other infections different to respiratory infections",
+    "metadata": {
+      "brief_title": "Sleep Apnea Syndrome and Community Acquired Pneumonia",
+      "phase": "",
+      "drugs": "['abbreviated polysomnography']",
+      "drugs_list": [
+        "abbreviated polysomnography"
+      ],
+      "diseases": "['Sleep Apnea Syndrome', 'Polygraphy', 'Community Acquired Pneumonia', 'Infections']",
+      "diseases_list": [
+        "Sleep Apnea Syndrome",
+        "Polygraphy",
+        "Community Acquired Pneumonia",
+        "Infections"
+      ],
+      "enrollment": "123.0",
+      "inclusion_criteria": "Group A: \n\n inclusion criteria: \n\n Hospital admission and Community acquired pneumonia \n\n ",
+      "exclusion_criteria": ": \n\n Nosocomial infections \n\n Low level of conscientiousness \n\n Neurological disease \n\n Impossibility to complete the questionnaires \n\n Group B \n\n inclusion criteria: \n\n Hospital admission and other infections different to respiratory infections",
+      "brief_summary": "The association of sleep apnea-hypopnea syndrome (SAHS) with the infections of the lower airway has not been studied. The aspiration of secretions of the upper airway and the colonization by microorganisms is considered a main event in most of the cases of community acquired pneumonia (CAP) , and specially in the nosocomial pneumonia. The silent aspiration to the lower airway is a common phenomenon in normal subjects during the sleep and some studies has reported that the patients with SAHS present an increase of the risk to pharyngeal aspirations. In fact, the presence of nasal and bronchial inflammation in patients with SAHS is a recognized event. The patients with SAHS could have a risk increased to develop pneumonia due to predisposition to the pharyngeal microaspiration to lower airways during the sleep and other mechanical factors associated. The prevalence of SAHS in patients with CAP could be increased as regards the data published for the same Spanish population. The presence of an apnea-hypopnea index (AHI) could be a risk factor not only to to CAP but to to present a unfavorable clinical evolution in comparison to patients with CAP with a normal AHI. The aim of this study will establish a relation between SAHS and the pneumonia risk."
+    }
+  },
+  "linked_result": {
+    "Sleep Apnea Syndrome": {
+      "conceptId": "73430006",
+      "preferred_term": "Sleep apnea",
+      "fully_specified_name": "Sleep apnea (disorder)",
+      "type": "Clinical finding",
+      "definition": "Disorders characterized by multiple cessations of respirations during sleep that induce partial arousals and interfere with the maintenance of sleep. Sleep apnea syndromes are divided into central (see SLEEP APNEA, CENTRAL), obstructive (see SLEEP APNEA, OBSTRUCTIVE), and mixed central-obstructive types.",
+      "best_match_term": "Sleep apnea syndrome",
+      "match_reason": "Exact"
+    },
+    "Polygraphy": null,
+    "Community Acquired Pneumonia": {
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia",
+      "match_reason": "Exact"
+    },
+    "Infections": {
+      "conceptId": "40733004",
+      "preferred_term": "Disorder due to infection",
+      "fully_specified_name": "Infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "An illness caused by an infectious agent or its toxins that occurs through the direct or indirect transmission of the infectious agent or its products from an infected individual or via an animal, vector or the inanimate environment to a susceptible animal or human host.",
+      "best_match_term": "Infection",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Sleep Apnea Syndrome": 1,
+    "Community Acquired Pneumonia": 1,
+    "Infections": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Sleep Apnea Syndrome": {
+      "disease": "Sleep Apnea Syndrome",
+      "conceptId": "73430006",
+      "preferred_term": "Sleep apnea",
+      "fully_specified_name": "Sleep apnea (disorder)",
+      "type": "Clinical finding",
+      "definition": "Disorders characterized by multiple cessations of respirations during sleep that induce partial arousals and interfere with the maintenance of sleep. Sleep apnea syndromes are divided into central (see SLEEP APNEA, CENTRAL), obstructive (see SLEEP APNEA, OBSTRUCTIVE), and mixed central-obstructive types.",
+      "best_match_term": "Sleep apnea syndrome"
+    },
+    "Community Acquired Pneumonia": {
+      "disease": "Community Acquired Pneumonia",
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia"
+    },
+    "Infections": {
+      "disease": "Infections",
+      "conceptId": "40733004",
+      "preferred_term": "Disorder due to infection",
+      "fully_specified_name": "Infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "An illness caused by an infectious agent or its toxins that occurs through the direct or indirect transmission of the infectious agent or its products from an infected individual or via an animal, vector or the inanimate environment to a susceptible animal or human host.",
+      "best_match_term": "Infection"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_id": "NCT01004289",
+  "title": "POSTconditioning During Coronary Angioplasty in Acute Myocardial Infarction Study",
+  "text": "Summary: The POST-conditioning during coronary angioplasty in Acute Myocardial Infarction (POST-AMI) trial will evaluate the usefulness of postconditioning in limiting infarct size and microvascular damage during the early and late phases after AMI.\nInclusion criteria: inclusion criteria: \n\n clinical evidence of myocardial infarction defined by the presence of ischemic chest pain lasting more than 30 minutes, with a time interval from the onset of symptoms less than 6 hours before hospital admission, associated with typical ST-segment elevation on the 12-lead ECG \n\n angiographic-detected culprit lesion with stenosis diameter >70% and TIMI flow grade <=1 \n\n \nExclusion criteria: : \n\n previous acute myocardial infarction \n\n previous myocardial revascularization (angioplasty or coronary bypass) \n\n previous heart valve replacement \n\n previous heart transplant \n\n clinical instability precluding the suitability of the study \n\n cardiogenic shock or persistent hypotension (systolic blood pressure <100 mmHg) \n\n rescue angioplasty after thrombolytic therapy \n\n evidence of coronary collaterals (Rentrop grade>0) in the risk area \n\n advanced atrioventricular block \n\n significant bradycardia \n\n absence of sinus rhythm \n\n inability to lay flat (due to severe cardiac heart failure/respiratory insufficiency) \n\n history or clinical evidence of bronchospastic lung disease \n\n pregnancy \n\n known existence of a life-threatening disease with a life expectancy <6 months \n\n inability to give informed consent \n\n any contraindication to undergo cardiac-MRI, such as implanted metallic objects (cardiac pacemakers and/or implantable cardioverter defibrillator, implanted insulin pumps or any other type of electronic devices, cerebral clips, aneurysm clips) or any other contraindication to cardiac-MRI (such as claustrophobia)",
+  "metadata": {
+    "brief_title": "POSTconditioning During Coronary Angioplasty in Acute Myocardial Infarction Study",
+    "phase": "Phase 2",
+    "drugs": "['Postconditioning', 'Primary angioplasty and stenting without additional intervention']",
+    "drugs_list": [
+      "Postconditioning",
+      "Primary angioplasty and stenting without additional intervention"
+    ],
+    "diseases": "['Myocardial Reperfusion Injury']",
+    "diseases_list": [
+      "Myocardial Reperfusion Injury"
+    ],
+    "enrollment": "78.0",
+    "inclusion_criteria": "inclusion criteria: \n\n clinical evidence of myocardial infarction defined by the presence of ischemic chest pain lasting more than 30 minutes, with a time interval from the onset of symptoms less than 6 hours before hospital admission, associated with typical ST-segment elevation on the 12-lead ECG \n\n angiographic-detected culprit lesion with stenosis diameter >70% and TIMI flow grade <=1 \n\n ",
+    "exclusion_criteria": ": \n\n previous acute myocardial infarction \n\n previous myocardial revascularization (angioplasty or coronary bypass) \n\n previous heart valve replacement \n\n previous heart transplant \n\n clinical instability precluding the suitability of the study \n\n cardiogenic shock or persistent hypotension (systolic blood pressure <100 mmHg) \n\n rescue angioplasty after thrombolytic therapy \n\n evidence of coronary collaterals (Rentrop grade>0) in the risk area \n\n advanced atrioventricular block \n\n significant bradycardia \n\n absence of sinus rhythm \n\n inability to lay flat (due to severe cardiac heart failure/respiratory insufficiency) \n\n history or clinical evidence of bronchospastic lung disease \n\n pregnancy \n\n known existence of a life-threatening disease with a life expectancy <6 months \n\n inability to give informed consent \n\n any contraindication to undergo cardiac-MRI, such as implanted metallic objects (cardiac pacemakers and/or implantable cardioverter defibrillator, implanted insulin pumps or any other type of electronic devices, cerebral clips, aneurysm clips) or any other contraindication to cardiac-MRI (such as claustrophobia)",
+    "brief_summary": "The POST-conditioning during coronary angioplasty in Acute Myocardial Infarction (POST-AMI) trial will evaluate the usefulness of postconditioning in limiting infarct size and microvascular damage during the early and late phases after AMI."
+  }
+}

@@ -1,0 +1,18 @@
+[
+  "patient_has_finding_of_cardiac_arrhythmia_inthehistory",
+  "patient_has_finding_of_cardiac_arrhythmia_now",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_has_finding_of_bradycardia_now",
+  "patient_has_finding_of_heart_block_now",
+  "patient_has_finding_of_prolonged_qt_interval_now",
+  "patient_qt_interval_feature_value_recorded_now_withunit_milliseconds",
+  "patient_has_finding_of_sinus_node_dysfunction_now",
+  "patient_has_finding_of_disorder_of_electrolytes_now",
+  "patient_has_finding_of_gastrointestinal_hemorrhage_now",
+  "patient_has_finding_of_gastrointestinal_obstruction_now",
+  "patient_has_finding_of_prolactinoma_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_has_finding_of_allergy_to_domperidone_now"
+]

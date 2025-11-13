@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT01167205",
+  "contextual": {
+    "_id": "NCT01167205",
+    "title": "Positive Effects of Haematococcus Astaxanthin on Oxidative Stress and Lipid Profile in Overweight and Obese Adults",
+    "text": "Summary: The purpose of this study is to determine whether astaxanthin (ASX) supplementation will reduce obesity-induced oxidative stress and improve lipid profile in overweight and obese adults.\nInclusion criteria: inclusion criteria: \n\n Subjects with BMI over 25.0 kg/m2 \n\n Non-smoker \n\n \nExclusion criteria: : \n\n Excessive alcohol consumption \n\n Pregnant or lactating women \n\n Dyslipidemia, hyperglycemia, or other chronic diseases. \n\n Subjects who were taking vitamin supplements",
+    "metadata": {
+      "brief_title": "Positive Effects of Haematococcus Astaxanthin on Oxidative Stress and Lipid Profile in Overweight and Obese Adults",
+      "phase": "",
+      "drugs": "['astaxanthin']",
+      "drugs_list": [
+        "astaxanthin"
+      ],
+      "diseases": "['Healthy', 'Overweight', 'Obesity']",
+      "diseases_list": [
+        "Healthy",
+        "Overweight",
+        "Obesity"
+      ],
+      "enrollment": "30.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Subjects with BMI over 25.0 kg/m2 \n\n Non-smoker \n\n ",
+      "exclusion_criteria": ": \n\n Excessive alcohol consumption \n\n Pregnant or lactating women \n\n Dyslipidemia, hyperglycemia, or other chronic diseases. \n\n Subjects who were taking vitamin supplements",
+      "brief_summary": "The purpose of this study is to determine whether astaxanthin (ASX) supplementation will reduce obesity-induced oxidative stress and improve lipid profile in overweight and obese adults."
+    }
+  }
+}

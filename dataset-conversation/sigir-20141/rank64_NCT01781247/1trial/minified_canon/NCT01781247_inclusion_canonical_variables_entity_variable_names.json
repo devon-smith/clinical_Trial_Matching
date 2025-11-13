@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_acute_non_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_finding_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_finding_of_hemodynamically_stable_now",
+  "patient_fear_of_death_value_recorded_inthehistory_withunit_numeric_rating_scale",
+  "patient_feeling_powerless_value_recorded_inthehistory_withunit_numeric_rating_scale",
+  "patient_pain_value_recorded_inthehistory_withunit_numeric_rating_scale",
+  "patient_fear_of_death_value_recorded_now_withunit_numeric_rating_scale",
+  "patient_feeling_powerless_value_recorded_now_withunit_numeric_rating_scale",
+  "patient_pain_value_recorded_now_withunit_numeric_rating_scale"
+]

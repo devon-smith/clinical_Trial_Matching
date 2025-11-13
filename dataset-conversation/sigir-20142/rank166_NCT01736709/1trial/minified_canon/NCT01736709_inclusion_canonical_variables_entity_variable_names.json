@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_well_adult_now",
+  "patient_has_finding_of_well_elder_now",
+  "patient_is_exposed_to_immunosuppressant_inthehistory",
+  "patient_is_exposed_to_immunosuppressant_inthepast1months"
+]

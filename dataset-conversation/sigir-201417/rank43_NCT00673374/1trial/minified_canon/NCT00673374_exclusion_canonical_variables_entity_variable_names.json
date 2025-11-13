@@ -1,0 +1,8 @@
+[
+  "patient_is_undergoing_computerized_axial_tomography_now",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_abdominal_tenderness_now",
+  "patient_has_finding_of_altered_mental_status_now",
+  "patient_has_finding_of_paraplegia_now",
+  "patient_age_value_recorded_now_in_years"
+]

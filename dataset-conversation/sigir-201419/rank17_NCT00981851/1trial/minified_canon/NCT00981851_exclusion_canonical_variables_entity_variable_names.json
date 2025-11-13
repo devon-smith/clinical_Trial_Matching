@@ -1,0 +1,17 @@
+[
+  "patient_has_finding_of_chronic_obstructive_lung_disease_now",
+  "patient_has_diagnosis_of_asthma_inthehistory",
+  "patient_has_diagnosis_of_asthma_now",
+  "patient_has_symptoms_of_asthma_now",
+  "patient_has_finding_of_eosinophil_count_raised_now",
+  "patient_has_finding_of_asthma_now",
+  "patient_has_finding_of_unable_to_communicate_now",
+  "patient_has_finding_of_exercise_physically_impossible_now",
+  "patient_has_finding_of_disorder_of_respiratory_system_now",
+  "patient_has_undergone_lung_volume_reduction_surgery_inthehistory",
+  "patient_has_undergone_transplant_of_lung_inthehistory",
+  "patient_has_finding_of_alcohol_abuse_now",
+  "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_now",
+  "patient_has_finding_of_solvent_misuse_now",
+  "patient_has_diagnosis_of_alpha_1_antitrypsin_deficiency_now"
+]

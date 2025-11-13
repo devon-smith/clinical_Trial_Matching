@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT00907543",
+  "contextual": {
+    "_id": "NCT00907543",
+    "title": "Quality of Life in Neoadjuvant Versus Adjuvant Therapy of Esophageal Cancer Treatment Trial",
+    "text": "Summary: The purpose of this study is to compare the results of preoperative chemotherapy and radiation followed by surgery to surgery followed by postoperative chemotherapy and radiation for esophageal cancer.\nInclusion criteria: inclusion criteria: \n\n Histologically documented squamous cell carcinoma or adenocarcinoma of the thoracic esophagus (> 20 cm from the incisors) or gastroesophageal junction are included. \n\n No distant metastases (M0). \n\n Patients will be stratified by stage (clinical N0 versus clinical N1), and surgeon. \n\n Patients with tumours within 3 cm distal spread into gastric cardia as detected by esophagogastroscopy. \n\n Resectable mediastinal nodes are eligible. \n\n No prior chemotherapy for this malignancy. \n\n No prior radiotherapy that would overlap the field(s) treated in this study. \n\n Patients with other malignancies are eligible only if > 5 years without evidence of disease or completely resected or treated non-melanoma skin cancer. \n\n Age > 18 years and able to tolerate tri-modality therapy at the discretion of the treating thoracic surgeon, medical and radiation oncologists. Tumours must be resectable after assessment by the thoracic surgeon. \n\n \nExclusion criteria: : \n\n Cancers of the cervical esophagus (< 20 cm are excluded). \n\n Tumours that have > 3 cm of spread into cardia of the stomach are considered gastric cancers and are ineligible. \n\n Patients with biopsy (by endoscopic ultrasound, laparoscopy, or laparotomy ) proven metastatic supraclavicular nodes are ineligible. \n\n Patients with biopsy proven metastatic celiac nodes are ineligible.",
+    "metadata": {
+      "brief_title": "Quality of Life in Neoadjuvant Versus Adjuvant Therapy of Esophageal Cancer Treatment Trial",
+      "phase": "",
+      "drugs": "['Preoperative treatment of chemotherapy and radiation', 'Postoperative treatment of chemotherapy and radiation']",
+      "drugs_list": [
+        "Preoperative treatment of chemotherapy and radiation",
+        "Postoperative treatment of chemotherapy and radiation"
+      ],
+      "diseases": "['Esophageal Neoplasms']",
+      "diseases_list": [
+        "Esophageal Neoplasms"
+      ],
+      "enrollment": "96.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Histologically documented squamous cell carcinoma or adenocarcinoma of the thoracic esophagus (> 20 cm from the incisors) or gastroesophageal junction are included. \n\n No distant metastases (M0). \n\n Patients will be stratified by stage (clinical N0 versus clinical N1), and surgeon. \n\n Patients with tumours within 3 cm distal spread into gastric cardia as detected by esophagogastroscopy. \n\n Resectable mediastinal nodes are eligible. \n\n No prior chemotherapy for this malignancy. \n\n No prior radiotherapy that would overlap the field(s) treated in this study. \n\n Patients with other malignancies are eligible only if > 5 years without evidence of disease or completely resected or treated non-melanoma skin cancer. \n\n Age > 18 years and able to tolerate tri-modality therapy at the discretion of the treating thoracic surgeon, medical and radiation oncologists. Tumours must be resectable after assessment by the thoracic surgeon. \n\n ",
+      "exclusion_criteria": ": \n\n Cancers of the cervical esophagus (< 20 cm are excluded). \n\n Tumours that have > 3 cm of spread into cardia of the stomach are considered gastric cancers and are ineligible. \n\n Patients with biopsy (by endoscopic ultrasound, laparoscopy, or laparotomy ) proven metastatic supraclavicular nodes are ineligible. \n\n Patients with biopsy proven metastatic celiac nodes are ineligible.",
+      "brief_summary": "The purpose of this study is to compare the results of preoperative chemotherapy and radiation followed by surgery to surgery followed by postoperative chemotherapy and radiation for esophageal cancer."
+    }
+  }
+}

@@ -1,0 +1,13 @@
+[
+  "patient_has_diagnosis_of_acute_st_segment_elevation_myocardial_infarction_inthepast1months",
+  "patient_has_diagnosis_of_prinzmetal_angina_now",
+  "patient_has_finding_of_abnormal_liver_function_now",
+  "patient_has_finding_of_renal_failure_syndrome_now",
+  "patient_has_finding_of_hypersensitivity_condition_inthehistory",
+  "patient_has_finding_of_disorder_of_cellular_component_of_blood_now",
+  "patient_has_finding_of_heart_failure_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_diabetic_poor_control_now",
+  "patient_has_finding_of_limited_life_expectancy_of_approximately_one_year_now"
+]

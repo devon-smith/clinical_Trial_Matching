@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01231672",
+  "contextual": {
+    "_id": "NCT01231672",
+    "title": "Prospective Validation of Clini-biological Parameters Including Initial Hemostasis, Which Improve the Prediction of Death at 1 Month Among Patients With Septic Shock",
+    "text": "Summary: A prognostic score was proposed by the investigative team to predict death at 1 month. This score is based on certain biological markers, scored under emergency conditions in the first 24 hours of routine clinical practice management for septic shock.~The main objective of this multicenter study is to validate the performance of the score in terms of area under the ROC curve and negative predictive value.\nInclusion criteria: inclusion criteria: \n\n patient (or representative) received the information notice \n\n patient has hemodynamic insufficiency of non-traumatic or cardiogenic origin associated with severe sepsis (treated with Noradrenalin) and organ dysfunction, hypoperfusion or hypotension \n\n body temperature > 38.3°C or < 36°C \n\n heart rate > 90 bpm \n\n Tachypnea > 20 C/min or PaCO2 < 32 mmHg or mechanical ventilation \n\n leukocytes > 12000 µL-1 ou < 4000 µL-1 ou > 10% immature forms \n\n oliguria < 0.5 ml/kg/h for at least 2 hours \n\n abrupt alteration (24 h) of conscienceness \n\n thrombocytopenia < 100 000 G/L or disseminated intravascular coagulation \n\n mottled skin and / or capillary refill time> 3 sec \n\n PaO2/FiO2 < 300 mmHg ou < 40KPas \n\n Lactatemia > 2mMol/l \n\n septic shock: Systolic Blood Pressure (SBP) > 90 mmHg or need for vasopressors to maintain SBP> 90 mmHg despite a prior filling (20-30 ml / kg of macromolecules or 40 to 60 ml / kg of normal saline (or decrease in SBP> 40% in the hypertensive) \n\n \nExclusion criteria: : \n\n patient is dying or limitation or cessation of active treatment \n\n patient is already included in another trial \n\n patient or family refusal \n\n patient not affiliated with a social security system",
+    "metadata": {
+      "brief_title": "Prospective Validation of Clini-biological Parameters Including Initial Hemostasis, Which Improve the Prediction of Death at 1 Month Among Patients With Septic Shock",
+      "phase": "",
+      "drugs": "['Routine biological analyses']",
+      "drugs_list": [
+        "Routine biological analyses"
+      ],
+      "diseases": "['Shock, Septic']",
+      "diseases_list": [
+        "Shock",
+        "Septic"
+      ],
+      "enrollment": "780.0",
+      "inclusion_criteria": "inclusion criteria: \n\n patient (or representative) received the information notice \n\n patient has hemodynamic insufficiency of non-traumatic or cardiogenic origin associated with severe sepsis (treated with Noradrenalin) and organ dysfunction, hypoperfusion or hypotension \n\n body temperature > 38.3°C or < 36°C \n\n heart rate > 90 bpm \n\n Tachypnea > 20 C/min or PaCO2 < 32 mmHg or mechanical ventilation \n\n leukocytes > 12000 µL-1 ou < 4000 µL-1 ou > 10% immature forms \n\n oliguria < 0.5 ml/kg/h for at least 2 hours \n\n abrupt alteration (24 h) of conscienceness \n\n thrombocytopenia < 100 000 G/L or disseminated intravascular coagulation \n\n mottled skin and / or capillary refill time> 3 sec \n\n PaO2/FiO2 < 300 mmHg ou < 40KPas \n\n Lactatemia > 2mMol/l \n\n septic shock: Systolic Blood Pressure (SBP) > 90 mmHg or need for vasopressors to maintain SBP> 90 mmHg despite a prior filling (20-30 ml / kg of macromolecules or 40 to 60 ml / kg of normal saline (or decrease in SBP> 40% in the hypertensive) \n\n ",
+      "exclusion_criteria": ": \n\n patient is dying or limitation or cessation of active treatment \n\n patient is already included in another trial \n\n patient or family refusal \n\n patient not affiliated with a social security system",
+      "brief_summary": "A prognostic score was proposed by the investigative team to predict death at 1 month. This score is based on certain biological markers, scored under emergency conditions in the first 24 hours of routine clinical practice management for septic shock.~The main objective of this multicenter study is to validate the performance of the score in terms of area under the ROC curve and negative predictive value."
+    }
+  }
+}

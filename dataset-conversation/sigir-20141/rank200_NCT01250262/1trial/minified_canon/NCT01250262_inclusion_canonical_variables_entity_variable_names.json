@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_chronic_low_back_pain_inthehistory",
+  "patient_pain_value_recorded_inthehistory_withunit_episodes_per_week",
+  "patient_sex_is_male_now",
+  "patient_waist_circumference_value_recorded_now_withunit_cm",
+  "patient_sex_is_female_now",
+  "patient_can_undergo_regular_exercise_inthefuture14weeks",
+  "patient_has_finding_of_low_back_pain_now",
+  "patient_has_finding_of_pain_now",
+  "patient_has_finding_of_abnormal_cardiovascular_function_now",
+  "patient_has_undergone_walking_exercise_test_now"
+]

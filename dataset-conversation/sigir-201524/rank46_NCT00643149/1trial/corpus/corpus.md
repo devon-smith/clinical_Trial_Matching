@@ -1,0 +1,22 @@
+# A Multicenter, Randomized, Double-Blind, Double-Dummy Study Of Azithromycin SR Versus Amoxicillin For The Treatment Of Strep Throat In Children
+**NCT**: `NCT00643149`
+## Brief Summary
+The objective was to determine if a single 60 mg/kg dose of azithromycin SR was as safe and effective as a 10-day regimen of amoxicillin (45 mg/kg/day, given in divided doses every 12 hours) when used to treat children with strep throat.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Patients who had evidence of acute pharyngitis/tonsillitis based on erythematous pharyngeal mucosa or thick exudate covering the pharynx and tonsillar area, and at least one of the following signs or symptoms were included: sore/scratchy throat; pain on swallowing; chills and/or fever cervical adenopathy; scarlet fever rash on the face and skin folds, or red tongue with prominent papillae (strawberry tongue). Subjects were required to have a positive rapid antigen detection test (RADT) or a positive culture of the pharynx or tonsils for GABHS.
+## Exclusion Criteria
+: 
+
+ Patients were excluded if they had previously diagnosed disease(s) of immune function or treatment with any systemic antibiotic within the previous 7 days.
+## Full Text
+Summary: The objective was to determine if a single 60 mg/kg dose of azithromycin SR was as safe and effective as a 10-day regimen of amoxicillin (45 mg/kg/day, given in divided doses every 12 hours) when used to treat children with strep throat.
+Inclusion criteria: inclusion criteria: 
+
+ Patients who had evidence of acute pharyngitis/tonsillitis based on erythematous pharyngeal mucosa or thick exudate covering the pharynx and tonsillar area, and at least one of the following signs or symptoms were included: sore/scratchy throat; pain on swallowing; chills and/or fever cervical adenopathy; scarlet fever rash on the face and skin folds, or red tongue with prominent papillae (strawberry tongue). Subjects were required to have a positive rapid antigen detection test (RADT) or a positive culture of the pharynx or tonsils for GABHS. 
+
+ 
+Exclusion criteria: : 
+
+ Patients were excluded if they had previously diagnosed disease(s) of immune function or treatment with any systemic antibiotic within the previous 7 days.

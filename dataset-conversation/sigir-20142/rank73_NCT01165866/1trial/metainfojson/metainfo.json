@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01165866",
+  "contextual": {
+    "_id": "NCT01165866",
+    "title": "Ondansetron Versus Metoclopramide in Treatment of Vomiting in Gastroenteritis",
+    "text": "Summary: Is intravenous metoclopramid as effective as intravenous ondansetron in the treatment of persistent vomiting in patients with acute gastroenteritis.\nInclusion criteria: inclusion criteria: \n\n All acute gastroenteritis patient between 1-14 years presenting to PEC Al Saad with diarrhea, persistent vomiting , fail oral rehydration and admitted to the observation unit for intravenous hydration will be eligible for the study. \n\n \nExclusion criteria: : \n\n Previous abdominal surgery \n\n Suspicion of surgical abdominal \n\n Bile stained vomitus \n\n History of hepatic and renal illnesses \n\n In-born error of metabolism \n\n Children with shock or impending shock \n\n Sever dehydration. \n\n Previous hypersensitivity or abnormal reaction to metoclopramide or ondansetron \n\n Antiemetic treatment within 48 hours prior to presentation. \n\n Seizure disorder",
+    "metadata": {
+      "brief_title": "Ondansetron Versus Metoclopramide in Treatment of Vomiting in Gastroenteritis",
+      "phase": "Phase 4",
+      "drugs": "['Treatment 1. Metoclopramide', 'Treatment 2 Ondansetron']",
+      "drugs_list": [
+        "Treatment 1. Metoclopramide",
+        "Treatment 2 Ondansetron"
+      ],
+      "diseases": "['Gastroenteritis']",
+      "diseases_list": [
+        "Gastroenteritis"
+      ],
+      "enrollment": "170.0",
+      "inclusion_criteria": "inclusion criteria: \n\n All acute gastroenteritis patient between 1-14 years presenting to PEC Al Saad with diarrhea, persistent vomiting , fail oral rehydration and admitted to the observation unit for intravenous hydration will be eligible for the study. \n\n ",
+      "exclusion_criteria": ": \n\n Previous abdominal surgery \n\n Suspicion of surgical abdominal \n\n Bile stained vomitus \n\n History of hepatic and renal illnesses \n\n In-born error of metabolism \n\n Children with shock or impending shock \n\n Sever dehydration. \n\n Previous hypersensitivity or abnormal reaction to metoclopramide or ondansetron \n\n Antiemetic treatment within 48 hours prior to presentation. \n\n Seizure disorder",
+      "brief_summary": "Is intravenous metoclopramid as effective as intravenous ondansetron in the treatment of persistent vomiting in patients with acute gastroenteritis."
+    }
+  }
+}

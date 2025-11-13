@@ -1,0 +1,46 @@
+# The Renin-Angiotensin System in Essential Hypertension
+**NCT**: `NCT00141583`
+## Brief Summary
+Although ACE Inhibitors and Angiotensin Receptor Blockers are effective blood pressure lowering agents, the exact mechanisms by which these agents lower BP are still not fully understood. This study aims to compare the blood pressure and hormonal responses (plasma renin activity and aldosterone) to the ACE inhibitor enalapril and ARB candesartan in individuals with mild essential hypertension.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Essential Hypertension 
+
+ SBP 140-159 mmHg 
+
+ DBP 90-99 mmHg
+## Exclusion Criteria
+: 
+
+ Intolerance of or allergy to ACE Inhibitors or ARBS 
+
+ Pregnant or Breastfeeding 
+
+ Pre-menopausal women 
+
+ Uncontrolled cardiac or renal failure 
+
+ Diabetes mellitus
+## Full Text
+Summary: Although ACE Inhibitors and Angiotensin Receptor Blockers are effective blood pressure lowering agents, the exact mechanisms by which these agents lower BP are still not fully understood. This study aims to compare the blood pressure and hormonal responses (plasma renin activity and aldosterone) to the ACE inhibitor enalapril and ARB candesartan in individuals with mild essential hypertension.
+Inclusion criteria: inclusion criteria: 
+
+ Essential Hypertension 
+
+ SBP 140-159 mmHg 
+
+ DBP 90-99 mmHg 
+
+ 
+Exclusion criteria: : 
+
+ Intolerance of or allergy to ACE Inhibitors or ARBS 
+
+ Pregnant or Breastfeeding 
+
+ Pre-menopausal women 
+
+ Uncontrolled cardiac or renal failure 
+
+ Diabetes mellitus

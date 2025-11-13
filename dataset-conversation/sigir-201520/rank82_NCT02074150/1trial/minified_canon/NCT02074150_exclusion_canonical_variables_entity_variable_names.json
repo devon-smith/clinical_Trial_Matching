@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_cerebrovascular_accident_inthehistory",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_is_pregnant_inthefuture",
+  "patient_is_exposed_to_clostridium_botulinum_toxin_inthehistory",
+  "patient_is_exposed_to_clostridium_botulinum_toxin_now",
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_has_finding_of_decreased_range_of_finger_movement_now",
+  "patient_has_finding_of_decreased_range_of_wrist_movement_now"
+]

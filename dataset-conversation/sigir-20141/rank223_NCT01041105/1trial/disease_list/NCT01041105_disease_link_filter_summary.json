@@ -1,0 +1,68 @@
+{
+  "generated": "2025-10-22T21:14:36",
+  "trial_id": "NCT01041105",
+  "contextual": {
+    "_id": "NCT01041105",
+    "title": "Gastric Bypass After Previous Anti-reflux Surgery",
+    "text": "Summary: The goal of this study is to describe the clinical presentation, indications, and operative treatment as well as assess the morbidity, mortality, and overall performance of revisional Roux-en-Y gastric bypass (RYGB) after either failed or functional antireflux surgery ARS in obese patients. With such information, we hope to determine which features might assist us in advancing our knowledge about Gastro-Esophageal Reflux Disease GERD, the best option for primary ARS, and mechanisms of failure in the obese population as well as in identifying predictors of outcome after revisional surgery in this population.\nInclusion criteria: inclusion criteria: \n\n Status post, either open or laparoscopic, primary Nissen fundoplication with all the following requirements: \n\n Met NIH criteria for bariatric surgery \n\n With functional or failed antireflux surgery (Nissen fundoplication) \n\n Laparoscopic approach for revisional surgery \n\n \nExclusion criteria: : \n\n Any other type of revisional bariatric procedure \n\n Nonstandard revisional RYGB surgery \n\n Open approach for revision surgery \n\n Missing records and/or unreachable patients with scant information for analysis",
+    "metadata": {
+      "brief_title": "Gastric Bypass After Previous Anti-reflux Surgery",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Clinically Severe Obesity', 'Gastroesophageal Reflux Disease']",
+      "diseases_list": [
+        "Clinically Severe Obesity",
+        "Gastroesophageal Reflux Disease"
+      ],
+      "enrollment": "22.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Status post, either open or laparoscopic, primary Nissen fundoplication with all the following requirements: \n\n Met NIH criteria for bariatric surgery \n\n With functional or failed antireflux surgery (Nissen fundoplication) \n\n Laparoscopic approach for revisional surgery \n\n ",
+      "exclusion_criteria": ": \n\n Any other type of revisional bariatric procedure \n\n Nonstandard revisional RYGB surgery \n\n Open approach for revision surgery \n\n Missing records and/or unreachable patients with scant information for analysis",
+      "brief_summary": "The goal of this study is to describe the clinical presentation, indications, and operative treatment as well as assess the morbidity, mortality, and overall performance of revisional Roux-en-Y gastric bypass (RYGB) after either failed or functional antireflux surgery ARS in obese patients. With such information, we hope to determine which features might assist us in advancing our knowledge about Gastro-Esophageal Reflux Disease GERD, the best option for primary ARS, and mechanisms of failure in the obese population as well as in identifying predictors of outcome after revisional surgery in this population."
+    }
+  },
+  "linked_result": {
+    "Clinically Severe Obesity": {
+      "conceptId": "83911000119104",
+      "preferred_term": "Severe obesity",
+      "fully_specified_name": "Severe obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The condition of weighing two, three, or more times the ideal weight, so called because it is associated with many serious and life-threatening disorders. In the BODY MASS INDEX, morbid obesity is defined as having a BMI greater than 40.0 kg/m2.",
+      "best_match_term": "Severe obesity",
+      "match_reason": "Exact"
+    },
+    "Gastroesophageal Reflux Disease": {
+      "conceptId": "235595009",
+      "preferred_term": "Gastroesophageal reflux disease",
+      "fully_specified_name": "Gastroesophageal reflux disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.",
+      "best_match_term": "Gastroesophageal reflux disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Clinically Severe Obesity": 1,
+    "Gastroesophageal Reflux Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Clinically Severe Obesity": {
+      "disease": "Clinically Severe Obesity",
+      "conceptId": "83911000119104",
+      "preferred_term": "Severe obesity",
+      "fully_specified_name": "Severe obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The condition of weighing two, three, or more times the ideal weight, so called because it is associated with many serious and life-threatening disorders. In the BODY MASS INDEX, morbid obesity is defined as having a BMI greater than 40.0 kg/m2.",
+      "best_match_term": "Severe obesity"
+    },
+    "Gastroesophageal Reflux Disease": {
+      "disease": "Gastroesophageal Reflux Disease",
+      "conceptId": "235595009",
+      "preferred_term": "Gastroesophageal reflux disease",
+      "fully_specified_name": "Gastroesophageal reflux disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.",
+      "best_match_term": "Gastroesophageal reflux disease"
+    }
+  }
+}

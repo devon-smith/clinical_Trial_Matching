@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT00954200",
+  "contextual": {
+    "_id": "NCT00954200",
+    "title": "Ibuprofen as a Possible Preventer of Post Bronchoscopy Fever",
+    "text": "Summary: Scientific background: Bronchoscopy is a procedure commonly performed in the management of persistent respiratory illness. In the last decades this exam has become a routine and safe procedure even in children and there are few side-effects. However, one known side effect is transient fever and even high fever a few hours after the bronchoscopy. This side effect is not dangerous but very uncomfortable for the patients and it would be interesting to try to reduce this phenomena. This fever is due to a release of cytokines during the broncho-alveolar lavage procedure and not to sepsis. In a previous study a single dose of dexamethasone was shown to prevent the fever post bronchoscopy with no apparent detriment to the child. It is well known that steroids are immunosuppressive. Even though the post-bronchoscopy fever is not caused by an infection, it seems preferable to use other anti-inflammatory drugs to fight this very inconvenient side effect.~Ibuprofen (Nurofen*) is known as an effective medication to reduce fever in infectious illnesses and is even considered as superior to paracetamol. It has no immunosuppressive effect and is usually well tolerated by children with very few side effects when taken in the normal therapeutic dose of 10mg/Kg. The investigators postulate that a dose of Nurofen prior to bronchoscopy could significantly reduce fever post bronchoscopy.\nInclusion criteria: inclusion criteria: \n\n under twelve years of age \n\n all patients undergoing bronchoscopy and bronchoalveolar lavage \n\n \nExclusion criteria: : \n\n children with immune deficiency \n\n allergy to NSAIDS \n\n previous exacerbation of asthma due to NSAIDS \n\n fever on the day of the examination \n\n current antibiotic treatment",
+    "metadata": {
+      "brief_title": "Ibuprofen as a Possible Preventer of Post Bronchoscopy Fever",
+      "phase": "Phase 2",
+      "drugs": "['ibuprofen', 'ibuprofen']",
+      "drugs_list": [
+        "ibuprofen",
+        "ibuprofen"
+      ],
+      "diseases": "['Post Bronchoscopy Fever']",
+      "diseases_list": [
+        "Post Bronchoscopy Fever"
+      ],
+      "enrollment": "64.0",
+      "inclusion_criteria": "inclusion criteria: \n\n under twelve years of age \n\n all patients undergoing bronchoscopy and bronchoalveolar lavage \n\n ",
+      "exclusion_criteria": ": \n\n children with immune deficiency \n\n allergy to NSAIDS \n\n previous exacerbation of asthma due to NSAIDS \n\n fever on the day of the examination \n\n current antibiotic treatment",
+      "brief_summary": "Scientific background: Bronchoscopy is a procedure commonly performed in the management of persistent respiratory illness. In the last decades this exam has become a routine and safe procedure even in children and there are few side-effects. However, one known side effect is transient fever and even high fever a few hours after the bronchoscopy. This side effect is not dangerous but very uncomfortable for the patients and it would be interesting to try to reduce this phenomena. This fever is due to a release of cytokines during the broncho-alveolar lavage procedure and not to sepsis. In a previous study a single dose of dexamethasone was shown to prevent the fever post bronchoscopy with no apparent detriment to the child. It is well known that steroids are immunosuppressive. Even though the post-bronchoscopy fever is not caused by an infection, it seems preferable to use other anti-inflammatory drugs to fight this very inconvenient side effect.~Ibuprofen (Nurofen*) is known as an effective medication to reduce fever in infectious illnesses and is even considered as superior to paracetamol. It has no immunosuppressive effect and is usually well tolerated by children with very few side effects when taken in the normal therapeutic dose of 10mg/Kg. The investigators postulate that a dose of Nurofen prior to bronchoscopy could significantly reduce fever post bronchoscopy."
+    }
+  }
+}

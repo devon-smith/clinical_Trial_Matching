@@ -1,0 +1,12 @@
+[
+  "patient_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_heart_rate_value_recorded_now_withunit_beats_per_minute",
+  "patient_hemoglobin_saturation_with_oxygen_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_allergy_to_lidocaine_now",
+  "patient_has_diagnosis_of_polyp_of_nasal_sinus_inthehistory",
+  "patient_has_finding_of_polyp_of_nasal_sinus_now",
+  "patient_has_finding_of_bleeding_from_nose_inthehistory",
+  "patient_has_symptoms_of_nasal_congestion_now",
+  "patient_has_finding_of_respiratory_crackles_now",
+  "patient_has_finding_of_wheezing_now"
+]

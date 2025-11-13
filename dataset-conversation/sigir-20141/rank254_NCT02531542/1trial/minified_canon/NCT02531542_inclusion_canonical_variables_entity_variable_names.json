@@ -1,0 +1,9 @@
+[
+  "patient_has_undergone_emergency_room_admission_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_dyspnea_now",
+  "patient_peripheral_oxygen_saturation_value_recorded_now_withunit_percent",
+  "patient_respiratory_rate_value_recorded_now_withunit_cycles_per_minute",
+  "patient_has_undergone_electrocardiographic_procedure_now",
+  "patient_has_finding_of_sinus_rhythm_now"
+]

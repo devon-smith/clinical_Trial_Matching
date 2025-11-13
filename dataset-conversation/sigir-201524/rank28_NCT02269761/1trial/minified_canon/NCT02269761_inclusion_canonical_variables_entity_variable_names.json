@@ -1,0 +1,7 @@
+[
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_dyspnea_now",
+  "patient_has_finding_of_wheezing_now",
+  "patient_is_undergoing_computerized_axial_tomography_now",
+  "patient_is_undergoing_plain_chest_x_ray_now"
+]

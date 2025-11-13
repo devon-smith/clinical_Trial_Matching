@@ -1,0 +1,15 @@
+[
+  "patient_has_diagnosis_of_meningitis_inthehistory",
+  "patient_has_finding_of_allergic_disposition_inthehistory",
+  "patient_has_finding_of_epilepsy_inthehistory",
+  "patient_has_finding_of_seizure_inthehistory",
+  "patient_has_finding_of_blood_coagulation_disorder_now",
+  "patient_has_finding_of_disorder_of_immune_function_inthehistory",
+  "patient_is_exposed_to_gamma_globulin_inthepast2weeks",
+  "patient_has_finding_of_acute_infectious_disease_inthepast7days",
+  "patient_has_taken_corticosteroid_and_corticosteroid_derivative_containing_product_inthepast6months",
+  "patient_has_finding_of_chronic_disease_now",
+  "patient_has_finding_of_congenital_malformation_now",
+  "patient_has_finding_of_developmental_delay_now",
+  "patient_has_finding_of_disease_condition_finding_now"
+]

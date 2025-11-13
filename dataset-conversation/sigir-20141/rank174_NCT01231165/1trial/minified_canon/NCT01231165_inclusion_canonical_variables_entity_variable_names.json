@@ -1,0 +1,22 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_has_finding_of_angina_class_ii_now",
+  "patient_has_finding_of_angina_class_iii_now",
+  "patient_has_finding_of_angina_class_iv_now",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_diagnosis_of_essential_hypertension_now",
+  "patient_is_exposed_to_hypotensive_agent_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_ekg_left_ventricular_strain_now",
+  "patient_has_finding_of_inverted_t_wave_now",
+  "patient_has_finding_of_left_ventricular_hypertrophy_now",
+  "patients_t_wave_feature_is_abnormal_now",
+  "patients_t_wave_feature_is_normal_now",
+  "patient_has_finding_of_myocardial_ischemia_now",
+  "patient_has_finding_of_st_segment_depression_now",
+  "patient_serum_potassium_measurement_value_recorded_inthehistory_withunit_millimoles_per_liter",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now"
+]

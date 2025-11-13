@@ -1,0 +1,20 @@
+[
+  "patient_has_diagnosis_of_mental_disorder_now",
+  "patient_is_exposed_to_psychotropic_agent_now",
+  "patient_has_undergone_hospital_admission_now",
+  "patient_has_undergone_transfusion_of_packed_red_blood_cells_now",
+  "patient_has_finding_of_traumatic_and_or_non_traumatic_injury_now",
+  "patient_has_finding_of_disorientated_now",
+  "patient_has_finding_of_injury_of_head_now",
+  "patient_has_finding_of_loss_of_consciousness_now",
+  "patient_has_finding_of_neurological_deficit_now",
+  "patient_has_diagnosis_of_hypothalamic_pituitary_adrenal_axis_dysfunction_now",
+  "patient_has_taken_steroid_containing_product_inthehistory",
+  "patient_has_diagnosis_of_disorder_of_nervous_system_inthehistory",
+  "patient_has_undergone_operation_on_brain_inthehistory",
+  "patient_has_taken_drug_or_medicament_inthehistory",
+  "patient_has_finding_of_serious_physical_health_problem_inthehistory",
+  "patient_has_finding_of_alopecia_now",
+  "patient_is_exposed_to_dye_now",
+  "patient_is_pregnant_now"
+]

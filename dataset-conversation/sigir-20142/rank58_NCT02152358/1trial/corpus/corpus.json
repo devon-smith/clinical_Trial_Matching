@@ -1,0 +1,23 @@
+{
+  "_id": "NCT02152358",
+  "title": "PTH - Preemptive Treatment for Herpesviridae",
+  "text": "Summary: The aim of this study is to show that a preemptive treatment by ganciclovir (for positive CMV viremia) or aciclovir (for positive HSV oro-pharyngeal PCR) is able to increase the number of ventilator-free days at Day 60.\nInclusion criteria: inclusion criteria: \n\n mechanical ventilation > 96 hrs and expected duration of mechanical ventilation of at least 2 days \n\n positive blood CMV PCR (500 IU/ml) OR positive oropharyngeal HSV PCR \n\n age > 18 years \n\n informed consent \n\n negative pregnancy test \n\n \nExclusion criteria: : \n\n < 18 years \n\n Receiving ganciclovir or aciclovir or another antiviral agent active against HSV/CMV \n\n Had received antiviral agent active against HSV/CMV during the previous month \n\n Hypersensitivity to aciclovir/ganciclovir \n\n Pregnancy \n\n Breast feeding \n\n Bone marrow failure \n\n Solid organ recipients \n\n Bone marrow recipients \n\n HIV positive patients \n\n Receiving immunosuppressive agents \n\n SAPS II > 75 \n\n Withdrawing/withholding \n\n Neutropenia (< 500 mm3) \n\n Thrombocytopenia (< 25 G/L) \n\n ICU readmission",
+  "metadata": {
+    "brief_title": "PTH - Preemptive Treatment for Herpesviridae",
+    "phase": "Phase 4",
+    "drugs": "['Aciclovir', 'Ganciclovir', 'Placebo']",
+    "drugs_list": [
+      "Aciclovir",
+      "Ganciclovir",
+      "Placebo"
+    ],
+    "diseases": "['Viral Pneumonia']",
+    "diseases_list": [
+      "Viral Pneumonia"
+    ],
+    "enrollment": "317.0",
+    "inclusion_criteria": "inclusion criteria: \n\n mechanical ventilation > 96 hrs and expected duration of mechanical ventilation of at least 2 days \n\n positive blood CMV PCR (500 IU/ml) OR positive oropharyngeal HSV PCR \n\n age > 18 years \n\n informed consent \n\n negative pregnancy test \n\n ",
+    "exclusion_criteria": ": \n\n < 18 years \n\n Receiving ganciclovir or aciclovir or another antiviral agent active against HSV/CMV \n\n Had received antiviral agent active against HSV/CMV during the previous month \n\n Hypersensitivity to aciclovir/ganciclovir \n\n Pregnancy \n\n Breast feeding \n\n Bone marrow failure \n\n Solid organ recipients \n\n Bone marrow recipients \n\n HIV positive patients \n\n Receiving immunosuppressive agents \n\n SAPS II > 75 \n\n Withdrawing/withholding \n\n Neutropenia (< 500 mm3) \n\n Thrombocytopenia (< 25 G/L) \n\n ICU readmission",
+    "brief_summary": "The aim of this study is to show that a preemptive treatment by ganciclovir (for positive CMV viremia) or aciclovir (for positive HSV oro-pharyngeal PCR) is able to increase the number of ventilator-free days at Day 60."
+  }
+}

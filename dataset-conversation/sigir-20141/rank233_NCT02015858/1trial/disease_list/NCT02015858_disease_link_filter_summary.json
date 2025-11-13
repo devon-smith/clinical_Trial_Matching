@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:31:06",
+  "trial_id": "NCT02015858",
+  "contextual": {
+    "_id": "NCT02015858",
+    "title": "Pain During Chest Tube Withdrawal: Evaluation Using Pan Monitor",
+    "text": "Summary: Pain evaluation remains a clinical problem. Pain Monitor allows pain evaluation using the measurement of skin conductance.~Withdrawal of chest tube can be painful and the purpose of the study was to compare auto-evaluation of pain (visual analogic scale) and the index measured by the Pain Monitor.\nInclusion criteria: inclusion criteria: \n\n patients undergoing removal of a chest tube after lung surgery, \n\n patients able to indicate the pain score. \n\n \nExclusion criteria: : \n\n pregnancy, lactation , \n\n insulin-dependent diabetes with dysautonomia, \n\n central or peripheral neurological disease, agitation, \n\n inability to understand the protocol, \n\n inability to use the Pain Monitor: skin abnormalities at the site of measurement, pacemaker or implantable defibrillator, condition affecting the sympathetic nervous system, tremor of the extremities, \n\n contra-indication to oral morphine , \n\n respiratory failure, severe hepatic insufficiency, intracranial hypertension, epilepsy associations \n\n recent administration of neostigmine or of atropine.",
+    "metadata": {
+      "brief_title": "Pain During Chest Tube Withdrawal: Evaluation Using Pan Monitor",
+      "phase": "",
+      "drugs": "['Chest drain withdrawal', 'Pain Monitor']",
+      "drugs_list": [
+        "Chest drain withdrawal",
+        "Pain Monitor"
+      ],
+      "diseases": "['Chest Pain']",
+      "diseases_list": [
+        "Chest Pain"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n patients undergoing removal of a chest tube after lung surgery, \n\n patients able to indicate the pain score. \n\n ",
+      "exclusion_criteria": ": \n\n pregnancy, lactation , \n\n insulin-dependent diabetes with dysautonomia, \n\n central or peripheral neurological disease, agitation, \n\n inability to understand the protocol, \n\n inability to use the Pain Monitor: skin abnormalities at the site of measurement, pacemaker or implantable defibrillator, condition affecting the sympathetic nervous system, tremor of the extremities, \n\n contra-indication to oral morphine , \n\n respiratory failure, severe hepatic insufficiency, intracranial hypertension, epilepsy associations \n\n recent administration of neostigmine or of atropine.",
+      "brief_summary": "Pain evaluation remains a clinical problem. Pain Monitor allows pain evaluation using the measurement of skin conductance.~Withdrawal of chest tube can be painful and the purpose of the study was to compare auto-evaluation of pain (visual analogic scale) and the index measured by the Pain Monitor."
+    }
+  },
+  "linked_result": {
+    "Chest Pain": {
+      "conceptId": "29857009",
+      "preferred_term": "Chest pain",
+      "fully_specified_name": "Chest pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Pressure, burning, or numbness in the chest.",
+      "best_match_term": "Chest pain",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Chest Pain": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chest Pain": {
+      "disease": "Chest Pain",
+      "conceptId": "29857009",
+      "preferred_term": "Chest pain",
+      "fully_specified_name": "Chest pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Pressure, burning, or numbness in the chest.",
+      "best_match_term": "Chest pain"
+    }
+  }
+}

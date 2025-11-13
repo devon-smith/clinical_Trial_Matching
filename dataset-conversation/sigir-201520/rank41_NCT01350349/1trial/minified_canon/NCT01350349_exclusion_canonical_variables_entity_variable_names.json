@@ -1,0 +1,20 @@
+[
+  "patient_has_finding_of_high_suicide_risk_now",
+  "patient_has_finding_of_planning_suicide_now",
+  "patient_has_finding_of_suicidal_intent_now",
+  "patient_has_finding_of_mental_disorder_now",
+  "patient_has_diagnosis_of_axis_ii_diagnosis_now",
+  "patient_has_finding_of_dementia_now",
+  "patient_has_finding_of_acute_disease_now",
+  "patient_has_finding_of_cerebrovascular_accident_inthepast3months",
+  "patient_has_finding_of_decompensated_cardiac_failure_now",
+  "patient_has_finding_of_delirium_now",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_has_finding_of_hepatic_failure_now",
+  "patient_has_finding_of_myocardial_infarction_inthepast3months",
+  "patient_has_finding_of_renal_failure_syndrome_now",
+  "patient_has_finding_of_secondary_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_cerebrovascular_accident_inthehistory",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_aphasia_now"
+]

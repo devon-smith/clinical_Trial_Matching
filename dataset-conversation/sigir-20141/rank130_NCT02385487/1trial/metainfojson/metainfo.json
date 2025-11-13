@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT02385487",
+  "contextual": {
+    "_id": "NCT02385487",
+    "title": "Inflammation in Type 2 Myocardial Infarction",
+    "text": "Summary: Type 2 myocardial infarction (MI) is defined as myocardial necrosis that results from an imbalance of myocardial oxygen supply and demand. Although type 2 MI is highly prevalent in patients with critical illness and strongly associated with mortality, the pathophysiology remains poorly understood. Inflammation is central to the development of atherosclerosis, plaque rupture, and other subtypes of MI, but the role of inflammation in type 2 MI and myocardial necrosis has not been defined. The investigators aim to to delineate the mechanistic role of inflammation in myocardial necrosis and type 2 MI complicating critical medical illness.\nInclusion criteria: inclusion criteria: \n\n ≥21 years of age \n\n admitted to the Medical Intensive or Coronary Care Units \n\n sepsis or respiratory failure \n\n clinically indicated troponin measurement within 24 hours of ICU admission \n\n \nExclusion criteria: : \n\n unstable angina or Type 1 MI \n\n percutaneous or surgical coronary revascularization within 7 days \n\n heart failure exacerbation \n\n primary valvular disorder \n\n aortic dissection \n\n infiltrative heart disease or hypertrophic cardiomyopathy \n\n myocarditis \n\n pulmonary embolism \n\n electrocardiogram with >1mm ST segment elevation in two consecutive leads \n\n serum cardiac troponin >99th percentile URL but no clear rise or fall pattern \n\n history of chronic inflammatory disease \n\n use of therapeutic-dose anticoagulants / antiplatelet agents other than aspirin \n\n pregnant or incarcerated \n\n enrolled in a competing study",
+    "metadata": {
+      "brief_title": "Inflammation in Type 2 Myocardial Infarction",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Myocardial Infarction', 'Inflammation', 'Critical Illness']",
+      "diseases_list": [
+        "Myocardial Infarction",
+        "Inflammation",
+        "Critical Illness"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n ≥21 years of age \n\n admitted to the Medical Intensive or Coronary Care Units \n\n sepsis or respiratory failure \n\n clinically indicated troponin measurement within 24 hours of ICU admission \n\n ",
+      "exclusion_criteria": ": \n\n unstable angina or Type 1 MI \n\n percutaneous or surgical coronary revascularization within 7 days \n\n heart failure exacerbation \n\n primary valvular disorder \n\n aortic dissection \n\n infiltrative heart disease or hypertrophic cardiomyopathy \n\n myocarditis \n\n pulmonary embolism \n\n electrocardiogram with >1mm ST segment elevation in two consecutive leads \n\n serum cardiac troponin >99th percentile URL but no clear rise or fall pattern \n\n history of chronic inflammatory disease \n\n use of therapeutic-dose anticoagulants / antiplatelet agents other than aspirin \n\n pregnant or incarcerated \n\n enrolled in a competing study",
+      "brief_summary": "Type 2 myocardial infarction (MI) is defined as myocardial necrosis that results from an imbalance of myocardial oxygen supply and demand. Although type 2 MI is highly prevalent in patients with critical illness and strongly associated with mortality, the pathophysiology remains poorly understood. Inflammation is central to the development of atherosclerosis, plaque rupture, and other subtypes of MI, but the role of inflammation in type 2 MI and myocardial necrosis has not been defined. The investigators aim to to delineate the mechanistic role of inflammation in myocardial necrosis and type 2 MI complicating critical medical illness."
+    }
+  }
+}

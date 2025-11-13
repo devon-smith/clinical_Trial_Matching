@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:42:44",
+  "trial_id": "NCT00996918",
+  "contextual": {
+    "_id": "NCT00996918",
+    "title": "A Long-Term Safety And Tolerability Study Of Bapineuzumab In Alzheimer Disease Patients",
+    "text": "Summary: The purpose of this study is to assess the long-term safety and tolerability of bapineuzumab in subjects with Alzheimer Disease who participated in study 3133K1-3000 (NCT00667810). Over 250 sites will participate in over 26 countries. Subjects will receive bapineuzumab. Each subject's participation will last approximately 4 years.\nInclusion criteria: inclusion criteria: \n\n Subject has completed study 3133K1-3000 and brain magnetic resonance imaging (MRI) scan consistent with the diagnosis of Alzheimer Disease \n\n Mini-Mental Status Examination (MMSE) >=10 at screening \n\n Caregiver able to attend all clinic visits with subject \n\n \nExclusion criteria: : \n\n Any medical or psychiatric contraindication or clinically significant abnormality that, in the investigator's judgment, will substantially increase the risk associated with the subject's participation in and completion of the study or could preclude the evaluation of the subject's response. \n\n Any significant brain MRI abnormality. \n\n Use of any investigational drugs or devices, other than bapineuzumab within the last 60 days prior to screening",
+    "metadata": {
+      "brief_title": "A Long-Term Safety And Tolerability Study Of Bapineuzumab In Alzheimer Disease Patients",
+      "phase": "Phase 3",
+      "drugs": "['Bapineuzumab 0.5 mg/kg', 'Bapineuzumab 1.0 m/kg']",
+      "drugs_list": [
+        "Bapineuzumab 0.5 mg/kg",
+        "Bapineuzumab 1.0 m/kg"
+      ],
+      "diseases": "['Alzheimer Disease']",
+      "diseases_list": [
+        "Alzheimer Disease"
+      ],
+      "enrollment": "198.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Subject has completed study 3133K1-3000 and brain magnetic resonance imaging (MRI) scan consistent with the diagnosis of Alzheimer Disease \n\n Mini-Mental Status Examination (MMSE) >=10 at screening \n\n Caregiver able to attend all clinic visits with subject \n\n ",
+      "exclusion_criteria": ": \n\n Any medical or psychiatric contraindication or clinically significant abnormality that, in the investigator's judgment, will substantially increase the risk associated with the subject's participation in and completion of the study or could preclude the evaluation of the subject's response. \n\n Any significant brain MRI abnormality. \n\n Use of any investigational drugs or devices, other than bapineuzumab within the last 60 days prior to screening",
+      "brief_summary": "The purpose of this study is to assess the long-term safety and tolerability of bapineuzumab in subjects with Alzheimer Disease who participated in study 3133K1-3000 (NCT00667810). Over 250 sites will participate in over 26 countries. Subjects will receive bapineuzumab. Each subject's participation will last approximately 4 years."
+    }
+  },
+  "linked_result": {
+    "Alzheimer Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Alzheimer Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Alzheimer Disease": {
+      "disease": "Alzheimer Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease"
+    }
+  }
+}

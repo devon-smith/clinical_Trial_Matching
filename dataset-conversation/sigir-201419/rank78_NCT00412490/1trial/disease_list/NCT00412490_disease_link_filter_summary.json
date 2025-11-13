@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:33:49",
+  "trial_id": "NCT00412490",
+  "contextual": {
+    "_id": "NCT00412490",
+    "title": "Smoking Status and Body Image in Oral Cancer Patients",
+    "text": "Summary: Primary Objectives:~To characterize smoking behaviors and body image in patients with oral cavity cancer prior to and following surgical procedures.~To examine the relationship between smoking status and body image in this sample of head and neck cancer patients.~To examine the influence of smoking status and body image on quality of life outcomes.\nInclusion criteria: inclusion criteria: \n\n 18 years of age or older \n\n Able to provide written informed consent to participate \n\n Diagnosis of head and neck malignancy involving an oral cavity site without previous treatment \n\n Current treatment plan includes surgical intervention \n\n English speaking \n\n \nExclusion criteria: : \n\n Previous treatment for malignancy in the head and neck region \n\n Significant preexisting facial disfigurement from a previous trauma or congenital defect \n\n Diagnosis of a serious mental illness involving formal thought disorder (e.g., Schizophrenia) documented in medical record.",
+    "metadata": {
+      "brief_title": "Smoking Status and Body Image in Oral Cancer Patients",
+      "phase": "",
+      "drugs": "['Questionnaire', 'Interview']",
+      "drugs_list": [
+        "Questionnaire",
+        "Interview"
+      ],
+      "diseases": "['Oral Cavity Cancer']",
+      "diseases_list": [
+        "Oral Cavity Cancer"
+      ],
+      "enrollment": "75.0",
+      "inclusion_criteria": "inclusion criteria: \n\n 18 years of age or older \n\n Able to provide written informed consent to participate \n\n Diagnosis of head and neck malignancy involving an oral cavity site without previous treatment \n\n Current treatment plan includes surgical intervention \n\n English speaking \n\n ",
+      "exclusion_criteria": ": \n\n Previous treatment for malignancy in the head and neck region \n\n Significant preexisting facial disfigurement from a previous trauma or congenital defect \n\n Diagnosis of a serious mental illness involving formal thought disorder (e.g., Schizophrenia) documented in medical record.",
+      "brief_summary": "Primary Objectives:~To characterize smoking behaviors and body image in patients with oral cavity cancer prior to and following surgical procedures.~To examine the relationship between smoking status and body image in this sample of head and neck cancer patients.~To examine the influence of smoking status and body image on quality of life outcomes."
+    }
+  },
+  "linked_result": {
+    "Oral Cavity Cancer": {
+      "conceptId": "363505006",
+      "preferred_term": "Malignant tumor of oral cavity",
+      "fully_specified_name": "Malignant tumor of oral cavity (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the oral cavity. The majority are squamous cell carcinomas.",
+      "best_match_term": "Cancer of oral cavity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Oral Cavity Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Oral Cavity Cancer": {
+      "disease": "Oral Cavity Cancer",
+      "conceptId": "363505006",
+      "preferred_term": "Malignant tumor of oral cavity",
+      "fully_specified_name": "Malignant tumor of oral cavity (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the oral cavity. The majority are squamous cell carcinomas.",
+      "best_match_term": "Cancer of oral cavity"
+    }
+  }
+}

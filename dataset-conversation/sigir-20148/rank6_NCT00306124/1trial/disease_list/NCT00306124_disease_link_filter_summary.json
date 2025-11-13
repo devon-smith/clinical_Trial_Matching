@@ -1,0 +1,80 @@
+{
+  "generated": "2025-10-20T23:38:26",
+  "trial_id": "NCT00306124",
+  "contextual": {
+    "_id": "NCT00306124",
+    "title": "Dopaminergic Enhancement of Learning and Memory in Healthy Adults and Patients With Dementia/Mild Cognitive Impairment",
+    "text": "Summary: This study aims to determine whether levodopa is effective in boosting learning and memory in healthy subjects and patients with dementia or Mild Cognitive Impairment.~We also examine in healthy subjects using functional magnetic resonance imaging which brain regions mediate improved learning after levodopa administration.\nInclusion criteria: inclusion criteria for patients with dementia: \n\n Patients: clinical diagnosis of AD or mild cognitive impairment \n\n primary language German \n\n \nExclusion criteria:  for healthy subjects and patients with dementia/MCI: \n\n Known allergy to levodopa or tetrazine \n\n History of medication/drug abuse \n\n Acute nicotine withdrawal or > 15 cigarettes per day \n\n > 6 cups/glasses of coffee, caffeine drinks or energy drinks per day \n\n > 50 grams of alcohol per day \n\n Severe hypertonia (systole >160 mm Hg) \n\n Severe arteriosclerosis \n\n Diabetes, asthma, or glaucoma \n\n Severe hearing disability \n\n no focal brain lesions \n\n Premorbid depression or psychosis \n\n Medication with dopamine agonists or antagonists \n\n Parkinsonian symptoms",
+    "metadata": {
+      "brief_title": "Dopaminergic Enhancement of Learning and Memory in Healthy Adults and Patients With Dementia/Mild Cognitive Impairment",
+      "phase": "Phase 4",
+      "drugs": "['Levodopa']",
+      "drugs_list": [
+        "Levodopa"
+      ],
+      "diseases": "['Healthy', \"Alzheimer's Disease\", 'Mild Cognitive Impairment']",
+      "diseases_list": [
+        "Healthy",
+        "Alzheimer's Disease",
+        "Mild Cognitive Impairment"
+      ],
+      "enrollment": "120.0",
+      "inclusion_criteria": "inclusion criteria for patients with dementia: \n\n Patients: clinical diagnosis of AD or mild cognitive impairment \n\n primary language German \n\n ",
+      "exclusion_criteria": " for healthy subjects and patients with dementia/MCI: \n\n Known allergy to levodopa or tetrazine \n\n History of medication/drug abuse \n\n Acute nicotine withdrawal or > 15 cigarettes per day \n\n > 6 cups/glasses of coffee, caffeine drinks or energy drinks per day \n\n > 50 grams of alcohol per day \n\n Severe hypertonia (systole >160 mm Hg) \n\n Severe arteriosclerosis \n\n Diabetes, asthma, or glaucoma \n\n Severe hearing disability \n\n no focal brain lesions \n\n Premorbid depression or psychosis \n\n Medication with dopamine agonists or antagonists \n\n Parkinsonian symptoms",
+      "brief_summary": "This study aims to determine whether levodopa is effective in boosting learning and memory in healthy subjects and patients with dementia or Mild Cognitive Impairment.~We also examine in healthy subjects using functional magnetic resonance imaging which brain regions mediate improved learning after levodopa administration."
+    }
+  },
+  "linked_result": {
+    "Healthy": {
+      "conceptId": "102499006",
+      "preferred_term": "Fit and well",
+      "fully_specified_name": "Fit and well (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "State of being healthy",
+      "match_reason": "Exact"
+    },
+    "Alzheimer's Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease",
+      "match_reason": "Exact"
+    },
+    "Mild Cognitive Impairment": {
+      "conceptId": "386805003",
+      "preferred_term": "Mild cognitive disorder",
+      "fully_specified_name": "Mild cognitive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "<p>Some forgetfulness can be a normal part of aging. However, some people have more <a href=\"https://medlineplus.gov/memory.html\">memory</a> problems than other people their age. This condition is called mild cognitive impairment, or MCI. People with MCI can take care of themselves and do their normal activities.</p> <p>MCI memory problems may include:</p><ul> <li>Losing things often</li> <li>Forgetting to go to events and appointments</li> <li>Having more trouble coming up with words than other people of the same age</li> </ul> <p>Memory problems can also have other causes, including certain medicines and diseases that affect the blood vessels that supply the brain. Some of the problems brought on by these conditions can be managed or reversed.</p> <p>Your health care provider can do thinking, memory, and language tests to see if you have MCI. You may also need to see a specialist for more tests. Because MCI may be an early sign of <a href=\"https://medlineplus.gov/alzheimersdisease.html\">Alzheimer's disease</a>, it's really important to see your health care provider every 6 to 12 months.</p> <p>At this time, there is no proven drug treatment for MCI. Your health care provider can check to see if you have any changes in your memory or thinking skills over time.</p> <p class=\"\">NIH: National Institute on Aging</p>",
+      "best_match_term": "Mild cognitive impairment",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Alzheimer's Disease": 1,
+    "Mild Cognitive Impairment": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Alzheimer's Disease": {
+      "disease": "Alzheimer's Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease"
+    },
+    "Mild Cognitive Impairment": {
+      "disease": "Mild Cognitive Impairment",
+      "conceptId": "386805003",
+      "preferred_term": "Mild cognitive disorder",
+      "fully_specified_name": "Mild cognitive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "<p>Some forgetfulness can be a normal part of aging. However, some people have more <a href=\"https://medlineplus.gov/memory.html\">memory</a> problems than other people their age. This condition is called mild cognitive impairment, or MCI. People with MCI can take care of themselves and do their normal activities.</p> <p>MCI memory problems may include:</p><ul> <li>Losing things often</li> <li>Forgetting to go to events and appointments</li> <li>Having more trouble coming up with words than other people of the same age</li> </ul> <p>Memory problems can also have other causes, including certain medicines and diseases that affect the blood vessels that supply the brain. Some of the problems brought on by these conditions can be managed or reversed.</p> <p>Your health care provider can do thinking, memory, and language tests to see if you have MCI. You may also need to see a specialist for more tests. Because MCI may be an early sign of <a href=\"https://medlineplus.gov/alzheimersdisease.html\">Alzheimer's disease</a>, it's really important to see your health care provider every 6 to 12 months.</p> <p>At this time, there is no proven drug treatment for MCI. Your health care provider can check to see if you have any changes in your memory or thinking skills over time.</p> <p class=\"\">NIH: National Institute on Aging</p>",
+      "best_match_term": "Mild cognitive impairment"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[
+  "patient_has_diagnosis_of_intermittent_fever_now",
+  "patient_has_diagnosis_of_lymphadenitis_now",
+  "patient_has_diagnosis_of_pharyngitis_now",
+  "patient_has_diagnosis_of_recurrent_aphthous_ulcer_now",
+  "patient_has_finding_of_intermittent_fever_now",
+  "patient_has_finding_of_lymphadenitis_now",
+  "patient_has_finding_of_pharyngitis_now",
+  "patient_has_finding_of_recurrent_aphthous_ulcer_now",
+  "patient_age_value_recorded_now_in_years"
+]

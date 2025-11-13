@@ -1,0 +1,3 @@
+# Patient Note for `sigir-201513`
+
+A 5-year-old boy presents to the emergency department with complaints of progressively worsening dysphagia, drooling, fever and vocal changes. He is toxic-appearing, and leans forward while sitting on his mother's lap. He is drooling and speaks with a muffled "hot potato" voice. The parents deny the possibility of foreign body ingestion or trauma, and they report that they are delaying some of his vaccines.

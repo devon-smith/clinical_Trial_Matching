@@ -1,0 +1,10 @@
+[
+  "patient_has_finding_of_cough_now",
+  "patient_is_exposed_to_sputum_now",
+  "patient_has_diagnosis_of_tuberculosis_now",
+  "patient_has_suspicion_of_tuberculosis_now",
+  "patient_has_finding_of_immunodeficiency_disorder_now",
+  "patient_has_diagnosis_of_congestive_heart_failure_now",
+  "patient_has_suspicion_of_congestive_heart_failure_now",
+  "patient_has_finding_of_pulmonary_aspiration_now"
+]

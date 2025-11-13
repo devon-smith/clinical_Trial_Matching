@@ -1,0 +1,58 @@
+# Withdrawal of Inhaled Corticosteroids in Patients With COPD in Primary Care
+**NCT**: `NCT00440687`
+## Brief Summary
+Guidelines recommend inhaled corticosteroids (ICS) for patients with moderate to severe chronic obstructive pulmonary disease (COPD). Most COPD patients are managed in primary care and receive ICS long-term and irrespective of severity. The effect of withdrawing ICS from COPD patients in primary care is unknown.This randomised double-blind placebo-controlled trial will evaluate the effect of withdrawal of inhaled corticosteroids in patients with COPD recruited from general practice. Participants will have a clinical and spirometric diagnosis of COPD and will have been prescribed inhaled steroids for the 6 months before entry to the trial. They will be randomised to taking a fixed dose steroid inhaler (Flixotide Accuhaler) or an identical placebo inhaler. Patients will be monitored using diary cards for a year with 3 monthly follow-up visits at their general practice. The primary outcome measures will be exacerbation frequency and severity. Other outcomes are time to first exacerbation, costs, health status, lung function and unscheduled care. We tested the hypothesis that withdrawal of ICS in this population would lead to an increased number of exacerbations, earlier onset of exacerbation, and a worsening of symptoms.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Smoker or ex smoker of at least 10 pack years 
+
+ Age 40 or above 
+
+ Prior and current use of inhaled corticosteroids for at least 6 months duration (Used for at least 75% of time on direct questioning) 
+
+ FEV1 <80% of predicted, FEV1/FVC ratio <70%. 
+
+ Less than 15% change and <200 mls change in FEV1 20 minutes after 5 mg nebulised salbutamol. 
+
+ 256 patients to be included in trial of which 196 must have had a precious exacerbation of COPD in the last year
+## Exclusion Criteria
+: 
+
+ Clear history of asthma, bronchiectasis, carcinoma of bronchus or other significant respiratory disease 
+
+ Inability to give informed consent (severe mental illness, mental handicap or brain damage). 
+
+ Recorded exacerbation within last month that has required antibiotics or steroids (delayed randomisation) 
+
+ Classification as a never smoker 
+
+ Strongly positive skin allergy result (>10mm skin weal greater then negative control) to house dust mite, grass, tree, aspergillus, cat, dog or weed (irrespective of asthma/atopy status)
+## Full Text
+Summary: Guidelines recommend inhaled corticosteroids (ICS) for patients with moderate to severe chronic obstructive pulmonary disease (COPD). Most COPD patients are managed in primary care and receive ICS long-term and irrespective of severity. The effect of withdrawing ICS from COPD patients in primary care is unknown.This randomised double-blind placebo-controlled trial will evaluate the effect of withdrawal of inhaled corticosteroids in patients with COPD recruited from general practice. Participants will have a clinical and spirometric diagnosis of COPD and will have been prescribed inhaled steroids for the 6 months before entry to the trial. They will be randomised to taking a fixed dose steroid inhaler (Flixotide Accuhaler) or an identical placebo inhaler. Patients will be monitored using diary cards for a year with 3 monthly follow-up visits at their general practice. The primary outcome measures will be exacerbation frequency and severity. Other outcomes are time to first exacerbation, costs, health status, lung function and unscheduled care. We tested the hypothesis that withdrawal of ICS in this population would lead to an increased number of exacerbations, earlier onset of exacerbation, and a worsening of symptoms.
+Inclusion criteria: inclusion criteria: 
+
+ Smoker or ex smoker of at least 10 pack years 
+
+ Age 40 or above 
+
+ Prior and current use of inhaled corticosteroids for at least 6 months duration (Used for at least 75% of time on direct questioning) 
+
+ FEV1 <80% of predicted, FEV1/FVC ratio <70%. 
+
+ Less than 15% change and <200 mls change in FEV1 20 minutes after 5 mg nebulised salbutamol. 
+
+ 256 patients to be included in trial of which 196 must have had a precious exacerbation of COPD in the last year 
+
+ 
+Exclusion criteria: : 
+
+ Clear history of asthma, bronchiectasis, carcinoma of bronchus or other significant respiratory disease 
+
+ Inability to give informed consent (severe mental illness, mental handicap or brain damage). 
+
+ Recorded exacerbation within last month that has required antibiotics or steroids (delayed randomisation) 
+
+ Classification as a never smoker 
+
+ Strongly positive skin allergy result (>10mm skin weal greater then negative control) to house dust mite, grass, tree, aspergillus, cat, dog or weed (irrespective of asthma/atopy status)

@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_inthehistory_in_years",
+  "patient_has_diagnosis_of_angina_pectoris_inthehistory",
+  "patient_disease_value_recorded_inthehistory_withunit_years",
+  "patient_has_diagnosis_of_ischemic_heart_disease_inthehistory"
+]

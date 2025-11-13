@@ -1,0 +1,15 @@
+[
+  "patient_has_symptoms_of_sore_throat_symptom_now",
+  "patient_has_finding_of_erythema_now",
+  "patient_has_finding_of_exudate_on_tonsils_now",
+  "patient_has_finding_of_swelling_of_tonsil_now",
+  "patient_has_finding_of_anterior_cervical_lymphadenopathy_now",
+  "patient_body_temperature_value_recorded_inthepast24hours_withunit_degrees_celsius",
+  "patient_body_temperature_value_recorded_now_withunit_degrees_celsius",
+  "patient_has_finding_of_fever_inthepast24hours",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_disorder_of_tympanic_membrane_now",
+  "patient_has_finding_of_erythema_scarlatiniforme_now",
+  "patient_has_finding_of_petechiae_now",
+  "patient_has_finding_of_streptococcus_pyogenes_infection_now"
+]

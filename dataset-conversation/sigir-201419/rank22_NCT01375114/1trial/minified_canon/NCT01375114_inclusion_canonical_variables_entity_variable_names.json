@@ -1,0 +1,22 @@
+[
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_fatigue_value_recorded_now_withunit_weeks",
+  "patient_has_finding_of_fatigue_now",
+  "patient_delirium_value_recorded_now_withunit_score",
+  "patient_age_value_recorded_now_in_years",
+  "patient_hemoglobin_finding_value_recorded_inthepast2weeks_withunit_grams_per_deciliter",
+  "patient_has_finding_of_anemia_now",
+  "patient_has_finding_of_hemoglobin_finding_now",
+  "patient_has_finding_of_long_term_systemic_steroid_user_now",
+  "patient_is_exposed_to_antidepressant_now",
+  "patients_pain_observable_is_positive_now",
+  "patient_has_symptoms_of_symptoms_of_depression_now",
+  "patient_is_undergoing_chemotherapy_now",
+  "patient_chemotherapy_cycle_value_recorded_inthehistory_withunit_count",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_inthepast14days",
+  "patient_has_finding_of_elevated_serum_human_chorionic_gonadotropin_level_beta_subunit_now",
+  "patients_menstruation_is_positive_inthepast12months",
+  "patient_has_undergone_pregnancy_detection_examination_inthepast14days_outcome_is_negative",
+  "patient_has_finding_of_contraception_now"
+]

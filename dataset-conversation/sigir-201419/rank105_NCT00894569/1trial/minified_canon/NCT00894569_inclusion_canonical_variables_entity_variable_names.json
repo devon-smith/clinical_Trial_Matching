@@ -1,0 +1,18 @@
+[
+  "patient_has_diagnosis_of_malignant_tumor_of_unknown_origin_now",
+  "patient_has_finding_of_malignant_tumor_of_unknown_origin_now",
+  "patient_has_finding_of_tumor_finding_now",
+  "patient_is_exposed_to_carboplatin_now",
+  "patient_is_exposed_to_cetuximab_now",
+  "patient_is_exposed_to_paclitaxel_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_childbearing_potential_now",
+  "patient_hemoglobin_concentration_dipstick_finding_value_recorded_now_withunit_mmol_per_l",
+  "patient_neutrophil_count_value_recorded_now_withunit_10e9_per_l",
+  "patient_platelet_count_value_recorded_now_withunit_10e9_per_l",
+  "patient_alanine_aminotransferase_measurement_value_recorded_now_withunit_unit_per_liter",
+  "patient_aspartate_transaminase_level_value_recorded_now_withunit_unit_per_liter",
+  "patient_bilirubin_level_finding_value_recorded_now_withunit_micromol_per_liter",
+  "patient_has_finding_of_secondary_malignant_neoplasm_of_liver_now",
+  "patient_serum_creatinine_level_finding_value_recorded_now_withunit_micromol_per_liter"
+]

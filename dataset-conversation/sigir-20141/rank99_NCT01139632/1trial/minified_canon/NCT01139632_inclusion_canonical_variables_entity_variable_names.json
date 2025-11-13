@@ -1,0 +1,10 @@
+[
+  "patient_has_diagnosis_of_chest_pain_now",
+  "patient_has_suspicion_of_coronary_arteriosclerosis_now",
+  "patient_is_undergoing_ct_angiography_of_coronary_arteries_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_dyspnea_now",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_finding_of_coronary_arteriosclerosis_now",
+  "patient_has_finding_of_dyspnea_now"
+]

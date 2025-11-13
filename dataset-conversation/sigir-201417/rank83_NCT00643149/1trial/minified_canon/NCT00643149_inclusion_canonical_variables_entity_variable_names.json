@@ -1,0 +1,22 @@
+[
+  "patient_has_diagnosis_of_acute_pharyngitis_now",
+  "patient_has_diagnosis_of_acute_tonsillitis_now",
+  "patient_has_clinical_signs_of_cervical_lymphadenopathy_now",
+  "patient_has_symptoms_of_chill_now",
+  "patient_has_clinical_signs_of_eruption_now",
+  "patient_has_clinical_signs_of_erythema_scarlatiniforme_now",
+  "patient_is_exposed_to_exudate_now",
+  "patient_has_symptoms_of_fever_now",
+  "patient_has_symptoms_of_pain_in_throat_now",
+  "patient_has_finding_of_scarlet_fever_now",
+  "patient_has_clinical_signs_of_strawberry_tongue_now",
+  "patient_has_symptoms_of_swallowing_painful_now",
+  "patient_has_finding_of_acute_pharyngitis_now",
+  "patient_has_finding_of_acute_tonsillitis_now",
+  "patient_has_finding_of_cervical_lymphadenopathy_now",
+  "patient_has_finding_of_eruption_now",
+  "patient_has_finding_of_erythema_scarlatiniforme_now",
+  "patient_has_finding_of_strawberry_tongue_now",
+  "patient_has_undergone_antigen_assay_now_outcome_is_positive",
+  "patient_has_undergone_throat_culture_now_outcome_is_positive"
+]

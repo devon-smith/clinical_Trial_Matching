@@ -1,0 +1,15 @@
+[
+  "patient_age_value_recorded_inthehistory_in_months",
+  "patient_has_finding_of_seizure_inthehistory",
+  "patient_seizure_value_recorded_inthehistory_withunit_months",
+  "patient_has_finding_of_epileptic_seizures_clonic_now",
+  "patient_has_finding_of_myoclonus_now",
+  "patient_has_finding_of_developmental_delay_inthehistory",
+  "patient_has_finding_of_developmental_regression_inthehistory",
+  "patient_has_finding_of_normal_physiological_development_inthehistory",
+  "patient_has_finding_of_electroencephalogram_abnormal_now",
+  "patient_epileptic_seizures_clonic_value_recorded_inthehistory_withunit_count",
+  "patient_has_finding_of_epileptic_seizures_clonic_inthehistory",
+  "patient_seizure_value_recorded_inthehistory_withunit_count",
+  "patient_anticonvulsant_value_recorded_inthehistory_withunit_count"
+]

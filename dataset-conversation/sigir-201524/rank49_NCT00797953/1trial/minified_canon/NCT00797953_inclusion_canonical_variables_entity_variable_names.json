@@ -1,0 +1,15 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory",
+  "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_angina_pectoris_inthehistory",
+  "patient_has_finding_of_angina_pectoris_now",
+  "patient_has_finding_of_electrocardiogram_abnormal_inthehistory",
+  "patient_has_undergone_cardiovascular_stress_test_using_treadmill_inthehistory",
+  "patient_can_undergo_antianginal_therapy_now",
+  "patient_can_undergo_warfarin_now"
+]

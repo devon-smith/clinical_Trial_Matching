@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:45:52",
+  "trial_id": "NCT02276092",
+  "contextual": {
+    "_id": "NCT02276092",
+    "title": "Impact of a Regional Antimicrobial Stewardship on the Length of Stay of Patients Admitted to Hospital With Pneumonia",
+    "text": "Summary: This study evaluates the effectiveness of an antimicrobial stewardship program to reduce the length of stay of patients admitted to hospital with a diagnosis of pneumonia. The antimicrobial stewardship program will be implemented in several hospitals in Ontario, Canada. The program will identify patients with pneumonia, review their charts and make recommendations to their attending physicians about antibiotic management.\nInclusion criteria: inclusion criteria: \n\n Community-acquired pneumonia \n\n Immunocompetent \n\n Age > 18 years \n\n \nExclusion criteria: : \n\n Admitted to an intensive care unit or high intensity unit \n\n Requiring invasive or non-invasive ventilation \n\n Life expectancy less than 3 months \n\n Hospitalization within the previous 3 months for at least 48 consecutive hours \n\n Immunocompromised defined as defined as having leukemia, lymphoma, HIV with CD4 count <=200, splenectomy or on cytotoxic chemotherapy \n\n Neutropenic [defined as a PMN count<=0.5x109 cells/L] from any cause \n\n Receiving immunosuppressants [defined as >=40 mg prednisone daily (or steroid equivalent) for >=2 weeks preceding hospitalization OR any other immunosuppressant used for systemic illness OR to prevent transplant rejection",
+    "metadata": {
+      "brief_title": "Impact of a Regional Antimicrobial Stewardship on the Length of Stay of Patients Admitted to Hospital With Pneumonia",
+      "phase": "",
+      "drugs": "['antimicrobial stewardship']",
+      "drugs_list": [
+        "antimicrobial stewardship"
+      ],
+      "diseases": "['Pneumonia']",
+      "diseases_list": [
+        "Pneumonia"
+      ],
+      "enrollment": "1400.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Community-acquired pneumonia \n\n Immunocompetent \n\n Age > 18 years \n\n ",
+      "exclusion_criteria": ": \n\n Admitted to an intensive care unit or high intensity unit \n\n Requiring invasive or non-invasive ventilation \n\n Life expectancy less than 3 months \n\n Hospitalization within the previous 3 months for at least 48 consecutive hours \n\n Immunocompromised defined as defined as having leukemia, lymphoma, HIV with CD4 count <=200, splenectomy or on cytotoxic chemotherapy \n\n Neutropenic [defined as a PMN count<=0.5x109 cells/L] from any cause \n\n Receiving immunosuppressants [defined as >=40 mg prednisone daily (or steroid equivalent) for >=2 weeks preceding hospitalization OR any other immunosuppressant used for systemic illness OR to prevent transplant rejection",
+      "brief_summary": "This study evaluates the effectiveness of an antimicrobial stewardship program to reduce the length of stay of patients admitted to hospital with a diagnosis of pneumonia. The antimicrobial stewardship program will be implemented in several hospitals in Ontario, Canada. The program will identify patients with pneumonia, review their charts and make recommendations to their attending physicians about antibiotic management."
+    }
+  },
+  "linked_result": {
+    "Pneumonia": {
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Pneumonia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Pneumonia": {
+      "disease": "Pneumonia",
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+[
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_finding_of_type_1_diabetes_mellitus_now",
+  "patient_has_finding_of_disorder_of_the_central_nervous_system_now",
+  "patient_has_finding_of_disorder_of_the_peripheral_nervous_system_now",
+  "patient_has_finding_of_feeling_agitated_now",
+  "patient_has_finding_of_disorder_of_sympathetic_nervous_system_now",
+  "patient_has_finding_of_skin_appearance_abnormal_now",
+  "patient_has_finding_of_tremor_now",
+  "patient_has_contraindication_to_morphine_containing_product_in_oral_dose_form_now",
+  "patient_has_finding_of_epilepsy_now",
+  "patient_has_finding_of_hepatic_failure_now",
+  "patient_has_finding_of_raised_intracranial_pressure_now",
+  "patient_has_finding_of_respiratory_failure_now",
+  "patient_has_taken_atropine_containing_product_inthehistory",
+  "patient_has_taken_neostigmine_containing_product_inthehistory"
+]

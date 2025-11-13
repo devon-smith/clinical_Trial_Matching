@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_pneumothorax_now",
+  "patient_pleural_effusion_value_recorded_now_withunit_milliliters",
+  "patient_has_undergone_surgical_procedure_on_thorax_inthepast3months",
+  "patient_can_undergo_plain_chest_x_ray_now",
+  "patient_positive_end_expiratory_pressure_value_recorded_now_withunit_centimeters_of_water",
+  "patients_pressure_volume_loop_is_normal_now"
+]

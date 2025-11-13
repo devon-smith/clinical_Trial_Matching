@@ -1,0 +1,15 @@
+[
+  "patient_has_finding_of_delirium_now",
+  "patient_has_finding_of_seizure_inthehistory",
+  "patient_has_finding_of_movement_disorder_inthehistory",
+  "patient_has_undergone_neurostimulation_procedure_inthehistory",
+  "patient_has_diagnosis_of_terminal_illness_now",
+  "patient_has_undergone_clinical_drug_trial_inthepast30days",
+  "patient_is_undergoing_clinical_drug_trial_now",
+  "patient_has_finding_of_patient_entered_into_trial_inthehistory",
+  "patient_has_finding_of_patient_entered_into_trial_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patients_breastfeeding_is_positive_now",
+  "patient_has_finding_of_contraception_now"
+]

@@ -1,0 +1,90 @@
+{
+  "generated": "2025-10-20T23:28:31",
+  "trial_id": "NCT00373828",
+  "contextual": {
+    "_id": "NCT00373828",
+    "title": "Non-cardiac Chest Pain Evaluation and Treatment Study (CARPA) - Part 1: Diagnosis.",
+    "text": "Summary: The overall aim of the project is to evaluate diagnosis and treatment of chest pain originating from the musculoskeletal system. Specifically, we wish to investigate prevalence and character of such chest pain in a population of patients with acute chest pain, admitted to a university hospital based acute chest pain clinic, and undergoing evaluation of acute coronary syndrome (Part 1). Then, to test a manually-based treatment protocol to patients with diagnosed musculoskeletal chest pain in a randomized clinical trial (Part 2).~The specific purpose of this study (Part 1) is to determine the exact number of patients with acute chest pain origination from the musculoskeletal system, and to describe their cardiac status with respect to ischemic heart disease. Further, we wish to evaluate the decision making process of the chiropractor.\nInclusion criteria: inclusion criteria: \n\n Acute episode of chest pain of less than 7 days duration as primary reason for admission to a chest pain clinic. \n\n Admitted to a chest pain clinic, suspected of acute coronary infarction, but with a negative diagnosis confirmed by normal coronary enzymes and normal ECG. \n\n Pain arising from the thorax and/or neck. \n\n Able to read and understand Danish. \n\n \nExclusion criteria: : \n\n Acute coronary syndrome. \n\n Percutaneous Coronary Intervention. \n\n Coronary Artery Bypass Grafting. \n\n Other disease, diagnosed during this admission, which is likely to have caused the acute episode of chest pain. \n\n No written consent. \n\n Inflammatory joint disease. \n\n Diabetes mellitus, type I. \n\n Fibromyalgia. \n\n Sharp trauma to the chest. \n\n Malignant disease. \n\n Apoplexy. \n\n Gross osseous anomalies, such as pronounced scoliosis. \n\n Known or suspected osteoporosis. \n\n Pregnancy. \n\n Dementia/unable to cooperate. \n\n Not residing in the County of Funen. \n\n Does not want to participate. \n\n Other - reason for exclusion will be noted.",
+    "metadata": {
+      "brief_title": "Non-cardiac Chest Pain Evaluation and Treatment Study (CARPA) - Part 1: Diagnosis.",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Non-Cardiac Chest Pain', 'Undiagnosed Chest Pain', 'Musculoskeletal Chest Pain', 'Ischemic Heart Disease']",
+      "diseases_list": [
+        "Non-Cardiac Chest Pain",
+        "Undiagnosed Chest Pain",
+        "Musculoskeletal Chest Pain",
+        "Ischemic Heart Disease"
+      ],
+      "enrollment": "302.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Acute episode of chest pain of less than 7 days duration as primary reason for admission to a chest pain clinic. \n\n Admitted to a chest pain clinic, suspected of acute coronary infarction, but with a negative diagnosis confirmed by normal coronary enzymes and normal ECG. \n\n Pain arising from the thorax and/or neck. \n\n Able to read and understand Danish. \n\n ",
+      "exclusion_criteria": ": \n\n Acute coronary syndrome. \n\n Percutaneous Coronary Intervention. \n\n Coronary Artery Bypass Grafting. \n\n Other disease, diagnosed during this admission, which is likely to have caused the acute episode of chest pain. \n\n No written consent. \n\n Inflammatory joint disease. \n\n Diabetes mellitus, type I. \n\n Fibromyalgia. \n\n Sharp trauma to the chest. \n\n Malignant disease. \n\n Apoplexy. \n\n Gross osseous anomalies, such as pronounced scoliosis. \n\n Known or suspected osteoporosis. \n\n Pregnancy. \n\n Dementia/unable to cooperate. \n\n Not residing in the County of Funen. \n\n Does not want to participate. \n\n Other - reason for exclusion will be noted.",
+      "brief_summary": "The overall aim of the project is to evaluate diagnosis and treatment of chest pain originating from the musculoskeletal system. Specifically, we wish to investigate prevalence and character of such chest pain in a population of patients with acute chest pain, admitted to a university hospital based acute chest pain clinic, and undergoing evaluation of acute coronary syndrome (Part 1). Then, to test a manually-based treatment protocol to patients with diagnosed musculoskeletal chest pain in a randomized clinical trial (Part 2).~The specific purpose of this study (Part 1) is to determine the exact number of patients with acute chest pain origination from the musculoskeletal system, and to describe their cardiac status with respect to ischemic heart disease. Further, we wish to evaluate the decision making process of the chiropractor."
+    }
+  },
+  "linked_result": {
+    "Non-Cardiac Chest Pain": {
+      "conceptId": "274668005",
+      "preferred_term": "Non-cardiac chest pain",
+      "fully_specified_name": "Non-cardiac chest pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Pain in the chest unrelated to a heart disorder.",
+      "best_match_term": "Non-cardiac chest pain",
+      "match_reason": "Exact"
+    },
+    "Undiagnosed Chest Pain": null,
+    "Musculoskeletal Chest Pain": {
+      "conceptId": "281245003",
+      "preferred_term": "Musculoskeletal chest pain",
+      "fully_specified_name": "Musculoskeletal chest pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Painful sensation in the chest wall region.",
+      "best_match_term": "Musculoskeletal chest pain",
+      "match_reason": "Exact"
+    },
+    "Ischemic Heart Disease": {
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Non-Cardiac Chest Pain": 1,
+    "Musculoskeletal Chest Pain": 1,
+    "Ischemic Heart Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Non-Cardiac Chest Pain": {
+      "disease": "Non-Cardiac Chest Pain",
+      "conceptId": "274668005",
+      "preferred_term": "Non-cardiac chest pain",
+      "fully_specified_name": "Non-cardiac chest pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Pain in the chest unrelated to a heart disorder.",
+      "best_match_term": "Non-cardiac chest pain"
+    },
+    "Musculoskeletal Chest Pain": {
+      "disease": "Musculoskeletal Chest Pain",
+      "conceptId": "281245003",
+      "preferred_term": "Musculoskeletal chest pain",
+      "fully_specified_name": "Musculoskeletal chest pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Painful sensation in the chest wall region.",
+      "best_match_term": "Musculoskeletal chest pain"
+    },
+    "Ischemic Heart Disease": {
+      "disease": "Ischemic Heart Disease",
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease"
+    }
+  }
+}

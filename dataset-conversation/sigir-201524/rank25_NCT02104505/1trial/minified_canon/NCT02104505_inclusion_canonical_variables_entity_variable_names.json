@@ -1,0 +1,17 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_has_childbearing_potential_now",
+  "patient_has_finding_of_asthma_inthehistory",
+  "patient_has_finding_of_dyspnea_inthehistory",
+  "patient_has_finding_of_tight_chest_inthehistory",
+  "patient_has_finding_of_wheezing_inthehistory",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liters",
+  "patient_is_exposed_to_methacholine_now",
+  "patient_is_exposed_to_bronchodilator_inthepast12hours",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent_of_predicted",
+  "patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_ratio",
+  "patient_has_finding_of_allergic_sensitization_now",
+  "patient_is_exposed_to_caffeine_inthepast12hours"
+]

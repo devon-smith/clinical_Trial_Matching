@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01028534",
+  "contextual": {
+    "_id": "NCT01028534",
+    "title": "Effects of Antihypertensive Drugs in Patients With Hypertension and Obstructive Sleep Apnea (OSA)",
+    "text": "Summary: The aim of the present study is to compare the effects of different types of antihypertensive drugs (angiotensin II receptor blockers and long-acting calcium channel blockers) in patients with hypertension and obstructive sleep apnea who are not controlled well with their hypertension after continuous positive airway pressure therapy.\nInclusion criteria: inclusion criteria: \n\n Apnea and hypopnea index of more than 20 /hr, and treated with CPAP \n\n Uncontrolled hypertension (defined as systolic blood pressure of more than 130 mmHg or diastolic blood pressure of more than 80 mmHg \n\n \nExclusion criteria: : \n\n Cerebrovascular diseases, myocardial infarction, angina pectoris or heart failure within 6 months \n\n Uncontrolled arrhythmia \n\n Severe hepatic or renal disorders \n\n Having poor prognosis disorders such as malignant disorders",
+    "metadata": {
+      "brief_title": "Effects of Antihypertensive Drugs in Patients With Hypertension and Obstructive Sleep Apnea (OSA)",
+      "phase": "",
+      "drugs": "['Olmesartan and Azelnidipine']",
+      "drugs_list": [
+        "Olmesartan and Azelnidipine"
+      ],
+      "diseases": "['Obstructive Sleep Apnea', 'Hypertension']",
+      "diseases_list": [
+        "Obstructive Sleep Apnea",
+        "Hypertension"
+      ],
+      "enrollment": "150.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Apnea and hypopnea index of more than 20 /hr, and treated with CPAP \n\n Uncontrolled hypertension (defined as systolic blood pressure of more than 130 mmHg or diastolic blood pressure of more than 80 mmHg \n\n ",
+      "exclusion_criteria": ": \n\n Cerebrovascular diseases, myocardial infarction, angina pectoris or heart failure within 6 months \n\n Uncontrolled arrhythmia \n\n Severe hepatic or renal disorders \n\n Having poor prognosis disorders such as malignant disorders",
+      "brief_summary": "The aim of the present study is to compare the effects of different types of antihypertensive drugs (angiotensin II receptor blockers and long-acting calcium channel blockers) in patients with hypertension and obstructive sleep apnea who are not controlled well with their hypertension after continuous positive airway pressure therapy."
+    }
+  }
+}

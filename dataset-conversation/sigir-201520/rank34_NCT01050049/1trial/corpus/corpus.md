@@ -1,0 +1,34 @@
+# The Effect of Implementing Hyper-acute Stroke Guidelines on Decision-Making for or Against Thrombolytic Therapy for Stroke in the Emergency Department
+**NCT**: `NCT01050049`
+## Brief Summary
+The objective of this study is to determine if the implementation of guidelines utilizing immediate CT Perfusion and CT Angiography in addition to non-contrast CT alters (reduces or increases) the time to decision-making for or against rt-PA in acute ischemic stroke, and by extension, time to therapy in treated patients and time to transfer from the department for all patients. A secondary objective is to determine if using CTP/CTA-inclusive hyperacute stroke guidelines improves safety by decreasing symptomatic intracerebral hemorrhage and mortality in patients who receive rt-PA.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Patients presenting to the emergency Signs and symptoms of acute ischemic stroke: impairment of language, motor function, cognition and/or gaze, vision or neglect. 
+
+ Patients with an NIH Stroke Scale score > 4
+## Exclusion Criteria
+: 
+
+ Age less than 19 
+
+ Patient symptomatic for greater than five hours. Intravenous thrombolytic therapy must be instituted within three hours of symptom onset in order to minimize the risk of Intracerebral or symptomatic hemorrhage; other interventions such as intra-arterial thrombolytic therapy and clot retrieval allow for a six-hour window. One hour is an achievable time for arrival to institution of therapy, therefore a five-hour limit on enrollment allows the greatest number of patients the possibility of therapy. 
+
+ Inability to verify a clear onset of symptoms. As noted, time elapsed since the patient's last known baseline state is correlated to Intracerebral and symptomatic hemorrhage, and therapy is approved only for patients with a clear time of onset.
+## Full Text
+Summary: The objective of this study is to determine if the implementation of guidelines utilizing immediate CT Perfusion and CT Angiography in addition to non-contrast CT alters (reduces or increases) the time to decision-making for or against rt-PA in acute ischemic stroke, and by extension, time to therapy in treated patients and time to transfer from the department for all patients. A secondary objective is to determine if using CTP/CTA-inclusive hyperacute stroke guidelines improves safety by decreasing symptomatic intracerebral hemorrhage and mortality in patients who receive rt-PA.
+Inclusion criteria: inclusion criteria: 
+
+ Patients presenting to the emergency Signs and symptoms of acute ischemic stroke: impairment of language, motor function, cognition and/or gaze, vision or neglect. 
+
+ Patients with an NIH Stroke Scale score > 4 
+
+ 
+Exclusion criteria: : 
+
+ Age less than 19 
+
+ Patient symptomatic for greater than five hours. Intravenous thrombolytic therapy must be instituted within three hours of symptom onset in order to minimize the risk of Intracerebral or symptomatic hemorrhage; other interventions such as intra-arterial thrombolytic therapy and clot retrieval allow for a six-hour window. One hour is an achievable time for arrival to institution of therapy, therefore a five-hour limit on enrollment allows the greatest number of patients the possibility of therapy. 
+
+ Inability to verify a clear onset of symptoms. As noted, time elapsed since the patient's last known baseline state is correlated to Intracerebral and symptomatic hemorrhage, and therapy is approved only for patients with a clear time of onset.

@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_days",
+  "patient_age_value_recorded_now_in_years",
+  "patient_time_of_illness_onset_value_recorded_inthehistory_withunit_days",
+  "patient_has_symptoms_of_cough_now",
+  "patient_has_symptoms_of_fever_now",
+  "patient_has_symptoms_of_nasal_congestion_now",
+  "patient_has_symptoms_of_sneezing_now",
+  "patient_sneezing_value_recorded_now_withunit_times_per_day",
+  "patient_temperature_value_recorded_now_withunit_celsius"
+]

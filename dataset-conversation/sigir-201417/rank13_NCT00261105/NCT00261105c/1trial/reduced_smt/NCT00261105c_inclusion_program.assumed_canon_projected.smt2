@@ -1,0 +1,11 @@
+;; ===================== PROJECTED CANON (QE) =====================
+;; Each clause below is entailed by Proj = ∃W.F over the canonical vocabulary.
+;; Units appear first for clarity; OR-clauses (SAT-filtered) follow.
+;; ==================================================================
+
+;; Unit Bool constraints (entailed)
+(assert patient_has_diagnosis_of_acute_sinusitis_now)
+
+;; Additional OR-clauses (SAT-filtered)
+(assert (or patient_has_finding_of_pain_in_face_now patient_has_finding_of_nasal_obstruction_now patient_has_finding_of_purulent_nasal_discharge_now patient_has_finding_of_posterior_rhinorrhea_now patient_has_finding_of_sense_of_smell_impaired_now patient_has_finding_of_loss_of_sense_of_smell_now patient_has_finding_of_fever_now))
+(assert (or patient_has_finding_of_headache_now patient_has_finding_of_breath_smells_unpleasant_now patient_has_finding_of_fatigue_now patient_has_finding_of_toothache_now patient_has_finding_of_cough_now patient_has_finding_of_pain_of_ear_structure_now patient_has_finding_of_ear_pressure_sensation_now))

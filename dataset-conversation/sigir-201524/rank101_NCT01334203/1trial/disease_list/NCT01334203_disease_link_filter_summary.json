@@ -1,0 +1,90 @@
+{
+  "generated": "2025-10-20T23:30:19",
+  "trial_id": "NCT01334203",
+  "contextual": {
+    "_id": "NCT01334203",
+    "title": "A Study on the Effects of Ranolazine on Exercise Duration in Subjects With Chronic Stable Angina and Coronary Artery Disease (CAD) With Type 2 Diabetes Mellitus (T2DM)",
+    "text": "Summary: This study will evaluate the efficacy of ranolazine compared to placebo on duration of exercise assessed by exercise tolerance testing (ETT) at anticipated peak ranolazine plasma concentration after 12 weeks of treatment in subjects with chronic stable angina and coronary artery disease (CAD) who have a history of type 2 diabetes mellitus (T2DM).\nInclusion criteria: inclusion criteria: \n\n Written informed consent \n\n Males and females aged 18 to 79 years \n\n Able to perform a Sheffield Modified Bruce Treadmill Exercise Protocol \n\n At least a 3-months history of chronic stable angina triggered by physical effort and relieved by rest and/or sublingual nitroglycerin \n\n Coronary artery disease documented by one or more of the following: \n\n Angiographic evidence of ≥ 50% stenosis of one or more major coronary arteries \n\n History of myocardial infarction (MI) documented by positive CK-MB enzymes, troponins, or ECG changes \n\n Cardiac nuclear scan studies diagnostic of CAD, e.g., thallium scan or ECHO with stress or pharmacologic interventions (adenosine, dipyridamole, etc.) \n\n Stable treatment with one of the following antianginal medications for at least 4 weeks prior to Screening: \n\n beta-blocker (atenolol up to 50 mg daily or metoprolol up to 100 mg daily) \n\n dihydropyridine calcium-channel blocker (amlodipine up to 5 mg daily or nifedipine up to 30 mg daily) \n\n non-dihydropyridine calcium-channel blocker (diltiazem 180 to 360 mg daily or verapamil 180 to 360 mg daily) \n\n Willingness to discontinue other antianginals and be treated with one of the allowed antianginal therapies \n\n Documented history of type 2 diabetes mellitus \n\n Females of childbearing potential must agree to utilize highly effective contraception methods from Screening throughout the duration of study treatment and for 14 days following the last dose of study drug. \n\n \nExclusion criteria: : \n\n Inability to exercise or having exercise limitation due to other co-morbidities that may interfere with ability to perform required ETT (e.g., morbid obesity, significant chronic lung disease, prior hospitalization for acute exacerbation of chronic lung disease or home oxygen use, chronic oral steroid therapy that can limit exercise capacity, osteoarthritis, peripheral artery disease, etc.) \n\n Any absolute contraindication to ETT \n\n Presence of electrocardiographic or other abnormalities that interfere with ECG interpretation or may cause a false positive stress test (e.g., ≥ 1 mm horizontal or down-sloping ST segment depression at rest in any standard ECG lead, Lown-Ganong-Levine syndrome, Wolff-Parkinson-White syndrome, left bundle branch block, left ventricular hypertrophy with repolarization abnormality, ventricular pacemaker, etc.) \n\n Decompensated heart failure \n\n Clinically significant valvular heart disease or congenital cardiac defects \n\n Acute coronary syndrome in the prior 2 months or coronary revascularization within the prior 6 months or planned coronary revascularization during the study period \n\n Stroke or transient ischemic attack within 6 months prior to Screening \n\n History of serious ventricular dysrhythmias or a history of life-threatening ventricular arrhythmia \n\n Atrial fibrillation \n\n QTc > 0.5 seconds \n\n Hypertrophic cardiomyopathy \n\n Uncontrolled hypertension (seated systolic blood pressure > 180 mm Hg or diastolic blood pressure > 110 mm Hg) \n\n Systolic blood pressure < 90 mm Hg \n\n Inability to discontinue current antianginal medications and remain on one allowed antianginal therapy \n\n Clinically significant hepatic impairment \n\n Creatinine clearance (CLCr) < 30 ml/min \n\n Prior treatment with ranolazine \n\n Participation in another investigational drug or device study within 1 month prior to Screening \n\n Females who are breastfeeding \n\n Positive serum pregnancy test \n\n Current treatment with potent inhibitors of CYP3A (e.g., ketoconazole, itraconazole, clarithromycin, nefazodone, nelfinavir, ritonavir, indinavir, and saquinavir) \n\n Current treatment with CYP3A and P glycoprotein (Pgp) inducers (e.g., rifampicin/rifampin, carbamazepine, St. John's wort) \n\n History of illicit drug use or alcohol abuse within one year of screening \n\n Any other conditions that, in the opinion of the investigator, are likely to prevent compliance with the study protocol or pose a safety concern if the subject participates in the study",
+    "metadata": {
+      "brief_title": "A Study on the Effects of Ranolazine on Exercise Duration in Subjects With Chronic Stable Angina and Coronary Artery Disease (CAD) With Type 2 Diabetes Mellitus (T2DM)",
+      "phase": "Phase 4",
+      "drugs": "['Ranolazine']",
+      "drugs_list": [
+        "Ranolazine"
+      ],
+      "diseases": "['Type 2 Diabetes Mellitus', 'Angina Pectoris', 'Coronary Artery Disease']",
+      "diseases_list": [
+        "Type 2 Diabetes Mellitus",
+        "Angina Pectoris",
+        "Coronary Artery Disease"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Written informed consent \n\n Males and females aged 18 to 79 years \n\n Able to perform a Sheffield Modified Bruce Treadmill Exercise Protocol \n\n At least a 3-months history of chronic stable angina triggered by physical effort and relieved by rest and/or sublingual nitroglycerin \n\n Coronary artery disease documented by one or more of the following: \n\n Angiographic evidence of ≥ 50% stenosis of one or more major coronary arteries \n\n History of myocardial infarction (MI) documented by positive CK-MB enzymes, troponins, or ECG changes \n\n Cardiac nuclear scan studies diagnostic of CAD, e.g., thallium scan or ECHO with stress or pharmacologic interventions (adenosine, dipyridamole, etc.) \n\n Stable treatment with one of the following antianginal medications for at least 4 weeks prior to Screening: \n\n beta-blocker (atenolol up to 50 mg daily or metoprolol up to 100 mg daily) \n\n dihydropyridine calcium-channel blocker (amlodipine up to 5 mg daily or nifedipine up to 30 mg daily) \n\n non-dihydropyridine calcium-channel blocker (diltiazem 180 to 360 mg daily or verapamil 180 to 360 mg daily) \n\n Willingness to discontinue other antianginals and be treated with one of the allowed antianginal therapies \n\n Documented history of type 2 diabetes mellitus \n\n Females of childbearing potential must agree to utilize highly effective contraception methods from Screening throughout the duration of study treatment and for 14 days following the last dose of study drug. \n\n ",
+      "exclusion_criteria": ": \n\n Inability to exercise or having exercise limitation due to other co-morbidities that may interfere with ability to perform required ETT (e.g., morbid obesity, significant chronic lung disease, prior hospitalization for acute exacerbation of chronic lung disease or home oxygen use, chronic oral steroid therapy that can limit exercise capacity, osteoarthritis, peripheral artery disease, etc.) \n\n Any absolute contraindication to ETT \n\n Presence of electrocardiographic or other abnormalities that interfere with ECG interpretation or may cause a false positive stress test (e.g., ≥ 1 mm horizontal or down-sloping ST segment depression at rest in any standard ECG lead, Lown-Ganong-Levine syndrome, Wolff-Parkinson-White syndrome, left bundle branch block, left ventricular hypertrophy with repolarization abnormality, ventricular pacemaker, etc.) \n\n Decompensated heart failure \n\n Clinically significant valvular heart disease or congenital cardiac defects \n\n Acute coronary syndrome in the prior 2 months or coronary revascularization within the prior 6 months or planned coronary revascularization during the study period \n\n Stroke or transient ischemic attack within 6 months prior to Screening \n\n History of serious ventricular dysrhythmias or a history of life-threatening ventricular arrhythmia \n\n Atrial fibrillation \n\n QTc > 0.5 seconds \n\n Hypertrophic cardiomyopathy \n\n Uncontrolled hypertension (seated systolic blood pressure > 180 mm Hg or diastolic blood pressure > 110 mm Hg) \n\n Systolic blood pressure < 90 mm Hg \n\n Inability to discontinue current antianginal medications and remain on one allowed antianginal therapy \n\n Clinically significant hepatic impairment \n\n Creatinine clearance (CLCr) < 30 ml/min \n\n Prior treatment with ranolazine \n\n Participation in another investigational drug or device study within 1 month prior to Screening \n\n Females who are breastfeeding \n\n Positive serum pregnancy test \n\n Current treatment with potent inhibitors of CYP3A (e.g., ketoconazole, itraconazole, clarithromycin, nefazodone, nelfinavir, ritonavir, indinavir, and saquinavir) \n\n Current treatment with CYP3A and P glycoprotein (Pgp) inducers (e.g., rifampicin/rifampin, carbamazepine, St. John's wort) \n\n History of illicit drug use or alcohol abuse within one year of screening \n\n Any other conditions that, in the opinion of the investigator, are likely to prevent compliance with the study protocol or pose a safety concern if the subject participates in the study",
+      "brief_summary": "This study will evaluate the efficacy of ranolazine compared to placebo on duration of exercise assessed by exercise tolerance testing (ETT) at anticipated peak ranolazine plasma concentration after 12 weeks of treatment in subjects with chronic stable angina and coronary artery disease (CAD) who have a history of type 2 diabetes mellitus (T2DM)."
+    }
+  },
+  "linked_result": {
+    "Type 2 Diabetes Mellitus": {
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "Type 2 diabetes mellitus",
+      "match_reason": "Exact"
+    },
+    "Angina Pectoris": {
+      "conceptId": "194828000",
+      "preferred_term": "Angina pectoris",
+      "fully_specified_name": "Angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.",
+      "best_match_term": "Angina pectoris",
+      "match_reason": "Exact"
+    },
+    "Coronary Artery Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary artery disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Type 2 Diabetes Mellitus": 1,
+    "Angina Pectoris": 1,
+    "Coronary Artery Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Type 2 Diabetes Mellitus": {
+      "disease": "Type 2 Diabetes Mellitus",
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "Type 2 diabetes mellitus"
+    },
+    "Angina Pectoris": {
+      "disease": "Angina Pectoris",
+      "conceptId": "194828000",
+      "preferred_term": "Angina pectoris",
+      "fully_specified_name": "Angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.",
+      "best_match_term": "Angina pectoris"
+    },
+    "Coronary Artery Disease": {
+      "disease": "Coronary Artery Disease",
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary artery disease"
+    }
+  }
+}

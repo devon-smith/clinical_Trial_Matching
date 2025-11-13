@@ -1,0 +1,22 @@
+{
+  "_id": "NCT00920270",
+  "title": "Nebulized Colistin for Hospital-Acquired Pneumonia",
+  "text": "Summary: Nebulized Colistin for Adjunctive Therapy of Hospital-Acquired Pneumonia caused by Gram Negative Bacteria should be more effective than conventional therapy\nInclusion criteria: inclusion criteria: \n\n Adult (age>18 years) hospitalized patient with hospital-acquired pneumonia due to Gram negative bacteria \n\n \nExclusion criteria: : \n\n pregnancy \n\n lactating woman \n\n colistin allergy \n\n severe renal impairment \n\n epilepsy",
+  "metadata": {
+    "brief_title": "Nebulized Colistin for Hospital-Acquired Pneumonia",
+    "phase": "Phase 3",
+    "drugs": "['nebulized colistin', 'antibiotics']",
+    "drugs_list": [
+      "nebulized colistin",
+      "antibiotics"
+    ],
+    "diseases": "['Pneumonia']",
+    "diseases_list": [
+      "Pneumonia"
+    ],
+    "enrollment": "140.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Adult (age>18 years) hospitalized patient with hospital-acquired pneumonia due to Gram negative bacteria \n\n ",
+    "exclusion_criteria": ": \n\n pregnancy \n\n lactating woman \n\n colistin allergy \n\n severe renal impairment \n\n epilepsy",
+    "brief_summary": "Nebulized Colistin for Adjunctive Therapy of Hospital-Acquired Pneumonia caused by Gram Negative Bacteria should be more effective than conventional therapy"
+  }
+}

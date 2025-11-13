@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_age_value_recorded_now_in_months",
+  "patient_has_diagnosis_of_community_acquired_pneumonia_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_fever_inthepast2days",
+  "patient_has_finding_of_tachypnea_now",
+  "patient_has_finding_of_empyema_now",
+  "patient_hemoglobin_saturation_with_oxygen_value_recorded_now_withunit_percent",
+  "patient_has_undergone_plain_chest_x_ray_now",
+  "patient_has_finding_of_respiratory_failure_now"
+]

@@ -1,0 +1,32 @@
+-- trials.db schema
+
+-- Table 1: Basic trial metadata
+CREATE TABLE trials (
+    nct_id VARCHAR(20) PRIMARY KEY,
+    title TEXT NOT NULL,
+    phase VARCHAR(10),        -- "Phase 3", "Phase 2", etc.
+    status VARCHAR(20),        -- "Recruiting", "Completed"
+    brief_summary TEXT,
+    enrollment INTEGER
+);
+
+-- Table 2: Eligibility criteria (structured representation)
+-- Each row is ONE criterion from inclusion/exclusion list
+CREATE TABLE criteria (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nct_id VARCHAR(20) NOT NULL,
+    criterion_type VARCHAR(50) NOT NULL,  -- 'age', 'gender', 'diagnosis', 'lab_value'
+    criterion_value TEXT NOT NULL,        -- '20-75', 'F', 'breast cancer'
+    is_inclusion BOOLEAN NOT NULL,        -- TRUE for inclusion, FALSE for exclusion
+    FOREIGN KEY(nct_id) REFERENCES trials(nct_id)
+);
+
+-- Table 3: Patient conversation state
+CREATE TABLE patient_data (
+    session_id VARCHAR(50) PRIMARY KEY,
+    known_attributes TEXT,     -- JSON string: '{"age": 45, "gender": "F"}'
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Index for faster queries
+CREATE INDEX idx_criteria_nct ON criteria(nct_id);

@@ -1,0 +1,73 @@
+{
+  "generated": "2025-10-20T23:40:20",
+  "trial_id": "NCT02589925",
+  "contextual": {
+    "_id": "NCT02589925",
+    "title": "Combined Subthalamic and Nucleus Basalis Meynert Deep Brain Stimulation for Parkinson's Disease With Dementia",
+    "text": "Summary: Phase 1 study evaluating the safety of combined bilateral subthalamic nucleus (STN) and basal nucleus of Meynert (NBM) stimulation in treating levodopa responsive motor symptoms of Parkinsonism and cognitive dysfunction in patients with advanced Parkinson's disease having mild to moderate dementia.\nInclusion criteria: inclusion criteria: \n\n Age at the time of enrollment: 35 - 75 years. \n\n Diagnosis of idiopathic PD with probable Parkinson's disease dementia (PDD) as defined by the MDS consensus guidelines (Emre et al., 2007) \n\n Mild to moderately severe dementia as defined by a Mini-Mental State Examination (MMSE) score of 10 to 24 \n\n Duration of bilateral idiopathic PD: ≥5 years of motor symptoms. \n\n Severity of bilateral idiopathic PD in the meds off state: modified Hoehn and Yahr stage ≥2. \n\n UPDRS subset III score of ≥30 in the meds off, stim off state. \n\n Levodopa must improve PD symptoms by ≥30% in a levodopa challenge test, as measured by UPDRS subset III score. \n\n PDD with a symptom onset at least 2 years after first symptoms of PD \n\n Be willing and able to comply with all visits and study related procedures (e.g., using the remote control, charging systems and completing the motor diary) if mentally competent or, if incompetent, their legally authorized representatives. \n\n Able to understand the study requirements and the treatment procedures and to provide written informed consent before any study-specific tests or procedures are performed. If mentally incompetent, the legally authorized representative provides written informed consent \n\n \nExclusion criteria: : \n\n Any significant psychiatric problems, including acute confusional state (delirium), ongoing psychosis, or clinically significant depression. \n\n Any current drug or alcohol abuse. \n\n Any history of recurrent or unprovoked seizures. \n\n Any prior movement disorder treatments that involved intracranial surgery or device implantation. \n\n A history of neurostimulation intolerance in any area of the body. \n\n Any significant medical condition that is likely to interfere with study procedures or likely to confound evaluation of study endpoints, including any terminal illness with survival <12 months. \n\n Participation in another drug, device, or biologics trial concurrently or within the preceding 30 days. Any other trial participation should be approved by the Principal Investigators. \n\n Pregnancy, breast-feeding, or lack of reliable contraception",
+    "metadata": {
+      "brief_title": "Combined Subthalamic and Nucleus Basalis Meynert Deep Brain Stimulation for Parkinson's Disease With Dementia",
+      "phase": "",
+      "drugs": "['Vercise deep brain stimulation', 'subthalamic nucleus (STN) stimulation', 'NBM stimulation', 'sham stimulation']",
+      "drugs_list": [
+        "Vercise deep brain stimulation",
+        "subthalamic nucleus (STN) stimulation",
+        "NBM stimulation",
+        "sham stimulation"
+      ],
+      "diseases": "['Parkinson Disease', 'Dementia']",
+      "diseases_list": [
+        "Parkinson Disease",
+        "Dementia"
+      ],
+      "enrollment": "10.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age at the time of enrollment: 35 - 75 years. \n\n Diagnosis of idiopathic PD with probable Parkinson's disease dementia (PDD) as defined by the MDS consensus guidelines (Emre et al., 2007) \n\n Mild to moderately severe dementia as defined by a Mini-Mental State Examination (MMSE) score of 10 to 24 \n\n Duration of bilateral idiopathic PD: ≥5 years of motor symptoms. \n\n Severity of bilateral idiopathic PD in the meds off state: modified Hoehn and Yahr stage ≥2. \n\n UPDRS subset III score of ≥30 in the meds off, stim off state. \n\n Levodopa must improve PD symptoms by ≥30% in a levodopa challenge test, as measured by UPDRS subset III score. \n\n PDD with a symptom onset at least 2 years after first symptoms of PD \n\n Be willing and able to comply with all visits and study related procedures (e.g., using the remote control, charging systems and completing the motor diary) if mentally competent or, if incompetent, their legally authorized representatives. \n\n Able to understand the study requirements and the treatment procedures and to provide written informed consent before any study-specific tests or procedures are performed. If mentally incompetent, the legally authorized representative provides written informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Any significant psychiatric problems, including acute confusional state (delirium), ongoing psychosis, or clinically significant depression. \n\n Any current drug or alcohol abuse. \n\n Any history of recurrent or unprovoked seizures. \n\n Any prior movement disorder treatments that involved intracranial surgery or device implantation. \n\n A history of neurostimulation intolerance in any area of the body. \n\n Any significant medical condition that is likely to interfere with study procedures or likely to confound evaluation of study endpoints, including any terminal illness with survival <12 months. \n\n Participation in another drug, device, or biologics trial concurrently or within the preceding 30 days. Any other trial participation should be approved by the Principal Investigators. \n\n Pregnancy, breast-feeding, or lack of reliable contraception",
+      "brief_summary": "Phase 1 study evaluating the safety of combined bilateral subthalamic nucleus (STN) and basal nucleus of Meynert (NBM) stimulation in treating levodopa responsive motor symptoms of Parkinsonism and cognitive dysfunction in patients with advanced Parkinson's disease having mild to moderate dementia."
+    }
+  },
+  "linked_result": {
+    "Parkinson Disease": {
+      "conceptId": "49049000",
+      "preferred_term": "Parkinson's disease",
+      "fully_specified_name": "Parkinson's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A progressive, degenerative neurologic disease characterized by a TREMOR that is maximal at rest, retropulsion (i.e. a tendency to fall backwards), rigidity, stooped posture, slowness of voluntary movements, and a masklike facial expression. Pathologic features include loss of melanin containing neurons in the substantia nigra and other pigmented nuclei of the brainstem. LEWY BODIES are present in the substantia nigra and locus coeruleus but may also be found in a related condition (LEWY BODY DISEASE, DIFFUSE) characterized by dementia in combination with varying degrees of parkinsonism. (Adams et al., Principles of Neurology, 6th ed, p1059, pp1067-75)",
+      "best_match_term": "Parkinson disease",
+      "match_reason": "Exact"
+    },
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Parkinson Disease": 1,
+    "Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Parkinson Disease": {
+      "disease": "Parkinson Disease",
+      "conceptId": "49049000",
+      "preferred_term": "Parkinson's disease",
+      "fully_specified_name": "Parkinson's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A progressive, degenerative neurologic disease characterized by a TREMOR that is maximal at rest, retropulsion (i.e. a tendency to fall backwards), rigidity, stooped posture, slowness of voluntary movements, and a masklike facial expression. Pathologic features include loss of melanin containing neurons in the substantia nigra and other pigmented nuclei of the brainstem. LEWY BODIES are present in the substantia nigra and locus coeruleus but may also be found in a related condition (LEWY BODY DISEASE, DIFFUSE) characterized by dementia in combination with varying degrees of parkinsonism. (Adams et al., Principles of Neurology, 6th ed, p1059, pp1067-75)",
+      "best_match_term": "Parkinson disease"
+    },
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    }
+  }
+}

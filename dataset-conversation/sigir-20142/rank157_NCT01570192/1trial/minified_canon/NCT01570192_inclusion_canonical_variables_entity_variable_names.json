@@ -1,0 +1,15 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_suspicion_of_bacterial_pneumonia_now",
+  "patient_has_finding_of_patient_in_hospital_now",
+  "patient_has_suspicion_of_pneumonia_now",
+  "patient_has_finding_of_respiratory_failure_now",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_has_undergone_pregnancy_detection_examination_now",
+  "patient_has_undergone_antibiotic_therapy_inthehistory",
+  "patient_bronchoscopy_and_bronchoalveolar_lavage_value_recorded_now_withunit_cfu_per_milliliter",
+  "patient_has_undergone_plain_chest_x_ray_inthehistory",
+  "patient_has_finding_of_radiologic_infiltrate_now"
+]

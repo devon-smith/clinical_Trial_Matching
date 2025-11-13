@@ -1,0 +1,13 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_diagnosis_of_dyslipidemia_now",
+  "patients_health_status_is_normal_now",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_has_undergone_drug_therapy_now_outcome_is_negative",
+  "patient_has_undergone_drug_therapy_inthehistory",
+  "patient_will_undergo_reconstruction_procedure_inthefuture"
+]

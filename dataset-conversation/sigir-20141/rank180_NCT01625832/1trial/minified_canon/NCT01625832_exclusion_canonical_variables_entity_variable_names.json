@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_acute_coronary_syndrome_now",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_has_finding_of_myocardial_infarction_now",
+  "patient_has_finding_of_occlusion_of_coronary_sinus_now",
+  "patient_has_finding_of_heart_valve_disorder_now",
+  "patient_creatinine_renal_clearance_value_recorded_now_withunit_ml_per_min",
+  "patient_is_pregnant_now"
+]

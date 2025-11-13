@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01199276",
+  "contextual": {
+    "_id": "NCT01199276",
+    "title": "Hip Fracture Surgery in Elderly Patients",
+    "text": "Summary: The objective of this study is to evaluate the incidence of Post-Operative Delirium (POD), diagnosed with the Confusion Assessment Method (CAM), in elderly patients undergoing hip fracture surgery under general anaesthesia with xenon or sevoflurane, for a period of four days post-surgery.\nInclusion criteria: inclusion criteria: \n\n Elderly patient (≥ 75 years) \n\n Patient with planned hip fracture surgery within 48 hours after the hip fracture \n\n Patient willing and able to complete the requirements of this study including the signature of the written informed consent \n\n \nExclusion criteria: : \n\n Patient suffering from multiple fractures, pelvic fractures proximal, pathological fractures, femur fractures (i.e., fractures of the middle or distal femur) \n\n Disabling neuropsychiatric disorders (severe dementia, Alzheimer's disease, schizophrenia, depression) \n\n Brain trauma within 12 months prior to selection, history of stroke with residuals \n\n Patient suffering from delirium (CAM diagnosis) at selection \n\n Patient who cannot complete the pre-operative mental tests (CAM and/or MMSE) of this clinical trial \n\n Patient with Mini-Mental State Examination (MMSE) score < 24 at selection \n\n Patient known to susceptible to malignant hyperthermia \n\n Patient with elevated intra-cranial pressure \n\n Patient with a risk of high oxygen demand \n\n Patient with recent or ongoing myocardial infarction / damage \n\n Patient with severe cardiac failure, or patient with severe impaired left ventricular systolic function \n\n Patient with known severe lung and/or airway disease, or severe chronic respiratory insufficiency, or a sustained homecare oxygen therapy \n\n Contra-indication (serious illness or medical conditions) for general anaesthesia \n\n Known allergy or hypersensitivity to any drugs administered during this clinical trial \n\n Previous participation in this clinical trial \n\n Participation in another clinical trial within 4 weeks prior to selection \n\n History of alcohol or drug abuse or psychiatric disorders which would impair the understanding of the necessary information or render medically or legally unable to give written informed consent",
+    "metadata": {
+      "brief_title": "Hip Fracture Surgery in Elderly Patients",
+      "phase": "Phase 2",
+      "drugs": "['Xenon', 'Sevoflurane']",
+      "drugs_list": [
+        "Xenon",
+        "Sevoflurane"
+      ],
+      "diseases": "['Delirium']",
+      "diseases_list": [
+        "Delirium"
+      ],
+      "enrollment": "256.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Elderly patient (≥ 75 years) \n\n Patient with planned hip fracture surgery within 48 hours after the hip fracture \n\n Patient willing and able to complete the requirements of this study including the signature of the written informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Patient suffering from multiple fractures, pelvic fractures proximal, pathological fractures, femur fractures (i.e., fractures of the middle or distal femur) \n\n Disabling neuropsychiatric disorders (severe dementia, Alzheimer's disease, schizophrenia, depression) \n\n Brain trauma within 12 months prior to selection, history of stroke with residuals \n\n Patient suffering from delirium (CAM diagnosis) at selection \n\n Patient who cannot complete the pre-operative mental tests (CAM and/or MMSE) of this clinical trial \n\n Patient with Mini-Mental State Examination (MMSE) score < 24 at selection \n\n Patient known to susceptible to malignant hyperthermia \n\n Patient with elevated intra-cranial pressure \n\n Patient with a risk of high oxygen demand \n\n Patient with recent or ongoing myocardial infarction / damage \n\n Patient with severe cardiac failure, or patient with severe impaired left ventricular systolic function \n\n Patient with known severe lung and/or airway disease, or severe chronic respiratory insufficiency, or a sustained homecare oxygen therapy \n\n Contra-indication (serious illness or medical conditions) for general anaesthesia \n\n Known allergy or hypersensitivity to any drugs administered during this clinical trial \n\n Previous participation in this clinical trial \n\n Participation in another clinical trial within 4 weeks prior to selection \n\n History of alcohol or drug abuse or psychiatric disorders which would impair the understanding of the necessary information or render medically or legally unable to give written informed consent",
+      "brief_summary": "The objective of this study is to evaluate the incidence of Post-Operative Delirium (POD), diagnosed with the Confusion Assessment Method (CAM), in elderly patients undergoing hip fracture surgery under general anaesthesia with xenon or sevoflurane, for a period of four days post-surgery."
+    }
+  }
+}

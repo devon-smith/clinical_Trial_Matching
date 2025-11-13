@@ -1,0 +1,68 @@
+{
+  "generated": "2025-10-20T22:57:15",
+  "trial_id": "NCT01384357",
+  "contextual": {
+    "_id": "NCT01384357",
+    "title": "Ultrasound-Guided Needle Biopsy in the Diagnosis of Malignant Cervical Lymphadenopathies",
+    "text": "Summary: The objective of the present study was to compare ultrasound (US) characteristics and ultrasound-guided core-needle biopsy (US-CNB) with US-guided fine-needle aspiration (US-FNA) in the assessment of different malignant cervical lymphadenopathies. Patients with malignant cervical lymphadenopathie with either US-FNA or US-CNB over a 3-year period from 2007 July to 2010 Dec were retrospectively reviewed. There are two major study groups according to the treatment status of the patient's population, including patients who had pathology proofed previous cancer and with clinically cervical lymphadenopathies after treatment. The second group included patients with cervical lymphaenopathies but without previous diagnosis of malignancy and treatment. The results of cytology, or pathology and time of needle biopsy to final diagnosis were traced and recorded. Morphologic US parameters and vascular features were thoroughly evaluated and compared in different disease.\nInclusion criteria: inclusion criteria: \n\n Patients with malignant cervical lymphadenopathie With US-FNA or US-CNB evaluation before \n\n \nExclusion criteria: : \n\n No ultrasound exam",
+    "metadata": {
+      "brief_title": "Ultrasound-Guided Needle Biopsy in the Diagnosis of Malignant Cervical Lymphadenopathies",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Lymphadenopathy', 'Malignancy']",
+      "diseases_list": [
+        "Lymphadenopathy",
+        "Malignancy"
+      ],
+      "enrollment": "116.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients with malignant cervical lymphadenopathie With US-FNA or US-CNB evaluation before \n\n ",
+      "exclusion_criteria": ": \n\n No ultrasound exam",
+      "brief_summary": "The objective of the present study was to compare ultrasound (US) characteristics and ultrasound-guided core-needle biopsy (US-CNB) with US-guided fine-needle aspiration (US-FNA) in the assessment of different malignant cervical lymphadenopathies. Patients with malignant cervical lymphadenopathie with either US-FNA or US-CNB over a 3-year period from 2007 July to 2010 Dec were retrospectively reviewed. There are two major study groups according to the treatment status of the patient's population, including patients who had pathology proofed previous cancer and with clinically cervical lymphadenopathies after treatment. The second group included patients with cervical lymphaenopathies but without previous diagnosis of malignancy and treatment. The results of cytology, or pathology and time of needle biopsy to final diagnosis were traced and recorded. Morphologic US parameters and vascular features were thoroughly evaluated and compared in different disease."
+    }
+  },
+  "linked_result": {
+    "Lymphadenopathy": {
+      "conceptId": "30746006",
+      "preferred_term": "Lymphadenopathy",
+      "fully_specified_name": "Lymphadenopathy (disorder)",
+      "type": "Clinical finding",
+      "definition": "Disease of LYMPH NODES which are abnormal in size, number or consistency.",
+      "best_match_term": "Lymphadenopathy",
+      "match_reason": "Exact"
+    },
+    "Malignancy": {
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Malignant neoplasm",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Lymphadenopathy": 1,
+    "Malignancy": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Lymphadenopathy": {
+      "disease": "Lymphadenopathy",
+      "conceptId": "30746006",
+      "preferred_term": "Lymphadenopathy",
+      "fully_specified_name": "Lymphadenopathy (disorder)",
+      "type": "Clinical finding",
+      "definition": "Disease of LYMPH NODES which are abnormal in size, number or consistency.",
+      "best_match_term": "Lymphadenopathy"
+    },
+    "Malignancy": {
+      "disease": "Malignancy",
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Malignant neoplasm"
+    }
+  }
+}

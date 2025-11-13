@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:35:50",
+  "trial_id": "NCT02206971",
+  "contextual": {
+    "_id": "NCT02206971",
+    "title": "Biomarker Feedback for Smoking Cessation",
+    "text": "Summary: The purpose of this study is to examine the impact of providing light smokers with feedback about their health, including exposure to tobacco-related chemicals.\nInclusion criteria: inclusion criteria: \n\n Male or female cigarette smokers, 18-75 years \n\n Smoked an average of less than 10 cigarettes per day during past month \n\n A personally signed and dated informed consent document indicating that the subject has been informed of all pertinent aspects of the study. \n\n \nExclusion criteria: : \n\n Only one subject per household may participate \n\n Pregnancy",
+    "metadata": {
+      "brief_title": "Biomarker Feedback for Smoking Cessation",
+      "phase": "",
+      "drugs": "['urine analyses feedback']",
+      "drugs_list": [
+        "urine analyses feedback"
+      ],
+      "diseases": "['Cigarette Smoking']",
+      "diseases_list": [
+        "Cigarette Smoking"
+      ],
+      "enrollment": "109.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Male or female cigarette smokers, 18-75 years \n\n Smoked an average of less than 10 cigarettes per day during past month \n\n A personally signed and dated informed consent document indicating that the subject has been informed of all pertinent aspects of the study. \n\n ",
+      "exclusion_criteria": ": \n\n Only one subject per household may participate \n\n Pregnancy",
+      "brief_summary": "The purpose of this study is to examine the impact of providing light smokers with feedback about their health, including exposure to tobacco-related chemicals."
+    }
+  },
+  "linked_result": {
+    "Cigarette Smoking": {
+      "conceptId": "365981007",
+      "preferred_term": "Tobacco smoking behavior - finding",
+      "fully_specified_name": "Finding of tobacco smoking behavior (finding)",
+      "type": "Clinical finding",
+      "definition": "The process of SMOKING specific to TOBACCO.",
+      "best_match_term": "Smoking",
+      "match_reason": "Ancestor"
+    }
+  },
+  "kept_counts": {
+    "Cigarette Smoking": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cigarette Smoking": {
+      "disease": "Cigarette Smoking",
+      "conceptId": "365981007",
+      "preferred_term": "Tobacco smoking behavior - finding",
+      "fully_specified_name": "Finding of tobacco smoking behavior (finding)",
+      "type": "Clinical finding",
+      "definition": "The process of SMOKING specific to TOBACCO.",
+      "best_match_term": "Smoking"
+    }
+  }
+}

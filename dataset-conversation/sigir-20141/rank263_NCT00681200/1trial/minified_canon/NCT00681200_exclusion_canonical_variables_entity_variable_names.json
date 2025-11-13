@@ -1,0 +1,16 @@
+[
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_diagnosis_of_angina_pectoris_inthehistory",
+  "patient_has_diagnosis_of_cerebrovascular_accident_inthehistory",
+  "patient_has_diagnosis_of_congestive_heart_failure_inthehistory",
+  "patient_has_diagnosis_of_disorder_of_cardiovascular_system_inthehistory",
+  "patient_has_diagnosis_of_intermittent_claudication_inthehistory",
+  "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_renal_failure_syndrome_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_dementia_inthehistory",
+  "patient_has_finding_of_mental_disorder_inthehistory",
+  "patient_has_finding_of_psychoactive_substance_abuse_inthehistory",
+  "patient_has_finding_of_psychotic_disorder_inthehistory"
+]

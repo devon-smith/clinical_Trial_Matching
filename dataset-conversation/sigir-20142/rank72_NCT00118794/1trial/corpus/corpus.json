@@ -1,0 +1,22 @@
+{
+  "_id": "NCT00118794",
+  "title": "Lapdap and Coartemether for Uncomplicated Malaria",
+  "text": "Summary: Lapdap (chlorproguanil-dapsone) is an affordable and effective drug, but patients with glucose-6-phosphate dehydrogenase (G6PD) A- deficiency are more susceptible to the haemolytic effects of the dapsone component of Lapdap; therefore there is a need to evaluate the extent to which the risks associated with the use of the drug in settings without G6PD screening might outweigh the benefits to malaria treatment. The investigators will evaluate, in operational settings, the safety and effectiveness of Lapdap and coartemether (lumefantrine-artemether) for treatment of uncomplicated malaria in patients 6 months to 10 years of age.\nInclusion criteria: inclusion criteria: \n\n presentation at health centre with febrile illness \n\n monoinfection with P falciparum \n\n parasitaemia >=500/microlitre \n\n fever or history of fever \n\n \nExclusion criteria: : \n\n signs of severe or complicated malaria (persistent vomiting with or without dehydration, history of convulsion during the present illness, inability to sit or stand, parasitaemia >200,000/ul) \n\n severe malnutrition \n\n clinically evident concomitant disease \n\n PCV <20% \n\n history of allergy to the study medications \n\n residence outside the study area and hence difficult to follow up",
+  "metadata": {
+    "brief_title": "Lapdap and Coartemether for Uncomplicated Malaria",
+    "phase": "Phase 3",
+    "drugs": "['Chlorproguanil-dapsone (Lapdap)', 'Lumefantrine-artemether (Coartemether )']",
+    "drugs_list": [
+      "Chlorproguanil-dapsone (Lapdap)",
+      "Lumefantrine-artemether (Coartemether )"
+    ],
+    "diseases": "['Malaria']",
+    "diseases_list": [
+      "Malaria"
+    ],
+    "enrollment": "1200.0",
+    "inclusion_criteria": "inclusion criteria: \n\n presentation at health centre with febrile illness \n\n monoinfection with P falciparum \n\n parasitaemia >=500/microlitre \n\n fever or history of fever \n\n ",
+    "exclusion_criteria": ": \n\n signs of severe or complicated malaria (persistent vomiting with or without dehydration, history of convulsion during the present illness, inability to sit or stand, parasitaemia >200,000/ul) \n\n severe malnutrition \n\n clinically evident concomitant disease \n\n PCV <20% \n\n history of allergy to the study medications \n\n residence outside the study area and hence difficult to follow up",
+    "brief_summary": "Lapdap (chlorproguanil-dapsone) is an affordable and effective drug, but patients with glucose-6-phosphate dehydrogenase (G6PD) A- deficiency are more susceptible to the haemolytic effects of the dapsone component of Lapdap; therefore there is a need to evaluate the extent to which the risks associated with the use of the drug in settings without G6PD screening might outweigh the benefits to malaria treatment. The investigators will evaluate, in operational settings, the safety and effectiveness of Lapdap and coartemether (lumefantrine-artemether) for treatment of uncomplicated malaria in patients 6 months to 10 years of age."
+  }
+}

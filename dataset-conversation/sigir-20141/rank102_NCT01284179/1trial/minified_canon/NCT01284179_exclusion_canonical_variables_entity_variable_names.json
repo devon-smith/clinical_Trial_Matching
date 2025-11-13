@@ -1,0 +1,15 @@
+[
+  "patient_has_finding_of_disease_of_liver_now",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_has_finding_of_heart_disease_now",
+  "patient_has_finding_of_kidney_disease_now",
+  "patient_has_undergone_surgical_procedure_on_thorax_inthehistory",
+  "patient_has_diagnosis_of_borderline_personality_disorder_inthehistory",
+  "patient_has_finding_of_borderline_personality_disorder_treated_inthehistory",
+  "patient_has_diagnosis_of_dissociative_disorder_inthehistory",
+  "patient_has_finding_of_dissociative_disorder_treated_inthehistory",
+  "patient_has_diagnosis_of_posttraumatic_stress_disorder_inthehistory",
+  "patient_has_finding_of_posttraumatic_stress_disorder_treated_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_is_pregnant_inthefuture3months"
+]

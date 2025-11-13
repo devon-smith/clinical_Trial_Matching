@@ -1,0 +1,14 @@
+[
+  "patient_has_finding_of_airway_morbidity_now",
+  "patient_has_finding_of_congenital_malformation_of_the_respiratory_system_now",
+  "patient_has_finding_of_disorder_of_lung_inthehistory",
+  "patient_has_finding_of_failure_to_thrive_inthehistory",
+  "patient_has_finding_of_heart_disease_inthehistory",
+  "patient_has_finding_of_myoneural_disorder_inthehistory",
+  "patient_has_finding_of_apnea_inthehistory",
+  "patient_has_finding_of_bacterial_pneumonia_inthehistory",
+  "patient_has_finding_of_wheezing_inthehistory",
+  "patient_hemoglobin_saturation_with_oxygen_value_recorded_now_withunit_percent",
+  "patient_has_undergone_follow_up_visit_inthehistory",
+  "patient_is_exposed_to_steroid_now"
+]

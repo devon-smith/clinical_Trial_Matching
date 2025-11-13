@@ -1,0 +1,7 @@
+[
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_geriatric_depression_scale_short_form_score_value_recorded_now_withunit_score",
+  "patient_alcohol_intake_finding_value_recorded_now_withunit_units_per_day",
+  "patient_mini_mental_state_examination_score_value_recorded_now_withunit_score",
+  "patient_cdr_clinical_dementia_rating_score_value_recorded_now_withunit_score"
+]

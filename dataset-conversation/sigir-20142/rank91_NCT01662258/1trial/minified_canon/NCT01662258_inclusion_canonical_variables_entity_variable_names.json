@@ -1,0 +1,13 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_community_acquired_pneumonia_now",
+  "patient_has_diagnosis_of_community_acquired_pneumonia_now",
+  "patient_has_finding_of_abnormal_chest_sounds_now",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_dyspnea_now",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_radiologic_infiltrate_of_lung_now",
+  "patient_is_exposed_to_sputum_now",
+  "patient_white_blood_cell_count_value_recorded_now_withunit_cells_per_milliliter"
+]

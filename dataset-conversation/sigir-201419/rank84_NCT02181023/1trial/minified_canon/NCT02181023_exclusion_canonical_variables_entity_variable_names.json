@@ -1,0 +1,19 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_childbearing_potential_now",
+  "patient_has_finding_of_menstrual_bleeding_present_now",
+  "patient_is_pregnant_now",
+  "patient_has_undergone_clinical_trial_inthepast1months",
+  "patient_is_undergoing_clinical_trial_now",
+  "patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_percent_of_predicted_value",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent_of_predicted_value",
+  "patient_has_finding_of_alpha_1_antitrypsin_deficiency_now",
+  "patient_has_undergone_lung_volume_reduction_surgery_5a6303_inthehistory",
+  "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+  "patient_has_finding_of_alcohol_abuse_now",
+  "patient_has_finding_of_misuses_drugs_now",
+  "patient_has_undergone_measurement_of_respiratory_function_now",
+  "patient_has_diagnosis_of_mental_disorder_now",
+  "patient_is_undergoing_long_term_oxygen_therapy_now",
+  "patient_oxygen_value_recorded_now_withunit_litres_per_minute"
+]

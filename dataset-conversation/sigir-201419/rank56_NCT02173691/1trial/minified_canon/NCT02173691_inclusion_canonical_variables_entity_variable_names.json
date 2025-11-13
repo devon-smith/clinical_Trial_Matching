@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent_fvc_ratio",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent_predicted",
+  "patient_has_diagnosis_of_moderate_chronic_obstructive_pulmonary_disease_now",
+  "patient_has_diagnosis_of_severe_chronic_obstructive_pulmonary_disease_now",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent",
+  "patient_tobacco_smoking_behavior_finding_value_recorded_inthehistory_withunit_pack_years",
+  "patient_can_undergo_shuttle_test_now"
+]

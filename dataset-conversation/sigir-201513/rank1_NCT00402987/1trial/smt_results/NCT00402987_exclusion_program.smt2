@@ -1,0 +1,58 @@
+;; ===================== Declarations for the exclusion criterion (REQ 0) =====================
+(declare-const patient_is_exposed_to_analgesic_inthehistory Bool) ;; {"when_to_set_to_true":"Set to true if the patient has ever been exposed to any analgesic at any time in the past.","when_to_set_to_false":"Set to false if the patient has never been exposed to any analgesic at any time in the past.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been exposed to any analgesic.","meaning":"Boolean indicating whether the patient has ever been exposed to any analgesic at any time in the past."} ;; "analgesic medication"
+(declare-const patient_is_exposed_to_analgesic_inthehistory@@temporalcontext_within_one_dosing_interval_before_first_trial_medication_administration Bool) ;; {"when_to_set_to_true":"Set to true if the patient was exposed to any analgesic within one dosing interval before the first dose of trial medication was administered.","when_to_set_to_false":"Set to false if the patient was not exposed to any analgesic within one dosing interval before the first dose of trial medication was administered.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient was exposed to any analgesic within one dosing interval before the first dose of trial medication.","meaning":"Boolean indicating whether the patient was exposed to any analgesic within one dosing interval before the first dose of trial medication."} ;; "analgesic medication within one dosing interval preceding administration of the first dose of trial medication"
+(declare-const patient_is_exposed_to_drug_or_medicament_inthehistory Bool) ;; {"when_to_set_to_true":"Set to true if the patient has ever been exposed to any drug or medicament at any time in the past.","when_to_set_to_false":"Set to false if the patient has never been exposed to any drug or medicament at any time in the past.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been exposed to any drug or medicament.","meaning":"Boolean indicating whether the patient has ever been exposed to any drug or medicament at any time in the past."} ;; "medication"
+(declare-const patient_is_exposed_to_drug_or_medicament_inthehistory@@restricted_to_antipyretic_medication Bool) ;; {"when_to_set_to_true":"Set to true if the patient was exposed to any antipyretic medication at any time in the past.","when_to_set_to_false":"Set to false if the patient was not exposed to any antipyretic medication at any time in the past.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient was exposed to any antipyretic medication at any time in the past.","meaning":"Boolean indicating whether the patient was exposed to any antipyretic medication at any time in the past."} ;; "antipyretic medication"
+(declare-const patient_is_exposed_to_drug_or_medicament_inthehistory@@temporalcontext_within_one_dosing_interval_before_first_trial_medication_administration Bool) ;; {"when_to_set_to_true":"Set to true if the patient was exposed to any antipyretic medication within one dosing interval before the first dose of trial medication was administered.","when_to_set_to_false":"Set to false if the patient was not exposed to any antipyretic medication within one dosing interval before the first dose of trial medication was administered.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient was exposed to any antipyretic medication within one dosing interval before the first dose of trial medication.","meaning":"Boolean indicating whether the patient was exposed to any antipyretic medication within one dosing interval before the first dose of trial medication."} ;; "antipyretic medication within one dosing interval preceding administration of the first dose of trial medication"
+
+;; ===================== Auxiliary Assertions (REQ 0) =====================
+;; Qualifier variable implies corresponding stem variable for analgesic
+(assert
+(! (=> patient_is_exposed_to_analgesic_inthehistory@@temporalcontext_within_one_dosing_interval_before_first_trial_medication_administration
+      patient_is_exposed_to_analgesic_inthehistory)
+:named REQ0_AUXILIARY0)) ;; "analgesic medication within one dosing interval preceding administration of the first dose of trial medication"
+
+;; Qualifier variable implies corresponding stem variable for antipyretic
+(assert
+(! (=> patient_is_exposed_to_drug_or_medicament_inthehistory@@temporalcontext_within_one_dosing_interval_before_first_trial_medication_administration
+      patient_is_exposed_to_drug_or_medicament_inthehistory@@restricted_to_antipyretic_medication)
+:named REQ0_AUXILIARY1)) ;; "antipyretic medication within one dosing interval preceding administration of the first dose of trial medication"
+
+;; Qualifier variable for antipyretic implies stem variable for all drugs/medicaments
+(assert
+(! (=> patient_is_exposed_to_drug_or_medicament_inthehistory@@restricted_to_antipyretic_medication
+      patient_is_exposed_to_drug_or_medicament_inthehistory)
+:named REQ0_AUXILIARY2)) ;; "antipyretic medication"
+
+;; ===================== Constraint Assertions (REQ 0) =====================
+;; Exclusion: patient must NOT have used any analgesic medication within one dosing interval preceding administration of the first dose of trial medication
+(assert
+(! (not patient_is_exposed_to_analgesic_inthehistory@@temporalcontext_within_one_dosing_interval_before_first_trial_medication_administration)
+:named REQ0_COMPONENT0_OTHER_REQUIREMENTS)) ;; "The patient is excluded if the patient has used any analgesic medication within one dosing interval preceding administration of the first dose of trial medication."
+
+;; Exclusion: patient must NOT have used any antipyretic medication within one dosing interval preceding administration of the first dose of trial medication
+(assert
+(! (not patient_is_exposed_to_drug_or_medicament_inthehistory@@temporalcontext_within_one_dosing_interval_before_first_trial_medication_administration)
+:named REQ0_COMPONENT1_OTHER_REQUIREMENTS)) ;; "The patient is excluded if the patient has used any antipyretic medication within one dosing interval preceding administration of the first dose of trial medication."
+
+;; ===================== Declarations for the exclusion criterion (REQ 1) =====================
+(declare-const patient_anticipates_using_inhaled_therapy_during_trial_period_24h Bool) ;; {"when_to_set_to_true":"Set to true if the patient anticipates using any inhaled therapy, including any beta-agonist therapy, at any time during the 24 hour trial period.","when_to_set_to_false":"Set to false if the patient does not anticipate using any inhaled therapy, including any beta-agonist therapy, at any time during the 24 hour trial period.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient anticipates using any inhaled therapy, including any beta-agonist therapy, during the 24 hour trial period.","meaning":"Boolean indicating whether the patient anticipates using any inhaled therapy, including any beta-agonist therapy, during the 24 hour trial period."} ;; "anticipates using any inhaled therapy, including any beta-agonist therapy (e.g., ventolin), during the 24 hour trial period"
+(declare-const patient_has_undergone_inhaled_drug_administration_inthehistory Bool) ;; {"when_to_set_to_true":"Set to true if the patient has ever undergone inhaled drug administration at any time in the past.","when_to_set_to_false":"Set to false if the patient has never undergone inhaled drug administration at any time in the past.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever undergone inhaled drug administration.","meaning":"Boolean indicating whether the patient has ever undergone inhaled drug administration at any time in the past."} ;; "inhaled therapy"
+(declare-const patient_has_used_inhaled_therapy_on_intermittent_basis_in_week_prior_to_screening_visit Bool) ;; {"when_to_set_to_true":"Set to true if the patient has only used inhaled therapy on an intermittent basis in the week prior to the screening visit.","when_to_set_to_false":"Set to false if the patient has used inhaled therapy on a regular or non-intermittent basis in the week prior to the screening visit, or has not used inhaled therapy at all.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient has only used inhaled therapy on an intermittent basis in the week prior to the screening visit.","meaning":"Boolean indicating whether the patient has only used inhaled therapy on an intermittent basis in the week prior to the screening visit."} ;; "has only used inhaled therapy on an intermittent basis in the week prior to the screening visit"
+(declare-const patient_is_taking_albuterol_containing_product_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient is currently taking any albuterol-containing product (e.g., ventolin).","when_to_set_to_false":"Set to false if the patient is not currently taking any albuterol-containing product.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking any albuterol-containing product.","meaning":"Boolean indicating whether the patient is currently taking any albuterol-containing product (e.g., ventolin)."} ;; "ventolin"
+(declare-const patient_is_taking_beta_adrenergic_receptor_agonist_containing_product_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient is currently taking any beta-adrenergic receptor agonist-containing product.","when_to_set_to_false":"Set to false if the patient is not currently taking any beta-adrenergic receptor agonist-containing product.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently taking any beta-adrenergic receptor agonist-containing product.","meaning":"Boolean indicating whether the patient is currently taking any beta-adrenergic receptor agonist-containing product."} ;; "beta-agonist therapy"
+
+;; ===================== Auxiliary Assertions (REQ 1) =====================
+;; "including any beta-agonist therapy (e.g., ventolin)" -- non-exhaustive examples
+(assert
+(! (=> (or patient_is_taking_beta_adrenergic_receptor_agonist_containing_product_now
+           patient_is_taking_albuterol_containing_product_now)
+     patient_anticipates_using_inhaled_therapy_during_trial_period_24h)
+:named REQ1_AUXILIARY0)) ;; "including any beta-agonist therapy (e.g., ventolin)"
+
+;; ===================== Constraint Assertions (REQ 1) =====================
+;; Exclusion: patient must NOT anticipate using any inhaled therapy during the 24 hour trial period AND, if any inhaled therapy is used, must NOT have only used inhaled therapy on an intermittent basis in the week prior to screening
+(assert
+(! (not (and patient_anticipates_using_inhaled_therapy_during_trial_period_24h
+             patient_has_used_inhaled_therapy_on_intermittent_basis_in_week_prior_to_screening_visit))
+:named REQ1_COMPONENT0_OTHER_REQUIREMENTS)) ;; "A patient is excluded if the patient anticipates using any inhaled therapy, including any beta-agonist therapy (e.g., ventolin), during the 24 hour trial period and, if any inhaled therapy is used, has only used inhaled therapy on an intermittent basis in the week prior to the screening visit."

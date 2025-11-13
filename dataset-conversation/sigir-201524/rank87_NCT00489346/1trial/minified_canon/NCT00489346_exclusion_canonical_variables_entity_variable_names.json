@@ -1,0 +1,5 @@
+[
+  "patient_has_finding_of_patient_in_hospital_now",
+  "patient_has_undergone_clinical_trial_inthepast4weeks",
+  "patient_has_undergone_surgical_procedure_inthepast4weeks"
+]

@@ -1,0 +1,20 @@
+;; ===================== Declarations for the criterion (REQ 0) =====================
+(declare-const patient_age_value_recorded_now_in_years Real) ;; {"when_to_set_to_value":"Set to the patient's current age in years if it is known and documented.","when_to_set_to_null":"Set to null if the patient's current age in years is unknown, not documented, or cannot be determined.","meaning":"Numeric value indicating the patient's current age in years."} // "based on age"
+(declare-const patient_sex_is_female_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient's sex is documented as female at the current time.","when_to_set_to_false":"Set to false if the patient's sex is documented as not female at the current time.","when_to_set_to_null":"Set to null if the patient's sex is unknown, not documented, or cannot be determined at the current time.","meaning":"Indicates whether the patient's sex is female at the current time."} // "based on sex"
+(declare-const patient_sex_is_male_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient's sex is documented as male at the current time.","when_to_set_to_false":"Set to false if the patient's sex is documented as not male at the current time.","when_to_set_to_null":"Set to null if the patient's sex is unknown, not documented, or cannot be determined at the current time.","meaning":"Indicates whether the patient's sex is male at the current time."} // "based on sex"
+(declare-const patient_has_finding_of_symptoms_relevant_to_ischemic_heart_disease_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient currently has symptoms relevant to ischemic heart disease.","when_to_set_to_false":"Set to false if the patient currently does not have symptoms relevant to ischemic heart disease.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has symptoms relevant to ischemic heart disease.","meaning":"Boolean indicating whether the patient currently has symptoms relevant to ischemic heart disease."} // "based on symptoms"
+(declare-const patient_exercise_stress_test_result_value_recorded_now_withunit_percent Real) ;; {"when_to_set_to_value":"Set to the measured or calculated percentage value if the patient's current exercise stress test result is available.","when_to_set_to_null":"Set to null if no such result value is available or the value is indeterminate.","meaning":"Numeric percentage representing the patient's current exercise stress test result."} // "based on exercise stress test results"
+(declare-const patient_ischemic_heart_disease_value_recorded_now_withunit_percent Real) ;; {"when_to_set_to_value":"Set to the measured or calculated percentage value if the patient's current risk of ischemic heart disease is available.","when_to_set_to_null":"Set to null if no such risk value is available or the value is indeterminate.","meaning":"Numeric percentage representing the patient's current risk of ischemic heart disease."} // "risk of ischemic heart disease > 20 percent AND risk of ischemic heart disease < 90 percent"
+
+;; ===================== Constraint Assertions (REQ 0) =====================
+;; Component 0: To be included, the patient must have intermediate risk of ischemic heart disease (>20%, <90%) based on age, sex, symptoms, and exercise stress test results.
+(assert
+  (! (and
+        (> patient_ischemic_heart_disease_value_recorded_now_withunit_percent 20.0) ;; "risk of ischemic heart disease > 20 percent"
+        (< patient_ischemic_heart_disease_value_recorded_now_withunit_percent 90.0) ;; "risk of ischemic heart disease < 90 percent"
+        (or patient_sex_is_female_now patient_sex_is_male_now) ;; "based on sex"
+        (not (= patient_age_value_recorded_now_in_years 0.0)) ;; "based on age" (age must be known and nonzero)
+        patient_has_finding_of_symptoms_relevant_to_ischemic_heart_disease_now ;; "based on symptoms"
+        (not (= patient_exercise_stress_test_result_value_recorded_now_withunit_percent 0.0)) ;; "based on exercise stress test results" (must be known and nonzero)
+     )
+     :named REQ0_COMPONENT0_OTHER_REQUIREMENTS))

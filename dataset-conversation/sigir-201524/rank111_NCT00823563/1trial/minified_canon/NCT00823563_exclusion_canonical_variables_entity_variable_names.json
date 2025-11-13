@@ -1,0 +1,20 @@
+[
+  "patient_has_finding_of_asymptomatic_now",
+  "patient_is_undergoing_cardiac_catheterization_now",
+  "patient_has_undergone_transplantation_of_heart_inthehistory",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_renal_insufficiency_now",
+  "patient_has_finding_of_acute_coronary_syndrome_now",
+  "patient_cardiac_ejection_fraction_value_recorded_now_withunit_percent",
+  "patients_cardiac_ejection_fraction_is_abnormal_now",
+  "patient_has_finding_of_cardiogenic_shock_now",
+  "patient_has_finding_of_takotsubo_cardiomyopathy_now",
+  "patient_has_finding_of_ventricular_fibrillation_now",
+  "patient_has_finding_of_ventricular_tachycardia_now",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_finding_of_adverse_reaction_to_drug_inthehistory",
+  "patient_has_finding_of_hearing_loss_now",
+  "patient_has_finding_of_visual_impairment_now",
+  "patient_is_pregnant_now"
+]

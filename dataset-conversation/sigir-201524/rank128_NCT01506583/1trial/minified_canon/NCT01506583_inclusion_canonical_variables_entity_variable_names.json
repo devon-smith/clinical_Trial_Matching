@@ -1,0 +1,10 @@
+[
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_fatigue_now",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_headache_now",
+  "patient_has_finding_of_influenza_like_illness_now",
+  "patient_has_finding_of_muscle_pain_now",
+  "patient_has_finding_of_nasal_obstruction_now",
+  "patient_has_finding_of_pain_in_throat_now"
+]

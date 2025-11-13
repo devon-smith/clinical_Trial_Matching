@@ -1,0 +1,98 @@
+# Intrapleural Minocycline After Simple Aspiration for the Prevention of Primary Spontaneous Pneumothorax
+**NCT**: `NCT00418392`
+## Brief Summary
+The estimated recurrence rate of primary spontaneous pneumothorax is 23-50% after the first episode, and the optimal treatment remains unknown. In the recently published British Thoracic Society (BTS) guidelines, simple aspiration is recommended as first line treatment for all primary pneumothoraces requiring intervention. However, the 1 year recurrence rate of this procedure was as high as 25-30%, making it inappropriate as a standard of care.~Intrapleural instillation of a chemical irritant (chemical pleurodesis) is an effective way to shorten the duration of air leaks and reduce the rates of recurrent spontaneous pneumothorax in surgical and non-surgical patients. Many chemical irritants (tetracycline, talc, and minocycline) have been used to decrease the rate of recurrence in spontaneous pneumothorax. Tetracycline, which was the most commonly used irritant, is no longer available. Talc insufflation of the pleural cavity is safe and effective for primary spontaneous pneumothorax. However, it should be applied either with surgical or medical thoracoscopy. Minocycline, a derivative of tetracycline, is as effective as tetracycline in inducing pleural fibrosis in rabbits. In the previous studies, we have shown that additional minocycline pleurodesis is a safe and convenient procedure to decrease the rates of ipsilateral recurrence after thoracoscopic treatment of primary spontaneous pneumothorax. In the present study, additional minocycline pleurodesis will be randomly administered in patients with first episode of primary spontaneous pneumothorax after simple aspiration to test if it can reduce the rate of recurrence.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Male or female. 
+
+ Age between 15 and 40 years old. 
+
+ First episode of spontaneous pneumothorax. 
+
+ Symptomatic (dyspnea or chest pain) or the rim of air is > 2cm on CXR requiring simple aspiration 
+
+ Complete or nearly complete and persistent lung expansion immediately following manual aspiration 
+
+ Organ Function Requirements: 
+
+ Adequate hematological function (Hb > 10 g/dl, ANC > 1.5 x 109/L, platelets > 100 x 109/L) 
+
+ Normal renal and hepatic functions: serum creatinine < 1 x ULN, SGPT and SGOT< 2.5 x ULN, alkaline phosphatase < 5 x ULN 
+
+ Written inform consent
+## Exclusion Criteria
+: 
+
+ With underlying pulmonary disease (asthma, chronic obstructive pulmonary disease, bronchiectasis, etc) 
+
+ With hemothorax or tension pneumothorax requiring chest tube insertion or operation 
+
+ A history of previous pneumothorax 
+
+ A history of previous ipsilateral thoracic operation 
+
+ Allergy to tetracycline or minocycline 
+
+ Pregnant or lactating patients. 
+
+ Other serious concomitant illness or medical conditions: 
+
+ Congestive heart failure or unstable angina pectoris. 
+
+ History of myocardial infarction within 1 year prior to the study entry. 
+
+ Uncontrolled hypertension or arrhythmia. 
+
+ History of significant neurologic or psychiatric disorders, including dementia or seizure. 
+
+ Active infection requiring i.v. antibiotics.
+## Full Text
+Summary: The estimated recurrence rate of primary spontaneous pneumothorax is 23-50% after the first episode, and the optimal treatment remains unknown. In the recently published British Thoracic Society (BTS) guidelines, simple aspiration is recommended as first line treatment for all primary pneumothoraces requiring intervention. However, the 1 year recurrence rate of this procedure was as high as 25-30%, making it inappropriate as a standard of care.~Intrapleural instillation of a chemical irritant (chemical pleurodesis) is an effective way to shorten the duration of air leaks and reduce the rates of recurrent spontaneous pneumothorax in surgical and non-surgical patients. Many chemical irritants (tetracycline, talc, and minocycline) have been used to decrease the rate of recurrence in spontaneous pneumothorax. Tetracycline, which was the most commonly used irritant, is no longer available. Talc insufflation of the pleural cavity is safe and effective for primary spontaneous pneumothorax. However, it should be applied either with surgical or medical thoracoscopy. Minocycline, a derivative of tetracycline, is as effective as tetracycline in inducing pleural fibrosis in rabbits. In the previous studies, we have shown that additional minocycline pleurodesis is a safe and convenient procedure to decrease the rates of ipsilateral recurrence after thoracoscopic treatment of primary spontaneous pneumothorax. In the present study, additional minocycline pleurodesis will be randomly administered in patients with first episode of primary spontaneous pneumothorax after simple aspiration to test if it can reduce the rate of recurrence.
+Inclusion criteria: inclusion criteria: 
+
+ Male or female. 
+
+ Age between 15 and 40 years old. 
+
+ First episode of spontaneous pneumothorax. 
+
+ Symptomatic (dyspnea or chest pain) or the rim of air is > 2cm on CXR requiring simple aspiration 
+
+ Complete or nearly complete and persistent lung expansion immediately following manual aspiration 
+
+ Organ Function Requirements: 
+
+ Adequate hematological function (Hb > 10 g/dl, ANC > 1.5 x 109/L, platelets > 100 x 109/L) 
+
+ Normal renal and hepatic functions: serum creatinine < 1 x ULN, SGPT and SGOT< 2.5 x ULN, alkaline phosphatase < 5 x ULN 
+
+ Written inform consent 
+
+ 
+Exclusion criteria: : 
+
+ With underlying pulmonary disease (asthma, chronic obstructive pulmonary disease, bronchiectasis, etc) 
+
+ With hemothorax or tension pneumothorax requiring chest tube insertion or operation 
+
+ A history of previous pneumothorax 
+
+ A history of previous ipsilateral thoracic operation 
+
+ Allergy to tetracycline or minocycline 
+
+ Pregnant or lactating patients. 
+
+ Other serious concomitant illness or medical conditions: 
+
+ Congestive heart failure or unstable angina pectoris. 
+
+ History of myocardial infarction within 1 year prior to the study entry. 
+
+ Uncontrolled hypertension or arrhythmia. 
+
+ History of significant neurologic or psychiatric disorders, including dementia or seizure. 
+
+ Active infection requiring i.v. antibiotics.

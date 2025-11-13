@@ -1,0 +1,55 @@
+{
+  "generated": "2025-10-20T23:33:26",
+  "trial_id": "NCT00021320",
+  "contextual": {
+    "_id": "NCT00021320",
+    "title": "Combination Chemotherapy Plus Radiation Therapy in Treating Patients With Esophageal Cancer",
+    "text": "Summary: RATIONALE: Drugs used in chemotherapy use different ways to stop tumor cells from dividing so they stop growing or die. Radiation therapy uses high-energy x-rays to damage tumor cells.~PURPOSE: Phase II trial to study the effectiveness of combination chemotherapy with or without radiation therapy in treating patients who have esophageal cancer.\nInclusion criteria: DISEASE CHARACTERISTICS: \n\n Histologically confirmed adenocarcinoma, squamous cell, adenosquamous, or undifferentiated carcinoma of the esophagus or gastroesophageal junction \n\n Potentially resectable disease \n\n No malignant celiac node involvement \n\n No cervical esophageal carcinoma \n\n PATIENT CHARACTERISTICS: \n\n Age: \n\n 18 and over \n\n Performance status: \n\n ECOG 0-2 \n\n Life expectancy: \n\n Not specified \n\n Hematopoietic: \n\n Absolute neutrophil count at least 1,800/mm^3 \n\n Platelet count at least 100,000/mm^3 \n\n Hepatic: \n\n Bilirubin no greater than 1.5 times upper limit of normal (ULN) \n\n AST no greater than 3 times ULN \n\n Renal: \n\n Creatinine no greater than 1.5 mg/dL OR \n\n Creatinine clearance at least 60 mL/min \n\n Other: \n\n No other malignancy within the past 3 years except nonmelanoma skin cancer or carcinoma in situ of the cervix \n\n No significant medical or psychiatric illness that would preclude study \n\n Not pregnant or nursing \n\n Fertile patients must use effective contraception during and for at least 3 months after study \n\n PRIOR CONCURRENT THERAPY: \n\n Biologic therapy: \n\n Not specified \n\n Chemotherapy: \n\n No prior chemotherapy for esophageal cancer \n\n Endocrine therapy: \n\n Not specified \n\n Radiotherapy: \n\n No prior thoracic radiotherapy \n\n Surgery: \n\n See Disease Characteristics \n\n No prior surgical resection of esophageal tumor\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Combination Chemotherapy Plus Radiation Therapy in Treating Patients With Esophageal Cancer",
+      "phase": "Phase 2",
+      "drugs": "['cisplatin', 'fluorouracil', 'paclitaxel', 'conventional surgery', 'neoadjuvant therapy', 'radiation therapy']",
+      "drugs_list": [
+        "cisplatin",
+        "fluorouracil",
+        "paclitaxel",
+        "conventional surgery",
+        "neoadjuvant therapy",
+        "radiation therapy"
+      ],
+      "diseases": "['Esophageal Cancer']",
+      "diseases_list": [
+        "Esophageal Cancer"
+      ],
+      "enrollment": "21.0",
+      "inclusion_criteria": "DISEASE CHARACTERISTICS: \n\n Histologically confirmed adenocarcinoma, squamous cell, adenosquamous, or undifferentiated carcinoma of the esophagus or gastroesophageal junction \n\n Potentially resectable disease \n\n No malignant celiac node involvement \n\n No cervical esophageal carcinoma \n\n PATIENT CHARACTERISTICS: \n\n Age: \n\n 18 and over \n\n Performance status: \n\n ECOG 0-2 \n\n Life expectancy: \n\n Not specified \n\n Hematopoietic: \n\n Absolute neutrophil count at least 1,800/mm^3 \n\n Platelet count at least 100,000/mm^3 \n\n Hepatic: \n\n Bilirubin no greater than 1.5 times upper limit of normal (ULN) \n\n AST no greater than 3 times ULN \n\n Renal: \n\n Creatinine no greater than 1.5 mg/dL OR \n\n Creatinine clearance at least 60 mL/min \n\n Other: \n\n No other malignancy within the past 3 years except nonmelanoma skin cancer or carcinoma in situ of the cervix \n\n No significant medical or psychiatric illness that would preclude study \n\n Not pregnant or nursing \n\n Fertile patients must use effective contraception during and for at least 3 months after study \n\n PRIOR CONCURRENT THERAPY: \n\n Biologic therapy: \n\n Not specified \n\n Chemotherapy: \n\n No prior chemotherapy for esophageal cancer \n\n Endocrine therapy: \n\n Not specified \n\n Radiotherapy: \n\n No prior thoracic radiotherapy \n\n Surgery: \n\n See Disease Characteristics \n\n No prior surgical resection of esophageal tumor",
+      "exclusion_criteria": "",
+      "brief_summary": "RATIONALE: Drugs used in chemotherapy use different ways to stop tumor cells from dividing so they stop growing or die. Radiation therapy uses high-energy x-rays to damage tumor cells.~PURPOSE: Phase II trial to study the effectiveness of combination chemotherapy with or without radiation therapy in treating patients who have esophageal cancer."
+    }
+  },
+  "linked_result": {
+    "Esophageal Cancer": {
+      "conceptId": "363402007",
+      "preferred_term": "Malignant tumor of esophagus",
+      "fully_specified_name": "Malignant tumor of esophagus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the esophagus.",
+      "best_match_term": "Esophageal cancer",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Esophageal Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Esophageal Cancer": {
+      "disease": "Esophageal Cancer",
+      "conceptId": "363402007",
+      "preferred_term": "Malignant tumor of esophagus",
+      "fully_specified_name": "Malignant tumor of esophagus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the esophagus.",
+      "best_match_term": "Esophageal cancer"
+    }
+  }
+}

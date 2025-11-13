@@ -1,0 +1,7 @@
+[
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_hypertensive_disorder_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_brain_natriuretic_peptide_measurement_value_recorded_now_withunit_picograms_per_milliliter",
+  "patient_has_finding_of_diastolic_dysfunction_now"
+]

@@ -1,0 +1,28 @@
+{
+  "trial_id": "NCT00304135",
+  "contextual": {
+    "_id": "NCT00304135",
+    "title": "Fluorouracil, Cisplatin, and Radiation Therapy or Gemcitabine and Oxaliplatin in Treating Patients With Nonmetastatic Biliary Tract Cancer That Cannot Be Removed By Surgery",
+    "text": "Summary: RATIONALE: Drugs used in chemotherapy, such as fluorouracil, cisplatin, oxaliplatin, and gemcitabine, work in different ways to stop the growth of tumor cells, either by killing the cells or by stopping them from dividing. Giving more than one drug (combination chemotherapy) may kill more tumor cells. Radiation therapy uses high-energy x-rays to kill tumor cells. It is not yet known whether giving fluorouracil and cisplatin together with radiation therapy is more effective than giving gemcitabine together with oxaliplatin in treating nonmetastatic biliary tract cancer.~PURPOSE: This randomized phase II/III trial is studying fluorouracil, cisplatin, and radiation therapy to see how well they work compared to gemcitabine and oxaliplatin in treating patients with nonmetastatic biliary tract cancer that cannot be removed by surgery.\nInclusion criteria: DISEASE CHARACTERISTICS: \n\n Diagnosis of cancer of the biliary tract by 1 of the following methods: \n\n Histologic confirmation \n\n Stenosis of the biliary tract by MRI, CT scan, or ECHO \n\n Unresectable disease \n\n Amenable to radiotherapy \n\n No visceral metastases by imaging \n\n Hepatic adenopathies that can be included in a radiation field allowed \n\n No known ampulla of Vater or pancreatic cancer involving the biliary tract \n\n PATIENT CHARACTERISTICS: \n\n WHO performance status 0-2 \n\n Creatinine < 1.5 mg/dL \n\n Absolute neutrophil count ≥ 1,500/mm^3 \n\n Platelet count ≥ 75,000/mm^3 \n\n Prothrombin time > 70% \n\n Bilirubin ≤ 2.9 mg/dL (after hepatic draining, if needed) \n\n No unstable angina \n\n No symptomatic cardiac insufficiency \n\n No other comorbidity that would preclude study therapy \n\n No other prior malignancy except basal cell skin cancer or carcinoma in situ of the cervix \n\n No prior hydatid cyst or alveolar echinococciasis \n\n Not pregnant or nursing \n\n PRIOR CONCURRENT THERAPY: \n\n No recent biliary surgery \n\n No hepatic intra-arterial chemotherapy \n\n No prior anticancer therapy\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Fluorouracil, Cisplatin, and Radiation Therapy or Gemcitabine and Oxaliplatin in Treating Patients With Nonmetastatic Biliary Tract Cancer That Cannot Be Removed By Surgery",
+      "phase": "Phase 2; Phase 3",
+      "drugs": "['cisplatin', 'gemcitabine hydrochloride', 'oxaliplatin']",
+      "drugs_list": [
+        "cisplatin",
+        "gemcitabine hydrochloride",
+        "oxaliplatin"
+      ],
+      "diseases": "['Extrahepatic Bile Duct Cancer', 'Gallbladder Cancer', 'Liver Cancer']",
+      "diseases_list": [
+        "Extrahepatic Bile Duct Cancer",
+        "Gallbladder Cancer",
+        "Liver Cancer"
+      ],
+      "enrollment": "34.0",
+      "inclusion_criteria": "DISEASE CHARACTERISTICS: \n\n Diagnosis of cancer of the biliary tract by 1 of the following methods: \n\n Histologic confirmation \n\n Stenosis of the biliary tract by MRI, CT scan, or ECHO \n\n Unresectable disease \n\n Amenable to radiotherapy \n\n No visceral metastases by imaging \n\n Hepatic adenopathies that can be included in a radiation field allowed \n\n No known ampulla of Vater or pancreatic cancer involving the biliary tract \n\n PATIENT CHARACTERISTICS: \n\n WHO performance status 0-2 \n\n Creatinine < 1.5 mg/dL \n\n Absolute neutrophil count ≥ 1,500/mm^3 \n\n Platelet count ≥ 75,000/mm^3 \n\n Prothrombin time > 70% \n\n Bilirubin ≤ 2.9 mg/dL (after hepatic draining, if needed) \n\n No unstable angina \n\n No symptomatic cardiac insufficiency \n\n No other comorbidity that would preclude study therapy \n\n No other prior malignancy except basal cell skin cancer or carcinoma in situ of the cervix \n\n No prior hydatid cyst or alveolar echinococciasis \n\n Not pregnant or nursing \n\n PRIOR CONCURRENT THERAPY: \n\n No recent biliary surgery \n\n No hepatic intra-arterial chemotherapy \n\n No prior anticancer therapy",
+      "exclusion_criteria": "",
+      "brief_summary": "RATIONALE: Drugs used in chemotherapy, such as fluorouracil, cisplatin, oxaliplatin, and gemcitabine, work in different ways to stop the growth of tumor cells, either by killing the cells or by stopping them from dividing. Giving more than one drug (combination chemotherapy) may kill more tumor cells. Radiation therapy uses high-energy x-rays to kill tumor cells. It is not yet known whether giving fluorouracil and cisplatin together with radiation therapy is more effective than giving gemcitabine together with oxaliplatin in treating nonmetastatic biliary tract cancer.~PURPOSE: This randomized phase II/III trial is studying fluorouracil, cisplatin, and radiation therapy to see how well they work compared to gemcitabine and oxaliplatin in treating patients with nonmetastatic biliary tract cancer that cannot be removed by surgery."
+    }
+  }
+}

@@ -1,0 +1,13 @@
+[
+  "patient_has_finding_of_cerebral_infarction_now",
+  "patient_has_finding_of_frontal_lobe_syndrome_now",
+  "patient_has_finding_of_amyotrophic_lateral_sclerosis_now",
+  "patient_has_finding_of_complete_trisomy_21_syndrome_now",
+  "patient_has_finding_of_dementia_now",
+  "patient_has_finding_of_dementia_associated_with_alcoholism_now",
+  "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+  "patient_has_finding_of_huntington_s_chorea_now",
+  "patient_has_finding_of_intellectual_disability_now",
+  "patient_has_finding_of_alcohol_intake_above_recommended_sensible_limits_inthehistory",
+  "patient_has_finding_of_substance_misuse_behavior_now"
+]

@@ -1,0 +1,128 @@
+{
+  "generated": "2025-10-22T21:01:48",
+  "trial_id": "NCT00707811",
+  "contextual": {
+    "_id": "NCT00707811",
+    "title": "Evaluation of ST2 and IL-33 in Patients Presenting to the Emergency Department With Trouble Breathing",
+    "text": "Summary: Trouble breathing (dyspnea) is a nonspecific symptom associated with many diseases such as chronic obstructive pulmonary disease (lung disorder in which the flow of air to the lungs is blocked), asthma, pneumonia, pulmonary hypertension (high blood pressure in the lungs), congestive heart failure (fluid build-up in the lungs because the heart is not pumping normally) and pulmonary embolism (blood clot in the lungs). The purpose of this study is to test two blood markers called ST2 and IL-33. Blood markers are proteins or other compounds in your blood that physicians use to diagnose different diseases and to determine what the course of an illness will be. In preliminary research studies, ST2 and IL-33 have been elevated in patients with a wide variety of diseases where the lungs are the primary organs involved. This research study will further investigate the ability of ST2 and IL-33 to predict the severity of disease and the possible use of ST2 and IL-33 in the diagnosis of various lung diseases.\nInclusion criteria: inclusion criteria: \n\n Presenting to the Emergency Department with signs and symptoms of dyspnea (short of breath, tachypnea, hyperventilation, etc) within the last 24 hours \n\n Normal cardiac output as measured by noninvasive bioimpedance \n\n Greater than or equal to 18 years of age \n\n Patient or legal representative willing and able to provide informed consent and comply with study procedures \n\n \nExclusion criteria: : \n\n A history of congestive heart failure and a BNP > 500pg/mL (or NTproBNP > 900pg/mL) if obtained by the treating physician \n\n Treating physician suspects patient has new onset congestive heart failure \n\n ECG changes diagnostic of acute myocardial ischemia/infarction \n\n Ischemic chest pain within the prior 24 hours by history \n\n Obvious chest trauma",
+    "metadata": {
+      "brief_title": "Evaluation of ST2 and IL-33 in Patients Presenting to the Emergency Department With Trouble Breathing",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Chronic Obstructive Pulmonary Disease', 'Asthma', 'Pulmonary Embolism', 'Pneumonia', 'Pulmonary Hypertension']",
+      "diseases_list": [
+        "Chronic Obstructive Pulmonary Disease",
+        "Asthma",
+        "Pulmonary Embolism",
+        "Pneumonia",
+        "Pulmonary Hypertension"
+      ],
+      "enrollment": "200.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Presenting to the Emergency Department with signs and symptoms of dyspnea (short of breath, tachypnea, hyperventilation, etc) within the last 24 hours \n\n Normal cardiac output as measured by noninvasive bioimpedance \n\n Greater than or equal to 18 years of age \n\n Patient or legal representative willing and able to provide informed consent and comply with study procedures \n\n ",
+      "exclusion_criteria": ": \n\n A history of congestive heart failure and a BNP > 500pg/mL (or NTproBNP > 900pg/mL) if obtained by the treating physician \n\n Treating physician suspects patient has new onset congestive heart failure \n\n ECG changes diagnostic of acute myocardial ischemia/infarction \n\n Ischemic chest pain within the prior 24 hours by history \n\n Obvious chest trauma",
+      "brief_summary": "Trouble breathing (dyspnea) is a nonspecific symptom associated with many diseases such as chronic obstructive pulmonary disease (lung disorder in which the flow of air to the lungs is blocked), asthma, pneumonia, pulmonary hypertension (high blood pressure in the lungs), congestive heart failure (fluid build-up in the lungs because the heart is not pumping normally) and pulmonary embolism (blood clot in the lungs). The purpose of this study is to test two blood markers called ST2 and IL-33. Blood markers are proteins or other compounds in your blood that physicians use to diagnose different diseases and to determine what the course of an illness will be. In preliminary research studies, ST2 and IL-33 have been elevated in patients with a wide variety of diseases where the lungs are the primary organs involved. This research study will further investigate the ability of ST2 and IL-33 to predict the severity of disease and the possible use of ST2 and IL-33 in the diagnosis of various lung diseases."
+    }
+  },
+  "linked_result": {
+    "Chronic Obstructive Pulmonary Disease": {
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease",
+      "match_reason": "Exact"
+    },
+    "Asthma": {
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Asthma",
+      "match_reason": "Exact"
+    },
+    "Pulmonary Embolism": {
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism",
+      "match_reason": "Exact"
+    },
+    "Pneumonia": {
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia",
+      "match_reason": "Exact"
+    },
+    "Pulmonary Hypertension": {
+      "conceptId": "70995007",
+      "preferred_term": "Pulmonary hypertension",
+      "fully_specified_name": "Pulmonary hypertension (disorder)",
+      "type": "Clinical finding",
+      "definition": "Increased VASCULAR RESISTANCE in the PULMONARY CIRCULATION, usually secondary to HEART DISEASES or LUNG DISEASES.",
+      "best_match_term": "Pulmonary hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Chronic Obstructive Pulmonary Disease": 1,
+    "Asthma": 1,
+    "Pulmonary Embolism": 1,
+    "Pneumonia": 1,
+    "Pulmonary Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chronic Obstructive Pulmonary Disease": {
+      "disease": "Chronic Obstructive Pulmonary Disease",
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease"
+    },
+    "Asthma": {
+      "disease": "Asthma",
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Asthma"
+    },
+    "Pulmonary Embolism": {
+      "disease": "Pulmonary Embolism",
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism"
+    },
+    "Pneumonia": {
+      "disease": "Pneumonia",
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia"
+    },
+    "Pulmonary Hypertension": {
+      "disease": "Pulmonary Hypertension",
+      "conceptId": "70995007",
+      "preferred_term": "Pulmonary hypertension",
+      "fully_specified_name": "Pulmonary hypertension (disorder)",
+      "type": "Clinical finding",
+      "definition": "Increased VASCULAR RESISTANCE in the PULMONARY CIRCULATION, usually secondary to HEART DISEASES or LUNG DISEASES.",
+      "best_match_term": "Pulmonary hypertension"
+    }
+  }
+}

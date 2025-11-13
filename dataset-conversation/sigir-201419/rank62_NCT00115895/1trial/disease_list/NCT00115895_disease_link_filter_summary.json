@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-22T21:09:30",
+  "trial_id": "NCT00115895",
+  "contextual": {
+    "_id": "NCT00115895",
+    "title": "The Dose of Radioactive Iodine Needed to Ablate the Thyroid Remnant Left Behind After Thyroidectomy",
+    "text": "Summary: The thyroid cells take up iodine, and radioactive iodine is commonly used to irradiate residual thyroid tissue and thyroid cancer following surgical removal of the thyroid gland (thyroidectomy). A whole body radioactive iodine scanning is usually carried out after thyroidectomy to assess the amount of thyroid tissue left behind at surgery (that might still contain cancer), and to evaluate the presence of iodine avid lesions elsewhere in the body (that might be cancer metastases). A large dose of radioactive iodine is often given, still the optimal iodine dose to ablate the thyroid remnant after surgery is not known. In this study, two radioactive iodine doses are compared in the ablation of the thyroid remnant, a smaller (1110 MBq) dose and a larger (3700 MBq) dose. The study participants are randomly allocated using a 1:1 ratio to receive either the smaller or the larger radioactive iodine dose. These treatments are compared for safety, adverse effects, and the need for subsequent repeat treatments. The individual absorbed radiation doses are measured. The study hypothesis is that fewer repeat radioiodine treatments might be needed after the larger dose, but the larger dose might be associated with a higher frequency of adverse events.\nInclusion criteria: inclusion criteria: \n\n Total or near total thyroidectomy performed for papillary or follicular thyroid cancer \n\n R0-1 resection, no macroscopic cancer left behind at surgery \n\n Physically and emotionally able to undergo radioiodine treatment \n\n A written informed consent \n\n \nExclusion criteria: : \n\n Pregnancy \n\n Physical or psychiatric illness that may deteriorate during the isolation period required by radioiodine therapy",
+    "metadata": {
+      "brief_title": "The Dose of Radioactive Iodine Needed to Ablate the Thyroid Remnant Left Behind After Thyroidectomy",
+      "phase": "Phase 3",
+      "drugs": "['Radioactive iodine']",
+      "drugs_list": [
+        "Radioactive iodine"
+      ],
+      "diseases": "['Thyroid Neoplasms']",
+      "diseases_list": [
+        "Thyroid Neoplasms"
+      ],
+      "enrollment": "160.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Total or near total thyroidectomy performed for papillary or follicular thyroid cancer \n\n R0-1 resection, no macroscopic cancer left behind at surgery \n\n Physically and emotionally able to undergo radioiodine treatment \n\n A written informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Pregnancy \n\n Physical or psychiatric illness that may deteriorate during the isolation period required by radioiodine therapy",
+      "brief_summary": "The thyroid cells take up iodine, and radioactive iodine is commonly used to irradiate residual thyroid tissue and thyroid cancer following surgical removal of the thyroid gland (thyroidectomy). A whole body radioactive iodine scanning is usually carried out after thyroidectomy to assess the amount of thyroid tissue left behind at surgery (that might still contain cancer), and to evaluate the presence of iodine avid lesions elsewhere in the body (that might be cancer metastases). A large dose of radioactive iodine is often given, still the optimal iodine dose to ablate the thyroid remnant after surgery is not known. In this study, two radioactive iodine doses are compared in the ablation of the thyroid remnant, a smaller (1110 MBq) dose and a larger (3700 MBq) dose. The study participants are randomly allocated using a 1:1 ratio to receive either the smaller or the larger radioactive iodine dose. These treatments are compared for safety, adverse effects, and the need for subsequent repeat treatments. The individual absorbed radiation doses are measured. The study hypothesis is that fewer repeat radioiodine treatments might be needed after the larger dose, but the larger dose might be associated with a higher frequency of adverse events."
+    }
+  },
+  "linked_result": {
+    "Thyroid Neoplasms": {
+      "conceptId": "127018007",
+      "preferred_term": "Neoplasm of thyroid gland",
+      "fully_specified_name": "Neoplasm of thyroid gland (disorder)",
+      "type": "Clinical finding",
+      "definition": "Tumors or cancer of the THYROID GLAND.",
+      "best_match_term": "Neoplasm of thyroid gland",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Thyroid Neoplasms": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Thyroid Neoplasms": {
+      "disease": "Thyroid Neoplasms",
+      "conceptId": "127018007",
+      "preferred_term": "Neoplasm of thyroid gland",
+      "fully_specified_name": "Neoplasm of thyroid gland (disorder)",
+      "type": "Clinical finding",
+      "definition": "Tumors or cancer of the THYROID GLAND.",
+      "best_match_term": "Neoplasm of thyroid gland"
+    }
+  }
+}

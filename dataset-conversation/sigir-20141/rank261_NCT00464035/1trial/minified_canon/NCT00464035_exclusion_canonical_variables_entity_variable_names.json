@@ -1,0 +1,10 @@
+[
+  "patient_has_undergone_whole_blood_unit_collection_inthehistory",
+  "patient_has_diagnosis_of_chronic_infectious_disease_now",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_diagnosis_of_hyperlipidemia_now",
+  "patient_has_diagnosis_of_hypertensive_disorder_now",
+  "patient_is_exposed_to_nutritional_supplement_inthepast3months",
+  "patient_is_exposed_to_nutritional_supplement_now",
+  "patient_has_finding_of_smoker_now"
+]

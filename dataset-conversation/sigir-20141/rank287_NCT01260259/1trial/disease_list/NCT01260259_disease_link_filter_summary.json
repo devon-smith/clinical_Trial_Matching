@@ -1,0 +1,121 @@
+{
+  "generated": "2025-10-20T22:11:04",
+  "trial_id": "NCT01260259",
+  "contextual": {
+    "_id": "NCT01260259",
+    "title": "Seattle Cardiorenal Remote Ischemic Preconditioning Trial",
+    "text": "Summary: Remote Ischemic Preconditioning (RIPC) is a treatment that may be associated with improved outcomes after cardiac surgery. It can be elicited noninvasively by using a tourniquet to elicit transient ischemia over a lower extremity. It is thought to promote anti-inflammatory and cell survival pathways, and thus protect remote organs against future ischemic injury. We hypothesize that compared to sham treatment, RIPC will be associated with decreased post-operative acute kidney, myocardial, and lung injury.\nInclusion criteria: inclusion criteria: \n\n Age birth to 18 years Cardiac surgery with planned cardiopulmonary bypass \n\n \nExclusion criteria: : \n\n Any contraindication to compression of lower extremity/extremities Body weight <2 kg Active infection going into surgery On renal replacement therapy (RRT) or mechanical circulatory support going into surgery On inotropic support going into surgery",
+    "metadata": {
+      "brief_title": "Seattle Cardiorenal Remote Ischemic Preconditioning Trial",
+      "phase": "",
+      "drugs": "['RIPC', 'Control']",
+      "drugs_list": [
+        "RIPC",
+        "Control"
+      ],
+      "diseases": "['Congenital Heart Disease', 'Cardiopulmonary Bypass', 'Myocardial Injury', 'Acute Kidney Injury', 'Acute Lung Injury']",
+      "diseases_list": [
+        "Congenital Heart Disease",
+        "Cardiopulmonary Bypass",
+        "Myocardial Injury",
+        "Acute Kidney Injury",
+        "Acute Lung Injury"
+      ],
+      "enrollment": "90.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age birth to 18 years Cardiac surgery with planned cardiopulmonary bypass \n\n ",
+      "exclusion_criteria": ": \n\n Any contraindication to compression of lower extremity/extremities Body weight <2 kg Active infection going into surgery On renal replacement therapy (RRT) or mechanical circulatory support going into surgery On inotropic support going into surgery",
+      "brief_summary": "Remote Ischemic Preconditioning (RIPC) is a treatment that may be associated with improved outcomes after cardiac surgery. It can be elicited noninvasively by using a tourniquet to elicit transient ischemia over a lower extremity. It is thought to promote anti-inflammatory and cell survival pathways, and thus protect remote organs against future ischemic injury. We hypothesize that compared to sham treatment, RIPC will be associated with decreased post-operative acute kidney, myocardial, and lung injury."
+    }
+  },
+  "linked_result": {
+    "Congenital Heart Disease": {
+      "conceptId": "13213009",
+      "preferred_term": "Congenital heart disease",
+      "fully_specified_name": "Congenital heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heart disease that is present at birth. Representative examples include atrial septal defect, ventricular septal defect, tetralogy of Fallot, and patent foramen ovale.",
+      "best_match_term": "Congenital heart disease",
+      "match_reason": "Exact"
+    },
+    "Cardiopulmonary Bypass": {
+      "conceptId": "63697000",
+      "preferred_term": "Cardiopulmonary bypass operation",
+      "fully_specified_name": "Cardiopulmonary bypass operation (procedure)",
+      "type": "Procedure",
+      "definition": "Diversion of the flow of blood from the entrance of the right atrium directly to the aorta (or femoral artery) via an oxygenator thus bypassing both the heart and lungs.",
+      "best_match_term": "Cardiopulmonary bypass",
+      "match_reason": "Exact"
+    },
+    "Myocardial Injury": {
+      "conceptId": "86175003",
+      "preferred_term": "Injury of heart",
+      "fully_specified_name": "Injury of heart (disorder)",
+      "type": "Clinical finding",
+      "definition": "General or unspecified injuries to the heart.",
+      "best_match_term": "Injury of heart",
+      "match_reason": "Ancestor"
+    },
+    "Acute Kidney Injury": {
+      "conceptId": "14669001",
+      "preferred_term": "Acute renal failure syndrome",
+      "fully_specified_name": "Acute renal failure syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "Sudden and sustained deterioration of the kidney function characterized by decreased glomerular filtration rate, increased serum creatinine or oliguria.",
+      "best_match_term": "Acute kidney injury",
+      "match_reason": "Exact"
+    },
+    "Acute Lung Injury": {
+      "conceptId": "315345002",
+      "preferred_term": "Acute lung injury",
+      "fully_specified_name": "Acute lung injury (disorder)",
+      "type": "Clinical finding",
+      "definition": "A condition of lung damage that is characterized by bilateral pulmonary infiltrates (PULMONARY EDEMA) rich in NEUTROPHILS, and in the absence of clinical HEART FAILURE. This can represent a spectrum of pulmonary lesions, endothelial and epithelial, due to numerous factors (physical, chemical, or biological).",
+      "best_match_term": "Acute lung injury",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Congenital Heart Disease": 1,
+    "Myocardial Injury": 1,
+    "Acute Kidney Injury": 1,
+    "Acute Lung Injury": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Congenital Heart Disease": {
+      "disease": "Congenital Heart Disease",
+      "conceptId": "13213009",
+      "preferred_term": "Congenital heart disease",
+      "fully_specified_name": "Congenital heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heart disease that is present at birth. Representative examples include atrial septal defect, ventricular septal defect, tetralogy of Fallot, and patent foramen ovale.",
+      "best_match_term": "Congenital heart disease"
+    },
+    "Myocardial Injury": {
+      "disease": "Myocardial Injury",
+      "conceptId": "86175003",
+      "preferred_term": "Injury of heart",
+      "fully_specified_name": "Injury of heart (disorder)",
+      "type": "Clinical finding",
+      "definition": "General or unspecified injuries to the heart.",
+      "best_match_term": "Injury of heart"
+    },
+    "Acute Kidney Injury": {
+      "disease": "Acute Kidney Injury",
+      "conceptId": "14669001",
+      "preferred_term": "Acute renal failure syndrome",
+      "fully_specified_name": "Acute renal failure syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "Sudden and sustained deterioration of the kidney function characterized by decreased glomerular filtration rate, increased serum creatinine or oliguria.",
+      "best_match_term": "Acute kidney injury"
+    },
+    "Acute Lung Injury": {
+      "disease": "Acute Lung Injury",
+      "conceptId": "315345002",
+      "preferred_term": "Acute lung injury",
+      "fully_specified_name": "Acute lung injury (disorder)",
+      "type": "Clinical finding",
+      "definition": "A condition of lung damage that is characterized by bilateral pulmonary infiltrates (PULMONARY EDEMA) rich in NEUTROPHILS, and in the absence of clinical HEART FAILURE. This can represent a spectrum of pulmonary lesions, endothelial and epithelial, due to numerous factors (physical, chemical, or biological).",
+      "best_match_term": "Acute lung injury"
+    }
+  }
+}

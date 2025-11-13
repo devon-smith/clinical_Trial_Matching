@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_dizziness_inthehistory",
+  "patient_has_finding_of_dyspnea_inthehistory",
+  "patient_has_finding_of_intermittent_palpitations_inthehistory",
+  "patient_has_finding_of_palpitations_inthehistory",
+  "patient_has_finding_of_symptom_started_suddenly_inthehistory",
+  "patient_has_finding_of_tachycardia_inthehistory",
+  "patient_palpitations_value_recorded_inthehistory_withunit_episodes_per_2_weeks",
+  "patient_has_finding_of_palpitations_now",
+  "patient_has_finding_of_ecg_normal_now"
+]

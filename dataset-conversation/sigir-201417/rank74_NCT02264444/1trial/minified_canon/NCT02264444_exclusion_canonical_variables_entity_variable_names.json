@@ -1,0 +1,11 @@
+[
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_has_finding_of_myoneural_disorder_now",
+  "patient_has_finding_of_malignant_hyperthermia_inthehistory",
+  "patient_has_contraindication_to_neostigmine_now",
+  "patient_has_finding_of_continuous_opioid_dependence_now",
+  "patient_has_diagnosis_of_long_qt_syndrome_now",
+  "patient_creatinine_level_finding_value_recorded_now_withunit_mg_per_dl"
+]

@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT00929773",
+  "contextual": {
+    "_id": "NCT00929773",
+    "title": "Low Level Laser Therapy to Reduce Chronic Pain",
+    "text": "Summary: The purpose of this study was to determine whether low level laser light directed at the neck and shoulders could be effective in the temporary reduction of chronic pain in the neck and shoulder region.\nInclusion criteria: inclusion criteria: \n\n Muscular-skeletal pain in the neck/shoulder region \n\n Acute and chronic pain in the neck/shoulder region \n\n Restricted range of motion in the neck/shoulder region \n\n Fibrosis or scar tissue in the neck/shoulder region \n\n Inflammation in the neck/shoulder region \n\n Altered function in the neck/shoulder region \n\n Muscle strains in the neck/shoulder region \n\n Rating of 30 or greater on the 0-100 Visual Analog Scale (VAS) pain scale \n\n 18-65 years of age \n\n \nExclusion criteria: : \n\n Severely herniated disks \n\n Pregnancy \n\n Taken pain medication within the past 12 hours",
+    "metadata": {
+      "brief_title": "Low Level Laser Therapy to Reduce Chronic Pain",
+      "phase": "",
+      "drugs": "['Erchonia PL2000 Laser', 'Placebo laser']",
+      "drugs_list": [
+        "Erchonia PL2000 Laser",
+        "Placebo laser"
+      ],
+      "diseases": "['Chronic Pain']",
+      "diseases_list": [
+        "Chronic Pain"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Muscular-skeletal pain in the neck/shoulder region \n\n Acute and chronic pain in the neck/shoulder region \n\n Restricted range of motion in the neck/shoulder region \n\n Fibrosis or scar tissue in the neck/shoulder region \n\n Inflammation in the neck/shoulder region \n\n Altered function in the neck/shoulder region \n\n Muscle strains in the neck/shoulder region \n\n Rating of 30 or greater on the 0-100 Visual Analog Scale (VAS) pain scale \n\n 18-65 years of age \n\n ",
+      "exclusion_criteria": ": \n\n Severely herniated disks \n\n Pregnancy \n\n Taken pain medication within the past 12 hours",
+      "brief_summary": "The purpose of this study was to determine whether low level laser light directed at the neck and shoulders could be effective in the temporary reduction of chronic pain in the neck and shoulder region."
+    }
+  }
+}

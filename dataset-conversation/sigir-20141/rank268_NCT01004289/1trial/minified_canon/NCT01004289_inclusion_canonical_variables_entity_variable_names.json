@@ -1,0 +1,8 @@
+[
+  "patient_has_undergone_hospital_admission_now",
+  "patient_has_finding_of_ischemic_chest_pain_now",
+  "patient_has_finding_of_myocardial_infarction_now",
+  "patient_has_finding_of_st_segment_elevation_now",
+  "patient_has_finding_of_culprit_lesion_of_coronary_artery_now",
+  "patient_myocardial_infarction_value_recorded_now_withunit_grade"
+]

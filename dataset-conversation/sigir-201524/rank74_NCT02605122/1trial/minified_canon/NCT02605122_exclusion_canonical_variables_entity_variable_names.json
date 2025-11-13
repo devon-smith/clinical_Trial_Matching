@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_hospital_acquired_pneumonia_now",
+  "patient_has_finding_of_ventilator_associated_pneumonia_now",
+  "patient_has_undergone_antibiotic_therapy_inthehistory",
+  "patient_has_finding_of_bacterial_meningitis_now",
+  "patient_sex_is_female_now",
+  "patient_is_breastfeeding_now",
+  "patient_is_pregnant_now"
+]

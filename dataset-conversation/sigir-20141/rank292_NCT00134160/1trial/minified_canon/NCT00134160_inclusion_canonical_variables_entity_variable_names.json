@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_undergoing_antihypertensive_therapy_now",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patients_risk_factor_is_positive_now"
+]

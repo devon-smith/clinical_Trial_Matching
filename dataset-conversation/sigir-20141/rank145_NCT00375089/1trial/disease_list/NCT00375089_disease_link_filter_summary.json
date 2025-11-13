@@ -1,0 +1,71 @@
+{
+  "generated": "2025-10-20T23:28:26",
+  "trial_id": "NCT00375089",
+  "contextual": {
+    "_id": "NCT00375089",
+    "title": "Characteristics of Prader-Willi Syndrome and Early-onset Morbid Obesity",
+    "text": "Summary: Prader-Willi syndrome (PWS) is a rare genetic disorder that affects about 1 in 14,000 people in the United States. As the most commonly identified genetic cause of obesity, PWS is often confused with Early-onset Morbid Obesity (EMO). Individuals with EMO show some signs of PWS, but clinically do not have PWS. The purpose of this study is to evaluate the clinical features and genetic basis of PWS and EMO, and to determine how these conditions affect a person throughout a lifetime.\nInclusion criteria: inclusion criteria: \n\n Individuals enrolling in the Prader-Willi syndrome group will have a confirmed diagnosis of Prader-Willi syndrome, as confirmed by molecular and cytogenetic testing \n\n Individuals enrolling in the Early-onset Morbid Obesity group will have a documented medical history of their weight exceeding 150% of the ideal body weight or a body mass index greater than 97% before the age of 4 years; they will also be under the age of 30 years. \n\n \nExclusion criteria: : \n\n Known genetic, chromosomal, or hormonal cause of cognitive impairment other than Prader-Willi syndrome",
+    "metadata": {
+      "brief_title": "Characteristics of Prader-Willi Syndrome and Early-onset Morbid Obesity",
+      "phase": "",
+      "drugs": "['Group 1', 'Group 2']",
+      "drugs_list": [
+        "Group 1",
+        "Group 2"
+      ],
+      "diseases": "['Prader-Willi Syndrome', 'Obesity']",
+      "diseases_list": [
+        "Prader-Willi Syndrome",
+        "Obesity"
+      ],
+      "enrollment": "392.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Individuals enrolling in the Prader-Willi syndrome group will have a confirmed diagnosis of Prader-Willi syndrome, as confirmed by molecular and cytogenetic testing \n\n Individuals enrolling in the Early-onset Morbid Obesity group will have a documented medical history of their weight exceeding 150% of the ideal body weight or a body mass index greater than 97% before the age of 4 years; they will also be under the age of 30 years. \n\n ",
+      "exclusion_criteria": ": \n\n Known genetic, chromosomal, or hormonal cause of cognitive impairment other than Prader-Willi syndrome",
+      "brief_summary": "Prader-Willi syndrome (PWS) is a rare genetic disorder that affects about 1 in 14,000 people in the United States. As the most commonly identified genetic cause of obesity, PWS is often confused with Early-onset Morbid Obesity (EMO). Individuals with EMO show some signs of PWS, but clinically do not have PWS. The purpose of this study is to evaluate the clinical features and genetic basis of PWS and EMO, and to determine how these conditions affect a person throughout a lifetime."
+    }
+  },
+  "linked_result": {
+    "Prader-Willi Syndrome": {
+      "conceptId": "89392001",
+      "preferred_term": "Prader-Willi syndrome",
+      "fully_specified_name": "Prader-Willi syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An autosomal dominant disorder caused by deletion of the proximal long arm of the paternal chromosome 15 (15q11-q13) or by inheritance of both of the pair of chromosomes 15 from the mother (UNIPARENTAL DISOMY) which are imprinted (GENETIC IMPRINTING) and hence silenced. Clinical manifestations include MENTAL RETARDATION; MUSCULAR HYPOTONIA; HYPERPHAGIA; OBESITY; short stature; HYPOGONADISM; STRABISMUS; and HYPERSOMNOLENCE. (Menkes, Textbook of Child Neurology, 5th ed, p229)",
+      "best_match_term": "Prader-Willi syndrome",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Prader-Willi Syndrome": 1,
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Prader-Willi Syndrome": {
+      "disease": "Prader-Willi Syndrome",
+      "conceptId": "89392001",
+      "preferred_term": "Prader-Willi syndrome",
+      "fully_specified_name": "Prader-Willi syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An autosomal dominant disorder caused by deletion of the proximal long arm of the paternal chromosome 15 (15q11-q13) or by inheritance of both of the pair of chromosomes 15 from the mother (UNIPARENTAL DISOMY) which are imprinted (GENETIC IMPRINTING) and hence silenced. Clinical manifestations include MENTAL RETARDATION; MUSCULAR HYPOTONIA; HYPERPHAGIA; OBESITY; short stature; HYPOGONADISM; STRABISMUS; and HYPERSOMNOLENCE. (Menkes, Textbook of Child Neurology, 5th ed, p229)",
+      "best_match_term": "Prader-Willi syndrome"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_angina_decubitus_inthehistory",
+  "patient_has_finding_of_acute_non_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_finding_of_angina_pectoris_now",
+  "patient_is_exposed_to_creatine_kinase_now",
+  "patient_has_finding_of_injury_of_heart_now",
+  "patient_has_finding_of_pulmonary_edema_now",
+  "patient_is_exposed_to_troponin_i_now",
+  "patient_is_exposed_to_troponin_t_now"
+]

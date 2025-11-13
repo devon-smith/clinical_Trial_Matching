@@ -1,0 +1,11 @@
+[
+  "patient_is_undergoing_clinical_trial_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_hospital_acquired_pneumonia_now",
+  "patient_has_diagnosis_of_active_tuberculosis_now",
+  "patient_is_undergoing_tb_chemotherapy_now",
+  "patient_has_finding_of_interstitial_pneumonia_now",
+  "patient_has_finding_of_pulmonary_edema_now",
+  "patient_has_finding_of_pulmonary_embolism_now",
+  "patient_has_finding_of_human_immunodeficiency_virus_infection_now"
+]

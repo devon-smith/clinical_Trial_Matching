@@ -1,0 +1,22 @@
+[
+  "patient_has_finding_of_malignant_neoplastic_disease_inthepast6months",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_has_diagnosis_of_secondary_malignant_neoplastic_disease_now",
+  "patient_has_undergone_therapeutic_procedure_inthehistory",
+  "patient_can_undergo_therapeutic_procedure_now",
+  "patient_has_undergone_biopsy_now",
+  "patient_has_undergone_biopsy_inthehistory",
+  "patient_has_undergone_administration_of_antineoplastic_agent_inthehistory",
+  "patient_has_finding_of_alopecia_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_age_value_recorded_now_in_months",
+  "patient_longevity_value_recorded_now_withunit_months",
+  "patient_has_undergone_biopsy_of_skin_now",
+  "patient_has_diagnosis_of_disease_now",
+  "patient_can_undergo_biopsy_inthefuture",
+  "patient_has_diagnosis_of_adenocarcinoma_of_esophagus_now",
+  "patient_has_diagnosis_of_squamous_cell_carcinoma_of_esophagus_now",
+  "patient_has_finding_of_adenocarcinoma_of_esophagus_now",
+  "patient_has_finding_of_squamous_cell_carcinoma_of_esophagus_now",
+  "patient_has_finding_of_malignant_tumor_of_esophagus_now"
+]

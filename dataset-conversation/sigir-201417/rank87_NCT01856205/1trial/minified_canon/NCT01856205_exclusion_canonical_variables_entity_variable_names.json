@@ -1,0 +1,16 @@
+[
+  "patient_is_exposed_to_blood_now",
+  "patient_has_finding_of_coma_now",
+  "patient_has_undergone_antibiotic_therapy_inthehistory",
+  "patient_has_diagnosis_of_bacterial_meningitis_now",
+  "patient_has_diagnosis_of_encephalitis_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_seizure_value_recorded_now_withunit_minutes",
+  "patient_has_diagnosis_of_simple_febrile_seizure_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_has_finding_of_doll_s_head_reflex_absent_now",
+  "patient_glasgow_coma_score_value_recorded_now_withunit_none"
+]

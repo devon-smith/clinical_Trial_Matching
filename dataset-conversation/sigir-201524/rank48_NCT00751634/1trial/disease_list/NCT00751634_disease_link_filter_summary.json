@@ -1,0 +1,60 @@
+{
+  "generated": "2025-10-20T22:30:34",
+  "trial_id": "NCT00751634",
+  "contextual": {
+    "_id": "NCT00751634",
+    "title": "Temperature Control in Central Fever in the Neuro-ICU",
+    "text": "Summary: There are few treatments for central fever (fever that is due to the central nervous system, as opposed to an infectious source). We hypothesize that an externally applied cooling blanket will reduce temperature in neurologically ill patients with central fever.\nInclusion criteria: inclusion criteria: \n\n Two or more days with core temperature ≥ 100.4F \n\n Approval of the patient's primary attending physician \n\n Need for core temperature measurement independent of the study. \n\n Admission to the Neuro-ICU [intensive care unit] for an underlying condition \n\n \nExclusion criteria: : \n\n Evidence for an infectious cause of fever, such as pneumonia, bacteremia, CNS [central nervous system] infection or urinary tract infection. \n\n Expected death from any cause \n\n Known sensitivity to the device \n\n History of pre-admission hypothalamic dysfunction or known temperature dysregulation \n\n Use of 2 or more vasopressor medications, since this may make a local skin reaction to the device more likely \n\n Hemodynamic instability",
+    "metadata": {
+      "brief_title": "Temperature Control in Central Fever in the Neuro-ICU",
+      "phase": "Phase 4",
+      "drugs": "['Gaymar Rapr-Round (external cooling blanket)']",
+      "drugs_list": [
+        "Gaymar Rapr-Round (external cooling blanket)"
+      ],
+      "diseases": "['Fever', 'Brain Hemorrhage']",
+      "diseases_list": [
+        "Fever",
+        "Brain Hemorrhage"
+      ],
+      "enrollment": "20.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Two or more days with core temperature ≥ 100.4F \n\n Approval of the patient's primary attending physician \n\n Need for core temperature measurement independent of the study. \n\n Admission to the Neuro-ICU [intensive care unit] for an underlying condition \n\n ",
+      "exclusion_criteria": ": \n\n Evidence for an infectious cause of fever, such as pneumonia, bacteremia, CNS [central nervous system] infection or urinary tract infection. \n\n Expected death from any cause \n\n Known sensitivity to the device \n\n History of pre-admission hypothalamic dysfunction or known temperature dysregulation \n\n Use of 2 or more vasopressor medications, since this may make a local skin reaction to the device more likely \n\n Hemodynamic instability",
+      "brief_summary": "There are few treatments for central fever (fever that is due to the central nervous system, as opposed to an infectious source). We hypothesize that an externally applied cooling blanket will reduce temperature in neurologically ill patients with central fever."
+    }
+  },
+  "linked_result": {
+    "Fever": {
+      "conceptId": "386661006",
+      "preferred_term": "Fever",
+      "fully_specified_name": "Fever (finding)",
+      "type": "Clinical finding",
+      "definition": "An abnormal elevation of body temperature, usually as a result of a pathologic process.",
+      "best_match_term": "Fever",
+      "match_reason": "Exact"
+    },
+    "Brain Hemorrhage": {
+      "conceptId": "274100004",
+      "preferred_term": "Cerebral hemorrhage",
+      "fully_specified_name": "Cerebral hemorrhage (disorder)",
+      "type": "Clinical finding",
+      "definition": "Bleeding into one or both CEREBRAL HEMISPHERES including the BASAL GANGLIA and the CEREBRAL CORTEX. It is often associated with HYPERTENSION and CRANIOCEREBRAL TRAUMA.",
+      "best_match_term": "Cerebral hemorrhage",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Fever": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Fever": {
+      "disease": "Fever",
+      "conceptId": "386661006",
+      "preferred_term": "Fever",
+      "fully_specified_name": "Fever (finding)",
+      "type": "Clinical finding",
+      "definition": "An abnormal elevation of body temperature, usually as a result of a pathologic process.",
+      "best_match_term": "Fever"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_id": "NCT01506999",
+  "title": "Genetic Mapping for Cardiac Risk Assessment",
+  "text": "Summary: The main objective of the GENOCOR project (Genetic mapping for cardiac risk assessment) is the setting up of a joint public/private laboratory (GENOCOR-LAB) dedicated to the development and testing of new cost-effective technologies exploiting the growing knowledge in the genomic correlates of cardiovascular diseases (CVD) and of their evolution; the data obtained by the GENOCOR-Lab should especially orient secondary prevention and specific treatment of ischemic heart diseases (IHD).\nInclusion criteria: inclusion criteria: \n\n Patients affected by history of IHD with a non-fatal evolution(angina or AMI as first manifestation),age at the onset of the disease (<50 o >60 years. \n\n Patients with acute coronary syndrome as first manifestation of coronary disease, admitted to the coronary unit within 6 hours from the onset of symptoms. \n\n \nExclusion criteria: : \n\n Age>75 \n\n Pregnancy \n\n Recent(< 6 months) cerebral ischemic attack \n\n Active cancer \n\n Inability to provide an informed consent.",
+  "metadata": {
+    "brief_title": "Genetic Mapping for Cardiac Risk Assessment",
+    "phase": "",
+    "drugs": "['MULTIGENE SCREENING FOR SINGLE SNPS']",
+    "drugs_list": [
+      "MULTIGENE SCREENING FOR SINGLE SNPS"
+    ],
+    "diseases": "['Angina Pectoris', 'Myocardial Infarction', 'Coronary Disease', 'Myocardial Ischemia', 'Acute Coronary Syndrome']",
+    "diseases_list": [
+      "Angina Pectoris",
+      "Myocardial Infarction",
+      "Coronary Disease",
+      "Myocardial Ischemia",
+      "Acute Coronary Syndrome"
+    ],
+    "enrollment": "2000.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Patients affected by history of IHD with a non-fatal evolution(angina or AMI as first manifestation),age at the onset of the disease (<50 o >60 years. \n\n Patients with acute coronary syndrome as first manifestation of coronary disease, admitted to the coronary unit within 6 hours from the onset of symptoms. \n\n ",
+    "exclusion_criteria": ": \n\n Age>75 \n\n Pregnancy \n\n Recent(< 6 months) cerebral ischemic attack \n\n Active cancer \n\n Inability to provide an informed consent.",
+    "brief_summary": "The main objective of the GENOCOR project (Genetic mapping for cardiac risk assessment) is the setting up of a joint public/private laboratory (GENOCOR-LAB) dedicated to the development and testing of new cost-effective technologies exploiting the growing knowledge in the genomic correlates of cardiovascular diseases (CVD) and of their evolution; the data obtained by the GENOCOR-Lab should especially orient secondary prevention and specific treatment of ischemic heart diseases (IHD)."
+  }
+}

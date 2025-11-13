@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_age_value_recorded_now_in_days",
+  "patient_has_finding_of_pneumonia_now",
+  "patient_antibiotic_therapy_value_recorded_now_withunit_hours",
+  "patient_intubation_value_recorded_now_withunit_hours"
+]

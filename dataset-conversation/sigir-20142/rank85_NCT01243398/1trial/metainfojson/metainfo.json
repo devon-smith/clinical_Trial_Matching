@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01243398",
+  "contextual": {
+    "_id": "NCT01243398",
+    "title": "Gefitinib in Treating Patients With Esophageal Cancer That is Progressing After Chemotherapy",
+    "text": "Summary: RATIONALE: Gefitinib may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth and by blocking blood flow to the tumor. It is not yet known whether gefitinib is more effective than a placebo in treating esophageal cancer.~PURPOSE: This randomized phase III trial is studying gefitinib to see how well it works compared with a placebo in treating patients with esophageal cancer that is progressing after chemotherapy.\nInclusion criteria: DISEASE CHARACTERISTICS: \n\n Histologically confirmed esophageal cancer or gastroesophageal junction tumor including the following subtypes: \n\n Adenocarcinoma \n\n Squamous cell cancer \n\n Poorly differentiated epithelial malignancy \n\n Gastroesophageal junction with Siewert type I or II tumors \n\n Failure after no more than 2 prior chemotherapy regimens and 1 chemoradiation course \n\n Measurable or evaluable disease by CT scan \n\n Patients with brain metastases must be stable and have received cranial irradiation prior to entry \n\n PATIENT CHARACTERISTICS: \n\n WHO performance status 0-2 \n\n Serum bilirubin ≤ 3 times the upper limit of normal (ULN) \n\n AST/ALT ≤ 2.5 times ULN (≤ 5 x in presence of liver metastases) \n\n Able to take oral tablets (whole or dispersed) \n\n No evidence of clinically active interstitial lung disease (patients with chronic, stable, radiographic changes who are asymptomatic allowed) \n\n No known severe hypersensitivity to gefitinib or any of the excipients of this product \n\n No prior other malignancy likely to confound results or interfere with gefitinib therapy \n\n No medical condition considered to interfere with the safe participation in the trial \n\n Not pregnant \n\n Fertile patients must use effective contraception \n\n PRIOR CONCURRENT THERAPY: \n\n See Disease Characteristics \n\n No chemotherapy (including oral) within the past 6 weeks \n\n No radiotherapy to site of measurable or evaluable disease within the past 4 weeks \n\n No other concurrent cytotoxic chemotherapy, immunotherapy, hormonal therapy (excluding contraceptives and replacement steroids) or experimental medications\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Gefitinib in Treating Patients With Esophageal Cancer That is Progressing After Chemotherapy",
+      "phase": "Phase 3",
+      "drugs": "['quality-of-life assessment']",
+      "drugs_list": [
+        "quality-of-life assessment"
+      ],
+      "diseases": "['Adenocarcinoma of the Gastroesophageal Junction', 'Esophageal Cancer']",
+      "diseases_list": [
+        "Adenocarcinoma of the Gastroesophageal Junction",
+        "Esophageal Cancer"
+      ],
+      "enrollment": "450.0",
+      "inclusion_criteria": "DISEASE CHARACTERISTICS: \n\n Histologically confirmed esophageal cancer or gastroesophageal junction tumor including the following subtypes: \n\n Adenocarcinoma \n\n Squamous cell cancer \n\n Poorly differentiated epithelial malignancy \n\n Gastroesophageal junction with Siewert type I or II tumors \n\n Failure after no more than 2 prior chemotherapy regimens and 1 chemoradiation course \n\n Measurable or evaluable disease by CT scan \n\n Patients with brain metastases must be stable and have received cranial irradiation prior to entry \n\n PATIENT CHARACTERISTICS: \n\n WHO performance status 0-2 \n\n Serum bilirubin ≤ 3 times the upper limit of normal (ULN) \n\n AST/ALT ≤ 2.5 times ULN (≤ 5 x in presence of liver metastases) \n\n Able to take oral tablets (whole or dispersed) \n\n No evidence of clinically active interstitial lung disease (patients with chronic, stable, radiographic changes who are asymptomatic allowed) \n\n No known severe hypersensitivity to gefitinib or any of the excipients of this product \n\n No prior other malignancy likely to confound results or interfere with gefitinib therapy \n\n No medical condition considered to interfere with the safe participation in the trial \n\n Not pregnant \n\n Fertile patients must use effective contraception \n\n PRIOR CONCURRENT THERAPY: \n\n See Disease Characteristics \n\n No chemotherapy (including oral) within the past 6 weeks \n\n No radiotherapy to site of measurable or evaluable disease within the past 4 weeks \n\n No other concurrent cytotoxic chemotherapy, immunotherapy, hormonal therapy (excluding contraceptives and replacement steroids) or experimental medications",
+      "exclusion_criteria": "",
+      "brief_summary": "RATIONALE: Gefitinib may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth and by blocking blood flow to the tumor. It is not yet known whether gefitinib is more effective than a placebo in treating esophageal cancer.~PURPOSE: This randomized phase III trial is studying gefitinib to see how well it works compared with a placebo in treating patients with esophageal cancer that is progressing after chemotherapy."
+    }
+  }
+}

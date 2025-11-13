@@ -1,0 +1,48 @@
+{
+  "generated": "2025-10-20T22:18:34",
+  "trial_id": "NCT01314807",
+  "contextual": {
+    "_id": "NCT01314807",
+    "title": "Systemic Consequences and Comorbidities in Mild/Moderate Chronic Obstructive Pulmonary Disease (COPD), Time for Action!",
+    "text": "Summary: The aim of this prospective case-control study is to investigate the prevalence, severity and incidence of systemic consequences in newly detected patients with mild and moderate Chronic obstructive pulmonary disease (COPD). Special attention will be paid to skeletal muscle dysfunction and physical inactivity as these factors are, together with smoking, potentially modifiable.\nInclusion criteria: inclusion criteria: \n\n age 40-80 years old \n\n cases: spirometry (post-bronchodilator) based diagnosis of COPD (GOLD criteria) + smoking history of at least 10 pack-years and active smoking behavior till at least 10 years from the moment of enrollment. \n\n smoking controls: no COPD (spirometry based) + smoking history of at least 10 pack-years and active smoking behavior till at least 10 years from the moment of enrollment. \n\n non-smoking controls: no COPD (spirometry based) + < 1 pack year \n\n \nExclusion criteria: : \n\n Respiratory disorder other than COPD \n\n α1-antitrypsin deficiency \n\n Known history of significant inflammatory disease other than COPD \n\n COPD exacerbation within 4 weeks prior to study \n\n Lung surgery \n\n Recent diagnosis of cancer \n\n Therapy with oral corticosteroids in the last 6 weeks \n\n Significant cardiovascular comorbidity \n\n Significant orthopedic/musculoskeletal problems",
+    "metadata": {
+      "brief_title": "Systemic Consequences and Comorbidities in Mild/Moderate Chronic Obstructive Pulmonary Disease (COPD), Time for Action!",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Chronic Obstructive Pulmonary Disease']",
+      "diseases_list": [
+        "Chronic Obstructive Pulmonary Disease"
+      ],
+      "enrollment": "200.0",
+      "inclusion_criteria": "inclusion criteria: \n\n age 40-80 years old \n\n cases: spirometry (post-bronchodilator) based diagnosis of COPD (GOLD criteria) + smoking history of at least 10 pack-years and active smoking behavior till at least 10 years from the moment of enrollment. \n\n smoking controls: no COPD (spirometry based) + smoking history of at least 10 pack-years and active smoking behavior till at least 10 years from the moment of enrollment. \n\n non-smoking controls: no COPD (spirometry based) + < 1 pack year \n\n ",
+      "exclusion_criteria": ": \n\n Respiratory disorder other than COPD \n\n α1-antitrypsin deficiency \n\n Known history of significant inflammatory disease other than COPD \n\n COPD exacerbation within 4 weeks prior to study \n\n Lung surgery \n\n Recent diagnosis of cancer \n\n Therapy with oral corticosteroids in the last 6 weeks \n\n Significant cardiovascular comorbidity \n\n Significant orthopedic/musculoskeletal problems",
+      "brief_summary": "The aim of this prospective case-control study is to investigate the prevalence, severity and incidence of systemic consequences in newly detected patients with mild and moderate Chronic obstructive pulmonary disease (COPD). Special attention will be paid to skeletal muscle dysfunction and physical inactivity as these factors are, together with smoking, potentially modifiable."
+    }
+  },
+  "linked_result": {
+    "Chronic Obstructive Pulmonary Disease": {
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Chronic Obstructive Pulmonary Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chronic Obstructive Pulmonary Disease": {
+      "disease": "Chronic Obstructive Pulmonary Disease",
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease"
+    }
+  }
+}

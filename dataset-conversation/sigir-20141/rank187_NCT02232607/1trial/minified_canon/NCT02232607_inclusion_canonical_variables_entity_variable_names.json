@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_exercise_induced_angina_inthehistory",
+  "patient_has_finding_of_stable_angina_inthehistory",
+  "patient_is_exposed_to_nitrate_salt_now",
+  "patient_has_undergone_cardiovascular_stress_test_using_treadmill_inthehistory",
+  "patient_st_segment_depression_value_recorded_inthehistory_withunit_millivolt",
+  "patient_has_undergone_coronary_angiography_inthehistory",
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_vessel_lumen_diameter_value_recorded_inthehistory_withunit_mm"
+]

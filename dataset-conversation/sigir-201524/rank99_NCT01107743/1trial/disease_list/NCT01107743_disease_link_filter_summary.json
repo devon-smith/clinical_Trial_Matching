@@ -1,0 +1,110 @@
+{
+  "generated": "2025-10-22T20:54:27",
+  "trial_id": "NCT01107743",
+  "contextual": {
+    "_id": "NCT01107743",
+    "title": "Amlodipine/Atorvastatin (Caduet®) Drug Use Investigation (Regulatory Post Marketing Commitment Plan)",
+    "text": "Summary: In this survey, to collect the safety and efficacy information of Amlodipine /Atorvastatin (Caduet® Combination Tablets) in daily medical practice will be examined. In addition, the necessity of special Investigation and post-marketing clinical studies will be examined, while investigating unexpected adverse drug reactions during the survey period and understanding of the status of frequency of adverse drug reactions in daily medical practice.\nInclusion criteria: inclusion criteria: \n\n Male or Female subjects intend to treat their cardiovascular disease who are prescribed Amlodipine /Atorvastatin (Caduet®) Combination Tablets by their Physicians \n\n \nExclusion criteria: : \n\n Subjects who have been prescribed Amlodipine /Atorvastatin (Caduet®) Combination Tablets before.",
+    "metadata": {
+      "brief_title": "Amlodipine/Atorvastatin (Caduet®) Drug Use Investigation (Regulatory Post Marketing Commitment Plan)",
+      "phase": "",
+      "drugs": "['Amlodipine/Atorvastatin']",
+      "drugs_list": [
+        "Amlodipine/Atorvastatin"
+      ],
+      "diseases": "['Hypertension', 'Angina Pectoris', 'Hypercholesterolemia', 'Familial Hypercholesterolemia']",
+      "diseases_list": [
+        "Hypertension",
+        "Angina Pectoris",
+        "Hypercholesterolemia",
+        "Familial Hypercholesterolemia"
+      ],
+      "enrollment": "1291.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Male or Female subjects intend to treat their cardiovascular disease who are prescribed Amlodipine /Atorvastatin (Caduet®) Combination Tablets by their Physicians \n\n ",
+      "exclusion_criteria": ": \n\n Subjects who have been prescribed Amlodipine /Atorvastatin (Caduet®) Combination Tablets before.",
+      "brief_summary": "In this survey, to collect the safety and efficacy information of Amlodipine /Atorvastatin (Caduet® Combination Tablets) in daily medical practice will be examined. In addition, the necessity of special Investigation and post-marketing clinical studies will be examined, while investigating unexpected adverse drug reactions during the survey period and understanding of the status of frequency of adverse drug reactions in daily medical practice."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Angina Pectoris": {
+      "conceptId": "194828000",
+      "preferred_term": "Angina pectoris",
+      "fully_specified_name": "Angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.",
+      "best_match_term": "Angina pectoris",
+      "match_reason": "Exact"
+    },
+    "Hypercholesterolemia": {
+      "conceptId": "13644009",
+      "preferred_term": "Hypercholesterolemia",
+      "fully_specified_name": "Hypercholesterolemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A condition with abnormally high levels of CHOLESTEROL in the blood. It is defined as a cholesterol value exceeding the 95th percentile for the population.",
+      "best_match_term": "Hypercholesterolemia",
+      "match_reason": "Exact"
+    },
+    "Familial Hypercholesterolemia": {
+      "conceptId": "398036000",
+      "preferred_term": "Familial hypercholesterolemia",
+      "fully_specified_name": "Familial hypercholesterolemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of familial disorders characterized by elevated circulating cholesterol contained in either LOW-DENSITY LIPOPROTEINS alone or also in VERY-LOW-DENSITY LIPOPROTEINS (pre-beta lipoproteins).",
+      "best_match_term": "Familial hypercholesterolemia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1,
+    "Angina Pectoris": 1,
+    "Hypercholesterolemia": 1,
+    "Familial Hypercholesterolemia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Angina Pectoris": {
+      "disease": "Angina Pectoris",
+      "conceptId": "194828000",
+      "preferred_term": "Angina pectoris",
+      "fully_specified_name": "Angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.",
+      "best_match_term": "Angina pectoris"
+    },
+    "Hypercholesterolemia": {
+      "disease": "Hypercholesterolemia",
+      "conceptId": "13644009",
+      "preferred_term": "Hypercholesterolemia",
+      "fully_specified_name": "Hypercholesterolemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A condition with abnormally high levels of CHOLESTEROL in the blood. It is defined as a cholesterol value exceeding the 95th percentile for the population.",
+      "best_match_term": "Hypercholesterolemia"
+    },
+    "Familial Hypercholesterolemia": {
+      "disease": "Familial Hypercholesterolemia",
+      "conceptId": "398036000",
+      "preferred_term": "Familial hypercholesterolemia",
+      "fully_specified_name": "Familial hypercholesterolemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of familial disorders characterized by elevated circulating cholesterol contained in either LOW-DENSITY LIPOPROTEINS alone or also in VERY-LOW-DENSITY LIPOPROTEINS (pre-beta lipoproteins).",
+      "best_match_term": "Familial hypercholesterolemia"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+[
+  "patient_has_finding_of_pulmonary_arterial_hypertension_now",
+  "patient_pulmonary_artery_mean_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_cardiac_catheterization_now"
+]

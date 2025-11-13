@@ -1,0 +1,22 @@
+{
+  "trial_id": "NCT02139384",
+  "contextual": {
+    "_id": "NCT02139384",
+    "title": "Clinical Pediatric Pneumonia Score in Critically Ill Children",
+    "text": "Summary: The purpose of the study is to create a clinical pneumonia tool that can be used to predict the cause of community-acquired pneumonia, which is a lung infection that began outside of the hospital in critically ill children therefore limiting unnecessary antibiotic use. The investigators will enroll critically ill children admitted with acute respiratory failure and suspected pneumonia. Each patient will receive a clinical pneumonia score blinded from culture and respiratory viral panel results. All care after samples obtained will be at the discretion of the PICU team. The investigators believe that our clinical pneumonia scale with procalcitonin will accurately designate viral from bacterial etiologies.\nInclusion criteria: inclusion criteria: \n\n All intubated pediatric patients \n\n Age 1 day to 21 years \n\n Admitted to the LLUCH PICU with suspected pneumonia for the next 6 months \n\n Have received antibiotics for less than 12 hours \n\n Have been intubated for less than 24 hours \n\n Patients must be English or Spanish speaking for consent purposes. \n\n \nExclusion criteria: : \n\n Patients who have received antibiotics for greater than 12 hours \n\n Patients who have been intubated for greater than 24 hours \n\n Patients who are unable to tolerate non-bronchoscopic bronchoalveolar lavage",
+    "metadata": {
+      "brief_title": "Clinical Pediatric Pneumonia Score in Critically Ill Children",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Community Acquired Pneumonia']",
+      "diseases_list": [
+        "Community Acquired Pneumonia"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n All intubated pediatric patients \n\n Age 1 day to 21 years \n\n Admitted to the LLUCH PICU with suspected pneumonia for the next 6 months \n\n Have received antibiotics for less than 12 hours \n\n Have been intubated for less than 24 hours \n\n Patients must be English or Spanish speaking for consent purposes. \n\n ",
+      "exclusion_criteria": ": \n\n Patients who have received antibiotics for greater than 12 hours \n\n Patients who have been intubated for greater than 24 hours \n\n Patients who are unable to tolerate non-bronchoscopic bronchoalveolar lavage",
+      "brief_summary": "The purpose of the study is to create a clinical pneumonia tool that can be used to predict the cause of community-acquired pneumonia, which is a lung infection that began outside of the hospital in critically ill children therefore limiting unnecessary antibiotic use. The investigators will enroll critically ill children admitted with acute respiratory failure and suspected pneumonia. Each patient will receive a clinical pneumonia score blinded from culture and respiratory viral panel results. All care after samples obtained will be at the discretion of the PICU team. The investigators believe that our clinical pneumonia scale with procalcitonin will accurately designate viral from bacterial etiologies."
+    }
+  }
+}

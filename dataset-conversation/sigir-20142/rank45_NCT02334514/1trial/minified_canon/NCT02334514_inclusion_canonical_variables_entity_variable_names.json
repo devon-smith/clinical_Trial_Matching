@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_headache_now",
+  "patient_has_suspicion_of_influenza_now",
+  "patient_has_finding_of_joint_pain_now",
+  "patient_has_finding_of_malaise_now",
+  "patient_has_finding_of_muscle_pain_now",
+  "patient_has_finding_of_pain_in_throat_now",
+  "patient_has_finding_of_influenza_now",
+  "patient_has_undergone_antiviral_therapy_inthehistory"
+]

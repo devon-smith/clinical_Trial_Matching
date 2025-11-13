@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_allergy_to_nicardipine_now",
+  "patient_has_diagnosis_of_chronic_renal_failure_now",
+  "patient_creatinine_value_recorded_now_withunit_mg_per_dl",
+  "patient_has_finding_of_decreased_liver_function_now",
+  "patient_liver_enzyme_levels_finding_value_recorded_now_withunit_unit",
+  "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_aortic_valve_stenosis_now",
+  "patient_is_pregnant_now",
+  "patient_sex_is_female_now",
+  "patient_is_breastfeeding_now"
+]

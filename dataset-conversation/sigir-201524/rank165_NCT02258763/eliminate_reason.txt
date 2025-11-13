@@ -1,0 +1,1 @@
+This canonical NCT is labeled 'eliminated' because ALL of its subcohorts were explicitly contradicted in the eliminate() stage (explicit contradiction). Granular clause-level reasons are not recorded by the current pipeline.

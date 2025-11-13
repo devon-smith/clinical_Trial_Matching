@@ -1,0 +1,18 @@
+[
+  "patient_has_finding_of_anaphylaxis_inthehistory",
+  "patient_has_diagnosis_of_asthma_now",
+  "patient_has_diagnosis_of_chronic_lung_disease_now",
+  "patient_has_diagnosis_of_heart_disease_now",
+  "patient_has_diagnosis_of_hemoglobinopathy_now",
+  "patient_has_diagnosis_of_kidney_disease_now",
+  "patient_has_diagnosis_of_metabolic_disease_now",
+  "patient_has_finding_of_immunosuppression_now",
+  "patient_is_pregnant_now",
+  "patient_has_diagnosis_of_guillain_barr_syndrome_inthehistory",
+  "patient_is_taking_aspirin_containing_product_inthefuture",
+  "patient_has_undergone_aspirin_therapy_inthehistory",
+  "patient_is_exposed_to_drug_or_medicament_inthepast48hours",
+  "patient_has_finding_of_fever_inthepast72hours",
+  "patient_has_finding_of_nasal_congestion_now",
+  "patient_has_finding_of_upper_respiratory_infection_now"
+]

@@ -1,0 +1,33 @@
+{
+  "trial_id": "NCT00000492",
+  "contextual": {
+    "_id": "NCT00000492",
+    "title": "Beta-Blocker Heart Attack Trial (BHAT)",
+    "text": "Summary: To determine whether the regular administration of the beta-blocker drug propranolol to people who had had at least one documented myocardial infarction would result in a significant reduction of mortality from all causes over the follow-up period. Eligible volunteer patients were recruited to participate in a double-blind clinical trial within 21 days after the onset of the acute event. One-half of the patients were randomly assigned to a beta-blocking drug (propranolol) and one-half to a placebo. The trial also evaluated the effect of propranolol on incidences of coronary heart disease mortality, sudden cardiac death, and nonfatal myocardial infarction plus coronary heart disease mortality in persons with documented previous myocardial infarction.\nInclusion criteria: Men and women, ages 30 to 69. Documented myocardial infarction.\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Beta-Blocker Heart Attack Trial (BHAT)",
+      "phase": "Phase 3",
+      "drugs": "['propranolol']",
+      "drugs_list": [
+        "propranolol"
+      ],
+      "diseases": "['Arrhythmia', 'Cardiovascular Diseases', 'Coronary Disease', 'Death, Sudden, Cardiac', 'Heart Diseases', 'Myocardial Infarction', 'Myocardial Ischemia', 'Ventricular Fibrillation']",
+      "diseases_list": [
+        "Arrhythmia",
+        "Cardiovascular Diseases",
+        "Coronary Disease",
+        "Death",
+        "Sudden",
+        "Cardiac",
+        "Heart Diseases",
+        "Myocardial Infarction",
+        "Myocardial Ischemia",
+        "Ventricular Fibrillation"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "Men and women, ages 30 to 69. Documented myocardial infarction.",
+      "exclusion_criteria": "",
+      "brief_summary": "To determine whether the regular administration of the beta-blocker drug propranolol to people who had had at least one documented myocardial infarction would result in a significant reduction of mortality from all causes over the follow-up period. Eligible volunteer patients were recruited to participate in a double-blind clinical trial within 21 days after the onset of the acute event. One-half of the patients were randomly assigned to a beta-blocking drug (propranolol) and one-half to a placebo. The trial also evaluated the effect of propranolol on incidences of coronary heart disease mortality, sudden cardiac death, and nonfatal myocardial infarction plus coronary heart disease mortality in persons with documented previous myocardial infarction."
+    }
+  }
+}

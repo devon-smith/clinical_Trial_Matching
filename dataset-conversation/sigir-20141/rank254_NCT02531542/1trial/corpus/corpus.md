@@ -1,0 +1,42 @@
+# Evaluation of Rapid Emergency Echography for Acute Dyspnoea
+**NCT**: `NCT02531542`
+## Brief Summary
+Elderly people constitute the largest proportion of emergency room patients, representing 12% of all emergency room admissions. The need for diagnostic tests or therapeutic interventions is much greater in this patient population. Cardiovascular diseases and symptoms represent 12% of the causes for emergency room admission, and patients suffering from cardiovascular disease are those whose emergency room visit lasts longest.~The diagnostic approach in the emergency room in elderly patients admitted for acute dypsnoea is complex, and early identification of acute left-sided heart failure (ALSHF) is vital as it has an impact on prognosis. The clinical signs are difficult to interpret, and are non-specific, particularly at the acute phase and in elderly or obese patients. Indeed, some authors have reported up to 50% of diagnostic errors in elderly patients.~Measure of the blood concentration of a natriuretic peptide allows a quick diagnosis. However, peptides suffer from several limitations, particularly in situations that are often encountered in elderly patients, such as sepsis, renal failure, acute coronary syndrome, pulmonary embolism, chronic respiratory failure, atrial fibrillation and high body mass index. Diagnostic performance deteriorates with increasing age, and there is a significant increase in this grey-zone in patients aged ≥75 years. In critical situations in elderly patients, assessment of natriuretic peptides serve mainly to rule out a diagnosis of left heart failure.~Some authors have suggested using lung ultrasound in the initial work-up of acute respiratory failure, since some specific profiles are known to be related to the presence of interstitial oedema, reflecting impaired left heart function (e.g. presence of B lines). These studies were performed in the context of intensive or critical care, but data are sparse regarding the application of this approach in the emergency room.~The hypothesis is that the diagnostic accuracy of a targeted and quick echographic approach, namely the READ method (Rapid Echography for Acute Dyspnoea), comprising targeted lung ultrasound combined with isolated measure of transmitral flow, would be superior to that of NT-proBNP assessment for the diagnosis of ALSHF in elderly patients (≥75 years) admitted to the emergency department.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Admission to the Emergency Department Age ≥ 75 years 
+
+ AND criteria of acute dyspnoea: 
+
+ Breathe rate ≥ 25 cycles/minute 
+
+ or PaO2 ≤ 70 mmHg 
+
+ or SpO2 ≤ 92% in room air 
+
+ or PacO2 ≥ 45 mmHg and pH ≤ 7.35 AND Electrocardiogram in sinus rhythm at admission
+## Exclusion Criteria
+: 
+
+ None
+## Full Text
+Summary: Elderly people constitute the largest proportion of emergency room patients, representing 12% of all emergency room admissions. The need for diagnostic tests or therapeutic interventions is much greater in this patient population. Cardiovascular diseases and symptoms represent 12% of the causes for emergency room admission, and patients suffering from cardiovascular disease are those whose emergency room visit lasts longest.~The diagnostic approach in the emergency room in elderly patients admitted for acute dypsnoea is complex, and early identification of acute left-sided heart failure (ALSHF) is vital as it has an impact on prognosis. The clinical signs are difficult to interpret, and are non-specific, particularly at the acute phase and in elderly or obese patients. Indeed, some authors have reported up to 50% of diagnostic errors in elderly patients.~Measure of the blood concentration of a natriuretic peptide allows a quick diagnosis. However, peptides suffer from several limitations, particularly in situations that are often encountered in elderly patients, such as sepsis, renal failure, acute coronary syndrome, pulmonary embolism, chronic respiratory failure, atrial fibrillation and high body mass index. Diagnostic performance deteriorates with increasing age, and there is a significant increase in this grey-zone in patients aged ≥75 years. In critical situations in elderly patients, assessment of natriuretic peptides serve mainly to rule out a diagnosis of left heart failure.~Some authors have suggested using lung ultrasound in the initial work-up of acute respiratory failure, since some specific profiles are known to be related to the presence of interstitial oedema, reflecting impaired left heart function (e.g. presence of B lines). These studies were performed in the context of intensive or critical care, but data are sparse regarding the application of this approach in the emergency room.~The hypothesis is that the diagnostic accuracy of a targeted and quick echographic approach, namely the READ method (Rapid Echography for Acute Dyspnoea), comprising targeted lung ultrasound combined with isolated measure of transmitral flow, would be superior to that of NT-proBNP assessment for the diagnosis of ALSHF in elderly patients (≥75 years) admitted to the emergency department.
+Inclusion criteria: inclusion criteria: 
+
+ Admission to the Emergency Department Age ≥ 75 years 
+
+ AND criteria of acute dyspnoea: 
+
+ Breathe rate ≥ 25 cycles/minute 
+
+ or PaO2 ≤ 70 mmHg 
+
+ or SpO2 ≤ 92% in room air 
+
+ or PacO2 ≥ 45 mmHg and pH ≤ 7.35 AND Electrocardiogram in sinus rhythm at admission 
+
+ 
+Exclusion criteria: : 
+
+ None

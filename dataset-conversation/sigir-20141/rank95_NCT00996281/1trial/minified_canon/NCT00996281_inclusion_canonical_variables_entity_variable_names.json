@@ -1,0 +1,10 @@
+[
+  "patient_has_undergone_antihypertensive_therapy_inthepast14days",
+  "patient_is_undergoing_antihypertensive_therapy_now",
+  "patient_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_blood_pressure_value_recorded_inthehistory_withunit_millimeters_of_mercury",
+  "patient_blood_pressure_value_recorded_inthefuture1days_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_contraception_now",
+  "patient_has_undergone_laboratory_test_now",
+  "patient_is_exposed_to_hypotensive_agent_now"
+]

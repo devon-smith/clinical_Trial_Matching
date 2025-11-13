@@ -1,0 +1,22 @@
+[
+  "patient_has_undergone_complete_excision_inthehistory",
+  "patient_has_diagnosis_of_non_small_cell_carcinoma_of_lung_tnm_stage_1_now",
+  "patient_has_diagnosis_of_non_small_cell_carcinoma_of_lung_tnm_stage_2_now",
+  "patient_has_diagnosis_of_non_small_cell_lung_cancer_now",
+  "patient_has_undergone_surgical_procedure_inthehistory",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_can_undergo_bronchoscopy_now",
+  "patient_has_finding_of_infectious_disease_of_lung_now",
+  "patient_bilirubin_total_measurement_value_recorded_now_withunit_mg_percent",
+  "patient_creatinine_level_finding_value_recorded_now_withunit_mg_percent",
+  "patient_granulocyte_count_value_recorded_now_withunit_count",
+  "patient_platelet_count_value_recorded_now_withunit_count",
+  "patient_has_undergone_biopsy_now",
+  "patient_has_undergone_bronchoscopy_now",
+  "patient_can_undergo_collection_of_blood_specimen_for_laboratory_now",
+  "patient_can_undergo_follow_up_visit_now",
+  "patient_cigarette_pack_years_value_recorded_inthehistory_withunit_pack_years",
+  "patient_has_finding_of_ex_smoker_now",
+  "patient_has_finding_of_smoker_now"
+]

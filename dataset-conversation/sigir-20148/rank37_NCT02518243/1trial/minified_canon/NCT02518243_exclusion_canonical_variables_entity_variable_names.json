@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_motor_dysfunction_now",
+  "patient_has_undergone_neuropsychological_testing_now",
+  "patient_has_finding_of_sensory_disability_now",
+  "patient_is_exposed_to_antidepressant_inthepast1weeks",
+  "patient_is_exposed_to_anxiolytic_agent_inthepast1weeks",
+  "patient_is_exposed_to_hypnotic_agent_inthepast1weeks",
+  "patient_has_finding_of_imprisonment_now"
+]

@@ -1,0 +1,7 @@
+[
+  "patient_has_finding_of_bacterial_infectious_disease_now",
+  "patient_has_finding_of_mycosis_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_is_exposed_to_alemtuzumab_inthehistory",
+  "patient_has_taken_lymphocyte_immunoglobulin_containing_product_inthehistory"
+]

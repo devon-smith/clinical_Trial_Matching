@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_dementia_now",
+  "patient_has_undergone_electroencephalogram_now",
+  "patient_has_undergone_magnetic_resonance_imaging_now",
+  "patient_has_diagnosis_of_sporadic_creutzfeldt_jakob_disease_now",
+  "patient_age_value_recorded_now_in_years",
+  "patients_ability_to_swallow_is_positive_now",
+  "patient_has_undergone_electroencephalogram_inthepast3months",
+  "patient_has_undergone_mri_of_brain_and_brain_stem_inthepast6months",
+  "patient_will_undergo_autopsy_examination_inthefuture"
+]

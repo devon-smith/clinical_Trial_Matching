@@ -1,0 +1,17 @@
+[
+  "patient_has_finding_of_subglottic_stenosis_now",
+  "patient_has_finding_of_hemangioma_now",
+  "patient_has_finding_of_congenital_cleft_larynx_now",
+  "patient_has_diagnosis_of_recurrent_respiratory_papillomatosis_now",
+  "patient_has_finding_of_double_aortic_arch_now",
+  "patient_has_finding_of_mediastinal_mass_now",
+  "patient_has_finding_of_epiglottitis_now",
+  "patient_has_finding_of_foreign_body_now",
+  "patient_has_clinical_signs_of_sign_now",
+  "patient_has_finding_of_stridor_now",
+  "patient_has_finding_of_tracheitis_now",
+  "patient_has_finding_of_bronchomalacia_now",
+  "patient_has_finding_of_tracheomalacia_now",
+  "patient_is_undergoing_administration_of_steroid_now",
+  "patient_is_undergoing_administration_of_steroid_now@@for_previously_diagnosed_condition"
+]

@@ -1,0 +1,158 @@
+{
+  "generated": "2025-10-20T22:45:42",
+  "trial_id": "NCT00005338",
+  "contextual": {
+    "_id": "NCT00005338",
+    "title": "Homocysteine and Progression of Atherosclerosis",
+    "text": "Summary: In the first phase, to establish the relationship of progression of peripheral vascular disease (PVD) to plasma homocysteine. In the second phase, to conduct a randomized, controlled trial of folic acid treatment of plasma homocysteine in peripheral vascular disease.\nInclusion criteria: No eligibility criteria\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Homocysteine and Progression of Atherosclerosis",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Cardiovascular Diseases', 'Peripheral Vascular Diseases', 'Atherosclerosis', 'Cerebrovascular Disorders', 'Myocardial Infarction', 'Heart Diseases', 'Hyperhomocysteinemia']",
+      "diseases_list": [
+        "Cardiovascular Diseases",
+        "Peripheral Vascular Diseases",
+        "Atherosclerosis",
+        "Cerebrovascular Disorders",
+        "Myocardial Infarction",
+        "Heart Diseases",
+        "Hyperhomocysteinemia"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "No eligibility criteria",
+      "exclusion_criteria": "",
+      "brief_summary": "In the first phase, to establish the relationship of progression of peripheral vascular disease (PVD) to plasma homocysteine. In the second phase, to conduct a randomized, controlled trial of folic acid treatment of plasma homocysteine in peripheral vascular disease."
+    }
+  },
+  "linked_result": {
+    "Cardiovascular Diseases": {
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease",
+      "match_reason": "Exact"
+    },
+    "Peripheral Vascular Diseases": {
+      "conceptId": "400047006",
+      "preferred_term": "Peripheral vascular disease",
+      "fully_specified_name": "Peripheral vascular disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological processes involving any one of the BLOOD VESSELS in the vasculature outside the HEART.",
+      "best_match_term": "Peripheral vascular disease",
+      "match_reason": "Exact"
+    },
+    "Atherosclerosis": {
+      "conceptId": "441574008",
+      "preferred_term": "Atherosclerosis of artery",
+      "fully_specified_name": "Atherosclerosis of artery (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Atherosclerosis artery",
+      "match_reason": "Exact"
+    },
+    "Cerebrovascular Disorders": {
+      "conceptId": "62914000",
+      "preferred_term": "Cerebrovascular disease",
+      "fully_specified_name": "Cerebrovascular disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A spectrum of pathological conditions of impaired blood flow in the brain. They can involve vessels (ARTERIES or VEINS) in the CEREBRUM, the CEREBELLUM, and the BRAIN STEM. Major categories include INTRACRANIAL ARTERIOVENOUS MALFORMATIONS; BRAIN ISCHEMIA; CEREBRAL HEMORRHAGE; and others.",
+      "best_match_term": "Cerebrovascular disease",
+      "match_reason": "Exact"
+    },
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    },
+    "Heart Diseases": {
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease",
+      "match_reason": "Exact"
+    },
+    "Hyperhomocysteinemia": {
+      "conceptId": "419503008",
+      "preferred_term": "Hyperhomocysteinemia",
+      "fully_specified_name": "Hyperhomocysteinemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Condition in which the plasma levels of homocysteine and related metabolites are elevated (>13.9 μmol/l). Hyperhomocysteinemia can be familial or acquired. Development of the acquired hyperhomocysteinemia is mostly associated with vitamins B and/or folate deficiency (e.g., PERNICIOUS ANEMIA, vitamin malabsorption). Familial hyperhomocysteinemia often results in a more severe elevation of total homocysteine and excretion into the urine, resulting in HOMOCYSTINURIA. Hyperhomocysteinemia is a risk factor for cardiovascular and neurodegenerative diseases, osteoporotic fractures and complications during pregnancy.",
+      "best_match_term": "Hyperhomocysteinemia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cardiovascular Diseases": 1,
+    "Peripheral Vascular Diseases": 1,
+    "Cerebrovascular Disorders": 1,
+    "Myocardial Infarction": 1,
+    "Heart Diseases": 1,
+    "Hyperhomocysteinemia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cardiovascular Diseases": {
+      "disease": "Cardiovascular Diseases",
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease"
+    },
+    "Peripheral Vascular Diseases": {
+      "disease": "Peripheral Vascular Diseases",
+      "conceptId": "400047006",
+      "preferred_term": "Peripheral vascular disease",
+      "fully_specified_name": "Peripheral vascular disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological processes involving any one of the BLOOD VESSELS in the vasculature outside the HEART.",
+      "best_match_term": "Peripheral vascular disease"
+    },
+    "Cerebrovascular Disorders": {
+      "disease": "Cerebrovascular Disorders",
+      "conceptId": "62914000",
+      "preferred_term": "Cerebrovascular disease",
+      "fully_specified_name": "Cerebrovascular disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A spectrum of pathological conditions of impaired blood flow in the brain. They can involve vessels (ARTERIES or VEINS) in the CEREBRUM, the CEREBELLUM, and the BRAIN STEM. Major categories include INTRACRANIAL ARTERIOVENOUS MALFORMATIONS; BRAIN ISCHEMIA; CEREBRAL HEMORRHAGE; and others.",
+      "best_match_term": "Cerebrovascular disease"
+    },
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    },
+    "Heart Diseases": {
+      "disease": "Heart Diseases",
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease"
+    },
+    "Hyperhomocysteinemia": {
+      "disease": "Hyperhomocysteinemia",
+      "conceptId": "419503008",
+      "preferred_term": "Hyperhomocysteinemia",
+      "fully_specified_name": "Hyperhomocysteinemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Condition in which the plasma levels of homocysteine and related metabolites are elevated (>13.9 μmol/l). Hyperhomocysteinemia can be familial or acquired. Development of the acquired hyperhomocysteinemia is mostly associated with vitamins B and/or folate deficiency (e.g., PERNICIOUS ANEMIA, vitamin malabsorption). Familial hyperhomocysteinemia often results in a more severe elevation of total homocysteine and excretion into the urine, resulting in HOMOCYSTINURIA. Hyperhomocysteinemia is a risk factor for cardiovascular and neurodegenerative diseases, osteoporotic fractures and complications during pregnancy.",
+      "best_match_term": "Hyperhomocysteinemia"
+    }
+  }
+}

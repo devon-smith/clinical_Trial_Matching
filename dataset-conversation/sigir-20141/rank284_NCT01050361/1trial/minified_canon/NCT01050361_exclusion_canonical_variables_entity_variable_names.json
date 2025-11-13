@@ -1,0 +1,9 @@
+[
+  "patient_can_undergo_transesophageal_echocardiography_now",
+  "patient_can_undergo_transthoracic_echocardiography_now",
+  "patient_has_clinical_signs_of_raised_intracranial_pressure_now",
+  "patient_has_suspicion_of_raised_intracranial_pressure_now",
+  "patient_has_finding_of_sepsis_syndrome_now",
+  "patient_has_finding_of_shock_now",
+  "patient_is_undergoing_emergency_operation_now"
+]

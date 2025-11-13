@@ -1,0 +1,14 @@
+[
+  "patient_has_finding_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_finding_of_cardiogenic_shock_now",
+  "patient_has_finding_of_congestive_heart_failure_now",
+  "patient_has_finding_of_hemodynamic_instability_now",
+  "patient_has_undergone_thrombolytic_therapy_inthepast96hours",
+  "patient_has_finding_of_blood_coagulation_disorder_inthepast3months",
+  "patient_is_pregnant_now",
+  "patient_has_contraindication_to_clopidogrel_now",
+  "patient_has_contraindication_to_glycoprotein_now",
+  "patient_has_contraindication_to_heparin_now",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthepast6months",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory"
+]

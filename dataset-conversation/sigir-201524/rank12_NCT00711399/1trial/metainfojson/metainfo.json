@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT00711399",
+  "contextual": {
+    "_id": "NCT00711399",
+    "title": "Assessment of Cough and Wheeze With Breath Sound Documenting Device",
+    "text": "Summary: The study goal is to create a database of respiratory sounds recordings, to evaluate and validate the WIM technology and to evaluate the efficacy of a specific treatment by comparing the severity of the respiratory symptoms before and after the administration of the treatment.\nInclusion criteria: inclusion criteria: \n\n Patient and/or parents/guardian signed informed consent \n\n Patients with cough or shortness of breath \n\n \nExclusion criteria: : \n\n Chest tubes \n\n Skin lesions precluding attachment of sensors \n\n Respiratory distress \n\n Pregnant women",
+    "metadata": {
+      "brief_title": "Assessment of Cough and Wheeze With Breath Sound Documenting Device",
+      "phase": "",
+      "drugs": "['PulmoTrack® 2010 with WIM-PC™ and WIM-CC™ Technologies']",
+      "drugs_list": [
+        "PulmoTrack® 2010 with WIM-PC™ and WIM-CC™ Technologies"
+      ],
+      "diseases": "['Respiratory Sounds']",
+      "diseases_list": [
+        "Respiratory Sounds"
+      ],
+      "enrollment": "55.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patient and/or parents/guardian signed informed consent \n\n Patients with cough or shortness of breath \n\n ",
+      "exclusion_criteria": ": \n\n Chest tubes \n\n Skin lesions precluding attachment of sensors \n\n Respiratory distress \n\n Pregnant women",
+      "brief_summary": "The study goal is to create a database of respiratory sounds recordings, to evaluate and validate the WIM technology and to evaluate the efficacy of a specific treatment by comparing the severity of the respiratory symptoms before and after the administration of the treatment."
+    }
+  }
+}

@@ -1,0 +1,8 @@
+[
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now",
+  "patient_fev1_after_bronchodilation_value_recorded_now_withunit_percent_of_predicted",
+  "patient_forced_expiratory_volume_1_fev1_forced_vital_capacity_fvc_ratio_after_bronchodilator_value_recorded_now_withunit_percent",
+  "patient_cigarette_pack_years_value_recorded_inthehistory_withunit_pack_years",
+  "patient_has_finding_of_cigarette_smoker_inthehistory",
+  "patient_has_finding_of_cigarette_smoker_now"
+]

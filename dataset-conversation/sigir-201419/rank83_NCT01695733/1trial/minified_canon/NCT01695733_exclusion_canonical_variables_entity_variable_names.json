@@ -1,0 +1,14 @@
+[
+  "patient_has_finding_of_allergic_reaction_inthehistory",
+  "patient_has_finding_of_allergy_to_egg_protein_now",
+  "patient_has_diagnosis_of_guillain_barr_syndrome_inthehistory",
+  "patient_is_exposed_to_steroid_now",
+  "patient_has_finding_of_immunosuppression_now",
+  "patient_has_finding_of_disease_condition_determination_uncontrolled_now",
+  "patient_has_finding_of_disorder_characterized_by_fever_now",
+  "patient_has_undergone_influenza_vaccination_now",
+  "patient_has_diagnosis_of_mental_disorder_now",
+  "patient_is_undergoing_highly_active_anti_retroviral_therapy_now",
+  "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+  "patient_has_finding_of_influenza_like_illness_inthehistory"
+]

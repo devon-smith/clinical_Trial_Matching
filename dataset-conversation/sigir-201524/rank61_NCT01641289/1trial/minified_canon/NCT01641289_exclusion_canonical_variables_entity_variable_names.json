@@ -1,0 +1,10 @@
+[
+  "patient_has_finding_of_chronic_liver_disease_inthehistory",
+  "patient_has_finding_of_finding_relating_to_alcohol_drinking_behavior_inthehistory",
+  "patient_has_allergy_to_acetaminophen_containing_product_now",
+  "patient_has_contraindication_to_acetaminophen_containing_product_now",
+  "patient_has_allergy_to_artesunate_containing_product_now",
+  "patient_has_contraindication_to_artesunate_containing_product_now",
+  "patient_can_undergo_insertion_of_nasogastric_tube_now",
+  "patient_is_pregnant_now"
+]

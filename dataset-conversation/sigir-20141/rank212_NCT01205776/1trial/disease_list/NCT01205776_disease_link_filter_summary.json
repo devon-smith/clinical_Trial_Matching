@@ -1,0 +1,171 @@
+{
+  "generated": "2025-10-22T20:51:05",
+  "trial_id": "NCT01205776",
+  "contextual": {
+    "_id": "NCT01205776",
+    "title": "EXCEL Clinical Trial",
+    "text": "Summary: To establish the safety and efficacy of the commercially approved XIENCE Family Stent System (inclusive of XIENCE PRIME, XIENCE V, XIENCE Xpedition and XIENCE PRO [for use outside the United States [OUS] only]) in subjects with unprotected left main coronary artery disease by comparing to coronary artery bypass graft surgery.\nInclusion criteria: inclusion criteria: \n\n * inclusion criteria for RCT: \n\n Unprotected left main coronary artery (ULMCA) disease with angiographic diameter stenosis (DS) ≥70% requiring revascularization, or \n\n ULMCA disease with agniographic DS >=50% but < 70% requiring revascularization, with one or more of the following present: \n\n Non-invasive evidence of ischemia referable to a hemodynamically significant left main lesion (large area of ischemia in both the LAD and LCX territories, or in either the LAD or LCX territory in the absence of other obstructive coronary artery disease to explain the LAD or LCX defect), or stress-induced hypotension or stress-induced fall in LVEF, or stress-induced transient ischemic dilatation of the left ventricle or stress-induced thallium/technetiumlung uptake, and/or \n\n IVUS minimum lumen area (MLA) <= 6.0mm2, and/or \n\n Fractional Flow Reserve (FFR) <=0.80 \n\n Left Main Equivalent Disease \n\n Clinical and anatomic eligibility for both PCI and CABG \n\n Silent ischemia, stable angina, unstable angina or recent MI \n\n Ability to sign informed consent and comply with all study procedures including follow-up for at least three years \n\n \nExclusion criteria: : \n\n * Clinical ",
+    "metadata": {
+      "brief_title": "EXCEL Clinical Trial",
+      "phase": "",
+      "drugs": "['Percutaneous Coronary Intervention', 'CABG']",
+      "drugs_list": [
+        "Percutaneous Coronary Intervention",
+        "CABG"
+      ],
+      "diseases": "['Chronic Coronary Occlusion', 'Unprotected Left Main Coronary Artery Disease', 'Stent Thrombosis', 'Vascular Disease', 'Myocardial Ischemia', 'Coronary Artery Stenosis', 'Coronary Disease', 'Coronary Artery Disease', 'Coronary Restenosis']",
+      "diseases_list": [
+        "Chronic Coronary Occlusion",
+        "Unprotected Left Main Coronary Artery Disease",
+        "Stent Thrombosis",
+        "Vascular Disease",
+        "Myocardial Ischemia",
+        "Coronary Artery Stenosis",
+        "Coronary Disease",
+        "Coronary Artery Disease",
+        "Coronary Restenosis"
+      ],
+      "enrollment": "1905.0",
+      "inclusion_criteria": "inclusion criteria: \n\n * inclusion criteria for RCT: \n\n Unprotected left main coronary artery (ULMCA) disease with angiographic diameter stenosis (DS) ≥70% requiring revascularization, or \n\n ULMCA disease with agniographic DS >=50% but < 70% requiring revascularization, with one or more of the following present: \n\n Non-invasive evidence of ischemia referable to a hemodynamically significant left main lesion (large area of ischemia in both the LAD and LCX territories, or in either the LAD or LCX territory in the absence of other obstructive coronary artery disease to explain the LAD or LCX defect), or stress-induced hypotension or stress-induced fall in LVEF, or stress-induced transient ischemic dilatation of the left ventricle or stress-induced thallium/technetiumlung uptake, and/or \n\n IVUS minimum lumen area (MLA) <= 6.0mm2, and/or \n\n Fractional Flow Reserve (FFR) <=0.80 \n\n Left Main Equivalent Disease \n\n Clinical and anatomic eligibility for both PCI and CABG \n\n Silent ischemia, stable angina, unstable angina or recent MI \n\n Ability to sign informed consent and comply with all study procedures including follow-up for at least three years \n\n ",
+      "exclusion_criteria": ": \n\n * Clinical ",
+      "brief_summary": "To establish the safety and efficacy of the commercially approved XIENCE Family Stent System (inclusive of XIENCE PRIME, XIENCE V, XIENCE Xpedition and XIENCE PRO [for use outside the United States [OUS] only]) in subjects with unprotected left main coronary artery disease by comparing to coronary artery bypass graft surgery."
+    }
+  },
+  "linked_result": {
+    "Chronic Coronary Occlusion": {
+      "conceptId": "117051000119103",
+      "preferred_term": "Chronic total occlusion of coronary artery",
+      "fully_specified_name": "Chronic total occlusion of coronary artery (disorder)",
+      "type": "Clinical finding",
+      "definition": "Prolonged complete obstruction of the coronary artery. (ACC)",
+      "best_match_term": "Chronic total occlusion of coronary artery",
+      "match_reason": "Exact"
+    },
+    "Unprotected Left Main Coronary Artery Disease": {
+      "conceptId": "371804009",
+      "preferred_term": "Left main coronary artery disease",
+      "fully_specified_name": "Left main coronary artery disease (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Left main coronary artery disease",
+      "match_reason": "Exact"
+    },
+    "Stent Thrombosis": {
+      "conceptId": "421327009",
+      "preferred_term": "Coronary artery stent thrombosis",
+      "fully_specified_name": "Coronary artery stent thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Coronary artery stent thrombosis (disorder)",
+      "match_reason": "Exact"
+    },
+    "Vascular Disease": {
+      "conceptId": "27550009",
+      "preferred_term": "Vascular disorder",
+      "fully_specified_name": "Disorder of blood vessel (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological processes involving any of the BLOOD VESSELS in the cardiac or peripheral circulation. They include diseases of ARTERIES; VEINS; and rest of the vasculature system in the body.",
+      "best_match_term": "Vascular disease",
+      "match_reason": "Exact"
+    },
+    "Myocardial Ischemia": {
+      "conceptId": "414795007",
+      "preferred_term": "Myocardial ischemia",
+      "fully_specified_name": "Myocardial ischemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Myocardial ischemia",
+      "match_reason": "Exact"
+    },
+    "Coronary Artery Stenosis": {
+      "conceptId": "233970002",
+      "preferred_term": "Coronary artery stenosis",
+      "fully_specified_name": "Coronary artery stenosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Narrowing or constriction of a coronary artery.",
+      "best_match_term": "Coronary artery stenosis",
+      "match_reason": "Exact"
+    },
+    "Coronary Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary heart disease",
+      "match_reason": "Ancestor"
+    },
+    "Coronary Artery Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary artery disease",
+      "match_reason": "Exact"
+    },
+    "Coronary Restenosis": {
+      "conceptId": "371893007",
+      "preferred_term": "Restenotic lesion of coronary artery",
+      "fully_specified_name": "Restenotic lesion of coronary artery (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Restenotic lesion of coronary artery",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Chronic Coronary Occlusion": 1,
+    "Vascular Disease": 1,
+    "Myocardial Ischemia": 1,
+    "Coronary Artery Stenosis": 1,
+    "Coronary Restenosis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chronic Coronary Occlusion": {
+      "disease": "Chronic Coronary Occlusion",
+      "conceptId": "117051000119103",
+      "preferred_term": "Chronic total occlusion of coronary artery",
+      "fully_specified_name": "Chronic total occlusion of coronary artery (disorder)",
+      "type": "Clinical finding",
+      "definition": "Prolonged complete obstruction of the coronary artery. (ACC)",
+      "best_match_term": "Chronic total occlusion of coronary artery"
+    },
+    "Vascular Disease": {
+      "disease": "Vascular Disease",
+      "conceptId": "27550009",
+      "preferred_term": "Vascular disorder",
+      "fully_specified_name": "Disorder of blood vessel (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological processes involving any of the BLOOD VESSELS in the cardiac or peripheral circulation. They include diseases of ARTERIES; VEINS; and rest of the vasculature system in the body.",
+      "best_match_term": "Vascular disease"
+    },
+    "Myocardial Ischemia": {
+      "disease": "Myocardial Ischemia",
+      "conceptId": "414795007",
+      "preferred_term": "Myocardial ischemia",
+      "fully_specified_name": "Myocardial ischemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Myocardial ischemia"
+    },
+    "Coronary Artery Stenosis": {
+      "disease": "Coronary Artery Stenosis",
+      "conceptId": "233970002",
+      "preferred_term": "Coronary artery stenosis",
+      "fully_specified_name": "Coronary artery stenosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Narrowing or constriction of a coronary artery.",
+      "best_match_term": "Coronary artery stenosis"
+    },
+    "Coronary Restenosis": {
+      "disease": "Coronary Restenosis",
+      "conceptId": "371893007",
+      "preferred_term": "Restenotic lesion of coronary artery",
+      "fully_specified_name": "Restenotic lesion of coronary artery (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Restenotic lesion of coronary artery"
+    }
+  }
+}

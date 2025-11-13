@@ -1,0 +1,9 @@
+;; ===================== Declarations for the criterion (REQ 0) =====================
+(declare-const patient_has_been_admitted_for_investigation_of_acute_pulmonary_embolus_in_the_history Bool) ;; {"when_to_set_to_true":"Set to true if the patient has ever been admitted to the hospital for the purpose of investigating acute pulmonary embolus.","when_to_set_to_false":"Set to false if the patient has never been admitted to the hospital for the purpose of investigating acute pulmonary embolus.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient has ever been admitted to the hospital for the purpose of investigating acute pulmonary embolus.","meaning":"Boolean indicating whether the patient has ever been admitted to the hospital specifically for the investigation of acute pulmonary embolus."}
+(declare-const patient_has_diagnosis_of_acute_pulmonary_embolism_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient currently has a diagnosis of acute pulmonary embolism.","when_to_set_to_false":"Set to false if the patient currently does not have a diagnosis of acute pulmonary embolism.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a diagnosis of acute pulmonary embolism.","meaning":"Boolean indicating whether the patient currently has a diagnosis of acute pulmonary embolism."}
+
+;; ===================== Constraint Assertions (REQ 0) =====================
+;; Component 0: "To be included, the patient must have been admitted for investigation of acute pulmonary embolus."
+(assert
+  (! patient_has_been_admitted_for_investigation_of_acute_pulmonary_embolus_in_the_history
+     :named REQ0_COMPONENT0_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE)) ;; "To be included, the patient must have been admitted for investigation of acute pulmonary embolus."

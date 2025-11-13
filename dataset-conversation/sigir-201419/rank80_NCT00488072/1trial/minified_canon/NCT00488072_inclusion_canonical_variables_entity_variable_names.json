@@ -1,0 +1,22 @@
+[
+  "patient_has_finding_of_loss_of_appetite_inthepast1months",
+  "patient_loss_of_appetite_value_recorded_now_withunit_edmonton_symptom_assessment_scale_score",
+  "patient_has_diagnosis_of_tumor_of_advanced_extent_now",
+  "patient_weight_decreased_value_recorded_inthepast6months_withunit_percent",
+  "patient_has_finding_of_loss_of_appetite_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_tumor_of_advanced_extent_now",
+  "patient_has_finding_of_weight_decreased_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_kps_karnofsky_performance_status_score_value_recorded_now_withunit_score",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_has_undergone_urine_pregnancy_test_now",
+  "patient_is_undergoing_chemotherapy_now",
+  "patient_drowsiness_value_recorded_now_withunit_score",
+  "patient_is_undergoing_administration_of_antineoplastic_agent_now",
+  "patient_is_exposed_to_complementary_therapy_now",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_taking_antidepressant_now"
+]

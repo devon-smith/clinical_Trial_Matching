@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_at_risk_of_variant_creutzfeldt_jakob_disease_inthehistory",
+  "patient_has_undergone_blood_test_inthehistory_outcome_is_positive",
+  "patient_has_diagnosis_of_human_immunodeficiency_virus_infection_inthehistory",
+  "patient_has_diagnosis_of_infection_caused_by_human_t_lymphotropic_virus_inthehistory",
+  "patient_has_diagnosis_of_type_b_viral_hepatitis_inthehistory",
+  "patient_has_diagnosis_of_viral_hepatitis_c_inthehistory"
+]

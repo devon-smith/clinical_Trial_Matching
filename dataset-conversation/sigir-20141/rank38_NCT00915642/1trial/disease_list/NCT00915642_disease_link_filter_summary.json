@@ -1,0 +1,58 @@
+{
+  "generated": "2025-10-20T22:04:31",
+  "trial_id": "NCT00915642",
+  "contextual": {
+    "_id": "NCT00915642",
+    "title": "Overnight Weight Loss and Sleep Structure",
+    "text": "Summary: The objectives of the present study are:~to evaluate if overnight weight loss is dependent on sleep structure assessed by polysomnography;~to compare weight loss rate during sleep and awake rest;~to compare night weight loss profile of normal and obese volunteers.\nInclusion criteria: inclusion criteria: \n\n normal and obese volunteers \n\n \nExclusion criteria: : \n\n serious medical or neurological condition",
+    "metadata": {
+      "brief_title": "Overnight Weight Loss and Sleep Structure",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Obesity', 'Healthy']",
+      "diseases_list": [
+        "Obesity",
+        "Healthy"
+      ],
+      "enrollment": "60.0",
+      "inclusion_criteria": "inclusion criteria: \n\n normal and obese volunteers \n\n ",
+      "exclusion_criteria": ": \n\n serious medical or neurological condition",
+      "brief_summary": "The objectives of the present study are:~to evaluate if overnight weight loss is dependent on sleep structure assessed by polysomnography;~to compare weight loss rate during sleep and awake rest;~to compare night weight loss profile of normal and obese volunteers."
+    }
+  },
+  "linked_result": {
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    },
+    "Healthy": {
+      "conceptId": "102499006",
+      "preferred_term": "Fit and well",
+      "fully_specified_name": "Fit and well (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "State of being healthy",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

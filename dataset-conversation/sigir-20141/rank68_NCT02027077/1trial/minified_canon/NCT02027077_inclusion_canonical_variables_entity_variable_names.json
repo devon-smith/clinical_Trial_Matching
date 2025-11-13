@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_has_finding_of_obese_class_i_now",
+  "patient_has_finding_of_obese_class_ii_now",
+  "patient_has_finding_of_overweight_now",
+  "patient_has_finding_of_does_walk_now"
+]

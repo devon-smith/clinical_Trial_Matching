@@ -1,0 +1,22 @@
+{
+  "_id": "NCT00756756",
+  "title": "The Effect of Granulocyte Colony Stimulating Factor (G-CSF) on Myocardial Function After Acute Anterior Myocardial Infarction, a Prospective Double Blind Randomized Placebo Controlled Study",
+  "text": "Summary: The investigators applied G-CSF to patients 2 weeks after acute anterior MI and successful PCI to evaluate the efficacy and safety of G-CSF in improving myocardial function as cytokine which improve inflammation and mobilize stem cells from bone marrow for regeneration of myocardium.\nInclusion criteria: inclusion criteria: \n\n First anterior myocardial infarction. \n\n Low systolic ventricular function. \n\n \nExclusion criteria: : \n\n Bleeding tendency \n\n Contraindication to G-CSF \n\n Cardiogenic shock \n\n Hemodynamic instability \n\n Hepatic or renal disease \n\n Multivessel disease",
+  "metadata": {
+    "brief_title": "The Effect of Granulocyte Colony Stimulating Factor (G-CSF) on Myocardial Function After Acute Anterior Myocardial Infarction, a Prospective Double Blind Randomized Placebo Controlled Study",
+    "phase": "",
+    "drugs": "['G-CSF', 'placebo infusion of normal saline']",
+    "drugs_list": [
+      "G-CSF",
+      "placebo infusion of normal saline"
+    ],
+    "diseases": "['Myocardial Infarction']",
+    "diseases_list": [
+      "Myocardial Infarction"
+    ],
+    "enrollment": "20.0",
+    "inclusion_criteria": "inclusion criteria: \n\n First anterior myocardial infarction. \n\n Low systolic ventricular function. \n\n ",
+    "exclusion_criteria": ": \n\n Bleeding tendency \n\n Contraindication to G-CSF \n\n Cardiogenic shock \n\n Hemodynamic instability \n\n Hepatic or renal disease \n\n Multivessel disease",
+    "brief_summary": "The investigators applied G-CSF to patients 2 weeks after acute anterior MI and successful PCI to evaluate the efficacy and safety of G-CSF in improving myocardial function as cytokine which improve inflammation and mobilize stem cells from bone marrow for regeneration of myocardium."
+  }
+}

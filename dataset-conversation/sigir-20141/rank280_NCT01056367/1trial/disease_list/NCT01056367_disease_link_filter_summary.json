@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:29:36",
+  "trial_id": "NCT01056367",
+  "contextual": {
+    "_id": "NCT01056367",
+    "title": "Resistant Hypertension in Patients With Type-II-Diabetes Mellitus",
+    "text": "Summary: The risk of cardiovascular disease (CVD) in patients with type-II-diabetes mellitus (type-II-DM)is more than doubled and CVD accounts for 70% of deaths in this group of patients.~Hypertension is a major risk factor for CVD in patients with type-II-DM and a major contributor cardiovascular mortality. Uncontrolled- (UH) and resistant hypertension (RH)are more common in patients with type-II-DM, why further bloodpressure (BP) control is needed.~The prevalence of UH and RH has not been examined in a consecutive Danish outpatient population with type-II-DM.~The purpose of this study is to examine the prevalence of resistant hypertension in patients with type-II-diabetes and to examine the characteristics of patients with resistant hypertension as compared to patients with controlled hypertension with regards to arterial stiffness.\nInclusion criteria: inclusion criteria: \n\n 18-80 years, informed consent, hypertension, type-II-diabetes mellitus \n\n \nExclusion criteria: : \n\n Non-compliance, s-creatinin above 200, AFli",
+    "metadata": {
+      "brief_title": "Resistant Hypertension in Patients With Type-II-Diabetes Mellitus",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Resistant Hypertension', 'NIDDM']",
+      "diseases_list": [
+        "Resistant Hypertension",
+        "NIDDM"
+      ],
+      "enrollment": "180.0",
+      "inclusion_criteria": "inclusion criteria: \n\n 18-80 years, informed consent, hypertension, type-II-diabetes mellitus \n\n ",
+      "exclusion_criteria": ": \n\n Non-compliance, s-creatinin above 200, AFli",
+      "brief_summary": "The risk of cardiovascular disease (CVD) in patients with type-II-diabetes mellitus (type-II-DM)is more than doubled and CVD accounts for 70% of deaths in this group of patients.~Hypertension is a major risk factor for CVD in patients with type-II-DM and a major contributor cardiovascular mortality. Uncontrolled- (UH) and resistant hypertension (RH)are more common in patients with type-II-DM, why further bloodpressure (BP) control is needed.~The prevalence of UH and RH has not been examined in a consecutive Danish outpatient population with type-II-DM.~The purpose of this study is to examine the prevalence of resistant hypertension in patients with type-II-diabetes and to examine the characteristics of patients with resistant hypertension as compared to patients with controlled hypertension with regards to arterial stiffness."
+    }
+  },
+  "linked_result": {
+    "Resistant Hypertension": null,
+    "NIDDM": {
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "NIDDM",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "NIDDM": 1
+  },
+  "final_selected_concept_by_disease": {
+    "NIDDM": {
+      "disease": "NIDDM",
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "NIDDM"
+    }
+  }
+}

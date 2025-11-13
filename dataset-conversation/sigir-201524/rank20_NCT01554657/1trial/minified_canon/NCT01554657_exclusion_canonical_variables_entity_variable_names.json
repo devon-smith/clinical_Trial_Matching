@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_neutropenia_now",
+  "patient_has_undergone_solid_organ_transplant_inthehistory",
+  "patient_has_undergone_transplantation_of_bone_marrow_inthehistory",
+  "patient_has_finding_of_bacteremia_now",
+  "patient_has_undergone_respiratory_microbial_culture_now_outcome_is_positive",
+  "patient_has_finding_of_secondary_infection_now",
+  "patient_is_pregnant_now"
+]

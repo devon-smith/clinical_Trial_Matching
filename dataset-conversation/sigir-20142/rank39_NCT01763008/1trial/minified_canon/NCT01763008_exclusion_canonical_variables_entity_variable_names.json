@@ -1,0 +1,15 @@
+[
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_finding_of_disorder_due_to_infection_now",
+  "patient_is_taking_probenecid_now",
+  "patient_has_allergy_to_carbapenem_inthehistory",
+  "patient_has_allergy_to_cephalosporin_inthehistory",
+  "patient_has_allergy_to_penicillin_inthehistory",
+  "patient_is_undergoing_hemodialysis_now",
+  "patient_is_undergoing_hemofiltration_now",
+  "patient_measurement_of_renal_clearance_of_creatinine_value_recorded_now_withunit_milliliters_per_minute",
+  "patient_has_finding_of_oliguria_now",
+  "patient_is_undergoing_peritoneal_dialysis_now",
+  "patient_renal_function_value_recorded_now_withunit_unit"
+]

@@ -1,0 +1,16 @@
+[
+  "patient_has_diagnosis_of_type_1_diabetes_mellitus_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_is_pregnant_inthepast4months",
+  "patient_has_finding_of_anorexia_nervosa_inthehistory",
+  "patient_has_finding_of_bulimia_nervosa_inthehistory",
+  "patient_has_finding_of_eating_disorder_inthehistory",
+  "patient_has_diagnosis_of_myocardial_infarction_inthepast2years",
+  "patient_has_finding_of_cerebrovascular_accident_inthehistory",
+  "patient_has_finding_of_congestive_heart_failure_now",
+  "patient_has_finding_of_poor_hypertension_control_now",
+  "patient_has_diagnosis_of_hepatic_failure_now",
+  "patient_is_exposed_to_protein_now",
+  "patient_has_finding_of_therapeutic_diets_now"
+]

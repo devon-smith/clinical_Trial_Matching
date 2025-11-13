@@ -1,0 +1,16 @@
+[
+  "patient_has_undergone_bilateral_sequential_single_lung_transplant_inthehistory",
+  "patient_can_undergo_nebulizer_therapy_now",
+  "patient_is_exposed_to_sputum_now",
+  "patient_is_undergoing_antibiotic_therapy_now",
+  "patient_has_finding_of_cough_now",
+  "patient_decreased_respiratory_function_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_dyspnea_now",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_hemoptysis_now",
+  "patient_has_finding_of_infectious_disease_of_lung_now",
+  "patient_has_finding_of_lethargy_now",
+  "patient_has_finding_of_loss_of_appetite_now",
+  "patient_has_finding_of_malaise_now",
+  "patient_has_finding_of_weight_decreased_now"
+]

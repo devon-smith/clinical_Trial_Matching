@@ -1,0 +1,16 @@
+[
+  "patient_age_value_recorded_now_in_months",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_acute_bronchiolitis_now",
+  "patient_has_finding_of_chest_wall_retraction_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_nasal_congestion_now",
+  "patient_has_finding_of_respiratory_crackles_now",
+  "patient_has_finding_of_tachypnea_now",
+  "patient_has_finding_of_wheezing_now",
+  "patient_has_diagnosis_of_bronchiolitis_now",
+  "patient_has_undergone_plain_chest_x_ray_now",
+  "patient_hemoglobin_saturation_with_oxygen_value_recorded_now_withunit_percent",
+  "patient_is_exposed_to_tobacco_smoke_now",
+  "patient_respiratory_distress_value_recorded_now_withunit_score"
+]

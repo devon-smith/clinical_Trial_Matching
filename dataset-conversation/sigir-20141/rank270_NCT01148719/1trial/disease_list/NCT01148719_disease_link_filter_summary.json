@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-22T21:22:57",
+  "trial_id": "NCT01148719",
+  "contextual": {
+    "_id": "NCT01148719",
+    "title": "Triage of Reduced Exercise Tolerance in Frail Elderly",
+    "text": "Summary: Background of the study:~Many elderly suffer from reduced exercise tolerance or exercise induced shortness of breath (dyspnoea) which causes decreased mobility and restrictions in physical, psychological and social functioning. Patients commonly attribute this symptom to their age, and simply adjust their life style to it. Reduced exercise tolerance/dyspnoea is very common with prevalence rate of 20-60% of those aged 65 years and over. The main causus in the elderly are heart failure and chronic obstructive pulmonary disease (COPD). Both diseases have a high negative impact on the quality of life and are associated with frequent hospital admissions. Over-diagnosis, but more often under-diagnosis of heart failure and COPD is rather common in primary care. Establishing a diagnosis early in the course of the disease is useful because both diseases can be adequately and evidence-based treated. Therefore, an easy diagnostic triage-strategy followed bij direct treatment would be of great importance to asses and treat heart failure and COPD in elderly patient with shortness of breath.~Objective of the study:~Quantify how many frail elderly aged over 65 years with reduced exercise tolerance and/or exercise induced dyspnoea have previously unrecognised COPD and heart failure. Quantify the difference in prevalence of unrecognised COPD and heart failure between those who underwent the diagnostic triage compared to those who received care as usual. Quantify the effect of the diagnostic triage plus the additionally treatment changes on functionality and quality of life after 6 months compared to those who received care as usual. Quantify the cost-effectiveness of the diagnostic triage strategy compared to care as usual~Study design:~A clustered randomized diagnostic (follow-up) study~Study population:~First, pre-selection of patients aged over 65 years from 50 general practices is based on frailty. Frailty is based on the next criteria: use 5 or more different types of medical drugs chronically in the last year and/or have 3 or more chronic or vitality treating diseases (such as diabetes mellitus, COPD, heart failure, impaired vision). This will be done from the electronic medical files of the general practices. These elderly will receive the MRC questionnaire of dyspnoea and three additional questions related tot exercise intolerance. Those with any dyspnoea and/or reduced exercise tolerance will be invited to participate, except those with established heart failure and COPD.~Study parameters/outcome of the study:~Prevalence of latent heart failure and COPD. Difference in prevalence of latent heart failure and COPD between both groups.~Differences in functionality and quality of life after 6 months between both groups. Cost-effectiveness and experienced patient burden of the diagnostic triage strategy.\nInclusion criteria: inclusion criteria: \n\n patients aged 65 years and older \n\n must have a minimum of three chronic or vitality threatening diseases and/or use five or more medical drugs chronically in the last year \n\n must have dyspnea and/or reduced exercise tolerance (scored by two short questionnaires) \n\n \nExclusion criteria: : \n\n patients with both confirmed COPD and heart failure (Spirometry performed < 1 year ago and heart failure confirmed by echocardiography) \n\n patients unable or unwilling to sign informed consent",
+    "metadata": {
+      "brief_title": "Triage of Reduced Exercise Tolerance in Frail Elderly",
+      "phase": "",
+      "drugs": "['Index group']",
+      "drugs_list": [
+        "Index group"
+      ],
+      "diseases": "['Heart Failure', 'Chronic Obstructive Pulmonary Disease']",
+      "diseases_list": [
+        "Heart Failure",
+        "Chronic Obstructive Pulmonary Disease"
+      ],
+      "enrollment": "841.0",
+      "inclusion_criteria": "inclusion criteria: \n\n patients aged 65 years and older \n\n must have a minimum of three chronic or vitality threatening diseases and/or use five or more medical drugs chronically in the last year \n\n must have dyspnea and/or reduced exercise tolerance (scored by two short questionnaires) \n\n ",
+      "exclusion_criteria": ": \n\n patients with both confirmed COPD and heart failure (Spirometry performed < 1 year ago and heart failure confirmed by echocardiography) \n\n patients unable or unwilling to sign informed consent",
+      "brief_summary": "Background of the study:~Many elderly suffer from reduced exercise tolerance or exercise induced shortness of breath (dyspnoea) which causes decreased mobility and restrictions in physical, psychological and social functioning. Patients commonly attribute this symptom to their age, and simply adjust their life style to it. Reduced exercise tolerance/dyspnoea is very common with prevalence rate of 20-60% of those aged 65 years and over. The main causus in the elderly are heart failure and chronic obstructive pulmonary disease (COPD). Both diseases have a high negative impact on the quality of life and are associated with frequent hospital admissions. Over-diagnosis, but more often under-diagnosis of heart failure and COPD is rather common in primary care. Establishing a diagnosis early in the course of the disease is useful because both diseases can be adequately and evidence-based treated. Therefore, an easy diagnostic triage-strategy followed bij direct treatment would be of great importance to asses and treat heart failure and COPD in elderly patient with shortness of breath.~Objective of the study:~Quantify how many frail elderly aged over 65 years with reduced exercise tolerance and/or exercise induced dyspnoea have previously unrecognised COPD and heart failure. Quantify the difference in prevalence of unrecognised COPD and heart failure between those who underwent the diagnostic triage compared to those who received care as usual. Quantify the effect of the diagnostic triage plus the additionally treatment changes on functionality and quality of life after 6 months compared to those who received care as usual. Quantify the cost-effectiveness of the diagnostic triage strategy compared to care as usual~Study design:~A clustered randomized diagnostic (follow-up) study~Study population:~First, pre-selection of patients aged over 65 years from 50 general practices is based on frailty. Frailty is based on the next criteria: use 5 or more different types of medical drugs chronically in the last year and/or have 3 or more chronic or vitality treating diseases (such as diabetes mellitus, COPD, heart failure, impaired vision). This will be done from the electronic medical files of the general practices. These elderly will receive the MRC questionnaire of dyspnoea and three additional questions related tot exercise intolerance. Those with any dyspnoea and/or reduced exercise tolerance will be invited to participate, except those with established heart failure and COPD.~Study parameters/outcome of the study:~Prevalence of latent heart failure and COPD. Difference in prevalence of latent heart failure and COPD between both groups.~Differences in functionality and quality of life after 6 months between both groups. Cost-effectiveness and experienced patient burden of the diagnostic triage strategy."
+    }
+  },
+  "linked_result": {
+    "Heart Failure": {
+      "conceptId": "84114007",
+      "preferred_term": "Heart failure",
+      "fully_specified_name": "Heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure caused by dysfunction of the MYOCARDIUM, leading to defective cardiac emptying (contraction) or filling (relaxation).",
+      "best_match_term": "Heart failure",
+      "match_reason": "Exact"
+    },
+    "Chronic Obstructive Pulmonary Disease": {
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Heart Failure": 1,
+    "Chronic Obstructive Pulmonary Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Heart Failure": {
+      "disease": "Heart Failure",
+      "conceptId": "84114007",
+      "preferred_term": "Heart failure",
+      "fully_specified_name": "Heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure caused by dysfunction of the MYOCARDIUM, leading to defective cardiac emptying (contraction) or filling (relaxation).",
+      "best_match_term": "Heart failure"
+    },
+    "Chronic Obstructive Pulmonary Disease": {
+      "disease": "Chronic Obstructive Pulmonary Disease",
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease"
+    }
+  }
+}

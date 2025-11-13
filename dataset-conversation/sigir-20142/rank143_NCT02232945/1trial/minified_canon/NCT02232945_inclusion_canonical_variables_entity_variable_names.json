@@ -1,0 +1,14 @@
+[
+  "patient_has_finding_of_influenza_caused_by_influenza_a_virus_subtype_h3n2_now",
+  "patient_has_finding_of_influenza_due_to_influenza_a_virus_subtype_h1n1_now",
+  "patient_has_finding_of_influenza_due_to_influenza_b_virus_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_axillary_temperature_value_recorded_now_withunit_celsius",
+  "patient_has_finding_of_chill_now",
+  "patient_has_finding_of_fatigue_now",
+  "patient_has_finding_of_headache_now",
+  "patient_has_finding_of_muscle_pain_now",
+  "patient_has_symptoms_of_cough_now",
+  "patient_has_symptoms_of_sore_throat_symptom_now",
+  "patient_time_of_illness_onset_value_recorded_now_withunit_hours"
+]

@@ -1,0 +1,8 @@
+[
+  "patient_has_undergone_general_anesthesia_now",
+  "patients_ventilation_is_positive_now",
+  "patient_has_undergone_general_anesthesia_inthehistory",
+  "patients_ventilation_is_positive_inthehistory",
+  "patient_creatinine_value_recorded_inthepast3months_withunit_mg_per_dl",
+  "patient_creatinine_value_recorded_inthepast3months_withunit_unit"
+]

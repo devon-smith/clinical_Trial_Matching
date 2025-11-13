@@ -1,0 +1,53 @@
+{
+  "generated": "2025-10-20T23:28:04",
+  "trial_id": "NCT00185120",
+  "contextual": {
+    "_id": "NCT00185120",
+    "title": "Treatment of High Blood Pressure Using Olmesartan With Hydrochlorothiazide Compared to an ACE Inhibitor With a Calcium Channel Blocker",
+    "text": "Summary: A comparison of 2 different combinations of high blood pressure medications to treat hypertension\nInclusion criteria: inclusion criteria: \n\n Greater than 18 years of age \n\n Patients with high blood pressure \n\n \nExclusion criteria: : \n\n Hypertensive encephalopathy, stroke or transient ischemic attack within the past 6 months \n\n History of myocardial infarction, percutaneous transluminal coronary revascularization, coronary artery bypass graft, and/or unstable angina pectoris within the past 6 months \n\n Type 1 diabetes mellitus",
+    "metadata": {
+      "brief_title": "Treatment of High Blood Pressure Using Olmesartan With Hydrochlorothiazide Compared to an ACE Inhibitor With a Calcium Channel Blocker",
+      "phase": "Phase 4",
+      "drugs": "['Olmesartan medoxomil', 'Hydroclorothiazide', 'Benazepril', 'Amlodipine']",
+      "drugs_list": [
+        "Olmesartan medoxomil",
+        "Hydroclorothiazide",
+        "Benazepril",
+        "Amlodipine"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "152.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Greater than 18 years of age \n\n Patients with high blood pressure \n\n ",
+      "exclusion_criteria": ": \n\n Hypertensive encephalopathy, stroke or transient ischemic attack within the past 6 months \n\n History of myocardial infarction, percutaneous transluminal coronary revascularization, coronary artery bypass graft, and/or unstable angina pectoris within the past 6 months \n\n Type 1 diabetes mellitus",
+      "brief_summary": "A comparison of 2 different combinations of high blood pressure medications to treat hypertension"
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

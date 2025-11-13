@@ -1,0 +1,17 @@
+[
+  "patient_has_diagnosis_of_degenerative_brain_disorder_now",
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_has_diagnosis_of_impaired_cognition_now",
+  "patient_has_finding_of_amnestic_disorder_now",
+  "patient_has_finding_of_disease_of_liver_now",
+  "patient_has_finding_of_disorder_of_cardiovascular_system_now",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_has_finding_of_epilepsy_control_poor_now",
+  "patient_has_finding_of_kidney_disease_now",
+  "patient_has_finding_of_mental_disorder_now",
+  "patient_has_finding_of_metabolic_disease_now",
+  "patient_has_finding_of_peptic_ulcer_now",
+  "patient_has_finding_of_urinary_outflow_obstruction_now",
+  "patient_has_finding_of_impaired_cognition_now",
+  "patient_has_finding_of_allergy_to_drug_inthehistory"
+]

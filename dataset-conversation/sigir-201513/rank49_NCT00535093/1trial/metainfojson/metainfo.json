@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT00535093",
+  "contextual": {
+    "_id": "NCT00535093",
+    "title": "An Assessment of Rapid Streptococcal Tests in Community Clinics in Israel",
+    "text": "Summary: There is a large over-use of antibiotics in family medicine, especially in upper respiratory tract infections.~This study is designed to determine if the use of rapid Streptococcal tests in primary care clinics can lower the rate of antibiotic use while not missing bacterial infections.\nInclusion criteria: inclusion criteria: \n\n sore throat \n\n at least two Centor criteria: \n\n fever > 38 deg C or history of fever \n\n enlarged cervical lymph nodes \n\n tonsillar exudate \n\n lack of cough \n\n age 3-14 years \n\n \nExclusion criteria: : \n\n antibiotic treatment in preceding 7 days \n\n no informed consent",
+    "metadata": {
+      "brief_title": "An Assessment of Rapid Streptococcal Tests in Community Clinics in Israel",
+      "phase": "",
+      "drugs": "['rapid streptococcal testing']",
+      "drugs_list": [
+        "rapid streptococcal testing"
+      ],
+      "diseases": "['Pharyngitis', 'Streptococcus Pyogenes Infection', 'Streptococcus Pyogenes Identification']",
+      "diseases_list": [
+        "Pharyngitis",
+        "Streptococcus Pyogenes Infection",
+        "Streptococcus Pyogenes Identification"
+      ],
+      "enrollment": "7000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n sore throat \n\n at least two Centor criteria: \n\n fever > 38 deg C or history of fever \n\n enlarged cervical lymph nodes \n\n tonsillar exudate \n\n lack of cough \n\n age 3-14 years \n\n ",
+      "exclusion_criteria": ": \n\n antibiotic treatment in preceding 7 days \n\n no informed consent",
+      "brief_summary": "There is a large over-use of antibiotics in family medicine, especially in upper respiratory tract infections.~This study is designed to determine if the use of rapid Streptococcal tests in primary care clinics can lower the rate of antibiotic use while not missing bacterial infections."
+    }
+  }
+}

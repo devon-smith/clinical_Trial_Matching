@@ -1,0 +1,10 @@
+[
+  "patient_has_undergone_surgical_procedure_inthehistory",
+  "patient_is_undergoing_anticoagulant_therapy_now",
+  "patient_is_undergoing_thrombolytic_therapy_now",
+  "patient_has_diagnosis_of_cerebrovascular_accident_inthehistory",
+  "patient_has_finding_of_allergy_to_enoxaparin_now",
+  "patient_has_finding_of_allergy_to_heparin_now",
+  "patient_is_undergoing_dialysis_procedure_now",
+  "patient_has_finding_of_end_stage_renal_disease_now"
+]

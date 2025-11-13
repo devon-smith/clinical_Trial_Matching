@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01017081",
+  "contextual": {
+    "_id": "NCT01017081",
+    "title": "Chest Physiotherapy in Pediatrics Patients With Pneumonia",
+    "text": "Summary: Chest physiotherapy has been used to treat pediatric patients hospitalized with pneumonia however there was no evidence to support a beneficial effect in pediatric patients.\nInclusion criteria: inclusion criteria: \n\n Children aged 1 to 12 years with acute community-acquired pneumonia (cough, tachypnea, fever and with a chest radiography with lobar, segmental or bronchopneumonia within the first 48 hours) \n\n \nExclusion criteria: : \n\n Severely ill patients (hospitalized in intensive care units) \n\n Pleural effusion treated with chest drainage \n\n Atelectasis detected by x-ray \n\n Pneumonia or pleural effusion in the previous six months \n\n Other pulmonary underlying disease, heart disease, cerebral palsy or immune deficiency",
+    "metadata": {
+      "brief_title": "Chest Physiotherapy in Pediatrics Patients With Pneumonia",
+      "phase": "",
+      "drugs": "['Physiotherapy', 'Positioning and cough']",
+      "drugs_list": [
+        "Physiotherapy",
+        "Positioning and cough"
+      ],
+      "diseases": "['Pneumonia']",
+      "diseases_list": [
+        "Pneumonia"
+      ],
+      "enrollment": "72.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Children aged 1 to 12 years with acute community-acquired pneumonia (cough, tachypnea, fever and with a chest radiography with lobar, segmental or bronchopneumonia within the first 48 hours) \n\n ",
+      "exclusion_criteria": ": \n\n Severely ill patients (hospitalized in intensive care units) \n\n Pleural effusion treated with chest drainage \n\n Atelectasis detected by x-ray \n\n Pneumonia or pleural effusion in the previous six months \n\n Other pulmonary underlying disease, heart disease, cerebral palsy or immune deficiency",
+      "brief_summary": "Chest physiotherapy has been used to treat pediatric patients hospitalized with pneumonia however there was no evidence to support a beneficial effect in pediatric patients."
+    }
+  }
+}

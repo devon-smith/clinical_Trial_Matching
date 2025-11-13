@@ -1,0 +1,88 @@
+{
+  "generated": "2025-10-20T23:43:09",
+  "trial_id": "NCT01345110",
+  "contextual": {
+    "_id": "NCT01345110",
+    "title": "A Longitudinal Multidimensional Population Study on Brain Aging",
+    "text": "Summary: Longitudinal observational study of cognitive functions, physical health and biological parameters in the whole population living in Abbiategrasso born between 1935 and 1939,1773 subjects, followed for six years in order to know the prevalence and the incidence of dementia and risk and protective factors of normal and pathological mental aging.~The peculiarities of this study that must assure the outcome efficacy are:~Selected age: since 70-75 years old people represents a transition age from adulthood to old age, it is of special interest to study the evolution of psychic and physical functions of this population~Whole population not a sample study~Location: the small area involved (Abbiategrasso is a town of 30.000 inhabitants)can contribute to guarantee more homogeneity among the subjects and reduce undesired variability~multidimensional assessment(biological, clinical, social, psychological data collected) After initial screening, the recruited population will be followed up for two more times (every two years )\nInclusion criteria: inclusion criteria: \n\n to be resident in Abbiategrasso \n\n to be born between 1935 and 1939 \n\n \nExclusion criteria: : \n\n to refuse to participate \n\n te be not contactable in any way (mail, telephone) \n\n to be legally resident, but actually living somewhere else",
+    "metadata": {
+      "brief_title": "A Longitudinal Multidimensional Population Study on Brain Aging",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Dementia', 'Alzheimer Disease', 'Vascular Dementia']",
+      "diseases_list": [
+        "Dementia",
+        "Alzheimer Disease",
+        "Vascular Dementia"
+      ],
+      "enrollment": "1321.0",
+      "inclusion_criteria": "inclusion criteria: \n\n to be resident in Abbiategrasso \n\n to be born between 1935 and 1939 \n\n ",
+      "exclusion_criteria": ": \n\n to refuse to participate \n\n te be not contactable in any way (mail, telephone) \n\n to be legally resident, but actually living somewhere else",
+      "brief_summary": "Longitudinal observational study of cognitive functions, physical health and biological parameters in the whole population living in Abbiategrasso born between 1935 and 1939,1773 subjects, followed for six years in order to know the prevalence and the incidence of dementia and risk and protective factors of normal and pathological mental aging.~The peculiarities of this study that must assure the outcome efficacy are:~Selected age: since 70-75 years old people represents a transition age from adulthood to old age, it is of special interest to study the evolution of psychic and physical functions of this population~Whole population not a sample study~Location: the small area involved (Abbiategrasso is a town of 30.000 inhabitants)can contribute to guarantee more homogeneity among the subjects and reduce undesired variability~multidimensional assessment(biological, clinical, social, psychological data collected) After initial screening, the recruited population will be followed up for two more times (every two years )"
+    }
+  },
+  "linked_result": {
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    },
+    "Alzheimer Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease",
+      "match_reason": "Exact"
+    },
+    "Vascular Dementia": {
+      "conceptId": "429998004",
+      "preferred_term": "Vascular dementia",
+      "fully_specified_name": "Vascular dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imprecise term referring to dementia associated with CEREBROVASCULAR DISORDERS, including CEREBRAL INFARCTION (single or multiple), and conditions associated with chronic BRAIN ISCHEMIA. Diffuse, cortical, and subcortical subtypes have been described. (From Gerontol Geriatr 1998 Feb;31(1):36-44)",
+      "best_match_term": "Vascular dementia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Dementia": 1,
+    "Alzheimer Disease": 1,
+    "Vascular Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    },
+    "Alzheimer Disease": {
+      "disease": "Alzheimer Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease"
+    },
+    "Vascular Dementia": {
+      "disease": "Vascular Dementia",
+      "conceptId": "429998004",
+      "preferred_term": "Vascular dementia",
+      "fully_specified_name": "Vascular dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imprecise term referring to dementia associated with CEREBROVASCULAR DISORDERS, including CEREBRAL INFARCTION (single or multiple), and conditions associated with chronic BRAIN ISCHEMIA. Diffuse, cortical, and subcortical subtypes have been described. (From Gerontol Geriatr 1998 Feb;31(1):36-44)",
+      "best_match_term": "Vascular dementia"
+    }
+  }
+}

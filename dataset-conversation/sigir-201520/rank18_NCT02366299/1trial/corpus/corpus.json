@@ -1,0 +1,22 @@
+{
+  "_id": "NCT02366299",
+  "title": "Comparison of Dexmedetomidine and Propofol on the Delirium and Neuroinflammation in Patients With SIRS.",
+  "text": "Summary: Assessment of sedative effects of dexmedetomidine and propofol on the clinical course of delirium and neuroinflammation in patients with SIRS using CAM-ICU scale and protein S100b in serum.\nInclusion criteria: inclusion criteria: \n\n presence of delirium \n\n \nExclusion criteria: : \n\n presence of Alzheimer's disease \n\n any mental disorder \n\n presence of cancer",
+  "metadata": {
+    "brief_title": "Comparison of Dexmedetomidine and Propofol on the Delirium and Neuroinflammation in Patients With SIRS.",
+    "phase": "Phase 4",
+    "drugs": "['Dexmedetomidine', 'Propofol']",
+    "drugs_list": [
+      "Dexmedetomidine",
+      "Propofol"
+    ],
+    "diseases": "['Delirium']",
+    "diseases_list": [
+      "Delirium"
+    ],
+    "enrollment": "0.0",
+    "inclusion_criteria": "inclusion criteria: \n\n presence of delirium \n\n ",
+    "exclusion_criteria": ": \n\n presence of Alzheimer's disease \n\n any mental disorder \n\n presence of cancer",
+    "brief_summary": "Assessment of sedative effects of dexmedetomidine and propofol on the clinical course of delirium and neuroinflammation in patients with SIRS using CAM-ICU scale and protein S100b in serum."
+  }
+}

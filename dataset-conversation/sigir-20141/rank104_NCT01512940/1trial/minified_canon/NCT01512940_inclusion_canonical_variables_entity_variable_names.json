@@ -1,0 +1,16 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_has_finding_of_hyperlipidemia_now",
+  "patient_has_finding_of_hypertensive_disorder_now",
+  "patient_has_finding_of_obstructive_sleep_apnea_syndrome_now",
+  "patient_has_finding_of_osteoarthritis_of_hip_now",
+  "patient_has_finding_of_osteoarthritis_of_knee_now",
+  "patient_has_finding_of_type_2_diabetes_mellitus_now",
+  "patient_is_undergoing_body_weight_inthefuture",
+  "patient_is_exposed_to_drug_or_medicament_inthefuture",
+  "patients_body_weight_is_abnormal_now",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_can_undergo_procedure_now"
+]

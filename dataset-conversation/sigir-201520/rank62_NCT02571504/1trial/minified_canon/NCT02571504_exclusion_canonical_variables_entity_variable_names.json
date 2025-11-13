@@ -1,0 +1,11 @@
+[
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_longevity_value_recorded_now_withunit_years",
+  "patient_has_diagnosis_of_disorder_of_nervous_system_now",
+  "patient_has_diagnosis_of_infectious_disease_of_central_nervous_system_now",
+  "patient_has_diagnosis_of_psychotic_disorder_now",
+  "patient_has_finding_of_psychoactive_substance_abuse_now",
+  "patient_has_finding_of_psychoactive_substance_dependence_now",
+  "patient_has_diagnosis_of_viral_hepatitis_c_now"
+]

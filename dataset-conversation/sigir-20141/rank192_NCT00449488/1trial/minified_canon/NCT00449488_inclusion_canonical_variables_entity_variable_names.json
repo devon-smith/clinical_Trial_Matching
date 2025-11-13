@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_acute_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_chest_pain_inthehistory",
+  "patient_has_undergone_coronary_angiography_inthehistory",
+  "patient_has_undergone_electrocardiographic_procedure_inthehistory_outcome_is_abnormal",
+  "patient_has_finding_of_myocardial_ischemia_now",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthehistory_outcome_is_positive",
+  "patient_has_finding_of_timi_grade_0_no_perfusion_inthepast1days",
+  "patient_has_finding_of_timi_grade_1_penetration_without_perfusion_inthepast1days",
+  "patient_has_finding_of_timi_grade_2_partial_perfusion_inthehistory"
+]

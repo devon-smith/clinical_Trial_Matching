@@ -1,0 +1,9 @@
+[
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_has_diagnosis_of_malignant_tumor_of_female_genital_organ_now",
+  "patient_is_exposed_to_gonadotropin_releasing_factor_inthepast3months",
+  "patient_has_undergone_hormone_therapy_inthepast3months",
+  "patient_has_diagnosis_of_endometriosis_now",
+  "patient_has_finding_of_uterine_leiomyoma_now"
+]

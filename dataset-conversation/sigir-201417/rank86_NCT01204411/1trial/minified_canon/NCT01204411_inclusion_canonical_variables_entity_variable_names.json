@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_months",
+  "patient_body_weight_value_recorded_now_withunit_kilograms",
+  "patient_axillary_temperature_value_recorded_now_withunit_degrees_celsius",
+  "patient_has_finding_of_fever_inthepast24hours",
+  "patient_weight_for_height_value_recorded_now_withunit_z_score"
+]

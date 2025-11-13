@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_months",
+  "patient_bronchiolitis_value_recorded_now_withunit_score",
+  "patient_has_finding_of_chest_wall_retraction_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_undergone_plain_chest_x_ray_now",
+  "patient_has_finding_of_prolonged_expiration_now",
+  "patient_has_finding_of_respiratory_crackles_now",
+  "patient_has_finding_of_tachypnea_now",
+  "patient_has_finding_of_wheezing_now",
+  "patient_has_finding_of_respiratory_syncytial_virus_infection_now"
+]

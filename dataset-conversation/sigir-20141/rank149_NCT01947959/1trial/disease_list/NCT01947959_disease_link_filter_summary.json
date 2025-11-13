@@ -1,0 +1,112 @@
+{
+  "generated": "2025-10-20T22:08:44",
+  "trial_id": "NCT01947959",
+  "contextual": {
+    "_id": "NCT01947959",
+    "title": "Study of Rivaroxaban Use and Potential Adverse Outcomes in Routine Clinical Practice (Germany)",
+    "text": "Summary: This prospective cohort study will provide information about: characteristics of Rivaroxaban use in patients who are prescribed Rivaroxaban for the first time compared to patients who are prescribed Phenprocoumon for the first time, the occurrence of intracranial haemorrhage, gastrointestinal and urogenital bleeding, and the occurrence of non-infective liver disease.\nInclusion criteria: inclusion criteria: \n\n All male and female patients who have been prescribed for the first time either Rivaroxaban or standard of care from the date of market authorization of rivaroxaban to Dec 31, 2017 \n\n \nExclusion criteria: : \n\n Patients who have any record of being dispensed their index drug in the year before index date (i.e. cohort entry), or who qualify for both cohorts on the same day",
+    "metadata": {
+      "brief_title": "Study of Rivaroxaban Use and Potential Adverse Outcomes in Routine Clinical Practice (Germany)",
+      "phase": "",
+      "drugs": "['Rivaroxaban (Xarelto, Bay59-7939)', 'Standard of care']",
+      "drugs_list": [
+        "Rivaroxaban (Xarelto",
+        "Bay59-7939)",
+        "Standard of care"
+      ],
+      "diseases": "['Venous Thrombosis', 'Pulmonary Embolism', 'Atrial Fibrillation', 'Acute Coronary Syndrome']",
+      "diseases_list": [
+        "Venous Thrombosis",
+        "Pulmonary Embolism",
+        "Atrial Fibrillation",
+        "Acute Coronary Syndrome"
+      ],
+      "enrollment": "665533.0",
+      "inclusion_criteria": "inclusion criteria: \n\n All male and female patients who have been prescribed for the first time either Rivaroxaban or standard of care from the date of market authorization of rivaroxaban to Dec 31, 2017 \n\n ",
+      "exclusion_criteria": ": \n\n Patients who have any record of being dispensed their index drug in the year before index date (i.e. cohort entry), or who qualify for both cohorts on the same day",
+      "brief_summary": "This prospective cohort study will provide information about: characteristics of Rivaroxaban use in patients who are prescribed Rivaroxaban for the first time compared to patients who are prescribed Phenprocoumon for the first time, the occurrence of intracranial haemorrhage, gastrointestinal and urogenital bleeding, and the occurrence of non-infective liver disease."
+    }
+  },
+  "linked_result": {
+    "Venous Thrombosis": {
+      "conceptId": "111293003",
+      "preferred_term": "Venous thrombosis",
+      "fully_specified_name": "Venous thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "The formation or presence of a blood clot (THROMBUS) within a vein.",
+      "best_match_term": "Venous thrombosis",
+      "match_reason": "Exact"
+    },
+    "Pulmonary Embolism": {
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism",
+      "match_reason": "Exact"
+    },
+    "Atrial Fibrillation": {
+      "conceptId": "49436004",
+      "preferred_term": "Atrial fibrillation",
+      "fully_specified_name": "Atrial fibrillation (disorder)",
+      "type": "Clinical finding",
+      "definition": "Abnormal cardiac rhythm that is characterized by rapid, uncoordinated firing of electrical impulses in the upper chambers of the heart (HEART ATRIA). In such case, blood cannot be effectively pumped into the lower chambers of the heart (HEART VENTRICLES). It is caused by abnormal impulse generation.",
+      "best_match_term": "Atrial fibrillation",
+      "match_reason": "Exact"
+    },
+    "Acute Coronary Syndrome": {
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Venous Thrombosis": 1,
+    "Pulmonary Embolism": 1,
+    "Atrial Fibrillation": 1,
+    "Acute Coronary Syndrome": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Venous Thrombosis": {
+      "disease": "Venous Thrombosis",
+      "conceptId": "111293003",
+      "preferred_term": "Venous thrombosis",
+      "fully_specified_name": "Venous thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "The formation or presence of a blood clot (THROMBUS) within a vein.",
+      "best_match_term": "Venous thrombosis"
+    },
+    "Pulmonary Embolism": {
+      "disease": "Pulmonary Embolism",
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism"
+    },
+    "Atrial Fibrillation": {
+      "disease": "Atrial Fibrillation",
+      "conceptId": "49436004",
+      "preferred_term": "Atrial fibrillation",
+      "fully_specified_name": "Atrial fibrillation (disorder)",
+      "type": "Clinical finding",
+      "definition": "Abnormal cardiac rhythm that is characterized by rapid, uncoordinated firing of electrical impulses in the upper chambers of the heart (HEART ATRIA). In such case, blood cannot be effectively pumped into the lower chambers of the heart (HEART VENTRICLES). It is caused by abnormal impulse generation.",
+      "best_match_term": "Atrial fibrillation"
+    },
+    "Acute Coronary Syndrome": {
+      "disease": "Acute Coronary Syndrome",
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome"
+    }
+  }
+}

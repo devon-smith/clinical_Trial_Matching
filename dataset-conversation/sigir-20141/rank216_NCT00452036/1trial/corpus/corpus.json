@@ -1,0 +1,20 @@
+{
+  "_id": "NCT00452036",
+  "title": "Diagnostic Algorithm in Patients With Minor Head Injury",
+  "text": "Summary: The objective of this prospective study is to evaluate the reliability of plain x-rays vs.cranial computed tomography as a screening method for skull fractures and its prognostic value for intracranial bleeding (ICB).\nInclusion criteria: inclusion criteria: \n\n head injury, nausea, vomiting \n\n \nExclusion criteria: : \n\n no head injury",
+  "metadata": {
+    "brief_title": "Diagnostic Algorithm in Patients With Minor Head Injury",
+    "phase": "",
+    "drugs": "",
+    "drugs_list": [],
+    "diseases": "['Minor Head Injury', 'Traumatic Brain Injury']",
+    "diseases_list": [
+      "Minor Head Injury",
+      "Traumatic Brain Injury"
+    ],
+    "enrollment": "12500.0",
+    "inclusion_criteria": "inclusion criteria: \n\n head injury, nausea, vomiting \n\n ",
+    "exclusion_criteria": ": \n\n no head injury",
+    "brief_summary": "The objective of this prospective study is to evaluate the reliability of plain x-rays vs.cranial computed tomography as a screening method for skull fractures and its prognostic value for intracranial bleeding (ICB)."
+  }
+}

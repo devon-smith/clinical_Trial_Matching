@@ -1,0 +1,10 @@
+[
+  "patient_has_finding_of_disorder_of_respiratory_system_now",
+  "patient_has_diagnosis_of_alpha_1_antitrypsin_deficiency_now",
+  "patient_has_finding_of_inflammatory_disorder_inthehistory",
+  "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease_inthehistory",
+  "patient_has_undergone_operation_on_lung_inthehistory",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_has_finding_of_disorder_of_musculoskeletal_system_now"
+]

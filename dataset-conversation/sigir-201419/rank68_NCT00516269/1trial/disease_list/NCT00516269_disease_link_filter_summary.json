@@ -1,0 +1,91 @@
+{
+  "generated": "2025-10-20T23:07:39",
+  "trial_id": "NCT00516269",
+  "contextual": {
+    "_id": "NCT00516269",
+    "title": "Trial of a Sustained Release Methylphenidate in the Treatment of Fatigue in Cancer Patients",
+    "text": "Summary: The goal of this clinical research study is to see if the drug OROS Methylphenidate HCl (Concerta) can help to control fatigue in patients with breast, gastrointestinal, lymphoma, myeloma or lung cancer who are going through chemotherapy or hormonal treatment or have completed chemotherapy or hormonal treatment in the last 12 months. The safety of this drug will also be studied. Another goal of the study is to see how certain cytokines change while patients undergo chemotherapy or hormonal treatment.\nInclusion criteria: inclusion criteria: \n\n Patient diagnosed with breast, gastrointestinal, lymphoma, myeloma or lung cancer undergoing chemotherapy or hormonal treatment \n\n Patient is > or = 18 years of age \n\n Patient has Brief Fatigue Inventory fatigue worst score of > or = 4 at baseline \n\n Patient has an Eastern Cooperative Oncology Group (ECOG) performance status of < or = 2 at baseline \n\n Patient has a life expectancy > or = 6 months from the start of the study \n\n Patient is using acceptable birth control methods. Female participants (if of child bearing potential and sexually active) and male participants (if sexually active with a partner of child-bearing potential) must use medically acceptable methods of birth control. Medically acceptable methods of contraception include abstinence, birth control pills, diaphragm with spermicide, condom with foam or spermicide, vaginal spermicidal suppository or surgical sterilization \n\n Patient must speak and understand English \n\n Patient has provided written informed consent to participate in the study prior to enrollment to the study \n\n \nExclusion criteria: : \n\n History of hypersensitivity reaction to methylphenidate \n\n History of or current seizure disorder, glaucoma, major psychiatric diagnosis, narcolepsy, Tourette's syndrome, tension or agitation \n\n History of clinically significant cardiac disease. \n\n Uncontrolled hypertension: has not been on a stable treatment dose for the past month, or has a systolic pressure consistently (defined as 3 consecutive blood pressure readings within the last 30 days) greater than 150 mm Hg or diastolic pressure consistently greater than 85 mm Hg \n\n History of fibromyalgia \n\n Use of alcohol while participating in the study \n\n Current use of illicit drugs or history of alcohol or drug abuse and/or abuse potential (see protocol for criteria) \n\n Moderate to severe depression (> or = 20 on Beck Depression Index II) \n\n If taking antidepressants, no changes in dose and/or no start of new course of treatment in the last 30 days \n\n Currently taking psychostimulants (including appetite suppressants), monoamine oxidase (MAO) inhibitors, anticoagulant or anticonvulsant therapy \n\n Current use of corticosteroids, medications, or stimulants (i.e., vivarin) used to improve fatigue symptoms \n\n Use of an investigational medication within the past month \n\n Current use of the following herbals or supplements for fatigue relief (DHEA, SAME, ginkgo, ginseng, St. John's Wort (including DHEA, SAME, ginkgo, ginseng, St. John's Wort, metabolite, effedrin, basil, citronella, fennel, horseradish roots, lavender flowers, lemon verbena, marjoram, mint, nettle, pine needles, rosemary, sage, savory, thyme, bay, cayenne pepper, cinnamon, eucalyptus, hyssop, myrrh, oregano, peppermint, ginseng, green, black or Chinese tea, ephedra (aka - ma-huang), popotillo, and Mormon tea) \n\n Any coexisting medical condition or are taking any concomitant medication that is likely to interfere with the safe administration of methylphenidate \n\n Patients who start epoetin within 30 days prior to enrollment \n\n Patients who start taking epoetin during the first week of the study \n\n Hemoglobin < 8.0 gm/dl \n\n Patients with a thyroid-stimulating hormone (TSH) value > or = 1.5 times the upper limit of normal (ULN) \n\n Albumin value 50% lower than the lower limit of normal \n\n Evidence of hepatic impairment [total bilirubin > or = 2.5 times ULN (normal range of 0 - 1.0 mg/dl, serum glutamate pyruvate transaminase (SGPT) > or = 2.5 times ULN)] \n\n Evidence of renal impairment (serum creatinine > 2.5 times ULN, normal range of 0.8 - 1.5 mg/dl) \n\n A severe narrowing (pathological or iatrogenic), obstruction of the gastrointestinal tract, or gastrointestinal malabsorption \n\n If taking anxiolytics, and/or hypnotics, no changes in dose and/or no start of new course of treatment in the last 30 days \n\n Patients with nausea, vomiting, or diarrhea of Common Toxicity Criteria for Adverse Effects (CTCAE) grade III or higher \n\n If taking anticonvulsants for sensory neuropathy (Gabapentin or Pregabalin), no changes in dose and/or no start of new course of treatment in the last 30 days \n\n History of severe headaches within 30 days prior to enrollment",
+    "metadata": {
+      "brief_title": "Trial of a Sustained Release Methylphenidate in the Treatment of Fatigue in Cancer Patients",
+      "phase": "Phase 3",
+      "drugs": "['Methylphenidate', 'Placebo']",
+      "drugs_list": [
+        "Methylphenidate",
+        "Placebo"
+      ],
+      "diseases": "['Breast Cancer', 'Fatigue', 'Gastrointestinal Cancer']",
+      "diseases_list": [
+        "Breast Cancer",
+        "Fatigue",
+        "Gastrointestinal Cancer"
+      ],
+      "enrollment": "42.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patient diagnosed with breast, gastrointestinal, lymphoma, myeloma or lung cancer undergoing chemotherapy or hormonal treatment \n\n Patient is > or = 18 years of age \n\n Patient has Brief Fatigue Inventory fatigue worst score of > or = 4 at baseline \n\n Patient has an Eastern Cooperative Oncology Group (ECOG) performance status of < or = 2 at baseline \n\n Patient has a life expectancy > or = 6 months from the start of the study \n\n Patient is using acceptable birth control methods. Female participants (if of child bearing potential and sexually active) and male participants (if sexually active with a partner of child-bearing potential) must use medically acceptable methods of birth control. Medically acceptable methods of contraception include abstinence, birth control pills, diaphragm with spermicide, condom with foam or spermicide, vaginal spermicidal suppository or surgical sterilization \n\n Patient must speak and understand English \n\n Patient has provided written informed consent to participate in the study prior to enrollment to the study \n\n ",
+      "exclusion_criteria": ": \n\n History of hypersensitivity reaction to methylphenidate \n\n History of or current seizure disorder, glaucoma, major psychiatric diagnosis, narcolepsy, Tourette's syndrome, tension or agitation \n\n History of clinically significant cardiac disease. \n\n Uncontrolled hypertension: has not been on a stable treatment dose for the past month, or has a systolic pressure consistently (defined as 3 consecutive blood pressure readings within the last 30 days) greater than 150 mm Hg or diastolic pressure consistently greater than 85 mm Hg \n\n History of fibromyalgia \n\n Use of alcohol while participating in the study \n\n Current use of illicit drugs or history of alcohol or drug abuse and/or abuse potential (see protocol for criteria) \n\n Moderate to severe depression (> or = 20 on Beck Depression Index II) \n\n If taking antidepressants, no changes in dose and/or no start of new course of treatment in the last 30 days \n\n Currently taking psychostimulants (including appetite suppressants), monoamine oxidase (MAO) inhibitors, anticoagulant or anticonvulsant therapy \n\n Current use of corticosteroids, medications, or stimulants (i.e., vivarin) used to improve fatigue symptoms \n\n Use of an investigational medication within the past month \n\n Current use of the following herbals or supplements for fatigue relief (DHEA, SAME, ginkgo, ginseng, St. John's Wort (including DHEA, SAME, ginkgo, ginseng, St. John's Wort, metabolite, effedrin, basil, citronella, fennel, horseradish roots, lavender flowers, lemon verbena, marjoram, mint, nettle, pine needles, rosemary, sage, savory, thyme, bay, cayenne pepper, cinnamon, eucalyptus, hyssop, myrrh, oregano, peppermint, ginseng, green, black or Chinese tea, ephedra (aka - ma-huang), popotillo, and Mormon tea) \n\n Any coexisting medical condition or are taking any concomitant medication that is likely to interfere with the safe administration of methylphenidate \n\n Patients who start epoetin within 30 days prior to enrollment \n\n Patients who start taking epoetin during the first week of the study \n\n Hemoglobin < 8.0 gm/dl \n\n Patients with a thyroid-stimulating hormone (TSH) value > or = 1.5 times the upper limit of normal (ULN) \n\n Albumin value 50% lower than the lower limit of normal \n\n Evidence of hepatic impairment [total bilirubin > or = 2.5 times ULN (normal range of 0 - 1.0 mg/dl, serum glutamate pyruvate transaminase (SGPT) > or = 2.5 times ULN)] \n\n Evidence of renal impairment (serum creatinine > 2.5 times ULN, normal range of 0.8 - 1.5 mg/dl) \n\n A severe narrowing (pathological or iatrogenic), obstruction of the gastrointestinal tract, or gastrointestinal malabsorption \n\n If taking anxiolytics, and/or hypnotics, no changes in dose and/or no start of new course of treatment in the last 30 days \n\n Patients with nausea, vomiting, or diarrhea of Common Toxicity Criteria for Adverse Effects (CTCAE) grade III or higher \n\n If taking anticonvulsants for sensory neuropathy (Gabapentin or Pregabalin), no changes in dose and/or no start of new course of treatment in the last 30 days \n\n History of severe headaches within 30 days prior to enrollment",
+      "brief_summary": "The goal of this clinical research study is to see if the drug OROS Methylphenidate HCl (Concerta) can help to control fatigue in patients with breast, gastrointestinal, lymphoma, myeloma or lung cancer who are going through chemotherapy or hormonal treatment or have completed chemotherapy or hormonal treatment in the last 12 months. The safety of this drug will also be studied. Another goal of the study is to see how certain cytokines change while patients undergo chemotherapy or hormonal treatment."
+    }
+  },
+  "linked_result": {
+    "Breast Cancer": {
+      "conceptId": "254837009",
+      "preferred_term": "Malignant tumor of breast",
+      "fully_specified_name": "Malignant neoplasm of breast (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the breast. The vast majority of cases are carcinomas arising from the breast parenchyma or the nipple. Malignant breast neoplasms occur more frequently in females than in males.",
+      "best_match_term": "Breast cancer",
+      "match_reason": "Exact"
+    },
+    "Fatigue": {
+      "conceptId": "84229001",
+      "preferred_term": "Fatigue",
+      "fully_specified_name": "Fatigue (finding)",
+      "type": "Clinical finding",
+      "definition": "The state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli.",
+      "best_match_term": "Fatigue",
+      "match_reason": "Exact"
+    },
+    "Gastrointestinal Cancer": {
+      "conceptId": "428905002",
+      "preferred_term": "Malignant neoplasm of gastrointestinal tract",
+      "fully_specified_name": "Malignant neoplasm of gastrointestinal tract (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving any part of the digestive system.",
+      "best_match_term": "Malignant neoplasm of gastrointestinal tract (disorder)",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Breast Cancer": 1,
+    "Fatigue": 1,
+    "Gastrointestinal Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Breast Cancer": {
+      "disease": "Breast Cancer",
+      "conceptId": "254837009",
+      "preferred_term": "Malignant tumor of breast",
+      "fully_specified_name": "Malignant neoplasm of breast (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the breast. The vast majority of cases are carcinomas arising from the breast parenchyma or the nipple. Malignant breast neoplasms occur more frequently in females than in males.",
+      "best_match_term": "Breast cancer"
+    },
+    "Fatigue": {
+      "disease": "Fatigue",
+      "conceptId": "84229001",
+      "preferred_term": "Fatigue",
+      "fully_specified_name": "Fatigue (finding)",
+      "type": "Clinical finding",
+      "definition": "The state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli.",
+      "best_match_term": "Fatigue"
+    },
+    "Gastrointestinal Cancer": {
+      "disease": "Gastrointestinal Cancer",
+      "conceptId": "428905002",
+      "preferred_term": "Malignant neoplasm of gastrointestinal tract",
+      "fully_specified_name": "Malignant neoplasm of gastrointestinal tract (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving any part of the digestive system.",
+      "best_match_term": "Malignant neoplasm of gastrointestinal tract (disorder)"
+    }
+  }
+}

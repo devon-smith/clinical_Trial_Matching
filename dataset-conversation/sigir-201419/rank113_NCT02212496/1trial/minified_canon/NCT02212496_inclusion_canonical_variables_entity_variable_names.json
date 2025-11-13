@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_ischemic_stroke_now",
+  "patient_has_finding_of_embolic_infarction_now",
+  "patient_has_finding_of_stroke_of_uncertain_pathology_now",
+  "patient_has_undergone_12_lead_ecg_inthehistory",
+  "patient_has_undergone_holter_extended_electrocardiographic_recording_inthehistory",
+  "patient_has_undergone_magnetic_resonance_imaging_mri_of_vessels_inthehistory",
+  "patient_has_undergone_mri_of_brain_and_brain_stem_inthehistory",
+  "patient_has_undergone_transcranial_doppler_ultrasonography_inthehistory",
+  "patient_has_undergone_transesophageal_echocardiography_with_contrast_inthehistory",
+  "patient_has_undergone_transthoracic_ultrasonography_of_heart_with_contrast_inthehistory"
+]

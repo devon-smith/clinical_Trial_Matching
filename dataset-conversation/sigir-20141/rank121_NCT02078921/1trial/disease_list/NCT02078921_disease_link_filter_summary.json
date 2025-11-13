@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:31:10",
+  "trial_id": "NCT02078921",
+  "contextual": {
+    "_id": "NCT02078921",
+    "title": "The Effects of Inorganic Nitrate on Cardiac Muscle in Angina",
+    "text": "Summary: Previous studies have shown that interventions which modestly increase blood nitrite_ improve skeletal muscle function on exercise while sparing oxygen, and have been also shown to open up the blood flow during periods of oxygen deprivation. Inorganic nitrate in the diet is absorbed into the bloodstream, concentrated and reduced by bacteria in the mouth to nitrite, which is then absorbed into the bloodstream. .~The purpose of this study is to look at the effects of oral inorganic nitrate supplementation on clinical markers of heart ischaemia and the frequency of angina.\nInclusion criteria: inclusion criteria: \n\n Patients aged 18 and over with chronic stable angina (≥2 months duration). \n\n inclusion criteria Following screening visit: \n\n A positive exercise ECG (1mmSTD at J+0.08 seconds) on a modified Bruce protocol treadmill exercise test. \n\n A positive dobutamine stress echocardiogram, \n\n and/or a positive myocardial perfusion scan (MPI), \n\n and/or a positive coronary angiogram. \n\n \nExclusion criteria: : \n\n Unable to do exercise test \n\n Women of child bearing potential \n\n If of a racial origin at risk of glucose-6-phosphate dehydrogenase (G6PD) deficiency, G6PD will be excluded prior to inclusion in the study \n\n Resting STD>=1mm \n\n NYHA 3 or 4 HF or LVEF<45% \n\n Myocardial infarction or revascularisation within the last two months \n\n Left bundle branch block (LBBB)",
+    "metadata": {
+      "brief_title": "The Effects of Inorganic Nitrate on Cardiac Muscle in Angina",
+      "phase": "Phase 2",
+      "drugs": "['Sodium Nitrate', 'Placebo']",
+      "drugs_list": [
+        "Sodium Nitrate",
+        "Placebo"
+      ],
+      "diseases": "['Chronic Stable Angina']",
+      "diseases_list": [
+        "Chronic Stable Angina"
+      ],
+      "enrollment": "70.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients aged 18 and over with chronic stable angina (≥2 months duration). \n\n inclusion criteria Following screening visit: \n\n A positive exercise ECG (1mmSTD at J+0.08 seconds) on a modified Bruce protocol treadmill exercise test. \n\n A positive dobutamine stress echocardiogram, \n\n and/or a positive myocardial perfusion scan (MPI), \n\n and/or a positive coronary angiogram. \n\n ",
+      "exclusion_criteria": ": \n\n Unable to do exercise test \n\n Women of child bearing potential \n\n If of a racial origin at risk of glucose-6-phosphate dehydrogenase (G6PD) deficiency, G6PD will be excluded prior to inclusion in the study \n\n Resting STD>=1mm \n\n NYHA 3 or 4 HF or LVEF<45% \n\n Myocardial infarction or revascularisation within the last two months \n\n Left bundle branch block (LBBB)",
+      "brief_summary": "Previous studies have shown that interventions which modestly increase blood nitrite_ improve skeletal muscle function on exercise while sparing oxygen, and have been also shown to open up the blood flow during periods of oxygen deprivation. Inorganic nitrate in the diet is absorbed into the bloodstream, concentrated and reduced by bacteria in the mouth to nitrite, which is then absorbed into the bloodstream. .~The purpose of this study is to look at the effects of oral inorganic nitrate supplementation on clinical markers of heart ischaemia and the frequency of angina."
+    }
+  },
+  "linked_result": {
+    "Chronic Stable Angina": {
+      "conceptId": "233819005",
+      "preferred_term": "Stable angina",
+      "fully_specified_name": "Stable angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistent and reproducible chest discomfort usually precipitated by a physical exertion that dissipates upon cessation of such an activity. The symptoms are manifestations of MYOCARDIAL ISCHEMIA.",
+      "best_match_term": "Stable angina",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Chronic Stable Angina": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chronic Stable Angina": {
+      "disease": "Chronic Stable Angina",
+      "conceptId": "233819005",
+      "preferred_term": "Stable angina",
+      "fully_specified_name": "Stable angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistent and reproducible chest discomfort usually precipitated by a physical exertion that dissipates upon cessation of such an activity. The symptoms are manifestations of MYOCARDIAL ISCHEMIA.",
+      "best_match_term": "Stable angina"
+    }
+  }
+}

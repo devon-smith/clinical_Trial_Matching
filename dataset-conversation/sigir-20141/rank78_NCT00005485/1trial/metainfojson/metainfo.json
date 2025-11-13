@@ -1,0 +1,27 @@
+{
+  "trial_id": "NCT00005485",
+  "contextual": {
+    "_id": "NCT00005485",
+    "title": "The Jackson Heart Study of Cardiovascular Disease Among African Americans",
+    "text": "Summary: This is a prospective study of the environmental and genetic factors that influence the development of cardiovascular disease (CVD) in African American men and women. The cohort is a collaboration among multiple institutions (Jackson State University, Mississippi State Department of Health, Tougaloo College, and the University of Mississippi Medical Center), the National Institute on Minority Health and Health Disparities (NIMHD), and the National Heart, Lung, and Blood Institute (NHLBI).\nInclusion criteria: inclusion criteria: \n\n African American \n\n Residents of Jackson, Mississippi \n\n \nExclusion criteria: : \n\n Institutionalization",
+    "metadata": {
+      "brief_title": "The Jackson Heart Study of Cardiovascular Disease Among African Americans",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Cardiovascular Diseases', 'Heart Diseases', 'Atherosclerosis', 'Coronary Disease', 'Hypertension', 'Cerebrovascular Disorders']",
+      "diseases_list": [
+        "Cardiovascular Diseases",
+        "Heart Diseases",
+        "Atherosclerosis",
+        "Coronary Disease",
+        "Hypertension",
+        "Cerebrovascular Disorders"
+      ],
+      "enrollment": "3000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n African American \n\n Residents of Jackson, Mississippi \n\n ",
+      "exclusion_criteria": ": \n\n Institutionalization",
+      "brief_summary": "This is a prospective study of the environmental and genetic factors that influence the development of cardiovascular disease (CVD) in African American men and women. The cohort is a collaboration among multiple institutions (Jackson State University, Mississippi State Department of Health, Tougaloo College, and the University of Mississippi Medical Center), the National Institute on Minority Health and Health Disparities (NIMHD), and the National Heart, Lung, and Blood Institute (NHLBI)."
+    }
+  }
+}

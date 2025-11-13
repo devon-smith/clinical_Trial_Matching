@@ -1,0 +1,11 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_age_value_recorded_now_in_months",
+  "patient_has_finding_of_barking_cough_now",
+  "patient_has_finding_of_hoarse_now",
+  "patient_has_finding_of_respiratory_distress_now",
+  "patient_has_finding_of_stridor_now",
+  "patient_has_diagnosis_of_croup_now"
+]

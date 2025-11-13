@@ -1,0 +1,14 @@
+[
+  "patient_has_undergone_surgical_procedure_now",
+  "patient_has_undergone_uvulopalatopharyngoplasty_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_has_suspicion_of_malignant_neoplastic_disease_now",
+  "patient_is_undergoing_surgical_procedure_now",
+  "patient_has_finding_of_chronic_pain_inthehistory",
+  "patient_is_exposed_to_drug_or_medicament_inthehistory",
+  "patient_has_finding_of_pain_inthehistory",
+  "patient_has_diagnosis_of_disease_of_liver_inthehistory",
+  "patient_has_contraindication_to_dexamethasone_containing_product_now",
+  "patient_has_hypersensitivity_to_hydromorphone_containing_product_now"
+]

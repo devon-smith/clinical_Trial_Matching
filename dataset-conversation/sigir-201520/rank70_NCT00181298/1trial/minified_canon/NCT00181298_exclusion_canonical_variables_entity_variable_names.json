@@ -1,0 +1,17 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_non_compliant_behavior_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_hepatic_failure_now",
+  "patient_measurement_of_renal_clearance_of_creatinine_value_recorded_now_withunit_cubic_centimeters_per_minute",
+  "patient_has_finding_of_renal_insufficiency_now",
+  "patient_has_finding_of_systemic_lupus_erythematosus_inthepast6weeks",
+  "patient_is_exposed_to_antidepressant_inthepast4weeks",
+  "patient_is_taking_opioid_receptor_agonist_containing_product_inthepast4weeks",
+  "patient_is_taking_prednisone_containing_product_inthepast4weeks",
+  "patient_has_finding_of_alcohol_abuse_now",
+  "patient_has_finding_of_illicit_medication_use_now",
+  "patient_is_taking_donepezil_containing_product_now",
+  "patient_is_taking_memantine_containing_product_now",
+  "patient_is_taking_modafinil_containing_product_now"
+]

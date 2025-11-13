@@ -1,0 +1,28 @@
+{
+  "trial_id": "NCT00919373",
+  "contextual": {
+    "_id": "NCT00919373",
+    "title": "Substrate Modification in Stable Ventricular Tachycardia in Addition to Implantable Cardioverter Defibrillator (ICD) Therapy",
+    "text": "Summary: The main objective of this study is to compare the time from randomization to the first recurrence of any ventricular tachycardia (VT) in patients undergoing VT ablation (for stable VTs) and substrate ablation (for unstable VTs) after an initial episode of stable VT and patients not undergoing ablation, with both groups under the protection of an ICD.\nInclusion criteria: inclusion criteria: \n\n Coronary artery disease For the purpose of this study, coronary artery disease will be defined as the presence of a 50 % or more diameter stenosis of the left main coronary artery, or 75 % or more diameter stenosis of the left anterior descending, circumflex or right coronary arteries, or the history of a surgical or percutaneous revascularization procedure, or history of successful thrombolysis, or a history of prior myocardial infarction (e.g.: documented by Q-wave, R-reduction, aneurysm) \n\n Left ventricular ejection fraction ≤ 50 % as estimated by echocardiography or contrast ventriculography within the previous 30 days and evidence for old myocardial infarction (ECG, echocardiographic or venticulographic). \n\n One episode of documented stable clinical VT without any reversible causes \n\n Written informed consent \n\n \nExclusion criteria: : \n\n Age < 18 years or > 80 year \n\n Protruding LV thrombus on pre-ablation echocardiogram \n\n Acute myocardial infarction within the preceding 1 months \n\n Class IV NYHA heart failure \n\n Valvular heart disease or mechanical heart valve precluding access to the left ventricle \n\n Unstable angina \n\n Cardiac surgery involving cardiotomy (not CABG) within the past 2 months \n\n Serum creatinine > 220 mmol/L (2.5 mg/dL) \n\n Thrombocytopenia or coagulopathy \n\n Contraindication to heparin \n\n Pregnancy \n\n Acute illness or active systemic infection \n\n Other disease process likely to limit survival to less than 12 months \n\n Significant medical problem that in the opinion of the principal investigator would preclude enrollment in the study \n\n Participation in another investigational study \n\n Unwillingness to participate or lack of availability for follow-up \n\n Incessant VT or electrical storm \n\n Bundle branch reentry tachycardia as the presenting VT \n\n Preexisting ICD",
+    "metadata": {
+      "brief_title": "Substrate Modification in Stable Ventricular Tachycardia in Addition to Implantable Cardioverter Defibrillator (ICD) Therapy",
+      "phase": "",
+      "drugs": "['Substrate modification', 'VT ablation', 'ICD Implantation']",
+      "drugs_list": [
+        "Substrate modification",
+        "VT ablation",
+        "ICD Implantation"
+      ],
+      "diseases": "['Ventricular Tachycardia', 'Coronary Artery Disease', 'Left Ventricular Dysfunction']",
+      "diseases_list": [
+        "Ventricular Tachycardia",
+        "Coronary Artery Disease",
+        "Left Ventricular Dysfunction"
+      ],
+      "enrollment": "110.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Coronary artery disease For the purpose of this study, coronary artery disease will be defined as the presence of a 50 % or more diameter stenosis of the left main coronary artery, or 75 % or more diameter stenosis of the left anterior descending, circumflex or right coronary arteries, or the history of a surgical or percutaneous revascularization procedure, or history of successful thrombolysis, or a history of prior myocardial infarction (e.g.: documented by Q-wave, R-reduction, aneurysm) \n\n Left ventricular ejection fraction ≤ 50 % as estimated by echocardiography or contrast ventriculography within the previous 30 days and evidence for old myocardial infarction (ECG, echocardiographic or venticulographic). \n\n One episode of documented stable clinical VT without any reversible causes \n\n Written informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Age < 18 years or > 80 year \n\n Protruding LV thrombus on pre-ablation echocardiogram \n\n Acute myocardial infarction within the preceding 1 months \n\n Class IV NYHA heart failure \n\n Valvular heart disease or mechanical heart valve precluding access to the left ventricle \n\n Unstable angina \n\n Cardiac surgery involving cardiotomy (not CABG) within the past 2 months \n\n Serum creatinine > 220 mmol/L (2.5 mg/dL) \n\n Thrombocytopenia or coagulopathy \n\n Contraindication to heparin \n\n Pregnancy \n\n Acute illness or active systemic infection \n\n Other disease process likely to limit survival to less than 12 months \n\n Significant medical problem that in the opinion of the principal investigator would preclude enrollment in the study \n\n Participation in another investigational study \n\n Unwillingness to participate or lack of availability for follow-up \n\n Incessant VT or electrical storm \n\n Bundle branch reentry tachycardia as the presenting VT \n\n Preexisting ICD",
+      "brief_summary": "The main objective of this study is to compare the time from randomization to the first recurrence of any ventricular tachycardia (VT) in patients undergoing VT ablation (for stable VTs) and substrate ablation (for unstable VTs) after an initial episode of stable VT and patients not undergoing ablation, with both groups under the protection of an ICD."
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "generated": "2025-10-20T23:31:05",
+  "trial_id": "NCT02001545",
+  "contextual": {
+    "_id": "NCT02001545",
+    "title": "REal World Information on Cardiovascular Drug Management Patterns in Acute Coronary Syndrome paTients",
+    "text": "Summary: RE-ACT is a national, multi-centre, observational, prospective, longitudinal cohort study which will include patients hospitalized for ACS within 24 hours of symptom onset and who have a final diagnosis of ST-segment elevation myocardial infarction (STEMI) or non-ST-segment elevation myocardial infarction (NSTEMI). This study aims to describe the short-term (at the end of the first month after index event) antithrombotic management patterns in a real-life setting for patients hospitalized with an acute coronary syndrome.\nInclusion criteria: inclusion criteria: \n\n Provision of subject informed consent \n\n Patients hospitalized and diagnosed with STEMI or NSTEMI \n\n Hospitalized within 24 hours of onset of symptoms or transferred from another hospital within 24 hours of the onset of symptoms \n\n \nExclusion criteria: : \n\n STEMI and NSTEMI precipitated by or as a complication of surgery, trauma, or GI bleeding or post-PCI. \n\n STEMI and NSTEMI occurring in patients already hospitalized for other reasons. \n\n Presence of any condition/circumstance which in the opinion of the investigator could significantly limit the complete follow up of the patient (e.g. tourist, non-native speaker or does not understand the local language, psychiatric disturbances).",
+    "metadata": {
+      "brief_title": "REal World Information on Cardiovascular Drug Management Patterns in Acute Coronary Syndrome paTients",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Acute Coronary Syndrome']",
+      "diseases_list": [
+        "Acute Coronary Syndrome"
+      ],
+      "enrollment": "814.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Provision of subject informed consent \n\n Patients hospitalized and diagnosed with STEMI or NSTEMI \n\n Hospitalized within 24 hours of onset of symptoms or transferred from another hospital within 24 hours of the onset of symptoms \n\n ",
+      "exclusion_criteria": ": \n\n STEMI and NSTEMI precipitated by or as a complication of surgery, trauma, or GI bleeding or post-PCI. \n\n STEMI and NSTEMI occurring in patients already hospitalized for other reasons. \n\n Presence of any condition/circumstance which in the opinion of the investigator could significantly limit the complete follow up of the patient (e.g. tourist, non-native speaker or does not understand the local language, psychiatric disturbances).",
+      "brief_summary": "RE-ACT is a national, multi-centre, observational, prospective, longitudinal cohort study which will include patients hospitalized for ACS within 24 hours of symptom onset and who have a final diagnosis of ST-segment elevation myocardial infarction (STEMI) or non-ST-segment elevation myocardial infarction (NSTEMI). This study aims to describe the short-term (at the end of the first month after index event) antithrombotic management patterns in a real-life setting for patients hospitalized with an acute coronary syndrome."
+    }
+  },
+  "linked_result": {
+    "Acute Coronary Syndrome": {
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Acute Coronary Syndrome": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Acute Coronary Syndrome": {
+      "disease": "Acute Coronary Syndrome",
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome"
+    }
+  }
+}

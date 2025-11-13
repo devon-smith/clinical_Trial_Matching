@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_acute_myocardial_infarction_of_anterior_wall_now",
+  "patient_creatine_kinase_value_recorded_now_withunit_unit",
+  "patients_creatine_kinase_isoenzyme_mb_fraction_is_positive_now",
+  "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_left_ventricular_thrombus_now",
+  "patient_has_finding_of_left_ventricular_wall_dyskinetic_now",
+  "patient_has_finding_of_pathological_q_wave_now",
+  "patient_has_diagnosis_of_myocardial_infarction_now"
+]

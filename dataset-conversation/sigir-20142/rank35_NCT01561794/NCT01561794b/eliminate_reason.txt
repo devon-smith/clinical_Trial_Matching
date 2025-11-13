@@ -1,0 +1,1 @@
+This subcohort (trial) is labeled 'eliminated' due to an explicit contradiction detected by eliminate(). Clause-level details are not captured in this build.

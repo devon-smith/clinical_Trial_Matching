@@ -1,0 +1,65 @@
+{
+  "generated": "2025-10-20T22:07:07",
+  "trial_id": "NCT02449928",
+  "contextual": {
+    "_id": "NCT02449928",
+    "title": "Using Sodium Lactate Ringer's Injection Resuscitate Septic Shock Patients",
+    "text": "Summary: Using sodium lactate Ringer's injection resuscitate septic shock patients and Compared with other solution, in order to make clear whether can improve the prognosis.\nInclusion criteria: inclusion criteria: \n\n diagnosis in patients with septic shock \n\n \nExclusion criteria: : \n\n pregnant women and nursing mothers \n\n severe liver failure with child class C \n\n using Linezolid \n\n pheochromocytoma \n\n hematologic malignancy \n\n using epinephrine \n\n during CVVH treatment",
+    "metadata": {
+      "brief_title": "Using Sodium Lactate Ringer's Injection Resuscitate Septic Shock Patients",
+      "phase": "",
+      "drugs": "[\"sodium lactate Ringer's injection(Baxter, ShangHai, China)\", 'Compound Sodium Chloride Injection (CR Double-Crane, Beijing, China)']",
+      "drugs_list": [
+        "sodium lactate Ringer's injection(Baxter",
+        "ShangHai",
+        "China)",
+        "Compound Sodium Chloride Injection (CR Double-Crane",
+        "Beijing",
+        "China)"
+      ],
+      "diseases": "['Severe Sepsis With Septic Shock', 'Lactate']",
+      "diseases_list": [
+        "Severe Sepsis With Septic Shock",
+        "Lactate"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "inclusion criteria: \n\n diagnosis in patients with septic shock \n\n ",
+      "exclusion_criteria": ": \n\n pregnant women and nursing mothers \n\n severe liver failure with child class C \n\n using Linezolid \n\n pheochromocytoma \n\n hematologic malignancy \n\n using epinephrine \n\n during CVVH treatment",
+      "brief_summary": "Using sodium lactate Ringer's injection resuscitate septic shock patients and Compared with other solution, in order to make clear whether can improve the prognosis."
+    }
+  },
+  "linked_result": {
+    "Severe Sepsis With Septic Shock": {
+      "conceptId": "76571007",
+      "preferred_term": "Septic shock",
+      "fully_specified_name": "Septic shock (disorder)",
+      "type": "Clinical finding",
+      "definition": "Sepsis associated with HYPOTENSION or hypoperfusion despite adequate fluid resuscitation. Perfusion abnormalities may include but are not limited to LACTIC ACIDOSIS; OLIGURIA; or acute alteration in mental status.",
+      "best_match_term": "Septicemic shock",
+      "match_reason": "Exact"
+    },
+    "Lactate": {
+      "conceptId": "83036002",
+      "preferred_term": "Lactate",
+      "fully_specified_name": "Lactate (substance)",
+      "type": "Substance",
+      "definition": "name of an organic chemical",
+      "best_match_term": "Lactate",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Severe Sepsis With Septic Shock": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Severe Sepsis With Septic Shock": {
+      "disease": "Severe Sepsis With Septic Shock",
+      "conceptId": "76571007",
+      "preferred_term": "Septic shock",
+      "fully_specified_name": "Septic shock (disorder)",
+      "type": "Clinical finding",
+      "definition": "Sepsis associated with HYPOTENSION or hypoperfusion despite adequate fluid resuscitation. Perfusion abnormalities may include but are not limited to LACTIC ACIDOSIS; OLIGURIA; or acute alteration in mental status.",
+      "best_match_term": "Septicemic shock"
+    }
+  }
+}

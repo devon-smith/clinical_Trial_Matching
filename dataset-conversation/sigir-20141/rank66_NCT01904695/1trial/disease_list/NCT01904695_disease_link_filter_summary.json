@@ -1,0 +1,54 @@
+{
+  "generated": "2025-10-20T23:31:06",
+  "trial_id": "NCT01904695",
+  "contextual": {
+    "_id": "NCT01904695",
+    "title": "Causal Inference Research of Resistant Hypertension Treatment With Chinese Approach in a Cohort Study",
+    "text": "Summary: The research of clinical effectiveness assessment is to explore the causal relationship between treatment and outcome.Accordingly, based on the effectiveness of tan-yu treatment, the research takes the Resistant Hypertension (RH) as example to study the causal inference methods under real world.\nInclusion criteria: inclusion criteria: \n\n Essential hypertension subjects, aged 18-70 years, blood pressure > 140/90 mm Hg even used to be on 3 or more medications for a month and diagnosed as Phlegm and Stasis Syndrome will be included. \n\n \nExclusion criteria: : \n\n Patients will be excluded for the following conditions: with secondary resistant hypertension because of other disease like renal disease or pheochromocytoma; included in other clinical trial in one month; pregnant or breast-feed or preparing for pregnancy female; combined with disease like stroke, coronary atherosclerotic heart disease, diabetes, chronic renal failure or mental disease.",
+    "metadata": {
+      "brief_title": "Causal Inference Research of Resistant Hypertension Treatment With Chinese Approach in a Cohort Study",
+      "phase": "Phase 1",
+      "drugs": "['Herbs', 'Antihypertensive drugs']",
+      "drugs_list": [
+        "Herbs",
+        "Antihypertensive drugs"
+      ],
+      "diseases": "['Primary Hypertension', 'Hypertension, Resistant to Conventional Therapy']",
+      "diseases_list": [
+        "Primary Hypertension",
+        "Hypertension",
+        "Resistant to Conventional Therapy"
+      ],
+      "enrollment": "192.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Essential hypertension subjects, aged 18-70 years, blood pressure > 140/90 mm Hg even used to be on 3 or more medications for a month and diagnosed as Phlegm and Stasis Syndrome will be included. \n\n ",
+      "exclusion_criteria": ": \n\n Patients will be excluded for the following conditions: with secondary resistant hypertension because of other disease like renal disease or pheochromocytoma; included in other clinical trial in one month; pregnant or breast-feed or preparing for pregnancy female; combined with disease like stroke, coronary atherosclerotic heart disease, diabetes, chronic renal failure or mental disease.",
+      "brief_summary": "The research of clinical effectiveness assessment is to explore the causal relationship between treatment and outcome.Accordingly, based on the effectiveness of tan-yu treatment, the research takes the Resistant Hypertension (RH) as example to study the causal inference methods under real world."
+    }
+  },
+  "linked_result": {
+    "Primary Hypertension": {
+      "conceptId": "59621000",
+      "preferred_term": "Essential hypertension",
+      "fully_specified_name": "Essential hypertension (disorder)",
+      "type": "Clinical finding",
+      "definition": "Hypertension that occurs without known cause, or preexisting renal disease. Associated polymorphisms for a number of genes have been identified, including AGT, GNB3, and ECE1. OMIM: 145500",
+      "best_match_term": "Primary hypertension",
+      "match_reason": "Exact"
+    },
+    "Hypertension, Resistant to Conventional Therapy": null
+  },
+  "kept_counts": {
+    "Primary Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Primary Hypertension": {
+      "disease": "Primary Hypertension",
+      "conceptId": "59621000",
+      "preferred_term": "Essential hypertension",
+      "fully_specified_name": "Essential hypertension (disorder)",
+      "type": "Clinical finding",
+      "definition": "Hypertension that occurs without known cause, or preexisting renal disease. Associated polymorphisms for a number of genes have been identified, including AGT, GNB3, and ECE1. OMIM: 145500",
+      "best_match_term": "Primary hypertension"
+    }
+  }
+}

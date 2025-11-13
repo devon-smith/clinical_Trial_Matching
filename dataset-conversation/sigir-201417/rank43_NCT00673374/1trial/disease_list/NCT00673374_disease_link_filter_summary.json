@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:32:11",
+  "trial_id": "NCT00673374",
+  "contextual": {
+    "_id": "NCT00673374",
+    "title": "Correlation of Location of Abdominal Tenderness With Acute CT Abnormalities in Emergency Department Patients",
+    "text": "Summary: To determine the correlation between the region of abdominal tenderness determined by the examining physician and the location of acute pathology diagnosed on abdominal CT. We hypothesize that the acute pathology diagnosed by CT will lie within the region marked on the abdominal wall by the examining physician prior to CT.\nInclusion criteria: inclusion criteria: \n\n All consecutive emergency department patients undergoing abdominal CT for non-traumatic abdominal pain and tenderness will be prospectively enrolled, with the following exceptions. For study purposes, abdominal pain and tenderness is defined as pain and tenderness to direct palpation in the region anterior to the mid-axillary line bilaterally, and extending from the costal margins to the inguinal ligaments. Consequently, patients undergoing CT for indications such as isolated vomiting, fever without source, staging of malignancies, isolated flank pain or suspected renal colic, or other indications that do not meet the above definition will not be enrolled. \n\n \nExclusion criteria: : \n\n Pregnant women do not routinely undergo abdominal CT due to radiation concerns and will be excluded from the study. \n\n Patients with altered mental status or altered abdominal sensation (due to neurological conditions such as paraplegia) that may prevent assessment of the location of abdominal tenderness will be excluded. \n\n Preverbal children will be excluded as they rarely undergo CT and will be unable to indicate the region of maximal tenderness.",
+    "metadata": {
+      "brief_title": "Correlation of Location of Abdominal Tenderness With Acute CT Abnormalities in Emergency Department Patients",
+      "phase": "",
+      "drugs": "['radio-opaque adhesive skin markers']",
+      "drugs_list": [
+        "radio-opaque adhesive skin markers"
+      ],
+      "diseases": "['Abdominal Pain']",
+      "diseases_list": [
+        "Abdominal Pain"
+      ],
+      "enrollment": "102.0",
+      "inclusion_criteria": "inclusion criteria: \n\n All consecutive emergency department patients undergoing abdominal CT for non-traumatic abdominal pain and tenderness will be prospectively enrolled, with the following exceptions. For study purposes, abdominal pain and tenderness is defined as pain and tenderness to direct palpation in the region anterior to the mid-axillary line bilaterally, and extending from the costal margins to the inguinal ligaments. Consequently, patients undergoing CT for indications such as isolated vomiting, fever without source, staging of malignancies, isolated flank pain or suspected renal colic, or other indications that do not meet the above definition will not be enrolled. \n\n ",
+      "exclusion_criteria": ": \n\n Pregnant women do not routinely undergo abdominal CT due to radiation concerns and will be excluded from the study. \n\n Patients with altered mental status or altered abdominal sensation (due to neurological conditions such as paraplegia) that may prevent assessment of the location of abdominal tenderness will be excluded. \n\n Preverbal children will be excluded as they rarely undergo CT and will be unable to indicate the region of maximal tenderness.",
+      "brief_summary": "To determine the correlation between the region of abdominal tenderness determined by the examining physician and the location of acute pathology diagnosed on abdominal CT. We hypothesize that the acute pathology diagnosed by CT will lie within the region marked on the abdominal wall by the examining physician prior to CT."
+    }
+  },
+  "linked_result": {
+    "Abdominal Pain": {
+      "conceptId": "21522001",
+      "preferred_term": "Abdominal pain",
+      "fully_specified_name": "Abdominal pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Sensation of discomfort, distress, or agony in the abdominal region.",
+      "best_match_term": "Abdominal pain",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Abdominal Pain": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Abdominal Pain": {
+      "disease": "Abdominal Pain",
+      "conceptId": "21522001",
+      "preferred_term": "Abdominal pain",
+      "fully_specified_name": "Abdominal pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Sensation of discomfort, distress, or agony in the abdominal region.",
+      "best_match_term": "Abdominal pain"
+    }
+  }
+}

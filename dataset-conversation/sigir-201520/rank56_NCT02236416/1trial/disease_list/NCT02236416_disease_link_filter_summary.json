@@ -1,0 +1,91 @@
+{
+  "generated": "2025-10-20T23:43:34",
+  "trial_id": "NCT02236416",
+  "contextual": {
+    "_id": "NCT02236416",
+    "title": "Physical Exercise for Prevention of Dementia",
+    "text": "Summary: The principal aim of this study is to verify whether a program of supervised, multimodal physical exercise improves cognitive function and/or reduces the rate of cognitive decline in older adults\nInclusion criteria: inclusion criteria: \n\n Age > 50 years old \n\n \nExclusion criteria: : \n\n Medical conditions that compromise survival or limit physical activity \n\n Geriatric Depression Scale-15 score of 6 or higher \n\n Alcohol intake > 4 units/day \n\n Mini- Mental State Examination < 24 \n\n Clinical Dementia Rating score of 1 or more",
+    "metadata": {
+      "brief_title": "Physical Exercise for Prevention of Dementia",
+      "phase": "",
+      "drugs": "['Intervention group', 'Control group']",
+      "drugs_list": [
+        "Intervention group",
+        "Control group"
+      ],
+      "diseases": "['Memory Disorders', 'Mild Cognitive Impairment', 'Aging']",
+      "diseases_list": [
+        "Memory Disorders",
+        "Mild Cognitive Impairment",
+        "Aging"
+      ],
+      "enrollment": "1000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age > 50 years old \n\n ",
+      "exclusion_criteria": ": \n\n Medical conditions that compromise survival or limit physical activity \n\n Geriatric Depression Scale-15 score of 6 or higher \n\n Alcohol intake > 4 units/day \n\n Mini- Mental State Examination < 24 \n\n Clinical Dementia Rating score of 1 or more",
+      "brief_summary": "The principal aim of this study is to verify whether a program of supervised, multimodal physical exercise improves cognitive function and/or reduces the rate of cognitive decline in older adults"
+    }
+  },
+  "linked_result": {
+    "Memory Disorders": {
+      "conceptId": "386807006",
+      "preferred_term": "Memory impairment",
+      "fully_specified_name": "Memory impairment (finding)",
+      "type": "Clinical finding",
+      "definition": "Deterioration in memory function.",
+      "best_match_term": "Memory dysfunction",
+      "match_reason": "Exact"
+    },
+    "Mild Cognitive Impairment": {
+      "conceptId": "386805003",
+      "preferred_term": "Mild cognitive disorder",
+      "fully_specified_name": "Mild cognitive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "<p>Some forgetfulness can be a normal part of aging. However, some people have more <a href=\"https://medlineplus.gov/memory.html\">memory</a> problems than other people their age. This condition is called mild cognitive impairment, or MCI. People with MCI can take care of themselves and do their normal activities.</p> <p>MCI memory problems may include:</p><ul> <li>Losing things often</li> <li>Forgetting to go to events and appointments</li> <li>Having more trouble coming up with words than other people of the same age</li> </ul> <p>Memory problems can also have other causes, including certain medicines and diseases that affect the blood vessels that supply the brain. Some of the problems brought on by these conditions can be managed or reversed.</p> <p>Your health care provider can do thinking, memory, and language tests to see if you have MCI. You may also need to see a specialist for more tests. Because MCI may be an early sign of <a href=\"https://medlineplus.gov/alzheimersdisease.html\">Alzheimer's disease</a>, it's really important to see your health care provider every 6 to 12 months.</p> <p>At this time, there is no proven drug treatment for MCI. Your health care provider can check to see if you have any changes in your memory or thinking skills over time.</p> <p class=\"\">NIH: National Institute on Aging</p>",
+      "best_match_term": "Mild cognitive impairment",
+      "match_reason": "Exact"
+    },
+    "Aging": {
+      "conceptId": "248280005",
+      "preferred_term": "Aging",
+      "fully_specified_name": "Aging (finding)",
+      "type": "Clinical finding",
+      "definition": "The gradual irreversible changes in structure and function of an organism that occur as a result of the passage of time.",
+      "best_match_term": "Aging",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Memory Disorders": 1,
+    "Mild Cognitive Impairment": 1,
+    "Aging": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Memory Disorders": {
+      "disease": "Memory Disorders",
+      "conceptId": "386807006",
+      "preferred_term": "Memory impairment",
+      "fully_specified_name": "Memory impairment (finding)",
+      "type": "Clinical finding",
+      "definition": "Deterioration in memory function.",
+      "best_match_term": "Memory dysfunction"
+    },
+    "Mild Cognitive Impairment": {
+      "disease": "Mild Cognitive Impairment",
+      "conceptId": "386805003",
+      "preferred_term": "Mild cognitive disorder",
+      "fully_specified_name": "Mild cognitive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "<p>Some forgetfulness can be a normal part of aging. However, some people have more <a href=\"https://medlineplus.gov/memory.html\">memory</a> problems than other people their age. This condition is called mild cognitive impairment, or MCI. People with MCI can take care of themselves and do their normal activities.</p> <p>MCI memory problems may include:</p><ul> <li>Losing things often</li> <li>Forgetting to go to events and appointments</li> <li>Having more trouble coming up with words than other people of the same age</li> </ul> <p>Memory problems can also have other causes, including certain medicines and diseases that affect the blood vessels that supply the brain. Some of the problems brought on by these conditions can be managed or reversed.</p> <p>Your health care provider can do thinking, memory, and language tests to see if you have MCI. You may also need to see a specialist for more tests. Because MCI may be an early sign of <a href=\"https://medlineplus.gov/alzheimersdisease.html\">Alzheimer's disease</a>, it's really important to see your health care provider every 6 to 12 months.</p> <p>At this time, there is no proven drug treatment for MCI. Your health care provider can check to see if you have any changes in your memory or thinking skills over time.</p> <p class=\"\">NIH: National Institute on Aging</p>",
+      "best_match_term": "Mild cognitive impairment"
+    },
+    "Aging": {
+      "disease": "Aging",
+      "conceptId": "248280005",
+      "preferred_term": "Aging",
+      "fully_specified_name": "Aging (finding)",
+      "type": "Clinical finding",
+      "definition": "The gradual irreversible changes in structure and function of an organism that occur as a result of the passage of time.",
+      "best_match_term": "Aging"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_dementia_associated_with_parkinson_s_disease_now",
+  "patient_has_diagnosis_of_parkinson_s_disease_now",
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_mini_mental_state_examination_score_value_recorded_now_withunit_score",
+  "patient_has_diagnosis_of_parkinson_s_disease_now@@bilateral",
+  "patient_parkinsonian_features_value_recorded_now_withunit_percent",
+  "patient_age_value_recorded_inthehistory_in_years",
+  "patient_can_undergo_therapeutic_procedure_now"
+]

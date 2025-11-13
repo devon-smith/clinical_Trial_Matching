@@ -1,0 +1,17 @@
+[
+  "patient_body_weight_value_recorded_now_withunit_kg",
+  "patient_has_finding_of_small_for_gestational_age_fetus_now",
+  "patient_has_finding_of_pneumatosis_cystoides_intestinalis_now",
+  "patient_has_finding_of_pneumoperitoneum_now",
+  "patient_has_finding_of_bilious_vomiting_now",
+  "patient_has_finding_of_bowel_sounds_absent_now",
+  "patient_has_finding_of_intestinal_obstruction_now",
+  "patient_has_finding_of_congenital_malformation_now",
+  "patient_is_undergoing_antibiotic_therapy_now",
+  "patient_is_undergoing_antifungal_therapy_now",
+  "patient_has_diagnosis_of_sepsis_now",
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_has_finding_of_patent_ductus_arteriosus_now",
+  "patient_has_finding_of_ventricular_hemorrhage_now",
+  "patient_has_finding_of_hypernatremia_now"
+]

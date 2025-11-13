@@ -1,0 +1,128 @@
+{
+  "generated": "2025-10-20T22:28:29",
+  "trial_id": "NCT00456196",
+  "contextual": {
+    "_id": "NCT00456196",
+    "title": "Epidemiology of Venous Thromboembolism",
+    "text": "Summary: More than 5 years ago the DVT FREE Registry was conceived. Its database consists of 5,451 ultrasound-confirmed DVT patients from 183 institutions. This database is rich in information of critical importance to health care providers. The information contained within the database will be revisited to provide more detailed analyses which will be used for risk factor assessment and for decision-making regarding the implementation of VTE Prophylaxis.\nInclusion criteria: inclusion criteria: \n\n Ultrasound-confirmed DVT patients from 183 institutions.\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Epidemiology of Venous Thromboembolism",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Venous Thromboembolism', 'Pulmonary Embolism', 'Cancer', 'Deep Vein Thrombosis', 'COPD']",
+      "diseases_list": [
+        "Venous Thromboembolism",
+        "Pulmonary Embolism",
+        "Cancer",
+        "Deep Vein Thrombosis",
+        "COPD"
+      ],
+      "enrollment": "5451.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Ultrasound-confirmed DVT patients from 183 institutions.",
+      "exclusion_criteria": "",
+      "brief_summary": "More than 5 years ago the DVT FREE Registry was conceived. Its database consists of 5,451 ultrasound-confirmed DVT patients from 183 institutions. This database is rich in information of critical importance to health care providers. The information contained within the database will be revisited to provide more detailed analyses which will be used for risk factor assessment and for decision-making regarding the implementation of VTE Prophylaxis."
+    }
+  },
+  "linked_result": {
+    "Venous Thromboembolism": {
+      "conceptId": "429098002",
+      "preferred_term": "Thromboembolism of vein",
+      "fully_specified_name": "Thromboembolism of vein (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Thromboembolism of vein",
+      "match_reason": "Exact"
+    },
+    "Pulmonary Embolism": {
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism",
+      "match_reason": "Exact"
+    },
+    "Cancer": {
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Cancer",
+      "match_reason": "Exact"
+    },
+    "Deep Vein Thrombosis": {
+      "conceptId": "128053003",
+      "preferred_term": "Deep venous thrombosis",
+      "fully_specified_name": "Deep venous thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "A blood clot in a deep vein, predominantly in the lower extremity, but may include the pelvis or upper extremity.",
+      "best_match_term": "Deep vein thrombosis",
+      "match_reason": "Exact"
+    },
+    "COPD": {
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "COPD",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Venous Thromboembolism": 1,
+    "Pulmonary Embolism": 1,
+    "Cancer": 1,
+    "Deep Vein Thrombosis": 1,
+    "COPD": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Venous Thromboembolism": {
+      "disease": "Venous Thromboembolism",
+      "conceptId": "429098002",
+      "preferred_term": "Thromboembolism of vein",
+      "fully_specified_name": "Thromboembolism of vein (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Thromboembolism of vein"
+    },
+    "Pulmonary Embolism": {
+      "disease": "Pulmonary Embolism",
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism"
+    },
+    "Cancer": {
+      "disease": "Cancer",
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Cancer"
+    },
+    "Deep Vein Thrombosis": {
+      "disease": "Deep Vein Thrombosis",
+      "conceptId": "128053003",
+      "preferred_term": "Deep venous thrombosis",
+      "fully_specified_name": "Deep venous thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "A blood clot in a deep vein, predominantly in the lower extremity, but may include the pelvis or upper extremity.",
+      "best_match_term": "Deep vein thrombosis"
+    },
+    "COPD": {
+      "disease": "COPD",
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "COPD"
+    }
+  }
+}

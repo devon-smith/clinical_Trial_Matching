@@ -1,0 +1,22 @@
+{
+  "_id": "NCT02564939",
+  "title": "Ramelteon Prevention of Delirium - RCT",
+  "text": "Summary: Delirium is a common morbid condition in hospitalized adults. Treatment of delirium has been unsatisfactory and prevention is the preferred goal. Based on limited experimental research, ramelteon appears to have promise for prevention. This study will evaluate ramelteon in prevention of delirium in a hospitalized adult population age 65+ in a double-blinded RCT.\nInclusion criteria: inclusion criteria: \n\n from designated nursing units \n\n \nExclusion criteria: : \n\n -",
+  "metadata": {
+    "brief_title": "Ramelteon Prevention of Delirium - RCT",
+    "phase": "Phase 4",
+    "drugs": "['ramelteon', 'Placebo']",
+    "drugs_list": [
+      "ramelteon",
+      "Placebo"
+    ],
+    "diseases": "['Delirium']",
+    "diseases_list": [
+      "Delirium"
+    ],
+    "enrollment": "240.0",
+    "inclusion_criteria": "inclusion criteria: \n\n from designated nursing units \n\n ",
+    "exclusion_criteria": ": \n\n -",
+    "brief_summary": "Delirium is a common morbid condition in hospitalized adults. Treatment of delirium has been unsatisfactory and prevention is the preferred goal. Based on limited experimental research, ramelteon appears to have promise for prevention. This study will evaluate ramelteon in prevention of delirium in a hospitalized adult population age 65+ in a double-blinded RCT."
+  }
+}

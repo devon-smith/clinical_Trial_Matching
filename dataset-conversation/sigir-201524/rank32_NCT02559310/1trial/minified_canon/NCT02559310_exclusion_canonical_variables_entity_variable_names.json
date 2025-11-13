@@ -1,0 +1,19 @@
+[
+  "patient_antibacterial_value_recorded_inthepast72hours_withunit_dose",
+  "patient_is_undergoing_antibiotic_therapy_now",
+  "patient_has_diagnosis_of_fungal_pneumonia_now",
+  "patient_has_diagnosis_of_pulmonary_disease_due_to_mycobacteria_now",
+  "patient_has_diagnosis_of_ventilator_associated_pneumonia_now",
+  "patient_has_diagnosis_of_congestive_heart_failure_now",
+  "patient_has_diagnosis_of_cystic_fibrosis_now",
+  "patient_has_diagnosis_of_extrinsic_allergic_alveolitis_now",
+  "patient_has_diagnosis_of_obstruction_of_bronchus_now",
+  "patient_has_diagnosis_of_pneumonitis_due_to_inhaled_substance_now",
+  "patient_has_diagnosis_of_primary_malignant_neoplasm_of_lung_now",
+  "patient_has_diagnosis_of_pulmonary_embolism_now",
+  "patient_has_finding_of_radiologic_infiltrate_of_lung_now",
+  "patient_has_diagnosis_of_empyema_of_pleura_now",
+  "patient_has_suspicion_of_empyema_of_pleura_now",
+  "patient_has_finding_of_pleural_effusion_associated_with_pulmonary_infection_now",
+  "patient_is_undergoing_artificial_respiration_now"
+]

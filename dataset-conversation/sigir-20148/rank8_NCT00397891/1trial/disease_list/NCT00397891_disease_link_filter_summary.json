@@ -1,0 +1,52 @@
+{
+  "generated": "2025-10-20T23:42:27",
+  "trial_id": "NCT00397891",
+  "contextual": {
+    "_id": "NCT00397891",
+    "title": "Study Evaluating Single Ascending Doses of AAB-001 Vaccine SAD Japanese Patients With Alzheimers Disease",
+    "text": "Summary: Evaluate safety, tolerability, and pharmacokinetics of single doses of the investigational AAB-001 Vaccine in Japanese patients with Alzheimer's disease.\nInclusion criteria: inclusion criteria: \n\n Diagnosis of AD \n\n Age 50-85 \n\n MMSE 14-26 \n\n Other inclusion criteria Apply \n\n \nExclusion criteria: : \n\n Significant Neurological Disease \n\n Major Psychiatric Disorder \n\n Clinically Significant Systemic Illness \n\n Other ",
+    "metadata": {
+      "brief_title": "Study Evaluating Single Ascending Doses of AAB-001 Vaccine SAD Japanese Patients With Alzheimers Disease",
+      "phase": "Phase 1",
+      "drugs": "['bapineuzumab', 'bapineuzumab', 'bapineuzumab']",
+      "drugs_list": [
+        "bapineuzumab",
+        "bapineuzumab",
+        "bapineuzumab"
+      ],
+      "diseases": "['Alzheimer Disease']",
+      "diseases_list": [
+        "Alzheimer Disease"
+      ],
+      "enrollment": "80.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Diagnosis of AD \n\n Age 50-85 \n\n MMSE 14-26 \n\n Other inclusion criteria Apply \n\n ",
+      "exclusion_criteria": ": \n\n Significant Neurological Disease \n\n Major Psychiatric Disorder \n\n Clinically Significant Systemic Illness \n\n Other ",
+      "brief_summary": "Evaluate safety, tolerability, and pharmacokinetics of single doses of the investigational AAB-001 Vaccine in Japanese patients with Alzheimer's disease."
+    }
+  },
+  "linked_result": {
+    "Alzheimer Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Alzheimer Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Alzheimer Disease": {
+      "disease": "Alzheimer Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease"
+    }
+  }
+}

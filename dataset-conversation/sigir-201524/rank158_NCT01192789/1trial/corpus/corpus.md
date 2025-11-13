@@ -1,0 +1,50 @@
+# Community Case Management of the Severe Pneumonia With Oral Amoxicillin in Children 2-59 Months of Age
+**NCT**: `NCT01192789`
+## Brief Summary
+Two-arm cluster randomized controlled trial located in Hala district, Pakistan to determine the impact of using Lady Health Workers (LHW) of National Program for Family Planning and Primary Health Care to diagnose and manage severe pneumonia with oral amoxicillin on treatment failure rates at day 6 among 2-59 month old children. LHWs in the control arm receive a refresher in standard pneumonia case management. LHWs in the intervention arm receive standard training that is enhanced to include training in the recognition of severe pneumonia and its home management with oral amoxicillin. Clusters are by Union Council (UC), administrator units consisting of 7 to 25 LHWs; each UC is randomized to either enhanced pneumonia case management with oral amoxicillin therapy (intervention) for severe pneumonia or standard case management and referral to the nearest health facility for treatment (control). Process indicators reflecting the LHW's ability to assess, classify and treat pneumonia in the intervention group and cost-effectiveness data is also being collected.~Primary Hypothesis:~Enhanced pneumonia case management and oral amoxicillin therapy for severe pneumonia delivered by LHWs in the community will result in a reduction in treatment failure among children 2 - 59 months of age with severe pneumonia who are treated by the LHW compared with those referred for care by the LHW.~Secondary Hypotheses:~The proportion of treatment failure, [persistence of lower chest indrawing (LCI) or need for second line treatment between day 3 and day 14], will be less in the intervention arm compared with the control arm.~LHWs can adequately assess, classify, and treat severe pneumonia in 2 - 59 month old children, and adequately recognize and refer children who present with danger signs during initial antimicrobial therapy.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Age between 2 to 59 months who present to LHWs with severe pneumonia. 
+
+ Informed consent given by a legal guardian.
+## Exclusion Criteria
+: 
+
+ Very severe disease. 
+
+ Persistent vomiting. 
+
+ Parental or caretaker refusal to participate in the study. 
+
+ Children currently being treated for non-severe pneumonia who advance to severe pneumonia. 
+
+ Suspected or known kerosene oil ingestion. 
+
+ Prior enrollment in the study within 2 weeks of last follow up 
+
+ Children with severe malnutrition . Children with severe diarrhea with signs of dehydration
+## Full Text
+Summary: Two-arm cluster randomized controlled trial located in Hala district, Pakistan to determine the impact of using Lady Health Workers (LHW) of National Program for Family Planning and Primary Health Care to diagnose and manage severe pneumonia with oral amoxicillin on treatment failure rates at day 6 among 2-59 month old children. LHWs in the control arm receive a refresher in standard pneumonia case management. LHWs in the intervention arm receive standard training that is enhanced to include training in the recognition of severe pneumonia and its home management with oral amoxicillin. Clusters are by Union Council (UC), administrator units consisting of 7 to 25 LHWs; each UC is randomized to either enhanced pneumonia case management with oral amoxicillin therapy (intervention) for severe pneumonia or standard case management and referral to the nearest health facility for treatment (control). Process indicators reflecting the LHW's ability to assess, classify and treat pneumonia in the intervention group and cost-effectiveness data is also being collected.~Primary Hypothesis:~Enhanced pneumonia case management and oral amoxicillin therapy for severe pneumonia delivered by LHWs in the community will result in a reduction in treatment failure among children 2 - 59 months of age with severe pneumonia who are treated by the LHW compared with those referred for care by the LHW.~Secondary Hypotheses:~The proportion of treatment failure, [persistence of lower chest indrawing (LCI) or need for second line treatment between day 3 and day 14], will be less in the intervention arm compared with the control arm.~LHWs can adequately assess, classify, and treat severe pneumonia in 2 - 59 month old children, and adequately recognize and refer children who present with danger signs during initial antimicrobial therapy.
+Inclusion criteria: inclusion criteria: 
+
+ Age between 2 to 59 months who present to LHWs with severe pneumonia. 
+
+ Informed consent given by a legal guardian. 
+
+ 
+Exclusion criteria: : 
+
+ Very severe disease. 
+
+ Persistent vomiting. 
+
+ Parental or caretaker refusal to participate in the study. 
+
+ Children currently being treated for non-severe pneumonia who advance to severe pneumonia. 
+
+ Suspected or known kerosene oil ingestion. 
+
+ Prior enrollment in the study within 2 weeks of last follow up 
+
+ Children with severe malnutrition . Children with severe diarrhea with signs of dehydration

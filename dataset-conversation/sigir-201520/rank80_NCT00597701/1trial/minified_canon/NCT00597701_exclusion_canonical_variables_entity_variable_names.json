@@ -1,0 +1,14 @@
+[
+  "patient_has_finding_of_alcohol_dependence_now",
+  "patient_has_finding_of_psychoactive_substance_dependence_now",
+  "patient_has_finding_of_finding_relating_to_alcohol_drinking_behavior_now",
+  "patient_is_taking_baclofen_containing_product_now",
+  "patient_is_taking_benzodiazepine_containing_product_now",
+  "patient_has_finding_of_allergy_to_baclofen_now",
+  "patient_has_finding_of_allergy_to_benzodiazepine_now",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patients_breastfeeding_is_positive_now",
+  "patient_serum_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter"
+]

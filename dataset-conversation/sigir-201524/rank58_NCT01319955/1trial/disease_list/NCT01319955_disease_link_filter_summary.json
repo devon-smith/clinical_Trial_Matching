@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T23:45:00",
+  "trial_id": "NCT01319955",
+  "contextual": {
+    "_id": "NCT01319955",
+    "title": "Flu Vaccine Against Childhood Pneumonia, Bangladesh",
+    "text": "Summary: Pneumonia is the leading cause of child death worldwide. Data from Bangladesh indicates that influenza has a substantial association with pneumonia among children less than two years old. This study will use commercially available trivalent inactivated vaccine (killed vaccine) to see if it can prevent early childhood pneumonia among children less than two years old. The study will vaccinate children across three seasons (3 years), and look at the effect on the attack rate of pneumonia, as well as its effects on laboratory-confirmed influenza. It will also look at the effect on laboratory-confirmed influenza illness among the non-vaccinated household contacts of all ages of these children.\nInclusion criteria: inclusion criteria: \n\n Children will be included if they are de jure residents 6 months to 23 months old at the time of first dose vaccination residing in households under surveillance. \n\n \nExclusion criteria: : \n\n Children will be excluded if they have known chronic respiratory, cardiac, or neurological (including seizure disorders) illnesses, are severely malnourished or require hospitalisation for any other reason, are suspected of having tuberculosis (WHO guidelines) [83], are known to have egg allergy, or parents withhold consent.",
+    "metadata": {
+      "brief_title": "Flu Vaccine Against Childhood Pneumonia, Bangladesh",
+      "phase": "Phase 3",
+      "drugs": "['Trivalent inactivated influenza vaccine']",
+      "drugs_list": [
+        "Trivalent inactivated influenza vaccine"
+      ],
+      "diseases": "['Pneumonia', 'Laboratory Confirmed Influenza']",
+      "diseases_list": [
+        "Pneumonia",
+        "Laboratory Confirmed Influenza"
+      ],
+      "enrollment": "3508.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Children will be included if they are de jure residents 6 months to 23 months old at the time of first dose vaccination residing in households under surveillance. \n\n ",
+      "exclusion_criteria": ": \n\n Children will be excluded if they have known chronic respiratory, cardiac, or neurological (including seizure disorders) illnesses, are severely malnourished or require hospitalisation for any other reason, are suspected of having tuberculosis (WHO guidelines) [83], are known to have egg allergy, or parents withhold consent.",
+      "brief_summary": "Pneumonia is the leading cause of child death worldwide. Data from Bangladesh indicates that influenza has a substantial association with pneumonia among children less than two years old. This study will use commercially available trivalent inactivated vaccine (killed vaccine) to see if it can prevent early childhood pneumonia among children less than two years old. The study will vaccinate children across three seasons (3 years), and look at the effect on the attack rate of pneumonia, as well as its effects on laboratory-confirmed influenza. It will also look at the effect on laboratory-confirmed influenza illness among the non-vaccinated household contacts of all ages of these children."
+    }
+  },
+  "linked_result": {
+    "Pneumonia": {
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia",
+      "match_reason": "Exact"
+    },
+    "Laboratory Confirmed Influenza": {
+      "conceptId": "6142004",
+      "preferred_term": "Influenza",
+      "fully_specified_name": "Influenza (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acute viral infection in humans involving the respiratory tract. It is marked by inflammation of the NASAL MUCOSA; the PHARYNX; and conjunctiva, and by headache and severe, often generalized, myalgia.",
+      "best_match_term": "Influenza",
+      "match_reason": "Ancestor"
+    }
+  },
+  "kept_counts": {
+    "Pneumonia": 1,
+    "Laboratory Confirmed Influenza": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Pneumonia": {
+      "disease": "Pneumonia",
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia"
+    },
+    "Laboratory Confirmed Influenza": {
+      "disease": "Laboratory Confirmed Influenza",
+      "conceptId": "6142004",
+      "preferred_term": "Influenza",
+      "fully_specified_name": "Influenza (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acute viral infection in humans involving the respiratory tract. It is marked by inflammation of the NASAL MUCOSA; the PHARYNX; and conjunctiva, and by headache and severe, often generalized, myalgia.",
+      "best_match_term": "Influenza"
+    }
+  }
+}

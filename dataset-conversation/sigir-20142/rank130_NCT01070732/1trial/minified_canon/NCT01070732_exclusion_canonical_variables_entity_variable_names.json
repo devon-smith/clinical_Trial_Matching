@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_cirrhosis_of_liver_inthehistory",
+  "patient_creatinine_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_ast_serum_measurement_value_recorded_now_withunit_unit",
+  "patient_is_exposed_to_analgesic_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_finding_of_bleeding_now",
+  "patient_platelet_component_of_blood_value_recorded_now_withunit_per_microliter",
+  "patient_has_finding_of_thrombocytopenic_disorder_now"
+]

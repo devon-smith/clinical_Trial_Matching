@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_age_value_recorded_inthefuture_in_years",
+  "patient_has_diagnosis_of_acute_stress_disorder_now",
+  "patient_has_diagnosis_of_adjustment_disorder_with_anxious_mood_now",
+  "patient_has_diagnosis_of_anxiety_disorder_now",
+  "patient_has_diagnosis_of_generalized_anxiety_disorder_now"
+]

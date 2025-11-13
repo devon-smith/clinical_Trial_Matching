@@ -1,0 +1,10 @@
+[
+  "patient_sex_is_male_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_concussion_injury_of_brain_inthehistory",
+  "patient_has_finding_of_mild_cognitive_disorder_now",
+  "patient_has_finding_of_traumatic_brain_injury_inthehistory",
+  "patients_activity_of_daily_living_is_positive_now",
+  "patient_has_finding_of_impaired_cognition_now",
+  "patient_has_finding_of_traumatic_and_or_non_traumatic_brain_injury_inthehistory"
+]

@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:31:28",
+  "trial_id": "NCT02319161",
+  "contextual": {
+    "_id": "NCT02319161",
+    "title": "Comparison of Calcium Channel Blockers and Beta Blockers on Tourniquet-induced Hypertension During Intravenous Regional Anesthesia",
+    "text": "Summary: The investigators aimed to investigate the efficacy of calcium channel blockers and beta blockers for controlling tourniquet induced blood pressure increase in patients undergoing carpal tunnel operations with IVRA. For this purpose files of patients undergoing operation under IVRA were retrospectively examined in terms of demographical and hemodynamic variables.\nInclusion criteria: inclusion criteria: \n\n Patients operated due to carpal tunnel syndrome under intravenous regional anesthesia betweem January 2009 and January 2010. \n\n \nExclusion criteria: : \n\n The patients that the files could not be reached",
+    "metadata": {
+      "brief_title": "Comparison of Calcium Channel Blockers and Beta Blockers on Tourniquet-induced Hypertension During Intravenous Regional Anesthesia",
+      "phase": "",
+      "drugs": "['Calcium channel blocker and beta blocker']",
+      "drugs_list": [
+        "Calcium channel blocker and beta blocker"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "50.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients operated due to carpal tunnel syndrome under intravenous regional anesthesia betweem January 2009 and January 2010. \n\n ",
+      "exclusion_criteria": ": \n\n The patients that the files could not be reached",
+      "brief_summary": "The investigators aimed to investigate the efficacy of calcium channel blockers and beta blockers for controlling tourniquet induced blood pressure increase in patients undergoing carpal tunnel operations with IVRA. For this purpose files of patients undergoing operation under IVRA were retrospectively examined in terms of demographical and hemodynamic variables."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

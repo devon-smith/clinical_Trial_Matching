@@ -1,0 +1,16 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_symptoms_of_acute_coronary_syndrome_now",
+  "patient_has_symptoms_of_backache_now",
+  "patient_has_symptoms_of_chest_discomfort_now",
+  "patient_has_symptoms_of_chest_pain_now",
+  "patient_has_symptoms_of_cold_sweat_now",
+  "patient_has_symptoms_of_dyspnea_now",
+  "patient_has_symptoms_of_jaw_pain_now",
+  "patient_has_symptoms_of_lightheadedness_now",
+  "patient_has_symptoms_of_nausea_now",
+  "patient_has_symptoms_of_neck_pain_now",
+  "patient_has_symptoms_of_pain_radiating_to_left_arm_now",
+  "patient_has_symptoms_of_stomach_ache_now",
+  "patient_has_symptoms_of_vomiting_now"
+]

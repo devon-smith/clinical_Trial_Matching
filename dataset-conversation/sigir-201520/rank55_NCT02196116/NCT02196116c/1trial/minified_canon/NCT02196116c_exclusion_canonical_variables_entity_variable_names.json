@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_left_handed_now",
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_has_diagnosis_of_cerebrovascular_accident_inthehistory",
+  "patient_has_diagnosis_of_parkinson_s_disease_now",
+  "patient_has_finding_of_contraindication_to_magnetic_resonance_imaging_now",
+  "patient_has_undergone_positron_emission_tomography_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patients_breastfeeding_is_positive_now"
+]

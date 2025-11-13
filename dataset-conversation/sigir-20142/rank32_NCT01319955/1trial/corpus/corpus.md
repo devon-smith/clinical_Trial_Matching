@@ -1,0 +1,22 @@
+# Flu Vaccine Against Childhood Pneumonia, Bangladesh
+**NCT**: `NCT01319955`
+## Brief Summary
+Pneumonia is the leading cause of child death worldwide. Data from Bangladesh indicates that influenza has a substantial association with pneumonia among children less than two years old. This study will use commercially available trivalent inactivated vaccine (killed vaccine) to see if it can prevent early childhood pneumonia among children less than two years old. The study will vaccinate children across three seasons (3 years), and look at the effect on the attack rate of pneumonia, as well as its effects on laboratory-confirmed influenza. It will also look at the effect on laboratory-confirmed influenza illness among the non-vaccinated household contacts of all ages of these children.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Children will be included if they are de jure residents 6 months to 23 months old at the time of first dose vaccination residing in households under surveillance.
+## Exclusion Criteria
+: 
+
+ Children will be excluded if they have known chronic respiratory, cardiac, or neurological (including seizure disorders) illnesses, are severely malnourished or require hospitalisation for any other reason, are suspected of having tuberculosis (WHO guidelines) [83], are known to have egg allergy, or parents withhold consent.
+## Full Text
+Summary: Pneumonia is the leading cause of child death worldwide. Data from Bangladesh indicates that influenza has a substantial association with pneumonia among children less than two years old. This study will use commercially available trivalent inactivated vaccine (killed vaccine) to see if it can prevent early childhood pneumonia among children less than two years old. The study will vaccinate children across three seasons (3 years), and look at the effect on the attack rate of pneumonia, as well as its effects on laboratory-confirmed influenza. It will also look at the effect on laboratory-confirmed influenza illness among the non-vaccinated household contacts of all ages of these children.
+Inclusion criteria: inclusion criteria: 
+
+ Children will be included if they are de jure residents 6 months to 23 months old at the time of first dose vaccination residing in households under surveillance. 
+
+ 
+Exclusion criteria: : 
+
+ Children will be excluded if they have known chronic respiratory, cardiac, or neurological (including seizure disorders) illnesses, are severely malnourished or require hospitalisation for any other reason, are suspected of having tuberculosis (WHO guidelines) [83], are known to have egg allergy, or parents withhold consent.

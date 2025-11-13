@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_is_undergoing_nasotracheal_intubation_now",
+  "patient_is_undergoing_orotracheal_intubation_now",
+  "patient_has_finding_of_unconscious_now",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_inthepast7days"
+]

@@ -1,0 +1,11 @@
+[
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_diagnosis_of_disorder_of_nervous_system_now",
+  "patient_has_finding_of_alcohol_abuse_inthehistory",
+  "patient_has_finding_of_alcohol_abuse_now",
+  "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_inthehistory",
+  "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_now",
+  "patient_has_finding_of_tobacco_smoking_behavior_finding_now",
+  "patient_has_finding_of_metal_foreign_body_in_eye_region_now",
+  "patient_can_undergo_magnetic_resonance_imaging_now"
+]

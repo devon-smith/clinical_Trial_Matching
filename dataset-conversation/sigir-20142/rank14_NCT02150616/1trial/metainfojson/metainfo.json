@@ -1,0 +1,28 @@
+{
+  "trial_id": "NCT02150616",
+  "contextual": {
+    "_id": "NCT02150616",
+    "title": "Patients With Pulmonary Hypertension or Interstitial Lung Disease at Altitude - Effect of Oxygen on Breathing and Sleep",
+    "text": "Summary: The purpose of this study is to investigate the effect of travelling to moderate altitude and of nocturnal oxygen therapy during a stay at moderate altitude on breathing and sleep of patients with pulmonary hypertension or with interstitial lung disease.\nInclusion criteria: inclusion criteria: \n\n Precapillary pulmonary hypertension, or interstitial lung disease. \n\n New York Heart Association class 2-3. \n\n Residence at low altitude (<800m). \n\n \nExclusion criteria: : \n\n Unstable or exacerbated condition \n\n Very severe pulmonary hypertension or interstitial lung disease, New York Heart Association class 4 \n\n requirement for oxygen therapy at low altitude residence \n\n hypoventilation \n\n more than mild or unstable cardiovascular disease \n\n use of drugs that affect respiratory center drive \n\n internal, neurologic or psychiatric disease that interfere with protocol compliance including current heavy smoking (>20 cigarettes per day), inability to perform 6 min walk test. \n\n previous intolerance to moderate altitude (<2600m). \n\n Exposure to altitudes >1500m for >2 days within the last 4 weeks before the study. \n\n Pregnant or nursing patients",
+    "metadata": {
+      "brief_title": "Patients With Pulmonary Hypertension or Interstitial Lung Disease at Altitude - Effect of Oxygen on Breathing and Sleep",
+      "phase": "Phase 4",
+      "drugs": "['Moderate altitude sojourn', 'Low altitude sojourn', 'Oxygen', 'Sham oxygen (room air)']",
+      "drugs_list": [
+        "Moderate altitude sojourn",
+        "Low altitude sojourn",
+        "Oxygen",
+        "Sham oxygen (room air)"
+      ],
+      "diseases": "['Precapillary Pulmonary Hypertension', 'Interstitial Lung Disease']",
+      "diseases_list": [
+        "Precapillary Pulmonary Hypertension",
+        "Interstitial Lung Disease"
+      ],
+      "enrollment": "50.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Precapillary pulmonary hypertension, or interstitial lung disease. \n\n New York Heart Association class 2-3. \n\n Residence at low altitude (<800m). \n\n ",
+      "exclusion_criteria": ": \n\n Unstable or exacerbated condition \n\n Very severe pulmonary hypertension or interstitial lung disease, New York Heart Association class 4 \n\n requirement for oxygen therapy at low altitude residence \n\n hypoventilation \n\n more than mild or unstable cardiovascular disease \n\n use of drugs that affect respiratory center drive \n\n internal, neurologic or psychiatric disease that interfere with protocol compliance including current heavy smoking (>20 cigarettes per day), inability to perform 6 min walk test. \n\n previous intolerance to moderate altitude (<2600m). \n\n Exposure to altitudes >1500m for >2 days within the last 4 weeks before the study. \n\n Pregnant or nursing patients",
+      "brief_summary": "The purpose of this study is to investigate the effect of travelling to moderate altitude and of nocturnal oxygen therapy during a stay at moderate altitude on breathing and sleep of patients with pulmonary hypertension or with interstitial lung disease."
+    }
+  }
+}

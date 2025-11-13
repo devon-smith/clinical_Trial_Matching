@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T23:39:15",
+  "trial_id": "NCT01463475",
+  "contextual": {
+    "_id": "NCT01463475",
+    "title": "University of Wisconsin hMSC Cell Bank: Bone Marrow Donor Protocol",
+    "text": "Summary: The objective of this protocol is to use established standard criteria and methods for the collection of hMSC (human mesenchymal stromal cells) from healthy bone marrow donors. The hMSC collected from the donors will use to develop well-defined and reproducible cell banks. Standard manufacturing procedures and quality control testing methods will be used to characterize and evaluate the final cell product. After the cell banks are created, these cell products will be used in future translational or clinical research.\nInclusion criteria: inclusion criteria: \n\n Age 18 to 35 years \n\n Willingness to provide written informed consent \n\n \nExclusion criteria: : \n\n Presence of risk factors for or clinical evidence of Human immunodeficiency virus (type 1 and 2), Hepatitis B, Hepatitis C, Human T-lymphotrophic virus (type I and II), Human transmissible spongiform encephalopathy (including Creutzfeldt-Jakob disease) treponema pallidum, \n\n Presence of communicable disease risk associated with xenotransplantation. \n\n Test positive for Human immunodeficiency virus (type 1 and 2), Hepatitis B, Hepatitis C, Human T-lymphotrophic virus (type I and II), cytomegalovirus (CVM), West Nile Virus, treponema pallidum. \n\n Use of investigational drug within 30 days or 5 half lives which ever is longer. Use of investigational implanted device. \n\n History of malignancy. \n\n Pregnancy \n\n In the opinion of the hematologist or the investigator, a condition that compromises the ability of the donor to safely provide BM donation.",
+    "metadata": {
+      "brief_title": "University of Wisconsin hMSC Cell Bank: Bone Marrow Donor Protocol",
+      "phase": "",
+      "drugs": "['Bone marrow aspirate']",
+      "drugs_list": [
+        "Bone marrow aspirate"
+      ],
+      "diseases": "['Graft Versus Host Disease (GVHD)', 'Acute Myocardial Infarction (AMI)']",
+      "diseases_list": [
+        "Graft Versus Host Disease (GVHD)",
+        "Acute Myocardial Infarction (AMI)"
+      ],
+      "enrollment": "3.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age 18 to 35 years \n\n Willingness to provide written informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Presence of risk factors for or clinical evidence of Human immunodeficiency virus (type 1 and 2), Hepatitis B, Hepatitis C, Human T-lymphotrophic virus (type I and II), Human transmissible spongiform encephalopathy (including Creutzfeldt-Jakob disease) treponema pallidum, \n\n Presence of communicable disease risk associated with xenotransplantation. \n\n Test positive for Human immunodeficiency virus (type 1 and 2), Hepatitis B, Hepatitis C, Human T-lymphotrophic virus (type I and II), cytomegalovirus (CVM), West Nile Virus, treponema pallidum. \n\n Use of investigational drug within 30 days or 5 half lives which ever is longer. Use of investigational implanted device. \n\n History of malignancy. \n\n Pregnancy \n\n In the opinion of the hematologist or the investigator, a condition that compromises the ability of the donor to safely provide BM donation.",
+      "brief_summary": "The objective of this protocol is to use established standard criteria and methods for the collection of hMSC (human mesenchymal stromal cells) from healthy bone marrow donors. The hMSC collected from the donors will use to develop well-defined and reproducible cell banks. Standard manufacturing procedures and quality control testing methods will be used to characterize and evaluate the final cell product. After the cell banks are created, these cell products will be used in future translational or clinical research."
+    }
+  },
+  "linked_result": {
+    "Graft Versus Host Disease (GVHD)": {
+      "conceptId": "234646005",
+      "preferred_term": "Graft versus host disease",
+      "fully_specified_name": "Graft-versus-host disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "The clinical entity characterized by anorexia, diarrhea, loss of hair, leukopenia, thrombocytopenia, growth retardation, and eventual death brought about by the GRAFT VS HOST REACTION.",
+      "best_match_term": "GVHD - Graft-versus-host disease",
+      "match_reason": "Exact"
+    },
+    "Acute Myocardial Infarction (AMI)": {
+      "conceptId": "57054005",
+      "preferred_term": "Acute myocardial infarction",
+      "fully_specified_name": "Acute myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "Necrosis of the myocardium, as a result of interruption of the blood supply to the area. It is characterized by a severe and rapid onset of symptoms that may include chest pain, often radiating to the left arm and left side of the neck, dyspnea, sweating, and palpitations.",
+      "best_match_term": "AMI - Acute myocardial infarction",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Graft Versus Host Disease (GVHD)": 1,
+    "Acute Myocardial Infarction (AMI)": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Graft Versus Host Disease (GVHD)": {
+      "disease": "Graft Versus Host Disease (GVHD)",
+      "conceptId": "234646005",
+      "preferred_term": "Graft versus host disease",
+      "fully_specified_name": "Graft-versus-host disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "The clinical entity characterized by anorexia, diarrhea, loss of hair, leukopenia, thrombocytopenia, growth retardation, and eventual death brought about by the GRAFT VS HOST REACTION.",
+      "best_match_term": "GVHD - Graft-versus-host disease"
+    },
+    "Acute Myocardial Infarction (AMI)": {
+      "disease": "Acute Myocardial Infarction (AMI)",
+      "conceptId": "57054005",
+      "preferred_term": "Acute myocardial infarction",
+      "fully_specified_name": "Acute myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "Necrosis of the myocardium, as a result of interruption of the blood supply to the area. It is characterized by a severe and rapid onset of symptoms that may include chest pain, often radiating to the left arm and left side of the neck, dyspnea, sweating, and palpitations.",
+      "best_match_term": "AMI - Acute myocardial infarction"
+    }
+  }
+}

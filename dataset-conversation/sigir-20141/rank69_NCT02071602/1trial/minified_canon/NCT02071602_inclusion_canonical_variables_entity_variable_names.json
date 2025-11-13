@@ -1,0 +1,15 @@
+[
+  "patient_has_finding_of_chest_discomfort_now",
+  "patient_has_finding_of_dyspnea_now",
+  "patient_has_finding_of_st_segment_elevation_now",
+  "patient_st_segment_elevation_value_recorded_now_withunit_millivolts",
+  "patient_has_undergone_coronary_angiography_now",
+  "patient_has_undergone_coronary_angioplasty_inthepast24hours",
+  "patient_has_undergone_endovascular_insertion_of_stent_inthepast24hours",
+  "patient_has_undergone_removal_of_thrombus_inthepast24hours",
+  "patient_has_undergone_thrombolytic_therapy_inthepast24hours",
+  "patient_has_undergone_thrombolytic_therapy_inthepast24hours_outcome_is_positive",
+  "patient_has_undergone_coronary_angiography_inthehistory",
+  "patient_has_diagnosis_of_acute_myocardial_infarction_inthehistory",
+  "patient_has_undergone_electrocardiographic_procedure_inthehistory"
+]

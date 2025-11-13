@@ -1,0 +1,11 @@
+{
+  "trial_id": 1473,
+  "nct_id": "NCT00873535b",
+  "status": "survivor",
+  "total_clauses": 3,
+  "unsat_any": 1,
+  "unsat_explicit": 0,
+  "frac_unsat_any": 0.333333,
+  "pct_unsat_any": 33.333,
+  "pct_unsat_explicit": 0.0
+}

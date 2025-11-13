@@ -1,0 +1,17 @@
+[
+  "patient_has_finding_of_dementia_now",
+  "patient_has_clinical_signs_of_depressive_disorder_now",
+  "patient_has_diagnosis_of_neoplastic_disease_now",
+  "patient_has_finding_of_neurological_deficit_now",
+  "patient_has_finding_of_heart_disease_now",
+  "patient_has_diagnosis_of_end_stage_renal_disease_now",
+  "patient_glomerular_filtration_rate_value_recorded_now_withunit_milliliters_per_minute_per_1_73_square_meters",
+  "patient_has_finding_of_respiratory_failure_now",
+  "patient_has_finding_of_severe_chronic_obstructive_pulmonary_disease_now",
+  "patient_has_diagnosis_of_diabetic_complication_now",
+  "patient_has_finding_of_peripheral_arterial_occlusive_disease_now",
+  "patient_can_undergo_magnetic_resonance_imaging_now",
+  "patient_has_diagnosis_of_epilepsy_now",
+  "patient_has_finding_of_acute_disease_now",
+  "patient_has_finding_of_injury_of_head_inthehistory"
+]

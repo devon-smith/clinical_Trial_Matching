@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_bacteremia_now",
+  "patient_has_finding_of_fever_with_infection_now",
+  "patient_has_finding_of_infectious_disease_of_central_nervous_system_now",
+  "patient_has_finding_of_pneumonia_now",
+  "patient_has_finding_of_urinary_tract_infectious_disease_now",
+  "patient_has_finding_of_hypothalamic_syndrome_inthehistory",
+  "patient_has_finding_of_hemodynamic_instability_now"
+]

@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:29:32",
+  "trial_id": "NCT01087723",
+  "contextual": {
+    "_id": "NCT01087723",
+    "title": "European Ambulance Acute Coronary Syndrome (ACS) Angiography Trial",
+    "text": "Summary: To show that the early administration of bivalirudin improves 30 day outcomes when compared to the current standard of care in participants with ST segment elevation acute coronary syndrome (STE-ACS), intended for a primary percutaneous coronary intervention (PCI) management strategy, presenting either via ambulance or to centers where PCI is not performed.\nInclusion criteria: inclusion criteria: \n\n The decision to randomize participants was made by a qualified physician or paramedic who was present at the time. \n\n Participants were included in the study if they presented either via ambulance or to a center where PCI was not performed and met all of the following criteria: \n\n Provided written informed consent before initiation of any study related procedures. Participants randomized in the ambulance may initially have signed an abridged version. \n\n Aged ≥18 years at the time of randomization. \n\n Had a presumed diagnosis of STE-ACS with onset of symptoms of >20 minutes and <12 hours with one or more of the following: \n\n ST segment elevation of ≥1 millimeters (mm) in ≥2 contiguous leads \n\n Presumably new left bundle branch block \n\n An infero-lateral myocardial infarction with ST segment depression of ≥1 mm in ≥2 of leads V1-3 with a positive terminal T wave \n\n All participants would proceed with emergent angiography and primary PCI if indicated <2 hours after first medical contact \n\n \nExclusion criteria: : \n\n Participants were excluded from the study if any of the following ",
+    "metadata": {
+      "brief_title": "European Ambulance Acute Coronary Syndrome (ACS) Angiography Trial",
+      "phase": "Phase 3",
+      "drugs": "['Bivalirudin', 'Heparin']",
+      "drugs_list": [
+        "Bivalirudin",
+        "Heparin"
+      ],
+      "diseases": "['Acute Coronary Syndrome']",
+      "diseases_list": [
+        "Acute Coronary Syndrome"
+      ],
+      "enrollment": "2198.0",
+      "inclusion_criteria": "inclusion criteria: \n\n The decision to randomize participants was made by a qualified physician or paramedic who was present at the time. \n\n Participants were included in the study if they presented either via ambulance or to a center where PCI was not performed and met all of the following criteria: \n\n Provided written informed consent before initiation of any study related procedures. Participants randomized in the ambulance may initially have signed an abridged version. \n\n Aged ≥18 years at the time of randomization. \n\n Had a presumed diagnosis of STE-ACS with onset of symptoms of >20 minutes and <12 hours with one or more of the following: \n\n ST segment elevation of ≥1 millimeters (mm) in ≥2 contiguous leads \n\n Presumably new left bundle branch block \n\n An infero-lateral myocardial infarction with ST segment depression of ≥1 mm in ≥2 of leads V1-3 with a positive terminal T wave \n\n All participants would proceed with emergent angiography and primary PCI if indicated <2 hours after first medical contact \n\n ",
+      "exclusion_criteria": ": \n\n Participants were excluded from the study if any of the following ",
+      "brief_summary": "To show that the early administration of bivalirudin improves 30 day outcomes when compared to the current standard of care in participants with ST segment elevation acute coronary syndrome (STE-ACS), intended for a primary percutaneous coronary intervention (PCI) management strategy, presenting either via ambulance or to centers where PCI is not performed."
+    }
+  },
+  "linked_result": {
+    "Acute Coronary Syndrome": {
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Acute Coronary Syndrome": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Acute Coronary Syndrome": {
+      "disease": "Acute Coronary Syndrome",
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome"
+    }
+  }
+}

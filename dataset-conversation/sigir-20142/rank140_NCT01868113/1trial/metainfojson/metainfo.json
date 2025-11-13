@@ -1,0 +1,27 @@
+{
+  "trial_id": "NCT01868113",
+  "contextual": {
+    "_id": "NCT01868113",
+    "title": "Inhaled Corticosteroids in U-5 Children With Acute Respiratory Infection in Uganda: A Randomised Trial",
+    "text": "Summary: The purpose of this study is to find out whether adjunct treatment with inhaled corticosteroids lead to faster improvement and reduce mortality of children under 5 years of age admitted to hospital with ALRI.\nInclusion criteria: inclusion criteria: \n\n children aged 2 to 59 months with cough and or difficult breathing \n\n \nExclusion criteria: : \n\n Presence of a serious concurrent illness such as meningitis, Children with congenital or acquired heart disease Severe anaemia Measles pneumonia Foreign body inhalation A confirmed diagnosis of pulmonary tuberculosis",
+    "metadata": {
+      "brief_title": "Inhaled Corticosteroids in U-5 Children With Acute Respiratory Infection in Uganda: A Randomised Trial",
+      "phase": "Phase 3",
+      "drugs": "['Inhaled corticosteroid', 'Placebo']",
+      "drugs_list": [
+        "Inhaled corticosteroid",
+        "Placebo"
+      ],
+      "diseases": "['Bacterial Pneumonia', 'Viral Pneumonia', 'Acute Asthma']",
+      "diseases_list": [
+        "Bacterial Pneumonia",
+        "Viral Pneumonia",
+        "Acute Asthma"
+      ],
+      "enrollment": "1010.0",
+      "inclusion_criteria": "inclusion criteria: \n\n children aged 2 to 59 months with cough and or difficult breathing \n\n ",
+      "exclusion_criteria": ": \n\n Presence of a serious concurrent illness such as meningitis, Children with congenital or acquired heart disease Severe anaemia Measles pneumonia Foreign body inhalation A confirmed diagnosis of pulmonary tuberculosis",
+      "brief_summary": "The purpose of this study is to find out whether adjunct treatment with inhaled corticosteroids lead to faster improvement and reduce mortality of children under 5 years of age admitted to hospital with ALRI."
+    }
+  }
+}

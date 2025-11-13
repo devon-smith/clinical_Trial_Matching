@@ -1,0 +1,71 @@
+{
+  "generated": "2025-10-20T23:09:20",
+  "trial_id": "NCT01725048",
+  "contextual": {
+    "_id": "NCT01725048",
+    "title": "Pilot Study to Evaluate Individualized Choice of Antidepressants in Patients With Cancer",
+    "text": "Summary: This is a pilot study to test the hypothesis that the antidepressants mirtazapine and citalopram are effective treatment for major depressive disorder (MDD) in cancer patients.\nInclusion criteria: inclusion criteria: \n\n Diagnosed with a malignancy \n\n Informed consent obtained and signed \n\n Greater than or equal to 18 years of age \n\n Life expectancy determined to be greater than or equal to 6 months \n\n Diagnosed with Major Depressive Disorder based on clinical examination and the DSM-IV-TR criteria \n\n PHQ-9 depression assessment completed by subject, with a score of 10 or greater \n\n Able to take whole or crushed tablets by mouth or by feeding tube \n\n \nExclusion criteria: : \n\n Unable to complete self-report instruments due to illiteracy, neurologic illness, visual problems, inability to speak or read English, or other causes \n\n Treatment with antidepressants or antipsychotics within the last 3 months \n\n Psychotic or manic behavior \n\n Active suicidal ideation or plan \n\n Current illicit substance abuse \n\n Severe renal impairment as defined by creatinine clearance of <15 milliliters/minute/1.73 meters squared (mL/min/m2) \n\n Severe hepatic impairment as defined by Aspartate Aminotransferase (AST) or alanine aminotransferase (ALT) >5x the upper limit of normal, or a total bilirubin > 3.0 milliliters/deciliter (mL/dL) \n\n History of congenital long QT syndrome \n\n Clinically significant congestive heart failure or bradyarrhythmias \n\n Treatment with a concomitant medication that is known to have a strong association with corrected QT interval (QTc) prolongation AND a QTc >460 for men or >470 for women. Applicable to the citalopram arm only",
+    "metadata": {
+      "brief_title": "Pilot Study to Evaluate Individualized Choice of Antidepressants in Patients With Cancer",
+      "phase": "Phase 1",
+      "drugs": "['Mirtazapine', 'Citalopram']",
+      "drugs_list": [
+        "Mirtazapine",
+        "Citalopram"
+      ],
+      "diseases": "['Major Depressive Disorder', 'Neoplasms']",
+      "diseases_list": [
+        "Major Depressive Disorder",
+        "Neoplasms"
+      ],
+      "enrollment": "21.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Diagnosed with a malignancy \n\n Informed consent obtained and signed \n\n Greater than or equal to 18 years of age \n\n Life expectancy determined to be greater than or equal to 6 months \n\n Diagnosed with Major Depressive Disorder based on clinical examination and the DSM-IV-TR criteria \n\n PHQ-9 depression assessment completed by subject, with a score of 10 or greater \n\n Able to take whole or crushed tablets by mouth or by feeding tube \n\n ",
+      "exclusion_criteria": ": \n\n Unable to complete self-report instruments due to illiteracy, neurologic illness, visual problems, inability to speak or read English, or other causes \n\n Treatment with antidepressants or antipsychotics within the last 3 months \n\n Psychotic or manic behavior \n\n Active suicidal ideation or plan \n\n Current illicit substance abuse \n\n Severe renal impairment as defined by creatinine clearance of <15 milliliters/minute/1.73 meters squared (mL/min/m2) \n\n Severe hepatic impairment as defined by Aspartate Aminotransferase (AST) or alanine aminotransferase (ALT) >5x the upper limit of normal, or a total bilirubin > 3.0 milliliters/deciliter (mL/dL) \n\n History of congenital long QT syndrome \n\n Clinically significant congestive heart failure or bradyarrhythmias \n\n Treatment with a concomitant medication that is known to have a strong association with corrected QT interval (QTc) prolongation AND a QTc >460 for men or >470 for women. Applicable to the citalopram arm only",
+      "brief_summary": "This is a pilot study to test the hypothesis that the antidepressants mirtazapine and citalopram are effective treatment for major depressive disorder (MDD) in cancer patients."
+    }
+  },
+  "linked_result": {
+    "Major Depressive Disorder": {
+      "conceptId": "370143000",
+      "preferred_term": "Major depressive disorder",
+      "fully_specified_name": "Major depressive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "Disorder in which five (or more) of the following symptoms have been present during the same 2-week period and represent a change from previous functioning; at least one of the symptoms is either (1) depressed mood or (2) loss of interest or pleasure. Symptoms include: depressed mood most of the day, nearly every day; markedly diminished interest or pleasure in activities most of the day, nearly every day; significant weight loss when not dieting or weight gain; Insomnia or hypersomnia nearly every day; psychomotor agitation or retardation nearly every day; fatigue or loss of energy nearly every day; feelings of worthlessness or excessive or inappropriate guilt; diminished ability to think or concentrate, or indecisiveness, nearly every day; or recurrent thoughts of death, recurrent suicidal ideation without a specific plan, or a suicide attempt. (DSM-5)",
+      "best_match_term": "Major depressive disorder",
+      "match_reason": "Exact"
+    },
+    "Neoplasms": {
+      "conceptId": "55342001",
+      "preferred_term": "Neoplastic disease",
+      "fully_specified_name": "Neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A broad classification for disorders in which the development of neoplasms typically occur in association with a characteristic set of signs or symptoms. These disorders may be inherited or acquired.",
+      "best_match_term": "Neoplasm",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Major Depressive Disorder": 1,
+    "Neoplasms": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Major Depressive Disorder": {
+      "disease": "Major Depressive Disorder",
+      "conceptId": "370143000",
+      "preferred_term": "Major depressive disorder",
+      "fully_specified_name": "Major depressive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "Disorder in which five (or more) of the following symptoms have been present during the same 2-week period and represent a change from previous functioning; at least one of the symptoms is either (1) depressed mood or (2) loss of interest or pleasure. Symptoms include: depressed mood most of the day, nearly every day; markedly diminished interest or pleasure in activities most of the day, nearly every day; significant weight loss when not dieting or weight gain; Insomnia or hypersomnia nearly every day; psychomotor agitation or retardation nearly every day; fatigue or loss of energy nearly every day; feelings of worthlessness or excessive or inappropriate guilt; diminished ability to think or concentrate, or indecisiveness, nearly every day; or recurrent thoughts of death, recurrent suicidal ideation without a specific plan, or a suicide attempt. (DSM-5)",
+      "best_match_term": "Major depressive disorder"
+    },
+    "Neoplasms": {
+      "disease": "Neoplasms",
+      "conceptId": "55342001",
+      "preferred_term": "Neoplastic disease",
+      "fully_specified_name": "Neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A broad classification for disorders in which the development of neoplasms typically occur in association with a characteristic set of signs or symptoms. These disorders may be inherited or acquired.",
+      "best_match_term": "Neoplasm"
+    }
+  }
+}

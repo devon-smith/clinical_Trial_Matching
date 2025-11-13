@@ -1,0 +1,18 @@
+[
+  "patient_has_finding_of_tobacco_smoking_behavior_finding_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_is_pregnant_inthefuture12months",
+  "patients_breastfeeding_is_positive_now",
+  "patient_has_diagnosis_of_disorder_of_cardiovascular_system_inthehistory",
+  "patient_has_diagnosis_of_type_2_diabetes_mellitus_now",
+  "patient_has_diagnosis_of_chronic_disease_inthehistory",
+  "patient_has_finding_of_substance_misuse_behavior_inthepast12months",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_alcohol_intake_finding_value_recorded_now_withunit_units_per_week",
+  "patient_has_finding_of_allergy_to_food_now",
+  "patient_has_finding_of_intolerance_to_food_now",
+  "patient_is_taking_fish_derived_omega_3_fatty_acid_containing_product_now",
+  "patient_is_exposed_to_nutritional_supplement_now"
+]

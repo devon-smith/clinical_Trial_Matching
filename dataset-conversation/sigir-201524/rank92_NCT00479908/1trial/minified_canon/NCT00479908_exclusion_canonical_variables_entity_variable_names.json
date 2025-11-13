@@ -1,0 +1,17 @@
+[
+  "patient_is_taking_nicorandil_containing_product_now",
+  "patient_has_finding_of_angina_pectoris_inthepast3months",
+  "patient_has_finding_of_cerebrovascular_accident_inthepast3months",
+  "patient_has_finding_of_myocardial_infarction_inthepast3months",
+  "patient_has_finding_of_transient_cerebral_ischemia_inthepast3months",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_orthostatic_hypotension_now",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_finding_of_diabetic_on_diet_only_now",
+  "patient_has_finding_of_hypercholesterolemia_now",
+  "patient_has_diagnosis_of_stable_angina_now",
+  "patient_has_finding_of_tobacco_smoking_behavior_finding_now",
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_now"
+]

@@ -1,0 +1,10 @@
+[
+  "patient_has_finding_of_finding_of_lesion_now",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+  "patient_has_finding_of_stable_angina_now",
+  "patient_has_diagnosis_of_acute_non_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_diagnosis_of_preinfarction_syndrome_now",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_is_taking_hypotensive_agent_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg"
+]

@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-22T21:26:04",
+  "trial_id": "NCT01107262",
+  "contextual": {
+    "_id": "NCT01107262",
+    "title": "Avian Influenza Studies In Lebanon",
+    "text": "Summary: The highly pathogenic avian influenza (HPAI) H5N1 virus arrived in the Middle East in 2005 and has since established itself in local domestic birds and is now considered endemic in several Middle Eastern countries.Few studies indicate the presence of low pathogenicity avian influenza (LPAI) viruses of the H9 type among Lebanese poultry and wild birds. These studies also provide some evidence suggesting that humans exposed to these sick birds are showing elevated antibody titers against these LPAI H9 viruses.~This study will focus on the following objectives:~To determine the seroprevalence of AI in poultry-exposed and non-exposed human populations.~To identify risk factors associated with AI infections in occupationally-exposed poultry workers.~To conduct nation-wide cross-sectional surveillance for AI viruses among domestic birds in low biosecurity farms and backyard flocks.\nInclusion criteria: inclusion criteria: \n\n Be at least 18 years old. \n\n Be willing to participate by signing a consent form, completing the study questionnaire, and providing a blood sample. \n\n \nExclusion criteria: : \n\n Less than 18 years old. \n\n Any known immunosuppressive condition or immune deficiency disease (including HIV infection), or ongoing receipt of any immunosuppressive therapy. (Note that we have chosen to exclude such populations because of their increased risk of acquiring infections, they are relatively few, and are not representative of a national sample). \n\n Any individual with unknown poultry exposure status, or who was exposed to poultry more than 5 years ago.",
+    "metadata": {
+      "brief_title": "Avian Influenza Studies In Lebanon",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Avian Influenza', 'Virus Diseases']",
+      "diseases_list": [
+        "Avian Influenza",
+        "Virus Diseases"
+      ],
+      "enrollment": "250.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Be at least 18 years old. \n\n Be willing to participate by signing a consent form, completing the study questionnaire, and providing a blood sample. \n\n ",
+      "exclusion_criteria": ": \n\n Less than 18 years old. \n\n Any known immunosuppressive condition or immune deficiency disease (including HIV infection), or ongoing receipt of any immunosuppressive therapy. (Note that we have chosen to exclude such populations because of their increased risk of acquiring infections, they are relatively few, and are not representative of a national sample). \n\n Any individual with unknown poultry exposure status, or who was exposed to poultry more than 5 years ago.",
+      "brief_summary": "The highly pathogenic avian influenza (HPAI) H5N1 virus arrived in the Middle East in 2005 and has since established itself in local domestic birds and is now considered endemic in several Middle Eastern countries.Few studies indicate the presence of low pathogenicity avian influenza (LPAI) viruses of the H9 type among Lebanese poultry and wild birds. These studies also provide some evidence suggesting that humans exposed to these sick birds are showing elevated antibody titers against these LPAI H9 viruses.~This study will focus on the following objectives:~To determine the seroprevalence of AI in poultry-exposed and non-exposed human populations.~To identify risk factors associated with AI infections in occupationally-exposed poultry workers.~To conduct nation-wide cross-sectional surveillance for AI viruses among domestic birds in low biosecurity farms and backyard flocks."
+    }
+  },
+  "linked_result": {
+    "Avian Influenza": null,
+    "Virus Diseases": {
+      "conceptId": "34014006",
+      "preferred_term": "Viral disease",
+      "fully_specified_name": "Viral disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A general term for diseases caused by viruses.",
+      "best_match_term": "Viral disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Virus Diseases": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Virus Diseases": {
+      "disease": "Virus Diseases",
+      "conceptId": "34014006",
+      "preferred_term": "Viral disease",
+      "fully_specified_name": "Viral disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A general term for diseases caused by viruses.",
+      "best_match_term": "Viral disease"
+    }
+  }
+}

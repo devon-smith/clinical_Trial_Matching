@@ -1,0 +1,9 @@
+[
+  "patient_is_pregnant_now",
+  "patients_cytomegalovirus_igg_is_abnormal_now",
+  "patients_cytomegalovirus_igg_is_positive_now",
+  "patients_cytomegalovirus_igm_antibody_is_positive_now",
+  "patient_has_diagnosis_of_cytomegalovirus_infection_now",
+  "patient_has_undergone_ultrasonography_inthehistory",
+  "patient_fetal_gestational_age_value_recorded_now_withunit_weeks"
+]

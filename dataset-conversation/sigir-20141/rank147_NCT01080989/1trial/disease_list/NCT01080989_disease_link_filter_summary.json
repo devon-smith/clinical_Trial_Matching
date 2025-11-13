@@ -1,0 +1,171 @@
+{
+  "generated": "2025-10-22T21:10:51",
+  "trial_id": "NCT01080989",
+  "contextual": {
+    "_id": "NCT01080989",
+    "title": "The Sero-Prevalence and Genetic Study for the Infectious Diseases and Metabolic Syndrome in Solomon Islands",
+    "text": "Summary: The study project can be divided into two parts: (1) health screening for the community and (2) clinical diagnosis and treatment for patients at National Referral Hospital (NRH) in Solomon islands. The health screening includes a questionnaire, stool parasitic screening and blood laboratory tests. A total of 800 subjects will participate in this study. The collected samples are venous blood (20 ml/per subject) and stool in order to conduct the related tests mentioned above.~As for the collection of target patients, KMUH will cooperate with NRH to collect two kinds of blood samples: the blood samples of confirmed malarial cases and those of cases suspicious of Flaviviral, Alpha-viral, Rickettsial, and Leptospiral infections. The expected received cases are 600 each year. The venous blood samples (20 ml/per subject) will be used to conduct related tests mentioned above. At the same time, the subjects will also have to fill out a related questionnaire which includes height, weight, waist line, heath behavior and habit, and past history, etc.\nInclusion criteria: inclusion criteria: \n\n For community participants: Health volunteers who are willing to join this study (including the stool and blood testing) after explanation and sign the informed consents. \n\n For hospital cases: The patients ,who were suspicious of malaria, leptospirosis, Alpha-viral(Chikungunya virus, Ross river virus), and flavivirus infections (dengue fever, Japanese encephalitis..ect) by the attending physicians, will be informed about this study by drawing blood samples if they agree to participate. \n\n \nExclusion criteria: : \n\n The participants whose stool or blood samples were in-adequate or missing will be excluded from this study. \n\n The participants whose documented personal information is fake or cannot be identifiable will also be excluded from this study.",
+    "metadata": {
+      "brief_title": "The Sero-Prevalence and Genetic Study for the Infectious Diseases and Metabolic Syndrome in Solomon Islands",
+      "phase": "",
+      "drugs": "['diagnosis, treatment and education']",
+      "drugs_list": [
+        "diagnosis",
+        "treatment and education"
+      ],
+      "diseases": "['Flavivirus Infection', 'Alphavirus Infections', 'Malaria', 'Parasitic Disease', 'Leptospirosis', 'Hypertension', 'Metabolic Syndromes']",
+      "diseases_list": [
+        "Flavivirus Infection",
+        "Alphavirus Infections",
+        "Malaria",
+        "Parasitic Disease",
+        "Leptospirosis",
+        "Hypertension",
+        "Metabolic Syndromes"
+      ],
+      "enrollment": "1477.0",
+      "inclusion_criteria": "inclusion criteria: \n\n For community participants: Health volunteers who are willing to join this study (including the stool and blood testing) after explanation and sign the informed consents. \n\n For hospital cases: The patients ,who were suspicious of malaria, leptospirosis, Alpha-viral(Chikungunya virus, Ross river virus), and flavivirus infections (dengue fever, Japanese encephalitis..ect) by the attending physicians, will be informed about this study by drawing blood samples if they agree to participate. \n\n ",
+      "exclusion_criteria": ": \n\n The participants whose stool or blood samples were in-adequate or missing will be excluded from this study. \n\n The participants whose documented personal information is fake or cannot be identifiable will also be excluded from this study.",
+      "brief_summary": "The study project can be divided into two parts: (1) health screening for the community and (2) clinical diagnosis and treatment for patients at National Referral Hospital (NRH) in Solomon islands. The health screening includes a questionnaire, stool parasitic screening and blood laboratory tests. A total of 800 subjects will participate in this study. The collected samples are venous blood (20 ml/per subject) and stool in order to conduct the related tests mentioned above.~As for the collection of target patients, KMUH will cooperate with NRH to collect two kinds of blood samples: the blood samples of confirmed malarial cases and those of cases suspicious of Flaviviral, Alpha-viral, Rickettsial, and Leptospiral infections. The expected received cases are 600 each year. The venous blood samples (20 ml/per subject) will be used to conduct related tests mentioned above. At the same time, the subjects will also have to fill out a related questionnaire which includes height, weight, waist line, heath behavior and habit, and past history, etc."
+    }
+  },
+  "linked_result": {
+    "Flavivirus Infection": {
+      "conceptId": "111865007",
+      "preferred_term": "Disease due to Flavivirus",
+      "fully_specified_name": "Disease caused by Flavivirus (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections with viruses of the genus FLAVIVIRUS, family FLAVIVIRIDAE.",
+      "best_match_term": "Disease due to Flavivirus (disorder)",
+      "match_reason": "Exact"
+    },
+    "Alphavirus Infections": {
+      "conceptId": "4003003",
+      "preferred_term": "Disease due to Alphavirus",
+      "fully_specified_name": "Disease caused by Alphavirus (disorder)",
+      "type": "Clinical finding",
+      "definition": "Virus diseases caused by members of the ALPHAVIRUS genus of the family TOGAVIRIDAE.",
+      "best_match_term": "Alphavirus disease",
+      "match_reason": "Exact"
+    },
+    "Malaria": {
+      "conceptId": "61462000",
+      "preferred_term": "Malaria",
+      "fully_specified_name": "Malaria (disorder)",
+      "type": "Clinical finding",
+      "definition": "A protozoan disease caused in humans by four species of the PLASMODIUM genus: PLASMODIUM FALCIPARUM; PLASMODIUM VIVAX; PLASMODIUM OVALE; and PLASMODIUM MALARIAE; and transmitted by the bite of an infected female mosquito of the genus ANOPHELES. Malaria is endemic in parts of Asia, Africa, Central and South America, Oceania, and certain Caribbean islands. It is characterized by extreme exhaustion associated with paroxysms of high FEVER; SWEATING; shaking CHILLS; and ANEMIA. Malaria in ANIMALS is caused by other species of plasmodia.",
+      "best_match_term": "Malaria",
+      "match_reason": "Exact"
+    },
+    "Parasitic Disease": {
+      "conceptId": "17322007",
+      "preferred_term": "Disease caused by parasite",
+      "fully_specified_name": "Disease caused by parasite (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections or infestations with PARASITES. They are often contracted through contact with an intermediate vector, but may occur as the result of direct exposure.",
+      "best_match_term": "Parasitic disease",
+      "match_reason": "Exact"
+    },
+    "Leptospirosis": {
+      "conceptId": "77377001",
+      "preferred_term": "Leptospirosis",
+      "fully_specified_name": "Leptospirosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections with bacteria of the genus LEPTOSPIRA.",
+      "best_match_term": "Leptospirosis",
+      "match_reason": "Exact"
+    },
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Metabolic Syndromes": {
+      "conceptId": "237602007",
+      "preferred_term": "Metabolic syndrome X",
+      "fully_specified_name": "Metabolic syndrome X (disorder)",
+      "type": "Clinical finding",
+      "definition": "A cluster of symptoms that are risk factors for CARDIOVASCULAR DISEASES and TYPE 2 DIABETES MELLITUS. The major components of metabolic syndrome include ABDOMINAL OBESITY; atherogenic DYSLIPIDEMIA; HYPERTENSION; HYPERGLYCEMIA; INSULIN RESISTANCE; a proinflammatory state; and a prothrombotic (THROMBOSIS) state.",
+      "best_match_term": "Metabolic syndrome",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Flavivirus Infection": 1,
+    "Alphavirus Infections": 1,
+    "Malaria": 1,
+    "Parasitic Disease": 1,
+    "Leptospirosis": 1,
+    "Hypertension": 1,
+    "Metabolic Syndromes": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Flavivirus Infection": {
+      "disease": "Flavivirus Infection",
+      "conceptId": "111865007",
+      "preferred_term": "Disease due to Flavivirus",
+      "fully_specified_name": "Disease caused by Flavivirus (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections with viruses of the genus FLAVIVIRUS, family FLAVIVIRIDAE.",
+      "best_match_term": "Disease due to Flavivirus (disorder)"
+    },
+    "Alphavirus Infections": {
+      "disease": "Alphavirus Infections",
+      "conceptId": "4003003",
+      "preferred_term": "Disease due to Alphavirus",
+      "fully_specified_name": "Disease caused by Alphavirus (disorder)",
+      "type": "Clinical finding",
+      "definition": "Virus diseases caused by members of the ALPHAVIRUS genus of the family TOGAVIRIDAE.",
+      "best_match_term": "Alphavirus disease"
+    },
+    "Malaria": {
+      "disease": "Malaria",
+      "conceptId": "61462000",
+      "preferred_term": "Malaria",
+      "fully_specified_name": "Malaria (disorder)",
+      "type": "Clinical finding",
+      "definition": "A protozoan disease caused in humans by four species of the PLASMODIUM genus: PLASMODIUM FALCIPARUM; PLASMODIUM VIVAX; PLASMODIUM OVALE; and PLASMODIUM MALARIAE; and transmitted by the bite of an infected female mosquito of the genus ANOPHELES. Malaria is endemic in parts of Asia, Africa, Central and South America, Oceania, and certain Caribbean islands. It is characterized by extreme exhaustion associated with paroxysms of high FEVER; SWEATING; shaking CHILLS; and ANEMIA. Malaria in ANIMALS is caused by other species of plasmodia.",
+      "best_match_term": "Malaria"
+    },
+    "Parasitic Disease": {
+      "disease": "Parasitic Disease",
+      "conceptId": "17322007",
+      "preferred_term": "Disease caused by parasite",
+      "fully_specified_name": "Disease caused by parasite (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections or infestations with PARASITES. They are often contracted through contact with an intermediate vector, but may occur as the result of direct exposure.",
+      "best_match_term": "Parasitic disease"
+    },
+    "Leptospirosis": {
+      "disease": "Leptospirosis",
+      "conceptId": "77377001",
+      "preferred_term": "Leptospirosis",
+      "fully_specified_name": "Leptospirosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections with bacteria of the genus LEPTOSPIRA.",
+      "best_match_term": "Leptospirosis"
+    },
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Metabolic Syndromes": {
+      "disease": "Metabolic Syndromes",
+      "conceptId": "237602007",
+      "preferred_term": "Metabolic syndrome X",
+      "fully_specified_name": "Metabolic syndrome X (disorder)",
+      "type": "Clinical finding",
+      "definition": "A cluster of symptoms that are risk factors for CARDIOVASCULAR DISEASES and TYPE 2 DIABETES MELLITUS. The major components of metabolic syndrome include ABDOMINAL OBESITY; atherogenic DYSLIPIDEMIA; HYPERTENSION; HYPERGLYCEMIA; INSULIN RESISTANCE; a proinflammatory state; and a prothrombotic (THROMBOSIS) state.",
+      "best_match_term": "Metabolic syndrome"
+    }
+  }
+}

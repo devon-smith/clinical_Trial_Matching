@@ -1,0 +1,29 @@
+{
+  "trial_id": "NCT00015626",
+  "contextual": {
+    "_id": "NCT00015626",
+    "title": "A Clinical Trial to Prevent the Complications of Insulin Resistance (Including Type-2 Diabetes)",
+    "text": "Summary: The goal of this study is to aggressively treat insulin resistance and its clinical manifestations when they first appear in childhood, and to prevent the subsequent progression towards impaired glucose tolerance and type-2 diabetes. In the process of this clinical trial, we will learn more about the early manifestations of insulin resistance, its treatment, and its relationship to obesity and type-2 diabetes through parallel in-vivo and in-vitro studies.\nInclusion criteria: inclusion criteria: \n\n Obese patients (wt > 95th percentile for age, for adults increased BMI > 27) greater than 5 years of age \n\n And/or presence of complications of insulin resistance such as acanthosis nigricans, dyslipidemia, elevated blood pressure, hyperandrogenism \n\n Siblings and parents of patients with insulin resistance. Siblings and parents will be included only in the case of documented insulin resistance in the index subject. Insulin resistance will be documented by OGTT and/or IVGTT. \n\n Family history of type II diabetes. \n\n \nExclusion criteria: : \n\n Critically ill patients, patients will congestive heart failure, renal or liver insufficiency \n\n Inability to give consent. \n\n History of poor compliance with physician's recommendations",
+    "metadata": {
+      "brief_title": "A Clinical Trial to Prevent the Complications of Insulin Resistance (Including Type-2 Diabetes)",
+      "phase": "Phase 2",
+      "drugs": "['Metformin', 'skin biopsy', 'diet and exercise', 'pioglitazone', 'rosiglitazone']",
+      "drugs_list": [
+        "Metformin",
+        "skin biopsy",
+        "diet and exercise",
+        "pioglitazone",
+        "rosiglitazone"
+      ],
+      "diseases": "['Insulin Resistance', 'Diabetes Mellitus']",
+      "diseases_list": [
+        "Insulin Resistance",
+        "Diabetes Mellitus"
+      ],
+      "enrollment": "300.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Obese patients (wt > 95th percentile for age, for adults increased BMI > 27) greater than 5 years of age \n\n And/or presence of complications of insulin resistance such as acanthosis nigricans, dyslipidemia, elevated blood pressure, hyperandrogenism \n\n Siblings and parents of patients with insulin resistance. Siblings and parents will be included only in the case of documented insulin resistance in the index subject. Insulin resistance will be documented by OGTT and/or IVGTT. \n\n Family history of type II diabetes. \n\n ",
+      "exclusion_criteria": ": \n\n Critically ill patients, patients will congestive heart failure, renal or liver insufficiency \n\n Inability to give consent. \n\n History of poor compliance with physician's recommendations",
+      "brief_summary": "The goal of this study is to aggressively treat insulin resistance and its clinical manifestations when they first appear in childhood, and to prevent the subsequent progression towards impaired glucose tolerance and type-2 diabetes. In the process of this clinical trial, we will learn more about the early manifestations of insulin resistance, its treatment, and its relationship to obesity and type-2 diabetes through parallel in-vivo and in-vitro studies."
+    }
+  }
+}

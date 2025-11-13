@@ -1,0 +1,11 @@
+[
+  "patient_oropharyngeal_dysphagia_value_recorded_inthehistory_withunit_months",
+  "patient_has_finding_of_oropharyngeal_dysphagia_now",
+  "patient_has_undergone_videofluoroscopy_swallow_inthehistory",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_dysphagia_inthehistory",
+  "patient_abbreviated_mental_test_score_value_recorded_now_withunit_score",
+  "patient_has_finding_of_normal_cognition_now",
+  "patients_ability_to_perform_general_manipulative_activities_is_normal_now",
+  "patient_has_finding_of_follow_up_status_now"
+]

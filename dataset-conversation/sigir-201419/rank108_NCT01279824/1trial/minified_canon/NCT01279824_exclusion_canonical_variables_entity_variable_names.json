@@ -1,0 +1,16 @@
+[
+  "patient_has_diagnosis_of_amyotrophic_lateral_sclerosis_inthepast6months",
+  "patient_has_diagnosis_of_disorder_of_nervous_system_inthepast6months",
+  "patient_has_diagnosis_of_parkinson_s_disease_inthepast6months",
+  "patient_has_undergone_destructive_procedure_on_brain_inthehistory",
+  "patient_has_finding_of_encephalitis_inthehistory",
+  "patient_has_finding_of_major_head_injury_inthehistory",
+  "patient_has_undergone_neurostimulation_procedure_inthehistory",
+  "patient_has_diagnosis_of_disease_of_liver_inthehistory",
+  "patient_has_diagnosis_of_heart_disease_inthehistory",
+  "patient_has_diagnosis_of_kidney_disease_inthehistory",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthepast5years",
+  "patient_has_finding_of_malignant_neoplastic_disease_inthepast5years",
+  "patient_has_finding_of_dementia_now",
+  "patient_has_finding_of_impaired_cognition_now"
+]

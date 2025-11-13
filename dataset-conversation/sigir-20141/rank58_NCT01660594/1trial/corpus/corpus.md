@@ -1,0 +1,30 @@
+# CT Calcium Scoring in Suspected Stable Angina
+**NCT**: `NCT01660594`
+## Brief Summary
+Patients with stable chest pain presenting to general practitioners in UK are routinely referred to the chest pain clinics in the hospitals. They are assessed by clinical history including risk factors, cardiovascular exam, resting ECG, chest x-ray, and exercise ECG. CT calcium scoring (CTCS) is a technique that is very sensitive in identifying and quantifying calcified atherosclerotic plaques. Recent guidance from the National Institute of Clinical Excellence (NICE, citation 1) proposes the use of CTCS in patients with stable chest pain who have low likelihood of coronary artery disease (CAD). They recommend that patients with low likelihood (10-30%) have a CTCS and if the score is 0, they can be considered to have non-cardiac chest pain. However, there is controversy regarding relationship of absent calcification with significant CAD and its prognostic value.~At our institution, we have been performing CTCS in this patient cohort since 2003. We plan to retrospectively review the usefulness in CTCS in patients with different likelihood for significant CAD, particularly in patients with absent calcium and compare with the traditional assessment. We also plan to follow-up these patients for any myocardial infarction and death from any cause.
+## Inclusion Criteria
+inclusion criteria: 
+
+ non-acute chest pain 
+
+ those who underwent CT calcium scoring 
+
+ availability of all relevant risk factor information
+## Exclusion Criteria
+: 
+
+ previous coronary disease i.e., myocardial infarction or revascularization
+## Full Text
+Summary: Patients with stable chest pain presenting to general practitioners in UK are routinely referred to the chest pain clinics in the hospitals. They are assessed by clinical history including risk factors, cardiovascular exam, resting ECG, chest x-ray, and exercise ECG. CT calcium scoring (CTCS) is a technique that is very sensitive in identifying and quantifying calcified atherosclerotic plaques. Recent guidance from the National Institute of Clinical Excellence (NICE, citation 1) proposes the use of CTCS in patients with stable chest pain who have low likelihood of coronary artery disease (CAD). They recommend that patients with low likelihood (10-30%) have a CTCS and if the score is 0, they can be considered to have non-cardiac chest pain. However, there is controversy regarding relationship of absent calcification with significant CAD and its prognostic value.~At our institution, we have been performing CTCS in this patient cohort since 2003. We plan to retrospectively review the usefulness in CTCS in patients with different likelihood for significant CAD, particularly in patients with absent calcium and compare with the traditional assessment. We also plan to follow-up these patients for any myocardial infarction and death from any cause.
+Inclusion criteria: inclusion criteria: 
+
+ non-acute chest pain 
+
+ those who underwent CT calcium scoring 
+
+ availability of all relevant risk factor information 
+
+ 
+Exclusion criteria: : 
+
+ previous coronary disease i.e., myocardial infarction or revascularization

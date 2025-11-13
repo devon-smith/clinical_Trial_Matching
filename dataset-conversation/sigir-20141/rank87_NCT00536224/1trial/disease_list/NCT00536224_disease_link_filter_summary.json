@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:28:38",
+  "trial_id": "NCT00536224",
+  "contextual": {
+    "_id": "NCT00536224",
+    "title": "Chest Pain Observation Unit Risk Reduction Trial",
+    "text": "Summary: The purpose of this study is to determine whether a brief counseling intervention initiated in the chest pain observation unit has a significant impact upon the health attitudes (readiness to change) and cardiovascular risk-related behaviors (diet, exercise, and smoking) of emergency department patients.\nInclusion criteria: inclusion criteria: \n\n At least one modifiable cardiovascular risk factor (smoking, hyperlipidemia, hypertension, diabetes mellitus, obesity) \n\n \nExclusion criteria: : \n\n Patients who rule-in for myocardial ischemia at initial testing \n\n Terminally ill (expected to survive less than 3 months) \n\n Unavailable for 6-month follow-up \n\n Cannot be contacted by telephone \n\n Institutionalized persons (prisoners, nursing home residents) \n\n Unable to provide informed consent (impaired mental status, unable to speak English)",
+    "metadata": {
+      "brief_title": "Chest Pain Observation Unit Risk Reduction Trial",
+      "phase": "",
+      "drugs": "['Full counseling', 'Minimal counseling']",
+      "drugs_list": [
+        "Full counseling",
+        "Minimal counseling"
+      ],
+      "diseases": "['Chest Pain']",
+      "diseases_list": [
+        "Chest Pain"
+      ],
+      "enrollment": "140.0",
+      "inclusion_criteria": "inclusion criteria: \n\n At least one modifiable cardiovascular risk factor (smoking, hyperlipidemia, hypertension, diabetes mellitus, obesity) \n\n ",
+      "exclusion_criteria": ": \n\n Patients who rule-in for myocardial ischemia at initial testing \n\n Terminally ill (expected to survive less than 3 months) \n\n Unavailable for 6-month follow-up \n\n Cannot be contacted by telephone \n\n Institutionalized persons (prisoners, nursing home residents) \n\n Unable to provide informed consent (impaired mental status, unable to speak English)",
+      "brief_summary": "The purpose of this study is to determine whether a brief counseling intervention initiated in the chest pain observation unit has a significant impact upon the health attitudes (readiness to change) and cardiovascular risk-related behaviors (diet, exercise, and smoking) of emergency department patients."
+    }
+  },
+  "linked_result": {
+    "Chest Pain": {
+      "conceptId": "29857009",
+      "preferred_term": "Chest pain",
+      "fully_specified_name": "Chest pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Pressure, burning, or numbness in the chest.",
+      "best_match_term": "Chest pain",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Chest Pain": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chest Pain": {
+      "disease": "Chest Pain",
+      "conceptId": "29857009",
+      "preferred_term": "Chest pain",
+      "fully_specified_name": "Chest pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Pressure, burning, or numbness in the chest.",
+      "best_match_term": "Chest pain"
+    }
+  }
+}

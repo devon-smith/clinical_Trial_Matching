@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_height_measure_value_recorded_now_withunit_cm",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_body_weight_value_recorded_now_withunit_kg",
+  "patient_ability_to_perform_cognitive_activity_value_recorded_now_withunit_score",
+  "patient_has_finding_of_general_health_good_now"
+]

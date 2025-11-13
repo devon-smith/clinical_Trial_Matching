@@ -1,0 +1,108 @@
+{
+  "generated": "2025-10-20T23:39:48",
+  "trial_id": "NCT01944397",
+  "contextual": {
+    "_id": "NCT01944397",
+    "title": "A CALIBER Study: Risk Factors for Stroke, Heart Failure, and Myocardial Infarction in Atrial Fibrillation",
+    "text": "Summary: We aim to investigate the prognosis of patients diagnosed with AF, particularly in relation to the development of subsequent stroke, heart failure, and myocardial infarction. We will explore the relationship between these outcomes and a range of risk factors.\nInclusion criteria: inclusion criteria: \n\n Patients with a coded diagnosis for atrial fibrillation in their primary or secondary care record. \n\n Patients in GPRD practices which are deemed up to standard by GPRD criteria \n\n Patients whose records are deemed acceptable by GPRD criteria and contain at least one year of data \n\n Patients whose age and sex, as recorded in GPRD is the same as that recorded in HES. \n\n \nExclusion criteria: : \n\n A diagnosis of heart failure, stroke, or myocardial infarction occurring before diagnosis of atrial fibrillation",
+    "metadata": {
+      "brief_title": "A CALIBER Study: Risk Factors for Stroke, Heart Failure, and Myocardial Infarction in Atrial Fibrillation",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Atrial Fibrillation', 'Heart Failure', 'Stroke', 'Myocardial Infarction']",
+      "diseases_list": [
+        "Atrial Fibrillation",
+        "Heart Failure",
+        "Stroke",
+        "Myocardial Infarction"
+      ],
+      "enrollment": "125000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients with a coded diagnosis for atrial fibrillation in their primary or secondary care record. \n\n Patients in GPRD practices which are deemed up to standard by GPRD criteria \n\n Patients whose records are deemed acceptable by GPRD criteria and contain at least one year of data \n\n Patients whose age and sex, as recorded in GPRD is the same as that recorded in HES. \n\n ",
+      "exclusion_criteria": ": \n\n A diagnosis of heart failure, stroke, or myocardial infarction occurring before diagnosis of atrial fibrillation",
+      "brief_summary": "We aim to investigate the prognosis of patients diagnosed with AF, particularly in relation to the development of subsequent stroke, heart failure, and myocardial infarction. We will explore the relationship between these outcomes and a range of risk factors."
+    }
+  },
+  "linked_result": {
+    "Atrial Fibrillation": {
+      "conceptId": "49436004",
+      "preferred_term": "Atrial fibrillation",
+      "fully_specified_name": "Atrial fibrillation (disorder)",
+      "type": "Clinical finding",
+      "definition": "Abnormal cardiac rhythm that is characterized by rapid, uncoordinated firing of electrical impulses in the upper chambers of the heart (HEART ATRIA). In such case, blood cannot be effectively pumped into the lower chambers of the heart (HEART VENTRICLES). It is caused by abnormal impulse generation.",
+      "best_match_term": "Atrial fibrillation",
+      "match_reason": "Exact"
+    },
+    "Heart Failure": {
+      "conceptId": "84114007",
+      "preferred_term": "Heart failure",
+      "fully_specified_name": "Heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure caused by dysfunction of the MYOCARDIUM, leading to defective cardiac emptying (contraction) or filling (relaxation).",
+      "best_match_term": "Heart failure",
+      "match_reason": "Exact"
+    },
+    "Stroke": {
+      "conceptId": "230690007",
+      "preferred_term": "Cerebrovascular accident",
+      "fully_specified_name": "Cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)",
+      "best_match_term": "Stroke",
+      "match_reason": "Exact"
+    },
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Atrial Fibrillation": 1,
+    "Heart Failure": 1,
+    "Stroke": 1,
+    "Myocardial Infarction": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Atrial Fibrillation": {
+      "disease": "Atrial Fibrillation",
+      "conceptId": "49436004",
+      "preferred_term": "Atrial fibrillation",
+      "fully_specified_name": "Atrial fibrillation (disorder)",
+      "type": "Clinical finding",
+      "definition": "Abnormal cardiac rhythm that is characterized by rapid, uncoordinated firing of electrical impulses in the upper chambers of the heart (HEART ATRIA). In such case, blood cannot be effectively pumped into the lower chambers of the heart (HEART VENTRICLES). It is caused by abnormal impulse generation.",
+      "best_match_term": "Atrial fibrillation"
+    },
+    "Heart Failure": {
+      "disease": "Heart Failure",
+      "conceptId": "84114007",
+      "preferred_term": "Heart failure",
+      "fully_specified_name": "Heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure caused by dysfunction of the MYOCARDIUM, leading to defective cardiac emptying (contraction) or filling (relaxation).",
+      "best_match_term": "Heart failure"
+    },
+    "Stroke": {
+      "disease": "Stroke",
+      "conceptId": "230690007",
+      "preferred_term": "Cerebrovascular accident",
+      "fully_specified_name": "Cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)",
+      "best_match_term": "Stroke"
+    },
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    }
+  }
+}

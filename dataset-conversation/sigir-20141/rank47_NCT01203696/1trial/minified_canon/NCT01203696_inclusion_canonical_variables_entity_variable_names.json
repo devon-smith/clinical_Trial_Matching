@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_ischemic_heart_disease_now",
+  "patient_is_exposed_to_clopidogrel_inthehistory",
+  "patient_is_exposed_to_clopidogrel_now",
+  "patient_has_finding_of_angina_control_now",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg"
+]

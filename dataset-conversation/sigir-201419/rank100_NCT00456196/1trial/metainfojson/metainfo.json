@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT00456196",
+  "contextual": {
+    "_id": "NCT00456196",
+    "title": "Epidemiology of Venous Thromboembolism",
+    "text": "Summary: More than 5 years ago the DVT FREE Registry was conceived. Its database consists of 5,451 ultrasound-confirmed DVT patients from 183 institutions. This database is rich in information of critical importance to health care providers. The information contained within the database will be revisited to provide more detailed analyses which will be used for risk factor assessment and for decision-making regarding the implementation of VTE Prophylaxis.\nInclusion criteria: inclusion criteria: \n\n Ultrasound-confirmed DVT patients from 183 institutions.\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Epidemiology of Venous Thromboembolism",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Venous Thromboembolism', 'Pulmonary Embolism', 'Cancer', 'Deep Vein Thrombosis', 'COPD']",
+      "diseases_list": [
+        "Venous Thromboembolism",
+        "Pulmonary Embolism",
+        "Cancer",
+        "Deep Vein Thrombosis",
+        "COPD"
+      ],
+      "enrollment": "5451.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Ultrasound-confirmed DVT patients from 183 institutions.",
+      "exclusion_criteria": "",
+      "brief_summary": "More than 5 years ago the DVT FREE Registry was conceived. Its database consists of 5,451 ultrasound-confirmed DVT patients from 183 institutions. This database is rich in information of critical importance to health care providers. The information contained within the database will be revisited to provide more detailed analyses which will be used for risk factor assessment and for decision-making regarding the implementation of VTE Prophylaxis."
+    }
+  }
+}

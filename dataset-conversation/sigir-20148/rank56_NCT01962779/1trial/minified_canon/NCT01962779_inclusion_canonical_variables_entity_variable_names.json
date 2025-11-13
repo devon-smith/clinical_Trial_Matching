@@ -1,0 +1,13 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_normal_cognition_now",
+  "patient_has_finding_of_neurological_diagnostic_procedure_normal_now",
+  "patient_cdr_clinical_dementia_rating_score_value_recorded_now_withunit_score",
+  "patient_global_deterioration_scale_level_value_recorded_now_withunit_level",
+  "patient_can_undergo_apolipoprotein_e_genotype_determination_now",
+  "patient_is_exposed_to_deoxyribonucleic_acid_now",
+  "patient_can_undergo_lumbar_puncture_now",
+  "patient_can_undergo_magnetic_resonance_imaging_now"
+]

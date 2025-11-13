@@ -1,0 +1,11 @@
+[
+  "patient_has_diagnosis_of_type_2_diabetes_mellitus_now",
+  "patient_has_diagnosis_of_type_1_diabetes_mellitus_now",
+  "patient_has_finding_of_kidney_disease_now",
+  "patient_has_finding_of_disease_of_liver_now",
+  "patient_has_finding_of_blood_chemistry_abnormal_now",
+  "patient_physical_exercise_value_recorded_inthehistory_withunit_hours_per_week",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_exposed_to_hmg_coa_reductase_inhibitor_now",
+  "patient_has_finding_of_dietary_finding_now"
+]

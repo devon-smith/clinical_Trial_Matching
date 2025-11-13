@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01296789",
+  "contextual": {
+    "_id": "NCT01296789",
+    "title": "Comparison of a Tissue Perfusion Guided Hemodynamic Protocol With a Standard Hemodynamic Protocol in Septic Shock Patients",
+    "text": "Summary: The Surviving Sepsis Campaign (SSC) published 2008 revised guidelines to improve survival of septic shock patients. For hemodynamic stabilization the SSC recommends distinct treatment goals. The study hypothesis is that a tissue perfusion guided protocol could reduce the duration on vasopressor treatment compared to a conventional protocol.\nInclusion criteria: inclusion criteria: \n\n 2 or more SIRS criteria according to ACCP/SCCM definition \n\n Documented infection or strong suspicion of infection with adequate antibiotic treatment \n\n Shock according to ACCP/SCCM definition with the necessity of vasopressor treatment \n\n \nExclusion criteria:  \n\n Patients admitted with central nervous diseases \n\n ST elevation myocardial infarction \n\n Pulmonary embolism \n\n Out of hospital cardiac arrest patients \n\n Patients with therapy limitations \n\n Known pregnancy \n\n Inclusion in other interventional trials",
+    "metadata": {
+      "brief_title": "Comparison of a Tissue Perfusion Guided Hemodynamic Protocol With a Standard Hemodynamic Protocol in Septic Shock Patients",
+      "phase": "",
+      "drugs": "['Tissue perfusion guided protocol', 'Usual Care']",
+      "drugs_list": [
+        "Tissue perfusion guided protocol",
+        "Usual Care"
+      ],
+      "diseases": "['Septic Shock']",
+      "diseases_list": [
+        "Septic Shock"
+      ],
+      "enrollment": "40.0",
+      "inclusion_criteria": "inclusion criteria: \n\n 2 or more SIRS criteria according to ACCP/SCCM definition \n\n Documented infection or strong suspicion of infection with adequate antibiotic treatment \n\n Shock according to ACCP/SCCM definition with the necessity of vasopressor treatment \n\n ",
+      "exclusion_criteria": " \n\n Patients admitted with central nervous diseases \n\n ST elevation myocardial infarction \n\n Pulmonary embolism \n\n Out of hospital cardiac arrest patients \n\n Patients with therapy limitations \n\n Known pregnancy \n\n Inclusion in other interventional trials",
+      "brief_summary": "The Surviving Sepsis Campaign (SSC) published 2008 revised guidelines to improve survival of septic shock patients. For hemodynamic stabilization the SSC recommends distinct treatment goals. The study hypothesis is that a tissue perfusion guided protocol could reduce the duration on vasopressor treatment compared to a conventional protocol."
+    }
+  }
+}

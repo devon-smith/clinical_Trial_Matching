@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_nasal_discharge_now",
+  "patient_has_finding_of_nasal_obstruction_now",
+  "patient_has_finding_of_pain_finding_at_anatomical_site_now",
+  "patient_has_finding_of_pain_in_throat_now",
+  "patient_has_finding_of_sneezing_now"
+]

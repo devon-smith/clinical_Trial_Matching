@@ -1,0 +1,20 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_can_undergo_percutaneous_coronary_intervention_now",
+  "patient_has_finding_of_culprit_lesion_of_coronary_artery_now",
+  "patient_can_undergo_endovascular_insertion_of_stent_now",
+  "patient_stricture_of_artery_value_recorded_now_withunit_percent",
+  "patient_has_diagnosis_of_acute_coronary_syndrome_now",
+  "patient_has_diagnosis_of_acute_non_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_diagnosis_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_symptoms_of_chest_pain_now",
+  "patient_has_undergone_coronary_angiography_now",
+  "patient_has_finding_of_inverted_t_wave_now",
+  "patient_has_finding_of_left_bundle_branch_block_now",
+  "patient_has_diagnosis_of_myocardial_infarction_now",
+  "patient_has_finding_of_myocardial_ischemia_now",
+  "patient_has_finding_of_myocardial_necrosis_now",
+  "patient_st_segment_value_recorded_now_withunit_millivolt",
+  "patient_has_finding_of_st_segment_depression_now",
+  "patient_st_segment_elevation_value_recorded_now_withunit_millivolt"
+]

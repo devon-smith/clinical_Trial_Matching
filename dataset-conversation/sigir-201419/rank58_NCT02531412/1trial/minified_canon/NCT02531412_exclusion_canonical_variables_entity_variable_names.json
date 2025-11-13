@@ -1,0 +1,19 @@
+[
+  "patient_has_undergone_administration_of_drug_or_medicament_via_enteral_tube_inthehistory",
+  "patient_has_finding_of_acute_renal_failure_syndrome_now",
+  "patient_has_diagnosis_of_chronic_kidney_disease_stage_3b_inthehistory",
+  "patient_plasma_potassium_level_value_recorded_now_withunit_milliequivalents_per_liter",
+  "patient_has_finding_of_allergy_to_spironolactone_now",
+  "patient_has_finding_of_septic_shock_now",
+  "patient_has_finding_of_urinary_tract_obstruction_now",
+  "patient_has_undergone_transplant_of_kidney_inthehistory",
+  "patient_has_finding_of_postoperative_state_now",
+  "patient_is_pregnant_now",
+  "patient_has_diagnosis_of_adrenal_cortical_hypofunction_now",
+  "patient_mean_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_norepinephrine_value_recorded_now_withunit_micrograms_per_kilogram_per_minute",
+  "patient_has_undergone_resuscitation_using_intravenous_fluid_now",
+  "patient_is_taking_angiotensin_converting_enzyme_inhibitor_containing_product_now",
+  "patient_mean_blood_pressure_value_recorded_inthefuture_withunit_millimeters_of_mercury",
+  "patient_norepinephrine_value_recorded_inthefuture_withunit_micrograms_per_kilogram_per_minute"
+]

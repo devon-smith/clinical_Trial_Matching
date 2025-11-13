@@ -1,0 +1,111 @@
+{
+  "generated": "2025-10-20T23:28:09",
+  "trial_id": "NCT00149227",
+  "contextual": {
+    "_id": "NCT00149227",
+    "title": "Add-on Effects of Valsartan on Morbi- Mortality (KYOTO HEART Study)",
+    "text": "Summary: The KYOTO HEART Study is to assess the add-on effect of valsartan, an Angiotensin-Receptor Blocker, on top of the conventional treatment in high risk patients in Japan with hypertension in terms of the morbidity and mortality.\nInclusion criteria: inclusion criteria: \n\n Clinical diagnosis of hypertension \n\n Clinical diagnosis of one or more risk factors, such as diabetes, smoking habit, lipid metabolism abnormality, history of ischemic heart disease (IHD) or cerebrovascular disease, obesity (BMI>25), chronic heart failure (NYHA II-III), and electrocardiogram (ECG) abnormality (LVH) \n\n \nExclusion criteria: : \n\n Patients who have already been administered ARB \n\n Patients with IHD within 6 months after percutaneous coronary intervention(PCI), and who are stable but are going to implement PCI or coronary artery bypass grafting(CABG) \n\n Severe/malignant/secondary hypertensive patients \n\n Pregnant women and women of childbearing potential \n\n History of heart failure, unstable angina, myocardial infarction, PTCA, or CABG within the preceding 6 months \n\n Arrhythmia needed to be treated or accompanied with symptoms, second or third degree AV block \n\n Severe renal impairment (Serum creatinine >3.0 mg/dl) \n\n Severe hepatic impairment (Hepatic failure, Cirrhosis, etc.)",
+    "metadata": {
+      "brief_title": "Add-on Effects of Valsartan on Morbi- Mortality (KYOTO HEART Study)",
+      "phase": "Phase 4",
+      "drugs": "['Valsartan', 'Non-ARB']",
+      "drugs_list": [
+        "Valsartan",
+        "Non-ARB"
+      ],
+      "diseases": "['Hypertension', 'Ischemic Heart Disease', 'Congestive Heart Failure', 'Stroke']",
+      "diseases_list": [
+        "Hypertension",
+        "Ischemic Heart Disease",
+        "Congestive Heart Failure",
+        "Stroke"
+      ],
+      "enrollment": "3031.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Clinical diagnosis of hypertension \n\n Clinical diagnosis of one or more risk factors, such as diabetes, smoking habit, lipid metabolism abnormality, history of ischemic heart disease (IHD) or cerebrovascular disease, obesity (BMI>25), chronic heart failure (NYHA II-III), and electrocardiogram (ECG) abnormality (LVH) \n\n ",
+      "exclusion_criteria": ": \n\n Patients who have already been administered ARB \n\n Patients with IHD within 6 months after percutaneous coronary intervention(PCI), and who are stable but are going to implement PCI or coronary artery bypass grafting(CABG) \n\n Severe/malignant/secondary hypertensive patients \n\n Pregnant women and women of childbearing potential \n\n History of heart failure, unstable angina, myocardial infarction, PTCA, or CABG within the preceding 6 months \n\n Arrhythmia needed to be treated or accompanied with symptoms, second or third degree AV block \n\n Severe renal impairment (Serum creatinine >3.0 mg/dl) \n\n Severe hepatic impairment (Hepatic failure, Cirrhosis, etc.)",
+      "brief_summary": "The KYOTO HEART Study is to assess the add-on effect of valsartan, an Angiotensin-Receptor Blocker, on top of the conventional treatment in high risk patients in Japan with hypertension in terms of the morbidity and mortality."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Ischemic Heart Disease": {
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease",
+      "match_reason": "Exact"
+    },
+    "Congestive Heart Failure": {
+      "conceptId": "42343007",
+      "preferred_term": "Congestive heart failure",
+      "fully_specified_name": "Congestive heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure accompanied by EDEMA, such as swelling of the legs and ankles and congestion in the lungs.",
+      "best_match_term": "Congestive heart failure",
+      "match_reason": "Exact"
+    },
+    "Stroke": {
+      "conceptId": "230690007",
+      "preferred_term": "Cerebrovascular accident",
+      "fully_specified_name": "Cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)",
+      "best_match_term": "Stroke",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1,
+    "Ischemic Heart Disease": 1,
+    "Congestive Heart Failure": 1,
+    "Stroke": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Ischemic Heart Disease": {
+      "disease": "Ischemic Heart Disease",
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease"
+    },
+    "Congestive Heart Failure": {
+      "disease": "Congestive Heart Failure",
+      "conceptId": "42343007",
+      "preferred_term": "Congestive heart failure",
+      "fully_specified_name": "Congestive heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure accompanied by EDEMA, such as swelling of the legs and ankles and congestion in the lungs.",
+      "best_match_term": "Congestive heart failure"
+    },
+    "Stroke": {
+      "disease": "Stroke",
+      "conceptId": "230690007",
+      "preferred_term": "Cerebrovascular accident",
+      "fully_specified_name": "Cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)",
+      "best_match_term": "Stroke"
+    }
+  }
+}

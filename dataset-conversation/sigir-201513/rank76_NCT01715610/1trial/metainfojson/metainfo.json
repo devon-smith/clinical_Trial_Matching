@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT01715610",
+  "contextual": {
+    "_id": "NCT01715610",
+    "title": "Assessing the Necessity of Prescribing Antibiotics (Clavulin or Clindamycin Versus Placebo) Post-peritonsillar Abscess Drainage",
+    "text": "Summary: This study aims to look at the necessity for prescribing antibiotics post-drainage of peritonsillar abscesses (PTA). This will be a single-blinded randomized-control trial with two arms - patients receiving placebo versus those receiving a seven day course of oral Amoxicillin-Clavulanic acid. The main objective measure will be to assess if there is resolution of the peri-tonsillar abscess and there has been no reaccumulation. Patients will be blinded to whether they receive placebo or amoxicillin-clavulanic acid. Patients will be phoned after 7 days to assess if their symptoms have resolved via an over the phone questionnaire. Anaerobic and aerobic cultures will be obtained.\nInclusion criteria: inclusion criteria: \n\n Older than 18 years of age \n\n Diagnosed with a peritonsillar abscess that has been drained and purulence has been obtained \n\n \nExclusion criteria: : \n\n Pregnant \n\n Under the age of 18 \n\n Bilateral peritonsillar abscesses \n\n Recently drained peritonsillar abscess \n\n Immunocomprimised",
+    "metadata": {
+      "brief_title": "Assessing the Necessity of Prescribing Antibiotics (Clavulin or Clindamycin Versus Placebo) Post-peritonsillar Abscess Drainage",
+      "phase": "",
+      "drugs": "['Clavulin', 'Randomization to Placebo', 'Clindamycin']",
+      "drugs_list": [
+        "Clavulin",
+        "Randomization to Placebo",
+        "Clindamycin"
+      ],
+      "diseases": "['Peritonsillar Abscess']",
+      "diseases_list": [
+        "Peritonsillar Abscess"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Older than 18 years of age \n\n Diagnosed with a peritonsillar abscess that has been drained and purulence has been obtained \n\n ",
+      "exclusion_criteria": ": \n\n Pregnant \n\n Under the age of 18 \n\n Bilateral peritonsillar abscesses \n\n Recently drained peritonsillar abscess \n\n Immunocomprimised",
+      "brief_summary": "This study aims to look at the necessity for prescribing antibiotics post-drainage of peritonsillar abscesses (PTA). This will be a single-blinded randomized-control trial with two arms - patients receiving placebo versus those receiving a seven day course of oral Amoxicillin-Clavulanic acid. The main objective measure will be to assess if there is resolution of the peri-tonsillar abscess and there has been no reaccumulation. Patients will be blinded to whether they receive placebo or amoxicillin-clavulanic acid. Patients will be phoned after 7 days to assess if their symptoms have resolved via an over the phone questionnaire. Anaerobic and aerobic cultures will be obtained."
+    }
+  }
+}

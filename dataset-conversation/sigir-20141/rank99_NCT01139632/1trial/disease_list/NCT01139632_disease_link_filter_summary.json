@@ -1,0 +1,58 @@
+{
+  "generated": "2025-10-22T21:25:07",
+  "trial_id": "NCT01139632",
+  "contextual": {
+    "_id": "NCT01139632",
+    "title": "The Contribution of Lp-PLA2 Level to the Presence of Coronary Plaques in Patients With Non Alcoholic Fatty Liver Disease",
+    "text": "Summary: The most common cause of death in patients with NAFLD(Nonalcoholic Fatty Liver Disease) is CAD(Coronary Artery Disease). NAFLD patients have 65% more mortality than general population. The aim of the investigators study is to diagnose early coronary artery disease in NAFLD patient by measuring of PLA2. The investigators expect that PLA2 will higher in patients with patients with combination of CAD, unstable plaque and NAFLD.\nInclusion criteria: inclusion criteria: \n\n Patients at intermediate risk for significant CAD was admitted to the hospital with the diagnosis of chest pain or undergoing elective CT coronarography due to suspection of coronary artery disease. \n\n Male and female 18years or older. \n\n Able to provide written informed consent. \n\n Intermediate Risk patients for having significant CAD is deﬁned as: \n\n chest pain or dyspnea in the presence of negative stress tests; \n\n the absence of chest pain but positive stress tests; \n\n the absence of chest pain and of positive stress tests but intermittent arrhythmias \n\n \nExclusion criteria: : \n\n Acute coronary syndrome presentation: \n\n ST segment deviation on ECG and/or \n\n Cardiac troponin elevation. \n\n Chest pain in combination with positive tests for myocardial ischemia \n\n Hemodynamic instability on presentation. \n\n Inability to write inform consent. \n\n Age <18 years. \n\n Participation in an investigational study within the previous 30days.",
+    "metadata": {
+      "brief_title": "The Contribution of Lp-PLA2 Level to the Presence of Coronary Plaques in Patients With Non Alcoholic Fatty Liver Disease",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Nonalcoholic Fatty Liver Disease', 'Coronary Artery Disease']",
+      "diseases_list": [
+        "Nonalcoholic Fatty Liver Disease",
+        "Coronary Artery Disease"
+      ],
+      "enrollment": "60.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients at intermediate risk for significant CAD was admitted to the hospital with the diagnosis of chest pain or undergoing elective CT coronarography due to suspection of coronary artery disease. \n\n Male and female 18years or older. \n\n Able to provide written informed consent. \n\n Intermediate Risk patients for having significant CAD is deﬁned as: \n\n chest pain or dyspnea in the presence of negative stress tests; \n\n the absence of chest pain but positive stress tests; \n\n the absence of chest pain and of positive stress tests but intermittent arrhythmias \n\n ",
+      "exclusion_criteria": ": \n\n Acute coronary syndrome presentation: \n\n ST segment deviation on ECG and/or \n\n Cardiac troponin elevation. \n\n Chest pain in combination with positive tests for myocardial ischemia \n\n Hemodynamic instability on presentation. \n\n Inability to write inform consent. \n\n Age <18 years. \n\n Participation in an investigational study within the previous 30days.",
+      "brief_summary": "The most common cause of death in patients with NAFLD(Nonalcoholic Fatty Liver Disease) is CAD(Coronary Artery Disease). NAFLD patients have 65% more mortality than general population. The aim of the investigators study is to diagnose early coronary artery disease in NAFLD patient by measuring of PLA2. The investigators expect that PLA2 will higher in patients with patients with combination of CAD, unstable plaque and NAFLD."
+    }
+  },
+  "linked_result": {
+    "Nonalcoholic Fatty Liver Disease": {
+      "conceptId": "722866000",
+      "preferred_term": "Non-alcoholic fatty liver disease without non-alcoholic steatohepatitis",
+      "fully_specified_name": "Non-alcoholic fatty liver disease without non-alcoholic steatohepatitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "La presencia de esteatosis de hígado asociada a disfunción metabólica sin esteatohepatitis.",
+      "best_match_term": "Non-alcoholic fatty liver disease without non-alcoholic steatohepatitis",
+      "match_reason": "Exact"
+    },
+    "Coronary Artery Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary artery disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Coronary Artery Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Coronary Artery Disease": {
+      "disease": "Coronary Artery Disease",
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary artery disease"
+    }
+  }
+}

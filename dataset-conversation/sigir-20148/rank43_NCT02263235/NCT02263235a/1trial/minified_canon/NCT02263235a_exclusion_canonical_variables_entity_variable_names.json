@@ -1,0 +1,9 @@
+[
+  "patient_is_pregnant_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_breastfeeding_now",
+  "patient_is_undergoing_clinical_trial_now",
+  "patient_has_finding_of_abnormal_liver_function_now",
+  "patient_has_finding_of_disorder_of_cardiac_function_now",
+  "patient_has_finding_of_renal_impairment_now"
+]

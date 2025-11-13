@@ -1,0 +1,22 @@
+{
+  "_id": "NCT01748162",
+  "title": "Management of Recurrent Croup",
+  "text": "Summary: Presently children who experience recurring croup symptoms receive a variety of treatments. This is because it is not clear which treatments may be best. Some children are given inhaled steroids (similar to what children with asthma use). Others are carefully watched and cautioned to avoid potential triggers (certain foods, environmental allergens, etc), and should episodes of croup recur they are treated with a short course of oral steroids. The purpose of this study is to compare two safe and clinically appropriate methods for treating recurrent croup, daily inhaled steroids versus observation with oral steroids on an as needed basis, to see if either is useful in preventing future episodes of croup.\nInclusion criteria: inclusion criteria: \n\n Pediatric population: 6 months to 15 years of age \n\n 2 or more episodes of croup in 12 month period \n\n croup defined as acute onset inspiratory stridor, barking cough, with respiratory distress. \n\n \nExclusion criteria: : \n\n Grade 3 or 4 subglottic stenosis \n\n Subglottic hemangioma \n\n Posterior laryngeal cleft \n\n Recurrent respiratory papillomatosis \n\n External compression (Innominate artery compression, mediastinal mass, (double aortic arch, etc) \n\n Symptoms or signs suggesting another cause of stridor, such as epiglottitis, bacterial tracheitis, or supraglottic foreign body \n\n Tracheomalacia/ bronchomalacia severe enough to cause respiratory distress \n\n Current steroid therapy for previously diagnosed condition, i.e. reactive airway disease. \n\n Other medical conditions necessitating chronic steroid utilization",
+  "metadata": {
+    "brief_title": "Management of Recurrent Croup",
+    "phase": "Phase 3",
+    "drugs": "['Fluticasone', 'Prednisolone IF needed']",
+    "drugs_list": [
+      "Fluticasone",
+      "Prednisolone IF needed"
+    ],
+    "diseases": "['Croup']",
+    "diseases_list": [
+      "Croup"
+    ],
+    "enrollment": "10.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Pediatric population: 6 months to 15 years of age \n\n 2 or more episodes of croup in 12 month period \n\n croup defined as acute onset inspiratory stridor, barking cough, with respiratory distress. \n\n ",
+    "exclusion_criteria": ": \n\n Grade 3 or 4 subglottic stenosis \n\n Subglottic hemangioma \n\n Posterior laryngeal cleft \n\n Recurrent respiratory papillomatosis \n\n External compression (Innominate artery compression, mediastinal mass, (double aortic arch, etc) \n\n Symptoms or signs suggesting another cause of stridor, such as epiglottitis, bacterial tracheitis, or supraglottic foreign body \n\n Tracheomalacia/ bronchomalacia severe enough to cause respiratory distress \n\n Current steroid therapy for previously diagnosed condition, i.e. reactive airway disease. \n\n Other medical conditions necessitating chronic steroid utilization",
+    "brief_summary": "Presently children who experience recurring croup symptoms receive a variety of treatments. This is because it is not clear which treatments may be best. Some children are given inhaled steroids (similar to what children with asthma use). Others are carefully watched and cautioned to avoid potential triggers (certain foods, environmental allergens, etc), and should episodes of croup recur they are treated with a short course of oral steroids. The purpose of this study is to compare two safe and clinically appropriate methods for treating recurrent croup, daily inhaled steroids versus observation with oral steroids on an as needed basis, to see if either is useful in preventing future episodes of croup."
+  }
+}

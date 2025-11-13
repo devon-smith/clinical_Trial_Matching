@@ -1,0 +1,86 @@
+# Interleukin-1 Receptor Antagonist (IL-1RA) (ANAKINRA) IN SEVERE SYSTEMIC-ONSET JUVENILE IDIOPATHIC ARTHRITIS
+**NCT**: `NCT00339157`
+## Brief Summary
+Main objective: To test the efficacy of anakinra treatment in children or young adults with corticosteroid-resistant or -dependent Systemic-Onset Juvenile Idiopathic Arthritis (SO-JIA)~Design: Double blind, randomized trial testing the efficacy of one month Anakinra treatment versus placebo (2 groups of 12 patients each). All the patients will be treated with anakinra during the following 11 months and the dose of corticosteroids will be gradually tapered (= descriptive part of the trial to assess the tolerance and efficacy over 12 months).~Hypothesis: 70% significant improvement after 1 month in Anakinra-treated patients versus no more than 10% in the placebo group.~Main inclusion criteria : diagnosis of SO-JIA (Durban consensus conference criteria), age: 2 to 20 years at inclusion, active, corticosteroid-resistant or -dependent disease, no previous IL-1ra treatment.
+## Inclusion Criteria
+inclusion criteria: 
+
+ SO-JIA (Edmonton's revision of Durban's consensus conference criteria) 
+
+ Age: at least 2 years and less than 20 years at treatment initiation 
+
+ Disease duration of at least 6 months 
+
+ Failure of corticosteroid treatment or requirement for corticosteroid treatment at a daily dose equal to or over 0.3 mg/kg (10 mg in patients whose weight is over 34 kg) 
+
+ Active and severe systemic symptoms and/or arthritis as assessed by an experienced pediatric Rheumatologists, with at least 3 of the following criteria when assessing Giannini's core-set items: 1) physician global assessment of disease activity of at least 20/100; 2) parent/patient assessment of disease effect on overall well-being of at least 20/100; 3) functional disability with a Children Health Assessment Questionnaire (CHAQ, Ref [9]) score equal to or higher than 0.375/3; 4) 2 joints or more with active arthritis 5) 2 joints or more with non-irreversible limited range of motion (irreversible limited range of motion will be defined by radiological evidence of irreversible joint damage and ankylosis) 6) erythrocyte sedimentation rate (ESR) equal to or higher than 20. 
+
+ In the absence of disease-related fever, either CRP or first hour ESR or both have to be over the upper limit of normal values so that treatment effect on the systemic part of the disease can be objectively evaluated. 
+
+ Patients with polyarthritis (at least 5 joints with inflammation and/or limitation of motion) will be eligible for this study only if at least 50% of the affected joints do not present radiological evidence of irreversible damage. 
+
+ Informed consent signed by the parents or the person legally responsible for the patient if the patient is less than 18, and by the patient if old enough 
+
+ Teenager girls or young women with childbearing potential must use a contraceptive method (including abstinence 
+
+ tuberculin test performed before Day 1 and must either be negative or positivity must be related to previous immunization and of normal intensity according to the investigator's judgment
+## Exclusion Criteria
+: 
+
+ Previous treatment with IL-1Ra 
+
+ intra-articular injection or change in the doses of non-steroidal anti-inflammatory drugs and corticosteroids in the 4 weeks preceding the initiation of anakinra treatment 
+
+ Treatment with another immunosuppressive or disease-modifying drugs that could not be stopped before inclusion (for a duration depending on the drug pharmacokinetic properties) 
+
+ Contra-indication to the use of anakinra including ongoing active infection or allergy to E Coli's derivate or other components of the drug 
+
+ Previous history of malignancy or heart insufficiency 
+
+ Patients with asthma require to be previously assessed by a pneumonologist 
+
+ Obvious need of therapeutic intervention before study completion such as surgery, intra-articular injection, life vaccine administration 
+
+ Any of the following: leucocyte counts < 3.6 x 10e9/L, polymorphonuclear neutrophil counts < 1.5 x 10e9/L, platelets < 150 000/mm3, serum creatinin > 1.5 the upper limit of normal range for age, serum alanine and aspartate transaminases > 2 times the upper limit of the normal range, serum bilirubin > 2 times the upper limit of the normal range
+## Full Text
+Summary: Main objective: To test the efficacy of anakinra treatment in children or young adults with corticosteroid-resistant or -dependent Systemic-Onset Juvenile Idiopathic Arthritis (SO-JIA)~Design: Double blind, randomized trial testing the efficacy of one month Anakinra treatment versus placebo (2 groups of 12 patients each). All the patients will be treated with anakinra during the following 11 months and the dose of corticosteroids will be gradually tapered (= descriptive part of the trial to assess the tolerance and efficacy over 12 months).~Hypothesis: 70% significant improvement after 1 month in Anakinra-treated patients versus no more than 10% in the placebo group.~Main inclusion criteria : diagnosis of SO-JIA (Durban consensus conference criteria), age: 2 to 20 years at inclusion, active, corticosteroid-resistant or -dependent disease, no previous IL-1ra treatment.
+Inclusion criteria: inclusion criteria: 
+
+ SO-JIA (Edmonton's revision of Durban's consensus conference criteria) 
+
+ Age: at least 2 years and less than 20 years at treatment initiation 
+
+ Disease duration of at least 6 months 
+
+ Failure of corticosteroid treatment or requirement for corticosteroid treatment at a daily dose equal to or over 0.3 mg/kg (10 mg in patients whose weight is over 34 kg) 
+
+ Active and severe systemic symptoms and/or arthritis as assessed by an experienced pediatric Rheumatologists, with at least 3 of the following criteria when assessing Giannini's core-set items: 1) physician global assessment of disease activity of at least 20/100; 2) parent/patient assessment of disease effect on overall well-being of at least 20/100; 3) functional disability with a Children Health Assessment Questionnaire (CHAQ, Ref [9]) score equal to or higher than 0.375/3; 4) 2 joints or more with active arthritis 5) 2 joints or more with non-irreversible limited range of motion (irreversible limited range of motion will be defined by radiological evidence of irreversible joint damage and ankylosis) 6) erythrocyte sedimentation rate (ESR) equal to or higher than 20. 
+
+ In the absence of disease-related fever, either CRP or first hour ESR or both have to be over the upper limit of normal values so that treatment effect on the systemic part of the disease can be objectively evaluated. 
+
+ Patients with polyarthritis (at least 5 joints with inflammation and/or limitation of motion) will be eligible for this study only if at least 50% of the affected joints do not present radiological evidence of irreversible damage. 
+
+ Informed consent signed by the parents or the person legally responsible for the patient if the patient is less than 18, and by the patient if old enough 
+
+ Teenager girls or young women with childbearing potential must use a contraceptive method (including abstinence 
+
+ tuberculin test performed before Day 1 and must either be negative or positivity must be related to previous immunization and of normal intensity according to the investigator's judgment 
+
+ 
+Exclusion criteria: : 
+
+ Previous treatment with IL-1Ra 
+
+ intra-articular injection or change in the doses of non-steroidal anti-inflammatory drugs and corticosteroids in the 4 weeks preceding the initiation of anakinra treatment 
+
+ Treatment with another immunosuppressive or disease-modifying drugs that could not be stopped before inclusion (for a duration depending on the drug pharmacokinetic properties) 
+
+ Contra-indication to the use of anakinra including ongoing active infection or allergy to E Coli's derivate or other components of the drug 
+
+ Previous history of malignancy or heart insufficiency 
+
+ Patients with asthma require to be previously assessed by a pneumonologist 
+
+ Obvious need of therapeutic intervention before study completion such as surgery, intra-articular injection, life vaccine administration 
+
+ Any of the following: leucocyte counts < 3.6 x 10e9/L, polymorphonuclear neutrophil counts < 1.5 x 10e9/L, platelets < 150 000/mm3, serum creatinin > 1.5 the upper limit of normal range for age, serum alanine and aspartate transaminases > 2 times the upper limit of the normal range, serum bilirubin > 2 times the upper limit of the normal range

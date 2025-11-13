@@ -1,0 +1,54 @@
+{
+  "generated": "2025-10-20T23:44:33",
+  "trial_id": "NCT00929721",
+  "contextual": {
+    "_id": "NCT00929721",
+    "title": "A Global Active Surveillance for Community Acquired Pneumonia",
+    "text": "Summary: This study is an observational surveillance study to identify adults 50 years and older who present to a study healthcare facility with signs and symptoms of Community-Acquired Pneumonia.\nInclusion criteria: inclusion criteria: \n\n Adult subjects 50 years of age or older \n\n Subject must reside in the surveillance area \n\n Subjects who present to a study healthcare facility where the treating physician clinically suspects CAP \n\n \nExclusion criteria: : \n\n Any subject who is transferred to a study healthcare facility after already being hospitalized for 48 hours or more at any other in-patient facility (such as a community hospital). \n\n Hospital Acquired pneumonia (ie, develops signs and symptoms of pneumonia after being hospitalized for 48 hours or more).",
+    "metadata": {
+      "brief_title": "A Global Active Surveillance for Community Acquired Pneumonia",
+      "phase": "",
+      "drugs": "['Blood draw', 'Chest X-ray', 'urine specimen', 'Nasopharyngeal swab', 'sputum']",
+      "drugs_list": [
+        "Blood draw",
+        "Chest X-ray",
+        "urine specimen",
+        "Nasopharyngeal swab",
+        "sputum"
+      ],
+      "diseases": "['Community Acquired Pneumonia']",
+      "diseases_list": [
+        "Community Acquired Pneumonia"
+      ],
+      "enrollment": "5172.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Adult subjects 50 years of age or older \n\n Subject must reside in the surveillance area \n\n Subjects who present to a study healthcare facility where the treating physician clinically suspects CAP \n\n ",
+      "exclusion_criteria": ": \n\n Any subject who is transferred to a study healthcare facility after already being hospitalized for 48 hours or more at any other in-patient facility (such as a community hospital). \n\n Hospital Acquired pneumonia (ie, develops signs and symptoms of pneumonia after being hospitalized for 48 hours or more).",
+      "brief_summary": "This study is an observational surveillance study to identify adults 50 years and older who present to a study healthcare facility with signs and symptoms of Community-Acquired Pneumonia."
+    }
+  },
+  "linked_result": {
+    "Community Acquired Pneumonia": {
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Community Acquired Pneumonia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Community Acquired Pneumonia": {
+      "disease": "Community Acquired Pneumonia",
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia"
+    }
+  }
+}

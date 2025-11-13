@@ -1,0 +1,5 @@
+[
+  "patient_has_taken_drug_or_medicament_inthehistory",
+  "patient_has_finding_of_allergy_to_drug_now",
+  "patient_has_finding_of_intolerance_to_drug_now"
+]

@@ -1,0 +1,19 @@
+[
+  "patient_has_finding_of_clinical_finding_now",
+  "patient_is_exposed_to_exudate_now",
+  "patient_has_symptoms_of_pharyngitis_now",
+  "patient_has_finding_of_acute_pharyngitis_inthehistory",
+  "patient_has_finding_of_pain_in_throat_inthehistory",
+  "patient_white_blood_cell_count_value_recorded_now_withunit_cells_per_liter",
+  "patient_white_blood_cell_count_value_recorded_now_withunit_10e9_cells_per_liter",
+  "patient_has_finding_of_acute_viral_pharyngitis_inthepast4weeks",
+  "patient_has_finding_of_pharyngitis_inthepast4weeks",
+  "patient_is_exposed_to_body_secretion_now",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_has_diagnosis_of_tumor_finding_inthehistory",
+  "patient_has_diagnosis_of_tumor_finding_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_has_finding_of_alcohol_abuse_now",
+  "patient_is_undergoing_clinical_trial_now"
+]

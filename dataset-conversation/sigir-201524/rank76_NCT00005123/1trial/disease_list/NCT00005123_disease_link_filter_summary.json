@@ -1,0 +1,311 @@
+{
+  "generated": "2025-10-22T21:05:44",
+  "trial_id": "NCT00005123",
+  "contextual": {
+    "_id": "NCT00005123",
+    "title": "Honolulu Heart Program",
+    "text": "Summary: To investigate coronary heart disease and stroke among American men of Japanese ancestry who were living on the island of Oahu in 1965. Morbidity and mortality surveillance of the original cohort is continuing.\nInclusion criteria: No eligibility criteria\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Honolulu Heart Program",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Cardiovascular Diseases', 'Coronary Disease', 'Cerebrovascular Accident', 'Heart Diseases', 'Heart Failure, Congestive', 'Myocardial Infarction', 'Asthma', 'Emphysema', 'Lung Diseases, Obstructive', 'Aortic Aneurysm, Abdominal', 'Bronchitis', 'Dementia', 'Hypertension', 'Chronic Obstructive Pulmonary Disease', 'Heart Failure']",
+      "diseases_list": [
+        "Cardiovascular Diseases",
+        "Coronary Disease",
+        "Cerebrovascular Accident",
+        "Heart Diseases",
+        "Heart Failure",
+        "Congestive",
+        "Myocardial Infarction",
+        "Asthma",
+        "Emphysema",
+        "Lung Diseases",
+        "Obstructive",
+        "Aortic Aneurysm",
+        "Abdominal",
+        "Bronchitis",
+        "Dementia",
+        "Hypertension",
+        "Chronic Obstructive Pulmonary Disease",
+        "Heart Failure"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "No eligibility criteria",
+      "exclusion_criteria": "",
+      "brief_summary": "To investigate coronary heart disease and stroke among American men of Japanese ancestry who were living on the island of Oahu in 1965. Morbidity and mortality surveillance of the original cohort is continuing."
+    }
+  },
+  "linked_result": {
+    "Cardiovascular Diseases": {
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease",
+      "match_reason": "Exact"
+    },
+    "Coronary Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary heart disease",
+      "match_reason": "Exact"
+    },
+    "Cerebrovascular Accident": {
+      "conceptId": "230690007",
+      "preferred_term": "Cerebrovascular accident",
+      "fully_specified_name": "Cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)",
+      "best_match_term": "Cerebrovascular accident",
+      "match_reason": "Exact"
+    },
+    "Heart Diseases": {
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease",
+      "match_reason": "Exact"
+    },
+    "Heart Failure, Congestive": {
+      "conceptId": "42343007",
+      "preferred_term": "Congestive heart failure",
+      "fully_specified_name": "Congestive heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure accompanied by EDEMA, such as swelling of the legs and ankles and congestion in the lungs.",
+      "best_match_term": "Congestive heart failure (disorder)",
+      "match_reason": "Exact"
+    },
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    },
+    "Asthma": {
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Asthma",
+      "match_reason": "Exact"
+    },
+    "Emphysema": {
+      "conceptId": "87433001",
+      "preferred_term": "Pulmonary emphysema",
+      "fully_specified_name": "Pulmonary emphysema (disorder)",
+      "type": "Clinical finding",
+      "definition": "Enlargement of air spaces distal to the TERMINAL BRONCHIOLES where gas-exchange normally takes place. This is usually due to destruction of the alveolar wall. Pulmonary emphysema can be classified by the location and distribution of the lesions.",
+      "best_match_term": "Emphysema of lung",
+      "match_reason": "Exact"
+    },
+    "Lung Diseases, Obstructive": {
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive lung disease",
+      "match_reason": "Ancestor"
+    },
+    "Aortic Aneurysm, Abdominal": {
+      "conceptId": "233985008",
+      "preferred_term": "Abdominal aortic aneurysm",
+      "fully_specified_name": "Abdominal aortic aneurysm (disorder)",
+      "type": "Clinical finding",
+      "definition": "An abnormal balloon- or sac-like dilatation in the wall of the ABDOMINAL AORTA which gives rise to the visceral, the parietal, and the terminal (iliac) branches below the aortic hiatus at the diaphragm.",
+      "best_match_term": "Abdominal aortic aneurysm",
+      "match_reason": "Exact"
+    },
+    "Bronchitis": {
+      "conceptId": "32398004",
+      "preferred_term": "Bronchitis",
+      "fully_specified_name": "Bronchitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the large airways in the lung including any part of the BRONCHI, from the PRIMARY BRONCHI to the TERTIARY BRONCHI.",
+      "best_match_term": "Bronchitis",
+      "match_reason": "Exact"
+    },
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    },
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Chronic Obstructive Pulmonary Disease": {
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease",
+      "match_reason": "Exact"
+    },
+    "Heart Failure": {
+      "conceptId": "84114007",
+      "preferred_term": "Heart failure",
+      "fully_specified_name": "Heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure caused by dysfunction of the MYOCARDIUM, leading to defective cardiac emptying (contraction) or filling (relaxation).",
+      "best_match_term": "Heart failure",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cardiovascular Diseases": 1,
+    "Cerebrovascular Accident": 1,
+    "Heart Diseases": 1,
+    "Heart Failure, Congestive": 1,
+    "Myocardial Infarction": 1,
+    "Asthma": 1,
+    "Emphysema": 1,
+    "Aortic Aneurysm, Abdominal": 1,
+    "Bronchitis": 1,
+    "Dementia": 1,
+    "Hypertension": 1,
+    "Chronic Obstructive Pulmonary Disease": 1,
+    "Heart Failure": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cardiovascular Diseases": {
+      "disease": "Cardiovascular Diseases",
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease"
+    },
+    "Cerebrovascular Accident": {
+      "disease": "Cerebrovascular Accident",
+      "conceptId": "230690007",
+      "preferred_term": "Cerebrovascular accident",
+      "fully_specified_name": "Cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)",
+      "best_match_term": "Cerebrovascular accident"
+    },
+    "Heart Diseases": {
+      "disease": "Heart Diseases",
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease"
+    },
+    "Heart Failure, Congestive": {
+      "disease": "Heart Failure, Congestive",
+      "conceptId": "42343007",
+      "preferred_term": "Congestive heart failure",
+      "fully_specified_name": "Congestive heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure accompanied by EDEMA, such as swelling of the legs and ankles and congestion in the lungs.",
+      "best_match_term": "Congestive heart failure (disorder)"
+    },
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    },
+    "Asthma": {
+      "disease": "Asthma",
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Asthma"
+    },
+    "Emphysema": {
+      "disease": "Emphysema",
+      "conceptId": "87433001",
+      "preferred_term": "Pulmonary emphysema",
+      "fully_specified_name": "Pulmonary emphysema (disorder)",
+      "type": "Clinical finding",
+      "definition": "Enlargement of air spaces distal to the TERMINAL BRONCHIOLES where gas-exchange normally takes place. This is usually due to destruction of the alveolar wall. Pulmonary emphysema can be classified by the location and distribution of the lesions.",
+      "best_match_term": "Emphysema of lung"
+    },
+    "Aortic Aneurysm, Abdominal": {
+      "disease": "Aortic Aneurysm, Abdominal",
+      "conceptId": "233985008",
+      "preferred_term": "Abdominal aortic aneurysm",
+      "fully_specified_name": "Abdominal aortic aneurysm (disorder)",
+      "type": "Clinical finding",
+      "definition": "An abnormal balloon- or sac-like dilatation in the wall of the ABDOMINAL AORTA which gives rise to the visceral, the parietal, and the terminal (iliac) branches below the aortic hiatus at the diaphragm.",
+      "best_match_term": "Abdominal aortic aneurysm"
+    },
+    "Bronchitis": {
+      "disease": "Bronchitis",
+      "conceptId": "32398004",
+      "preferred_term": "Bronchitis",
+      "fully_specified_name": "Bronchitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the large airways in the lung including any part of the BRONCHI, from the PRIMARY BRONCHI to the TERTIARY BRONCHI.",
+      "best_match_term": "Bronchitis"
+    },
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    },
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Chronic Obstructive Pulmonary Disease": {
+      "disease": "Chronic Obstructive Pulmonary Disease",
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease"
+    },
+    "Heart Failure": {
+      "disease": "Heart Failure",
+      "conceptId": "84114007",
+      "preferred_term": "Heart failure",
+      "fully_specified_name": "Heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure caused by dysfunction of the MYOCARDIUM, leading to defective cardiac emptying (contraction) or filling (relaxation).",
+      "best_match_term": "Heart failure"
+    }
+  }
+}

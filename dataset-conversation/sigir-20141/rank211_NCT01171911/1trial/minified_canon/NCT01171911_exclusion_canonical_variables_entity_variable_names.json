@@ -1,0 +1,15 @@
+[
+  "patient_has_finding_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_conduction_disorder_of_the_heart_now",
+  "patient_heart_rate_value_recorded_now_withunit_beats_per_minute",
+  "patient_has_finding_of_allergy_to_esmolol_now",
+  "patient_has_finding_of_allergy_to_nicardipine_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_abnormal_liver_function_now",
+  "patient_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_has_finding_of_hemorrhagic_cerebral_infarction_inthepast6months",
+  "patient_left_ventricular_ejection_fraction_value_recorded_inthehistory_withunit_percent"
+]

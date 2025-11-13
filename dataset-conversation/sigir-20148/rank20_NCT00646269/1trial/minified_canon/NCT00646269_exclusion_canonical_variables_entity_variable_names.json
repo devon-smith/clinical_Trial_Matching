@@ -1,0 +1,8 @@
+[
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_has_finding_of_institutionalized_now",
+  "patient_has_finding_of_mental_disorder_now",
+  "patient_has_finding_of_general_pathology_now",
+  "patient_is_undergoing_therapeutic_procedure_now",
+  "patient_has_undergone_clinical_drug_trial_inthepast6months"
+]

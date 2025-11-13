@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_allergy_to_paracetamol_now",
+  "patient_is_exposed_to_immunosuppressant_now",
+  "patient_has_diagnosis_of_chronic_liver_disease_inthehistory",
+  "patient_has_diagnosis_of_disorder_of_lung_now",
+  "patient_has_diagnosis_of_heart_disease_now",
+  "patient_has_diagnosis_of_kidney_disease_now"
+]

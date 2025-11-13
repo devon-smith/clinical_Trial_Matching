@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT02355483",
+  "contextual": {
+    "_id": "NCT02355483",
+    "title": "Impact of Unenhanced Computed Tomography (CT) in Elderly Patients Admitted to the Emergency Department With Acute Abdominal Pain",
+    "text": "Summary: The purpose of this study is to determine whether non-contrast abdominal computed tomography (CT) impacts management (diagnosis, need for surgery and treatment) in elderly patients admitted to the emergency department with abdominal pain.\nInclusion criteria: inclusion criteria: \n\n Elderly patients admitted to the emergency department (aged 75 year old and older) \n\n acute abdominal pain \n\n informed consent \n\n \nExclusion criteria: : \n\n traumatic pain \n\n symptom duration of more than a week \n\n unability for the patient to give informed consent",
+    "metadata": {
+      "brief_title": "Impact of Unenhanced Computed Tomography (CT) in Elderly Patients Admitted to the Emergency Department With Acute Abdominal Pain",
+      "phase": "",
+      "drugs": "['Unenhanced abdominal Computed Tomography']",
+      "drugs_list": [
+        "Unenhanced abdominal Computed Tomography"
+      ],
+      "diseases": "['Abdominal Pain']",
+      "diseases_list": [
+        "Abdominal Pain"
+      ],
+      "enrollment": "423.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Elderly patients admitted to the emergency department (aged 75 year old and older) \n\n acute abdominal pain \n\n informed consent \n\n ",
+      "exclusion_criteria": ": \n\n traumatic pain \n\n symptom duration of more than a week \n\n unability for the patient to give informed consent",
+      "brief_summary": "The purpose of this study is to determine whether non-contrast abdominal computed tomography (CT) impacts management (diagnosis, need for surgery and treatment) in elderly patients admitted to the emergency department with abdominal pain."
+    }
+  }
+}

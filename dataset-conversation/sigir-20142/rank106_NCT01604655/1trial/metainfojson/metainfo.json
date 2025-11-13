@@ -1,0 +1,27 @@
+{
+  "trial_id": "NCT01604655",
+  "contextual": {
+    "_id": "NCT01604655",
+    "title": "ProspEctive First Evaluation in Chest Pain Trial",
+    "text": "Summary: The purpose of this study is to determine the best initial test in patients admitted to the hospital complaining of chest pain.\nInclusion criteria: inclusion criteria: \n\n Patients with chest pain or SOB admitted for rule out acute coronary syndrome \n\n Age ≥45 years \n\n EKG non-diagnostic for acute coronary syndrome \n\n At least 1 set of negative troponin I \n\n \nExclusion criteria: : \n\n Patient with ST elevation myocardial infarction. \n\n Patients with non-ST elevation myocardial infarction. \n\n Patients with known CAD. \n\n Patients with serum creatinine > 1.5. \n\n Atrial fibrillation or marked irregular heart rhythm. \n\n Patients in whom heart rate cannot be controlled. \n\n Patient with allergies to iodinated contrast agents. \n\n Pregnant women \n\n Patients unable to give informed consent",
+    "metadata": {
+      "brief_title": "ProspEctive First Evaluation in Chest Pain Trial",
+      "phase": "",
+      "drugs": "['Coronary CT Angiography', 'Stress Test']",
+      "drugs_list": [
+        "Coronary CT Angiography",
+        "Stress Test"
+      ],
+      "diseases": "['Chest Pain', 'Shortness of Breath', 'Suspected Acute Coronary Syndrome']",
+      "diseases_list": [
+        "Chest Pain",
+        "Shortness of Breath",
+        "Suspected Acute Coronary Syndrome"
+      ],
+      "enrollment": "411.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients with chest pain or SOB admitted for rule out acute coronary syndrome \n\n Age ≥45 years \n\n EKG non-diagnostic for acute coronary syndrome \n\n At least 1 set of negative troponin I \n\n ",
+      "exclusion_criteria": ": \n\n Patient with ST elevation myocardial infarction. \n\n Patients with non-ST elevation myocardial infarction. \n\n Patients with known CAD. \n\n Patients with serum creatinine > 1.5. \n\n Atrial fibrillation or marked irregular heart rhythm. \n\n Patients in whom heart rate cannot be controlled. \n\n Patient with allergies to iodinated contrast agents. \n\n Pregnant women \n\n Patients unable to give informed consent",
+      "brief_summary": "The purpose of this study is to determine the best initial test in patients admitted to the hospital complaining of chest pain."
+    }
+  }
+}

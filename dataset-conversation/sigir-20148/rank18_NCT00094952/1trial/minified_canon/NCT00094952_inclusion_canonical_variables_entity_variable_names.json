@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_educated_to_high_school_level_now",
+  "patient_has_undergone_evaluation_of_psychiatric_state_of_patient_now_outcome_is_normal",
+  "patient_has_undergone_medical_assessment_now_outcome_is_normal",
+  "patient_neuropsychological_testing_value_recorded_now_withunit_standard_deviation",
+  "patient_global_deterioration_scale_level_value_recorded_now_withunit_none"
+]

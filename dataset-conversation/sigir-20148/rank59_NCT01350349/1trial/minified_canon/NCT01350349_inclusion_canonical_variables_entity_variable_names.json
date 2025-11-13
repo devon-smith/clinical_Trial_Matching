@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_major_depressive_disorder_now",
+  "patient_madrs_montgomery_asberg_depression_rating_scale_score_value_recorded_now_withunit_score",
+  "patient_has_finding_of_disability_now",
+  "patients_instrumental_activity_of_daily_living_is_abnormal_now",
+  "patient_has_finding_of_mild_cognitive_disorder_now",
+  "patient_has_finding_of_severe_cognitive_impairment_now",
+  "patient_is_taking_memantine_containing_product_now"
+]

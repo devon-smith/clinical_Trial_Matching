@@ -1,0 +1,20 @@
+[
+  "patient_has_finding_of_abscess_of_lung_now",
+  "patient_has_finding_of_allergy_to_penicillin_now",
+  "patient_is_taking_amoxicillin_containing_product_now",
+  "patient_is_taking_azithromycin_containing_product_now",
+  "patient_is_exposed_to_beta_lactam_antibacterial_now",
+  "patient_has_finding_of_bronchiectasis_now",
+  "patient_is_exposed_to_cephalosporin_now",
+  "patient_has_finding_of_congenital_heart_disease_now",
+  "patient_has_finding_of_cystic_fibrosis_now",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_has_undergone_hospital_admission_inthehistory",
+  "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+  "patient_is_exposed_to_immunosuppressant_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_pneumonia_now",
+  "patient_has_finding_of_primary_immune_deficiency_disorder_now",
+  "patient_has_finding_of_pulmonary_aspiration_now",
+  "patient_has_finding_of_velopharyngeal_incompetence_now"
+]

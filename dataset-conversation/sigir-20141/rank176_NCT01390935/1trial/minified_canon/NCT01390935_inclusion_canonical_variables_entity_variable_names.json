@@ -1,0 +1,10 @@
+[
+  "patient_has_undergone_hospital_admission_inthehistory",
+  "patient_left_ventricular_ejection_fraction_value_recorded_inthehistory_withunit_percent",
+  "patient_has_diagnosis_of_systolic_heart_failure_inthehistory",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_admission_to_acute_internal_medicine_department_inthehistory",
+  "patient_has_undergone_admission_to_cardiac_intensive_care_unit_inthehistory",
+  "patient_has_undergone_admission_to_cardiology_department_inthehistory",
+  "patient_has_finding_of_dyspnea_inthehistory"
+]

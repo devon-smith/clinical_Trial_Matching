@@ -1,0 +1,9 @@
+[
+  "patient_ischemic_chest_pain_value_recorded_now_withunit_minutes",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_12_lead_ecg_now",
+  "patient_has_diagnosis_of_acute_myocardial_infarction_now",
+  "patient_has_undergone_electrocardiographic_procedure_now",
+  "patient_has_finding_of_left_bundle_branch_block_now",
+  "patient_st_segment_elevation_value_recorded_now_withunit_millivolts"
+]

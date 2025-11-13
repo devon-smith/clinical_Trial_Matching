@@ -1,0 +1,6 @@
+[
+  "patient_has_undergone_drug_therapy_now",
+  "patient_has_finding_of_institutionalized_now",
+  "patient_can_undergo_assessment_using_cdr_now",
+  "patient_can_undergo_assessment_using_mini_mental_state_examination_now"
+]

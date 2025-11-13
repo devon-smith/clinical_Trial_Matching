@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_stable_angina_now",
+  "patient_has_diagnosis_of_stable_angina_now",
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+  "patient_has_taken_atenolol_containing_product_inthehistory",
+  "patient_has_taken_beta_adrenergic_receptor_antagonist_containing_product_inthehistory",
+  "patient_has_finding_of_exercise_tolerance_test_abnormal_now"
+]

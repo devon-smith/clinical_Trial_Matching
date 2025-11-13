@@ -1,0 +1,27 @@
+{
+  "trial_id": "NCT00915707",
+  "contextual": {
+    "_id": "NCT00915707",
+    "title": "Pathways Linking Reduced Sleep Duration and Quality to Obesity Risk",
+    "text": "Summary: This study is designed to study the pathways through which short sleep duration or poor sleep quality can lead to an increased risk of developing diabetes and obesity.\nInclusion criteria: inclusion criteria: \n\n Normal weight \n\n Healthy \n\n Normal sleep times \n\n \nExclusion criteria: : \n\n Sleep disorders \n\n Overweight \n\n Diabetes \n\n Other health conditions \n\n Excessive caffeine and alcohol intake \n\n Smoking",
+    "metadata": {
+      "brief_title": "Pathways Linking Reduced Sleep Duration and Quality to Obesity Risk",
+      "phase": "",
+      "drugs": "['Baseline', 'Sleep restriction', 'Reduced Sleep Quality']",
+      "drugs_list": [
+        "Baseline",
+        "Sleep restriction",
+        "Reduced Sleep Quality"
+      ],
+      "diseases": "['Obesity', 'Diabetes']",
+      "diseases_list": [
+        "Obesity",
+        "Diabetes"
+      ],
+      "enrollment": "23.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Normal weight \n\n Healthy \n\n Normal sleep times \n\n ",
+      "exclusion_criteria": ": \n\n Sleep disorders \n\n Overweight \n\n Diabetes \n\n Other health conditions \n\n Excessive caffeine and alcohol intake \n\n Smoking",
+      "brief_summary": "This study is designed to study the pathways through which short sleep duration or poor sleep quality can lead to an increased risk of developing diabetes and obesity."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  "patient_age_value_recorded_now_in_months",
+  "patient_has_finding_of_heart_disease_now",
+  "patient_has_finding_of_lobar_pneumonia_now",
+  "patient_has_undergone_plain_chest_x_ray_now",
+  "patient_has_diagnosis_of_lobar_pneumonia_now",
+  "patient_has_finding_of_atelectasis_now",
+  "patient_has_finding_of_interstitial_lung_disease_now",
+  "patient_has_finding_of_croup_now",
+  "patient_has_finding_of_pulmonary_aspiration_now",
+  "patient_has_diagnosis_of_chronic_lung_disease_inthehistory",
+  "patient_has_diagnosis_of_cystic_fibrosis_inthehistory",
+  "patient_has_finding_of_disease_of_liver_now",
+  "patient_has_finding_of_kidney_disease_now",
+  "patient_has_diagnosis_of_sickle_cell_hemoglobin_ss_disease_now",
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_has_finding_of_supraventricular_tachycardia_now",
+  "patient_has_finding_of_bronchomalacia_now",
+  "patient_has_finding_of_tracheomalacia_now",
+  "patient_is_exposed_to_bronchodilator_inthehistory",
+  "patient_has_taken_corticosteroid_and_corticosteroid_derivative_containing_product_inthepast72hours"
+]

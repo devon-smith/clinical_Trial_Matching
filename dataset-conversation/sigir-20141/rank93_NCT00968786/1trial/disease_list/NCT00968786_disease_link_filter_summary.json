@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-22T21:28:13",
+  "trial_id": "NCT00968786",
+  "contextual": {
+    "_id": "NCT00968786",
+    "title": "Home Monitoring in the Management of Hypertension and Diabetes Mellitus",
+    "text": "Summary: The home monitoring of automated measuring devices may improve the management of the chronic diseases, and may decrease the incidence of fatal disease. The investigators conducted a small sample and short observation time research to explore the feasibility to carry out later large-scale research.\nInclusion criteria: inclusion criteria: \n\n Regardless of whether they are currently receiving antihypertensive therapy, systolic blood pressure higher than 140 mmHg or diastolic blood pressure higher than 90 mmHg. \n\n Whether or not use oral hypoglycemic agents or insulin injections, the fasting plasma is higher than 7.0 mmol/L, or postprandial blood glucose higher than 11.1 mmol/L. \n\n \nExclusion criteria: : \n\n With life-threatening disease. \n\n With the various effects of metabolic diseases such as hyperthyroidism, hypothyroidism, etc. \n\n Stroke, myocardial infarction and other serious cardiovascular and cerebrovascular diseases occurred within 3 months. \n\n Serum creatinine level higher than 176.8 mmol/L \n\n Dementia or severe cognitive decline \n\n Unable to do a long-term follow-up or do not agree to participate in this trial.",
+    "metadata": {
+      "brief_title": "Home Monitoring in the Management of Hypertension and Diabetes Mellitus",
+      "phase": "",
+      "drugs": "['Home monitoring']",
+      "drugs_list": [
+        "Home monitoring"
+      ],
+      "diseases": "['Hypertension', 'Type 2 Diabetes Mellitus']",
+      "diseases_list": [
+        "Hypertension",
+        "Type 2 Diabetes Mellitus"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Regardless of whether they are currently receiving antihypertensive therapy, systolic blood pressure higher than 140 mmHg or diastolic blood pressure higher than 90 mmHg. \n\n Whether or not use oral hypoglycemic agents or insulin injections, the fasting plasma is higher than 7.0 mmol/L, or postprandial blood glucose higher than 11.1 mmol/L. \n\n ",
+      "exclusion_criteria": ": \n\n With life-threatening disease. \n\n With the various effects of metabolic diseases such as hyperthyroidism, hypothyroidism, etc. \n\n Stroke, myocardial infarction and other serious cardiovascular and cerebrovascular diseases occurred within 3 months. \n\n Serum creatinine level higher than 176.8 mmol/L \n\n Dementia or severe cognitive decline \n\n Unable to do a long-term follow-up or do not agree to participate in this trial.",
+      "brief_summary": "The home monitoring of automated measuring devices may improve the management of the chronic diseases, and may decrease the incidence of fatal disease. The investigators conducted a small sample and short observation time research to explore the feasibility to carry out later large-scale research."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Type 2 Diabetes Mellitus": {
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "Type 2 diabetes mellitus",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1,
+    "Type 2 Diabetes Mellitus": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Type 2 Diabetes Mellitus": {
+      "disease": "Type 2 Diabetes Mellitus",
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "Type 2 diabetes mellitus"
+    }
+  }
+}

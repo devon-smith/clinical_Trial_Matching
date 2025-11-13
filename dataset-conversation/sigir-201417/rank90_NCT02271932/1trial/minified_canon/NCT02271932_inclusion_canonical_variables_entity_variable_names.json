@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_abscess_now",
+  "patient_has_finding_of_appendicitis_now",
+  "patient_has_undergone_computerized_axial_tomography_inthehistory",
+  "patient_has_undergone_ultrasonography_inthehistory",
+  "patient_has_undergone_computerized_axial_tomography_now",
+  "patient_has_undergone_ultrasonography_now",
+  "patient_white_blood_cell_count_value_recorded_now_withunit_per_microliter",
+  "patient_has_finding_of_abdominal_pain_now",
+  "patient_has_finding_of_abdominal_pain_inthehistory"
+]

@@ -1,0 +1,19 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_acute_febrile_mucocutaneous_lymph_node_syndrome_now",
+  "patient_has_undergone_administration_of_immunoglobulin_by_intravenous_route_now",
+  "patient_body_temperature_value_recorded_now_withunit_celsius",
+  "patient_body_temperature_value_recorded_now_withunit_fahrenheit",
+  "patient_has_undergone_administration_of_immunoglobulin_by_intravenous_route_inthehistory",
+  "patient_has_undergone_echocardiography_inthehistory",
+  "patient_fever_value_recorded_inthehistory_withunit_days",
+  "patient_has_finding_of_fever_inthehistory",
+  "patient_sex_is_female_now",
+  "patient_sex_is_male_now",
+  "patient_has_childbearing_potential_now",
+  "patient_has_finding_of_contraception_now",
+  "patient_has_finding_of_disorder_due_to_infection_now",
+  "patient_has_undergone_infusion_inthehistory",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_has_undergone_plain_chest_x_ray_inthehistory"
+]

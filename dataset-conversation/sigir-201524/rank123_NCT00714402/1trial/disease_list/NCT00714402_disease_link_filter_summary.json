@@ -1,0 +1,198 @@
+{
+  "generated": "2025-10-20T23:45:14",
+  "trial_id": "NCT00714402",
+  "contextual": {
+    "_id": "NCT00714402",
+    "title": "Procalcitonin Level and Kinetics in Children With Bacterial Infections",
+    "text": "Summary: The purposes of this study are:~To determine whether procalcitonin level at admission of pediatric patients with bacterial infections can be used as a marker for prediction of defervescence and hospitalization length~To examine the kinetics of procalcitonin in pediatric patients with bacterial infections and persistent fever\nInclusion criteria: inclusion criteria: \n\n Positive blood, urine, synovial, bone, pleural effusion, abscess or CSF culture \n\n Cellulitis, lobar pneumonia, osteomyelitis,\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Procalcitonin Level and Kinetics in Children With Bacterial Infections",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Bacterial Infections', 'Bacteremia', 'Meningitis', 'Urinary Tract Infection', 'Mastoiditis', 'Lobar Pneumonia', 'Septic Arthritis', 'Cellulitis', 'Osteomyelitis']",
+      "diseases_list": [
+        "Bacterial Infections",
+        "Bacteremia",
+        "Meningitis",
+        "Urinary Tract Infection",
+        "Mastoiditis",
+        "Lobar Pneumonia",
+        "Septic Arthritis",
+        "Cellulitis",
+        "Osteomyelitis"
+      ],
+      "enrollment": "50.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Positive blood, urine, synovial, bone, pleural effusion, abscess or CSF culture \n\n Cellulitis, lobar pneumonia, osteomyelitis,",
+      "exclusion_criteria": "",
+      "brief_summary": "The purposes of this study are:~To determine whether procalcitonin level at admission of pediatric patients with bacterial infections can be used as a marker for prediction of defervescence and hospitalization length~To examine the kinetics of procalcitonin in pediatric patients with bacterial infections and persistent fever"
+    }
+  },
+  "linked_result": {
+    "Bacterial Infections": {
+      "conceptId": "87628006",
+      "preferred_term": "Bacterial infectious disease",
+      "fully_specified_name": "Bacterial infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections by bacteria, general or unspecified.",
+      "best_match_term": "Bacterial infection",
+      "match_reason": "Exact"
+    },
+    "Bacteremia": {
+      "conceptId": "5758002",
+      "preferred_term": "Bacteremia",
+      "fully_specified_name": "Bacteremia (finding)",
+      "type": "Clinical finding",
+      "definition": "The presence of viable bacteria circulating in the blood. Fever, chills, tachycardia, and tachypnea are common acute manifestations of bacteremia. The majority of cases are seen in already hospitalized patients, most of whom have underlying diseases or procedures which render their bloodstreams susceptible to invasion.",
+      "best_match_term": "Bacteremia",
+      "match_reason": "Exact"
+    },
+    "Meningitis": {
+      "conceptId": "7180009",
+      "preferred_term": "Meningitis",
+      "fully_specified_name": "Meningitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the coverings of the brain and/or spinal cord, which consist of the PIA MATER; ARACHNOID; and DURA MATER. Infections (viral, bacterial, and fungal) are the most common causes of this condition, but subarachnoid hemorrhage (HEMORRHAGES, SUBARACHNOID), chemical irritation (chemical MENINGITIS), granulomatous conditions, neoplastic conditions (CARCINOMATOUS MENINGITIS), and other inflammatory conditions may produce this syndrome. (From Joynt, Clinical Neurology, 1994, Ch24, p6)",
+      "best_match_term": "Meningitis",
+      "match_reason": "Exact"
+    },
+    "Urinary Tract Infection": {
+      "conceptId": "68566005",
+      "preferred_term": "Urinary tract infectious disease",
+      "fully_specified_name": "Urinary tract infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.",
+      "best_match_term": "Urinary tract infection",
+      "match_reason": "Exact"
+    },
+    "Mastoiditis": {
+      "conceptId": "52404001",
+      "preferred_term": "Mastoiditis",
+      "fully_specified_name": "Mastoiditis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the honeycomb-like MASTOID BONE in the skull just behind the ear. It is usually a complication of OTITIS MEDIA.",
+      "best_match_term": "Mastoiditis",
+      "match_reason": "Exact"
+    },
+    "Lobar Pneumonia": {
+      "conceptId": "278516003",
+      "preferred_term": "Lobar pneumonia",
+      "fully_specified_name": "Lobar pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Lobar pneumonia",
+      "match_reason": "Exact"
+    },
+    "Septic Arthritis": {
+      "conceptId": "372938004",
+      "preferred_term": "Acute suppurative arthritis due to bacteria",
+      "fully_specified_name": "Acute suppurative arthritis caused by bacteria (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Septic arthritis",
+      "match_reason": "Exact"
+    },
+    "Cellulitis": {
+      "conceptId": "128045006",
+      "preferred_term": "Cellulitis",
+      "fully_specified_name": "Cellulitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acute, diffuse, and suppurative inflammation of loose connective tissue, particularly the deep subcutaneous tissues, and sometimes muscle, which is most commonly seen as a result of infection of a wound, ulcer, or other skin lesions.",
+      "best_match_term": "Cellulitis",
+      "match_reason": "Exact"
+    },
+    "Osteomyelitis": {
+      "conceptId": "60168000",
+      "preferred_term": "Osteomyelitis",
+      "fully_specified_name": "Osteomyelitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of the bone as a result of infection. It may be caused by a variety of infectious agents, especially pyogenic (PUS - producing) BACTERIA.",
+      "best_match_term": "Osteomyelitis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Bacterial Infections": 1,
+    "Bacteremia": 1,
+    "Meningitis": 1,
+    "Urinary Tract Infection": 1,
+    "Mastoiditis": 1,
+    "Lobar Pneumonia": 1,
+    "Cellulitis": 1,
+    "Osteomyelitis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Bacterial Infections": {
+      "disease": "Bacterial Infections",
+      "conceptId": "87628006",
+      "preferred_term": "Bacterial infectious disease",
+      "fully_specified_name": "Bacterial infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections by bacteria, general or unspecified.",
+      "best_match_term": "Bacterial infection"
+    },
+    "Bacteremia": {
+      "disease": "Bacteremia",
+      "conceptId": "5758002",
+      "preferred_term": "Bacteremia",
+      "fully_specified_name": "Bacteremia (finding)",
+      "type": "Clinical finding",
+      "definition": "The presence of viable bacteria circulating in the blood. Fever, chills, tachycardia, and tachypnea are common acute manifestations of bacteremia. The majority of cases are seen in already hospitalized patients, most of whom have underlying diseases or procedures which render their bloodstreams susceptible to invasion.",
+      "best_match_term": "Bacteremia"
+    },
+    "Meningitis": {
+      "disease": "Meningitis",
+      "conceptId": "7180009",
+      "preferred_term": "Meningitis",
+      "fully_specified_name": "Meningitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the coverings of the brain and/or spinal cord, which consist of the PIA MATER; ARACHNOID; and DURA MATER. Infections (viral, bacterial, and fungal) are the most common causes of this condition, but subarachnoid hemorrhage (HEMORRHAGES, SUBARACHNOID), chemical irritation (chemical MENINGITIS), granulomatous conditions, neoplastic conditions (CARCINOMATOUS MENINGITIS), and other inflammatory conditions may produce this syndrome. (From Joynt, Clinical Neurology, 1994, Ch24, p6)",
+      "best_match_term": "Meningitis"
+    },
+    "Urinary Tract Infection": {
+      "disease": "Urinary Tract Infection",
+      "conceptId": "68566005",
+      "preferred_term": "Urinary tract infectious disease",
+      "fully_specified_name": "Urinary tract infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.",
+      "best_match_term": "Urinary tract infection"
+    },
+    "Mastoiditis": {
+      "disease": "Mastoiditis",
+      "conceptId": "52404001",
+      "preferred_term": "Mastoiditis",
+      "fully_specified_name": "Mastoiditis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the honeycomb-like MASTOID BONE in the skull just behind the ear. It is usually a complication of OTITIS MEDIA.",
+      "best_match_term": "Mastoiditis"
+    },
+    "Lobar Pneumonia": {
+      "disease": "Lobar Pneumonia",
+      "conceptId": "278516003",
+      "preferred_term": "Lobar pneumonia",
+      "fully_specified_name": "Lobar pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Lobar pneumonia"
+    },
+    "Cellulitis": {
+      "disease": "Cellulitis",
+      "conceptId": "128045006",
+      "preferred_term": "Cellulitis",
+      "fully_specified_name": "Cellulitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acute, diffuse, and suppurative inflammation of loose connective tissue, particularly the deep subcutaneous tissues, and sometimes muscle, which is most commonly seen as a result of infection of a wound, ulcer, or other skin lesions.",
+      "best_match_term": "Cellulitis"
+    },
+    "Osteomyelitis": {
+      "disease": "Osteomyelitis",
+      "conceptId": "60168000",
+      "preferred_term": "Osteomyelitis",
+      "fully_specified_name": "Osteomyelitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of the bone as a result of infection. It may be caused by a variety of infectious agents, especially pyogenic (PUS - producing) BACTERIA.",
+      "best_match_term": "Osteomyelitis"
+    }
+  }
+}

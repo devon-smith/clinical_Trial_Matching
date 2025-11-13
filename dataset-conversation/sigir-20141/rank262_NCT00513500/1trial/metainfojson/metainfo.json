@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT00513500",
+  "contextual": {
+    "_id": "NCT00513500",
+    "title": "Zambia Integrated Management of Malaria and Pneumonia Study",
+    "text": "Summary: The purpose of the study is to demonstrate the effectiveness and feasibility of community-based management of pneumonia and malaria by community health workers (CHWs) in a rural district of Zambia.\nInclusion criteria: inclusion criteria: \n\n Age between 6 months and 5 years \n\n Present with history of fever or reported fever \n\n Present with cough or difficult breathing \n\n \nExclusion criteria: : \n\n Age below 6 months and above 5 years \n\n Presence of signs and symptoms of severe illness",
+    "metadata": {
+      "brief_title": "Zambia Integrated Management of Malaria and Pneumonia Study",
+      "phase": "",
+      "drugs": "['Coartem and amoxicillin', 'Coartem']",
+      "drugs_list": [
+        "Coartem and amoxicillin",
+        "Coartem"
+      ],
+      "diseases": "['Pneumonia', 'Malaria']",
+      "diseases_list": [
+        "Pneumonia",
+        "Malaria"
+      ],
+      "enrollment": "3125.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age between 6 months and 5 years \n\n Present with history of fever or reported fever \n\n Present with cough or difficult breathing \n\n ",
+      "exclusion_criteria": ": \n\n Age below 6 months and above 5 years \n\n Presence of signs and symptoms of severe illness",
+      "brief_summary": "The purpose of the study is to demonstrate the effectiveness and feasibility of community-based management of pneumonia and malaria by community health workers (CHWs) in a rural district of Zambia."
+    }
+  }
+}

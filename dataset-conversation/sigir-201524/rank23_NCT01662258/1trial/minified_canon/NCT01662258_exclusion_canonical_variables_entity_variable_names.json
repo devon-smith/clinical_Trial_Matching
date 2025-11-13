@@ -1,0 +1,12 @@
+[
+  "patient_has_diagnosis_of_asplenia_now",
+  "patient_is_undergoing_chemotherapy_now",
+  "patient_is_taking_corticosteroid_and_corticosteroid_derivative_containing_product_now",
+  "patient_has_diagnosis_of_cystic_fibrosis_now",
+  "patient_has_diagnosis_of_human_immunodeficiency_virus_infection_now",
+  "patient_is_exposed_to_immunosuppressant_now",
+  "patient_has_diagnosis_of_neutropenia_now",
+  "patient_prednisone_containing_product_value_recorded_now_withunit_mg",
+  "patient_has_finding_of_transplant_present_now",
+  "patient_is_taking_tumor_necrosis_factor_alpha_inhibitor_containing_product_now"
+]

@@ -1,0 +1,158 @@
+{
+  "generated": "2025-10-22T21:08:47",
+  "trial_id": "NCT00053534",
+  "contextual": {
+    "_id": "NCT00053534",
+    "title": "Heart Failure in the Community",
+    "text": "Summary: To monitor trends in congestive heart failure in Olmsted County, Minnesota.\nInclusion criteria: No eligibility criteria\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Heart Failure in the Community",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Cardiovascular Diseases', 'Heart Diseases', 'Heart Failure', 'Coronary Disease', 'Diabetes Mellitus', 'Hypertension', 'Obesity']",
+      "diseases_list": [
+        "Cardiovascular Diseases",
+        "Heart Diseases",
+        "Heart Failure",
+        "Coronary Disease",
+        "Diabetes Mellitus",
+        "Hypertension",
+        "Obesity"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "No eligibility criteria",
+      "exclusion_criteria": "",
+      "brief_summary": "To monitor trends in congestive heart failure in Olmsted County, Minnesota."
+    }
+  },
+  "linked_result": {
+    "Cardiovascular Diseases": {
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease",
+      "match_reason": "Exact"
+    },
+    "Heart Diseases": {
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease",
+      "match_reason": "Exact"
+    },
+    "Heart Failure": {
+      "conceptId": "84114007",
+      "preferred_term": "Heart failure",
+      "fully_specified_name": "Heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure caused by dysfunction of the MYOCARDIUM, leading to defective cardiac emptying (contraction) or filling (relaxation).",
+      "best_match_term": "Heart failure",
+      "match_reason": "Exact"
+    },
+    "Coronary Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary heart disease",
+      "match_reason": "Exact"
+    },
+    "Diabetes Mellitus": {
+      "conceptId": "73211009",
+      "preferred_term": "Diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.",
+      "best_match_term": "Diabetes mellitus",
+      "match_reason": "Exact"
+    },
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cardiovascular Diseases": 1,
+    "Heart Diseases": 1,
+    "Heart Failure": 1,
+    "Diabetes Mellitus": 1,
+    "Hypertension": 1,
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cardiovascular Diseases": {
+      "disease": "Cardiovascular Diseases",
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease"
+    },
+    "Heart Diseases": {
+      "disease": "Heart Diseases",
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease"
+    },
+    "Heart Failure": {
+      "disease": "Heart Failure",
+      "conceptId": "84114007",
+      "preferred_term": "Heart failure",
+      "fully_specified_name": "Heart failure (disorder)",
+      "type": "Clinical finding",
+      "definition": "Heart failure caused by dysfunction of the MYOCARDIUM, leading to defective cardiac emptying (contraction) or filling (relaxation).",
+      "best_match_term": "Heart failure"
+    },
+    "Diabetes Mellitus": {
+      "disease": "Diabetes Mellitus",
+      "conceptId": "73211009",
+      "preferred_term": "Diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.",
+      "best_match_term": "Diabetes mellitus"
+    },
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

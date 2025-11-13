@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT01774240",
+  "contextual": {
+    "_id": "NCT01774240",
+    "title": "Incidence, Severity and Treatment of Delirium in Cardiac Surgery Patients: A Before-after Study",
+    "text": "Summary: Delirium is a common yet under diagnosed condition in hospitalized patients, and the incidence have not previously been described in Danish cardiac surgery patients. The present study seeks to describe the incidence and duration of delirium in this group of patients, before and after the introduction of standardized screening tool and a guideline for treatment of delirium after cardiac surgery.\nInclusion criteria: inclusion criteria: \n\n adult patients admitted for cardiac surgery at department of cardiothoracic surgery, Rigshospitalet, denmark \n\n \nExclusion criteria: : \n\n patients under age 18, \n\n patients that died within 24 hours after admission.",
+    "metadata": {
+      "brief_title": "Incidence, Severity and Treatment of Delirium in Cardiac Surgery Patients: A Before-after Study",
+      "phase": "",
+      "drugs": "['systematic screening and treatment of delirium']",
+      "drugs_list": [
+        "systematic screening and treatment of delirium"
+      ],
+      "diseases": "['Delirium']",
+      "diseases_list": [
+        "Delirium"
+      ],
+      "enrollment": "230.0",
+      "inclusion_criteria": "inclusion criteria: \n\n adult patients admitted for cardiac surgery at department of cardiothoracic surgery, Rigshospitalet, denmark \n\n ",
+      "exclusion_criteria": ": \n\n patients under age 18, \n\n patients that died within 24 hours after admission.",
+      "brief_summary": "Delirium is a common yet under diagnosed condition in hospitalized patients, and the incidence have not previously been described in Danish cardiac surgery patients. The present study seeks to describe the incidence and duration of delirium in this group of patients, before and after the introduction of standardized screening tool and a guideline for treatment of delirium after cardiac surgery."
+    }
+  }
+}

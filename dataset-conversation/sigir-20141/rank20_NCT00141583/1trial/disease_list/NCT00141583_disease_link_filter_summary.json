@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:27:48",
+  "trial_id": "NCT00141583",
+  "contextual": {
+    "_id": "NCT00141583",
+    "title": "The Renin-Angiotensin System in Essential Hypertension",
+    "text": "Summary: Although ACE Inhibitors and Angiotensin Receptor Blockers are effective blood pressure lowering agents, the exact mechanisms by which these agents lower BP are still not fully understood. This study aims to compare the blood pressure and hormonal responses (plasma renin activity and aldosterone) to the ACE inhibitor enalapril and ARB candesartan in individuals with mild essential hypertension.\nInclusion criteria: inclusion criteria: \n\n Essential Hypertension \n\n SBP 140-159 mmHg \n\n DBP 90-99 mmHg \n\n \nExclusion criteria: : \n\n Intolerance of or allergy to ACE Inhibitors or ARBS \n\n Pregnant or Breastfeeding \n\n Pre-menopausal women \n\n Uncontrolled cardiac or renal failure \n\n Diabetes mellitus",
+    "metadata": {
+      "brief_title": "The Renin-Angiotensin System in Essential Hypertension",
+      "phase": "",
+      "drugs": "['Enalapril 20 mg bd', 'Candesartan 8 mg bd']",
+      "drugs_list": [
+        "Enalapril 20 mg bd",
+        "Candesartan 8 mg bd"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "11.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Essential Hypertension \n\n SBP 140-159 mmHg \n\n DBP 90-99 mmHg \n\n ",
+      "exclusion_criteria": ": \n\n Intolerance of or allergy to ACE Inhibitors or ARBS \n\n Pregnant or Breastfeeding \n\n Pre-menopausal women \n\n Uncontrolled cardiac or renal failure \n\n Diabetes mellitus",
+      "brief_summary": "Although ACE Inhibitors and Angiotensin Receptor Blockers are effective blood pressure lowering agents, the exact mechanisms by which these agents lower BP are still not fully understood. This study aims to compare the blood pressure and hormonal responses (plasma renin activity and aldosterone) to the ACE inhibitor enalapril and ARB candesartan in individuals with mild essential hypertension."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

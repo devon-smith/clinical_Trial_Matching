@@ -1,0 +1,15 @@
+[
+  "patient_has_finding_of_esophageal_varices_now",
+  "patient_has_finding_of_esophageal_injury_inthehistory",
+  "patient_has_undergone_operation_on_esophagus_inthehistory",
+  "patient_platelet_count_finding_value_recorded_now_withunit_per_cubic_millimeter",
+  "patient_has_finding_of_thrombocytopenic_disorder_now",
+  "patient_has_finding_of_blood_coagulation_disorder_now",
+  "patient_international_normalized_ratio_value_recorded_now_withunit_ratio",
+  "patient_has_finding_of_pneumothorax_now",
+  "patient_is_pregnant_now",
+  "patient_has_diagnosis_of_acute_respiratory_distress_syndrome_now",
+  "patient_inspired_oxygen_concentration_value_recorded_now_withunit_unitless",
+  "patient_has_undergone_measurement_of_partial_pressure_of_oxygen_in_blood_now",
+  "patient_has_undergone_oxygenation_index_measurement_now_outcome_is_abnormal"
+]

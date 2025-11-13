@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-22T20:52:26",
+  "trial_id": "NCT02235389",
+  "contextual": {
+    "_id": "NCT02235389",
+    "title": "A Study of Pre-hospital Treatment of Acute Myocardial Infarction Based on Diagnosis by Interpretation of Remotely Acquired ECG and Thrombolysis With Accelerated Alteplase ( Actilyse®)",
+    "text": "Summary: The general aim of this study was to assess the feasibility of treating acute myocardial infarction (AMI) by physician-directed pre-hospital thrombosis, using accelerated alteplase (Actilyse®) and a diagnostic technique involving remote electrocardiogram (ECG) acquisition by paramedics\nInclusion criteria: inclusion criteria: \n\n Ischemic cardiac pain of >= 20 minutes and <= 6 hours \n\n Age 18 - 80 years \n\n Ability to give informed consent (witnessed verbal or written) \n\n Ability to follow protocol and comply with follow -up requirements \n\n \nExclusion criteria: : \n\n Current participation in another clinical trial \n\n Patient will be ineligible for pre hospital administration of actilyse if any of the following apply: \n\n Acute myocardial infarction (AMI) treated with a thrombolytic agent within the preceding 4 days \n\n BP (blood pressure) > 180/100 mmHg (on one measurement) \n\n Significant bleeding disorder within the past 6 months \n\n Major surgery, biopsy of a parenchymal organ, or significant trauma (including any trauma associated with the current AMI) within 3 months \n\n History of stroke, transient ischaemic attack, or central nervous system structural damage (e.g. neoplasm, aneurysm, intracranial surgery) \n\n Oral anticoagulation \n\n Recent (within 10 days) non - compressible vascular puncture \n\n Pregnancy (positive urine pregnancy test) or lactation, parturition within the previous 30 days, or female of childbearing potential not using adequate birth control (oral contraception) \n\n Severe liver disease, including hepatic failure, cirrhosis portal hypertension (oesophageal varices) and active hepatitis \n\n Diabetes with definite history of retinopathy \n\n Other serious illness (e.g. malignancy, active infection) \n\n Bacterial endocarditis / pericarditis \n\n Acute pancreatitis \n\n Documented ulcerative gastrointestinal disease during last 3 month, arterial aneurysms, arterial / venous malformations \n\n Any other condition that the investigator feels would pose a significant hazard to the subject if the investigational therapy was to be initiated \n\n Patients who are not excluded from thrombolytic therapy by the criteria above will, in addition, need to satisfy the following 'inclusion' criteria prior to the pre - hospital thrombolysis: \n\n 12 lead ECG criteria: ST segment elevation >= 0.1 mV in two contiguous electrocardiogram (ECG) standard leads indicative of AMI, or ST elevation >= 0.2 mV in two contiguous chest leads and all left bundle branch block (LBBB) with clinical indication of AMI",
+    "metadata": {
+      "brief_title": "A Study of Pre-hospital Treatment of Acute Myocardial Infarction Based on Diagnosis by Interpretation of Remotely Acquired ECG and Thrombolysis With Accelerated Alteplase ( Actilyse®)",
+      "phase": "",
+      "drugs": "['Alteplase (Actilyse)', 'Standard therapy']",
+      "drugs_list": [
+        "Alteplase (Actilyse)",
+        "Standard therapy"
+      ],
+      "diseases": "['Myocardial Infarction']",
+      "diseases_list": [
+        "Myocardial Infarction"
+      ],
+      "enrollment": "59.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Ischemic cardiac pain of >= 20 minutes and <= 6 hours \n\n Age 18 - 80 years \n\n Ability to give informed consent (witnessed verbal or written) \n\n Ability to follow protocol and comply with follow -up requirements \n\n ",
+      "exclusion_criteria": ": \n\n Current participation in another clinical trial \n\n Patient will be ineligible for pre hospital administration of actilyse if any of the following apply: \n\n Acute myocardial infarction (AMI) treated with a thrombolytic agent within the preceding 4 days \n\n BP (blood pressure) > 180/100 mmHg (on one measurement) \n\n Significant bleeding disorder within the past 6 months \n\n Major surgery, biopsy of a parenchymal organ, or significant trauma (including any trauma associated with the current AMI) within 3 months \n\n History of stroke, transient ischaemic attack, or central nervous system structural damage (e.g. neoplasm, aneurysm, intracranial surgery) \n\n Oral anticoagulation \n\n Recent (within 10 days) non - compressible vascular puncture \n\n Pregnancy (positive urine pregnancy test) or lactation, parturition within the previous 30 days, or female of childbearing potential not using adequate birth control (oral contraception) \n\n Severe liver disease, including hepatic failure, cirrhosis portal hypertension (oesophageal varices) and active hepatitis \n\n Diabetes with definite history of retinopathy \n\n Other serious illness (e.g. malignancy, active infection) \n\n Bacterial endocarditis / pericarditis \n\n Acute pancreatitis \n\n Documented ulcerative gastrointestinal disease during last 3 month, arterial aneurysms, arterial / venous malformations \n\n Any other condition that the investigator feels would pose a significant hazard to the subject if the investigational therapy was to be initiated \n\n Patients who are not excluded from thrombolytic therapy by the criteria above will, in addition, need to satisfy the following 'inclusion' criteria prior to the pre - hospital thrombolysis: \n\n 12 lead ECG criteria: ST segment elevation >= 0.1 mV in two contiguous electrocardiogram (ECG) standard leads indicative of AMI, or ST elevation >= 0.2 mV in two contiguous chest leads and all left bundle branch block (LBBB) with clinical indication of AMI",
+      "brief_summary": "The general aim of this study was to assess the feasibility of treating acute myocardial infarction (AMI) by physician-directed pre-hospital thrombosis, using accelerated alteplase (Actilyse®) and a diagnostic technique involving remote electrocardiogram (ECG) acquisition by paramedics"
+    }
+  },
+  "linked_result": {
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Myocardial Infarction": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_hereditary_disorder_of_immune_system_now",
+  "patient_has_finding_of_immunodeficiency_disorder_now",
+  "patient_is_undergoing_immunosuppressive_therapy_now",
+  "patient_has_finding_of_patient_immunocompromised_now",
+  "patient_has_undergone_solid_organ_transplant_inthehistory",
+  "patient_has_undergone_transplantation_of_bone_marrow_inthehistory",
+  "patient_is_pregnant_now"
+]

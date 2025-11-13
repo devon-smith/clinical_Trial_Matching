@@ -1,0 +1,109 @@
+{
+  "generated": "2025-10-22T21:17:04",
+  "trial_id": "NCT00005572",
+  "contextual": {
+    "_id": "NCT00005572",
+    "title": "A Comparison of HIV-Infected Patients With and Without Opportunistic (AIDS-Related) Infection",
+    "text": "Summary: The purpose of this study is to understand how changes in the immune system of HIV-infected patients affect their risk for 3 serious infections: Pneumocystis carinii pneumonia (PCP), cytomegalovirus (CMV) retinitis, or CMV organ disease. The purpose also is to understand how anti-HIV medicines may improve the immune system in these patients. (This purpose reflects a change in the AIDS-related [opportunistic] infections studied.) Presently, HIV-infected patients who have had PCP or CMV disease stay on lifelong therapy to prevent the return of the disease. This study is trying to see if a special lab test can help identify which patients can stop this preventive therapy without having another episode of PCP or CMV organ disease. (This rationale reflects a change in the AIDS-related infections studied.)\nInclusion criteria: inclusion criteria \n\n Patients may be eligible if they: \n\n Are HIV positive (except Group 3b). \n\n Are at least 13 years old (consent of parent or guardian required if under 18). \n\n Patients may be eligible for Group 1a if they: \n\n Have acute PCP. \n\n Have never received potent anti-HIV drugs or have not received potent anti-HIV drugs for at least 8 weeks prior to getting PCP. \n\n Have a CD4 cell count below 200 cells/mm3. \n\n Patients may be eligible for Group 1b if they: \n\n Have CMV disease. \n\n Meet 1 of the following requirements: (1) have never received potent anti-HIV drug containing a protease inhibitor (PI) or a nonnucleoside reverse transcriptase inhibitor (NNRTI), (2) have not received potent anti-HIV drugs for at least 8 weeks before getting CMV disease, or (3) have been on stable anti-HIV therapy for at least 3 months with no new anti-HIV drugs started before CMV disease returned. \n\n Have a CD4 cell count below 50 cells/mm3 if patient received anti-HIV drugs at any time in the past. \n\n Have an eye exam (patients with CMV retinitis). \n\n Patients may be eligible for Group 2a if they: \n\n Have a history of PCP. \n\n Are currently receiving potent anti-HIV drugs. \n\n Have been enrolled in ACTG 888. \n\n Have been off drugs to prevent PCP for at least 48 weeks prior to study entry. \n\n Have not developed PCP while on potent anti-HIV drugs. \n\n Have a CD4 cell count above 200 cells/mm3. \n\n Patients may be eligible for Group 2b if they: \n\n Have a history of CMV retinitis. \n\n Are currently receiving potent anti-HIV drugs. \n\n Have been off drugs to prevent CMV retinitis for at least 12 weeks prior to study entry. \n\n Have not developed CMV retinitis while on potent anti-HIV drugs. \n\n Have a CD4 cell count above 50 cells/mm3. \n\n Have an eye exam confirming lack of CMV retinitis activity within 28 days before study entry. \n\n Patients may be eligible for Group 3a if they: \n\n Are CMV-positive. \n\n Have never had PCP or CMV disease. \n\n Have never had a CD4 count below 200 cells/mm3. \n\n Have never taken medications to prevent PCP or CMV disease. \n\n Patients may be eligible for Group 3b if they: \n\n Are HIV-negative. \n\n Are CMV-positive. \n\n (The lay eligibility section reflects changes in the AIDS-related infections treated.) \n\n \nExclusion criteria:  \n\n Patients will not be eligible if they: \n\n Have received a vaccine within 14 days of study entry or plan to receive one during the study. \n\n Have taken GM-CSF, any investigational drugs, or any drugs that might affect the immune system within 30 days of study entry or plan to take 1 of these medications during the study. (Prednisone for patients with PCP and G-CSF is allowed.) \n\n Abuse drugs.",
+    "metadata": {
+      "brief_title": "A Comparison of HIV-Infected Patients With and Without Opportunistic (AIDS-Related) Infection",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Cytomegalovirus Infections', 'Cytomegalovirus Retinitis', 'Pneumonia, Pneumocystis Carinii', 'HIV Infections']",
+      "diseases_list": [
+        "Cytomegalovirus Infections",
+        "Cytomegalovirus Retinitis",
+        "Pneumonia",
+        "Pneumocystis Carinii",
+        "HIV Infections"
+      ],
+      "enrollment": "90.0",
+      "inclusion_criteria": "inclusion criteria \n\n Patients may be eligible if they: \n\n Are HIV positive (except Group 3b). \n\n Are at least 13 years old (consent of parent or guardian required if under 18). \n\n Patients may be eligible for Group 1a if they: \n\n Have acute PCP. \n\n Have never received potent anti-HIV drugs or have not received potent anti-HIV drugs for at least 8 weeks prior to getting PCP. \n\n Have a CD4 cell count below 200 cells/mm3. \n\n Patients may be eligible for Group 1b if they: \n\n Have CMV disease. \n\n Meet 1 of the following requirements: (1) have never received potent anti-HIV drug containing a protease inhibitor (PI) or a nonnucleoside reverse transcriptase inhibitor (NNRTI), (2) have not received potent anti-HIV drugs for at least 8 weeks before getting CMV disease, or (3) have been on stable anti-HIV therapy for at least 3 months with no new anti-HIV drugs started before CMV disease returned. \n\n Have a CD4 cell count below 50 cells/mm3 if patient received anti-HIV drugs at any time in the past. \n\n Have an eye exam (patients with CMV retinitis). \n\n Patients may be eligible for Group 2a if they: \n\n Have a history of PCP. \n\n Are currently receiving potent anti-HIV drugs. \n\n Have been enrolled in ACTG 888. \n\n Have been off drugs to prevent PCP for at least 48 weeks prior to study entry. \n\n Have not developed PCP while on potent anti-HIV drugs. \n\n Have a CD4 cell count above 200 cells/mm3. \n\n Patients may be eligible for Group 2b if they: \n\n Have a history of CMV retinitis. \n\n Are currently receiving potent anti-HIV drugs. \n\n Have been off drugs to prevent CMV retinitis for at least 12 weeks prior to study entry. \n\n Have not developed CMV retinitis while on potent anti-HIV drugs. \n\n Have a CD4 cell count above 50 cells/mm3. \n\n Have an eye exam confirming lack of CMV retinitis activity within 28 days before study entry. \n\n Patients may be eligible for Group 3a if they: \n\n Are CMV-positive. \n\n Have never had PCP or CMV disease. \n\n Have never had a CD4 count below 200 cells/mm3. \n\n Have never taken medications to prevent PCP or CMV disease. \n\n Patients may be eligible for Group 3b if they: \n\n Are HIV-negative. \n\n Are CMV-positive. \n\n (The lay eligibility section reflects changes in the AIDS-related infections treated.) \n\n ",
+      "exclusion_criteria": " \n\n Patients will not be eligible if they: \n\n Have received a vaccine within 14 days of study entry or plan to receive one during the study. \n\n Have taken GM-CSF, any investigational drugs, or any drugs that might affect the immune system within 30 days of study entry or plan to take 1 of these medications during the study. (Prednisone for patients with PCP and G-CSF is allowed.) \n\n Abuse drugs.",
+      "brief_summary": "The purpose of this study is to understand how changes in the immune system of HIV-infected patients affect their risk for 3 serious infections: Pneumocystis carinii pneumonia (PCP), cytomegalovirus (CMV) retinitis, or CMV organ disease. The purpose also is to understand how anti-HIV medicines may improve the immune system in these patients. (This purpose reflects a change in the AIDS-related [opportunistic] infections studied.) Presently, HIV-infected patients who have had PCP or CMV disease stay on lifelong therapy to prevent the return of the disease. This study is trying to see if a special lab test can help identify which patients can stop this preventive therapy without having another episode of PCP or CMV organ disease. (This rationale reflects a change in the AIDS-related infections studied.)"
+    }
+  },
+  "linked_result": {
+    "Cytomegalovirus Infections": {
+      "conceptId": "28944009",
+      "preferred_term": "Cytomegalovirus infection",
+      "fully_specified_name": "Cytomegalovirus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection with CYTOMEGALOVIRUS, characterized by enlarged cells bearing intranuclear inclusions. Infection may be in almost any organ, but the salivary glands are the most common site in children, as are the lungs in adults.",
+      "best_match_term": "Cytomegalovirus infection",
+      "match_reason": "Exact"
+    },
+    "Cytomegalovirus Retinitis": {
+      "conceptId": "22455005",
+      "preferred_term": "Cytomegaloviral retinitis",
+      "fully_specified_name": "Cytomegaloviral retinitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the retina by cytomegalovirus characterized by retinal necrosis, hemorrhage, vessel sheathing, and retinal edema. Cytomegalovirus retinitis is a major opportunistic infection in AIDS patients and can cause blindness.",
+      "best_match_term": "Cytomegalovirus retinitis",
+      "match_reason": "Exact"
+    },
+    "Pneumonia, Pneumocystis Carinii": {
+      "conceptId": "415125002",
+      "preferred_term": "Pneumocystosis pneumonia",
+      "fully_specified_name": "Pneumocystosis jirovecii pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A pulmonary disease in humans occurring in immunodeficient or malnourished patients or infants, characterized by DYSPNEA, tachypnea, and HYPOXEMIA. Pneumocystis pneumonia is a frequently seen opportunistic infection in AIDS. It is caused by the fungus PNEUMOCYSTIS JIROVECII. The disease is also found in other MAMMALS where it is caused by related species of Pneumocystis.",
+      "best_match_term": "PCP - Pneumocystis pneumonia",
+      "match_reason": "Exact"
+    },
+    "HIV Infections": {
+      "conceptId": "86406008",
+      "preferred_term": "Human immunodeficiency virus infection",
+      "fully_specified_name": "Human immunodeficiency virus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Includes the spectrum of human immunodeficiency virus infections that range from asymptomatic seropositivity, thru AIDS-related complex (ARC), to acquired immunodeficiency syndrome (AIDS).",
+      "best_match_term": "HIV infection",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cytomegalovirus Infections": 1,
+    "Cytomegalovirus Retinitis": 1,
+    "Pneumonia, Pneumocystis Carinii": 1,
+    "HIV Infections": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cytomegalovirus Infections": {
+      "disease": "Cytomegalovirus Infections",
+      "conceptId": "28944009",
+      "preferred_term": "Cytomegalovirus infection",
+      "fully_specified_name": "Cytomegalovirus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection with CYTOMEGALOVIRUS, characterized by enlarged cells bearing intranuclear inclusions. Infection may be in almost any organ, but the salivary glands are the most common site in children, as are the lungs in adults.",
+      "best_match_term": "Cytomegalovirus infection"
+    },
+    "Cytomegalovirus Retinitis": {
+      "disease": "Cytomegalovirus Retinitis",
+      "conceptId": "22455005",
+      "preferred_term": "Cytomegaloviral retinitis",
+      "fully_specified_name": "Cytomegaloviral retinitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the retina by cytomegalovirus characterized by retinal necrosis, hemorrhage, vessel sheathing, and retinal edema. Cytomegalovirus retinitis is a major opportunistic infection in AIDS patients and can cause blindness.",
+      "best_match_term": "Cytomegalovirus retinitis"
+    },
+    "Pneumonia, Pneumocystis Carinii": {
+      "disease": "Pneumonia, Pneumocystis Carinii",
+      "conceptId": "415125002",
+      "preferred_term": "Pneumocystosis pneumonia",
+      "fully_specified_name": "Pneumocystosis jirovecii pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A pulmonary disease in humans occurring in immunodeficient or malnourished patients or infants, characterized by DYSPNEA, tachypnea, and HYPOXEMIA. Pneumocystis pneumonia is a frequently seen opportunistic infection in AIDS. It is caused by the fungus PNEUMOCYSTIS JIROVECII. The disease is also found in other MAMMALS where it is caused by related species of Pneumocystis.",
+      "best_match_term": "PCP - Pneumocystis pneumonia"
+    },
+    "HIV Infections": {
+      "disease": "HIV Infections",
+      "conceptId": "86406008",
+      "preferred_term": "Human immunodeficiency virus infection",
+      "fully_specified_name": "Human immunodeficiency virus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Includes the spectrum of human immunodeficiency virus infections that range from asymptomatic seropositivity, thru AIDS-related complex (ARC), to acquired immunodeficiency syndrome (AIDS).",
+      "best_match_term": "HIV infection"
+    }
+  }
+}

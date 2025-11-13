@@ -1,0 +1,17 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+  "patient_weight_decreased_value_recorded_inthepast6months_withunit_kilograms",
+  "patient_weight_increased_value_recorded_inthepast6months_withunit_kilograms",
+  "patient_body_fat_observable_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_smoker_inthepast6months",
+  "patient_has_finding_of_smoker_now",
+  "patient_has_finding_of_abnormal_blood_test_now",
+  "patient_has_taken_drug_or_medicament_inthepast3months",
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_finding_of_allergy_to_egg_protein_now",
+  "patient_has_finding_of_intolerance_to_lactose_now",
+  "patient_has_diagnosis_of_diverticular_disease_now",
+  "patient_has_diagnosis_of_diverticulitis_now"
+]

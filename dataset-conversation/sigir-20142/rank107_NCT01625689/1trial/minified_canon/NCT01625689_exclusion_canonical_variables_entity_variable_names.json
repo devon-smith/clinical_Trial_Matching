@@ -1,0 +1,22 @@
+[
+  "patient_has_diagnosis_of_chromosomal_disorder_now",
+  "patient_has_diagnosis_of_complete_trisomy_21_syndrome_now",
+  "patient_has_diagnosis_of_disorder_of_nervous_system_now",
+  "patient_has_diagnosis_of_tuberculosis_now",
+  "patient_has_finding_of_chromosomal_disorder_now",
+  "patient_has_finding_of_complete_trisomy_21_syndrome_now",
+  "patient_has_finding_of_disorder_of_nervous_system_now",
+  "patient_has_finding_of_tuberculosis_now",
+  "patient_is_exposed_to_corticosteroid_and_corticosteroid_derivative_inthepast2weeks",
+  "patient_has_finding_of_allergy_to_egg_protein_inthehistory",
+  "patient_has_hypersensitivity_to_chicken_serum_protein_inthehistory",
+  "patient_has_hypersensitivity_to_gelatin_inthehistory",
+  "patient_has_undergone_influenza_vaccination_inthehistory",
+  "patient_has_hypersensitivity_to_lactalbumin_inthehistory",
+  "patient_has_hypersensitivity_to_sorbitol_inthehistory",
+  "patient_is_undergoing_aspirin_therapy_inthepast2weeks",
+  "patient_is_undergoing_aspirin_therapy_now",
+  "patient_is_undergoing_active_immunization_now",
+  "patient_has_undergone_clinical_trial_inthehistory",
+  "patient_is_undergoing_clinical_trial_now"
+]

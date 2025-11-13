@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT00461305",
+  "contextual": {
+    "_id": "NCT00461305",
+    "title": "Safety Study of Ethinylestradiol/Drospirenone in Dysmenorrhea",
+    "text": "Summary: The purpose of this study is to investigate efficacy of ethinylestradiol for intracyclic bleeding profile in patients with dysmenorrhea and to investigate the long term safety\nInclusion criteria: inclusion criteria: \n\n Patients aged 20 years or older at obtaining informed consent \n\n Patients having the normal menstrual cycle (25 to 38 days) in the latest two menses before the final enrollment \n\n Patients having a total dysmenorrheal score of at least 3 points in twice of the latest menstruation before the final enrollment \n\n \nExclusion criteria: : \n\n Patients with ovarian chocolate cysts \n\n Patients with fibroid needed to be treated \n\n Patients with estrogen-dependent tumors and patients with cervical cancer or suspected cervical cancer \n\n Patients with undiagnosed abnormal vaginal bleeding \n\n Patients with thrombophlebitis, pulmonary embolism, cerebrovascular disease, or coronary artery disease or a history of those diseases \n\n Patients aged 35 years or older who smoke at least 15 cigarettes per day \n\n Patients with migraine accompanied by prodromata \n\n Patients with pulmonary hypertension or valvular heart disease \n\n Patients who are regularly taking nutritional products that contain St. John's Wort \n\n Patients who underwent surgical treatment for endometriosis within 2 months prior to screening \n\n Patients who may need to regularly use analgesics for therapeutic objectives other than relief from the pain of dysmenorrhea during this study (occasional use permitted)",
+    "metadata": {
+      "brief_title": "Safety Study of Ethinylestradiol/Drospirenone in Dysmenorrhea",
+      "phase": "Phase 2; Phase 3",
+      "drugs": "['DRSP 3 mg/EE 20 µg (13 cycles)', 'DRSP 3 mg/EE 30 µg (6 cycles)']",
+      "drugs_list": [
+        "DRSP 3 mg/EE 20 µg (13 cycles)",
+        "DRSP 3 mg/EE 30 µg (6 cycles)"
+      ],
+      "diseases": "['Dysmenorrhea']",
+      "diseases_list": [
+        "Dysmenorrhea"
+      ],
+      "enrollment": "420.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients aged 20 years or older at obtaining informed consent \n\n Patients having the normal menstrual cycle (25 to 38 days) in the latest two menses before the final enrollment \n\n Patients having a total dysmenorrheal score of at least 3 points in twice of the latest menstruation before the final enrollment \n\n ",
+      "exclusion_criteria": ": \n\n Patients with ovarian chocolate cysts \n\n Patients with fibroid needed to be treated \n\n Patients with estrogen-dependent tumors and patients with cervical cancer or suspected cervical cancer \n\n Patients with undiagnosed abnormal vaginal bleeding \n\n Patients with thrombophlebitis, pulmonary embolism, cerebrovascular disease, or coronary artery disease or a history of those diseases \n\n Patients aged 35 years or older who smoke at least 15 cigarettes per day \n\n Patients with migraine accompanied by prodromata \n\n Patients with pulmonary hypertension or valvular heart disease \n\n Patients who are regularly taking nutritional products that contain St. John's Wort \n\n Patients who underwent surgical treatment for endometriosis within 2 months prior to screening \n\n Patients who may need to regularly use analgesics for therapeutic objectives other than relief from the pain of dysmenorrhea during this study (occasional use permitted)",
+      "brief_summary": "The purpose of this study is to investigate efficacy of ethinylestradiol for intracyclic bleeding profile in patients with dysmenorrhea and to investigate the long term safety"
+    }
+  }
+}

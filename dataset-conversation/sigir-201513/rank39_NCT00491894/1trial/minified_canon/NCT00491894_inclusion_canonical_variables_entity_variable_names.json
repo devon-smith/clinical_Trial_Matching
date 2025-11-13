@@ -1,0 +1,12 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_weight_value_recorded_now_withunit_kilograms",
+  "patient_has_diagnosis_of_cerebral_palsy_now",
+  "patient_has_diagnosis_of_disorder_of_nervous_system_now",
+  "patient_has_diagnosis_of_intellectual_disability_now",
+  "patient_has_diagnosis_of_neurological_deficit_now",
+  "patient_has_finding_of_dribbling_from_mouth_now",
+  "patient_has_finding_of_contraception_now"
+]

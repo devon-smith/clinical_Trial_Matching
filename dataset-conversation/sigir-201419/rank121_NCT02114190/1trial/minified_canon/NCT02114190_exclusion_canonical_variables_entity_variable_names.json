@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_has_diagnosis_of_type_1_diabetes_mellitus_inthehistory",
+  "patient_has_diagnosis_of_type_2_diabetes_mellitus_inthehistory",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_undergoing_therapeutic_procedure_now",
+  "patient_is_exposed_to_steroid_now",
+  "patient_has_finding_of_weight_increased_now",
+  "patient_is_taking_anti_psychotic_agent_now",
+  "patient_has_finding_of_weight_decreased_inthepast6months"
+]

@@ -1,0 +1,20 @@
+{
+  "_id": "NCT02467959",
+  "title": "Diagnostic Accuracy of Emergency Physician Performed Bedside Ultrasound in Suspected Acute Appendicitis",
+  "text": "Summary: The aim of the study is to evaluate the diagnostic yield and accuracy of bedside emergency physician performed ultrasound in the diagnosis of acute appendicitis.\nInclusion criteria: inclusion criteria: \n\n Patient presented with the complaint of right lower abdominal pain \n\n Suspected acute appendicitis \n\n \nExclusion criteria: : \n\n Flank pain \n\n Previous appendectomy \n\n Pregnancy \n\n Unstable vital signs \n\n Frank peritonitis \n\n US performed before EP's examination",
+  "metadata": {
+    "brief_title": "Diagnostic Accuracy of Emergency Physician Performed Bedside Ultrasound in Suspected Acute Appendicitis",
+    "phase": "",
+    "drugs": "",
+    "drugs_list": [],
+    "diseases": "['Acute Abdomen', 'Acute Appendicitis']",
+    "diseases_list": [
+      "Acute Abdomen",
+      "Acute Appendicitis"
+    ],
+    "enrollment": "250.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Patient presented with the complaint of right lower abdominal pain \n\n Suspected acute appendicitis \n\n ",
+    "exclusion_criteria": ": \n\n Flank pain \n\n Previous appendectomy \n\n Pregnancy \n\n Unstable vital signs \n\n Frank peritonitis \n\n US performed before EP's examination",
+    "brief_summary": "The aim of the study is to evaluate the diagnostic yield and accuracy of bedside emergency physician performed ultrasound in the diagnosis of acute appendicitis."
+  }
+}

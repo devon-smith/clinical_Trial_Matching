@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01013662",
+  "contextual": {
+    "_id": "NCT01013662",
+    "title": "Lipid Profile in Patients With Severe Sepsis or Septic Shock Under Strict or Liberal Glycemic Control",
+    "text": "Summary: Study of the lipid metabolism under glycemic control in septic patients who got an university 14 bed ICU.~Hypothesis: establish a relationship between lipid metabolism alterations and glycemic control or infusion of exogenous insulin\nInclusion criteria: inclusion criteria: \n\n all patients aged between 18 and 80 years old \n\n with the diagnostic of septic shock or severe sepsis \n\n \nExclusion criteria: : \n\n pregnants, \n\n previous diagnosis of any cancer, \n\n diagnosis of leptospirosis, \n\n diagnosis of aids.",
+    "metadata": {
+      "brief_title": "Lipid Profile in Patients With Severe Sepsis or Septic Shock Under Strict or Liberal Glycemic Control",
+      "phase": "",
+      "drugs": "['glycemic control']",
+      "drugs_list": [
+        "glycemic control"
+      ],
+      "diseases": "['Septic Shock', 'Sepsis']",
+      "diseases_list": [
+        "Septic Shock",
+        "Sepsis"
+      ],
+      "enrollment": "69.0",
+      "inclusion_criteria": "inclusion criteria: \n\n all patients aged between 18 and 80 years old \n\n with the diagnostic of septic shock or severe sepsis \n\n ",
+      "exclusion_criteria": ": \n\n pregnants, \n\n previous diagnosis of any cancer, \n\n diagnosis of leptospirosis, \n\n diagnosis of aids.",
+      "brief_summary": "Study of the lipid metabolism under glycemic control in septic patients who got an university 14 bed ICU.~Hypothesis: establish a relationship between lipid metabolism alterations and glycemic control or infusion of exogenous insulin"
+    }
+  }
+}

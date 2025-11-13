@@ -1,0 +1,12 @@
+[
+  "patient_has_diagnosis_of_chronic_renal_failure_now",
+  "patient_is_undergoing_dialysis_procedure_now",
+  "patient_has_diagnosis_of_acute_coronary_syndrome_inthepast12months",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_can_undergo_resuscitation_now",
+  "patient_has_finding_of_bleeding_now",
+  "patient_packed_red_blood_cells_value_recorded_now_withunit_unit",
+  "patient_has_undergone_transfusion_of_blood_product_now",
+  "patient_will_undergo_orthotopic_liver_transplant_inthefuture",
+  "patient_age_value_recorded_now_in_years"
+]

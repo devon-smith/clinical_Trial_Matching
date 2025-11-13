@@ -1,0 +1,54 @@
+# Improving Antibiotic Use in Hospitalized Patients With Pneumonia
+**NCT**: `NCT02264756`
+## Brief Summary
+The purpose of the study is to determine whether an antimicrobial stewardship program can decrease the length of hospital stay for patients with pneumonia. The antimicrobial stewardship program is run by a pharmacist and doctor with extensive training in managing infectious diseases. These two health care professionals are responsible for reviewing the records of patients admitted to hospital with pneumonia, and then making specific recommendations to the patient's attending physician about how to manage antibiotic treatment. These recommendations might include discontinuing the antibiotic, or changing the way antibiotics are delivered from intravenous form to pill form, among many other potential options. The attending physician considers whether these recommendations should be followed or rejected. The study has a control group of patients who are not reviewed by the antimicrobial stewardship team, and their length of hospital stay will be compared to the reviewed group of patients. Any differences between these two groups will be assumed to be due to the impact of the antimicrobial stewardship program. So far, no previous study has been able to demonstrate that an antimicrobial stewardship program can reduce the length of stay of patients admitted to hospital with pneumonia. This study has some important differences from previous studies that may make its conclusions more accurately reflect the true impact of antimicrobial stewardship programs. The most important difference is how the timing of the review is modelled in the analysis of the study results. Because the timing of the review varies between patients, with some patients being reviewed at earlier and some at later times, this subtle difference, if not accounted for in the analysis, can mask a true positive effect of the program on length of stay. The investigators study will account for this variation.
+## Inclusion Criteria
+inclusion criteria: 
+
+ have a positive Febrile Respiratory Illness (FRI) screen on admission to hospital (http://www.health.gov.on.ca/fr/public/programs/emu/sars/reports/dir_122303_acute_care_nonoutbreak.pdf) 
+
+ diagnosed with pneumonia by the admitting physician (Acute exacerbations of chronic obstructive lung disease are considered within the definition of pneumonia for the purposes of this study as they are commonly treated with the same antimicrobial regimens as patients with pneumonia) 
+
+ admitted to a medical ward
+## Exclusion Criteria
+: 
+
+ hospitalized for ≥ 48 consecutive hours in the preceding 3 months 
+
+ receiving immunosuppressants [defined as ≥ 40 mg prednisone daily (or steroid equivalent) for ≥ 2 weeks preceding hospitalization OR any other immunosuppressant used for systemic illness OR to prevent transplant rejection] 
+
+ neutropenic [defined as a polymorphonuclear count ≤ 0.5 x 109 cells/L] from any cause 
+
+ immunocompromised [defined as having leukemia, lymphoma, HIV with CD4 cell count ≤ 200, splenectomy or on cytotoxic chemotherapy] 
+
+ admitted to high acuity units such as intensive care units 
+
+ require mechanical ventilation, either non-invasive or invasive 
+
+ have a life expectancy of ≤ 3 months (palliative)
+## Full Text
+Summary: The purpose of the study is to determine whether an antimicrobial stewardship program can decrease the length of hospital stay for patients with pneumonia. The antimicrobial stewardship program is run by a pharmacist and doctor with extensive training in managing infectious diseases. These two health care professionals are responsible for reviewing the records of patients admitted to hospital with pneumonia, and then making specific recommendations to the patient's attending physician about how to manage antibiotic treatment. These recommendations might include discontinuing the antibiotic, or changing the way antibiotics are delivered from intravenous form to pill form, among many other potential options. The attending physician considers whether these recommendations should be followed or rejected. The study has a control group of patients who are not reviewed by the antimicrobial stewardship team, and their length of hospital stay will be compared to the reviewed group of patients. Any differences between these two groups will be assumed to be due to the impact of the antimicrobial stewardship program. So far, no previous study has been able to demonstrate that an antimicrobial stewardship program can reduce the length of stay of patients admitted to hospital with pneumonia. This study has some important differences from previous studies that may make its conclusions more accurately reflect the true impact of antimicrobial stewardship programs. The most important difference is how the timing of the review is modelled in the analysis of the study results. Because the timing of the review varies between patients, with some patients being reviewed at earlier and some at later times, this subtle difference, if not accounted for in the analysis, can mask a true positive effect of the program on length of stay. The investigators study will account for this variation.
+Inclusion criteria: inclusion criteria: 
+
+ have a positive Febrile Respiratory Illness (FRI) screen on admission to hospital (http://www.health.gov.on.ca/fr/public/programs/emu/sars/reports/dir_122303_acute_care_nonoutbreak.pdf) 
+
+ diagnosed with pneumonia by the admitting physician (Acute exacerbations of chronic obstructive lung disease are considered within the definition of pneumonia for the purposes of this study as they are commonly treated with the same antimicrobial regimens as patients with pneumonia) 
+
+ admitted to a medical ward 
+
+ 
+Exclusion criteria: : 
+
+ hospitalized for ≥ 48 consecutive hours in the preceding 3 months 
+
+ receiving immunosuppressants [defined as ≥ 40 mg prednisone daily (or steroid equivalent) for ≥ 2 weeks preceding hospitalization OR any other immunosuppressant used for systemic illness OR to prevent transplant rejection] 
+
+ neutropenic [defined as a polymorphonuclear count ≤ 0.5 x 109 cells/L] from any cause 
+
+ immunocompromised [defined as having leukemia, lymphoma, HIV with CD4 cell count ≤ 200, splenectomy or on cytotoxic chemotherapy] 
+
+ admitted to high acuity units such as intensive care units 
+
+ require mechanical ventilation, either non-invasive or invasive 
+
+ have a life expectancy of ≤ 3 months (palliative)

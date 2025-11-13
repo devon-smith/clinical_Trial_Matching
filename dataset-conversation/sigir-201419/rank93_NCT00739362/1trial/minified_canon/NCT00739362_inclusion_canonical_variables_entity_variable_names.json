@@ -1,0 +1,9 @@
+[
+  "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_has_finding_of_right_handed_now",
+  "patient_weight_change_value_recorded_inthepast3months_withunit_percent",
+  "patient_has_finding_of_weight_steady_inthepast3months"
+]

@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:31:12",
+  "trial_id": "NCT02144636",
+  "contextual": {
+    "_id": "NCT02144636",
+    "title": "Protein Supplementation and Weight Loss",
+    "text": "Summary: This randomized control trial of diet with protein supplementation is being conducted to test the hypothesis that in overweight/obese subjects high protein diet may lead to weight loss and improvement in cardio-metabolic profile.\nInclusion criteria: inclusion criteria: \n\n Subjects aged between 21 -65 years \n\n Subjects with BMI > 23 Kg/m2 \n\n \nExclusion criteria: : \n\n inclusion criteria: \n\n Subjects aged between 21 -65 years \n\n Subjects with BMI > 23 Kg/m2 \n\n ",
+    "metadata": {
+      "brief_title": "Protein Supplementation and Weight Loss",
+      "phase": "",
+      "drugs": "['herbalife protein shake']",
+      "drugs_list": [
+        "herbalife protein shake"
+      ],
+      "diseases": "['Obesity']",
+      "diseases_list": [
+        "Obesity"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Subjects aged between 21 -65 years \n\n Subjects with BMI > 23 Kg/m2 \n\n ",
+      "exclusion_criteria": ": \n\n inclusion criteria: \n\n Subjects aged between 21 -65 years \n\n Subjects with BMI > 23 Kg/m2 \n\n ",
+      "brief_summary": "This randomized control trial of diet with protein supplementation is being conducted to test the hypothesis that in overweight/obese subjects high protein diet may lead to weight loss and improvement in cardio-metabolic profile."
+    }
+  },
+  "linked_result": {
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

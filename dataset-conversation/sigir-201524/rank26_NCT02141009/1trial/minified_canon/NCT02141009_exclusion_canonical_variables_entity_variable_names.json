@@ -1,0 +1,8 @@
+[
+  "patient_has_diagnosis_of_pneumonia_now",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_allergic_reaction_inthehistory",
+  "patient_has_finding_of_allergic_reaction_now",
+  "patient_has_undergone_active_immunization_inthehistory",
+  "patient_has_finding_of_pneumonia_inthepast1months"
+]

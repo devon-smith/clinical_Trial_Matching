@@ -1,0 +1,6 @@
+[
+  "patient_has_diagnosis_of_cerebrovascular_accident_inthepast30days",
+  "patient_has_diagnosis_of_myocardial_infarction_inthepast30days",
+  "patient_has_undergone_surgical_procedure_inthepast30days",
+  "patient_is_undergoing_immunosuppressive_therapy_now"
+]

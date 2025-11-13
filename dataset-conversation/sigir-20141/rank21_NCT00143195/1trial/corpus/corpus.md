@@ -1,0 +1,22 @@
+# Amlodipine vs Nitrates Study in Patients With Chronic Stable Angina
+**NCT**: `NCT00143195`
+## Brief Summary
+The objective of study is to compare the anti-ischemic efficacy and safety profiles of once daily amlodipine or isosorbide-5-mononitrate in the treatment of stable asymptomatic and symptomatic myocardial ischemia
+## Inclusion Criteria
+inclusion criteria: 
+
+ Outpatients > =18 years of age with diagnosed clinically stable angina pectoris
+## Exclusion Criteria
+: 
+
+ Patients with congestive heart failure, clinically significant cardiovascular disease, standing systolic blood pressure of less than 100mmHg, concomitant anti-anginal therapies similar to sublingual NTG
+## Full Text
+Summary: The objective of study is to compare the anti-ischemic efficacy and safety profiles of once daily amlodipine or isosorbide-5-mononitrate in the treatment of stable asymptomatic and symptomatic myocardial ischemia
+Inclusion criteria: inclusion criteria: 
+
+ Outpatients > =18 years of age with diagnosed clinically stable angina pectoris 
+
+ 
+Exclusion criteria: : 
+
+ Patients with congestive heart failure, clinically significant cardiovascular disease, standing systolic blood pressure of less than 100mmHg, concomitant anti-anginal therapies similar to sublingual NTG

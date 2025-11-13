@@ -1,0 +1,48 @@
+{
+  "generated": "2025-10-22T21:07:42",
+  "trial_id": "NCT00767195",
+  "contextual": {
+    "_id": "NCT00767195",
+    "title": "Power Spectral Analysis of Breath Sound in Pulmonary Edema",
+    "text": "Summary: Pulmonary edema can be classified into cardiogenic pulmonary edema and non-cardiogenic pulmonary edema according to the underlying etiology. Cardiogenic pulmonary edema is caused by the dysfunction in the cardiac pumping capability, leading to the transudation accumulation in the pulmonary peri-capillary space. The predisposing factors of non-cardiogenic pulmonary edema are numerous, including severe infection, renal failure, auto-immun reaction, etc. The mortality rate of pulmonary edema is relatively high, especially the non-cardiogenic one. To distinguish the type of pulmonary edema at the early stage is important for its treatment.~Lung sound analysis via stethoscope is a simple diagnostic method to lung diseases clinically. Among many kinds of lung sounds, the crackle and rale are frequently found in pulmonary edema. Rale is also called moist rale. It is considered as low-frequency wheezes and is often seen in cardiogenic pulmonary edema. On the other hand, crackle is also called dry rale, which is a kind of high-frequency wheezes and usually seen in Acute Respiratory Distress Syndrome (ARDS) that is classified into non-cardiogenic pulmonary edema.~This proposed project intends to establish a digital diagnostic method for pulmonary edema. The lung sound of patient with pulmonary edema will be collected by the lung sound acquisition system. By identifying the significant spectrum characteristics of cardiogenic pulmonary edema and non-cardiogenic pulmonary edema, the diagnostic system might be established.\nInclusion criteria: inclusion criteria: \n\n Patients in the intensive care unit using ventilator \n\n \nExclusion criteria: : \n\n Asthma, COPD, non-ventilated patients",
+    "metadata": {
+      "brief_title": "Power Spectral Analysis of Breath Sound in Pulmonary Edema",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Pulmonary Edema']",
+      "diseases_list": [
+        "Pulmonary Edema"
+      ],
+      "enrollment": "60.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients in the intensive care unit using ventilator \n\n ",
+      "exclusion_criteria": ": \n\n Asthma, COPD, non-ventilated patients",
+      "brief_summary": "Pulmonary edema can be classified into cardiogenic pulmonary edema and non-cardiogenic pulmonary edema according to the underlying etiology. Cardiogenic pulmonary edema is caused by the dysfunction in the cardiac pumping capability, leading to the transudation accumulation in the pulmonary peri-capillary space. The predisposing factors of non-cardiogenic pulmonary edema are numerous, including severe infection, renal failure, auto-immun reaction, etc. The mortality rate of pulmonary edema is relatively high, especially the non-cardiogenic one. To distinguish the type of pulmonary edema at the early stage is important for its treatment.~Lung sound analysis via stethoscope is a simple diagnostic method to lung diseases clinically. Among many kinds of lung sounds, the crackle and rale are frequently found in pulmonary edema. Rale is also called moist rale. It is considered as low-frequency wheezes and is often seen in cardiogenic pulmonary edema. On the other hand, crackle is also called dry rale, which is a kind of high-frequency wheezes and usually seen in Acute Respiratory Distress Syndrome (ARDS) that is classified into non-cardiogenic pulmonary edema.~This proposed project intends to establish a digital diagnostic method for pulmonary edema. The lung sound of patient with pulmonary edema will be collected by the lung sound acquisition system. By identifying the significant spectrum characteristics of cardiogenic pulmonary edema and non-cardiogenic pulmonary edema, the diagnostic system might be established."
+    }
+  },
+  "linked_result": {
+    "Pulmonary Edema": {
+      "conceptId": "19242006",
+      "preferred_term": "Pulmonary edema",
+      "fully_specified_name": "Pulmonary edema (disorder)",
+      "type": "Clinical finding",
+      "definition": "Excessive accumulation of extravascular fluid in the lung, an indication of a serious underlying disease or disorder. Pulmonary edema prevents efficient PULMONARY GAS EXCHANGE in the PULMONARY ALVEOLI, and can be life-threatening.",
+      "best_match_term": "Pulmonary edema",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Pulmonary Edema": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Pulmonary Edema": {
+      "disease": "Pulmonary Edema",
+      "conceptId": "19242006",
+      "preferred_term": "Pulmonary edema",
+      "fully_specified_name": "Pulmonary edema (disorder)",
+      "type": "Clinical finding",
+      "definition": "Excessive accumulation of extravascular fluid in the lung, an indication of a serious underlying disease or disorder. Pulmonary edema prevents efficient PULMONARY GAS EXCHANGE in the PULMONARY ALVEOLI, and can be life-threatening.",
+      "best_match_term": "Pulmonary edema"
+    }
+  }
+}

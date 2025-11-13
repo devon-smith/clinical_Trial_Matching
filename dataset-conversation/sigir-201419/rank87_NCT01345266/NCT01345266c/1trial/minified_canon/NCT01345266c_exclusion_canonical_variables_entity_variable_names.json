@@ -1,0 +1,16 @@
+[
+  "patient_has_undergone_physical_examination_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_has_diagnosis_of_disease_inthehistory",
+  "patient_has_diagnosis_of_disease_now",
+  "patient_has_undergone_clinical_trial_inthehistory",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_has_diagnosis_of_asthma_now",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now",
+  "patient_dosage_of_radiation_exposure_value_recorded_inthepast3years_withunit_millisievert",
+  "patient_has_undergone_radiographic_imaging_procedure_inthepast3years",
+  "patient_has_finding_of_alcohol_abuse_inthehistory",
+  "patient_has_finding_of_respiratory_tract_infection_inthepast4weeks",
+  "patient_has_diagnosis_of_claustrophobia_inthehistory"
+]

@@ -1,0 +1,22 @@
+{
+  "_id": "NCT01654887",
+  "title": "A Randomized Controlled Trial of Lung Ultrasound Compared to Chest X-ray for Diagnosing Pneumonia in the Emergency Department",
+  "text": "Summary: The primary objective of this study is to determine if lung ultrasound (LUS) can replace chest x-ray (CXR) when evaluating patients with possible pneumonia. Specifically, we are looking for an overall reduction of CXR when LUS is used first. Our null hypothesis is that LUS cannot replace CXR for diagnosing pneumonia. Our alternate hypothesis is that LUS can replace CXR for diagnosing pneumonia. Our secondary objectives include: (1) a comparison of unscheduled healthcare visits after the index Emergency Department (ED) visit between those subjects who undergo CXR first and those who undergo LUS first, (2) an evaluation of the rate of antibiotic use between the two groups, (3) a comparison of the admission rates, and (4) a comparison of the length of stay in the Emergency Department between the two groups.\nInclusion criteria: inclusion criteria: \n\n All patients who present to the ED with respiratory symptoms suspicious for pneumonia \n\n In whom the treating physician believes would benefit from diagnostic imaging \n\n \nExclusion criteria: : \n\n Patients who arrive at the ED with a previously performed CXR \n\n Unstable patients with life-threatening injuries who require ongoing resuscitation",
+  "metadata": {
+    "brief_title": "A Randomized Controlled Trial of Lung Ultrasound Compared to Chest X-ray for Diagnosing Pneumonia in the Emergency Department",
+    "phase": "",
+    "drugs": "['Lung Ultrasound', 'Chest X-Ray']",
+    "drugs_list": [
+      "Lung Ultrasound",
+      "Chest X-Ray"
+    ],
+    "diseases": "['Pneumonia']",
+    "diseases_list": [
+      "Pneumonia"
+    ],
+    "enrollment": "191.0",
+    "inclusion_criteria": "inclusion criteria: \n\n All patients who present to the ED with respiratory symptoms suspicious for pneumonia \n\n In whom the treating physician believes would benefit from diagnostic imaging \n\n ",
+    "exclusion_criteria": ": \n\n Patients who arrive at the ED with a previously performed CXR \n\n Unstable patients with life-threatening injuries who require ongoing resuscitation",
+    "brief_summary": "The primary objective of this study is to determine if lung ultrasound (LUS) can replace chest x-ray (CXR) when evaluating patients with possible pneumonia. Specifically, we are looking for an overall reduction of CXR when LUS is used first. Our null hypothesis is that LUS cannot replace CXR for diagnosing pneumonia. Our alternate hypothesis is that LUS can replace CXR for diagnosing pneumonia. Our secondary objectives include: (1) a comparison of unscheduled healthcare visits after the index Emergency Department (ED) visit between those subjects who undergo CXR first and those who undergo LUS first, (2) an evaluation of the rate of antibiotic use between the two groups, (3) a comparison of the admission rates, and (4) a comparison of the length of stay in the Emergency Department between the two groups."
+  }
+}

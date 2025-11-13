@@ -1,0 +1,14 @@
+[
+  "patient_has_diagnosis_of_respiratory_tract_infection_inthepast8weeks",
+  "patient_has_finding_of_autoimmune_disease_now",
+  "patient_has_finding_of_chronic_disease_of_respiratory_system_now",
+  "patient_has_finding_of_disease_of_liver_now",
+  "patient_has_finding_of_heart_disease_now",
+  "patient_has_finding_of_kidney_disease_now",
+  "patient_has_taken_angiotensin_converting_enzyme_inhibitor_containing_product_inthepast1weeks",
+  "patient_is_exposed_to_bronchodilator_inthepast1weeks",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now"
+]

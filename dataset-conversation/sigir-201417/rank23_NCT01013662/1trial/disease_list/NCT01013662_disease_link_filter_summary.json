@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-22T21:08:00",
+  "trial_id": "NCT01013662",
+  "contextual": {
+    "_id": "NCT01013662",
+    "title": "Lipid Profile in Patients With Severe Sepsis or Septic Shock Under Strict or Liberal Glycemic Control",
+    "text": "Summary: Study of the lipid metabolism under glycemic control in septic patients who got an university 14 bed ICU.~Hypothesis: establish a relationship between lipid metabolism alterations and glycemic control or infusion of exogenous insulin\nInclusion criteria: inclusion criteria: \n\n all patients aged between 18 and 80 years old \n\n with the diagnostic of septic shock or severe sepsis \n\n \nExclusion criteria: : \n\n pregnants, \n\n previous diagnosis of any cancer, \n\n diagnosis of leptospirosis, \n\n diagnosis of aids.",
+    "metadata": {
+      "brief_title": "Lipid Profile in Patients With Severe Sepsis or Septic Shock Under Strict or Liberal Glycemic Control",
+      "phase": "",
+      "drugs": "['glycemic control']",
+      "drugs_list": [
+        "glycemic control"
+      ],
+      "diseases": "['Septic Shock', 'Sepsis']",
+      "diseases_list": [
+        "Septic Shock",
+        "Sepsis"
+      ],
+      "enrollment": "69.0",
+      "inclusion_criteria": "inclusion criteria: \n\n all patients aged between 18 and 80 years old \n\n with the diagnostic of septic shock or severe sepsis \n\n ",
+      "exclusion_criteria": ": \n\n pregnants, \n\n previous diagnosis of any cancer, \n\n diagnosis of leptospirosis, \n\n diagnosis of aids.",
+      "brief_summary": "Study of the lipid metabolism under glycemic control in septic patients who got an university 14 bed ICU.~Hypothesis: establish a relationship between lipid metabolism alterations and glycemic control or infusion of exogenous insulin"
+    }
+  },
+  "linked_result": {
+    "Septic Shock": {
+      "conceptId": "76571007",
+      "preferred_term": "Septic shock",
+      "fully_specified_name": "Septic shock (disorder)",
+      "type": "Clinical finding",
+      "definition": "Sepsis associated with HYPOTENSION or hypoperfusion despite adequate fluid resuscitation. Perfusion abnormalities may include but are not limited to LACTIC ACIDOSIS; OLIGURIA; or acute alteration in mental status.",
+      "best_match_term": "Septic shock",
+      "match_reason": "Exact"
+    },
+    "Sepsis": {
+      "conceptId": "91302008",
+      "preferred_term": "Sepsis",
+      "fully_specified_name": "Sepsis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Systemic inflammatory response syndrome with a proven or suspected infectious etiology. When sepsis is associated with organ dysfunction distant from the site of infection, it is called severe sepsis. When sepsis is accompanied by HYPOTENSION despite adequate fluid infusion, it is called SEPTIC SHOCK.",
+      "best_match_term": "Sepsis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Septic Shock": 1,
+    "Sepsis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Septic Shock": {
+      "disease": "Septic Shock",
+      "conceptId": "76571007",
+      "preferred_term": "Septic shock",
+      "fully_specified_name": "Septic shock (disorder)",
+      "type": "Clinical finding",
+      "definition": "Sepsis associated with HYPOTENSION or hypoperfusion despite adequate fluid resuscitation. Perfusion abnormalities may include but are not limited to LACTIC ACIDOSIS; OLIGURIA; or acute alteration in mental status.",
+      "best_match_term": "Septic shock"
+    },
+    "Sepsis": {
+      "disease": "Sepsis",
+      "conceptId": "91302008",
+      "preferred_term": "Sepsis",
+      "fully_specified_name": "Sepsis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Systemic inflammatory response syndrome with a proven or suspected infectious etiology. When sepsis is associated with organ dysfunction distant from the site of infection, it is called severe sepsis. When sepsis is accompanied by HYPOTENSION despite adequate fluid infusion, it is called SEPTIC SHOCK.",
+      "best_match_term": "Sepsis"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "generated": "2025-10-22T20:48:03",
+  "trial_id": "NCT0072802",
+  "contextual": {
+    "_id": "NCT0072802",
+    "title": "Autonomic Profiles in Pediatric Patients With Cyclic Vomiting Syndrome (CVS), Irritable Bowel Syndrome (IBS),Postural Orthostatic Tachycardia Syndrome (POTS), Functional Abdominal Pain (FAP) or Chronic Nausea",
+    "text": "Summary: Retrospectively review the charts of all children who had heart rate variability, deep breathing test, valsalva maneuver, tilt table test, thermoregulatory sweat testing, quantitative sudomotor axon reflex test (QSART) completed and were cared for at Children's Hospital of Wisconsin.\nInclusion criteria: inclusion criteria: \n\n Outpatient services \n\n \nExclusion criteria: : \n\n Inpatient services",
+    "metadata": {
+      "brief_title": "Autonomic Profiles in Pediatric Patients With Cyclic Vomiting Syndrome (CVS), Irritable Bowel Syndrome (IBS),Postural Orthostatic Tachycardia Syndrome (POTS), Functional Abdominal Pain (FAP) or Chronic Nausea",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Vomiting Syndrome', 'Irritable Bowel Syndrome', 'Postural Orthostatic Tachycardia Syndrome', 'Abdominal Pain', 'Chronic Nausea']",
+      "diseases_list": [
+        "Vomiting Syndrome",
+        "Irritable Bowel Syndrome",
+        "Postural Orthostatic Tachycardia Syndrome",
+        "Abdominal Pain",
+        "Chronic Nausea"
+      ],
+      "enrollment": "19.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Outpatient services \n\n ",
+      "exclusion_criteria": ": \n\n Inpatient services",
+      "brief_summary": "Retrospectively review the charts of all children who had heart rate variability, deep breathing test, valsalva maneuver, tilt table test, thermoregulatory sweat testing, quantitative sudomotor axon reflex test (QSART) completed and were cared for at Children's Hospital of Wisconsin."
+    }
+  },
+  "linked_result": {
+    "Vomiting Syndrome": {
+      "conceptId": "422400008",
+      "preferred_term": "Vomiting",
+      "fully_specified_name": "Vomiting (disorder)",
+      "type": "Clinical finding",
+      "definition": "The forcible expulsion of the contents of the STOMACH through the MOUTH.",
+      "best_match_term": "Vomiting",
+      "match_reason": "Ancestor"
+    },
+    "Irritable Bowel Syndrome": {
+      "conceptId": "10743008",
+      "preferred_term": "Irritable bowel syndrome",
+      "fully_specified_name": "Irritable bowel syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder with chronic or recurrent colonic symptoms without a clearcut etiology. This condition is characterized by chronic or recurrent ABDOMINAL PAIN, bloating, MUCUS in FECES, and an erratic disturbance of DEFECATION.",
+      "best_match_term": "Irritable bowel syndrome",
+      "match_reason": "Exact"
+    },
+    "Postural Orthostatic Tachycardia Syndrome": {
+      "conceptId": "371073003",
+      "preferred_term": "Postural orthostatic tachycardia syndrome",
+      "fully_specified_name": "Postural orthostatic tachycardia syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A syndrome of ORTHOSTATIC INTOLERANCE combined with excessive upright TACHYCARDIA, and usually without associated ORTHOSTATIC HYPOTENSION. All variants have in common an excessively reduced venous return to the heart (central HYPOVOLEMIA) while upright.",
+      "best_match_term": "Postural orthostatic tachycardia syndrome",
+      "match_reason": "Exact"
+    },
+    "Abdominal Pain": {
+      "conceptId": "21522001",
+      "preferred_term": "Abdominal pain",
+      "fully_specified_name": "Abdominal pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Sensation of discomfort, distress, or agony in the abdominal region.",
+      "best_match_term": "Abdominal pain",
+      "match_reason": "Exact"
+    },
+    "Chronic Nausea": {
+      "conceptId": "762279002",
+      "preferred_term": "Functional nausea",
+      "fully_specified_name": "Functional nausea (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Functional nausea",
+      "match_reason": "Ancestor"
+    }
+  },
+  "kept_counts": {
+    "Vomiting Syndrome": 1,
+    "Irritable Bowel Syndrome": 1,
+    "Postural Orthostatic Tachycardia Syndrome": 1,
+    "Abdominal Pain": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Vomiting Syndrome": {
+      "disease": "Vomiting Syndrome",
+      "conceptId": "422400008",
+      "preferred_term": "Vomiting",
+      "fully_specified_name": "Vomiting (disorder)",
+      "type": "Clinical finding",
+      "definition": "The forcible expulsion of the contents of the STOMACH through the MOUTH.",
+      "best_match_term": "Vomiting"
+    },
+    "Irritable Bowel Syndrome": {
+      "disease": "Irritable Bowel Syndrome",
+      "conceptId": "10743008",
+      "preferred_term": "Irritable bowel syndrome",
+      "fully_specified_name": "Irritable bowel syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder with chronic or recurrent colonic symptoms without a clearcut etiology. This condition is characterized by chronic or recurrent ABDOMINAL PAIN, bloating, MUCUS in FECES, and an erratic disturbance of DEFECATION.",
+      "best_match_term": "Irritable bowel syndrome"
+    },
+    "Postural Orthostatic Tachycardia Syndrome": {
+      "disease": "Postural Orthostatic Tachycardia Syndrome",
+      "conceptId": "371073003",
+      "preferred_term": "Postural orthostatic tachycardia syndrome",
+      "fully_specified_name": "Postural orthostatic tachycardia syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A syndrome of ORTHOSTATIC INTOLERANCE combined with excessive upright TACHYCARDIA, and usually without associated ORTHOSTATIC HYPOTENSION. All variants have in common an excessively reduced venous return to the heart (central HYPOVOLEMIA) while upright.",
+      "best_match_term": "Postural orthostatic tachycardia syndrome"
+    },
+    "Abdominal Pain": {
+      "disease": "Abdominal Pain",
+      "conceptId": "21522001",
+      "preferred_term": "Abdominal pain",
+      "fully_specified_name": "Abdominal pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Sensation of discomfort, distress, or agony in the abdominal region.",
+      "best_match_term": "Abdominal pain"
+    }
+  }
+}

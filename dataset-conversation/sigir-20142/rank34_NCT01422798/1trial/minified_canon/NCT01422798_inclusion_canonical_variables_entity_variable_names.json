@@ -1,0 +1,21 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_failure_to_maintain_weight_inthepast3months",
+  "patient_has_finding_of_failure_to_thrive_inthepast3months",
+  "patient_has_finding_of_weight_decreased_inthepast3months",
+  "patient_has_finding_of_night_sweats_inthepast2weeks",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_stridor_inthepast2weeks",
+  "patient_has_finding_of_wheezing_inthepast2weeks",
+  "patient_has_finding_of_asthenia_inthepast2weeks",
+  "patient_has_finding_of_fatigue_inthepast2weeks",
+  "patient_has_finding_of_indifference_inthepast2weeks",
+  "patient_has_finding_of_lethargy_inthepast2weeks",
+  "patient_has_finding_of_cerebrospinal_fluid_lymphocytosis_now",
+  "patient_has_finding_of_chronic_meningitis_now",
+  "patient_has_finding_of_meningitis_now",
+  "patient_has_finding_of_kyphosis_deformity_of_spine_now",
+  "patient_has_finding_of_ascites_now",
+  "patient_has_finding_of_swollen_abdomen_now",
+  "patient_has_finding_of_imaging_of_thorax_abnormal_now"
+]

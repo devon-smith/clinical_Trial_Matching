@@ -1,0 +1,10 @@
+[
+  "patient_has_diagnosis_of_congestive_heart_failure_inthehistory",
+  "patient_n_terminal_pro_brain_natriuretic_peptide_level_value_recorded_now_withunit_picograms_per_milliliter",
+  "patient_plasma_b_natriuretic_peptide_measurement_value_recorded_now_withunit_picograms_per_milliliter",
+  "patient_has_suspicion_of_congestive_heart_failure_now",
+  "patient_has_finding_of_ekg_myocardial_infarction_now",
+  "patient_has_finding_of_ekg_myocardial_ischemia_now",
+  "patient_has_finding_of_ischemic_chest_pain_inthepast24hours",
+  "patient_has_finding_of_chest_injury_now"
+]

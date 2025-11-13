@@ -1,0 +1,90 @@
+{
+  "generated": "2025-10-20T23:43:08",
+  "trial_id": "NCT01314638",
+  "contextual": {
+    "_id": "NCT01314638",
+    "title": "Study of Adherence and Effects of Balance Exercices (SIEL BLEU Associatio)",
+    "text": "Summary: The purpose of this study is to measure the adherence to Siel bleu balance exercises in patients with Alzheimer's disease, while taking into account the disease stages.\nInclusion criteria: inclusion criteria: \n\n Diagnosis of Alzheimer's disease (AD) (DSM-IV/NINCDS-ADRDA criteria) \n\n Age ≥ 65 years old \n\n Mild AD (Mini-Mental State Examination score between 21 and 25), moderate AD (Mini-Mental State Examination score between 10 and 20) and severe AD (Mini-Mental State Examination score between 3 and 9) \n\n Able to walk without any aid on 15 meters. \n\n Near visual acuity ≥ 2 \n\n Absence of severe depression (score of the 15-item Geriatric Depression Scale ≤ 10) \n\n Written consent form to participate in the study (or trustworthy person or legal representative for severe AD) \n\n Being affiliated to a social security regime \n\n \nExclusion criteria: : \n\n Musculoskeletal disorders not related to Alzheimer's disease \n\n Near visual acuity < 2 \n\n History of cerebrovascular accident or other cerebro-spinal pathology \n\n Poor workmanship of the written or oral French language \n\n Refusal to be informed on possible hanging bare anomaly during study \n\n Score of Mini-Mental State Examination < 3 \n\n Presence of severe depression (score of the 15-item Geriatric Depression scale > 10) \n\n Use of walking aid \n\n Subject suffering from pre-existing impellent disturbances \n\n Refusal to participate (or trustworthy person or legal representative)",
+    "metadata": {
+      "brief_title": "Study of Adherence and Effects of Balance Exercices (SIEL BLEU Associatio)",
+      "phase": "",
+      "drugs": "['Workshop balances']",
+      "drugs_list": [
+        "Workshop balances"
+      ],
+      "diseases": "['Gait Apraxia', 'Alzheimer Disease', 'Impaired Cognition']",
+      "diseases_list": [
+        "Gait Apraxia",
+        "Alzheimer Disease",
+        "Impaired Cognition"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Diagnosis of Alzheimer's disease (AD) (DSM-IV/NINCDS-ADRDA criteria) \n\n Age ≥ 65 years old \n\n Mild AD (Mini-Mental State Examination score between 21 and 25), moderate AD (Mini-Mental State Examination score between 10 and 20) and severe AD (Mini-Mental State Examination score between 3 and 9) \n\n Able to walk without any aid on 15 meters. \n\n Near visual acuity ≥ 2 \n\n Absence of severe depression (score of the 15-item Geriatric Depression Scale ≤ 10) \n\n Written consent form to participate in the study (or trustworthy person or legal representative for severe AD) \n\n Being affiliated to a social security regime \n\n ",
+      "exclusion_criteria": ": \n\n Musculoskeletal disorders not related to Alzheimer's disease \n\n Near visual acuity < 2 \n\n History of cerebrovascular accident or other cerebro-spinal pathology \n\n Poor workmanship of the written or oral French language \n\n Refusal to be informed on possible hanging bare anomaly during study \n\n Score of Mini-Mental State Examination < 3 \n\n Presence of severe depression (score of the 15-item Geriatric Depression scale > 10) \n\n Use of walking aid \n\n Subject suffering from pre-existing impellent disturbances \n\n Refusal to participate (or trustworthy person or legal representative)",
+      "brief_summary": "The purpose of this study is to measure the adherence to Siel bleu balance exercises in patients with Alzheimer's disease, while taking into account the disease stages."
+    }
+  },
+  "linked_result": {
+    "Gait Apraxia": {
+      "conceptId": "30767006",
+      "preferred_term": "Gait apraxia",
+      "fully_specified_name": "Gait apraxia (finding)",
+      "type": "Clinical finding",
+      "definition": "Impaired ambulation not attributed to sensory impairment or motor weakness. FRONTAL LOBE disorders; BASAL GANGLIA DISEASES (e.g., PARKINSONIAN DISORDERS); DEMENTIA, MULTI-INFARCT; ALZHEIMER DISEASE; and other conditions may be associated with gait apraxia.",
+      "best_match_term": "Gait apraxia",
+      "match_reason": "Exact"
+    },
+    "Alzheimer Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease",
+      "match_reason": "Exact"
+    },
+    "Impaired Cognition": {
+      "conceptId": "386806002",
+      "preferred_term": "Impaired cognition",
+      "fully_specified_name": "Impaired cognition (finding)",
+      "type": "Clinical finding",
+      "definition": "Diminished or impaired mental and/or intellectual function.",
+      "best_match_term": "Impaired cognition",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Gait Apraxia": 1,
+    "Alzheimer Disease": 1,
+    "Impaired Cognition": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Gait Apraxia": {
+      "disease": "Gait Apraxia",
+      "conceptId": "30767006",
+      "preferred_term": "Gait apraxia",
+      "fully_specified_name": "Gait apraxia (finding)",
+      "type": "Clinical finding",
+      "definition": "Impaired ambulation not attributed to sensory impairment or motor weakness. FRONTAL LOBE disorders; BASAL GANGLIA DISEASES (e.g., PARKINSONIAN DISORDERS); DEMENTIA, MULTI-INFARCT; ALZHEIMER DISEASE; and other conditions may be associated with gait apraxia.",
+      "best_match_term": "Gait apraxia"
+    },
+    "Alzheimer Disease": {
+      "disease": "Alzheimer Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease"
+    },
+    "Impaired Cognition": {
+      "disease": "Impaired Cognition",
+      "conceptId": "386806002",
+      "preferred_term": "Impaired cognition",
+      "fully_specified_name": "Impaired cognition (finding)",
+      "type": "Clinical finding",
+      "definition": "Diminished or impaired mental and/or intellectual function.",
+      "best_match_term": "Impaired cognition"
+    }
+  }
+}

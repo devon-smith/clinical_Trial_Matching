@@ -1,0 +1,17 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_childbearing_potential_now",
+  "patient_has_finding_of_amenorrhea_now",
+  "patient_has_undergone_bilateral_oophorectomy_inthehistory",
+  "patient_has_undergone_hysterectomy_inthehistory",
+  "patient_has_undergone_ligation_of_fallopian_tube_inthehistory",
+  "patient_has_finding_of_postmenopausal_state_now",
+  "patient_serum_follicle_stimulating_hormone_measurement_value_recorded_now_withunit_international_unit_per_liter",
+  "patient_is_exposed_to_antilipemic_agent_inthehistory",
+  "patient_has_diagnosis_of_hypercholesterolemia_now",
+  "patient_is_taking_atorvastatin_containing_product_now",
+  "patient_is_taking_simvastatin_containing_product_now",
+  "patient_ldl_cholesterol_value_recorded_inthepast1weeks_withunit_millimoles_per_liter"
+]

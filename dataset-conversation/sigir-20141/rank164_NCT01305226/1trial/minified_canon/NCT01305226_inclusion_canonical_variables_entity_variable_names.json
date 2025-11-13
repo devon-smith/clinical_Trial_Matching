@@ -1,0 +1,10 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_symptoms_of_acute_myocardial_infarction_now",
+  "patient_has_undergone_electrocardiographic_procedure_now",
+  "patient_has_finding_of_left_bundle_branch_block_now",
+  "patient_is_able_to_be_pregnant_now",
+  "patient_has_undergone_urine_pregnancy_test_now_outcome_is_negative"
+]

@@ -1,0 +1,80 @@
+{
+  "generated": "2025-10-20T23:41:58",
+  "trial_id": "NCT01790477",
+  "contextual": {
+    "_id": "NCT01790477",
+    "title": "Auricular Acupuncture for The Treatment of Post-Tonsillectomy Pain",
+    "text": "Summary: The goal of this study is to assess the role of battlefield acupuncture in the reduction of pain scores status post adult tonsillectomy. Secondary goals of this study include reduction in narcotic usage, decreased nausea and vomiting, and evaluating patient factors that lend an increased risk of worsening pain or improved response with acupuncture.\nInclusion criteria: inclusion criteria: \n\n Any adult patient who meets criteria and is scheduled for tonsillectomy \n\n \nExclusion criteria: : \n\n Any patient with prior use of acupuncture \n\n Individuals under age 18 \n\n Tonsillectomy performed with other surgical procedures, i.e UPPP, adenoidectomy, \n\n Patients with a known personal or family history of a bleeding disorder will be excluded. \n\n Patients with a history of kidney or liver problems will also be excluded. \n\n Patients found to be pregnant will be excluded from participation. \n\n Patients unwilling to enroll in the study will have the tonsillectomy with or without adenoidectomy performed according to current practice standards.",
+    "metadata": {
+      "brief_title": "Auricular Acupuncture for The Treatment of Post-Tonsillectomy Pain",
+      "phase": "",
+      "drugs": "['Auricular Acupuncture']",
+      "drugs_list": [
+        "Auricular Acupuncture"
+      ],
+      "diseases": "['Recurrent Tonsillitis', 'Peritonsillar Abscess', 'Obstructive Sleep Apnea']",
+      "diseases_list": [
+        "Recurrent Tonsillitis",
+        "Peritonsillar Abscess",
+        "Obstructive Sleep Apnea"
+      ],
+      "enrollment": "134.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Any adult patient who meets criteria and is scheduled for tonsillectomy \n\n ",
+      "exclusion_criteria": ": \n\n Any patient with prior use of acupuncture \n\n Individuals under age 18 \n\n Tonsillectomy performed with other surgical procedures, i.e UPPP, adenoidectomy, \n\n Patients with a known personal or family history of a bleeding disorder will be excluded. \n\n Patients with a history of kidney or liver problems will also be excluded. \n\n Patients found to be pregnant will be excluded from participation. \n\n Patients unwilling to enroll in the study will have the tonsillectomy with or without adenoidectomy performed according to current practice standards.",
+      "brief_summary": "The goal of this study is to assess the role of battlefield acupuncture in the reduction of pain scores status post adult tonsillectomy. Secondary goals of this study include reduction in narcotic usage, decreased nausea and vomiting, and evaluating patient factors that lend an increased risk of worsening pain or improved response with acupuncture."
+    }
+  },
+  "linked_result": {
+    "Recurrent Tonsillitis": {
+      "conceptId": "195677001",
+      "preferred_term": "Recurrent acute tonsillitis",
+      "fully_specified_name": "Recurrent acute tonsillitis (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Recurrent acute tonsillitis",
+      "match_reason": "Exact"
+    },
+    "Peritonsillar Abscess": {
+      "conceptId": "15033003",
+      "preferred_term": "Peritonsillar abscess",
+      "fully_specified_name": "Peritonsillar abscess (disorder)",
+      "type": "Clinical finding",
+      "definition": "An accumulation of purulent material in the area between the PALATINE TONSIL and its capsule.",
+      "best_match_term": "Peritonsillar abscess",
+      "match_reason": "Exact"
+    },
+    "Obstructive Sleep Apnea": {
+      "conceptId": "78275009",
+      "preferred_term": "Obstructive sleep apnea syndrome",
+      "fully_specified_name": "Obstructive sleep apnea syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder characterized by recurrent apneas during sleep despite persistent respiratory efforts. It is due to upper airway obstruction. The respiratory pauses may induce HYPERCAPNIA or HYPOXIA. Cardiac arrhythmias and elevation of systemic and pulmonary arterial pressures may occur. Frequent partial arousals occur throughout sleep, resulting in relative SLEEP DEPRIVATION and daytime tiredness. Associated conditions include OBESITY; ACROMEGALY; MYXEDEMA; micrognathia; MYOTONIC DYSTROPHY; adenotonsilar dystrophy; and NEUROMUSCULAR DISEASES. (From Adams et al., Principles of Neurology, 6th ed, p395)",
+      "best_match_term": "Obstructive sleep apnea",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Peritonsillar Abscess": 1,
+    "Obstructive Sleep Apnea": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Peritonsillar Abscess": {
+      "disease": "Peritonsillar Abscess",
+      "conceptId": "15033003",
+      "preferred_term": "Peritonsillar abscess",
+      "fully_specified_name": "Peritonsillar abscess (disorder)",
+      "type": "Clinical finding",
+      "definition": "An accumulation of purulent material in the area between the PALATINE TONSIL and its capsule.",
+      "best_match_term": "Peritonsillar abscess"
+    },
+    "Obstructive Sleep Apnea": {
+      "disease": "Obstructive Sleep Apnea",
+      "conceptId": "78275009",
+      "preferred_term": "Obstructive sleep apnea syndrome",
+      "fully_specified_name": "Obstructive sleep apnea syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder characterized by recurrent apneas during sleep despite persistent respiratory efforts. It is due to upper airway obstruction. The respiratory pauses may induce HYPERCAPNIA or HYPOXIA. Cardiac arrhythmias and elevation of systemic and pulmonary arterial pressures may occur. Frequent partial arousals occur throughout sleep, resulting in relative SLEEP DEPRIVATION and daytime tiredness. Associated conditions include OBESITY; ACROMEGALY; MYXEDEMA; micrognathia; MYOTONIC DYSTROPHY; adenotonsilar dystrophy; and NEUROMUSCULAR DISEASES. (From Adams et al., Principles of Neurology, 6th ed, p395)",
+      "best_match_term": "Obstructive sleep apnea"
+    }
+  }
+}

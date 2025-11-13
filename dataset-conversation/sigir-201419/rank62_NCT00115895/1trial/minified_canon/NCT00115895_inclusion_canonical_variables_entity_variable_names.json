@@ -1,0 +1,7 @@
+[
+  "patient_has_diagnosis_of_follicular_thyroid_carcinoma_inthehistory",
+  "patient_has_diagnosis_of_papillary_thyroid_carcinoma_inthehistory",
+  "patient_has_undergone_total_thyroidectomy_inthehistory",
+  "patient_has_undergone_excision_inthehistory",
+  "patient_has_finding_of_malignant_neoplastic_disease_inthehistory"
+]

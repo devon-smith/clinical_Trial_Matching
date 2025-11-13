@@ -1,0 +1,194 @@
+# KEYS: Study Comparing Clinical Health Outcomes of Telithromycin Versus Azithromycin in Outpatients With Community-acquired Lower Respiratory Tract Infections
+**NCT**: `NCT00132951`
+## Brief Summary
+The purpose of this study is to determine if 1 course of antibiotic treatment with telithromycin is superior to azithromycin in the treatment of lower respiratory tract infections (LRTIs), acute exacerbations of chronic bronchitis (AECBs) and community-acquired pneumonia (CAP) in the community setting.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Subjects meeting all of the following criteria will be considered for enrollment into the study: 
+
+ Male and female adult outpatient subjects diagnosed with AECB or CAP 
+
+ Female subjects must be either postmenopausal for ≥ 1 year or surgically incapable of bearing children. Women of childbearing potential must have a normal menstrual flow ≤ 1 month before study entry, a negative serum pregnancy test immediately prior to study entry, and meet the criteria for acceptable birth control. 
+
+ Informed consent must be obtained in writing for all subjects upon enrollment. 
+
+ Subjects will have a diagnosis of AECB or CAP, as defined below. 
+
+ AECB-Specific inclusion criteria: 
+
+ Subjects greater than or equal to 35 years of age 
+
+ Subjects with a documented history of chronic bronchitis: with a basal forced expiratory volume in one second (FEV1) < 70% and > 35%; who have had at least one or more AECB in the previous year; and with FEV1/forced vital capacity (FVC) < 70%. 
+
+ Subjects with a clinical diagnosis of AECB, presumed to be due to bacterial infection based on increased sputum purulence with either increased dyspnea or sputum volume 
+
+ Subjects producing spontaneous sputum 
+
+ Subjects with a ≥ 10 pack-year history of cigarette smoking 
+
+ CAP-Specific inclusion criteria: 
+
+ Fever (oral temperature > 38°C [100.4°F] or tympanic temperature > 38.5°C [101.2°F] or rectal temperature > 39°C [102.2°F]) 
+
+ Chills 
+
+ Pleuritic chest pain 
+
+ Cough 
+
+ Spontaneous production of purulent sputum or a change in sputum character 
+
+ Auscultatory findings (such as rales [also known as crepitations] and/or evidence of pulmonary consolidation [ie, dullness on percussion, bronchial breath sounds, egophony]) 
+
+ Subjects greater than or equal to 18 years of age 
+
+ Chest x-ray findings that support a clinical diagnosis of bacterial pneumonia (eg, presence of presumably new infiltrate[s]) 
+
+ Subjects with a clinical diagnosis of mild to moderate CAP due to bacterial infection based on at least 1 of the following signs and symptoms of CAP: 
+
+ In addition, subjects with a clinical diagnosis of CAP will have at least 1 of the following signs and symptoms of CAP: 
+
+ Dyspnea or tachypnea (particularly if progressive in nature)
+## Exclusion Criteria
+: 
+
+ Subjects presenting with any of the following will not be included in the study: 
+
+ Subjects with a known history of congenital long-QTc syndrome 
+
+ Subjects who are pregnant or breast-feeding 
+
+ Subjects who have hypersensitivity to telithromycin, azithromycin, or the macrolide classes of antibiotics 
+
+ Subjects who require or receive treatment with rifampin (Rifadin), phenytoin (Dilantin), carbamazepine (Carbatrol, Tegretol), phenobarbital, or St. John's wort (herbal supplement) within 2 weeks prior to Visit 1 or during the study 
+
+ Subjects who require treatment during the study with ergot alkaloid derivatives, cisapride (Propulsid), pimozide (Orap), bromocriptine, cabergoline (Dostinex), or pergolide (Permax) 
+
+ Subjects who have previously participated in this study 
+
+ Subjects with a previous history of myasthenia gravis 
+
+ Subjects with current acute respiratory failure or subjects who require aggressive airway management 
+
+ Hospitalized subjects and subjects from institutional care facilities 
+
+ Subjects who have been treated with oral or parenteral antibiotics within 14 days prior to enrollment or who plan to take antibiotics other than study drug during the treatment period 
+
+ Subjects who are receiving other medications, including systemic antimicrobial agents, or who have other disease conditions or infections that could interfere with the evaluation of drug efficacy or safety 
+
+ Subjects with a concomitant condition (including clinically relevant cardiovascular, hepatic, neurologic, endocrine, or other major systemic disease) that makes either implementation of the protocol or interpretation of the study results difficult 
+
+ Subjects with a progressively fatal disease or life expectancy of < 3 months 
+
+ Subjects who have received any other investigational drug or device within 1 month prior to study entry, or who have such treatment planned during the study period 
+
+ Subjects with a recent (within 3 months) history of drug or alcohol abuse 
+
+ Immunocompromised subjects, including but not limited to subjects with: known human immunodeficiency virus infection (CD4 count < 200/mm3); known neutropenia (< 1500 neutrophils/mm3); chronic corticosteroid therapy (≥ 10 mg/day prednisolone therapy or equivalent for at least the past 3 months); immunosuppressant treatment, other than corticosteroids, within the previous 6 months; splenectomized subjects or subjects with known hyposplenia or asplenia. 
+
+ Subjects with mental conditions that render them unable to understand the nature, scope, and possible consequences of the study 
+
+ Subjects who are unlikely to comply with the protocol (eg, have an uncooperative attitude, an inability to return for follow-up visits, or are unlikely to complete the study) 
+
+ Subjects who have known impaired hepatic function 
+
+ Subjects who have known impaired renal function 
+
+ AECB-Specific
+## Full Text
+Summary: The purpose of this study is to determine if 1 course of antibiotic treatment with telithromycin is superior to azithromycin in the treatment of lower respiratory tract infections (LRTIs), acute exacerbations of chronic bronchitis (AECBs) and community-acquired pneumonia (CAP) in the community setting.
+Inclusion criteria: inclusion criteria: 
+
+ Subjects meeting all of the following criteria will be considered for enrollment into the study: 
+
+ Male and female adult outpatient subjects diagnosed with AECB or CAP 
+
+ Female subjects must be either postmenopausal for ≥ 1 year or surgically incapable of bearing children. Women of childbearing potential must have a normal menstrual flow ≤ 1 month before study entry, a negative serum pregnancy test immediately prior to study entry, and meet the criteria for acceptable birth control. 
+
+ Informed consent must be obtained in writing for all subjects upon enrollment. 
+
+ Subjects will have a diagnosis of AECB or CAP, as defined below. 
+
+ AECB-Specific inclusion criteria: 
+
+ Subjects greater than or equal to 35 years of age 
+
+ Subjects with a documented history of chronic bronchitis: with a basal forced expiratory volume in one second (FEV1) < 70% and > 35%; who have had at least one or more AECB in the previous year; and with FEV1/forced vital capacity (FVC) < 70%. 
+
+ Subjects with a clinical diagnosis of AECB, presumed to be due to bacterial infection based on increased sputum purulence with either increased dyspnea or sputum volume 
+
+ Subjects producing spontaneous sputum 
+
+ Subjects with a ≥ 10 pack-year history of cigarette smoking 
+
+ CAP-Specific inclusion criteria: 
+
+ Fever (oral temperature > 38°C [100.4°F] or tympanic temperature > 38.5°C [101.2°F] or rectal temperature > 39°C [102.2°F]) 
+
+ Chills 
+
+ Pleuritic chest pain 
+
+ Cough 
+
+ Spontaneous production of purulent sputum or a change in sputum character 
+
+ Auscultatory findings (such as rales [also known as crepitations] and/or evidence of pulmonary consolidation [ie, dullness on percussion, bronchial breath sounds, egophony]) 
+
+ Subjects greater than or equal to 18 years of age 
+
+ Chest x-ray findings that support a clinical diagnosis of bacterial pneumonia (eg, presence of presumably new infiltrate[s]) 
+
+ Subjects with a clinical diagnosis of mild to moderate CAP due to bacterial infection based on at least 1 of the following signs and symptoms of CAP: 
+
+ In addition, subjects with a clinical diagnosis of CAP will have at least 1 of the following signs and symptoms of CAP: 
+
+ Dyspnea or tachypnea (particularly if progressive in nature) 
+
+ 
+Exclusion criteria: : 
+
+ Subjects presenting with any of the following will not be included in the study: 
+
+ Subjects with a known history of congenital long-QTc syndrome 
+
+ Subjects who are pregnant or breast-feeding 
+
+ Subjects who have hypersensitivity to telithromycin, azithromycin, or the macrolide classes of antibiotics 
+
+ Subjects who require or receive treatment with rifampin (Rifadin), phenytoin (Dilantin), carbamazepine (Carbatrol, Tegretol), phenobarbital, or St. John's wort (herbal supplement) within 2 weeks prior to Visit 1 or during the study 
+
+ Subjects who require treatment during the study with ergot alkaloid derivatives, cisapride (Propulsid), pimozide (Orap), bromocriptine, cabergoline (Dostinex), or pergolide (Permax) 
+
+ Subjects who have previously participated in this study 
+
+ Subjects with a previous history of myasthenia gravis 
+
+ Subjects with current acute respiratory failure or subjects who require aggressive airway management 
+
+ Hospitalized subjects and subjects from institutional care facilities 
+
+ Subjects who have been treated with oral or parenteral antibiotics within 14 days prior to enrollment or who plan to take antibiotics other than study drug during the treatment period 
+
+ Subjects who are receiving other medications, including systemic antimicrobial agents, or who have other disease conditions or infections that could interfere with the evaluation of drug efficacy or safety 
+
+ Subjects with a concomitant condition (including clinically relevant cardiovascular, hepatic, neurologic, endocrine, or other major systemic disease) that makes either implementation of the protocol or interpretation of the study results difficult 
+
+ Subjects with a progressively fatal disease or life expectancy of < 3 months 
+
+ Subjects who have received any other investigational drug or device within 1 month prior to study entry, or who have such treatment planned during the study period 
+
+ Subjects with a recent (within 3 months) history of drug or alcohol abuse 
+
+ Immunocompromised subjects, including but not limited to subjects with: known human immunodeficiency virus infection (CD4 count < 200/mm3); known neutropenia (< 1500 neutrophils/mm3); chronic corticosteroid therapy (≥ 10 mg/day prednisolone therapy or equivalent for at least the past 3 months); immunosuppressant treatment, other than corticosteroids, within the previous 6 months; splenectomized subjects or subjects with known hyposplenia or asplenia. 
+
+ Subjects with mental conditions that render them unable to understand the nature, scope, and possible consequences of the study 
+
+ Subjects who are unlikely to comply with the protocol (eg, have an uncooperative attitude, an inability to return for follow-up visits, or are unlikely to complete the study) 
+
+ Subjects who have known impaired hepatic function 
+
+ Subjects who have known impaired renal function 
+
+ AECB-Specific

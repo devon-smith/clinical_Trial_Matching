@@ -1,0 +1,8 @@
+[
+  "patient_has_diagnosis_of_human_immunodeficiency_virus_infection_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_pneumonia_now",
+  "patient_is_exposed_to_antiretroviral_inthehistory",
+  "patient_has_taken_antiretroviral_inthehistory",
+  "patient_absolute_cd4_count_procedure_value_recorded_now_withunit_cells_per_cubic_millimeter"
+]

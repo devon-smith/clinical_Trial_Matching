@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T23:38:20",
+  "trial_id": "NCT00297271",
+  "contextual": {
+    "_id": "NCT00297271",
+    "title": "Prospective Research in Memory Clinics (PRIME)",
+    "text": "Summary: The purpose of the PRIME Study is to examine the current management and outcomes of patients with mild cognitive impairment or dementia. Approximately 4500 patients will be enrolled in this disease registry across 12 sites in Australia. Clinical, treatment, health status and economic data will be acquired over 3 years. The study will identify the relationships among demographic variables, prognostic features, geographic setting, treatment options and clinical, economic and health status (activities of daily living and caregiver impact) outcomes.\nInclusion criteria: inclusion criteria: \n\n Diagnosis of dementia under the DSM-IV criteria, or of Mild Cognitive Impairment, using the Peterson Criteria \n\n Living in the community (home, apartment or collective housing with nursing care available for less than 40 hours per week) \n\n Patient able to provide written informed consent, or provision of written informed consent by a legal guardian/proxy \n\n Availability of a caregiver willing to provide consent for required components of the study \n\n Fluent in English \n\n May be participating in a Phase IV or other post-marketing follow up study of an approved product for treatment of dementia \n\n \nExclusion criteria: : \n\n No concomitant life-threatening illness (a condition which is likely to interfere with the patient's ability to complete the study) \n\n Not unwilling or unable to complete the study \n\n Not concurrently participating in a clinical trial of an investigational drug (phase I, II or III) \n\n Unwillingness of patient or legal guardian / proxy to provide written informed consent \n\n Unwillingness of caregiver to provide written informed consent \n\n For patients with diagnosis of mild cognitive impairment: current or previous treatment with any cholinesterase or memantine",
+    "metadata": {
+      "brief_title": "Prospective Research in Memory Clinics (PRIME)",
+      "phase": "",
+      "drugs": "['Current treatment practice of each participating physician']",
+      "drugs_list": [
+        "Current treatment practice of each participating physician"
+      ],
+      "diseases": "['Dementia', 'Mild Cognitive Impairment']",
+      "diseases_list": [
+        "Dementia",
+        "Mild Cognitive Impairment"
+      ],
+      "enrollment": "970.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Diagnosis of dementia under the DSM-IV criteria, or of Mild Cognitive Impairment, using the Peterson Criteria \n\n Living in the community (home, apartment or collective housing with nursing care available for less than 40 hours per week) \n\n Patient able to provide written informed consent, or provision of written informed consent by a legal guardian/proxy \n\n Availability of a caregiver willing to provide consent for required components of the study \n\n Fluent in English \n\n May be participating in a Phase IV or other post-marketing follow up study of an approved product for treatment of dementia \n\n ",
+      "exclusion_criteria": ": \n\n No concomitant life-threatening illness (a condition which is likely to interfere with the patient's ability to complete the study) \n\n Not unwilling or unable to complete the study \n\n Not concurrently participating in a clinical trial of an investigational drug (phase I, II or III) \n\n Unwillingness of patient or legal guardian / proxy to provide written informed consent \n\n Unwillingness of caregiver to provide written informed consent \n\n For patients with diagnosis of mild cognitive impairment: current or previous treatment with any cholinesterase or memantine",
+      "brief_summary": "The purpose of the PRIME Study is to examine the current management and outcomes of patients with mild cognitive impairment or dementia. Approximately 4500 patients will be enrolled in this disease registry across 12 sites in Australia. Clinical, treatment, health status and economic data will be acquired over 3 years. The study will identify the relationships among demographic variables, prognostic features, geographic setting, treatment options and clinical, economic and health status (activities of daily living and caregiver impact) outcomes."
+    }
+  },
+  "linked_result": {
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    },
+    "Mild Cognitive Impairment": {
+      "conceptId": "386805003",
+      "preferred_term": "Mild cognitive disorder",
+      "fully_specified_name": "Mild cognitive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "<p>Some forgetfulness can be a normal part of aging. However, some people have more <a href=\"https://medlineplus.gov/memory.html\">memory</a> problems than other people their age. This condition is called mild cognitive impairment, or MCI. People with MCI can take care of themselves and do their normal activities.</p> <p>MCI memory problems may include:</p><ul> <li>Losing things often</li> <li>Forgetting to go to events and appointments</li> <li>Having more trouble coming up with words than other people of the same age</li> </ul> <p>Memory problems can also have other causes, including certain medicines and diseases that affect the blood vessels that supply the brain. Some of the problems brought on by these conditions can be managed or reversed.</p> <p>Your health care provider can do thinking, memory, and language tests to see if you have MCI. You may also need to see a specialist for more tests. Because MCI may be an early sign of <a href=\"https://medlineplus.gov/alzheimersdisease.html\">Alzheimer's disease</a>, it's really important to see your health care provider every 6 to 12 months.</p> <p>At this time, there is no proven drug treatment for MCI. Your health care provider can check to see if you have any changes in your memory or thinking skills over time.</p> <p class=\"\">NIH: National Institute on Aging</p>",
+      "best_match_term": "Mild cognitive impairment",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Dementia": 1,
+    "Mild Cognitive Impairment": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    },
+    "Mild Cognitive Impairment": {
+      "disease": "Mild Cognitive Impairment",
+      "conceptId": "386805003",
+      "preferred_term": "Mild cognitive disorder",
+      "fully_specified_name": "Mild cognitive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "<p>Some forgetfulness can be a normal part of aging. However, some people have more <a href=\"https://medlineplus.gov/memory.html\">memory</a> problems than other people their age. This condition is called mild cognitive impairment, or MCI. People with MCI can take care of themselves and do their normal activities.</p> <p>MCI memory problems may include:</p><ul> <li>Losing things often</li> <li>Forgetting to go to events and appointments</li> <li>Having more trouble coming up with words than other people of the same age</li> </ul> <p>Memory problems can also have other causes, including certain medicines and diseases that affect the blood vessels that supply the brain. Some of the problems brought on by these conditions can be managed or reversed.</p> <p>Your health care provider can do thinking, memory, and language tests to see if you have MCI. You may also need to see a specialist for more tests. Because MCI may be an early sign of <a href=\"https://medlineplus.gov/alzheimersdisease.html\">Alzheimer's disease</a>, it's really important to see your health care provider every 6 to 12 months.</p> <p>At this time, there is no proven drug treatment for MCI. Your health care provider can check to see if you have any changes in your memory or thinking skills over time.</p> <p class=\"\">NIH: National Institute on Aging</p>",
+      "best_match_term": "Mild cognitive impairment"
+    }
+  }
+}

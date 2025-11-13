@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT02394418",
+  "contextual": {
+    "_id": "NCT02394418",
+    "title": "Effect of Sevoflurane, Propofol and Dexmedetomidine on Delirium & Neuroinflammation in Mechanically Ventilated Patients",
+    "text": "Summary: Assessment of sedative effects of sevoflurane, dexmedetomidine and propofol on the clinical course of delirium, SIRS and neuroinflammation in mechanically ventilated patients using CAM-ICU scale, GSK-3beta and protein S100b in serum.\nInclusion criteria: inclusion criteria: \n\n presence of delirium \n\n \nExclusion criteria: : \n\n presence of Alzheimer's disease \n\n any mental disorder \n\n presence of cancer",
+    "metadata": {
+      "brief_title": "Effect of Sevoflurane, Propofol and Dexmedetomidine on Delirium & Neuroinflammation in Mechanically Ventilated Patients",
+      "phase": "Phase 4",
+      "drugs": "['Sevoflurane', 'Propofol', 'Dexmedetomidine']",
+      "drugs_list": [
+        "Sevoflurane",
+        "Propofol",
+        "Dexmedetomidine"
+      ],
+      "diseases": "['Delirium']",
+      "diseases_list": [
+        "Delirium"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n presence of delirium \n\n ",
+      "exclusion_criteria": ": \n\n presence of Alzheimer's disease \n\n any mental disorder \n\n presence of cancer",
+      "brief_summary": "Assessment of sedative effects of sevoflurane, dexmedetomidine and propofol on the clinical course of delirium, SIRS and neuroinflammation in mechanically ventilated patients using CAM-ICU scale, GSK-3beta and protein S100b in serum."
+    }
+  }
+}

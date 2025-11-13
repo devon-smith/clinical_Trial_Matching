@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_acute_myocardial_infarction_now",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_finding_of_left_bundle_branch_block_now",
+  "patient_has_symptoms_of_myocardial_ischemia_now",
+  "patient_has_finding_of_st_segment_elevation_now"
+]

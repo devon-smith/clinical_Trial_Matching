@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T22:17:46",
+  "trial_id": "NCT00116584",
+  "contextual": {
+    "_id": "NCT00116584",
+    "title": "Heliox-Driven Racemic Epinephrine in Treatment of Bronchiolitis in Pediatric ED Patients",
+    "text": "Summary: The purpose of this study is to assess whether children with moderate to severe bronchiolitis treated with standard racemic epinephrine therapy via 70:30 helium-oxygen (heliox) driven nebulization will have improvements in measurements of airway more rapidly than those treated with conventional air-oxygen driven nebulization.\nInclusion criteria: inclusion criteria: \n\n Any child 2-12 months old seen in the emergency department. \n\n A clinical bronchiolitis score > 3 by modified Wood's Clinical Bronchiolitis Score (M-WCBS). \n\n Diagnostic criteria of bronchiolitis includes tachypnea, cough, prolonged expiratory phase, wheezing, rales, chest retractions, and hyperinflation of lungs on chest radiograph. After consenting a patient to the study, respiratory syncytial virus (RSV) infection will be tested by rapid enzyme-linked immunoabsorbent assay of nasal secretions. \n\n \nExclusion criteria: : \n\n No child will be excluded based on race or gender \n\n Patients under the age of 2 months or greater than 12 months \n\n Patients with cyanotic heart disease \n\n Patients with lobar pneumonia, defined by results of chest radiographs. \n\n The presence of interstitial disease or diffuse patchy marking consistent with atelectasis on chest radiographs will not exclude patients. \n\n Patients with croup. \n\n Patients with foreign body aspiration. \n\n Patients with history of cystic fibrosis, bronchopulmonary dysplasia or other chronic lung disease. \n\n Patients with liver or renal disease. \n\n Patients with sickle cell anemia. \n\n Patients requiring mechanical ventilation. \n\n Patients who develop supraventricular tachycardia secondary to racemic epinephrine administration. \n\n Patients with tracheomalacia or bronchomalacia. \n\n Patients who had received bronchodilators within 2 hours of initiation of the study. \n\n Patients who had received systemic corticosteroids within 72 hours of enrollment \n\n Patients who suffered from persistent airway hyperreactivity in the 3 months before the study. \n\n Patients who do not tolerate the nasal cannulae for 45 out of 60 minutes.",
+    "metadata": {
+      "brief_title": "Heliox-Driven Racemic Epinephrine in Treatment of Bronchiolitis in Pediatric ED Patients",
+      "phase": "Phase 3",
+      "drugs": "['heliox', 'oxygen']",
+      "drugs_list": [
+        "heliox",
+        "oxygen"
+      ],
+      "diseases": "['Bronchiolitis']",
+      "diseases_list": [
+        "Bronchiolitis"
+      ],
+      "enrollment": "72.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Any child 2-12 months old seen in the emergency department. \n\n A clinical bronchiolitis score > 3 by modified Wood's Clinical Bronchiolitis Score (M-WCBS). \n\n Diagnostic criteria of bronchiolitis includes tachypnea, cough, prolonged expiratory phase, wheezing, rales, chest retractions, and hyperinflation of lungs on chest radiograph. After consenting a patient to the study, respiratory syncytial virus (RSV) infection will be tested by rapid enzyme-linked immunoabsorbent assay of nasal secretions. \n\n ",
+      "exclusion_criteria": ": \n\n No child will be excluded based on race or gender \n\n Patients under the age of 2 months or greater than 12 months \n\n Patients with cyanotic heart disease \n\n Patients with lobar pneumonia, defined by results of chest radiographs. \n\n The presence of interstitial disease or diffuse patchy marking consistent with atelectasis on chest radiographs will not exclude patients. \n\n Patients with croup. \n\n Patients with foreign body aspiration. \n\n Patients with history of cystic fibrosis, bronchopulmonary dysplasia or other chronic lung disease. \n\n Patients with liver or renal disease. \n\n Patients with sickle cell anemia. \n\n Patients requiring mechanical ventilation. \n\n Patients who develop supraventricular tachycardia secondary to racemic epinephrine administration. \n\n Patients with tracheomalacia or bronchomalacia. \n\n Patients who had received bronchodilators within 2 hours of initiation of the study. \n\n Patients who had received systemic corticosteroids within 72 hours of enrollment \n\n Patients who suffered from persistent airway hyperreactivity in the 3 months before the study. \n\n Patients who do not tolerate the nasal cannulae for 45 out of 60 minutes.",
+      "brief_summary": "The purpose of this study is to assess whether children with moderate to severe bronchiolitis treated with standard racemic epinephrine therapy via 70:30 helium-oxygen (heliox) driven nebulization will have improvements in measurements of airway more rapidly than those treated with conventional air-oxygen driven nebulization."
+    }
+  },
+  "linked_result": {
+    "Bronchiolitis": {
+      "conceptId": "4120002",
+      "preferred_term": "Bronchiolitis",
+      "fully_specified_name": "Bronchiolitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the BRONCHIOLES.",
+      "best_match_term": "Bronchiolitis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Bronchiolitis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Bronchiolitis": {
+      "disease": "Bronchiolitis",
+      "conceptId": "4120002",
+      "preferred_term": "Bronchiolitis",
+      "fully_specified_name": "Bronchiolitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the BRONCHIOLES.",
+      "best_match_term": "Bronchiolitis"
+    }
+  }
+}

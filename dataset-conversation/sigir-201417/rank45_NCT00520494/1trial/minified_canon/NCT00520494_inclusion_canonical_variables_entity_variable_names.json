@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_has_diagnosis_of_humoral_immune_defect_now",
+  "patient_is_exposed_to_immunoglobulin_inthehistory",
+  "patient_immunoglobulin_g_measurement_value_recorded_now_withunit_grams_per_liter",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_contraception_now",
+  "patient_has_undergone_urine_pregnancy_test_now"
+]

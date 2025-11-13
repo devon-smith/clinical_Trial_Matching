@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT00367978",
+  "contextual": {
+    "_id": "NCT00367978",
+    "title": "Effects of Amlodipine/Benazepril in the Hypertensive African-American Population With Type 2 Diabetes Mellitus",
+    "text": "Summary: This study evaluated the efficacy and safety of amlodipine/benazepril compared with that of enalapril in the treatment of hypertension in African-American patients with type 2 diabetes.\nInclusion criteria: inclusion criteria: \n\n African-American \n\n males and females \n\n current diagnosis of type 2 diabetes documented by medical history; \n\n mean sitting diastolic blood pressure of ≥ 90 and ≤ 110 mm Hg; \n\n HbA1C ≤ 9.5% \n\n \nExclusion criteria: : \n\n having unilateral or bilateral renal artery stenosis; \n\n having clinically significant cardiac dysrhythmias; \n\n having a significant history of coronary artery disease within the past 6 months; \n\n having a history or diagnosis of congestive heart failure (CHF); \n\n having any clinically relevant cardiac valvular disease",
+    "metadata": {
+      "brief_title": "Effects of Amlodipine/Benazepril in the Hypertensive African-American Population With Type 2 Diabetes Mellitus",
+      "phase": "Phase 4",
+      "drugs": "['Amlodipine/benazepril']",
+      "drugs_list": [
+        "Amlodipine/benazepril"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "275.0",
+      "inclusion_criteria": "inclusion criteria: \n\n African-American \n\n males and females \n\n current diagnosis of type 2 diabetes documented by medical history; \n\n mean sitting diastolic blood pressure of ≥ 90 and ≤ 110 mm Hg; \n\n HbA1C ≤ 9.5% \n\n ",
+      "exclusion_criteria": ": \n\n having unilateral or bilateral renal artery stenosis; \n\n having clinically significant cardiac dysrhythmias; \n\n having a significant history of coronary artery disease within the past 6 months; \n\n having a history or diagnosis of congestive heart failure (CHF); \n\n having any clinically relevant cardiac valvular disease",
+      "brief_summary": "This study evaluated the efficacy and safety of amlodipine/benazepril compared with that of enalapril in the treatment of hypertension in African-American patients with type 2 diabetes."
+    }
+  }
+}

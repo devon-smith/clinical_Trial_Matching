@@ -1,0 +1,17 @@
+[
+  "patient_is_undergoing_home_oxygen_therapy_now",
+  "patient_has_finding_of_atrial_septal_defect_now",
+  "patient_has_finding_of_coarctation_of_aorta_now",
+  "patient_has_finding_of_complete_transposition_of_great_vessels_now",
+  "patient_has_finding_of_congenital_atresia_of_pulmonary_artery_now",
+  "patient_has_finding_of_congenital_atresia_of_tricuspid_valve_now",
+  "patient_has_finding_of_cyanotic_congenital_heart_disease_now",
+  "patient_has_finding_of_heart_disease_now",
+  "patient_has_finding_of_hypoplastic_left_heart_syndrome_now",
+  "patient_has_finding_of_pulmonic_valve_stenosis_now",
+  "patient_has_finding_of_tetralogy_of_fallot_now",
+  "patient_has_finding_of_total_anomalous_pulmonary_venous_return_now",
+  "patient_has_finding_of_ventricular_septal_defect_now",
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_is_undergoing_incision_of_trachea_now"
+]

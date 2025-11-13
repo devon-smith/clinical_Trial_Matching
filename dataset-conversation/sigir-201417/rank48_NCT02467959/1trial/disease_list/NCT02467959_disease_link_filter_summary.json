@@ -1,0 +1,68 @@
+{
+  "generated": "2025-10-22T20:55:00",
+  "trial_id": "NCT02467959",
+  "contextual": {
+    "_id": "NCT02467959",
+    "title": "Diagnostic Accuracy of Emergency Physician Performed Bedside Ultrasound in Suspected Acute Appendicitis",
+    "text": "Summary: The aim of the study is to evaluate the diagnostic yield and accuracy of bedside emergency physician performed ultrasound in the diagnosis of acute appendicitis.\nInclusion criteria: inclusion criteria: \n\n Patient presented with the complaint of right lower abdominal pain \n\n Suspected acute appendicitis \n\n \nExclusion criteria: : \n\n Flank pain \n\n Previous appendectomy \n\n Pregnancy \n\n Unstable vital signs \n\n Frank peritonitis \n\n US performed before EP's examination",
+    "metadata": {
+      "brief_title": "Diagnostic Accuracy of Emergency Physician Performed Bedside Ultrasound in Suspected Acute Appendicitis",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Acute Abdomen', 'Acute Appendicitis']",
+      "diseases_list": [
+        "Acute Abdomen",
+        "Acute Appendicitis"
+      ],
+      "enrollment": "250.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patient presented with the complaint of right lower abdominal pain \n\n Suspected acute appendicitis \n\n ",
+      "exclusion_criteria": ": \n\n Flank pain \n\n Previous appendectomy \n\n Pregnancy \n\n Unstable vital signs \n\n Frank peritonitis \n\n US performed before EP's examination",
+      "brief_summary": "The aim of the study is to evaluate the diagnostic yield and accuracy of bedside emergency physician performed ultrasound in the diagnosis of acute appendicitis."
+    }
+  },
+  "linked_result": {
+    "Acute Abdomen": {
+      "conceptId": "9209005",
+      "preferred_term": "Acute abdomen",
+      "fully_specified_name": "Acute abdomen (disorder)",
+      "type": "Clinical finding",
+      "definition": "A clinical syndrome with acute abdominal pain that is severe, localized, and rapid in onset. Acute abdomen may be caused by a variety of disorders, injuries, or diseases.",
+      "best_match_term": "Acute abdomen",
+      "match_reason": "Exact"
+    },
+    "Acute Appendicitis": {
+      "conceptId": "85189001",
+      "preferred_term": "Acute appendicitis",
+      "fully_specified_name": "Acute appendicitis (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Acute appendicitis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Acute Abdomen": 1,
+    "Acute Appendicitis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Acute Abdomen": {
+      "disease": "Acute Abdomen",
+      "conceptId": "9209005",
+      "preferred_term": "Acute abdomen",
+      "fully_specified_name": "Acute abdomen (disorder)",
+      "type": "Clinical finding",
+      "definition": "A clinical syndrome with acute abdominal pain that is severe, localized, and rapid in onset. Acute abdomen may be caused by a variety of disorders, injuries, or diseases.",
+      "best_match_term": "Acute abdomen"
+    },
+    "Acute Appendicitis": {
+      "disease": "Acute Appendicitis",
+      "conceptId": "85189001",
+      "preferred_term": "Acute appendicitis",
+      "fully_specified_name": "Acute appendicitis (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Acute appendicitis"
+    }
+  }
+}

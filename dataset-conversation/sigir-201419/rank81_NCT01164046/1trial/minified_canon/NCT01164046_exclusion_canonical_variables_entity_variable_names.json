@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_undergoing_anticoagulant_therapy_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_age_value_recorded_now_in_months",
+  "patient_longevity_value_recorded_now_withunit_months"
+]

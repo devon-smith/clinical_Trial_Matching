@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_central_chest_pain_inthehistory",
+  "patient_has_finding_of_non_cardiac_chest_pain_inthehistory",
+  "patient_has_undergone_antidepressant_therapy_inthepast6months",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_undergone_antidepressant_therapy_inthehistory",
+  "patient_has_undergone_cardiovascular_stress_testing_inthehistory_outcome_is_negative",
+  "patient_has_undergone_coronary_angiography_inthehistory_outcome_is_negative",
+  "patient_has_symptoms_of_chest_pain_now",
+  "patient_has_finding_of_erosive_esophagitis_now"
+]

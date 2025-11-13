@@ -1,0 +1,302 @@
+{
+  "generated": "2025-10-22T21:00:52",
+  "trial_id": "NCT01302418",
+  "contextual": {
+    "_id": "NCT01302418",
+    "title": "Collection and Testing of Respiratory Samples",
+    "text": "Summary: The study will be conducted using nasopharyngeal swab specimens collected prospectively from individuals suspected of having the signs and symptoms of an acute respiratory tract infection caused by a respiratory virus. A series of standard viral culture tests validated for routine use in the clinical laboratory, and/or a series of PCR-based Laboratory Developed Tests (PCR-LDT) validated by a central reference laboratory will be used to verify the performance of the investigational artus Influenza A/B RT-PCR test and the QIAGEN ResPlex II Advanced Panel test. From each specimen five (5) aliquots will be prepared: (a) one aliquot will be tested in real-time using the assigned viral culture reference methods; (b) one aliquot will be used to extract nucleic acid in real-time for investigational testing; (c) one aliquot of the specimen will be stored at --70C for subsequent shipment to the reference laboratory for PCR-LDT testing, (d) one aliquot will be archived at -70C for subsequent follow-up by the reference laboratory (e.g., bi-directional sequencing of positive specimens), and (e) any remaining specimen will be stored for the Fresh vs. Frozen Study. The extracted nucleic acid generated from the second aliquot (i.e., b above) will be split and subjected to testing by both the artus Influenza A/B RT-PCR test and the ResPlex II Advanced Panel test.\nInclusion criteria: inclusion criteria: \n\n Subjects that sign the Informed Consent form required for prospectively enrolling patients into the study. \n\n Subjects that present at a hospital, clinic, or physician's office with the signs and symptoms of a respiratory tract infection. \n\n Subjects with an acute respiratory infection where said acute respiratory infection is suspected of being caused by an Influenza virus. \n\n \nExclusion criteria: : \n\n Subjects where the duration of the symptoms of such an acute respiratory infection is greater than or equal to 5 days (i.e., ≥5).",
+    "metadata": {
+      "brief_title": "Collection and Testing of Respiratory Samples",
+      "phase": "",
+      "drugs": "['artus Influenza A/B RT-PCR Test']",
+      "drugs_list": [
+        "artus Influenza A/B RT-PCR Test"
+      ],
+      "diseases": "['QIAGEN ResPlex II Advanced Panel', 'Influenza A', 'Respiratory Syncytial Virus Infections', 'Infection Due to Human Parainfluenza Virus 1', 'Parainfluenza Type 2', 'Parainfluenza Type 3', 'Parainfluenza Type 4', 'Human Metapneumovirus A/B', 'Rhinovirus', 'Coxsackie Virus/Echovirus', 'Adenovirus Types B/C/E', 'Coronavirus Subtypes 229E', 'Coronavirus Subtype NL63', 'Coronavirus Subtype OC43', 'Coronavirus Subtype HKU1', 'Human Bocavirus', 'Artus Influenza A/B RT-PCR Test', 'Influenza B']",
+      "diseases_list": [
+        "QIAGEN ResPlex II Advanced Panel",
+        "Influenza A",
+        "Respiratory Syncytial Virus Infections",
+        "Infection Due to Human Parainfluenza Virus 1",
+        "Parainfluenza Type 2",
+        "Parainfluenza Type 3",
+        "Parainfluenza Type 4",
+        "Human Metapneumovirus A/B",
+        "Rhinovirus",
+        "Coxsackie Virus/Echovirus",
+        "Adenovirus Types B/C/E",
+        "Coronavirus Subtypes 229E",
+        "Coronavirus Subtype NL63",
+        "Coronavirus Subtype OC43",
+        "Coronavirus Subtype HKU1",
+        "Human Bocavirus",
+        "Artus Influenza A/B RT-PCR Test",
+        "Influenza B"
+      ],
+      "enrollment": "272.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Subjects that sign the Informed Consent form required for prospectively enrolling patients into the study. \n\n Subjects that present at a hospital, clinic, or physician's office with the signs and symptoms of a respiratory tract infection. \n\n Subjects with an acute respiratory infection where said acute respiratory infection is suspected of being caused by an Influenza virus. \n\n ",
+      "exclusion_criteria": ": \n\n Subjects where the duration of the symptoms of such an acute respiratory infection is greater than or equal to 5 days (i.e., ≥5).",
+      "brief_summary": "The study will be conducted using nasopharyngeal swab specimens collected prospectively from individuals suspected of having the signs and symptoms of an acute respiratory tract infection caused by a respiratory virus. A series of standard viral culture tests validated for routine use in the clinical laboratory, and/or a series of PCR-based Laboratory Developed Tests (PCR-LDT) validated by a central reference laboratory will be used to verify the performance of the investigational artus Influenza A/B RT-PCR test and the QIAGEN ResPlex II Advanced Panel test. From each specimen five (5) aliquots will be prepared: (a) one aliquot will be tested in real-time using the assigned viral culture reference methods; (b) one aliquot will be used to extract nucleic acid in real-time for investigational testing; (c) one aliquot of the specimen will be stored at --70C for subsequent shipment to the reference laboratory for PCR-LDT testing, (d) one aliquot will be archived at -70C for subsequent follow-up by the reference laboratory (e.g., bi-directional sequencing of positive specimens), and (e) any remaining specimen will be stored for the Fresh vs. Frozen Study. The extracted nucleic acid generated from the second aliquot (i.e., b above) will be split and subjected to testing by both the artus Influenza A/B RT-PCR test and the ResPlex II Advanced Panel test."
+    }
+  },
+  "linked_result": {
+    "QIAGEN ResPlex II Advanced Panel": {
+      "conceptId": "444091001",
+      "preferred_term": "Analysis using mulitplex PCR",
+      "fully_specified_name": "Analysis using multiplex polymerase chain reaction technique (procedure)",
+      "type": "Procedure",
+      "definition": null,
+      "best_match_term": "Analysis using mulitplex PCR",
+      "match_reason": "Ancestor"
+    },
+    "Influenza A": {
+      "conceptId": "442438000",
+      "preferred_term": "Influenza due to Influenza A virus",
+      "fully_specified_name": "Influenza caused by Influenza A virus (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Influenza caused by Influenza A virus",
+      "match_reason": "Exact"
+    },
+    "Respiratory Syncytial Virus Infections": {
+      "conceptId": "55735004",
+      "preferred_term": "Respiratory syncytial virus infection",
+      "fully_specified_name": "Respiratory syncytial virus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pneumovirus infections caused by the RESPIRATORY SYNCYTIAL VIRUSES. Humans and cattle are most affected but infections in goats and sheep have been reported.",
+      "best_match_term": "Respiratory syncytial virus infection",
+      "match_reason": "Exact"
+    },
+    "Infection Due to Human Parainfluenza Virus 1": {
+      "conceptId": "407496005",
+      "preferred_term": "Infection due to Human parainfluenza virus 1",
+      "fully_specified_name": "Infection caused by Human parainfluenza virus 1 (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Infection due to Human parainfluenza virus 1",
+      "match_reason": "Exact"
+    },
+    "Parainfluenza Type 2": {
+      "conceptId": "70233007",
+      "preferred_term": "Infection due to Human parainfluenza virus 2",
+      "fully_specified_name": "Infection caused by Human parainfluenza virus 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Infection due to Parainfluenza virus 2 (disorder)",
+      "match_reason": "Exact"
+    },
+    "Parainfluenza Type 3": {
+      "conceptId": "30270006",
+      "preferred_term": "Infection due to Human parainfluenza virus 3",
+      "fully_specified_name": "Infection caused by Human parainfluenza virus 3 (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Infection due to Parainfluenza virus 3 (disorder)",
+      "match_reason": "Exact"
+    },
+    "Parainfluenza Type 4": {
+      "conceptId": "68949000",
+      "preferred_term": "Infection due to Human parainfluenza virus 4",
+      "fully_specified_name": "Infection caused by Human parainfluenza virus 4 (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Infection due to Parainfluenza virus 4 (disorder)",
+      "match_reason": "Exact"
+    },
+    "Human Metapneumovirus A/B": {
+      "conceptId": "1087141000119106",
+      "preferred_term": "Human metapneumovirus infection",
+      "fully_specified_name": "Human metapneumovirus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Human metapneumovirus infection",
+      "match_reason": "Exact"
+    },
+    "Rhinovirus": {
+      "conceptId": "41546002",
+      "preferred_term": "Disease due to Rhinovirus",
+      "fully_specified_name": "Disease caused by Rhinovirus (disorder)",
+      "type": "Clinical finding",
+      "definition": "An infectious process caused by rhinovirus. The virus usually causes upper respiratory infections, but can infect the lower tract as well.",
+      "best_match_term": "Rhinovirus infection",
+      "match_reason": "Exact"
+    },
+    "Coxsackie Virus/Echovirus": {
+      "conceptId": "703015006",
+      "preferred_term": "Human coxsackievirus or human echovirus",
+      "fully_specified_name": "Human coxsackievirus or human echovirus (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Human coxsackievirus or human echovirus",
+      "match_reason": "Exact"
+    },
+    "Adenovirus Types B/C/E": null,
+    "Coronavirus Subtypes 229E": {
+      "conceptId": "707892006",
+      "preferred_term": "Human coronavirus 229E RNA",
+      "fully_specified_name": "Ribonucleic acid of Human coronavirus 229E (substance)",
+      "type": "Substance",
+      "definition": null,
+      "best_match_term": "Human coronavirus 229E RNA",
+      "match_reason": "Ancestor"
+    },
+    "Coronavirus Subtype NL63": {
+      "conceptId": "707894007",
+      "preferred_term": "Human coronavirus NL63 RNA",
+      "fully_specified_name": "Ribonucleic acid of Human coronavirus NL63 (substance)",
+      "type": "Substance",
+      "definition": null,
+      "best_match_term": "Human coronavirus NL63 RNA",
+      "match_reason": "Ancestor"
+    },
+    "Coronavirus Subtype OC43": {
+      "conceptId": "709346006",
+      "preferred_term": "Human coronavirus OC43 Ag",
+      "fully_specified_name": "Antigen of Human coronavirus OC43 (substance)",
+      "type": "Substance",
+      "definition": null,
+      "best_match_term": "Human coronavirus OC43 antigen",
+      "match_reason": "Ancestor"
+    },
+    "Coronavirus Subtype HKU1": {
+      "conceptId": "707893001",
+      "preferred_term": "Human coronavirus HKU1 RNA",
+      "fully_specified_name": "Ribonucleic acid of Human coronavirus HKU1 (substance)",
+      "type": "Substance",
+      "definition": null,
+      "best_match_term": "Human coronavirus HKU1 RNA",
+      "match_reason": "Ancestor"
+    },
+    "Human Bocavirus": {
+      "conceptId": "720115002",
+      "preferred_term": "Human bocavirus Ag",
+      "fully_specified_name": "Antigen of Human bocavirus (substance)",
+      "type": "Substance",
+      "definition": null,
+      "best_match_term": "Human bocavirus antigen",
+      "match_reason": "Ancestor"
+    },
+    "Artus Influenza A/B RT-PCR Test": {
+      "conceptId": "772835009",
+      "preferred_term": "Detection of Influenza A virus using PCR - polymerase chain reaction technique",
+      "fully_specified_name": "Detection of Influenza A virus using polymerase chain reaction technique (procedure)",
+      "type": "Procedure",
+      "definition": null,
+      "best_match_term": "Detection of Influenza A virus using PCR - polymerase chain reaction technique",
+      "match_reason": "Ancestor"
+    },
+    "Influenza B": {
+      "conceptId": "24662006",
+      "preferred_term": "Influenza due to Influenza B virus",
+      "fully_specified_name": "Influenza caused by Influenza B virus (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Influenza caused by Influenza virus, type B",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Influenza A": 1,
+    "Respiratory Syncytial Virus Infections": 1,
+    "Infection Due to Human Parainfluenza Virus 1": 1,
+    "Parainfluenza Type 2": 1,
+    "Parainfluenza Type 3": 1,
+    "Parainfluenza Type 4": 1,
+    "Human Metapneumovirus A/B": 1,
+    "Rhinovirus": 1,
+    "Coxsackie Virus/Echovirus": 1,
+    "Influenza B": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Influenza A": {
+      "disease": "Influenza A",
+      "conceptId": "442438000",
+      "preferred_term": "Influenza due to Influenza A virus",
+      "fully_specified_name": "Influenza caused by Influenza A virus (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Influenza caused by Influenza A virus"
+    },
+    "Respiratory Syncytial Virus Infections": {
+      "disease": "Respiratory Syncytial Virus Infections",
+      "conceptId": "55735004",
+      "preferred_term": "Respiratory syncytial virus infection",
+      "fully_specified_name": "Respiratory syncytial virus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pneumovirus infections caused by the RESPIRATORY SYNCYTIAL VIRUSES. Humans and cattle are most affected but infections in goats and sheep have been reported.",
+      "best_match_term": "Respiratory syncytial virus infection"
+    },
+    "Infection Due to Human Parainfluenza Virus 1": {
+      "disease": "Infection Due to Human Parainfluenza Virus 1",
+      "conceptId": "407496005",
+      "preferred_term": "Infection due to Human parainfluenza virus 1",
+      "fully_specified_name": "Infection caused by Human parainfluenza virus 1 (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Infection due to Human parainfluenza virus 1"
+    },
+    "Parainfluenza Type 2": {
+      "disease": "Parainfluenza Type 2",
+      "conceptId": "70233007",
+      "preferred_term": "Infection due to Human parainfluenza virus 2",
+      "fully_specified_name": "Infection caused by Human parainfluenza virus 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Infection due to Parainfluenza virus 2 (disorder)"
+    },
+    "Parainfluenza Type 3": {
+      "disease": "Parainfluenza Type 3",
+      "conceptId": "30270006",
+      "preferred_term": "Infection due to Human parainfluenza virus 3",
+      "fully_specified_name": "Infection caused by Human parainfluenza virus 3 (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Infection due to Parainfluenza virus 3 (disorder)"
+    },
+    "Parainfluenza Type 4": {
+      "disease": "Parainfluenza Type 4",
+      "conceptId": "68949000",
+      "preferred_term": "Infection due to Human parainfluenza virus 4",
+      "fully_specified_name": "Infection caused by Human parainfluenza virus 4 (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Infection due to Parainfluenza virus 4 (disorder)"
+    },
+    "Human Metapneumovirus A/B": {
+      "disease": "Human Metapneumovirus A/B",
+      "conceptId": "1087141000119106",
+      "preferred_term": "Human metapneumovirus infection",
+      "fully_specified_name": "Human metapneumovirus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Human metapneumovirus infection"
+    },
+    "Rhinovirus": {
+      "disease": "Rhinovirus",
+      "conceptId": "41546002",
+      "preferred_term": "Disease due to Rhinovirus",
+      "fully_specified_name": "Disease caused by Rhinovirus (disorder)",
+      "type": "Clinical finding",
+      "definition": "An infectious process caused by rhinovirus. The virus usually causes upper respiratory infections, but can infect the lower tract as well.",
+      "best_match_term": "Rhinovirus infection"
+    },
+    "Coxsackie Virus/Echovirus": {
+      "disease": "Coxsackie Virus/Echovirus",
+      "conceptId": "703015006",
+      "preferred_term": "Human coxsackievirus or human echovirus",
+      "fully_specified_name": "Human coxsackievirus or human echovirus (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Human coxsackievirus or human echovirus"
+    },
+    "Influenza B": {
+      "disease": "Influenza B",
+      "conceptId": "24662006",
+      "preferred_term": "Influenza due to Influenza B virus",
+      "fully_specified_name": "Influenza caused by Influenza B virus (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Influenza caused by Influenza virus, type B"
+    }
+  }
+}

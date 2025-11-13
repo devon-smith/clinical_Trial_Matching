@@ -1,0 +1,71 @@
+{
+  "generated": "2025-10-20T23:29:06",
+  "trial_id": "NCT00808652",
+  "contextual": {
+    "_id": "NCT00808652",
+    "title": "Prevalence and Outcome of Brachial Artery Endothelial Function in Morbidly Obese Patients Undergoing Bariatric Surgery",
+    "text": "Summary: The relation between obesity and ischemic heart disease (IHD) is under considerable debate. The reduction in all-cause mortality and, more specifically, the reduction in cardiac-related mortality seen after weight-loss surgery, may be due to regression or slowing developement of subclinical IHD. Function of cells lining the arteries (endothelium) is closely related to the state of IHD and its measurement can serve as a surrogate marker for the existence and severity of IHD. The investigators hypothesize that the prevalence of undiagnosed IHD in the morbidly obese population is high and that following surgery for weight reduction there is a halt in the progression, or even a regression in its severity.~The study includes measurement of endothelial function before and after weight-reducing surgery.\nInclusion criteria: inclusion criteria: \n\n Morbidly obese patients who fulfill the NIH criteria for surgical intervention. \n\n \nExclusion criteria: : \n\n Patients deemed unfit for surgery \n\n Pregnant women, or who are attempting conception. \n\n Subjects with any history of myocardial infarction, coronary artery bypass grafting surgery, coronary angiography with angioplasty and/or stenting, or any lesion > 50% of the coronary artery luminal diameter, cerebrovascular accident, or peripheral vascular disease with abnormal electrocardiograms and/or echocardiography. \n\n History of drug or alcohol abuse. \n\n Chronic liver disease.",
+    "metadata": {
+      "brief_title": "Prevalence and Outcome of Brachial Artery Endothelial Function in Morbidly Obese Patients Undergoing Bariatric Surgery",
+      "phase": "",
+      "drugs": "['Measurement of flow mediated dilation of brachial artery.']",
+      "drugs_list": [
+        "Measurement of flow mediated dilation of brachial artery."
+      ],
+      "diseases": "['Obesity, Morbid', 'Ischemic Heart Disease']",
+      "diseases_list": [
+        "Obesity",
+        "Morbid",
+        "Ischemic Heart Disease"
+      ],
+      "enrollment": "13.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Morbidly obese patients who fulfill the NIH criteria for surgical intervention. \n\n ",
+      "exclusion_criteria": ": \n\n Patients deemed unfit for surgery \n\n Pregnant women, or who are attempting conception. \n\n Subjects with any history of myocardial infarction, coronary artery bypass grafting surgery, coronary angiography with angioplasty and/or stenting, or any lesion > 50% of the coronary artery luminal diameter, cerebrovascular accident, or peripheral vascular disease with abnormal electrocardiograms and/or echocardiography. \n\n History of drug or alcohol abuse. \n\n Chronic liver disease.",
+      "brief_summary": "The relation between obesity and ischemic heart disease (IHD) is under considerable debate. The reduction in all-cause mortality and, more specifically, the reduction in cardiac-related mortality seen after weight-loss surgery, may be due to regression or slowing developement of subclinical IHD. Function of cells lining the arteries (endothelium) is closely related to the state of IHD and its measurement can serve as a surrogate marker for the existence and severity of IHD. The investigators hypothesize that the prevalence of undiagnosed IHD in the morbidly obese population is high and that following surgery for weight reduction there is a halt in the progression, or even a regression in its severity.~The study includes measurement of endothelial function before and after weight-reducing surgery."
+    }
+  },
+  "linked_result": {
+    "Obesity, Morbid": {
+      "conceptId": "238136002",
+      "preferred_term": "Morbid obesity",
+      "fully_specified_name": "Morbid obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The condition of weighing two, three, or more times the ideal weight, so called because it is associated with many serious and life-threatening disorders. In the BODY MASS INDEX, morbid obesity is defined as having a BMI greater than 40.0 kg/m2.",
+      "best_match_term": "Morbid obesity",
+      "match_reason": "Exact"
+    },
+    "Ischemic Heart Disease": {
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Obesity, Morbid": 1,
+    "Ischemic Heart Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Obesity, Morbid": {
+      "disease": "Obesity, Morbid",
+      "conceptId": "238136002",
+      "preferred_term": "Morbid obesity",
+      "fully_specified_name": "Morbid obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The condition of weighing two, three, or more times the ideal weight, so called because it is associated with many serious and life-threatening disorders. In the BODY MASS INDEX, morbid obesity is defined as having a BMI greater than 40.0 kg/m2.",
+      "best_match_term": "Morbid obesity"
+    },
+    "Ischemic Heart Disease": {
+      "disease": "Ischemic Heart Disease",
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease"
+    }
+  }
+}

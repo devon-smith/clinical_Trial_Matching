@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:30:12",
+  "trial_id": "NCT01397994",
+  "contextual": {
+    "_id": "NCT01397994",
+    "title": "Study to Assess Efficacy of Nicorandil+Atenolol vs Atenolol in Treatment of Chronic Stable Angina.",
+    "text": "Summary: This study is to determine the anti-anginal and anti-ischemic effect of k-channel opener, nicorandil in patients of chronic stable angina.\nInclusion criteria: inclusion criteria: \n\n Patients of chronic stable angina with abnormal Exercise Myocardial Perfusion Spect Scan with reversible and partially reversible ischemic changes. \n\n Male and female \n\n Age 25 to 65 years \n\n Patient must understand and be willing, able and likely to comply with all study procedures and restrictions and comprehends the diary cards. \n\n Patient must be able to give voluntary written informed consent. \n\n \nExclusion criteria: : \n\n Hypertension of > 170/100 mm of Hg \n\n Valvular heart disease and cardiomyopathy \n\n Myocardial infarction in < 6 months \n\n Unstable angina \n\n Congestive cardiac failure \n\n Severe anemia (Hb 7G/dl) \n\n Cardiac arrhythmias or II or III degree AV block \n\n Significant liver or renal dysfunction \n\n IDDM (Type-1 diabetes mellitus) \n\n Systolic blood pressure < 100 mm Hg \n\n Pregnant and nursing women \n\n Known hypersensitivity to nicorandil \n\n On calcium channel blockers \n\n Patients not eligible for Tc 99m SPECT \n\n Patients in whom beta blockers are contraindicated \n\n Geographical inaccessibility for treatment or follow-up evaluations",
+    "metadata": {
+      "brief_title": "Study to Assess Efficacy of Nicorandil+Atenolol vs Atenolol in Treatment of Chronic Stable Angina.",
+      "phase": "Phase 4",
+      "drugs": "['Nicorandil', 'Atenolol']",
+      "drugs_list": [
+        "Nicorandil",
+        "Atenolol"
+      ],
+      "diseases": "['Chronic Stable Angina']",
+      "diseases_list": [
+        "Chronic Stable Angina"
+      ],
+      "enrollment": "40.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients of chronic stable angina with abnormal Exercise Myocardial Perfusion Spect Scan with reversible and partially reversible ischemic changes. \n\n Male and female \n\n Age 25 to 65 years \n\n Patient must understand and be willing, able and likely to comply with all study procedures and restrictions and comprehends the diary cards. \n\n Patient must be able to give voluntary written informed consent. \n\n ",
+      "exclusion_criteria": ": \n\n Hypertension of > 170/100 mm of Hg \n\n Valvular heart disease and cardiomyopathy \n\n Myocardial infarction in < 6 months \n\n Unstable angina \n\n Congestive cardiac failure \n\n Severe anemia (Hb 7G/dl) \n\n Cardiac arrhythmias or II or III degree AV block \n\n Significant liver or renal dysfunction \n\n IDDM (Type-1 diabetes mellitus) \n\n Systolic blood pressure < 100 mm Hg \n\n Pregnant and nursing women \n\n Known hypersensitivity to nicorandil \n\n On calcium channel blockers \n\n Patients not eligible for Tc 99m SPECT \n\n Patients in whom beta blockers are contraindicated \n\n Geographical inaccessibility for treatment or follow-up evaluations",
+      "brief_summary": "This study is to determine the anti-anginal and anti-ischemic effect of k-channel opener, nicorandil in patients of chronic stable angina."
+    }
+  },
+  "linked_result": {
+    "Chronic Stable Angina": {
+      "conceptId": "233819005",
+      "preferred_term": "Stable angina",
+      "fully_specified_name": "Stable angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistent and reproducible chest discomfort usually precipitated by a physical exertion that dissipates upon cessation of such an activity. The symptoms are manifestations of MYOCARDIAL ISCHEMIA.",
+      "best_match_term": "Stable angina",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Chronic Stable Angina": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chronic Stable Angina": {
+      "disease": "Chronic Stable Angina",
+      "conceptId": "233819005",
+      "preferred_term": "Stable angina",
+      "fully_specified_name": "Stable angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistent and reproducible chest discomfort usually precipitated by a physical exertion that dissipates upon cessation of such an activity. The symptoms are manifestations of MYOCARDIAL ISCHEMIA.",
+      "best_match_term": "Stable angina"
+    }
+  }
+}

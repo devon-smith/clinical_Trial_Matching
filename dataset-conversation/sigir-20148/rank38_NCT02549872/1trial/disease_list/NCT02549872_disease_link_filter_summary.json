@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:43:43",
+  "trial_id": "NCT02549872",
+  "contextual": {
+    "_id": "NCT02549872",
+    "title": "Dementia Phenotypes in Primary Care, Hospital, and National Mortality Registries",
+    "text": "Summary: Most patients with dementia in the UK use their local hospitals and general (family) practices throughout their illness. Linked electronic health records from primary care, hospital and death certificates records therefore provide useful information about the diagnosis and prognosis of patients who develop dementia.~In this study we will assess the validity of dementia diagnoses in linked primary care, hospital and death records, by examining the timing of important health transitions in patients with recorded dementia, and we will estimate the lifetime risk of recorded dementia in different age and sex groups\nInclusion criteria: inclusion criteria: \n\n Patients aged 18 years and over \n\n Registered with a participating general practice during the study period \n\n Minimum one year of records prior to study entry meeting CPRD data quality criteria \n\n Followed on or after 1 January 1997 \n\n \nExclusion criteria: : \n\n Patients without recorded gender \n\n Less than 1 year of follow-up between study entry and date of administrative censoring",
+    "metadata": {
+      "brief_title": "Dementia Phenotypes in Primary Care, Hospital, and National Mortality Registries",
+      "phase": "",
+      "drugs": "['This is not an intervention study']",
+      "drugs_list": [
+        "This is not an intervention study"
+      ],
+      "diseases": "['Dementia']",
+      "diseases_list": [
+        "Dementia"
+      ],
+      "enrollment": "51000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients aged 18 years and over \n\n Registered with a participating general practice during the study period \n\n Minimum one year of records prior to study entry meeting CPRD data quality criteria \n\n Followed on or after 1 January 1997 \n\n ",
+      "exclusion_criteria": ": \n\n Patients without recorded gender \n\n Less than 1 year of follow-up between study entry and date of administrative censoring",
+      "brief_summary": "Most patients with dementia in the UK use their local hospitals and general (family) practices throughout their illness. Linked electronic health records from primary care, hospital and death certificates records therefore provide useful information about the diagnosis and prognosis of patients who develop dementia.~In this study we will assess the validity of dementia diagnoses in linked primary care, hospital and death records, by examining the timing of important health transitions in patients with recorded dementia, and we will estimate the lifetime risk of recorded dementia in different age and sex groups"
+    }
+  },
+  "linked_result": {
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    }
+  }
+}

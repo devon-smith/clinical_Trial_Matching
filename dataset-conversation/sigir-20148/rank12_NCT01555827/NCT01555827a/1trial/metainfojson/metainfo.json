@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT01555827",
+  "contextual": {
+    "_id": "NCT01555827",
+    "title": "Retinal Neurodegenerative Signs in Alzheimer's Diseases",
+    "text": "Summary: A few studies suggest that patients suffering from neurodegenerative diseases (such a multiple sclerosis or Alzheimer's disease (AD)) show decreased thickness of the retinal nerve fiber layer (RNFL), indicating axonal degeneration. High-definition spectral domain optical coherence tomography (SD-OCT), performed without radiation in a few seconds per eye, offers a precise and standardized estimation of this parameter, which could constitute a biomarker for cerebral axonal degeneration. These RNFL deficits might even be the earliest sign of AD, prior to damage of the hippocampal region that impacts memory.~Besides, some associations of AD with some degenerative diseases of the eye (glaucoma, microvascular abnormalities, age-related macular degeneration (AMD)) have also been reported.~It therefore seems interesting to determine whether RNFL thickness, and other ocular parameters, may give some indications for a better detection of AD and cognitive decline in the elderly.\nInclusion criteria: inclusion criteria: \n\n inclusion criteria for AD cases: \n\n Diagnosis of probable AD, defined according to the NINCDS-ARDRA criteria51 \n\n Light to moderate severity of the disease, defined by a MMSE score >10 (global evaluation of cognition) \n\n Patient aged 50 years or more \n\n Patient benefiting from social insurance \n\n inclusion criteria for controls: \n\n Absence of suspicion of dementia, based on normal performance according to age and educational level at neuropsychological testing defined as: \n\n Free recall ≥17 and total recall ≥40 for the Free and Cued Selective Reminding Test (Grober and Buschke test 52) MMSE ≥ norm for age and educational level (defined by mean - 1 SD) \n\n Isaac's set test ≥ norm for age and educational level (defined by mean - 1 SD) \n\n Matched to age and gender of the cases \n\n Patient benefiting from social insurance \n\n \nExclusion criteria: : \n\n ",
+    "metadata": {
+      "brief_title": "Retinal Neurodegenerative Signs in Alzheimer's Diseases",
+      "phase": "",
+      "drugs": "['Ophthalmological examination & Questionnaire']",
+      "drugs_list": [
+        "Ophthalmological examination & Questionnaire"
+      ],
+      "diseases": "[\"Alzheimer's Disease\"]",
+      "diseases_list": [
+        "Alzheimer's Disease"
+      ],
+      "enrollment": "200.0",
+      "inclusion_criteria": "inclusion criteria: \n\n inclusion criteria for AD cases: \n\n Diagnosis of probable AD, defined according to the NINCDS-ARDRA criteria51 \n\n Light to moderate severity of the disease, defined by a MMSE score >10 (global evaluation of cognition) \n\n Patient aged 50 years or more \n\n Patient benefiting from social insurance \n\n inclusion criteria for controls: \n\n Absence of suspicion of dementia, based on normal performance according to age and educational level at neuropsychological testing defined as: \n\n Free recall ≥17 and total recall ≥40 for the Free and Cued Selective Reminding Test (Grober and Buschke test 52) MMSE ≥ norm for age and educational level (defined by mean - 1 SD) \n\n Isaac's set test ≥ norm for age and educational level (defined by mean - 1 SD) \n\n Matched to age and gender of the cases \n\n Patient benefiting from social insurance \n\n ",
+      "exclusion_criteria": ": \n\n ",
+      "brief_summary": "A few studies suggest that patients suffering from neurodegenerative diseases (such a multiple sclerosis or Alzheimer's disease (AD)) show decreased thickness of the retinal nerve fiber layer (RNFL), indicating axonal degeneration. High-definition spectral domain optical coherence tomography (SD-OCT), performed without radiation in a few seconds per eye, offers a precise and standardized estimation of this parameter, which could constitute a biomarker for cerebral axonal degeneration. These RNFL deficits might even be the earliest sign of AD, prior to damage of the hippocampal region that impacts memory.~Besides, some associations of AD with some degenerative diseases of the eye (glaucoma, microvascular abnormalities, age-related macular degeneration (AMD)) have also been reported.~It therefore seems interesting to determine whether RNFL thickness, and other ocular parameters, may give some indications for a better detection of AD and cognitive decline in the elderly."
+    }
+  }
+}

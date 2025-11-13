@@ -1,0 +1,120 @@
+{
+  "generated": "2025-10-20T23:30:48",
+  "trial_id": "NCT01506999",
+  "contextual": {
+    "_id": "NCT01506999",
+    "title": "Genetic Mapping for Cardiac Risk Assessment",
+    "text": "Summary: The main objective of the GENOCOR project (Genetic mapping for cardiac risk assessment) is the setting up of a joint public/private laboratory (GENOCOR-LAB) dedicated to the development and testing of new cost-effective technologies exploiting the growing knowledge in the genomic correlates of cardiovascular diseases (CVD) and of their evolution; the data obtained by the GENOCOR-Lab should especially orient secondary prevention and specific treatment of ischemic heart diseases (IHD).\nInclusion criteria: inclusion criteria: \n\n Patients affected by history of IHD with a non-fatal evolution(angina or AMI as first manifestation),age at the onset of the disease (<50 o >60 years. \n\n Patients with acute coronary syndrome as first manifestation of coronary disease, admitted to the coronary unit within 6 hours from the onset of symptoms. \n\n \nExclusion criteria: : \n\n Age>75 \n\n Pregnancy \n\n Recent(< 6 months) cerebral ischemic attack \n\n Active cancer \n\n Inability to provide an informed consent.",
+    "metadata": {
+      "brief_title": "Genetic Mapping for Cardiac Risk Assessment",
+      "phase": "",
+      "drugs": "['MULTIGENE SCREENING FOR SINGLE SNPS']",
+      "drugs_list": [
+        "MULTIGENE SCREENING FOR SINGLE SNPS"
+      ],
+      "diseases": "['Angina Pectoris', 'Myocardial Infarction', 'Coronary Disease', 'Myocardial Ischemia', 'Acute Coronary Syndrome']",
+      "diseases_list": [
+        "Angina Pectoris",
+        "Myocardial Infarction",
+        "Coronary Disease",
+        "Myocardial Ischemia",
+        "Acute Coronary Syndrome"
+      ],
+      "enrollment": "2000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients affected by history of IHD with a non-fatal evolution(angina or AMI as first manifestation),age at the onset of the disease (<50 o >60 years. \n\n Patients with acute coronary syndrome as first manifestation of coronary disease, admitted to the coronary unit within 6 hours from the onset of symptoms. \n\n ",
+      "exclusion_criteria": ": \n\n Age>75 \n\n Pregnancy \n\n Recent(< 6 months) cerebral ischemic attack \n\n Active cancer \n\n Inability to provide an informed consent.",
+      "brief_summary": "The main objective of the GENOCOR project (Genetic mapping for cardiac risk assessment) is the setting up of a joint public/private laboratory (GENOCOR-LAB) dedicated to the development and testing of new cost-effective technologies exploiting the growing knowledge in the genomic correlates of cardiovascular diseases (CVD) and of their evolution; the data obtained by the GENOCOR-Lab should especially orient secondary prevention and specific treatment of ischemic heart diseases (IHD)."
+    }
+  },
+  "linked_result": {
+    "Angina Pectoris": {
+      "conceptId": "194828000",
+      "preferred_term": "Angina pectoris",
+      "fully_specified_name": "Angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.",
+      "best_match_term": "Angina pectoris",
+      "match_reason": "Exact"
+    },
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    },
+    "Coronary Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary heart disease",
+      "match_reason": "Exact"
+    },
+    "Myocardial Ischemia": {
+      "conceptId": "414795007",
+      "preferred_term": "Myocardial ischemia",
+      "fully_specified_name": "Myocardial ischemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Myocardial ischemia",
+      "match_reason": "Exact"
+    },
+    "Acute Coronary Syndrome": {
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Angina Pectoris": 1,
+    "Myocardial Infarction": 1,
+    "Myocardial Ischemia": 1,
+    "Acute Coronary Syndrome": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Angina Pectoris": {
+      "disease": "Angina Pectoris",
+      "conceptId": "194828000",
+      "preferred_term": "Angina pectoris",
+      "fully_specified_name": "Angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.",
+      "best_match_term": "Angina pectoris"
+    },
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    },
+    "Myocardial Ischemia": {
+      "disease": "Myocardial Ischemia",
+      "conceptId": "414795007",
+      "preferred_term": "Myocardial ischemia",
+      "fully_specified_name": "Myocardial ischemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Myocardial ischemia"
+    },
+    "Acute Coronary Syndrome": {
+      "disease": "Acute Coronary Syndrome",
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome"
+    }
+  }
+}

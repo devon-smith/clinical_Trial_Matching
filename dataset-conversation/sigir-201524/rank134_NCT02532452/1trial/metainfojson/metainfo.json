@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT02532452",
+  "contextual": {
+    "_id": "NCT02532452",
+    "title": "Third Party Viral Specific T-cells (VSTs)",
+    "text": "Summary: The purpose of this study is to demonstrate that viral specific T-cells (a type of white blood cell) can be generated from an unrelated donor and given safely to patients with viral infections.\nInclusion criteria: inclusion criteria: \n\n Immunocompromised patient with evidence of viral infection or reactivation \n\n Age >1 day \n\n Recipients who have had a stem cell transplant must be at least 21 days after stem cell infusion \n\n Clinical status must allow tapering of steroids to < 0.5mg/kg prednisone or other steroid equivalent \n\n Must be able to receive CTL infusion in Cincinnati \n\n Informed consent obtained by PI or sub-investigator either in person or by phone \n\n \nExclusion criteria: : \n\n Active acute GVHD grades II-IV \n\n Uncontrolled bacterial or fungal infection \n\n Uncontrolled relapse of malignancy \n\n Infusion of ATG or alemtuzumab within 2 weeks of VST infusion",
+    "metadata": {
+      "brief_title": "Third Party Viral Specific T-cells (VSTs)",
+      "phase": "Phase 2",
+      "drugs": "['Viral Specific VST Infusion']",
+      "drugs_list": [
+        "Viral Specific VST Infusion"
+      ],
+      "diseases": "['Viral Infection', 'Viral Reactivation', 'Infection in an Immunocompromised Host']",
+      "diseases_list": [
+        "Viral Infection",
+        "Viral Reactivation",
+        "Infection in an Immunocompromised Host"
+      ],
+      "enrollment": "450.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Immunocompromised patient with evidence of viral infection or reactivation \n\n Age >1 day \n\n Recipients who have had a stem cell transplant must be at least 21 days after stem cell infusion \n\n Clinical status must allow tapering of steroids to < 0.5mg/kg prednisone or other steroid equivalent \n\n Must be able to receive CTL infusion in Cincinnati \n\n Informed consent obtained by PI or sub-investigator either in person or by phone \n\n ",
+      "exclusion_criteria": ": \n\n Active acute GVHD grades II-IV \n\n Uncontrolled bacterial or fungal infection \n\n Uncontrolled relapse of malignancy \n\n Infusion of ATG or alemtuzumab within 2 weeks of VST infusion",
+      "brief_summary": "The purpose of this study is to demonstrate that viral specific T-cells (a type of white blood cell) can be generated from an unrelated donor and given safely to patients with viral infections."
+    }
+  }
+}

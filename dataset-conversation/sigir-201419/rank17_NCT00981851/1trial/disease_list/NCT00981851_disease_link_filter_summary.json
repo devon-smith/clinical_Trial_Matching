@@ -1,0 +1,83 @@
+{
+  "generated": "2025-10-20T22:18:32",
+  "trial_id": "NCT00981851",
+  "contextual": {
+    "_id": "NCT00981851",
+    "title": "Interaction in Chronic Obstructive Pulmonary Disease Experiment",
+    "text": "Summary: The final purpose of this study is to determine whether bronchodilation and cigarette smoking in Chronic Obstructive Pulmonary Disease (COPD) patients interact, resulting in an increase of cardiovascular disease. The aim of this part of the study is to demonstrate the basic mechanism: Does increased respiratory function after administration of a bronchodilator in patients with COPD lead to elevated pulmonary retention of the harmful compounds in inhaled cigarette smoke and to short-term biological effects associated with cardiovascular disease?\nInclusion criteria: inclusion criteria: \n\n COPD Gold stage II-III (FEV1/FVC<0,70 and FEV1 30-80% of predicted value). \n\n Current cigarette smoking (at the time of performing the study). \n\n Willing to provide written informed consent. \n\n Refrain from smoking and bronchodilators > 8 hours (depends on treatment) before the test. \n\n Registered in one of the recruitment institutes. \n\n \nExclusion criteria: : \n\n COPD gold stage I or IV. \n\n Asthmatic component: History of asthma, present asthma by complaints, eosinophilia or reversibility ≥ 10% of predicted. \n\n Unable to communicate. \n\n Physically unable to perform any of the tests. \n\n Non-COPD respiratory disorders. \n\n Previous lung-volume reduction surgery and/or lung transplantation. \n\n Evidence of alcohol, drug or solvent abuse. \n\n Known α-1 antitrypsin deficiency.",
+    "metadata": {
+      "brief_title": "Interaction in Chronic Obstructive Pulmonary Disease Experiment",
+      "phase": "",
+      "drugs": "['Tiotropium (Spiriva) + Salbutamol (Ventolin)', 'placebo']",
+      "drugs_list": [
+        "Tiotropium (Spiriva) + Salbutamol (Ventolin)",
+        "placebo"
+      ],
+      "diseases": "['Chronic Obstructive Pulmonary Disease', 'Cardiovascular Disease', 'Smoking', 'Bronchodilation']",
+      "diseases_list": [
+        "Chronic Obstructive Pulmonary Disease",
+        "Cardiovascular Disease",
+        "Smoking",
+        "Bronchodilation"
+      ],
+      "enrollment": "40.0",
+      "inclusion_criteria": "inclusion criteria: \n\n COPD Gold stage II-III (FEV1/FVC<0,70 and FEV1 30-80% of predicted value). \n\n Current cigarette smoking (at the time of performing the study). \n\n Willing to provide written informed consent. \n\n Refrain from smoking and bronchodilators > 8 hours (depends on treatment) before the test. \n\n Registered in one of the recruitment institutes. \n\n ",
+      "exclusion_criteria": ": \n\n COPD gold stage I or IV. \n\n Asthmatic component: History of asthma, present asthma by complaints, eosinophilia or reversibility ≥ 10% of predicted. \n\n Unable to communicate. \n\n Physically unable to perform any of the tests. \n\n Non-COPD respiratory disorders. \n\n Previous lung-volume reduction surgery and/or lung transplantation. \n\n Evidence of alcohol, drug or solvent abuse. \n\n Known α-1 antitrypsin deficiency.",
+      "brief_summary": "The final purpose of this study is to determine whether bronchodilation and cigarette smoking in Chronic Obstructive Pulmonary Disease (COPD) patients interact, resulting in an increase of cardiovascular disease. The aim of this part of the study is to demonstrate the basic mechanism: Does increased respiratory function after administration of a bronchodilator in patients with COPD lead to elevated pulmonary retention of the harmful compounds in inhaled cigarette smoke and to short-term biological effects associated with cardiovascular disease?"
+    }
+  },
+  "linked_result": {
+    "Chronic Obstructive Pulmonary Disease": {
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease",
+      "match_reason": "Exact"
+    },
+    "Cardiovascular Disease": {
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease",
+      "match_reason": "Exact"
+    },
+    "Smoking": {
+      "conceptId": "365981007",
+      "preferred_term": "Tobacco smoking behavior - finding",
+      "fully_specified_name": "Finding of tobacco smoking behavior (finding)",
+      "type": "Clinical finding",
+      "definition": "The process of SMOKING specific to TOBACCO.",
+      "best_match_term": "Smoking",
+      "match_reason": "Exact"
+    },
+    "Bronchodilation": null
+  },
+  "kept_counts": {
+    "Chronic Obstructive Pulmonary Disease": 1,
+    "Cardiovascular Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chronic Obstructive Pulmonary Disease": {
+      "disease": "Chronic Obstructive Pulmonary Disease",
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease"
+    },
+    "Cardiovascular Disease": {
+      "disease": "Cardiovascular Disease",
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease"
+    }
+  }
+}

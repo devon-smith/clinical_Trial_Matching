@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T22:58:31",
+  "trial_id": "NCT00534846",
+  "contextual": {
+    "_id": "NCT00534846",
+    "title": "The Effect of Toremifene Treatment to the Magnetic Resonance Imaging (MRI) Findings in Premenstrual Mastalgia",
+    "text": "Summary: The purpose of this study is to determine the effect of toremifene treatment to the MRI findings of the breast in women suffering from premenstrual mastalgia.\nInclusion criteria: inclusion criteria: \n\n Premenstrual mastalgia \n\n Age 20-45 years \n\n Reliable non-hormonal contraception \n\n \nExclusion criteria: : \n\n Pregnancy \n\n Breast cancer or uterine corpus cancer \n\n Unexplained menstrual disorders \n\n Serious health problems \n\n Hormonal contraception, including hormonal IUD trade name Mirena \n\n Oestrogen and/or progestin treatment \n\n Hysterectomy and/or oophorectomy or radiation therapy \n\n Artificial cardiac pacemaker/metallic prostheses",
+    "metadata": {
+      "brief_title": "The Effect of Toremifene Treatment to the Magnetic Resonance Imaging (MRI) Findings in Premenstrual Mastalgia",
+      "phase": "Phase 3",
+      "drugs": "['toremifene', 'placebo']",
+      "drugs_list": [
+        "toremifene",
+        "placebo"
+      ],
+      "diseases": "['Breast Pain']",
+      "diseases_list": [
+        "Breast Pain"
+      ],
+      "enrollment": "10.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Premenstrual mastalgia \n\n Age 20-45 years \n\n Reliable non-hormonal contraception \n\n ",
+      "exclusion_criteria": ": \n\n Pregnancy \n\n Breast cancer or uterine corpus cancer \n\n Unexplained menstrual disorders \n\n Serious health problems \n\n Hormonal contraception, including hormonal IUD trade name Mirena \n\n Oestrogen and/or progestin treatment \n\n Hysterectomy and/or oophorectomy or radiation therapy \n\n Artificial cardiac pacemaker/metallic prostheses",
+      "brief_summary": "The purpose of this study is to determine the effect of toremifene treatment to the MRI findings of the breast in women suffering from premenstrual mastalgia."
+    }
+  },
+  "linked_result": {
+    "Breast Pain": {
+      "conceptId": "53430007",
+      "preferred_term": "Pain of breast",
+      "fully_specified_name": "Pain of breast (finding)",
+      "type": "Clinical finding",
+      "definition": "Pain in the breast generally classified as cyclical (associated with menstrual periods), or noncyclical, i.e. originating from the breast or nearby muscles or joints, ranging from minor discomfort to severely incapacitating.",
+      "best_match_term": "Breast pain",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Breast Pain": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Breast Pain": {
+      "disease": "Breast Pain",
+      "conceptId": "53430007",
+      "preferred_term": "Pain of breast",
+      "fully_specified_name": "Pain of breast (finding)",
+      "type": "Clinical finding",
+      "definition": "Pain in the breast generally classified as cyclical (associated with menstrual periods), or noncyclical, i.e. originating from the breast or nearby muscles or joints, ranging from minor discomfort to severely incapacitating.",
+      "best_match_term": "Breast pain"
+    }
+  }
+}

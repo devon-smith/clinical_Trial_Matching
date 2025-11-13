@@ -1,0 +1,20 @@
+[
+  "patient_has_symptoms_of_acute_coronary_syndrome_now",
+  "patient_has_symptoms_of_backache_now",
+  "patient_has_symptoms_of_bilateral_pain_in_upper_arms_now",
+  "patient_has_symptoms_of_chest_pain_now",
+  "patient_has_symptoms_of_cold_sweat_now",
+  "patient_has_symptoms_of_discomfort_now",
+  "patient_has_symptoms_of_dizziness_now",
+  "patient_has_symptoms_of_dyspnea_now",
+  "patient_has_symptoms_of_jaw_pain_now",
+  "patient_has_symptoms_of_nausea_now",
+  "patient_has_symptoms_of_neck_pain_now",
+  "patient_has_symptoms_of_pain_radiating_to_left_arm_now",
+  "patient_has_symptoms_of_stomach_ache_now",
+  "patient_has_symptoms_of_tightness_sensation_now",
+  "patient_has_symptoms_of_vomiting_now",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_is_exposed_to_low_molecular_weight_heparin_inthehistory"
+]

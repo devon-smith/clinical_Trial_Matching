@@ -1,0 +1,17 @@
+[
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_childbearing_potential_now",
+  "patient_administration_of_steroid_value_recorded_now_withunit_mg",
+  "patient_has_finding_of_bronchiectasis_now",
+  "patient_has_diagnosis_of_cystic_fibrosis_now",
+  "patient_has_finding_of_tuberculosis_now",
+  "patient_has_diagnosis_of_immunodeficiency_disorder_now",
+  "patient_is_undergoing_immunosuppressive_therapy_now",
+  "patient_has_finding_of_malignant_tumor_of_lung_now",
+  "patient_has_diagnosis_of_disease_now",
+  "patient_has_finding_of_disorder_of_gastrointestinal_tract_now",
+  "patient_has_finding_of_cerebrovascular_accident_now",
+  "patient_has_finding_of_congestive_heart_failure_now",
+  "patient_has_diagnosis_of_pulmonary_embolism_now"
+]

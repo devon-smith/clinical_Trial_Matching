@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT00396578",
+  "contextual": {
+    "_id": "NCT00396578",
+    "title": "Aerosolized Antibiotics and Respiratory Tract Infection in Patients on Mechanical Ventilation",
+    "text": "Summary: The purpose of this study was to determine the effect of aerosolized antibiotics on respiratory infection in mechanically ventilated patients.We hypothesize that aerosolized antibiotics , which achieve high drug concentrations in the airway, would more effectively treat respiratory infection, decrease the need for systemic antibiotics and decrease antibiotic resistance.\nInclusion criteria: inclusion criteria: \n\n be on mechanical ventilation greater than 3 days \n\n greater than or equal to 18 years of age survival greater than 14 days \n\n greater than 2 ccs of tracheal secretions/4 hours \n\n \nExclusion criteria: : \n\n allergy to drugs, pregnancy",
+    "metadata": {
+      "brief_title": "Aerosolized Antibiotics and Respiratory Tract Infection in Patients on Mechanical Ventilation",
+      "phase": "Phase 2",
+      "drugs": "['aerosolized vancomycin or gentamicin']",
+      "drugs_list": [
+        "aerosolized vancomycin or gentamicin"
+      ],
+      "diseases": "['Ventilator Associated Pneumonia', 'Respiratory Infection', 'Tracheobronchitis']",
+      "diseases_list": [
+        "Ventilator Associated Pneumonia",
+        "Respiratory Infection",
+        "Tracheobronchitis"
+      ],
+      "enrollment": "80.0",
+      "inclusion_criteria": "inclusion criteria: \n\n be on mechanical ventilation greater than 3 days \n\n greater than or equal to 18 years of age survival greater than 14 days \n\n greater than 2 ccs of tracheal secretions/4 hours \n\n ",
+      "exclusion_criteria": ": \n\n allergy to drugs, pregnancy",
+      "brief_summary": "The purpose of this study was to determine the effect of aerosolized antibiotics on respiratory infection in mechanically ventilated patients.We hypothesize that aerosolized antibiotics , which achieve high drug concentrations in the airway, would more effectively treat respiratory infection, decrease the need for systemic antibiotics and decrease antibiotic resistance."
+    }
+  }
+}

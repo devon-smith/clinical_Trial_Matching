@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_has_finding_of_cough_inthehistory",
+  "patient_has_undergone_plain_chest_x_ray_now_outcome_is_normal",
+  "patient_has_finding_of_chronic_cough_inthehistory"
+]

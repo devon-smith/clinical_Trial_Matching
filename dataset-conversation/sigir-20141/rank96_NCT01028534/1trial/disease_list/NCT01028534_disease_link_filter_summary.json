@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T23:29:33",
+  "trial_id": "NCT01028534",
+  "contextual": {
+    "_id": "NCT01028534",
+    "title": "Effects of Antihypertensive Drugs in Patients With Hypertension and Obstructive Sleep Apnea (OSA)",
+    "text": "Summary: The aim of the present study is to compare the effects of different types of antihypertensive drugs (angiotensin II receptor blockers and long-acting calcium channel blockers) in patients with hypertension and obstructive sleep apnea who are not controlled well with their hypertension after continuous positive airway pressure therapy.\nInclusion criteria: inclusion criteria: \n\n Apnea and hypopnea index of more than 20 /hr, and treated with CPAP \n\n Uncontrolled hypertension (defined as systolic blood pressure of more than 130 mmHg or diastolic blood pressure of more than 80 mmHg \n\n \nExclusion criteria: : \n\n Cerebrovascular diseases, myocardial infarction, angina pectoris or heart failure within 6 months \n\n Uncontrolled arrhythmia \n\n Severe hepatic or renal disorders \n\n Having poor prognosis disorders such as malignant disorders",
+    "metadata": {
+      "brief_title": "Effects of Antihypertensive Drugs in Patients With Hypertension and Obstructive Sleep Apnea (OSA)",
+      "phase": "",
+      "drugs": "['Olmesartan and Azelnidipine']",
+      "drugs_list": [
+        "Olmesartan and Azelnidipine"
+      ],
+      "diseases": "['Obstructive Sleep Apnea', 'Hypertension']",
+      "diseases_list": [
+        "Obstructive Sleep Apnea",
+        "Hypertension"
+      ],
+      "enrollment": "150.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Apnea and hypopnea index of more than 20 /hr, and treated with CPAP \n\n Uncontrolled hypertension (defined as systolic blood pressure of more than 130 mmHg or diastolic blood pressure of more than 80 mmHg \n\n ",
+      "exclusion_criteria": ": \n\n Cerebrovascular diseases, myocardial infarction, angina pectoris or heart failure within 6 months \n\n Uncontrolled arrhythmia \n\n Severe hepatic or renal disorders \n\n Having poor prognosis disorders such as malignant disorders",
+      "brief_summary": "The aim of the present study is to compare the effects of different types of antihypertensive drugs (angiotensin II receptor blockers and long-acting calcium channel blockers) in patients with hypertension and obstructive sleep apnea who are not controlled well with their hypertension after continuous positive airway pressure therapy."
+    }
+  },
+  "linked_result": {
+    "Obstructive Sleep Apnea": {
+      "conceptId": "78275009",
+      "preferred_term": "Obstructive sleep apnea syndrome",
+      "fully_specified_name": "Obstructive sleep apnea syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder characterized by recurrent apneas during sleep despite persistent respiratory efforts. It is due to upper airway obstruction. The respiratory pauses may induce HYPERCAPNIA or HYPOXIA. Cardiac arrhythmias and elevation of systemic and pulmonary arterial pressures may occur. Frequent partial arousals occur throughout sleep, resulting in relative SLEEP DEPRIVATION and daytime tiredness. Associated conditions include OBESITY; ACROMEGALY; MYXEDEMA; micrognathia; MYOTONIC DYSTROPHY; adenotonsilar dystrophy; and NEUROMUSCULAR DISEASES. (From Adams et al., Principles of Neurology, 6th ed, p395)",
+      "best_match_term": "Obstructive sleep apnea",
+      "match_reason": "Exact"
+    },
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Obstructive Sleep Apnea": 1,
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Obstructive Sleep Apnea": {
+      "disease": "Obstructive Sleep Apnea",
+      "conceptId": "78275009",
+      "preferred_term": "Obstructive sleep apnea syndrome",
+      "fully_specified_name": "Obstructive sleep apnea syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder characterized by recurrent apneas during sleep despite persistent respiratory efforts. It is due to upper airway obstruction. The respiratory pauses may induce HYPERCAPNIA or HYPOXIA. Cardiac arrhythmias and elevation of systemic and pulmonary arterial pressures may occur. Frequent partial arousals occur throughout sleep, resulting in relative SLEEP DEPRIVATION and daytime tiredness. Associated conditions include OBESITY; ACROMEGALY; MYXEDEMA; micrognathia; MYOTONIC DYSTROPHY; adenotonsilar dystrophy; and NEUROMUSCULAR DISEASES. (From Adams et al., Principles of Neurology, 6th ed, p395)",
+      "best_match_term": "Obstructive sleep apnea"
+    },
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

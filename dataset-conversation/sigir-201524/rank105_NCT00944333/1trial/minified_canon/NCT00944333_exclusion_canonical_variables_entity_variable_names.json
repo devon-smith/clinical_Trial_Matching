@@ -1,0 +1,5 @@
+[
+  "patient_has_taken_drug_eluting_stent_inthepast24hours",
+  "patient_has_taken_drug_eluting_stent_inthehistory",
+  "patient_has_undergone_endovascular_insertion_of_stent_inthehistory"
+]

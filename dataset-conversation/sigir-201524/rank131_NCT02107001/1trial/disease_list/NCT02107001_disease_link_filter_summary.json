@@ -1,0 +1,110 @@
+{
+  "generated": "2025-10-20T23:45:51",
+  "trial_id": "NCT02107001",
+  "contextual": {
+    "_id": "NCT02107001",
+    "title": "Lung Ultrasound in Pleuritic Chest Pain",
+    "text": "Summary: Chest pain is an alarming symptom and one of the most frequent causes of access to the Emergency Departement. Although chest X-ray remains an essential step in the diagnostic process, several studies showed numerous limitations of radiography which frequently is inconclusive. Ultrasonography is a non-radiating imaging technique. Albeit a wide use of ultrasound, the utilization of ultrasound in the study of the lung has only recently been introduced in the clinical practice. Several studies proved that lung ultrasound is useful in the diagnosis of lung consolidation in community acquired pneumonia. Nowadays, ultrasound is not routinely used in the presence of chest pain. Our hypothesis based on clinical experience is that, in patients with pleuritic chest pain, lung ultrasound is very sensitive in detecting pneumonia and other lung diseases (such as pneumothorax) thus performing better than radiography. The primary aim of this study is to verify, in patients affected by pleuritic chest pain, the accuracy of lung ultrasound compared to chest-X-ray. The secondary aim is to evaluate the accuracy of lung ultrasound consolidations in distinguishing lung consolidation in pneumonia, atelectasis, pulmonary infarction, or tumors.\nInclusion criteria: inclusion criteria: \n\n patient aged 18 years and older \n\n patient affected by thoracic pleuritic pain \n\n \nExclusion criteria: : \n\n patient affected by a chronic condition causing thoracic pain \n\n patient affected by acute cardiovascular diseases (e.g. acute coronary syndrome)",
+    "metadata": {
+      "brief_title": "Lung Ultrasound in Pleuritic Chest Pain",
+      "phase": "",
+      "drugs": "['Lung ultrasound']",
+      "drugs_list": [
+        "Lung ultrasound"
+      ],
+      "diseases": "['Community Acquired Pneumonia', 'Pleuritis', 'Pulmonary Embolism', 'Lung Cancer']",
+      "diseases_list": [
+        "Community Acquired Pneumonia",
+        "Pleuritis",
+        "Pulmonary Embolism",
+        "Lung Cancer"
+      ],
+      "enrollment": "400.0",
+      "inclusion_criteria": "inclusion criteria: \n\n patient aged 18 years and older \n\n patient affected by thoracic pleuritic pain \n\n ",
+      "exclusion_criteria": ": \n\n patient affected by a chronic condition causing thoracic pain \n\n patient affected by acute cardiovascular diseases (e.g. acute coronary syndrome)",
+      "brief_summary": "Chest pain is an alarming symptom and one of the most frequent causes of access to the Emergency Departement. Although chest X-ray remains an essential step in the diagnostic process, several studies showed numerous limitations of radiography which frequently is inconclusive. Ultrasonography is a non-radiating imaging technique. Albeit a wide use of ultrasound, the utilization of ultrasound in the study of the lung has only recently been introduced in the clinical practice. Several studies proved that lung ultrasound is useful in the diagnosis of lung consolidation in community acquired pneumonia. Nowadays, ultrasound is not routinely used in the presence of chest pain. Our hypothesis based on clinical experience is that, in patients with pleuritic chest pain, lung ultrasound is very sensitive in detecting pneumonia and other lung diseases (such as pneumothorax) thus performing better than radiography. The primary aim of this study is to verify, in patients affected by pleuritic chest pain, the accuracy of lung ultrasound compared to chest-X-ray. The secondary aim is to evaluate the accuracy of lung ultrasound consolidations in distinguishing lung consolidation in pneumonia, atelectasis, pulmonary infarction, or tumors."
+    }
+  },
+  "linked_result": {
+    "Community Acquired Pneumonia": {
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia",
+      "match_reason": "Exact"
+    },
+    "Pleuritis": {
+      "conceptId": "196075003",
+      "preferred_term": "Pleurisy",
+      "fully_specified_name": "Pleurisy (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of PLEURA, the lining of the LUNG. When PARIETAL PLEURA is involved, there is pleuritic CHEST PAIN.",
+      "best_match_term": "Pleuritis",
+      "match_reason": "Exact"
+    },
+    "Pulmonary Embolism": {
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism",
+      "match_reason": "Exact"
+    },
+    "Lung Cancer": {
+      "conceptId": "93880001",
+      "preferred_term": "Primary malignant neoplasm of lung",
+      "fully_specified_name": "Primary malignant neoplasm of lung (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Lung cancer",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Community Acquired Pneumonia": 1,
+    "Pleuritis": 1,
+    "Pulmonary Embolism": 1,
+    "Lung Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Community Acquired Pneumonia": {
+      "disease": "Community Acquired Pneumonia",
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia"
+    },
+    "Pleuritis": {
+      "disease": "Pleuritis",
+      "conceptId": "196075003",
+      "preferred_term": "Pleurisy",
+      "fully_specified_name": "Pleurisy (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of PLEURA, the lining of the LUNG. When PARIETAL PLEURA is involved, there is pleuritic CHEST PAIN.",
+      "best_match_term": "Pleuritis"
+    },
+    "Pulmonary Embolism": {
+      "disease": "Pulmonary Embolism",
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism"
+    },
+    "Lung Cancer": {
+      "disease": "Lung Cancer",
+      "conceptId": "93880001",
+      "preferred_term": "Primary malignant neoplasm of lung",
+      "fully_specified_name": "Primary malignant neoplasm of lung (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Lung cancer"
+    }
+  }
+}

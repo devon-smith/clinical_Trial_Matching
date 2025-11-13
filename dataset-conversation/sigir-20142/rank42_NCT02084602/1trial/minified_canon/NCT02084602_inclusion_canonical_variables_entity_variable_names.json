@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_fever_inthepast48hours",
+  "patient_has_finding_of_fever_now",
+  "patient_has_monoinfection_with_plasmodium_falciparum_now@@confirmed_by_microscopy",
+  "patient_can_undergo_encounter_for_check_up_inthefuture42days",
+  "patient_will_undergo_therapeutic_procedure_now",
+  "patient_will_undergo_therapeutic_procedure_inthefuture"
+]

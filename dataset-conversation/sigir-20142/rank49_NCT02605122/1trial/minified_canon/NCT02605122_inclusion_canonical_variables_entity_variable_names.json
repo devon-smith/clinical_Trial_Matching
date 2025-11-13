@@ -1,0 +1,20 @@
+[
+  "patient_has_finding_of_fever_inthehistory",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_hypothermia_now",
+  "patient_has_finding_of_radiologic_infiltrate_of_lung_now",
+  "patient_age_value_recorded_now_in_months",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_difficulty_breathing_now",
+  "patient_has_finding_of_low_blood_pressure_now",
+  "patient_has_finding_of_purulent_sputum_now",
+  "patient_has_finding_of_tachycardia_now",
+  "patient_has_finding_of_tachypnea_now",
+  "patient_respiratory_rate_value_recorded_now_withunit_breaths_per_minute",
+  "patient_hemoglobin_saturation_with_oxygen_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_leukocytosis_now",
+  "patient_has_finding_of_leukopenia_now",
+  "patient_white_blood_cell_count_value_recorded_now_withunit_per_cubic_millimeter"
+]

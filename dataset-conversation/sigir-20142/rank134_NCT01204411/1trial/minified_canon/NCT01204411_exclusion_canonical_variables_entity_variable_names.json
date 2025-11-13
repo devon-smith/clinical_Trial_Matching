@@ -1,0 +1,10 @@
+[
+  "patient_has_finding_of_falciparum_malaria_now",
+  "patient_has_finding_of_malaria_now",
+  "patient_has_finding_of_anemia_now",
+  "patient_hemoglobin_value_recorded_now_withunit_grams_per_deciliter",
+  "patient_has_finding_of_hypersensitivity_condition_inthehistory",
+  "patient_has_finding_of_edema_now",
+  "patient_has_finding_of_disorder_characterized_by_fever_now",
+  "patient_is_exposed_to_drug_or_medicament_inthepast28days"
+]

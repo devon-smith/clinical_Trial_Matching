@@ -1,0 +1,54 @@
+{
+  "generated": "2025-10-20T23:34:11",
+  "trial_id": "NCT00861094",
+  "contextual": {
+    "_id": "NCT00861094",
+    "title": "Radiation Therapy + Combination Chemotherapy as 1st-Line Therapy for Patients With Inoperable Esophageal Cancer",
+    "text": "Summary: RATIONALE: Radiation therapy uses high-energy x-rays to kill tumor cells. Drugs used in chemotherapy, such as oxaliplatin, fluorouracil, leucovorin, and cisplatin, work in different ways to stop the growth of tumor cells, either by killing the cells or by stopping them from dividing. Giving more than one drug (combination chemotherapy) together with radiation therapy may kill more tumor cells.~PURPOSE: This randomized phase II/III trial is studying radiation therapy and two different combination chemotherapy regimens to compare how well they work as first-line therapy in treating patients with esophageal cancer that cannot be removed by surgery.\nInclusion criteria: DISEASE CHARACTERISTICS: \n\n Histologically proven adenocarcinoma, squamous cell carcinoma, or adenosquamous carcinoma of the esophagus \n\n Locally advanced disease (any T, N0 or N1, M0 or M1a) \n\n No metastatic disease, except for tumor involvement of the upper third of the esophagus or cervical esophageal tumor with regional nodes, or tumor involvement of the lower third of the esophagus with celiac nodes (M1a) \n\n Cervical primary tumor with positive supraclavicular or cervical lymph nodes (defined as N1) allowed \n\n No radiographic evidence of enlarged (≥ 1.5 cm) celiac lymph nodes by CT scan or echography \n\n No small cell or undifferentiated carcinoma of the esophagus \n\n No multiple carcinomas of the esophagus (i.e., > 1 esophageal tumor) \n\n No cardia tumor (Siewert II) or gastric tumor extension to the esophagus (Siewert III) \n\n Esophageal tumor extension to the cardia (Siewert I) (center of the tumor lying > 1 cm-5 cm above gastroesophageal junction) allowed \n\n Inoperable disease OR surgery is contraindicated \n\n No tracheo-esophageal fistula or invasion of the tracheo-bronchial tree \n\n PATIENT CHARACTERISTICS: \n\n ECOG performance status 0-2 \n\n Life expectancy ≥ 3 months \n\n Absolute neutrophil count ≥ 1,500/mm³ \n\n Platelet count ≥ 100,000/mm³ \n\n Hemoglobin ≥ 10 g/dL (transfusion allowed) \n\n Creatinine < 15 mg/L \n\n Total bilirubin < 1.5 times upper limit of normal (ULN) \n\n ALT and AST < 2.5 times ULN \n\n Prothrombin time ≥ 60% \n\n Not pregnant or nursing \n\n Fertile patients must use effective contraception \n\n Caloric intake sufficient (i.e., > 1,000 Kcal/m²/day) (orally or with gastrostomy) \n\n No weight loss > 20% normal body weight within the past 3 months \n\n No complete dysphagia \n\n No exclusive requirement for parenteral nutrition \n\n No peripheral neuropathy > grade 1 \n\n No sensitive peripheral neuropathy with functional impairment \n\n No auditory disorders \n\n No other prior malignancies except curatively treated nonmelanoma skin cancer or carcinoma in situ of the cervix or stage I or II node-negative head and neck cancer that was curatively treated > 3 years ago \n\n No myocardial infarction within the past 6 months \n\n Patients who have had a myocardial infarction > 6 months ago are eligible provided there is no transient ischemia by thallium myocardial scintigraphy and patient is able to undergo chemotherapy , as determined by a cardiologist \n\n No other serious illness or medical condition (e.g., symptomatic coronary disease, left ventricular failure, or uncontrolled infection) \n\n No stage II-IV arterial disease, according to the DE LERICHE and FONTAINE classification \n\n No geographical, social, or psychological circumstances preventing regular follow-up \n\n PRIOR CONCURRENT THERAPY: \n\n No prior treatment for esophageal cancer (e.g., surgery, chemotherapy, or radiotherapy) \n\n No prior cervical, thoracic, or abdominal radiotherapy with field overlapping the proposed esophageal radiotherapy field \n\n More than 30 days since prior experimental drugs or participation in another clinical trial \n\n No other concurrent anticancer therapy \n\n No concurrent phenytoin or yellow fever vaccine \n\n No concurrent high-dose, long-term corticosteroids \n\n No concurrent calcium gluconate/magnesium sulfate infusions \n\n No concurrent hematopoietic growth factors \n\n No concurrent esophageal dilatation\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Radiation Therapy + Combination Chemotherapy as 1st-Line Therapy for Patients With Inoperable Esophageal Cancer",
+      "phase": "Phase 2; Phase 3",
+      "drugs": "['cisplatin', '5-FU', 'oxaliplatin', 'radiation therapy', 'Folinic Acid']",
+      "drugs_list": [
+        "cisplatin",
+        "5-FU",
+        "oxaliplatin",
+        "radiation therapy",
+        "Folinic Acid"
+      ],
+      "diseases": "['Esophageal Cancer']",
+      "diseases_list": [
+        "Esophageal Cancer"
+      ],
+      "enrollment": "266.0",
+      "inclusion_criteria": "DISEASE CHARACTERISTICS: \n\n Histologically proven adenocarcinoma, squamous cell carcinoma, or adenosquamous carcinoma of the esophagus \n\n Locally advanced disease (any T, N0 or N1, M0 or M1a) \n\n No metastatic disease, except for tumor involvement of the upper third of the esophagus or cervical esophageal tumor with regional nodes, or tumor involvement of the lower third of the esophagus with celiac nodes (M1a) \n\n Cervical primary tumor with positive supraclavicular or cervical lymph nodes (defined as N1) allowed \n\n No radiographic evidence of enlarged (≥ 1.5 cm) celiac lymph nodes by CT scan or echography \n\n No small cell or undifferentiated carcinoma of the esophagus \n\n No multiple carcinomas of the esophagus (i.e., > 1 esophageal tumor) \n\n No cardia tumor (Siewert II) or gastric tumor extension to the esophagus (Siewert III) \n\n Esophageal tumor extension to the cardia (Siewert I) (center of the tumor lying > 1 cm-5 cm above gastroesophageal junction) allowed \n\n Inoperable disease OR surgery is contraindicated \n\n No tracheo-esophageal fistula or invasion of the tracheo-bronchial tree \n\n PATIENT CHARACTERISTICS: \n\n ECOG performance status 0-2 \n\n Life expectancy ≥ 3 months \n\n Absolute neutrophil count ≥ 1,500/mm³ \n\n Platelet count ≥ 100,000/mm³ \n\n Hemoglobin ≥ 10 g/dL (transfusion allowed) \n\n Creatinine < 15 mg/L \n\n Total bilirubin < 1.5 times upper limit of normal (ULN) \n\n ALT and AST < 2.5 times ULN \n\n Prothrombin time ≥ 60% \n\n Not pregnant or nursing \n\n Fertile patients must use effective contraception \n\n Caloric intake sufficient (i.e., > 1,000 Kcal/m²/day) (orally or with gastrostomy) \n\n No weight loss > 20% normal body weight within the past 3 months \n\n No complete dysphagia \n\n No exclusive requirement for parenteral nutrition \n\n No peripheral neuropathy > grade 1 \n\n No sensitive peripheral neuropathy with functional impairment \n\n No auditory disorders \n\n No other prior malignancies except curatively treated nonmelanoma skin cancer or carcinoma in situ of the cervix or stage I or II node-negative head and neck cancer that was curatively treated > 3 years ago \n\n No myocardial infarction within the past 6 months \n\n Patients who have had a myocardial infarction > 6 months ago are eligible provided there is no transient ischemia by thallium myocardial scintigraphy and patient is able to undergo chemotherapy , as determined by a cardiologist \n\n No other serious illness or medical condition (e.g., symptomatic coronary disease, left ventricular failure, or uncontrolled infection) \n\n No stage II-IV arterial disease, according to the DE LERICHE and FONTAINE classification \n\n No geographical, social, or psychological circumstances preventing regular follow-up \n\n PRIOR CONCURRENT THERAPY: \n\n No prior treatment for esophageal cancer (e.g., surgery, chemotherapy, or radiotherapy) \n\n No prior cervical, thoracic, or abdominal radiotherapy with field overlapping the proposed esophageal radiotherapy field \n\n More than 30 days since prior experimental drugs or participation in another clinical trial \n\n No other concurrent anticancer therapy \n\n No concurrent phenytoin or yellow fever vaccine \n\n No concurrent high-dose, long-term corticosteroids \n\n No concurrent calcium gluconate/magnesium sulfate infusions \n\n No concurrent hematopoietic growth factors \n\n No concurrent esophageal dilatation",
+      "exclusion_criteria": "",
+      "brief_summary": "RATIONALE: Radiation therapy uses high-energy x-rays to kill tumor cells. Drugs used in chemotherapy, such as oxaliplatin, fluorouracil, leucovorin, and cisplatin, work in different ways to stop the growth of tumor cells, either by killing the cells or by stopping them from dividing. Giving more than one drug (combination chemotherapy) together with radiation therapy may kill more tumor cells.~PURPOSE: This randomized phase II/III trial is studying radiation therapy and two different combination chemotherapy regimens to compare how well they work as first-line therapy in treating patients with esophageal cancer that cannot be removed by surgery."
+    }
+  },
+  "linked_result": {
+    "Esophageal Cancer": {
+      "conceptId": "363402007",
+      "preferred_term": "Malignant tumor of esophagus",
+      "fully_specified_name": "Malignant tumor of esophagus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the esophagus.",
+      "best_match_term": "Esophageal cancer",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Esophageal Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Esophageal Cancer": {
+      "disease": "Esophageal Cancer",
+      "conceptId": "363402007",
+      "preferred_term": "Malignant tumor of esophagus",
+      "fully_specified_name": "Malignant tumor of esophagus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the esophagus.",
+      "best_match_term": "Esophageal cancer"
+    }
+  }
+}

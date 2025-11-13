@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:29:44",
+  "trial_id": "NCT01203696",
+  "contextual": {
+    "_id": "NCT01203696",
+    "title": "Effect of Amlodipine on Anti-platelet Drug Effect in Patients With Coronary Artery Disease",
+    "text": "Summary: Clopidogrel can reduce risk of cardiovascular disease by inhibiting platelet aggregation. It is metabolized to an active drug by a liver enzyme. Its efficacy may be measured by blood sampling for platelet activity, analyzed by VerifyNow device. Calcium Channel blocker (CCB) is also commonly used for blood pressure and anginal control in these patients. Dihydropyridine group of calcium channel blocker (e.g. amlodipine) inhibits this enzyme. There are observational studies reporting dihydropyridine CCB reducing clopidogrel effect, but the clinical implication is unclear.~This study test the hypothesis that there is no significant effect of dihydropyridines CCB on clopidogrel response compared with control. After giving consent, patients with suboptimal blood pressure or anginal control will be randomized to receive either dihydropyridine CCB or non-CCB as placebo. These patient will be follow-up in 1 month.\nInclusion criteria: inclusion criteria: \n\n ischemic heart disease patient, and \n\n given loading or maintenance dose of clopidogrel and in need of it for 1 or more month \n\n and in need of additional drug for optimal BP control (aim blood pressure <130/90) or angina control. \n\n \nExclusion criteria: : \n\n existing use of amlodipine \n\n thrombocytopenia \n\n end stage renal failure \n\n allergy to clopidogrel/ amlodipine \n\n pregnancy/ lactation \n\n strong inhibitor or inducer of cytochrome P450 3A4 enzyme within 7 days before start of the study.",
+    "metadata": {
+      "brief_title": "Effect of Amlodipine on Anti-platelet Drug Effect in Patients With Coronary Artery Disease",
+      "phase": "Phase 4",
+      "drugs": "['Amlodipine', 'Amlodipine']",
+      "drugs_list": [
+        "Amlodipine",
+        "Amlodipine"
+      ],
+      "diseases": "['Ischemic Heart Disease']",
+      "diseases_list": [
+        "Ischemic Heart Disease"
+      ],
+      "enrollment": "97.0",
+      "inclusion_criteria": "inclusion criteria: \n\n ischemic heart disease patient, and \n\n given loading or maintenance dose of clopidogrel and in need of it for 1 or more month \n\n and in need of additional drug for optimal BP control (aim blood pressure <130/90) or angina control. \n\n ",
+      "exclusion_criteria": ": \n\n existing use of amlodipine \n\n thrombocytopenia \n\n end stage renal failure \n\n allergy to clopidogrel/ amlodipine \n\n pregnancy/ lactation \n\n strong inhibitor or inducer of cytochrome P450 3A4 enzyme within 7 days before start of the study.",
+      "brief_summary": "Clopidogrel can reduce risk of cardiovascular disease by inhibiting platelet aggregation. It is metabolized to an active drug by a liver enzyme. Its efficacy may be measured by blood sampling for platelet activity, analyzed by VerifyNow device. Calcium Channel blocker (CCB) is also commonly used for blood pressure and anginal control in these patients. Dihydropyridine group of calcium channel blocker (e.g. amlodipine) inhibits this enzyme. There are observational studies reporting dihydropyridine CCB reducing clopidogrel effect, but the clinical implication is unclear.~This study test the hypothesis that there is no significant effect of dihydropyridines CCB on clopidogrel response compared with control. After giving consent, patients with suboptimal blood pressure or anginal control will be randomized to receive either dihydropyridine CCB or non-CCB as placebo. These patient will be follow-up in 1 month."
+    }
+  },
+  "linked_result": {
+    "Ischemic Heart Disease": {
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Ischemic Heart Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Ischemic Heart Disease": {
+      "disease": "Ischemic Heart Disease",
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "trial_id": 3714,
+  "nct_id": "NCT02266563b",
+  "status": "eliminated",
+  "total_clauses": 6,
+  "unsat_any": 3,
+  "unsat_explicit": 0,
+  "frac_unsat_any": 0.5,
+  "pct_unsat_any": 50.0,
+  "pct_unsat_explicit": 0.0
+}

@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_has_finding_of_hypertensive_disorder_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_is_undergoing_angiotensin_converting_enzyme_inhibitor_therapy_now",
+  "patients_intolerance_is_positive_now"
+]

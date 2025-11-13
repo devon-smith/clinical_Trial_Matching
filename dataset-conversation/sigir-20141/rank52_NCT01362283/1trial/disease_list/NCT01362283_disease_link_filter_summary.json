@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T22:46:25",
+  "trial_id": "NCT01362283",
+  "contextual": {
+    "_id": "NCT01362283",
+    "title": "Epidemiologic Study to Evaluate the Proportion of Cardiovascular Disease Risk Factors in Korean Hypertensive Patients",
+    "text": "Summary: The purpose of this study is investigating the proportion of Cardiovascular disease risk factors of hypertensive patients.\nInclusion criteria: inclusion criteria: \n\n Essential hypertensive patient no less than 18 yeas old \n\n Patient who gave informed consent form \n\n \nExclusion criteria: : \n\n Patient was diagnosed as secondary hypertension \n\n Patient who have white-coat hypertension",
+    "metadata": {
+      "brief_title": "Epidemiologic Study to Evaluate the Proportion of Cardiovascular Disease Risk Factors in Korean Hypertensive Patients",
+      "phase": "",
+      "drugs": "['Blood Sampling']",
+      "drugs_list": [
+        "Blood Sampling"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "3109.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Essential hypertensive patient no less than 18 yeas old \n\n Patient who gave informed consent form \n\n ",
+      "exclusion_criteria": ": \n\n Patient was diagnosed as secondary hypertension \n\n Patient who have white-coat hypertension",
+      "brief_summary": "The purpose of this study is investigating the proportion of Cardiovascular disease risk factors of hypertensive patients."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

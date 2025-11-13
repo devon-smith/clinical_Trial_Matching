@@ -1,0 +1,19 @@
+[
+  "patient_has_hypersensitivity_to_macrolide_inthehistory",
+  "patient_has_intolerance_to_macrolide_inthehistory",
+  "patient_has_finding_of_illness_now",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_exposed_to_cytochrome_p450_enzyme_now",
+  "patient_is_exposed_to_phenytoin_now",
+  "patient_is_exposed_to_theophylline_now",
+  "patient_is_exposed_to_valproate_now",
+  "patient_is_taking_colchicine_containing_product_now",
+  "patient_is_taking_digoxin_containing_product_now",
+  "patient_has_finding_of_immunodeficiency_disorder_now",
+  "patient_has_finding_of_chronic_disease_now",
+  "patient_alanine_aminotransferase_value_recorded_now_withunit_units_per_liter",
+  "patient_aspartate_transaminase_level_value_recorded_now_withunit_units_per_liter",
+  "patient_creatinine_renal_clearance_value_recorded_now_withunit_milliliters_per_minute",
+  "patient_gamma_glutamyltransferase_value_recorded_now_withunit_units_per_liter",
+  "patient_has_finding_of_renal_impairment_now"
+]

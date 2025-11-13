@@ -1,0 +1,12 @@
+[
+  "patient_has_diagnosis_of_severe_myoclonic_epilepsy_in_infancy_inthehistory",
+  "patient_has_finding_of_developmental_delay_inthehistory",
+  "patient_has_finding_of_developmental_regression_inthehistory",
+  "patient_has_finding_of_electroencephalogram_abnormal_inthehistory",
+  "patient_has_finding_of_epileptic_seizures_clonic_inthehistory",
+  "patient_has_finding_of_myoclonus_inthehistory",
+  "patient_has_finding_of_seizure_inthehistory",
+  "patient_clobazam_value_recorded_now_withunit_milligrams_per_day",
+  "patient_clobazam_value_recorded_now_withunit_milligrams_per_kilogram_per_day",
+  "patient_is_exposed_to_clobazam_now"
+]

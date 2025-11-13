@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT01171911",
+  "contextual": {
+    "_id": "NCT01171911",
+    "title": "Comparison of Intravenous Injection of Calcium Antagonist and Beta-blockade on Endothelial Shear Stress of Coronary Artery",
+    "text": "Summary: Both calcium channel antagonist and beta-blocker have cardioprotective effect. Endothelial shear stress is predictive factor of clinical outcomes in patients with obstructive stenosis.~The present study aims at comparing the re-distribution of shear stress and blood velocity during whole cardiac cycle after trans-coronary injection of Nicardipine and esmolol.\nInclusion criteria: inclusion criteria: \n\n Diagnosis of unstable angina and non-Q wave myocardial infarction \n\n Age 18-75 yr. \n\n Diameter stenosis of coronary artery<70% diameter stenosis by visual estimation \n\n Blood pressure >110/70 mmHg \n\n Heart rate 60- \n\n 100 bpm, No cardiac arrhythmias \n\n \nExclusion criteria: : \n\n St-elevation myocardial infarction \n\n Lower blood pressure(<100/70mmHg) \n\n Heart rate <60 or >100 bpm, The presence of cardiac arrhythmias \n\n Allergy to study drugs \n\n Women in pregnancy \n\n Liver dysfunction \n\n Creatinine >2.5mg/dl \n\n Bleeding stroke within 6 months \n\n Left ventricular ejection fraction<30% before maximal medication",
+    "metadata": {
+      "brief_title": "Comparison of Intravenous Injection of Calcium Antagonist and Beta-blockade on Endothelial Shear Stress of Coronary Artery",
+      "phase": "Phase 4",
+      "drugs": "['Nicardipine , Esmolol']",
+      "drugs_list": [
+        "Nicardipine ",
+        "Esmolol"
+      ],
+      "diseases": "['Acute Coronary Syndrome', 'Coronary Artery Disease']",
+      "diseases_list": [
+        "Acute Coronary Syndrome",
+        "Coronary Artery Disease"
+      ],
+      "enrollment": "200.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Diagnosis of unstable angina and non-Q wave myocardial infarction \n\n Age 18-75 yr. \n\n Diameter stenosis of coronary artery<70% diameter stenosis by visual estimation \n\n Blood pressure >110/70 mmHg \n\n Heart rate 60- \n\n 100 bpm, No cardiac arrhythmias \n\n ",
+      "exclusion_criteria": ": \n\n St-elevation myocardial infarction \n\n Lower blood pressure(<100/70mmHg) \n\n Heart rate <60 or >100 bpm, The presence of cardiac arrhythmias \n\n Allergy to study drugs \n\n Women in pregnancy \n\n Liver dysfunction \n\n Creatinine >2.5mg/dl \n\n Bleeding stroke within 6 months \n\n Left ventricular ejection fraction<30% before maximal medication",
+      "brief_summary": "Both calcium channel antagonist and beta-blocker have cardioprotective effect. Endothelial shear stress is predictive factor of clinical outcomes in patients with obstructive stenosis.~The present study aims at comparing the re-distribution of shear stress and blood velocity during whole cardiac cycle after trans-coronary injection of Nicardipine and esmolol."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+[
+  "patient_has_finding_of_blood_coagulation_disorder_inthehistory",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthepast1years",
+  "patient_has_finding_of_hypersensitivity_reaction_inthehistory",
+  "patient_has_finding_of_bleeding_now",
+  "patient_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_is_exposed_to_aspirin_now",
+  "patient_is_exposed_to_clopidogrel_now",
+  "patient_is_exposed_to_low_molecular_weight_heparin_now",
+  "patient_is_exposed_to_non_steroidal_anti_inflammatory_agent_now",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_is_exposed_to_cytochrome_p450_cyp3a4_enzyme_now",
+  "patient_is_taking_cytochrome_p450_cyp3a4_enzyme_now"
+]

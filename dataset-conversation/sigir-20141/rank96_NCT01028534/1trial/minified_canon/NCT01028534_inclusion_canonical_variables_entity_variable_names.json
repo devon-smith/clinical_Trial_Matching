@@ -1,0 +1,7 @@
+[
+  "patient_apnea_value_recorded_now_withunit_per_hour",
+  "patient_slow_shallow_breathing_value_recorded_now_withunit_per_hour",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_has_finding_of_poor_hypertension_control_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg"
+]

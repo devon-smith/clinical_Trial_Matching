@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:44:11",
+  "trial_id": "NCT00312741",
+  "contextual": {
+    "_id": "NCT00312741",
+    "title": "Usefulness of Microbiological Tests in Community-Acquired Pneumonia",
+    "text": "Summary: The hypothesis is that community-acquired pneumonia is usually a monomicrobial infection. Therefore, early detection of the etiology allows to select the most active, narrow-spectrum, and cheap, and less toxic antibiotic agent.\nInclusion criteria: inclusion criteria: \n\n Age: 18 years and above \n\n Clinical and radiological diagnosis of community-acquired pneumonia \n\n Informed consent of patient \n\n Hospital admission \n\n \nExclusion criteria: : \n\n Prior hospital admission (less than 15 days) \n\n Alternative diagnosis at the discharge \n\n Immunosuppression (HIV infection, immunosuppressive therapies, neutropenia) \n\n Risk factors for unusual etiologies \n\n Patient is pregnant",
+    "metadata": {
+      "brief_title": "Usefulness of Microbiological Tests in Community-Acquired Pneumonia",
+      "phase": "",
+      "drugs": "['empirical versus microbiological guided treatment']",
+      "drugs_list": [
+        "empirical versus microbiological guided treatment"
+      ],
+      "diseases": "['Community-Acquired Pneumonia']",
+      "diseases_list": [
+        "Community-Acquired Pneumonia"
+      ],
+      "enrollment": "250.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age: 18 years and above \n\n Clinical and radiological diagnosis of community-acquired pneumonia \n\n Informed consent of patient \n\n Hospital admission \n\n ",
+      "exclusion_criteria": ": \n\n Prior hospital admission (less than 15 days) \n\n Alternative diagnosis at the discharge \n\n Immunosuppression (HIV infection, immunosuppressive therapies, neutropenia) \n\n Risk factors for unusual etiologies \n\n Patient is pregnant",
+      "brief_summary": "The hypothesis is that community-acquired pneumonia is usually a monomicrobial infection. Therefore, early detection of the etiology allows to select the most active, narrow-spectrum, and cheap, and less toxic antibiotic agent."
+    }
+  },
+  "linked_result": {
+    "Community-Acquired Pneumonia": {
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Community-Acquired Pneumonia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Community-Acquired Pneumonia": {
+      "disease": "Community-Acquired Pneumonia",
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia"
+    }
+  }
+}

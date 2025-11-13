@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_cigarette_pack_years_value_recorded_inthehistory_withunit_pack_years",
+  "patient_has_finding_of_smoker_now",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent_of_predicted",
+  "patient_forced_expired_volume_in_one_second_forced_vital_capacity_ratio_value_recorded_now_withunit_percent_of_predicted",
+  "patient_has_undergone_spirometry_inthehistory"
+]

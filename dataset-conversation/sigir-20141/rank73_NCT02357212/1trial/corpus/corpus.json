@@ -1,0 +1,22 @@
+{
+  "_id": "NCT02357212",
+  "title": "Early Invasive Versus Conservative Therapy in Women With an Acute Coronary Syndrome",
+  "text": "Summary: The aim of this research is to evaluate the effect of early invasive therapy and appropriate revascularization compared with conservative management and selective revascularization among women with an acute coronary syndrome.\nInclusion criteria: inclusion criteria: \n\n Women age 18 years or older \n\n Non-ST-elevation acute coronary syndrome (defined as new onset chest discomfort that occurs at rest or with low levels of activity/or emotion within the preceding 48 hours) with either: \n\n elevated troponin T (≥ 0.03 ng per milliliter), \n\n elevated creatinine kinase MB-isoenzyme (≥ 5.0 ng per milliliter) \n\n elevated NT-pro-BNP (≥ 450 pg per milliliter), \n\n ST-segment depression (≥ 0.5 mm) \n\n or TIMI risk score (> 2) \n\n women who have elevated cardiac enzymes after non-cardiac surgery will also be considered. \n\n \nExclusion criteria: : \n\n ST-elevation myocardial infarction, \n\n cardiogenic shock, \n\n congestive heart failure, \n\n hemodynamic instability, \n\n use of fibrinolytic therapy in the last 96 hours, \n\n current bleeding or bleeding disorder within the last 3 months that required transfusion, \n\n pregnancy, \n\n contraindication to any study medication. i.e.heparin, clopidogrel, or glycoprotein IIb/III inhibitor, \n\n PCI in the last 6 months, \n\n prior CABG, \n\n inability to provide written informed consent.",
+  "metadata": {
+    "brief_title": "Early Invasive Versus Conservative Therapy in Women With an Acute Coronary Syndrome",
+    "phase": "",
+    "drugs": "['coronary angiography', 'adenosine stress test']",
+    "drugs_list": [
+      "coronary angiography",
+      "adenosine stress test"
+    ],
+    "diseases": "['Acute Coronary Syndrome']",
+    "diseases_list": [
+      "Acute Coronary Syndrome"
+    ],
+    "enrollment": "40.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Women age 18 years or older \n\n Non-ST-elevation acute coronary syndrome (defined as new onset chest discomfort that occurs at rest or with low levels of activity/or emotion within the preceding 48 hours) with either: \n\n elevated troponin T (≥ 0.03 ng per milliliter), \n\n elevated creatinine kinase MB-isoenzyme (≥ 5.0 ng per milliliter) \n\n elevated NT-pro-BNP (≥ 450 pg per milliliter), \n\n ST-segment depression (≥ 0.5 mm) \n\n or TIMI risk score (> 2) \n\n women who have elevated cardiac enzymes after non-cardiac surgery will also be considered. \n\n ",
+    "exclusion_criteria": ": \n\n ST-elevation myocardial infarction, \n\n cardiogenic shock, \n\n congestive heart failure, \n\n hemodynamic instability, \n\n use of fibrinolytic therapy in the last 96 hours, \n\n current bleeding or bleeding disorder within the last 3 months that required transfusion, \n\n pregnancy, \n\n contraindication to any study medication. i.e.heparin, clopidogrel, or glycoprotein IIb/III inhibitor, \n\n PCI in the last 6 months, \n\n prior CABG, \n\n inability to provide written informed consent.",
+    "brief_summary": "The aim of this research is to evaluate the effect of early invasive therapy and appropriate revascularization compared with conservative management and selective revascularization among women with an acute coronary syndrome."
+  }
+}

@@ -1,0 +1,8 @@
+[
+  "patient_has_undergone_exploratory_thoracotomy_inthehistory",
+  "patient_has_undergone_surgical_procedure_inthehistory",
+  "patient_has_finding_of_recurrent_tumor_now",
+  "patient_has_finding_of_secondary_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_dead_now",
+  "patient_has_finding_of_follow_up_status_now"
+]

@@ -1,0 +1,52 @@
+{
+  "generated": "2025-10-20T23:41:03",
+  "trial_id": "NCT01017055",
+  "contextual": {
+    "_id": "NCT01017055",
+    "title": "Voice and Swallowing Outcomes Following Revision Anterior Cervical Spine Surgery",
+    "text": "Summary: Evaluate voice and swallowing outcomes post operatively.\nInclusion criteria: inclusion criteria: \n\n Patients undergoing revision anterior cervical spine surgery \n\n \nExclusion criteria: : \n\n Primary pathology of the upper aero-digestive tract other than mild chronic pharyngitis, pre-existing vocal cord paralysis.",
+    "metadata": {
+      "brief_title": "Voice and Swallowing Outcomes Following Revision Anterior Cervical Spine Surgery",
+      "phase": "",
+      "drugs": "['Voice and Swallowing evaluations']",
+      "drugs_list": [
+        "Voice and Swallowing evaluations"
+      ],
+      "diseases": "['Dysphagia', 'Dysphonia']",
+      "diseases_list": [
+        "Dysphagia",
+        "Dysphonia"
+      ],
+      "enrollment": "200.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients undergoing revision anterior cervical spine surgery \n\n ",
+      "exclusion_criteria": ": \n\n Primary pathology of the upper aero-digestive tract other than mild chronic pharyngitis, pre-existing vocal cord paralysis.",
+      "brief_summary": "Evaluate voice and swallowing outcomes post operatively."
+    }
+  },
+  "linked_result": {
+    "Dysphagia": {
+      "conceptId": "40739000",
+      "preferred_term": "Dysphagia",
+      "fully_specified_name": "Dysphagia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Difficulty in SWALLOWING which may result from neuromuscular disorder or mechanical obstruction. Dysphagia is classified into two distinct types: oropharyngeal dysphagia due to malfunction of the PHARYNX and UPPER ESOPHAGEAL SPHINCTER; and esophageal dysphagia due to malfunction of the ESOPHAGUS.",
+      "best_match_term": "Dysphagia",
+      "match_reason": "Exact"
+    },
+    "Dysphonia": null
+  },
+  "kept_counts": {
+    "Dysphagia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dysphagia": {
+      "disease": "Dysphagia",
+      "conceptId": "40739000",
+      "preferred_term": "Dysphagia",
+      "fully_specified_name": "Dysphagia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Difficulty in SWALLOWING which may result from neuromuscular disorder or mechanical obstruction. Dysphagia is classified into two distinct types: oropharyngeal dysphagia due to malfunction of the PHARYNX and UPPER ESOPHAGEAL SPHINCTER; and esophageal dysphagia due to malfunction of the ESOPHAGUS.",
+      "best_match_term": "Dysphagia"
+    }
+  }
+}

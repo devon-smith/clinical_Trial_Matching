@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT00141583",
+  "contextual": {
+    "_id": "NCT00141583",
+    "title": "The Renin-Angiotensin System in Essential Hypertension",
+    "text": "Summary: Although ACE Inhibitors and Angiotensin Receptor Blockers are effective blood pressure lowering agents, the exact mechanisms by which these agents lower BP are still not fully understood. This study aims to compare the blood pressure and hormonal responses (plasma renin activity and aldosterone) to the ACE inhibitor enalapril and ARB candesartan in individuals with mild essential hypertension.\nInclusion criteria: inclusion criteria: \n\n Essential Hypertension \n\n SBP 140-159 mmHg \n\n DBP 90-99 mmHg \n\n \nExclusion criteria: : \n\n Intolerance of or allergy to ACE Inhibitors or ARBS \n\n Pregnant or Breastfeeding \n\n Pre-menopausal women \n\n Uncontrolled cardiac or renal failure \n\n Diabetes mellitus",
+    "metadata": {
+      "brief_title": "The Renin-Angiotensin System in Essential Hypertension",
+      "phase": "",
+      "drugs": "['Enalapril 20 mg bd', 'Candesartan 8 mg bd']",
+      "drugs_list": [
+        "Enalapril 20 mg bd",
+        "Candesartan 8 mg bd"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "11.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Essential Hypertension \n\n SBP 140-159 mmHg \n\n DBP 90-99 mmHg \n\n ",
+      "exclusion_criteria": ": \n\n Intolerance of or allergy to ACE Inhibitors or ARBS \n\n Pregnant or Breastfeeding \n\n Pre-menopausal women \n\n Uncontrolled cardiac or renal failure \n\n Diabetes mellitus",
+      "brief_summary": "Although ACE Inhibitors and Angiotensin Receptor Blockers are effective blood pressure lowering agents, the exact mechanisms by which these agents lower BP are still not fully understood. This study aims to compare the blood pressure and hormonal responses (plasma renin activity and aldosterone) to the ACE inhibitor enalapril and ARB candesartan in individuals with mild essential hypertension."
+    }
+  }
+}

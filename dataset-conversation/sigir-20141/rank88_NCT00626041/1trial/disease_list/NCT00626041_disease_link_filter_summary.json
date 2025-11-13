@@ -1,0 +1,110 @@
+{
+  "generated": "2025-10-22T21:09:42",
+  "trial_id": "NCT00626041",
+  "contextual": {
+    "_id": "NCT00626041",
+    "title": "U-CHAMP: Urban Cardiovascular Health Assessment and Management Program",
+    "text": "Summary: High blood pressure, elevated blood glucose and high cholesterol are related to the increased risk of stroke and heart disease. Many studies have shown that this risk can be significantly reduced by lowering blood pressure, blood glucose and cholesterol levels.~Through a collaborative effort between Calgary Safeway pharmacists and Calgary Health Region family physician PCN's, U-CHAMP will deliver a program to assist in the identification and management of people with elevated blood pressure, blood glucose and cholesterol and through this effort, reduce the risk of heart disease and stroke in the urban Calgary population aged 18-85 years.\nInclusion criteria: inclusion criteria: \n\n Adults 18-85 years \n\n Signed consent \n\n \nExclusion criteria: : \n\n None",
+    "metadata": {
+      "brief_title": "U-CHAMP: Urban Cardiovascular Health Assessment and Management Program",
+      "phase": "",
+      "drugs": "['participant referral to primary care network physician']",
+      "drugs_list": [
+        "participant referral to primary care network physician"
+      ],
+      "diseases": "['Cardiovascular Diseases', 'Hypertension', 'Hyperlipidemia', 'Hyperglycemia']",
+      "diseases_list": [
+        "Cardiovascular Diseases",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Hyperglycemia"
+      ],
+      "enrollment": "110.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Adults 18-85 years \n\n Signed consent \n\n ",
+      "exclusion_criteria": ": \n\n None",
+      "brief_summary": "High blood pressure, elevated blood glucose and high cholesterol are related to the increased risk of stroke and heart disease. Many studies have shown that this risk can be significantly reduced by lowering blood pressure, blood glucose and cholesterol levels.~Through a collaborative effort between Calgary Safeway pharmacists and Calgary Health Region family physician PCN's, U-CHAMP will deliver a program to assist in the identification and management of people with elevated blood pressure, blood glucose and cholesterol and through this effort, reduce the risk of heart disease and stroke in the urban Calgary population aged 18-85 years."
+    }
+  },
+  "linked_result": {
+    "Cardiovascular Diseases": {
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease",
+      "match_reason": "Exact"
+    },
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Hyperlipidemia": {
+      "conceptId": "55822004",
+      "preferred_term": "Hyperlipidemia",
+      "fully_specified_name": "Hyperlipidemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Conditions with excess LIPIDS in the blood.",
+      "best_match_term": "Hyperlipidemia",
+      "match_reason": "Exact"
+    },
+    "Hyperglycemia": {
+      "conceptId": "80394007",
+      "preferred_term": "Hyperglycemia",
+      "fully_specified_name": "Hyperglycemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Abnormally high BLOOD GLUCOSE level.",
+      "best_match_term": "Hyperglycemia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cardiovascular Diseases": 1,
+    "Hypertension": 1,
+    "Hyperlipidemia": 1,
+    "Hyperglycemia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cardiovascular Diseases": {
+      "disease": "Cardiovascular Diseases",
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease"
+    },
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Hyperlipidemia": {
+      "disease": "Hyperlipidemia",
+      "conceptId": "55822004",
+      "preferred_term": "Hyperlipidemia",
+      "fully_specified_name": "Hyperlipidemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Conditions with excess LIPIDS in the blood.",
+      "best_match_term": "Hyperlipidemia"
+    },
+    "Hyperglycemia": {
+      "disease": "Hyperglycemia",
+      "conceptId": "80394007",
+      "preferred_term": "Hyperglycemia",
+      "fully_specified_name": "Hyperglycemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Abnormally high BLOOD GLUCOSE level.",
+      "best_match_term": "Hyperglycemia"
+    }
+  }
+}

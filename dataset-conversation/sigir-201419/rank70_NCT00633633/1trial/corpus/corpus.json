@@ -1,0 +1,23 @@
+{
+  "_id": "NCT00633633",
+  "title": "Lifestyle Intervention for Heart Failure",
+  "text": "Summary: The goal of this behavioral research study is to learn if education and training about exercise can help to change the lifestyle of cancer survivors with symptoms of heart failure.\nInclusion criteria: inclusion criteria: \n\n diagnosis of NYHA I, II or III heart failure (as identified by any of the following physical findings of heart failure (jugular venous distension, crackles, edema, S3); pulmonary edema on chest x-ray; BNP > 100 pg/ml; or at least two of the following symptoms: paroxysmal nocturnal dyspnea, shortness of breath, swelling, fatigue; \n\n previous chemotherapy that contributed to the development of heart failure (i.e., heart failure develops or worsens after receiving chemotherapy, with no other obvious explanation); \n\n oriented to person, place, and time; \n\n living in the Houston area (Harris county or a contiguous county), or planning to stay in the area for at least the next 16 weeks. \n\n 18 years of age or older. \n\n diagnosis of cancer \n\n have completed treatment, or are on long-term adjuvant or maintenance chemotherapy only \n\n \nExclusion criteria: : \n\n remain in NYHA class IV heart failure despite therapy; \n\n have health problems or current treatments that would make exercise unsafe, as determined by the cardiologist; \n\n cannot provide informed consent;",
+  "metadata": {
+    "brief_title": "Lifestyle Intervention for Heart Failure",
+    "phase": "",
+    "drugs": "['Usual Care', 'Exercise Training', 'Dietary Counseling']",
+    "drugs_list": [
+      "Usual Care",
+      "Exercise Training",
+      "Dietary Counseling"
+    ],
+    "diseases": "['Heart Failure']",
+    "diseases_list": [
+      "Heart Failure"
+    ],
+    "enrollment": "85.0",
+    "inclusion_criteria": "inclusion criteria: \n\n diagnosis of NYHA I, II or III heart failure (as identified by any of the following physical findings of heart failure (jugular venous distension, crackles, edema, S3); pulmonary edema on chest x-ray; BNP > 100 pg/ml; or at least two of the following symptoms: paroxysmal nocturnal dyspnea, shortness of breath, swelling, fatigue; \n\n previous chemotherapy that contributed to the development of heart failure (i.e., heart failure develops or worsens after receiving chemotherapy, with no other obvious explanation); \n\n oriented to person, place, and time; \n\n living in the Houston area (Harris county or a contiguous county), or planning to stay in the area for at least the next 16 weeks. \n\n 18 years of age or older. \n\n diagnosis of cancer \n\n have completed treatment, or are on long-term adjuvant or maintenance chemotherapy only \n\n ",
+    "exclusion_criteria": ": \n\n remain in NYHA class IV heart failure despite therapy; \n\n have health problems or current treatments that would make exercise unsafe, as determined by the cardiologist; \n\n cannot provide informed consent;",
+    "brief_summary": "The goal of this behavioral research study is to learn if education and training about exercise can help to change the lifestyle of cancer survivors with symptoms of heart failure."
+  }
+}

@@ -1,0 +1,14 @@
+[
+  "patient_has_undergone_electrocardiographic_procedure_now",
+  "patient_has_finding_of_st_segment_elevation_now",
+  "patient_st_segment_elevation_value_recorded_now_withunit_millivolt",
+  "patient_has_finding_of_bradycardia_now",
+  "patient_has_finding_of_hypoxemia_now",
+  "patient_has_finding_of_low_blood_pressure_now",
+  "patient_is_exposed_to_oxygen_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_tachycardia_now",
+  "patient_has_diagnosis_of_terminal_illness_now",
+  "patient_is_undergoing_cardiac_function_testing_now",
+  "patient_has_diagnosis_of_mental_disorder_now"
+]

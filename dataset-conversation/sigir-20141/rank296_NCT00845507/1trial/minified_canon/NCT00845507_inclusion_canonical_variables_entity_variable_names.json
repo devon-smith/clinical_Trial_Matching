@@ -1,0 +1,15 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_bipolar_i_disorder_inthehistory",
+  "patient_has_diagnosis_of_major_depressive_disorder_inthehistory",
+  "patient_has_diagnosis_of_schizoaffective_disorder_inthehistory",
+  "patient_has_diagnosis_of_schizophrenia_inthehistory",
+  "patient_madrs_montgomery_asberg_depression_rating_scale_score_value_recorded_now_withunit_score",
+  "patient_body_weight_value_recorded_inthehistory_withunit_kg",
+  "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+  "patient_has_finding_of_obesity_now",
+  "patient_sex_is_female_now",
+  "patient_has_finding_of_iud_contraception_now",
+  "patient_is_exposed_to_olanzapine_now",
+  "patient_olanzapine_value_recorded_now_withunit_milligrams_per_day"
+]

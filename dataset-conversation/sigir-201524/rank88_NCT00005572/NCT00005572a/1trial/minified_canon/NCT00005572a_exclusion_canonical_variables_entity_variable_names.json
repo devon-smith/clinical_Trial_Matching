@@ -1,0 +1,9 @@
+[
+  "patient_is_exposed_to_colony_stimulating_factor_granulocyte_macrophage_inthefuture",
+  "patient_is_exposed_to_colony_stimulating_factor_granulocyte_macrophage_inthepast30days",
+  "patient_is_exposed_to_colony_stimulating_factor_granulocytic_now",
+  "patient_is_exposed_to_drug_or_medicament_inthefuture",
+  "patient_is_exposed_to_drug_or_medicament_inthepast30days",
+  "patient_is_taking_prednisone_containing_product_now",
+  "patient_has_finding_of_finding_relating_to_drug_misuse_behavior_now"
+]

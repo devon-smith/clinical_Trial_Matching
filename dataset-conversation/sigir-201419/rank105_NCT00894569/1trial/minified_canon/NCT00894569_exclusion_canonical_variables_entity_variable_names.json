@@ -1,0 +1,20 @@
+[
+  "patient_is_exposed_to_epidermal_growth_factor_urogastrone_receptor_inthehistory",
+  "patient_has_undergone_chemotherapy_inthehistory",
+  "patient_has_finding_of_disease_inthehistory",
+  "patient_has_undergone_surgical_procedure_inthepast4weeks",
+  "patient_is_undergoing_chemotherapy_now",
+  "patient_is_undergoing_hormone_therapy_now",
+  "patient_is_undergoing_immunological_therapy_now",
+  "patient_has_undergone_clinical_trial_inthehistory",
+  "patient_has_finding_of_coronary_arteriosclerosis_now",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_sex_is_female_now",
+  "patient_has_finding_of_secondary_malignant_neoplasm_of_axillary_lymph_nodes_now",
+  "patient_has_finding_of_carcinomatosis_of_peritoneal_cavity_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_secondary_malignant_neoplasm_of_lung_now",
+  "patient_has_finding_of_secondary_malignant_neoplasm_of_mediastinal_lymph_nodes_now",
+  "patient_has_finding_of_secondary_malignant_neoplasm_of_retroperitoneal_lymph_nodes_now",
+  "patient_sex_is_male_now"
+]

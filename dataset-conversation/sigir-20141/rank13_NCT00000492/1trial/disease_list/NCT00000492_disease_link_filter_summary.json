@@ -1,0 +1,182 @@
+{
+  "generated": "2025-10-20T23:28:03",
+  "trial_id": "NCT00000492",
+  "contextual": {
+    "_id": "NCT00000492",
+    "title": "Beta-Blocker Heart Attack Trial (BHAT)",
+    "text": "Summary: To determine whether the regular administration of the beta-blocker drug propranolol to people who had had at least one documented myocardial infarction would result in a significant reduction of mortality from all causes over the follow-up period. Eligible volunteer patients were recruited to participate in a double-blind clinical trial within 21 days after the onset of the acute event. One-half of the patients were randomly assigned to a beta-blocking drug (propranolol) and one-half to a placebo. The trial also evaluated the effect of propranolol on incidences of coronary heart disease mortality, sudden cardiac death, and nonfatal myocardial infarction plus coronary heart disease mortality in persons with documented previous myocardial infarction.\nInclusion criteria: Men and women, ages 30 to 69. Documented myocardial infarction.\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Beta-Blocker Heart Attack Trial (BHAT)",
+      "phase": "Phase 3",
+      "drugs": "['propranolol']",
+      "drugs_list": [
+        "propranolol"
+      ],
+      "diseases": "['Arrhythmia', 'Cardiovascular Diseases', 'Coronary Disease', 'Death, Sudden, Cardiac', 'Heart Diseases', 'Myocardial Infarction', 'Myocardial Ischemia', 'Ventricular Fibrillation']",
+      "diseases_list": [
+        "Arrhythmia",
+        "Cardiovascular Diseases",
+        "Coronary Disease",
+        "Death",
+        "Sudden",
+        "Cardiac",
+        "Heart Diseases",
+        "Myocardial Infarction",
+        "Myocardial Ischemia",
+        "Ventricular Fibrillation"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "Men and women, ages 30 to 69. Documented myocardial infarction.",
+      "exclusion_criteria": "",
+      "brief_summary": "To determine whether the regular administration of the beta-blocker drug propranolol to people who had had at least one documented myocardial infarction would result in a significant reduction of mortality from all causes over the follow-up period. Eligible volunteer patients were recruited to participate in a double-blind clinical trial within 21 days after the onset of the acute event. One-half of the patients were randomly assigned to a beta-blocking drug (propranolol) and one-half to a placebo. The trial also evaluated the effect of propranolol on incidences of coronary heart disease mortality, sudden cardiac death, and nonfatal myocardial infarction plus coronary heart disease mortality in persons with documented previous myocardial infarction."
+    }
+  },
+  "linked_result": {
+    "Arrhythmia": {
+      "conceptId": "698247007",
+      "preferred_term": "Cardiac arrhythmia",
+      "fully_specified_name": "Cardiac arrhythmia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Any disturbances of the normal rhythmic beating of the heart or MYOCARDIAL CONTRACTION. Cardiac arrhythmias can be classified by the abnormalities in HEART RATE, disorders of electrical impulse generation, or impulse conduction.",
+      "best_match_term": "Arrhythmia",
+      "match_reason": "Exact"
+    },
+    "Cardiovascular Diseases": {
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease",
+      "match_reason": "Exact"
+    },
+    "Coronary Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary heart disease",
+      "match_reason": "Exact"
+    },
+    "Death, Sudden, Cardiac": {
+      "conceptId": "95281009",
+      "preferred_term": "Sudden cardiac death",
+      "fully_specified_name": "Sudden cardiac death (disorder)",
+      "type": "Clinical finding",
+      "definition": "Unexpected rapid natural death due to cardiovascular collapse within one hour of initial symptoms. It is usually caused by the worsening of existing heart diseases. The sudden onset of symptoms, such as CHEST PAIN and CARDIAC ARRHYTHMIAS, particularly VENTRICULAR TACHYCARDIA, can lead to the loss of consciousness and cardiac arrest followed by biological death. (from Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine, 7th ed., 2005)",
+      "best_match_term": "Sudden cardiac death",
+      "match_reason": "Exact"
+    },
+    "Heart Diseases": {
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease",
+      "match_reason": "Exact"
+    },
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    },
+    "Myocardial Ischemia": {
+      "conceptId": "414795007",
+      "preferred_term": "Myocardial ischemia",
+      "fully_specified_name": "Myocardial ischemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Myocardial ischemia",
+      "match_reason": "Exact"
+    },
+    "Ventricular Fibrillation": {
+      "conceptId": "71908006",
+      "preferred_term": "Ventricular fibrillation",
+      "fully_specified_name": "Ventricular fibrillation (disorder)",
+      "type": "Clinical finding",
+      "definition": "A potentially lethal cardiac arrhythmia that is characterized by uncoordinated extremely rapid firing of electrical impulses (400-600/min) in HEART VENTRICLES. Such asynchronous ventricular quivering or fibrillation prevents any effective cardiac output and results in unconsciousness (SYNCOPE). It is one of the major electrocardiographic patterns seen with CARDIAC ARREST.",
+      "best_match_term": "Ventricular fibrillation",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Arrhythmia": 1,
+    "Cardiovascular Diseases": 1,
+    "Death, Sudden, Cardiac": 1,
+    "Heart Diseases": 1,
+    "Myocardial Infarction": 1,
+    "Myocardial Ischemia": 1,
+    "Ventricular Fibrillation": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Arrhythmia": {
+      "disease": "Arrhythmia",
+      "conceptId": "698247007",
+      "preferred_term": "Cardiac arrhythmia",
+      "fully_specified_name": "Cardiac arrhythmia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Any disturbances of the normal rhythmic beating of the heart or MYOCARDIAL CONTRACTION. Cardiac arrhythmias can be classified by the abnormalities in HEART RATE, disorders of electrical impulse generation, or impulse conduction.",
+      "best_match_term": "Arrhythmia"
+    },
+    "Cardiovascular Diseases": {
+      "disease": "Cardiovascular Diseases",
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease"
+    },
+    "Death, Sudden, Cardiac": {
+      "disease": "Death, Sudden, Cardiac",
+      "conceptId": "95281009",
+      "preferred_term": "Sudden cardiac death",
+      "fully_specified_name": "Sudden cardiac death (disorder)",
+      "type": "Clinical finding",
+      "definition": "Unexpected rapid natural death due to cardiovascular collapse within one hour of initial symptoms. It is usually caused by the worsening of existing heart diseases. The sudden onset of symptoms, such as CHEST PAIN and CARDIAC ARRHYTHMIAS, particularly VENTRICULAR TACHYCARDIA, can lead to the loss of consciousness and cardiac arrest followed by biological death. (from Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine, 7th ed., 2005)",
+      "best_match_term": "Sudden cardiac death"
+    },
+    "Heart Diseases": {
+      "disease": "Heart Diseases",
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease"
+    },
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    },
+    "Myocardial Ischemia": {
+      "disease": "Myocardial Ischemia",
+      "conceptId": "414795007",
+      "preferred_term": "Myocardial ischemia",
+      "fully_specified_name": "Myocardial ischemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Myocardial ischemia"
+    },
+    "Ventricular Fibrillation": {
+      "disease": "Ventricular Fibrillation",
+      "conceptId": "71908006",
+      "preferred_term": "Ventricular fibrillation",
+      "fully_specified_name": "Ventricular fibrillation (disorder)",
+      "type": "Clinical finding",
+      "definition": "A potentially lethal cardiac arrhythmia that is characterized by uncoordinated extremely rapid firing of electrical impulses (400-600/min) in HEART VENTRICLES. Such asynchronous ventricular quivering or fibrillation prevents any effective cardiac output and results in unconsciousness (SYNCOPE). It is one of the major electrocardiographic patterns seen with CARDIAC ARREST.",
+      "best_match_term": "Ventricular fibrillation"
+    }
+  }
+}

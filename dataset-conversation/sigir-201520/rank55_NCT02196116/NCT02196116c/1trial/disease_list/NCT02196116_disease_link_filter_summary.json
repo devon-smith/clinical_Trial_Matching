@@ -1,0 +1,55 @@
+{
+  "generated": "2025-10-22T20:56:21",
+  "trial_id": "NCT02196116",
+  "contextual": {
+    "_id": "NCT02196116",
+    "title": "Amyloïd Load in Elderly Population: Effect of Cognitive Reserve",
+    "text": "Summary: This research aim to explore relationships between the presence of amyloid burden and cognitive performance, and its modulation by educational level. For this purpose we will combine Positron emission tomography (PET) imaging and neuropsychological assessment acquired on 3 groups of subjects, from two population-based cohorts 3C and AMIMage The first group includes cognitively intact participants who will serve as controls, the second group, subjects with mild cognitive impairments without memory complaint and the third, subjects with both mild cognitive impairments and memory complaint.\nInclusion criteria: inclusion criteria: \n\n Participation in the AMI or 3C cohorts Group 1- Controls \n\n MMSE > 24 or > 26 for low and high levels of education, respectively. \n\n Without memory impairment (for episodic memory) on the Free and Cued Selective Reminding Test RL/RI-16 items (FCSRT), free recall > 22 and total recall >42, according to the thresholds for population-based studies \n\n Without memory complaint \n\n Without dementia Group 2- Cognitively-impaired subjects without dementia and without memory complaints \n\n Mini Mental State Evaluation (MMSE) < 24 or < 26 for low and high levels of education, respectively \n\n With memory impairments according to the RL/RI-16 test (free recall≤22 and/or total recall ≤42), according to the thresholds for population-based studies defined by Auriacombe et al., 2010. \n\n Without memory complaint \n\n Without dementia Group 3- Cognitively-impaired subjects without dementia and with memory complaints \n\n MMSE < 24 or < 26 for low and high levels of education, respectively \n\n With memory impairments according to the RL/RI-16 test (same thresholds as above) \n\n With memory complaint \n\n Without dementia \n\n \nExclusion criteria: : \n\n Being left handed \n\n Presence of dementia (based on the clinical diagnosis) \n\n Presence of stroke \n\n Presence of Parkinson's disease \n\n Presence of a counter-indication for MRI \n\n Presence of a counter-indication for PET Scan with [18F]-Flutemetamol \n\n Presence of any health problem preventing travel to the imaging service of the University Hospital \n\n Being under the legal guardianship of another person or being unable to provide consent to participate \n\n Pregnant or breastfeeding woman",
+    "metadata": {
+      "brief_title": "Amyloïd Load in Elderly Population: Effect of Cognitive Reserve",
+      "phase": "",
+      "drugs": "['PET', 'MRI', 'neuropsychological tests']",
+      "drugs_list": [
+        "PET",
+        "MRI",
+        "neuropsychological tests"
+      ],
+      "diseases": "['Plaque, Amyloid', 'Cognitive Deficits']",
+      "diseases_list": [
+        "Plaque",
+        "Amyloid",
+        "Cognitive Deficits"
+      ],
+      "enrollment": "120.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Participation in the AMI or 3C cohorts Group 1- Controls \n\n MMSE > 24 or > 26 for low and high levels of education, respectively. \n\n Without memory impairment (for episodic memory) on the Free and Cued Selective Reminding Test RL/RI-16 items (FCSRT), free recall > 22 and total recall >42, according to the thresholds for population-based studies \n\n Without memory complaint \n\n Without dementia Group 2- Cognitively-impaired subjects without dementia and without memory complaints \n\n Mini Mental State Evaluation (MMSE) < 24 or < 26 for low and high levels of education, respectively \n\n With memory impairments according to the RL/RI-16 test (free recall≤22 and/or total recall ≤42), according to the thresholds for population-based studies defined by Auriacombe et al., 2010. \n\n Without memory complaint \n\n Without dementia Group 3- Cognitively-impaired subjects without dementia and with memory complaints \n\n MMSE < 24 or < 26 for low and high levels of education, respectively \n\n With memory impairments according to the RL/RI-16 test (same thresholds as above) \n\n With memory complaint \n\n Without dementia \n\n ",
+      "exclusion_criteria": ": \n\n Being left handed \n\n Presence of dementia (based on the clinical diagnosis) \n\n Presence of stroke \n\n Presence of Parkinson's disease \n\n Presence of a counter-indication for MRI \n\n Presence of a counter-indication for PET Scan with [18F]-Flutemetamol \n\n Presence of any health problem preventing travel to the imaging service of the University Hospital \n\n Being under the legal guardianship of another person or being unable to provide consent to participate \n\n Pregnant or breastfeeding woman",
+      "brief_summary": "This research aim to explore relationships between the presence of amyloid burden and cognitive performance, and its modulation by educational level. For this purpose we will combine Positron emission tomography (PET) imaging and neuropsychological assessment acquired on 3 groups of subjects, from two population-based cohorts 3C and AMIMage The first group includes cognitively intact participants who will serve as controls, the second group, subjects with mild cognitive impairments without memory complaint and the third, subjects with both mild cognitive impairments and memory complaint."
+    }
+  },
+  "linked_result": {
+    "Plaque, Amyloid": null,
+    "Cognitive Deficits": {
+      "conceptId": "386806002",
+      "preferred_term": "Impaired cognition",
+      "fully_specified_name": "Impaired cognition (finding)",
+      "type": "Clinical finding",
+      "definition": "Diminished or impaired mental and/or intellectual function.",
+      "best_match_term": "Cognitive deficit",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cognitive Deficits": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cognitive Deficits": {
+      "disease": "Cognitive Deficits",
+      "conceptId": "386806002",
+      "preferred_term": "Impaired cognition",
+      "fully_specified_name": "Impaired cognition (finding)",
+      "type": "Clinical finding",
+      "definition": "Diminished or impaired mental and/or intellectual function.",
+      "best_match_term": "Cognitive deficit"
+    }
+  }
+}

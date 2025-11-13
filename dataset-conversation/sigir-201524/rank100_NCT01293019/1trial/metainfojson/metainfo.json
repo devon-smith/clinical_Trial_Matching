@@ -1,0 +1,29 @@
+{
+  "trial_id": "NCT01293019",
+  "contextual": {
+    "_id": "NCT01293019",
+    "title": "Osteopathic Treatment in Adult Patients With Cystic Fibrosis",
+    "text": "Summary: To study the contribution of osteopathy on the reduction of pain in adult patients with cystic fibrosis\nInclusion criteria: inclusion criteria : \n\n Diagnosis of cystic fibrosis ( positive sweat test and / or presence of 2 disease causing mutations in the CFTR gene \n\n Age > 18 years \n\n Patient with chronic chest , neck or back pain \n\n Written Informed Consent \n\n with health insurance \n\n \nExclusion criteria:  : \n\n regular follow-up by an osteopathic physician in the previous 3 months \n\n patients awaiting lung transplantation \n\n history of lung transplantation \n\n pregnancy \n\n understanding disorders preventing the patient to apply the study \n\n participation in another clinical interventional study protocol",
+    "metadata": {
+      "brief_title": "Osteopathic Treatment in Adult Patients With Cystic Fibrosis",
+      "phase": "Phase 3",
+      "drugs": "['Osteopathic treatment', 'Sham Placebo', 'Usual care']",
+      "drugs_list": [
+        "Osteopathic treatment",
+        "Sham Placebo",
+        "Usual care"
+      ],
+      "diseases": "['Cystic Fibrosis', 'Back Pain', 'Neck Pain', 'Chest Pain']",
+      "diseases_list": [
+        "Cystic Fibrosis",
+        "Back Pain",
+        "Neck Pain",
+        "Chest Pain"
+      ],
+      "enrollment": "32.0",
+      "inclusion_criteria": "inclusion criteria : \n\n Diagnosis of cystic fibrosis ( positive sweat test and / or presence of 2 disease causing mutations in the CFTR gene \n\n Age > 18 years \n\n Patient with chronic chest , neck or back pain \n\n Written Informed Consent \n\n with health insurance \n\n ",
+      "exclusion_criteria": " : \n\n regular follow-up by an osteopathic physician in the previous 3 months \n\n patients awaiting lung transplantation \n\n history of lung transplantation \n\n pregnancy \n\n understanding disorders preventing the patient to apply the study \n\n participation in another clinical interventional study protocol",
+      "brief_summary": "To study the contribution of osteopathy on the reduction of pain in adult patients with cystic fibrosis"
+    }
+  }
+}

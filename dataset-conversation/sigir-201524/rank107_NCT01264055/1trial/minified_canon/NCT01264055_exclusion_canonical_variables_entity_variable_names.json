@@ -1,0 +1,13 @@
+[
+  "patient_has_diagnosis_of_disorder_of_lung_now",
+  "patient_has_diagnosis_of_cystic_fibrosis_now",
+  "patient_has_finding_of_allergic_bronchopulmonary_aspergillosis_now",
+  "patient_has_finding_of_alpha_1_antitrypsin_deficiency_now",
+  "patient_has_finding_of_bronchiectasis_now",
+  "patient_has_finding_of_inflammatory_bowel_disease_now",
+  "patient_has_finding_of_rheumatoid_arthritis_now",
+  "patient_has_finding_of_sj_gren_s_syndrome_now",
+  "patient_has_finding_of_tuberculosis_inthehistory",
+  "patient_has_finding_of_smoker_now",
+  "patient_has_undergone_solid_organ_transplant_inthehistory"
+]

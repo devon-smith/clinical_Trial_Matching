@@ -1,0 +1,18 @@
+[
+  "patient_has_suspicion_of_mycosis_now",
+  "patient_has_suspicion_of_tuberculosis_now",
+  "patient_has_diagnosis_of_malignant_neoplasm_of_skin_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_multiple_nodules_of_lung_value_recorded_now_withunit_count",
+  "patient_has_diagnosis_of_primary_malignant_neoplasm_of_lung_now",
+  "patient_has_diagnosis_of_secondary_malignant_neoplasm_of_lung_now",
+  "patient_has_undergone_bronchoscopy_inthepast14days",
+  "patient_has_undergone_procedure_inthepast30days",
+  "patient_has_undergone_surgical_procedure_inthepast30days",
+  "patient_has_finding_of_physical_activity_target_strenuous_exercise_inthepast24hours",
+  "patient_has_finding_of_diabetic_poor_control_now",
+  "patient_has_finding_of_heart_failure_now",
+  "patient_has_finding_of_morbid_obesity_now",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_systemic_disease_now"
+]

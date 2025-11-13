@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_c_reactive_protein_value_recorded_now_withunit_milligrams_per_liter",
+  "patient_has_finding_of_left_shifted_white_blood_cells_now",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_purulent_sputum_now",
+  "patient_has_finding_of_respiratory_crackles_now",
+  "patient_has_suspicion_of_lower_respiratory_tract_infection_now"
+]

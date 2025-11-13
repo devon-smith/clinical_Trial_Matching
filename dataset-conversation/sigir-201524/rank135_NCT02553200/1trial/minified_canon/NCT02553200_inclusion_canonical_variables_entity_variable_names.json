@@ -1,0 +1,21 @@
+[
+  "patient_bronchial_fluid_value_recorded_now_withunit_milliliters_per_hour",
+  "patient_is_undergoing_intubation_now",
+  "patient_has_diagnosis_of_bronchiectasis_now",
+  "patient_has_diagnosis_of_chronic_bronchitis_now",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now",
+  "patient_has_finding_of_coarse_respiratory_crackles_now",
+  "patient_has_finding_of_decreased_breath_sounds_now",
+  "patient_has_finding_of_excessive_bronchial_secretion_now",
+  "patient_has_diagnosis_of_infectious_disease_of_lung_now",
+  "patient_has_diagnosis_of_inflammatory_disorder_of_the_respiratory_tract_now",
+  "patient_has_diagnosis_of_pneumonia_now",
+  "patient_positive_end_expiratory_pressure_value_recorded_now_withunit_centimeters_of_water",
+  "patient_has_finding_of_wheezing_now",
+  "patients_fluid_balance_is_positive_inthepast2days",
+  "patients_hydration_status_is_normal_now",
+  "patient_has_finding_of_hypoxemia_now",
+  "patient_inspired_oxygen_concentration_value_recorded_now_withunit_fraction",
+  "patient_can_undergo_trial_for_spontaneous_breathing_now",
+  "patient_has_finding_of_consciousness_related_finding_now"
+]

@@ -1,0 +1,8 @@
+[
+  "patient_is_undergoing_antihypertensive_therapy_now",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_has_diagnosis_of_essential_hypertension_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_has_finding_of_cerebrovascular_accident_now",
+  "patient_has_finding_of_silent_cerebral_infarct_now"
+]

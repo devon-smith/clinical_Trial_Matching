@@ -1,0 +1,10 @@
+[
+  "patient_has_diagnosis_of_alcohol_dependence_inthehistory",
+  "patient_has_diagnosis_of_cocaine_dependence_inthehistory",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_has_diagnosis_of_psychotic_disorder_now",
+  "patient_is_exposed_to_diamorphine_inthepast1years",
+  "patient_is_exposed_to_dopamine_receptor_agonist_now",
+  "patient_has_diagnosis_of_psychoactive_substance_dependence_inthehistory"
+]

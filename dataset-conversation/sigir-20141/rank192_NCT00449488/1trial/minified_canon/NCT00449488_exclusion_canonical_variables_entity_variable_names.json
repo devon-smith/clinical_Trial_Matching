@@ -1,0 +1,19 @@
+[
+  "patient_hemoglobin_finding_value_recorded_now_withunit_mmol_per_l",
+  "patient_will_undergo_procedure_inthefuture4months",
+  "patient_has_finding_of_cardiogenic_shock_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patients_breastfeeding_is_positive_now",
+  "patient_has_finding_of_malignant_hypertension_now",
+  "patient_creatinine_level_finding_value_recorded_now_withunit_micromoles_per_liter",
+  "patient_has_diagnosis_of_end_stage_renal_disease_now",
+  "patient_is_exposed_to_erythropoietin_inthehistory",
+  "patient_has_undergone_transfusion_of_blood_product_inthepast12weeks",
+  "patient_has_diagnosis_of_acute_myocardial_infarction_inthehistory",
+  "patient_has_diagnosis_of_inflammatory_disorder_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_has_undergone_surgical_procedure_inthepast30days",
+  "patient_has_finding_of_traumatic_injury_inthepast30days",
+  "patient_has_finding_of_atrial_fibrillation_now"
+]

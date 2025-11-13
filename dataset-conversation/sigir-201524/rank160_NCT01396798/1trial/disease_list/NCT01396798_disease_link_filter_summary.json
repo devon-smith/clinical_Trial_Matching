@@ -1,0 +1,130 @@
+{
+  "generated": "2025-10-20T22:19:19",
+  "trial_id": "NCT01396798",
+  "contextual": {
+    "_id": "NCT01396798",
+    "title": "Validation of Vital Signs and Symptoms for the Diagnosis of Serious Infections in Children in the Paediatric A&E.",
+    "text": "Summary: Validation of Vital Signs and Symptoms for the Diagnosis of Serious Infections in Acutely Ill Children in a High Prevalent Setting: The Paediatric Accidents & Emergencies through prospective observational data collection concerning specific items from the clinical and technical examination in diagnosing serious infections, such as meningitis, sepsis, pneumonia, pyelonephritis, bronchiolitis with hypoxia. Eventually we will attempt to validate a vital signs and symptoms rule derived from multiple low to high prevalent settings of acutely ill children.\nInclusion criteria: inclusion criteria: \n\n Children aged 1 month to 16 years \n\n Acute illness episode of maximum 5 days \n\n \nExclusion criteria: : \n\n recent trauma \n\n neurological conditions \n\n intoxication \n\n psychiatric of behavioural disorders without a somatic cause \n\n acute exacerbation of a chronic condition (asthma, known immunodeficiency, diabetes, cystic fibrosis, etc)",
+    "metadata": {
+      "brief_title": "Validation of Vital Signs and Symptoms for the Diagnosis of Serious Infections in Children in the Paediatric A&E.",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Community-Acquired Infections', 'Respiratory Tract Infections', 'Sepsis', 'Urinary Tract Infections', 'Meningitis', 'Gastroenteritis']",
+      "diseases_list": [
+        "Community-Acquired Infections",
+        "Respiratory Tract Infections",
+        "Sepsis",
+        "Urinary Tract Infections",
+        "Meningitis",
+        "Gastroenteritis"
+      ],
+      "enrollment": "1500.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Children aged 1 month to 16 years \n\n Acute illness episode of maximum 5 days \n\n ",
+      "exclusion_criteria": ": \n\n recent trauma \n\n neurological conditions \n\n intoxication \n\n psychiatric of behavioural disorders without a somatic cause \n\n acute exacerbation of a chronic condition (asthma, known immunodeficiency, diabetes, cystic fibrosis, etc)",
+      "brief_summary": "Validation of Vital Signs and Symptoms for the Diagnosis of Serious Infections in Acutely Ill Children in a High Prevalent Setting: The Paediatric Accidents & Emergencies through prospective observational data collection concerning specific items from the clinical and technical examination in diagnosing serious infections, such as meningitis, sepsis, pneumonia, pyelonephritis, bronchiolitis with hypoxia. Eventually we will attempt to validate a vital signs and symptoms rule derived from multiple low to high prevalent settings of acutely ill children."
+    }
+  },
+  "linked_result": {
+    "Community-Acquired Infections": null,
+    "Respiratory Tract Infections": {
+      "conceptId": "275498002",
+      "preferred_term": "Respiratory tract infection",
+      "fully_specified_name": "Respiratory tract infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Invasion of the host RESPIRATORY SYSTEM by microorganisms, usually leading to pathological processes or diseases.",
+      "best_match_term": "Respiratory tract infection",
+      "match_reason": "Exact"
+    },
+    "Sepsis": {
+      "conceptId": "91302008",
+      "preferred_term": "Sepsis",
+      "fully_specified_name": "Sepsis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Systemic inflammatory response syndrome with a proven or suspected infectious etiology. When sepsis is associated with organ dysfunction distant from the site of infection, it is called severe sepsis. When sepsis is accompanied by HYPOTENSION despite adequate fluid infusion, it is called SEPTIC SHOCK.",
+      "best_match_term": "Sepsis",
+      "match_reason": "Exact"
+    },
+    "Urinary Tract Infections": {
+      "conceptId": "68566005",
+      "preferred_term": "Urinary tract infectious disease",
+      "fully_specified_name": "Urinary tract infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.",
+      "best_match_term": "Urinary tract infection",
+      "match_reason": "Exact"
+    },
+    "Meningitis": {
+      "conceptId": "7180009",
+      "preferred_term": "Meningitis",
+      "fully_specified_name": "Meningitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the coverings of the brain and/or spinal cord, which consist of the PIA MATER; ARACHNOID; and DURA MATER. Infections (viral, bacterial, and fungal) are the most common causes of this condition, but subarachnoid hemorrhage (HEMORRHAGES, SUBARACHNOID), chemical irritation (chemical MENINGITIS), granulomatous conditions, neoplastic conditions (CARCINOMATOUS MENINGITIS), and other inflammatory conditions may produce this syndrome. (From Joynt, Clinical Neurology, 1994, Ch24, p6)",
+      "best_match_term": "Meningitis",
+      "match_reason": "Exact"
+    },
+    "Gastroenteritis": {
+      "conceptId": "25374005",
+      "preferred_term": "Gastroenteritis",
+      "fully_specified_name": "Gastroenteritis (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM. Causes of gastroenteritis are many including genetic, infection, HYPERSENSITIVITY, drug effects, and CANCER.",
+      "best_match_term": "Gastroenteritis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Respiratory Tract Infections": 1,
+    "Sepsis": 1,
+    "Urinary Tract Infections": 1,
+    "Meningitis": 1,
+    "Gastroenteritis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Respiratory Tract Infections": {
+      "disease": "Respiratory Tract Infections",
+      "conceptId": "275498002",
+      "preferred_term": "Respiratory tract infection",
+      "fully_specified_name": "Respiratory tract infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Invasion of the host RESPIRATORY SYSTEM by microorganisms, usually leading to pathological processes or diseases.",
+      "best_match_term": "Respiratory tract infection"
+    },
+    "Sepsis": {
+      "disease": "Sepsis",
+      "conceptId": "91302008",
+      "preferred_term": "Sepsis",
+      "fully_specified_name": "Sepsis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Systemic inflammatory response syndrome with a proven or suspected infectious etiology. When sepsis is associated with organ dysfunction distant from the site of infection, it is called severe sepsis. When sepsis is accompanied by HYPOTENSION despite adequate fluid infusion, it is called SEPTIC SHOCK.",
+      "best_match_term": "Sepsis"
+    },
+    "Urinary Tract Infections": {
+      "disease": "Urinary Tract Infections",
+      "conceptId": "68566005",
+      "preferred_term": "Urinary tract infectious disease",
+      "fully_specified_name": "Urinary tract infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.",
+      "best_match_term": "Urinary tract infection"
+    },
+    "Meningitis": {
+      "disease": "Meningitis",
+      "conceptId": "7180009",
+      "preferred_term": "Meningitis",
+      "fully_specified_name": "Meningitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the coverings of the brain and/or spinal cord, which consist of the PIA MATER; ARACHNOID; and DURA MATER. Infections (viral, bacterial, and fungal) are the most common causes of this condition, but subarachnoid hemorrhage (HEMORRHAGES, SUBARACHNOID), chemical irritation (chemical MENINGITIS), granulomatous conditions, neoplastic conditions (CARCINOMATOUS MENINGITIS), and other inflammatory conditions may produce this syndrome. (From Joynt, Clinical Neurology, 1994, Ch24, p6)",
+      "best_match_term": "Meningitis"
+    },
+    "Gastroenteritis": {
+      "disease": "Gastroenteritis",
+      "conceptId": "25374005",
+      "preferred_term": "Gastroenteritis",
+      "fully_specified_name": "Gastroenteritis (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM. Causes of gastroenteritis are many including genetic, infection, HYPERSENSITIVITY, drug effects, and CANCER.",
+      "best_match_term": "Gastroenteritis"
+    }
+  }
+}

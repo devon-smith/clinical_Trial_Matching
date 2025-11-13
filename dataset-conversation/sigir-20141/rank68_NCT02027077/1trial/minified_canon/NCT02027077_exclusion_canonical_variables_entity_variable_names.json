@@ -1,0 +1,11 @@
+[
+  "patient_has_undergone_angioplasty_of_blood_vessel_inthepast6months",
+  "patient_has_diagnosis_of_cerebrovascular_accident_inthehistory",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_has_diagnosis_of_ischemia_inthehistory",
+  "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+  "patient_has_diagnosis_of_peripheral_arterial_occlusive_disease_inthehistory",
+  "patient_has_diagnosis_of_preinfarction_syndrome_inthehistory",
+  "patient_body_weight_value_recorded_inthepast6months_withunit_kg",
+  "patient_has_finding_of_tobacco_smoking_behavior_finding_now"
+]

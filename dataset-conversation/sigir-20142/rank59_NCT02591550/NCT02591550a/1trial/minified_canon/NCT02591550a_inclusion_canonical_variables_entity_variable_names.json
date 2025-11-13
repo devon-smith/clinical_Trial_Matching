@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_chronic_cough_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_dry_cough_now",
+  "patient_has_finding_of_allergy_to_dust_now",
+  "patient_has_hypersensitivity_to_fume_now",
+  "patient_has_finding_of_intolerant_of_cold_now",
+  "patient_has_undergone_plain_chest_x_ray_now_outcome_is_normal",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_tobacco_smoking_behavior_finding_inthehistory"
+]

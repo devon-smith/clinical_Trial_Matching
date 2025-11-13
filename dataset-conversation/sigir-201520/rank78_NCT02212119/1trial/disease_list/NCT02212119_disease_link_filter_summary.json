@@ -1,0 +1,61 @@
+{
+  "generated": "2025-10-20T23:40:04",
+  "trial_id": "NCT02212119",
+  "contextual": {
+    "_id": "NCT02212119",
+    "title": "Safety and Effectiveness of Botulinum Toxin in Elderly Patients With Dementia and Muscle Stiffness",
+    "text": "Summary: Aim of the study is to perform a pilot study to assess the impact of Botulinum toxin on muscle tone, and caregiver burden in individuals who are cognitively impaired and who are fully dependent.~The primary objective is to confirm proof of principle that paratonic rigidity and the consequences associated with it can be reduced with injection of Botulinum toxin injections resulting in reduced care-giver burden.~The secondary objectives are to determine optimal time points for evaluation of efficacy in this patient population and whether the time period is sufficient for washout of Botulinum toxin effect; determine most salient and sensitive outcome measures; identify obstacles in data gathering; and lastly, to determine feasibility of battery of assessments in this pilot study.\nInclusion criteria: inclusion criteria: \n\n Severe cognitive impairment (complete dependency in all activities of daily living (ADLs) \n\n Diagnosis of Alzheimer's disease, vascular dementia,or frontotemporal dementia \n\n Score> 3 on the paratonic assessment instrument, with paratonic rigidity in an arm(s) interfering in the provision of care \n\n \nExclusion criteria: : \n\n Alternate etiologies for increased tone \n\n Botulinum toxin 6 months preceding the study",
+    "metadata": {
+      "brief_title": "Safety and Effectiveness of Botulinum Toxin in Elderly Patients With Dementia and Muscle Stiffness",
+      "phase": "Phase 2",
+      "drugs": "['Botulinum Toxin', 'Saline']",
+      "drugs_list": [
+        "Botulinum Toxin",
+        "Saline"
+      ],
+      "diseases": "['Dementia', 'Paratonia']",
+      "diseases_list": [
+        "Dementia",
+        "Paratonia"
+      ],
+      "enrollment": "10.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Severe cognitive impairment (complete dependency in all activities of daily living (ADLs) \n\n Diagnosis of Alzheimer's disease, vascular dementia,or frontotemporal dementia \n\n Score> 3 on the paratonic assessment instrument, with paratonic rigidity in an arm(s) interfering in the provision of care \n\n ",
+      "exclusion_criteria": ": \n\n Alternate etiologies for increased tone \n\n Botulinum toxin 6 months preceding the study",
+      "brief_summary": "Aim of the study is to perform a pilot study to assess the impact of Botulinum toxin on muscle tone, and caregiver burden in individuals who are cognitively impaired and who are fully dependent.~The primary objective is to confirm proof of principle that paratonic rigidity and the consequences associated with it can be reduced with injection of Botulinum toxin injections resulting in reduced care-giver burden.~The secondary objectives are to determine optimal time points for evaluation of efficacy in this patient population and whether the time period is sufficient for washout of Botulinum toxin effect; determine most salient and sensitive outcome measures; identify obstacles in data gathering; and lastly, to determine feasibility of battery of assessments in this pilot study."
+    }
+  },
+  "linked_result": {
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    },
+    "Paratonia": {
+      "conceptId": "24033006",
+      "preferred_term": "Diffuse rigidity",
+      "fully_specified_name": "Diffuse rigidity (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Paratonia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    }
+  }
+}

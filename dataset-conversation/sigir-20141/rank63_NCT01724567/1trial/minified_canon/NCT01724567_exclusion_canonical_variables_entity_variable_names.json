@@ -1,0 +1,22 @@
+[
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_hemoglobin_a1c_measurement_value_recorded_inthehistory_withunit_percent",
+  "patient_plasma_fasting_glucose_measurement_value_recorded_inthehistory_withunit_millimoles_per_liter",
+  "patient_cardiac_ejection_fraction_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_heart_failure_now",
+  "patient_has_finding_of_disability_now",
+  "patient_has_diagnosis_of_asthma_now",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_percent",
+  "patient_has_diagnosis_of_severe_chronic_obstructive_pulmonary_disease_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_disease_of_liver_now",
+  "patient_glomerular_filtration_rate_value_recorded_now_withunit_milliliters_per_hour",
+  "patient_has_finding_of_kidney_disease_now",
+  "patient_has_finding_of_cardiac_arrhythmia_inthehistory",
+  "patient_has_undergone_exercise_tolerance_test_inthehistory",
+  "patient_has_diagnosis_of_complete_atrioventricular_block_now",
+  "patient_has_diagnosis_of_second_degree_atrioventricular_block_now",
+  "patient_has_finding_of_weight_decreased_inthepast3months",
+  "patient_has_finding_of_weight_increased_inthepast3months",
+  "patient_is_undergoing_hormone_therapy_now"
+]

@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patients_body_mass_index_is_positive_inthehistory",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+  "patient_has_diagnosis_of_obesity_inthehistory",
+  "patient_has_undergone_laboratory_test_now",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_has_finding_of_contraception_now"
+]

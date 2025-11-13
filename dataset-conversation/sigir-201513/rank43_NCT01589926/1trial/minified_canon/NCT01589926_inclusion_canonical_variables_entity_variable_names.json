@@ -1,0 +1,17 @@
+[
+  "patient_has_diagnosis_of_sickle_cell_hemoglobin_ss_disease_now",
+  "patient_has_diagnosis_of_sickling_disorder_due_to_hemoglobin_s_now",
+  "patient_has_diagnosis_of_sickle_cell_beta_0_thalassemia_now",
+  "patient_has_diagnosis_of_sickle_cell_thalassemia_disease_now",
+  "patient_has_diagnosis_of_acute_chest_syndrome_now",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_fever_now",
+  "patient_hemoglobin_saturation_with_oxygen_value_recorded_now_withunit_percent",
+  "patient_pulse_oximetry_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_radiologic_infiltrate_of_lung_now",
+  "patient_has_finding_of_tachypnea_now",
+  "patient_hemoglobin_value_recorded_now_withunit_grams_per_deciliter",
+  "patient_has_finding_of_hypoxemia_now",
+  "patient_can_undergo_transfusion_now"
+]

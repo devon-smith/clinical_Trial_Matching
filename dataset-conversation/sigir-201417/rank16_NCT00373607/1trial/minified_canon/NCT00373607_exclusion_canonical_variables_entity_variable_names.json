@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_mixed_malaria_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_has_finding_of_malaria_now",
+  "patient_has_finding_of_disease_now",
+  "patient_has_diagnosis_of_disease_inthehistory",
+  "patient_has_finding_of_allergy_to_mefloquine_inthehistory",
+  "patient_has_hypersensitivity_to_artemisinin_inthehistory",
+  "patient_has_undergone_splenectomy_inthehistory"
+]

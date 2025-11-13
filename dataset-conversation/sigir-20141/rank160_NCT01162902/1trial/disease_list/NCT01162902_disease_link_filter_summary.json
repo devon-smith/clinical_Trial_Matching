@@ -1,0 +1,52 @@
+{
+  "generated": "2025-10-20T23:29:35",
+  "trial_id": "NCT01162902",
+  "contextual": {
+    "_id": "NCT01162902",
+    "title": "Comparison of Vascular Remodeling Between Different Antianginal Medication Evaluated by Noninvasive ECG-gated Fundus Photographic Evaluation",
+    "text": "Summary: Treatments for stable angina includes drug therapy such as calcium-channel blocker, beta blocker, and ACEI/ARB. To obtain good prognosis in patients with coronary artery disease,preventing or correcting the progression of atherosclerosis and dyslipidemia is more important than relieving angina symptom. Dysfunction of microvessel is one of the most important factor in patients with coronary artery disease. Recently, we developed the new non-invasive method of evaluating the microvessel in fundus. With this methods, we will compare the effect of each drug (beta blocker, CCB, ARB).\nInclusion criteria: inclusion criteria: \n\n Stable angina patients whose coronary lesions is confirmed by angiography or receives PCI \n\n Unstable Angina/NSTEMI patients who completed PCI for main lesions \n\n Either systolic > 130mmHg or diastolic > 80mmHg, or patients with anti-hypertensive drugs \n\n \nExclusion criteria: : \n\n STEMI patients within one month \n\n Variant Angina \n\n Liver function abnormality or renal failure \n\n History of Hypersensitivity to testing drugs \n\n Severe heart failure(NYHA class>3) or uncorrectable hematologic disease \n\n Woman possible to be pregnant \n\n Uncontrolled diabetes \n\n Expected life span < one year",
+    "metadata": {
+      "brief_title": "Comparison of Vascular Remodeling Between Different Antianginal Medication Evaluated by Noninvasive ECG-gated Fundus Photographic Evaluation",
+      "phase": "Phase 4",
+      "drugs": "['Diltiazem treated group', 'Bisoprolol treated group', 'Candesartan treated group']",
+      "drugs_list": [
+        "Diltiazem treated group",
+        "Bisoprolol treated group",
+        "Candesartan treated group"
+      ],
+      "diseases": "['Stable Angina']",
+      "diseases_list": [
+        "Stable Angina"
+      ],
+      "enrollment": "150.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Stable angina patients whose coronary lesions is confirmed by angiography or receives PCI \n\n Unstable Angina/NSTEMI patients who completed PCI for main lesions \n\n Either systolic > 130mmHg or diastolic > 80mmHg, or patients with anti-hypertensive drugs \n\n ",
+      "exclusion_criteria": ": \n\n STEMI patients within one month \n\n Variant Angina \n\n Liver function abnormality or renal failure \n\n History of Hypersensitivity to testing drugs \n\n Severe heart failure(NYHA class>3) or uncorrectable hematologic disease \n\n Woman possible to be pregnant \n\n Uncontrolled diabetes \n\n Expected life span < one year",
+      "brief_summary": "Treatments for stable angina includes drug therapy such as calcium-channel blocker, beta blocker, and ACEI/ARB. To obtain good prognosis in patients with coronary artery disease,preventing or correcting the progression of atherosclerosis and dyslipidemia is more important than relieving angina symptom. Dysfunction of microvessel is one of the most important factor in patients with coronary artery disease. Recently, we developed the new non-invasive method of evaluating the microvessel in fundus. With this methods, we will compare the effect of each drug (beta blocker, CCB, ARB)."
+    }
+  },
+  "linked_result": {
+    "Stable Angina": {
+      "conceptId": "233819005",
+      "preferred_term": "Stable angina",
+      "fully_specified_name": "Stable angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistent and reproducible chest discomfort usually precipitated by a physical exertion that dissipates upon cessation of such an activity. The symptoms are manifestations of MYOCARDIAL ISCHEMIA.",
+      "best_match_term": "Stable angina",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Stable Angina": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Stable Angina": {
+      "disease": "Stable Angina",
+      "conceptId": "233819005",
+      "preferred_term": "Stable angina",
+      "fully_specified_name": "Stable angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistent and reproducible chest discomfort usually precipitated by a physical exertion that dissipates upon cessation of such an activity. The symptoms are manifestations of MYOCARDIAL ISCHEMIA.",
+      "best_match_term": "Stable angina"
+    }
+  }
+}

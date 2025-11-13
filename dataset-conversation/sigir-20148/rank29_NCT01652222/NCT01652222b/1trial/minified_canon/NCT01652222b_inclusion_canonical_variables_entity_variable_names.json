@@ -1,0 +1,9 @@
+[
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_global_deterioration_scale_level_value_recorded_now_withunit_none",
+  "patient_mini_mental_state_examination_score_value_recorded_now_withunit_none",
+  "patients_language_comprehension_is_positive_now",
+  "patients_ability_to_move_arm_is_normal_now",
+  "patients_hearing_is_normal_now",
+  "patients_visual_function_is_normal_now"
+]

@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:45:19",
+  "trial_id": "NCT01662258",
+  "contextual": {
+    "_id": "NCT01662258",
+    "title": "Microbiology Testing With the Aim Of Directed Antimicrobial Therapy For CAP",
+    "text": "Summary: This is a prospective interventional study to assess laboratory testing which will identify the microbial cause of pneumonia. This, in turn, will allow targeted antimicrobial agent selection for patients with community acquired-pneumonia (CAP).~Hypothesis: 1) To determine if Targeted strategy is non-inferior to Empiric therapy with respect to outcome endpoints. 2) To assess the use of innovative POC tests allows targeted narrow-spectrum antimicrobial therapy. 3) To determine if Targeted strategy is superior to Empiric therapy in patients with viral pneumonia\nInclusion criteria: inclusion criteria: \n\n ● Adult patients greater than age 17 years who are initially evaluated in the ED with symptoms of CAP. This includes those who will be treated as outpatients and those admitted to the hospital (both ward and ICU). \n\n The definition of CAP is as follows: \n\n Presence of pulmonary infiltrates on chest radiography. (Initial reading may be performed by the ED physician - but has to be confirmed by board certified radiologist for inclusion in the study). \n\n At least 2 of the following: new onset of cough, productive sputum, shortness of breath, chest pain, fever > 380C, abnormal chest auscultation, WBC > 12,000 cells/mL. \n\n Able to provide informed consent \n\n Read, signed, and dated informed consent document \n\n Available for follow-up for the planned duration of the study \n\n \nExclusion criteria: : \n\n Patients with underlying immunosuppressive illness (HIV, neutropenia, asplenia, transplant recipient, cystic fibrosis, receipt of immunosuppressive medications including corticosteroids, (equivalent of prednisone > 10 mg) cancer chemotherapy, or anti-tumor necrosis factor agents. \n\n Patients residing in long-term care facilities",
+    "metadata": {
+      "brief_title": "Microbiology Testing With the Aim Of Directed Antimicrobial Therapy For CAP",
+      "phase": "",
+      "drugs": "['Point-of-Care diagnostic laboratory test']",
+      "drugs_list": [
+        "Point-of-Care diagnostic laboratory test"
+      ],
+      "diseases": "['Community-acquired Pneumonia']",
+      "diseases_list": [
+        "Community-acquired Pneumonia"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n ● Adult patients greater than age 17 years who are initially evaluated in the ED with symptoms of CAP. This includes those who will be treated as outpatients and those admitted to the hospital (both ward and ICU). \n\n The definition of CAP is as follows: \n\n Presence of pulmonary infiltrates on chest radiography. (Initial reading may be performed by the ED physician - but has to be confirmed by board certified radiologist for inclusion in the study). \n\n At least 2 of the following: new onset of cough, productive sputum, shortness of breath, chest pain, fever > 380C, abnormal chest auscultation, WBC > 12,000 cells/mL. \n\n Able to provide informed consent \n\n Read, signed, and dated informed consent document \n\n Available for follow-up for the planned duration of the study \n\n ",
+      "exclusion_criteria": ": \n\n Patients with underlying immunosuppressive illness (HIV, neutropenia, asplenia, transplant recipient, cystic fibrosis, receipt of immunosuppressive medications including corticosteroids, (equivalent of prednisone > 10 mg) cancer chemotherapy, or anti-tumor necrosis factor agents. \n\n Patients residing in long-term care facilities",
+      "brief_summary": "This is a prospective interventional study to assess laboratory testing which will identify the microbial cause of pneumonia. This, in turn, will allow targeted antimicrobial agent selection for patients with community acquired-pneumonia (CAP).~Hypothesis: 1) To determine if Targeted strategy is non-inferior to Empiric therapy with respect to outcome endpoints. 2) To assess the use of innovative POC tests allows targeted narrow-spectrum antimicrobial therapy. 3) To determine if Targeted strategy is superior to Empiric therapy in patients with viral pneumonia"
+    }
+  },
+  "linked_result": {
+    "Community-acquired Pneumonia": {
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Community-acquired Pneumonia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Community-acquired Pneumonia": {
+      "disease": "Community-acquired Pneumonia",
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia"
+    }
+  }
+}

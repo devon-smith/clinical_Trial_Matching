@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT02507050",
+  "contextual": {
+    "_id": "NCT02507050",
+    "title": "Ivabradine and Post-revascularisation Microcirculatory Dysfunction",
+    "text": "Summary: The aim of the study is to test whether, in patients with angina and flow limiting epicardial coronary artery disease, pre-treatment with Ivabradine, as opposed to beta blockers, will reduce post percutaneous coronary intervention induced microvascular dysfunction.\nInclusion criteria: inclusion criteria: \n\n Symptoms of Angina Pectoris \n\n Angiographic evidence of epicardial coronary artery stenosis referred for PCI \n\n Flow limiting lesion (Fractional Flow Reserve ≤0.80) in one of following locations (as defined in SYNTAX trial89): \n\n Proximal or mid left anterior descending artery (LAD) \n\n Proximal or mid dominant right coronary artery (RCA) \n\n Proximal left circumflex artery (LCx) or 1ST Obtuse marginal Vessel \n\n Existing beta blocker prescription \n\n Echocardiogram performed within preceding 12 months \n\n Patient consent \n\n \nExclusion criteria: : \n\n Previous myocardial infarction (MI) in target vessel myocardial territory or any MI in preceding 12 months (defined by patient history, ECG changes and evidence of regional wall motion abnormalities on echocardiography) \n\n FFR>0.80 in target vessel at time of procedure \n\n Requirement for Multi-vessel intervention in a single procedure \n\n Any chronic total occlusion (100% epicardial occlusion) on angiography \n\n Distal coronary artery stenosis or that affecting non-dominant RCA \n\n Heart Rate <60 bpm at inclusion (assessed by 12 lead ECG after minimum 10 minutes rest period) \n\n Any rhythm other than sinus rhythm \n\n Sick sinus syndrome or high grade atrio-ventricular block \n\n Permanent Pacemaker in situ \n\n Congenital QT Syndrome \n\n Intolerance or allergy to beta-blockers \n\n Intolerance to Ivabradine \n\n Additional (other than angina pectoris) indication for beta-blocker treatment e.g. ventricular tachycardia \n\n Concurrent required use of rate-limiting drugs other than beta-blockers \n\n The necessity of combination therapy with Ivabradine and bisoprolol to achieve heart rate control \n\n Contraindication to Magnetic Resonance Imaging or IV adenosine \n\n Severe impairment of renal function (eGFR<30ml/min) \n\n Severe Liver Disease (Any worse than Grade A by Child-Pugh Classification)",
+    "metadata": {
+      "brief_title": "Ivabradine and Post-revascularisation Microcirculatory Dysfunction",
+      "phase": "Phase 4",
+      "drugs": "['Ivabradine']",
+      "drugs_list": [
+        "Ivabradine"
+      ],
+      "diseases": "['Coronary Artery Disease', 'Angina']",
+      "diseases_list": [
+        "Coronary Artery Disease",
+        "Angina"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Symptoms of Angina Pectoris \n\n Angiographic evidence of epicardial coronary artery stenosis referred for PCI \n\n Flow limiting lesion (Fractional Flow Reserve ≤0.80) in one of following locations (as defined in SYNTAX trial89): \n\n Proximal or mid left anterior descending artery (LAD) \n\n Proximal or mid dominant right coronary artery (RCA) \n\n Proximal left circumflex artery (LCx) or 1ST Obtuse marginal Vessel \n\n Existing beta blocker prescription \n\n Echocardiogram performed within preceding 12 months \n\n Patient consent \n\n ",
+      "exclusion_criteria": ": \n\n Previous myocardial infarction (MI) in target vessel myocardial territory or any MI in preceding 12 months (defined by patient history, ECG changes and evidence of regional wall motion abnormalities on echocardiography) \n\n FFR>0.80 in target vessel at time of procedure \n\n Requirement for Multi-vessel intervention in a single procedure \n\n Any chronic total occlusion (100% epicardial occlusion) on angiography \n\n Distal coronary artery stenosis or that affecting non-dominant RCA \n\n Heart Rate <60 bpm at inclusion (assessed by 12 lead ECG after minimum 10 minutes rest period) \n\n Any rhythm other than sinus rhythm \n\n Sick sinus syndrome or high grade atrio-ventricular block \n\n Permanent Pacemaker in situ \n\n Congenital QT Syndrome \n\n Intolerance or allergy to beta-blockers \n\n Intolerance to Ivabradine \n\n Additional (other than angina pectoris) indication for beta-blocker treatment e.g. ventricular tachycardia \n\n Concurrent required use of rate-limiting drugs other than beta-blockers \n\n The necessity of combination therapy with Ivabradine and bisoprolol to achieve heart rate control \n\n Contraindication to Magnetic Resonance Imaging or IV adenosine \n\n Severe impairment of renal function (eGFR<30ml/min) \n\n Severe Liver Disease (Any worse than Grade A by Child-Pugh Classification)",
+      "brief_summary": "The aim of the study is to test whether, in patients with angina and flow limiting epicardial coronary artery disease, pre-treatment with Ivabradine, as opposed to beta blockers, will reduce post percutaneous coronary intervention induced microvascular dysfunction."
+    }
+  }
+}

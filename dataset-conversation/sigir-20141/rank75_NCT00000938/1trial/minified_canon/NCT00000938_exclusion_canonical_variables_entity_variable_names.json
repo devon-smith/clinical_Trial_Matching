@@ -1,0 +1,14 @@
+[
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_has_taken_drug_or_medicament_inthehistory",
+  "patient_has_finding_of_allergy_to_ceftriaxone_now",
+  "patient_has_finding_of_allergy_to_doxycycline_now",
+  "patient_has_finding_of_synovitis_now",
+  "patient_has_diagnosis_of_acute_lyme_disease_now",
+  "patient_has_diagnosis_of_disorder_due_to_infection_now",
+  "patient_can_undergo_medication_administration_intravenous_now",
+  "patients_borrelia_dna_is_positive_now",
+  "patient_has_finding_of_serology_positive_now"
+]

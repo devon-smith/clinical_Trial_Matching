@@ -1,0 +1,48 @@
+{
+  "generated": "2025-10-20T22:43:09",
+  "trial_id": "NCT01085864",
+  "contextual": {
+    "_id": "NCT01085864",
+    "title": "Biomarkers for Diagnosis of Lung Nodules",
+    "text": "Summary: A need exists for non-invasive testing to aid in clinical decision-making for Computerized Tomography (CT) scan detected lung nodules of indeterminate etiology. The investigators hypothesize that biomarkers detectable in blood, sputum or urine may be useful for guiding clinical decisions in the setting of CT detected lung nodules to determine which nodules are malignant and which are benign. The investigators also hypothesize that these biomarkers will decrease in concentration to the normal range after successful surgical treatment of malignant lung nodules.\nInclusion criteria: inclusion criteria: \n\n Adult 18-85 years of age \n\n Patients referred to pulmonologists, oncologists, or thoracic surgeons for the evaluation of peripheral lung nodules found on CT scan. \n\n Repeat CT scans, biopsy or surgical excision are clinically indicated to determine the etiology of the nodule. \n\n One or more lung nodules must be between 8 mm and 30 mm in the greatest diameter. \n\n Patients must be fully informed of the investigational nature of the procedure and sign an informed consent. \n\n - \n\n \nExclusion criteria: : \n\n Lung nodules or masses greater than 30 mm in the greatest dimension. \n\n Lung nodules that have solid calcification. \n\n Lung nodules or masses with CT evidence of partial or complete obstruction of a lobar bronchus, main stem bronchus or the trachea. \n\n No prior cancer with the exception of non-melanoma skin cancer. \n\n Life expectancy of < 6 months \n\n Any individual who does not give oral and written consent for participation -",
+    "metadata": {
+      "brief_title": "Biomarkers for Diagnosis of Lung Nodules",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Lung Abscess']",
+      "diseases_list": [
+        "Lung Abscess"
+      ],
+      "enrollment": "468.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Adult 18-85 years of age \n\n Patients referred to pulmonologists, oncologists, or thoracic surgeons for the evaluation of peripheral lung nodules found on CT scan. \n\n Repeat CT scans, biopsy or surgical excision are clinically indicated to determine the etiology of the nodule. \n\n One or more lung nodules must be between 8 mm and 30 mm in the greatest diameter. \n\n Patients must be fully informed of the investigational nature of the procedure and sign an informed consent. \n\n - \n\n ",
+      "exclusion_criteria": ": \n\n Lung nodules or masses greater than 30 mm in the greatest dimension. \n\n Lung nodules that have solid calcification. \n\n Lung nodules or masses with CT evidence of partial or complete obstruction of a lobar bronchus, main stem bronchus or the trachea. \n\n No prior cancer with the exception of non-melanoma skin cancer. \n\n Life expectancy of < 6 months \n\n Any individual who does not give oral and written consent for participation -",
+      "brief_summary": "A need exists for non-invasive testing to aid in clinical decision-making for Computerized Tomography (CT) scan detected lung nodules of indeterminate etiology. The investigators hypothesize that biomarkers detectable in blood, sputum or urine may be useful for guiding clinical decisions in the setting of CT detected lung nodules to determine which nodules are malignant and which are benign. The investigators also hypothesize that these biomarkers will decrease in concentration to the normal range after successful surgical treatment of malignant lung nodules."
+    }
+  },
+  "linked_result": {
+    "Lung Abscess": {
+      "conceptId": "73452002",
+      "preferred_term": "Abscess of lung",
+      "fully_specified_name": "Abscess of lung (disorder)",
+      "type": "Clinical finding",
+      "definition": "Solitary or multiple collections of PUS within the lung parenchyma as a result of infection by bacteria, protozoa, or other agents.",
+      "best_match_term": "Abscess of lung",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Lung Abscess": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Lung Abscess": {
+      "disease": "Lung Abscess",
+      "conceptId": "73452002",
+      "preferred_term": "Abscess of lung",
+      "fully_specified_name": "Abscess of lung (disorder)",
+      "type": "Clinical finding",
+      "definition": "Solitary or multiple collections of PUS within the lung parenchyma as a result of infection by bacteria, protozoa, or other agents.",
+      "best_match_term": "Abscess of lung"
+    }
+  }
+}

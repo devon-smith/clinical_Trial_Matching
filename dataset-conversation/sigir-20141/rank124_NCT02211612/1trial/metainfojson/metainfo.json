@@ -1,0 +1,29 @@
+{
+  "trial_id": "NCT02211612",
+  "contextual": {
+    "_id": "NCT02211612",
+    "title": "Overeating Different Fats and Influence on Muscle Mass and Body Fat Accumulation",
+    "text": "Summary: To investigate metabolic and molecular response to fatty acid-specific overfeeding in overweight subjects, in relation to changes in ectopic fat, lean tissue mass and insulin sensitivity\nInclusion criteria: inclusion criteria: \n\n Body mass index 25-32 \n\n \nExclusion criteria: : \n\n Type 2 diabetes \n\n Type 1 diabetes \n\n Kidney disease \n\n Liver disease \n\n Abnormal clinical chemistry at screening \n\n Intense physical exercise > 2 hours per week \n\n Use of statins or drugs affecting energy metabolism \n\n Use of extreme diets",
+    "metadata": {
+      "brief_title": "Overeating Different Fats and Influence on Muscle Mass and Body Fat Accumulation",
+      "phase": "",
+      "drugs": "['PUFA-group', 'SFA-group']",
+      "drugs_list": [
+        "PUFA-group",
+        "SFA-group"
+      ],
+      "diseases": "['Obesity', 'Overfeeding', 'Muscle Mass', 'Body Composition', 'Ectopic Fat']",
+      "diseases_list": [
+        "Obesity",
+        "Overfeeding",
+        "Muscle Mass",
+        "Body Composition",
+        "Ectopic Fat"
+      ],
+      "enrollment": "60.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Body mass index 25-32 \n\n ",
+      "exclusion_criteria": ": \n\n Type 2 diabetes \n\n Type 1 diabetes \n\n Kidney disease \n\n Liver disease \n\n Abnormal clinical chemistry at screening \n\n Intense physical exercise > 2 hours per week \n\n Use of statins or drugs affecting energy metabolism \n\n Use of extreme diets",
+      "brief_summary": "To investigate metabolic and molecular response to fatty acid-specific overfeeding in overweight subjects, in relation to changes in ectopic fat, lean tissue mass and insulin sensitivity"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "generated": "2025-10-20T22:06:52",
+  "trial_id": "NCT02150616",
+  "contextual": {
+    "_id": "NCT02150616",
+    "title": "Patients With Pulmonary Hypertension or Interstitial Lung Disease at Altitude - Effect of Oxygen on Breathing and Sleep",
+    "text": "Summary: The purpose of this study is to investigate the effect of travelling to moderate altitude and of nocturnal oxygen therapy during a stay at moderate altitude on breathing and sleep of patients with pulmonary hypertension or with interstitial lung disease.\nInclusion criteria: inclusion criteria: \n\n Precapillary pulmonary hypertension, or interstitial lung disease. \n\n New York Heart Association class 2-3. \n\n Residence at low altitude (<800m). \n\n \nExclusion criteria: : \n\n Unstable or exacerbated condition \n\n Very severe pulmonary hypertension or interstitial lung disease, New York Heart Association class 4 \n\n requirement for oxygen therapy at low altitude residence \n\n hypoventilation \n\n more than mild or unstable cardiovascular disease \n\n use of drugs that affect respiratory center drive \n\n internal, neurologic or psychiatric disease that interfere with protocol compliance including current heavy smoking (>20 cigarettes per day), inability to perform 6 min walk test. \n\n previous intolerance to moderate altitude (<2600m). \n\n Exposure to altitudes >1500m for >2 days within the last 4 weeks before the study. \n\n Pregnant or nursing patients",
+    "metadata": {
+      "brief_title": "Patients With Pulmonary Hypertension or Interstitial Lung Disease at Altitude - Effect of Oxygen on Breathing and Sleep",
+      "phase": "Phase 4",
+      "drugs": "['Moderate altitude sojourn', 'Low altitude sojourn', 'Oxygen', 'Sham oxygen (room air)']",
+      "drugs_list": [
+        "Moderate altitude sojourn",
+        "Low altitude sojourn",
+        "Oxygen",
+        "Sham oxygen (room air)"
+      ],
+      "diseases": "['Precapillary Pulmonary Hypertension', 'Interstitial Lung Disease']",
+      "diseases_list": [
+        "Precapillary Pulmonary Hypertension",
+        "Interstitial Lung Disease"
+      ],
+      "enrollment": "50.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Precapillary pulmonary hypertension, or interstitial lung disease. \n\n New York Heart Association class 2-3. \n\n Residence at low altitude (<800m). \n\n ",
+      "exclusion_criteria": ": \n\n Unstable or exacerbated condition \n\n Very severe pulmonary hypertension or interstitial lung disease, New York Heart Association class 4 \n\n requirement for oxygen therapy at low altitude residence \n\n hypoventilation \n\n more than mild or unstable cardiovascular disease \n\n use of drugs that affect respiratory center drive \n\n internal, neurologic or psychiatric disease that interfere with protocol compliance including current heavy smoking (>20 cigarettes per day), inability to perform 6 min walk test. \n\n previous intolerance to moderate altitude (<2600m). \n\n Exposure to altitudes >1500m for >2 days within the last 4 weeks before the study. \n\n Pregnant or nursing patients",
+      "brief_summary": "The purpose of this study is to investigate the effect of travelling to moderate altitude and of nocturnal oxygen therapy during a stay at moderate altitude on breathing and sleep of patients with pulmonary hypertension or with interstitial lung disease."
+    }
+  },
+  "linked_result": {
+    "Precapillary Pulmonary Hypertension": {
+      "conceptId": "697896007",
+      "preferred_term": "Precapillary pulmonary hypertension",
+      "fully_specified_name": "Precapillary pulmonary hypertension (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pre-capillary pulmonary hypertension is a haemodynamic condition characterized by elevated mean pulmonary artery pressure (mPAP over 20 mmHg) and pulmonary vascular resistance (PVR 3 Wood units or more) accompanied by normal pulmonary artery wedge pressure (PAWP not more than 15 mmHg). [https://orcid.org/0000-0002-4095-8489, PMID:30545968]",
+      "best_match_term": "Precapillary pulmonary hypertension",
+      "match_reason": "Exact"
+    },
+    "Interstitial Lung Disease": {
+      "conceptId": "233703007",
+      "preferred_term": "Interstitial lung disease",
+      "fully_specified_name": "Interstitial lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A diverse group of lung diseases that affect the lung parenchyma. They are characterized by an initial inflammation of PULMONARY ALVEOLI that extends to the interstitium and beyond leading to diffuse PULMONARY FIBROSIS. Interstitial lung diseases are classified by their etiology (known or unknown causes), and radiological-pathological features.",
+      "best_match_term": "Interstitial lung disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Precapillary Pulmonary Hypertension": 1,
+    "Interstitial Lung Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Precapillary Pulmonary Hypertension": {
+      "disease": "Precapillary Pulmonary Hypertension",
+      "conceptId": "697896007",
+      "preferred_term": "Precapillary pulmonary hypertension",
+      "fully_specified_name": "Precapillary pulmonary hypertension (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pre-capillary pulmonary hypertension is a haemodynamic condition characterized by elevated mean pulmonary artery pressure (mPAP over 20 mmHg) and pulmonary vascular resistance (PVR 3 Wood units or more) accompanied by normal pulmonary artery wedge pressure (PAWP not more than 15 mmHg). [https://orcid.org/0000-0002-4095-8489, PMID:30545968]",
+      "best_match_term": "Precapillary pulmonary hypertension"
+    },
+    "Interstitial Lung Disease": {
+      "disease": "Interstitial Lung Disease",
+      "conceptId": "233703007",
+      "preferred_term": "Interstitial lung disease",
+      "fully_specified_name": "Interstitial lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A diverse group of lung diseases that affect the lung parenchyma. They are characterized by an initial inflammation of PULMONARY ALVEOLI that extends to the interstitium and beyond leading to diffuse PULMONARY FIBROSIS. Interstitial lung diseases are classified by their etiology (known or unknown causes), and radiological-pathological features.",
+      "best_match_term": "Interstitial lung disease"
+    }
+  }
+}

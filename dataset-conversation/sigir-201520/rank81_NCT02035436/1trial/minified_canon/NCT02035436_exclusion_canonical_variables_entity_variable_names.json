@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_coma_now",
+  "patient_has_finding_of_major_head_injury_now",
+  "patient_is_undergoing_induction_of_hypothermia_now",
+  "patient_has_undergone_induction_of_hypothermia_now",
+  "patient_has_finding_of_status_epilepticus_now",
+  "patient_ratio_of_arterial_oxygen_tension_to_inspired_oxygen_fraction_value_recorded_now_withunit_ratio",
+  "patient_is_undergoing_sedation_now"
+]

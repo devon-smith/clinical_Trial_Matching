@@ -1,0 +1,14 @@
+[
+  "patient_is_undergoing_oxygen_therapy_now",
+  "patient_has_undergone_ct_of_chest_inthepast6months",
+  "patient_has_undergone_plain_chest_x_ray_inthepast6months",
+  "patient_has_undergone_total_pneumonectomy_inthehistory",
+  "patient_has_undergone_lobectomy_of_lung_inthepast5years",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthepast5years",
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_body_weight_value_recorded_now_withunit_kg",
+  "patient_has_finding_of_common_cold_inthepast6weeks",
+  "patient_has_finding_of_hemoptysis_inthepast6weeks",
+  "patient_has_finding_of_pneumonia_inthepast6weeks",
+  "patient_has_finding_of_respiratory_tract_infection_inthepast6weeks"
+]

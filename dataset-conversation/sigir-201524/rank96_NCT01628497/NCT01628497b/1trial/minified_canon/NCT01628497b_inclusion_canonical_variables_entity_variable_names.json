@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_cough_now",
+  "patient_cough_value_recorded_now_withunit_days",
+  "patient_has_finding_of_asthma_now",
+  "patient_has_symptoms_of_dry_cough_now",
+  "patient_has_diagnosis_of_pneumonia_now",
+  "patient_has_suspicion_of_pneumonia_now",
+  "patient_has_diagnosis_of_radiologic_infiltrate_of_lung_now",
+  "patient_has_suspicion_of_radiologic_infiltrate_of_lung_now",
+  "patient_has_finding_of_patient_s_condition_stable_now"
+]

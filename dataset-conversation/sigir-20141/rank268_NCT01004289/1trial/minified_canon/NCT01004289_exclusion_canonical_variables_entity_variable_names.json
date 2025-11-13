@@ -1,0 +1,20 @@
+[
+  "patient_has_diagnosis_of_acute_myocardial_infarction_inthehistory",
+  "patient_has_undergone_angioplasty_of_blood_vessel_inthehistory",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_has_undergone_heart_valve_replacement_inthehistory",
+  "patient_has_undergone_transplantation_of_heart_inthehistory",
+  "patient_has_finding_of_patient_s_condition_unstable_now",
+  "patient_has_finding_of_cardiogenic_shock_now",
+  "patient_has_finding_of_low_blood_pressure_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_has_finding_of_coronary_artery_collaterals_now",
+  "patient_has_finding_of_atrioventricular_block_now",
+  "patient_has_finding_of_bradycardia_now",
+  "patient_has_finding_of_sinus_rhythm_now",
+  "patient_has_diagnosis_of_disorder_of_lung_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_disease_now",
+  "patient_can_undergo_cardiac_mri_now",
+  "patient_has_finding_of_claustrophobia_now"
+]

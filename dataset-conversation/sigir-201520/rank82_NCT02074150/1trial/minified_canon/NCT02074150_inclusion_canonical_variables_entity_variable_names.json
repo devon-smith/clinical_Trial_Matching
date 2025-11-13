@@ -1,0 +1,13 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_cerebrovascular_accident_inthehistory",
+  "patient_has_finding_of_spasticity_inthehistory",
+  "patient_has_finding_of_spasticity_now",
+  "patient_difficulty_dressing_value_recorded_now_withunit_score",
+  "patient_pain_level_disruptive_effects_value_recorded_now_withunit_score",
+  "patient_personal_hygiene_disability_value_recorded_now_withunit_score",
+  "patient_brushing_of_teeth_value_recorded_inthepast0days_withunit_score",
+  "patient_filing_of_a_nail_value_recorded_inthepast0days_withunit_score",
+  "patient_is_exposed_to_fruit_inthepast0days",
+  "patient_washing_hands_value_recorded_inthepast0days_withunit_score"
+]

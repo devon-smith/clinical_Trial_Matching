@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_fever_inthepast24hours",
+  "patient_has_finding_of_fever_now",
+  "patient_has_diagnosis_of_falciparum_malaria_now"
+]

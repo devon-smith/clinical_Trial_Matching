@@ -1,0 +1,10 @@
+[
+  "patient_glomerular_filtration_rate_value_recorded_now_withunit_milliliters_per_minute_per_1_73_square_meters",
+  "patient_has_finding_of_patient_s_condition_unstable_now",
+  "patient_has_allergy_to_dihydropyridine_derivative_calcium_channel_blocker_now",
+  "patient_has_finding_of_complete_atrioventricular_block_now",
+  "patient_has_finding_of_allergy_to_contrast_media_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_alcoholism_inthehistory",
+  "patient_has_finding_of_non_compliant_behavior_inthehistory"
+]

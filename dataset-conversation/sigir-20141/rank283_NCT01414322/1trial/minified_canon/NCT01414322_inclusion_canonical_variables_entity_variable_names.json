@@ -1,0 +1,7 @@
+[
+  "patient_has_finding_of_dyspnea_now",
+  "patient_is_undergoing_emergency_room_admission_now",
+  "patient_has_finding_of_asthma_now",
+  "patient_has_finding_of_bronchiolitis_now",
+  "patient_age_value_recorded_now_in_years"
+]

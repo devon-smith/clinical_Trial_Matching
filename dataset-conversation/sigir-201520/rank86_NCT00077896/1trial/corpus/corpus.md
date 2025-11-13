@@ -1,0 +1,38 @@
+# Direct Current Brain Polarization in Frontotemporal Dementia
+**NCT**: `NCT00077896`
+## Brief Summary
+This pilot study will evaluate the effect of direct current (DC) electrical polarization of the brain on language, memory, reaction time, and mood in six patients with frontotemporal dementia (Pick's disease). There is no effective treatment available for cognitive impairment in patients with this condition. DC polarization sends a very weak current between two sponge pads placed on the head. In a previous study in healthy volunteers, DC polarization of the left prefrontal area of the brain increased verbal fluency, memory and attention, and motor reaction time in the study subjects.~Patients between 35 and 75 years of age with frontotemporal dementia who have been referred to NINDS's Cognitive Neuroscience Section for an existing protocol will be offered participation in this study. Candidates will be screened with a neurological examination to confirm the diagnosis of frontotemporal dementia.~Participants receive 40 minutes of DC polarization or sham polarization in each of two separate sessions. (No current is applied in the sham treatment). During the polarization, the patient rests quietly. Sponge pads that have been soaked in water are put on the left side of the head and above the right eye, and are held in place with elastic netting. Before the polarization and after about 20 minutes of polarization, patients undergo the following tests:~Language: Patients must say as many words beginning with certain letters as they can in 90 seconds.~Memory: Patients must remember a letter on a computer screen, and when the letter appears again, press the same letter on the keyboard.~Reaction time: Patients place pegs on a pegboard.~Mood: Patients place a mark on a line ranking how they feel.
+## Inclusion Criteria
+inclusion criteria: 
+
+ -Six patients referred to the Cognitive Neuroscience Section, NINDS, with a clinical diagnosis of FTD confirmed here, will be selected to participate in the study.
+## Exclusion Criteria
+: 
+
+ Greater than 75 years of age. 
+
+ Presence of metal in the head other than dental hardware. 
+
+ Broken skin in the area of the stimulating electrodes. 
+
+ Any behavioral disorder that makes testing impossible. 
+
+ Children are excluded, as FTD is not a childhood illness.
+## Full Text
+Summary: This pilot study will evaluate the effect of direct current (DC) electrical polarization of the brain on language, memory, reaction time, and mood in six patients with frontotemporal dementia (Pick's disease). There is no effective treatment available for cognitive impairment in patients with this condition. DC polarization sends a very weak current between two sponge pads placed on the head. In a previous study in healthy volunteers, DC polarization of the left prefrontal area of the brain increased verbal fluency, memory and attention, and motor reaction time in the study subjects.~Patients between 35 and 75 years of age with frontotemporal dementia who have been referred to NINDS's Cognitive Neuroscience Section for an existing protocol will be offered participation in this study. Candidates will be screened with a neurological examination to confirm the diagnosis of frontotemporal dementia.~Participants receive 40 minutes of DC polarization or sham polarization in each of two separate sessions. (No current is applied in the sham treatment). During the polarization, the patient rests quietly. Sponge pads that have been soaked in water are put on the left side of the head and above the right eye, and are held in place with elastic netting. Before the polarization and after about 20 minutes of polarization, patients undergo the following tests:~Language: Patients must say as many words beginning with certain letters as they can in 90 seconds.~Memory: Patients must remember a letter on a computer screen, and when the letter appears again, press the same letter on the keyboard.~Reaction time: Patients place pegs on a pegboard.~Mood: Patients place a mark on a line ranking how they feel.
+Inclusion criteria: inclusion criteria: 
+
+ -Six patients referred to the Cognitive Neuroscience Section, NINDS, with a clinical diagnosis of FTD confirmed here, will be selected to participate in the study. 
+
+ 
+Exclusion criteria: : 
+
+ Greater than 75 years of age. 
+
+ Presence of metal in the head other than dental hardware. 
+
+ Broken skin in the area of the stimulating electrodes. 
+
+ Any behavioral disorder that makes testing impossible. 
+
+ Children are excluded, as FTD is not a childhood illness.

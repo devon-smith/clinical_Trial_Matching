@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-22T20:48:48",
+  "trial_id": "NCT02356510",
+  "contextual": {
+    "_id": "NCT02356510",
+    "title": "Which One Should be Treated in the Setting of Acute ST Elevation Myocardial Infarction - Culprit Lesion or Culprit Vessel?",
+    "text": "Summary: The current guidelines still recommend emergent PCI of the culprit lesion and state that primary PCI should be limited to the culprit vessel with the exception of cardiogenic shock and persistent ischaemia after PCI of the supposed culprit lesion. This recommendation is based on a high number of studies. However, several studies are present about the safety and efficacy of non-culprit vessel PCI during acute MI. Nowadays, the debate is increasingly going on about the PCI of the non-culprit arteries during the index event with newer prospective randomized studies. Besides, it is still unclear for the culprit artery whether to treat only the culprit lesion or all the other lesions in the culprit vessel during the index event. The present report describes a retrospective comparison between the two strategies during primary PCI for STEMI, looking for their influence on the clinical and angiographic course of the patients.\nInclusion criteria: inclusion criteria: \n\n Patients who underwent primary PCI for acute STEMI and had >1 lesion in the culprit artery \n\n \nExclusion criteria: : \n\n Presence of LMCA lesion \n\n Cardiogenic shock \n\n Previous CABG operation \n\n Decision for CABG operation after primary PCI \n\n Severe valvular disease including aortic stenosis of mitral insufficiency \n\n Severe kidney disease (serum creatinine >2.5 mg/dl or patients on maintenance hemodialysis) \n\n Rejection of second PCI by the patient after the index event",
+    "metadata": {
+      "brief_title": "Which One Should be Treated in the Setting of Acute ST Elevation Myocardial Infarction - Culprit Lesion or Culprit Vessel?",
+      "phase": "",
+      "drugs": "['Primary PCI']",
+      "drugs_list": [
+        "Primary PCI"
+      ],
+      "diseases": "['Myocardial Infarction']",
+      "diseases_list": [
+        "Myocardial Infarction"
+      ],
+      "enrollment": "637.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients who underwent primary PCI for acute STEMI and had >1 lesion in the culprit artery \n\n ",
+      "exclusion_criteria": ": \n\n Presence of LMCA lesion \n\n Cardiogenic shock \n\n Previous CABG operation \n\n Decision for CABG operation after primary PCI \n\n Severe valvular disease including aortic stenosis of mitral insufficiency \n\n Severe kidney disease (serum creatinine >2.5 mg/dl or patients on maintenance hemodialysis) \n\n Rejection of second PCI by the patient after the index event",
+      "brief_summary": "The current guidelines still recommend emergent PCI of the culprit lesion and state that primary PCI should be limited to the culprit vessel with the exception of cardiogenic shock and persistent ischaemia after PCI of the supposed culprit lesion. This recommendation is based on a high number of studies. However, several studies are present about the safety and efficacy of non-culprit vessel PCI during acute MI. Nowadays, the debate is increasingly going on about the PCI of the non-culprit arteries during the index event with newer prospective randomized studies. Besides, it is still unclear for the culprit artery whether to treat only the culprit lesion or all the other lesions in the culprit vessel during the index event. The present report describes a retrospective comparison between the two strategies during primary PCI for STEMI, looking for their influence on the clinical and angiographic course of the patients."
+    }
+  },
+  "linked_result": {
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Myocardial Infarction": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[
+  "patient_has_diagnosis_of_asthma_inthehistory",
+  "patient_has_finding_of_dyspnea_inthehistory",
+  "patient_has_finding_of_paroxysmal_cough_inthehistory",
+  "patient_has_finding_of_wheezing_inthehistory",
+  "patient_has_finding_of_asthma_inthehistory",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liters",
+  "patient_is_exposed_to_selective_beta_2_agonist_now",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liter",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_ex_smoker_now",
+  "patient_has_finding_of_never_smoked_tobacco_inthehistory",
+  "patient_has_finding_of_smoker_now",
+  "patient_ex_smoker_value_recorded_now_withunit_years",
+  "patient_has_finding_of_never_smoked_tobacco_now"
+]

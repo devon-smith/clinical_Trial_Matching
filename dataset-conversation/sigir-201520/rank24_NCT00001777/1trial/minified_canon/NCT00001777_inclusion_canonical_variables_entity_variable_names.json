@@ -1,0 +1,16 @@
+[
+  "patient_has_finding_of_behavior_finding_now",
+  "patient_has_finding_of_frontal_lobe_syndrome_now",
+  "patient_has_contraindication_to_sertraline_now",
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_has_childbearing_potential_now",
+  "patient_has_diagnosis_of_cerebrovascular_accident_inthehistory",
+  "patient_has_diagnosis_of_disorder_of_nervous_system_inthehistory",
+  "patient_has_diagnosis_of_multiple_sclerosis_inthehistory",
+  "patient_has_diagnosis_of_psychotic_disorder_inthehistory",
+  "patient_has_diagnosis_of_spinal_cord_injury_inthehistory",
+  "patient_has_diagnosis_of_traumatic_brain_injury_inthehistory",
+  "patient_is_taking_psychotropic_agent_now"
+]

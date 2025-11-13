@@ -1,0 +1,88 @@
+{
+  "generated": "2025-10-20T23:40:06",
+  "trial_id": "NCT02045004",
+  "contextual": {
+    "_id": "NCT02045004",
+    "title": "Cohort Study to Investigate the Association Between Changes in Brain Volume and Postoperative Cognitive Dysfunction",
+    "text": "Summary: Despite an ongoing controversy in the scientific literature, the link between anesthesia and dementia and/or cerebral atrophy remains unclear. Recent retrospective data suggests an association of surgery with a reduction in brain volume. With the present prospective cohort study, we would like to reproduce and verify these results, and investigate a possible association with the postoperative cognitive performance.~We will measure cerebral gray matter volumes in elderly patients before, 3 and 12 months after major non-cardiac surgery and determine cognitive functions at the same time.~Study hypothesis:~Surgery under general anesthesia in elderly patients is associated with a loss of gray matter.~The degree of cognitive dysfunction is associated with the loss of grey matter in brain areas relevant for cognitive functions.\nInclusion criteria: inclusion criteria: \n\n Age ≥ 65 years \n\n Elective major surgery \n\n Planned general anesthesia \n\n \nExclusion criteria: : \n\n Cardiac surgery \n\n Neurosurgery including carotid endarterectomy \n\n Preoperative Mini Mental State (MMS) Examination Score < 24 \n\n Previous pathological neuroimaging (if available) \n\n History of cerebral or cerebrovascular pathology \n\n Chronic use of psychiatric medication \n\n Alcohol or substance abuse \n\n A history of chronic pain unrelated to the planned surgery \n\n Any contraindication for MRI (e.g. pacemakers and other MR-incompatible metal implants) \n\n Claustrophobia \n\n Lack of informed consent",
+    "metadata": {
+      "brief_title": "Cohort Study to Investigate the Association Between Changes in Brain Volume and Postoperative Cognitive Dysfunction",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Postoperative Cognitive Dysfunction', 'Delirium', 'Dementia']",
+      "diseases_list": [
+        "Postoperative Cognitive Dysfunction",
+        "Delirium",
+        "Dementia"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age ≥ 65 years \n\n Elective major surgery \n\n Planned general anesthesia \n\n ",
+      "exclusion_criteria": ": \n\n Cardiac surgery \n\n Neurosurgery including carotid endarterectomy \n\n Preoperative Mini Mental State (MMS) Examination Score < 24 \n\n Previous pathological neuroimaging (if available) \n\n History of cerebral or cerebrovascular pathology \n\n Chronic use of psychiatric medication \n\n Alcohol or substance abuse \n\n A history of chronic pain unrelated to the planned surgery \n\n Any contraindication for MRI (e.g. pacemakers and other MR-incompatible metal implants) \n\n Claustrophobia \n\n Lack of informed consent",
+      "brief_summary": "Despite an ongoing controversy in the scientific literature, the link between anesthesia and dementia and/or cerebral atrophy remains unclear. Recent retrospective data suggests an association of surgery with a reduction in brain volume. With the present prospective cohort study, we would like to reproduce and verify these results, and investigate a possible association with the postoperative cognitive performance.~We will measure cerebral gray matter volumes in elderly patients before, 3 and 12 months after major non-cardiac surgery and determine cognitive functions at the same time.~Study hypothesis:~Surgery under general anesthesia in elderly patients is associated with a loss of gray matter.~The degree of cognitive dysfunction is associated with the loss of grey matter in brain areas relevant for cognitive functions."
+    }
+  },
+  "linked_result": {
+    "Postoperative Cognitive Dysfunction": {
+      "conceptId": "771417007",
+      "preferred_term": "Postoperative cognitive dysfunction",
+      "fully_specified_name": "Cognitive dysfunction following surgical procedure (disorder)",
+      "type": "Clinical finding",
+      "definition": "COGNITIVE IMPAIRMENT or functional decline after a surgical procedure.",
+      "best_match_term": "Postoperative cognitive dysfunction",
+      "match_reason": "Exact"
+    },
+    "Delirium": {
+      "conceptId": "2776000",
+      "preferred_term": "Delirium",
+      "fully_specified_name": "Delirium (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Delirium",
+      "match_reason": "Exact"
+    },
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Postoperative Cognitive Dysfunction": 1,
+    "Delirium": 1,
+    "Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Postoperative Cognitive Dysfunction": {
+      "disease": "Postoperative Cognitive Dysfunction",
+      "conceptId": "771417007",
+      "preferred_term": "Postoperative cognitive dysfunction",
+      "fully_specified_name": "Cognitive dysfunction following surgical procedure (disorder)",
+      "type": "Clinical finding",
+      "definition": "COGNITIVE IMPAIRMENT or functional decline after a surgical procedure.",
+      "best_match_term": "Postoperative cognitive dysfunction"
+    },
+    "Delirium": {
+      "disease": "Delirium",
+      "conceptId": "2776000",
+      "preferred_term": "Delirium",
+      "fully_specified_name": "Delirium (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Delirium"
+    },
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    }
+  }
+}

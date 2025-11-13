@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T23:37:15",
+  "trial_id": "NCT01070732",
+  "contextual": {
+    "_id": "NCT01070732",
+    "title": "Paracetamol as Antipyretic and Analgesic Medication",
+    "text": "Summary: The present study is aiming to unravel the clinical efficacy of intravenously administered paracetamol as antipyretic and analgesic medication in various medical conditions.\nInclusion criteria: inclusion criteria: \n\n Age greater than or equal to 18 years \n\n Written informed consent by the patients \n\n Medical condition necessitating the administration of antipyretic or analgesic medications \n\n \nExclusion criteria: : \n\n Αge lower than 18 years \n\n Lack of informed consent \n\n History of liver cirrhosis \n\n Blood creatinine greater than 3mg/dl \n\n Blood AST greater than 3 times the upper normal level according to the lab of the participating hospital \n\n History of hypersensitivity to non-steroidal ant-inflammatory drugs \n\n History of abuse of analgesics \n\n Pregnancy or lactation \n\n Fulminant hemorrhage of the upper or lower digestive tract \n\n Thrombocytopenia defined as less than 50000 platelets/μl",
+    "metadata": {
+      "brief_title": "Paracetamol as Antipyretic and Analgesic Medication",
+      "phase": "Phase 4",
+      "drugs": "['Paracetamol']",
+      "drugs_list": [
+        "Paracetamol"
+      ],
+      "diseases": "['Fever', 'Analgesia']",
+      "diseases_list": [
+        "Fever",
+        "Analgesia"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age greater than or equal to 18 years \n\n Written informed consent by the patients \n\n Medical condition necessitating the administration of antipyretic or analgesic medications \n\n ",
+      "exclusion_criteria": ": \n\n Αge lower than 18 years \n\n Lack of informed consent \n\n History of liver cirrhosis \n\n Blood creatinine greater than 3mg/dl \n\n Blood AST greater than 3 times the upper normal level according to the lab of the participating hospital \n\n History of hypersensitivity to non-steroidal ant-inflammatory drugs \n\n History of abuse of analgesics \n\n Pregnancy or lactation \n\n Fulminant hemorrhage of the upper or lower digestive tract \n\n Thrombocytopenia defined as less than 50000 platelets/μl",
+      "brief_summary": "The present study is aiming to unravel the clinical efficacy of intravenously administered paracetamol as antipyretic and analgesic medication in various medical conditions."
+    }
+  },
+  "linked_result": {
+    "Fever": {
+      "conceptId": "386661006",
+      "preferred_term": "Fever",
+      "fully_specified_name": "Fever (finding)",
+      "type": "Clinical finding",
+      "definition": "An abnormal elevation of body temperature, usually as a result of a pathologic process.",
+      "best_match_term": "Fever",
+      "match_reason": "Exact"
+    },
+    "Analgesia": {
+      "conceptId": "38433004",
+      "preferred_term": "No sensitivity to pain",
+      "fully_specified_name": "No sensitivity to pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Inability to perceive painful stimuli. [https://orcid.org/0000-0002-0736-9199]",
+      "best_match_term": "Analgesia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Fever": 1,
+    "Analgesia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Fever": {
+      "disease": "Fever",
+      "conceptId": "386661006",
+      "preferred_term": "Fever",
+      "fully_specified_name": "Fever (finding)",
+      "type": "Clinical finding",
+      "definition": "An abnormal elevation of body temperature, usually as a result of a pathologic process.",
+      "best_match_term": "Fever"
+    },
+    "Analgesia": {
+      "disease": "Analgesia",
+      "conceptId": "38433004",
+      "preferred_term": "No sensitivity to pain",
+      "fully_specified_name": "No sensitivity to pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Inability to perceive painful stimuli. [https://orcid.org/0000-0002-0736-9199]",
+      "best_match_term": "Analgesia"
+    }
+  }
+}

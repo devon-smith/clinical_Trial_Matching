@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-22T20:55:00",
+  "trial_id": "NCT02162524",
+  "contextual": {
+    "_id": "NCT02162524",
+    "title": "Effects of Images Following Long-term Aerobic Exercise on Brain Activation",
+    "text": "Summary: The primary purpose of this study is to quantify activation of regions of the brain associated with appetite and reward after viewing high sugar and high fat (HS/HF) images compared to control images following long-term aerobic exercise.~After long-term aerobic exercise compared to a no-exercise control group, viewing HS/HF food images vs. control images will result in higher activation of regions of the brain associate with appetite (hypothalamus).~After long-term aerobic exercise compared to a no-exercise control group consumption of a sucrose solution compared to an artificially sweetened solution and a tasteless solution, viewing HS/HF food images vs. control images will result in lower activation of regions of the brain associated with reward [amygdala, anterior cingulate cortex (ACC), Orbitalfrontal Cortex (OFC), and ventral tegmental area (VTA), striatum, insula] in overweight and obese men and women.~Exploratory Aims As exploratory aims, investigators will test a preliminary brain connectivity analysis.\nInclusion criteria: inclusion criteria: \n\n Male or Female \n\n 18-65 years old (inclusive) \n\n Weigh less than 350 lbs \n\n Body mass index (BMI) between 25-43 kg/m2 \n\n Willing to fast for 10 hours prior to examination \n\n Right handed \n\n \nExclusion criteria: : \n\n Diagnosis (by self report) of diabetes \n\n Diagnosis (by self report) of neurological condition \n\n Current or past alcohol or drug abuse problem \n\n Smoking \n\n Have internal metal medical devices including cardiac pacemakers, aortic or cerebral aneurysm clips, artificial heart valves, ferromagnetic implants, shrapnel, wire sutures, joint replacements, bone or joint pins/rods/screws/clips, metal plates, metal fragments in your eye, or non-removable metal jewelry such as rings \n\n Unable or unwilling to complete the imaging procedures for the duration of the MRI scan due to claustrophobia or other reason",
+    "metadata": {
+      "brief_title": "Effects of Images Following Long-term Aerobic Exercise on Brain Activation",
+      "phase": "",
+      "drugs": "['Aerobic Exercise']",
+      "drugs_list": [
+        "Aerobic Exercise"
+      ],
+      "diseases": "['Obesity']",
+      "diseases_list": [
+        "Obesity"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Male or Female \n\n 18-65 years old (inclusive) \n\n Weigh less than 350 lbs \n\n Body mass index (BMI) between 25-43 kg/m2 \n\n Willing to fast for 10 hours prior to examination \n\n Right handed \n\n ",
+      "exclusion_criteria": ": \n\n Diagnosis (by self report) of diabetes \n\n Diagnosis (by self report) of neurological condition \n\n Current or past alcohol or drug abuse problem \n\n Smoking \n\n Have internal metal medical devices including cardiac pacemakers, aortic or cerebral aneurysm clips, artificial heart valves, ferromagnetic implants, shrapnel, wire sutures, joint replacements, bone or joint pins/rods/screws/clips, metal plates, metal fragments in your eye, or non-removable metal jewelry such as rings \n\n Unable or unwilling to complete the imaging procedures for the duration of the MRI scan due to claustrophobia or other reason",
+      "brief_summary": "The primary purpose of this study is to quantify activation of regions of the brain associated with appetite and reward after viewing high sugar and high fat (HS/HF) images compared to control images following long-term aerobic exercise.~After long-term aerobic exercise compared to a no-exercise control group, viewing HS/HF food images vs. control images will result in higher activation of regions of the brain associate with appetite (hypothalamus).~After long-term aerobic exercise compared to a no-exercise control group consumption of a sucrose solution compared to an artificially sweetened solution and a tasteless solution, viewing HS/HF food images vs. control images will result in lower activation of regions of the brain associated with reward [amygdala, anterior cingulate cortex (ACC), Orbitalfrontal Cortex (OFC), and ventral tegmental area (VTA), striatum, insula] in overweight and obese men and women.~Exploratory Aims As exploratory aims, investigators will test a preliminary brain connectivity analysis."
+    }
+  },
+  "linked_result": {
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

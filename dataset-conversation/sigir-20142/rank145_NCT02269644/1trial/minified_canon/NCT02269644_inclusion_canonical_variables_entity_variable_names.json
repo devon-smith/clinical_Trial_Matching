@@ -1,0 +1,21 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_acute_disease_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_difficulty_breathing_now",
+  "patient_has_finding_of_dyspnea_now",
+  "patient_has_finding_of_pleuritic_pain_now",
+  "patient_has_finding_of_purulent_sputum_now",
+  "patient_has_finding_of_abnormal_vital_signs_now",
+  "patient_body_temperature_value_recorded_now_withunit_degrees_celsius",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_low_blood_pressure_now",
+  "patient_has_finding_of_tachycardia_now",
+  "patient_has_finding_of_tachypnea_now",
+  "patient_has_finding_of_hypoxemia_now",
+  "patient_has_finding_of_increased_blood_leukocyte_number_now",
+  "patient_has_finding_of_lung_consolidation_now",
+  "patient_has_finding_of_neutropenia_now",
+  "patient_has_finding_of_multilobar_lung_infiltrate_now",
+  "patient_has_finding_of_single_lobe_lung_infiltrate_now"
+]

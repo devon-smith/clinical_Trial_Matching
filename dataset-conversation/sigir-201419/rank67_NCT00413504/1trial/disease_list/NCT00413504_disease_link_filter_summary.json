@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-22T20:51:54",
+  "trial_id": "NCT00413504",
+  "contextual": {
+    "_id": "NCT00413504",
+    "title": "Fondaparinux as Monotherapy for DVT and/or Pulmonary Embolism",
+    "text": "Summary: To determine whether fondaparinux as monotherapy without warfarin is effective and safe for long-term (90 days) treatment of DVT and/or PE, thus gaining new long-term experience and data using fondaparinux.\nInclusion criteria: inclusion criteria: \n\n Recurrent venous thromboembolism despite anticoagulation with warfarin(Or) \n\n Clinically important bleeding complications due to warfarin(Or) \n\n Inability to achieve the target INR on warfarin(Or) \n\n Nonbleeding side effects of warfarin, such as hair loss, rash, purple toe syndrome(Or) \n\n Patient with cancer on monotherapy with parenteral anticoagulation for DVT and/ or PE \n\n and \n\n Require at least 90 days of anticoagulation \n\n Require anticoagulation for objectively confirmed DVT and/or PE \n\n Age greater than 18 years \n\n Written informed consent \n\n \nExclusion criteria: : \n\n Patients with renal insufficiency, defined as creatinine > 1.5 mg/dl \n\n Patients in whom anticoagulation with any agent is deemed unsafe due to bleeding risk. \n\n Pregnancy \n\n Known hypersensitivity to fondaparinux",
+    "metadata": {
+      "brief_title": "Fondaparinux as Monotherapy for DVT and/or Pulmonary Embolism",
+      "phase": "",
+      "drugs": "['Fondaparinux']",
+      "drugs_list": [
+        "Fondaparinux"
+      ],
+      "diseases": "['Deep Vein Thrombosis', 'Pulmonary Embolism']",
+      "diseases_list": [
+        "Deep Vein Thrombosis",
+        "Pulmonary Embolism"
+      ],
+      "enrollment": "30.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Recurrent venous thromboembolism despite anticoagulation with warfarin(Or) \n\n Clinically important bleeding complications due to warfarin(Or) \n\n Inability to achieve the target INR on warfarin(Or) \n\n Nonbleeding side effects of warfarin, such as hair loss, rash, purple toe syndrome(Or) \n\n Patient with cancer on monotherapy with parenteral anticoagulation for DVT and/ or PE \n\n and \n\n Require at least 90 days of anticoagulation \n\n Require anticoagulation for objectively confirmed DVT and/or PE \n\n Age greater than 18 years \n\n Written informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Patients with renal insufficiency, defined as creatinine > 1.5 mg/dl \n\n Patients in whom anticoagulation with any agent is deemed unsafe due to bleeding risk. \n\n Pregnancy \n\n Known hypersensitivity to fondaparinux",
+      "brief_summary": "To determine whether fondaparinux as monotherapy without warfarin is effective and safe for long-term (90 days) treatment of DVT and/or PE, thus gaining new long-term experience and data using fondaparinux."
+    }
+  },
+  "linked_result": {
+    "Deep Vein Thrombosis": {
+      "conceptId": "128053003",
+      "preferred_term": "Deep venous thrombosis",
+      "fully_specified_name": "Deep venous thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "A blood clot in a deep vein, predominantly in the lower extremity, but may include the pelvis or upper extremity.",
+      "best_match_term": "Deep vein thrombosis",
+      "match_reason": "Exact"
+    },
+    "Pulmonary Embolism": {
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Deep Vein Thrombosis": 1,
+    "Pulmonary Embolism": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Deep Vein Thrombosis": {
+      "disease": "Deep Vein Thrombosis",
+      "conceptId": "128053003",
+      "preferred_term": "Deep venous thrombosis",
+      "fully_specified_name": "Deep venous thrombosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "A blood clot in a deep vein, predominantly in the lower extremity, but may include the pelvis or upper extremity.",
+      "best_match_term": "Deep vein thrombosis"
+    },
+    "Pulmonary Embolism": {
+      "disease": "Pulmonary Embolism",
+      "conceptId": "59282003",
+      "preferred_term": "Pulmonary embolism",
+      "fully_specified_name": "Pulmonary embolism (disorder)",
+      "type": "Clinical finding",
+      "definition": "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.",
+      "best_match_term": "Pulmonary embolism"
+    }
+  }
+}

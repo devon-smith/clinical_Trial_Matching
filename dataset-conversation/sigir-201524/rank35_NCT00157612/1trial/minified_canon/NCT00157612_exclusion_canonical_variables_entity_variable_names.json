@@ -1,0 +1,6 @@
+[
+  "patient_longevity_value_recorded_now_withunit_days",
+  "patient_has_finding_of_allergic_reaction_inthehistory",
+  "patient_has_finding_of_anaphylaxis_inthehistory",
+  "patient_has_finding_of_advanced_directive_status_now"
+]

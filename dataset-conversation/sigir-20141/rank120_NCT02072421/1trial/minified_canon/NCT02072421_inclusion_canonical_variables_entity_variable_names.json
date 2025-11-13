@@ -1,0 +1,20 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_creatinine_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_glomerular_filtration_rate_value_recorded_now_withunit_milliliters_per_minute",
+  "patient_is_undergoing_percutaneous_coronary_intervention_now",
+  "patient_is_taking_drug_eluting_stent_now",
+  "patient_has_finding_of_finding_of_lesion_now",
+  "patient_can_undergo_coronary_artery_bypass_graft_now",
+  "patient_can_undergo_emergency_cabg_now",
+  "patient_has_finding_of_ischemic_heart_disease_now",
+  "patient_has_finding_of_acute_non_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_finding_of_ischemia_now",
+  "patient_has_finding_of_stable_angina_now",
+  "patient_has_finding_of_acute_occlusion_of_artery_now",
+  "patient_stricture_of_artery_value_recorded_now_withunit_percent",
+  "patient_fractional_flow_reserve_value_recorded_now_withunit_ratio",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+  "patient_myocardial_infarction_value_recorded_now_withunit_hours"
+]

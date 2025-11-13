@@ -1,0 +1,10 @@
+# Cardiovascular Health Study (CHS)
+**NCT**: `NCT00005133`
+## Brief Summary
+To determine the extent to which known risk factors predict coronary heart disease and stroke in the elderly, to assess the precipitants of coronary heart disease and stroke in the elderly, and to identify the predictors of mortality and functional impairments in clinical coronary disease or stroke.
+## Inclusion Criteria
+Eligible participants were sampled from Medicare eligibility lists in each area. Those eligible included all persons living in the household of each individual sampled from the Health Care Financing Administration (HCFA) sampling frame, who were 65 years or older at the time of examination, were noninstitutionalized, were expected to remain in the area for the next three years, and were able to give informed consent and did not require a proxy respondent at baseline. Potentially eligible individuals who were wheelchair-bound in the home at baseline or were receiving hospice treatment, radiation therapy or chemotherapy for cancer were excluded.
+## Full Text
+Summary: To determine the extent to which known risk factors predict coronary heart disease and stroke in the elderly, to assess the precipitants of coronary heart disease and stroke in the elderly, and to identify the predictors of mortality and functional impairments in clinical coronary disease or stroke.
+Inclusion criteria: Eligible participants were sampled from Medicare eligibility lists in each area. Those eligible included all persons living in the household of each individual sampled from the Health Care Financing Administration (HCFA) sampling frame, who were 65 years or older at the time of examination, were noninstitutionalized, were expected to remain in the area for the next three years, and were able to give informed consent and did not require a proxy respondent at baseline. Potentially eligible individuals who were wheelchair-bound in the home at baseline or were receiving hospice treatment, radiation therapy or chemotherapy for cancer were excluded.
+Exclusion criteria:

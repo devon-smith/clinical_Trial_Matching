@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_chagas_disease_with_heart_involvement_now",
+  "patient_has_finding_of_dilated_cardiomyopathy_now",
+  "patient_has_finding_of_hypertrophic_cardiomyopathy_now",
+  "patient_has_finding_of_sarcoid_myopathy_now",
+  "patient_has_finding_of_structural_disorder_of_heart_now",
+  "patient_will_undergo_catheter_ablation_of_arrhythmogenic_focus_inthefuture",
+  "patient_has_diagnosis_of_ventricular_tachycardia_now",
+  "patient_has_undergone_renal_arteriography_inthehistory",
+  "patient_has_undergone_renal_arteriography_now"
+]

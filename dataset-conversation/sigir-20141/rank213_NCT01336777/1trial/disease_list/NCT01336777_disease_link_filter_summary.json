@@ -1,0 +1,88 @@
+{
+  "generated": "2025-10-22T21:03:58",
+  "trial_id": "NCT01336777",
+  "contextual": {
+    "_id": "NCT01336777",
+    "title": "Regional Fat Depots and Insulin Resistance",
+    "text": "Summary: The biological basis for insulin resistance associated with obesity is unknown. By studying equally-overweight/obese individuals who are either insulin resistant or insulin sensitive, the investigators will compare characteristics of fat tissue to test several hypotheses: 1) impaired differentiation and fat storage in the subcutaneous fat depot characterize insulin resistant individuals, who have, as a result, fat in other tissues like liver and muscle, as well as more fat circulating in the blood; 2) inflammation is greater in visceral and/or subcutaneous adipose tissue depots in insulin resistant individuals as compared with insulin sensitive individuals.\nInclusion criteria: inclusion criteria: \n\n No major organ disease \n\n Fasting blood glucose < 126 mg/dL \n\n BMI 25-35 kg/m2 \n\n Nonpregnant/nonlactating \n\n \nExclusion criteria: : \n\n pregnancy/lactation \n\n major organ disease \n\n drugs that influence insulin resistance \n\n unstable body weight or active weight loss program \n\n outside BMI range or age range \n\n diabetic by fasting glucose criteria 126 mg/dL or higher",
+    "metadata": {
+      "brief_title": "Regional Fat Depots and Insulin Resistance",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Obesity', 'Insulin Resistance', 'Diabetes Mellitus Type 2']",
+      "diseases_list": [
+        "Obesity",
+        "Insulin Resistance",
+        "Diabetes Mellitus Type 2"
+      ],
+      "enrollment": "50.0",
+      "inclusion_criteria": "inclusion criteria: \n\n No major organ disease \n\n Fasting blood glucose < 126 mg/dL \n\n BMI 25-35 kg/m2 \n\n Nonpregnant/nonlactating \n\n ",
+      "exclusion_criteria": ": \n\n pregnancy/lactation \n\n major organ disease \n\n drugs that influence insulin resistance \n\n unstable body weight or active weight loss program \n\n outside BMI range or age range \n\n diabetic by fasting glucose criteria 126 mg/dL or higher",
+      "brief_summary": "The biological basis for insulin resistance associated with obesity is unknown. By studying equally-overweight/obese individuals who are either insulin resistant or insulin sensitive, the investigators will compare characteristics of fat tissue to test several hypotheses: 1) impaired differentiation and fat storage in the subcutaneous fat depot characterize insulin resistant individuals, who have, as a result, fat in other tissues like liver and muscle, as well as more fat circulating in the blood; 2) inflammation is greater in visceral and/or subcutaneous adipose tissue depots in insulin resistant individuals as compared with insulin sensitive individuals."
+    }
+  },
+  "linked_result": {
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    },
+    "Insulin Resistance": {
+      "conceptId": "763325000",
+      "preferred_term": "Insulin resistance",
+      "fully_specified_name": "Insulin resistance (disorder)",
+      "type": "Clinical finding",
+      "definition": "Diminished effectiveness of INSULIN in lowering blood sugar levels: requiring the use of 200 units or more of insulin per day to prevent HYPERGLYCEMIA or KETOSIS.",
+      "best_match_term": "Insulin resistance",
+      "match_reason": "Exact"
+    },
+    "Diabetes Mellitus Type 2": {
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "Diabetes mellitus type 2",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Obesity": 1,
+    "Insulin Resistance": 1,
+    "Diabetes Mellitus Type 2": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    },
+    "Insulin Resistance": {
+      "disease": "Insulin Resistance",
+      "conceptId": "763325000",
+      "preferred_term": "Insulin resistance",
+      "fully_specified_name": "Insulin resistance (disorder)",
+      "type": "Clinical finding",
+      "definition": "Diminished effectiveness of INSULIN in lowering blood sugar levels: requiring the use of 200 units or more of insulin per day to prevent HYPERGLYCEMIA or KETOSIS.",
+      "best_match_term": "Insulin resistance"
+    },
+    "Diabetes Mellitus Type 2": {
+      "disease": "Diabetes Mellitus Type 2",
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "Diabetes mellitus type 2"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "trial_id": "NCT01076738",
+  "contextual": {
+    "_id": "NCT01076738",
+    "title": "Screening DIVA - Diffuse Vascular Disease",
+    "text": "Summary: Primary Objective:~To investigate the value of the Edinburgh Claudication Questionnaire (ECQ) against the ankle-brachial index (ABI) in Canadian patients mainly followed in general practice, with documented acute coronary syndrome (ACS)/ischemic stroke (IS)/transient ischemic attack (TIA) and who are not known to have peripheral arterial disease (PAD) at the time of enrolment.~Secondary Objective:~To collect data on the prevalence of PAD in this population as measured by ABI.\nInclusion criteria: inclusion criteria: \n\n Documented acute coronary syndrome (Unstable angina, non-Q-wave myocardial infarction, Q-wave myocardial infarction) or/and documented ischemic stroke/transient ischemic attack (IS/TIA) \n\n \nExclusion criteria: : \n\n Previously known symptomatic or asymptomatic PAD confirmed by one of the following diagnostic methods or interventions (documented in the patient's medical record): \n\n Non-invasive or invasive vascular diagnostic tools (e.g.: ABI, Toe-brachial index, Duplex ultrasound, Magnetic resonance angiography, Computer tomographic angiography, Contrast angiography) \n\n Previous related intervention (such as angioplasty, stenting, atherectomy, peripheral arterial bypass graft, other vascular intervention including amputation) \n\n Patients whose ABI cannot be measured accurately \n\n Patients already in a clinical trial or a product registry \n\n Hospitalized patients \n\n The above information is not intended to contain all considerations relevant to a patient's potential participation in a clinical trial.",
+    "metadata": {
+      "brief_title": "Screening DIVA - Diffuse Vascular Disease",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Peripheral Vascular Diseases']",
+      "diseases_list": [
+        "Peripheral Vascular Diseases"
+      ],
+      "enrollment": "2233.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Documented acute coronary syndrome (Unstable angina, non-Q-wave myocardial infarction, Q-wave myocardial infarction) or/and documented ischemic stroke/transient ischemic attack (IS/TIA) \n\n ",
+      "exclusion_criteria": ": \n\n Previously known symptomatic or asymptomatic PAD confirmed by one of the following diagnostic methods or interventions (documented in the patient's medical record): \n\n Non-invasive or invasive vascular diagnostic tools (e.g.: ABI, Toe-brachial index, Duplex ultrasound, Magnetic resonance angiography, Computer tomographic angiography, Contrast angiography) \n\n Previous related intervention (such as angioplasty, stenting, atherectomy, peripheral arterial bypass graft, other vascular intervention including amputation) \n\n Patients whose ABI cannot be measured accurately \n\n Patients already in a clinical trial or a product registry \n\n Hospitalized patients \n\n The above information is not intended to contain all considerations relevant to a patient's potential participation in a clinical trial.",
+      "brief_summary": "Primary Objective:~To investigate the value of the Edinburgh Claudication Questionnaire (ECQ) against the ankle-brachial index (ABI) in Canadian patients mainly followed in general practice, with documented acute coronary syndrome (ACS)/ischemic stroke (IS)/transient ischemic attack (TIA) and who are not known to have peripheral arterial disease (PAD) at the time of enrolment.~Secondary Objective:~To collect data on the prevalence of PAD in this population as measured by ABI."
+    }
+  }
+}

@@ -1,0 +1,14 @@
+[
+  "patient_has_diagnosis_of_pneumonia_now",
+  "patient_has_finding_of_pneumonia_now",
+  "patient_absolute_cd4_count_procedure_value_recorded_now_withunit_per_cubic_millimeter",
+  "patient_has_diagnosis_of_human_immunodeficiency_virus_infection_now",
+  "patient_is_undergoing_immunosuppressive_therapy_now",
+  "patient_has_undergone_transplantation_inthehistory",
+  "patient_has_finding_of_malignant_tumor_of_lymphoid_hemopoietic_and_related_tissue_now",
+  "patient_has_diagnosis_of_cystic_fibrosis_inthehistory",
+  "patient_has_finding_of_traumatic_injury_now",
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_has_finding_of_moribund_now",
+  "patient_has_undergone_clinical_trial_inthepast30days"
+]

@@ -1,0 +1,54 @@
+{
+  "generated": "2025-10-20T23:29:52",
+  "trial_id": "NCT01231165",
+  "contextual": {
+    "_id": "NCT01231165",
+    "title": "Treatment of Coronary Heart Disease With Amiloride",
+    "text": "Summary: Treatment of coronary artery disease is a major health care problem across the entire word, and the United States. Unfortunately, despite a number of medical advances, diagnostic procedure, or epidemiological studies, the treatment of these patients remain complex, and and at times frustrating. In fact, the COURAGE trial conducted in 50 centers across United States and Canada documented that drug treatment, coronary interventions or both were not effective solution in coronary artery diseases.~A novel approach has recently been developed, based on the critical role of the potassium (K) content in red-blood-cell in myocardial oxygenation, since oxygen and K binding by hemoglobin (red-blood-cell) occurs simultaneously in blood passing through the lungs, whereas in the organs as the heart, the hemoglobin release both Oxygen and K ions.~This apparently simple mechanisms occurs in human blood in all individuals but could be altered in subjects with acquired or hereditable defect in red-blood-cell K content. The purpose of this trial, thus, will be to evaluate the pharmacological effects of Amiloride on RBC K-uptake and transport and its impact on reversion of angina, electrocardiographic changes of myocardial ischemia and electrical regeneration of the heart in subjects with coronary artery diseases.\nInclusion criteria: inclusion criteria: \n\n Male or female; age 35-75 years having angina (Canada Cardiovascular Society Class II-IV) \n\n Essential Hypertension defined as taking at least 1 anti-hypertensive medication, or average systolic blood pressure ≥140 mm Hg, or diastolic blood pressure ≥90 mmHg \n\n ST-T changes of LVH (Romhilt-Estes or Framingham Heart Study criteria, with typical LV strain pattern, or isoelectric, inverted or biphasic T waves) \n\n ST-T changes of ischemia in resting ECG (ST depression, isoelectric, biphasic, negative or inverted T-waves) \n\n Serum potassium < 5.0 mmol/L prior to randomization \n\n Negative pregnancy test in child-bearing potential women \n\n Willing to comply with scheduled visits \n\n Informed consent form signed by the subject \n\n \nExclusion criteria: : \n\n Resistance hypertension despite 3-drugs treatment \n\n Myocardial infarction in past 90 days \n\n Coronary artery bypass graft surgery in past 90 days \n\n Atrial fibrillation with a resting heart rate > 90 bpm \n\n Percutaneous coronary intervention in past 30 days \n\n Implanted Pacemaker \n\n Stroke in past 90 days \n\n Left or Right Ventricular Branch Block \n\n Aldosterone antagonist or K sparing drug in last 7 days \n\n Intolerance to amiloride \n\n Lithium use \n\n Current participation in any other therapeutic trial \n\n Any condition that may prevent the subject from adhering to the trial protocol \n\n History of hyperkalemia (K ≥5.5 mmol/L) in the past six months or K >5.0 mmol/L within 2 weeks \n\n Chronic renal dysfunction \n\n Liver disease \n\n Chronic pulmonary disease \n\n Significant uncorrected valvular heart disease",
+    "metadata": {
+      "brief_title": "Treatment of Coronary Heart Disease With Amiloride",
+      "phase": "Phase 2; Phase 3",
+      "drugs": "['Amiloride', 'Nitrates, clopidogrel, aspirin, statins']",
+      "drugs_list": [
+        "Amiloride",
+        "Nitrates",
+        "clopidogrel",
+        "aspirin",
+        "statins"
+      ],
+      "diseases": "['Coronary Heart Disease']",
+      "diseases_list": [
+        "Coronary Heart Disease"
+      ],
+      "enrollment": "70.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Male or female; age 35-75 years having angina (Canada Cardiovascular Society Class II-IV) \n\n Essential Hypertension defined as taking at least 1 anti-hypertensive medication, or average systolic blood pressure ≥140 mm Hg, or diastolic blood pressure ≥90 mmHg \n\n ST-T changes of LVH (Romhilt-Estes or Framingham Heart Study criteria, with typical LV strain pattern, or isoelectric, inverted or biphasic T waves) \n\n ST-T changes of ischemia in resting ECG (ST depression, isoelectric, biphasic, negative or inverted T-waves) \n\n Serum potassium < 5.0 mmol/L prior to randomization \n\n Negative pregnancy test in child-bearing potential women \n\n Willing to comply with scheduled visits \n\n Informed consent form signed by the subject \n\n ",
+      "exclusion_criteria": ": \n\n Resistance hypertension despite 3-drugs treatment \n\n Myocardial infarction in past 90 days \n\n Coronary artery bypass graft surgery in past 90 days \n\n Atrial fibrillation with a resting heart rate > 90 bpm \n\n Percutaneous coronary intervention in past 30 days \n\n Implanted Pacemaker \n\n Stroke in past 90 days \n\n Left or Right Ventricular Branch Block \n\n Aldosterone antagonist or K sparing drug in last 7 days \n\n Intolerance to amiloride \n\n Lithium use \n\n Current participation in any other therapeutic trial \n\n Any condition that may prevent the subject from adhering to the trial protocol \n\n History of hyperkalemia (K ≥5.5 mmol/L) in the past six months or K >5.0 mmol/L within 2 weeks \n\n Chronic renal dysfunction \n\n Liver disease \n\n Chronic pulmonary disease \n\n Significant uncorrected valvular heart disease",
+      "brief_summary": "Treatment of coronary artery disease is a major health care problem across the entire word, and the United States. Unfortunately, despite a number of medical advances, diagnostic procedure, or epidemiological studies, the treatment of these patients remain complex, and and at times frustrating. In fact, the COURAGE trial conducted in 50 centers across United States and Canada documented that drug treatment, coronary interventions or both were not effective solution in coronary artery diseases.~A novel approach has recently been developed, based on the critical role of the potassium (K) content in red-blood-cell in myocardial oxygenation, since oxygen and K binding by hemoglobin (red-blood-cell) occurs simultaneously in blood passing through the lungs, whereas in the organs as the heart, the hemoglobin release both Oxygen and K ions.~This apparently simple mechanisms occurs in human blood in all individuals but could be altered in subjects with acquired or hereditable defect in red-blood-cell K content. The purpose of this trial, thus, will be to evaluate the pharmacological effects of Amiloride on RBC K-uptake and transport and its impact on reversion of angina, electrocardiographic changes of myocardial ischemia and electrical regeneration of the heart in subjects with coronary artery diseases."
+    }
+  },
+  "linked_result": {
+    "Coronary Heart Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary heart disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Coronary Heart Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Coronary Heart Disease": {
+      "disease": "Coronary Heart Disease",
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary heart disease"
+    }
+  }
+}

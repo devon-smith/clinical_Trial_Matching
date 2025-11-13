@@ -1,0 +1,9 @@
+[
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_injury_of_abdomen_now",
+  "patient_has_finding_of_renal_insufficiency_now",
+  "patient_is_taking_metformin_containing_product_now",
+  "patient_has_undergone_plasma_creatinine_measurement_now_outcome_is_abnormal",
+  "patient_has_finding_of_abdominal_pain_now",
+  "patient_has_finding_of_hemorrhagic_shock_now"
+]

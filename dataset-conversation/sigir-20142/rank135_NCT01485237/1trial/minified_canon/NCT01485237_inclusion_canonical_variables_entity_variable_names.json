@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_influenza_now",
+  "patient_is_undergoing_admission_to_intensive_care_unit_now",
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_inspired_oxygen_concentration_value_recorded_now_withunit_percent"
+]

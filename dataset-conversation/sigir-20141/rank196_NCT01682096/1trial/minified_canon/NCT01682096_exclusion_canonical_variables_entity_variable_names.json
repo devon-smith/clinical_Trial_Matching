@@ -1,0 +1,12 @@
+[
+  "patient_has_allergy_to_iodinated_contrast_media_now",
+  "patient_creatinine_level_finding_value_recorded_now_withunit_mg_per_dl",
+  "patient_has_finding_of_renal_insufficiency_now",
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory",
+  "patient_has_undergone_myocardial_revascularization_inthehistory",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_finding_of_hemodynamic_instability_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mm_hg",
+  "patient_has_finding_of_cardiac_arrhythmia_now",
+  "patient_can_undergo_exercise_tolerance_test_now"
+]

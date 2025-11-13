@@ -1,0 +1,9 @@
+[
+  "patient_has_diagnosis_of_atypical_parkinsonism_now",
+  "patient_has_diagnosis_of_parkinson_s_disease_now",
+  "patient_is_exposed_to_clostridium_botulinum_toxin_containing_product_inthehistory",
+  "patient_has_finding_of_aspiration_pneumonia_inthehistory",
+  "patient_has_finding_of_choking_inthehistory",
+  "patient_has_finding_of_dysphagia_inthehistory",
+  "patient_has_undergone_operation_on_salivary_gland_inthehistory"
+]

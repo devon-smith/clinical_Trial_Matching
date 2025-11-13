@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-22T21:07:06",
+  "trial_id": "NCT00122811",
+  "contextual": {
+    "_id": "NCT00122811",
+    "title": "The Hypertension in the Very Elderly Trial (HYVET)",
+    "text": "Summary: The purpose of this study is to assess the benefits and risks of treating very elderly (those aged 80 or older) individuals with hypertension.\nInclusion criteria: inclusion criteria: \n\n Aged 80 or older \n\n Sitting systolic BP 160-199 mmHg AND sitting diastolic BP < 110 mmHg \n\n \nExclusion criteria: : \n\n Known accelerated hypertension (retinal haemorrhages or exudates or papilloedema). \n\n Overt clinical congestive heart failure requiring treatment with a diuretic or angiotensin converting enzyme inhibitor. Subjects allowed if treated with digoxin only. \n\n Renal failure (serum creatinine of more than 150 µmol/l). \n\n Previous documented cerebral or subarachnoid haemorrhage in the last 6 months. (Ischaemic cerebral and cardiac events do not exclude, although the patient must be neurologically and cardiologically stable.) \n\n Condition expected to severely limit survival, e.g. terminal illness. \n\n Known secondary hypertension (e.g. renal artery stenosis, chronic renal insufficiency, and endocrine cause). \n\n Gout. \n\n Clinical diagnosis of dementia. \n\n Resident in a nursing home, i.e. where the dependency and care requirements of the patients are such that they require the regular input of qualified nurses and therefore the majority of staff in the home are nurses (other forms of residential care are acceptable). \n\n Unable to stand up or walk \n\n Participation in a drug trial within the past month preceding selection. \n\n Alcohol or drug abuse. \n\n Less than 2 months placebo run-in. \n\n Contraindications to use of trial drugs",
+    "metadata": {
+      "brief_title": "The Hypertension in the Very Elderly Trial (HYVET)",
+      "phase": "Phase 4",
+      "drugs": "['Indapamide SR 1.5mg; Perindopril 2-4mg']",
+      "drugs_list": [
+        "Indapamide SR 1.5mg; Perindopril 2-4mg"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "4000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Aged 80 or older \n\n Sitting systolic BP 160-199 mmHg AND sitting diastolic BP < 110 mmHg \n\n ",
+      "exclusion_criteria": ": \n\n Known accelerated hypertension (retinal haemorrhages or exudates or papilloedema). \n\n Overt clinical congestive heart failure requiring treatment with a diuretic or angiotensin converting enzyme inhibitor. Subjects allowed if treated with digoxin only. \n\n Renal failure (serum creatinine of more than 150 µmol/l). \n\n Previous documented cerebral or subarachnoid haemorrhage in the last 6 months. (Ischaemic cerebral and cardiac events do not exclude, although the patient must be neurologically and cardiologically stable.) \n\n Condition expected to severely limit survival, e.g. terminal illness. \n\n Known secondary hypertension (e.g. renal artery stenosis, chronic renal insufficiency, and endocrine cause). \n\n Gout. \n\n Clinical diagnosis of dementia. \n\n Resident in a nursing home, i.e. where the dependency and care requirements of the patients are such that they require the regular input of qualified nurses and therefore the majority of staff in the home are nurses (other forms of residential care are acceptable). \n\n Unable to stand up or walk \n\n Participation in a drug trial within the past month preceding selection. \n\n Alcohol or drug abuse. \n\n Less than 2 months placebo run-in. \n\n Contraindications to use of trial drugs",
+      "brief_summary": "The purpose of this study is to assess the benefits and risks of treating very elderly (those aged 80 or older) individuals with hypertension."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_duration_of_inpatient_stay_value_recorded_now_withunit_days",
+  "patient_has_finding_of_inpatient_stay_now",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now",
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_has_finding_of_dependence_on_supplemental_oxygen_now",
+  "patient_has_diagnosis_of_end_stage_renal_failure_on_dialysis_now"
+]

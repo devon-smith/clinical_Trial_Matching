@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:44:33",
+  "trial_id": "NCT00867841",
+  "contextual": {
+    "_id": "NCT00867841",
+    "title": "A Polymerase Chain Reaction (PCR) - Based Method to Improve Antibiotic Prescribing for Pneumonia",
+    "text": "Summary: Pneumonia, or lung infection, is usually treated with antibiotics targeted against the organisms that the physician guesses are causing the problem. The determination of the exact cause of a patient's pneumonia is difficult. The problem is that the two major causes of community-acquired pneumonia are not easily distinguished on clinical grounds and are best treated by different antibiotics. The investigators hypothesize that antibiotic therapy can be targeted and improved by doing polymerase chain reaction (PCR) testing of nose swabs to identify probable implicated organisms and their antibiotic resistance patterns. This pilot study will be important to ensure that the laboratory testing is functional and that the emergency department-laboratory communication is optimal prior to doing a full-fledged randomized clinical trial.\nInclusion criteria: inclusion criteria: \n\n presumed community-acquired pneumonia as diagnosed by the attending emergency department physician \n\n \nExclusion criteria: : \n\n age > 6 months \n\n immunodeficiency (primary, advanced HIV) \n\n cystic fibrosis \n\n malignancy \n\n known cardiac or lung defects \n\n bronchiectasis \n\n previous pneumonia or lung abscess in past 6 months \n\n conditions requiring treatment with immune suppressants",
+    "metadata": {
+      "brief_title": "A Polymerase Chain Reaction (PCR) - Based Method to Improve Antibiotic Prescribing for Pneumonia",
+      "phase": "",
+      "drugs": "['nasopharyngeal swab']",
+      "drugs_list": [
+        "nasopharyngeal swab"
+      ],
+      "diseases": "['Pneumonia']",
+      "diseases_list": [
+        "Pneumonia"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n presumed community-acquired pneumonia as diagnosed by the attending emergency department physician \n\n ",
+      "exclusion_criteria": ": \n\n age > 6 months \n\n immunodeficiency (primary, advanced HIV) \n\n cystic fibrosis \n\n malignancy \n\n known cardiac or lung defects \n\n bronchiectasis \n\n previous pneumonia or lung abscess in past 6 months \n\n conditions requiring treatment with immune suppressants",
+      "brief_summary": "Pneumonia, or lung infection, is usually treated with antibiotics targeted against the organisms that the physician guesses are causing the problem. The determination of the exact cause of a patient's pneumonia is difficult. The problem is that the two major causes of community-acquired pneumonia are not easily distinguished on clinical grounds and are best treated by different antibiotics. The investigators hypothesize that antibiotic therapy can be targeted and improved by doing polymerase chain reaction (PCR) testing of nose swabs to identify probable implicated organisms and their antibiotic resistance patterns. This pilot study will be important to ensure that the laboratory testing is functional and that the emergency department-laboratory communication is optimal prior to doing a full-fledged randomized clinical trial."
+    }
+  },
+  "linked_result": {
+    "Pneumonia": {
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Pneumonia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Pneumonia": {
+      "disease": "Pneumonia",
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia"
+    }
+  }
+}

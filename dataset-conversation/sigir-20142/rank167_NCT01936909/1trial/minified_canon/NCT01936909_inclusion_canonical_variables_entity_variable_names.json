@@ -1,0 +1,14 @@
+[
+  "patient_b_type_natriuretic_peptide_value_recorded_now_withunit_picograms_per_milliliter",
+  "patient_has_diagnosis_of_decompensated_cardiac_failure_now",
+  "patient_has_finding_of_dyspnea_now",
+  "patient_left_ventricular_end_diastolic_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_pulmonary_artery_wedge_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_pulmonary_congestion_now",
+  "patient_has_finding_of_respiratory_distress_now",
+  "patient_has_finding_of_left_ventricular_systolic_dysfunction_inthepast12months",
+  "patient_has_undergone_discharge_from_hospital_now",
+  "patient_has_finding_of_patient_s_condition_stable_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_plasma_c_reactive_protein_measurement_value_recorded_now_withunit_milligrams_per_liter"
+]

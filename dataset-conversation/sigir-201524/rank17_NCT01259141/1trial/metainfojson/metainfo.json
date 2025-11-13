@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01259141",
+  "contextual": {
+    "_id": "NCT01259141",
+    "title": "The Optimization of Mycoplasm Pneumonia Antibiotic Therapy",
+    "text": "Summary: Mycoplasma pneumoniae, an important pathogen of community acquired pneumonia,are becoming more and more resistant to macrolide. The study aim is to optimize anti-infection therapy.\nInclusion criteria: inclusion criteria: \n\n Confirmed community acquired pneumonia \n\n 60ys≥age≥18 ys \n\n Respiratory symptom (cough accompanied by little or no sputum) \n\n New infiltration showed by chest radiology(x-ray or CT) \n\n Lung signs was not obvious \n\n White blood cell<10,000/mm3 \n\n Without underlying diseases or mild \n\n \nExclusion criteria: : \n\n Age<18ys or >60ys \n\n Pregnancy or breast-feeding \n\n Over one week after the onset of symptoms \n\n HIV infection \n\n Recent 90-day hospitalized history(length of stay greater than 2 days) \n\n Live in nursing homes or rehabilitation hospitals \n\n Taken macrolides or quinolones medicines before enrollment",
+    "metadata": {
+      "brief_title": "The Optimization of Mycoplasm Pneumonia Antibiotic Therapy",
+      "phase": "",
+      "drugs": "['Moxifloxacin', 'Cephalosporins and azithromycin']",
+      "drugs_list": [
+        "Moxifloxacin",
+        "Cephalosporins and azithromycin"
+      ],
+      "diseases": "['Mycoplasma Pneumonia']",
+      "diseases_list": [
+        "Mycoplasma Pneumonia"
+      ],
+      "enrollment": "208.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Confirmed community acquired pneumonia \n\n 60ys≥age≥18 ys \n\n Respiratory symptom (cough accompanied by little or no sputum) \n\n New infiltration showed by chest radiology(x-ray or CT) \n\n Lung signs was not obvious \n\n White blood cell<10,000/mm3 \n\n Without underlying diseases or mild \n\n ",
+      "exclusion_criteria": ": \n\n Age<18ys or >60ys \n\n Pregnancy or breast-feeding \n\n Over one week after the onset of symptoms \n\n HIV infection \n\n Recent 90-day hospitalized history(length of stay greater than 2 days) \n\n Live in nursing homes or rehabilitation hospitals \n\n Taken macrolides or quinolones medicines before enrollment",
+      "brief_summary": "Mycoplasma pneumoniae, an important pathogen of community acquired pneumonia,are becoming more and more resistant to macrolide. The study aim is to optimize anti-infection therapy."
+    }
+  }
+}

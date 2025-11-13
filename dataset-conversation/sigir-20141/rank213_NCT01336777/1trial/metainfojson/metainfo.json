@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT01336777",
+  "contextual": {
+    "_id": "NCT01336777",
+    "title": "Regional Fat Depots and Insulin Resistance",
+    "text": "Summary: The biological basis for insulin resistance associated with obesity is unknown. By studying equally-overweight/obese individuals who are either insulin resistant or insulin sensitive, the investigators will compare characteristics of fat tissue to test several hypotheses: 1) impaired differentiation and fat storage in the subcutaneous fat depot characterize insulin resistant individuals, who have, as a result, fat in other tissues like liver and muscle, as well as more fat circulating in the blood; 2) inflammation is greater in visceral and/or subcutaneous adipose tissue depots in insulin resistant individuals as compared with insulin sensitive individuals.\nInclusion criteria: inclusion criteria: \n\n No major organ disease \n\n Fasting blood glucose < 126 mg/dL \n\n BMI 25-35 kg/m2 \n\n Nonpregnant/nonlactating \n\n \nExclusion criteria: : \n\n pregnancy/lactation \n\n major organ disease \n\n drugs that influence insulin resistance \n\n unstable body weight or active weight loss program \n\n outside BMI range or age range \n\n diabetic by fasting glucose criteria 126 mg/dL or higher",
+    "metadata": {
+      "brief_title": "Regional Fat Depots and Insulin Resistance",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Obesity', 'Insulin Resistance', 'Diabetes Mellitus Type 2']",
+      "diseases_list": [
+        "Obesity",
+        "Insulin Resistance",
+        "Diabetes Mellitus Type 2"
+      ],
+      "enrollment": "50.0",
+      "inclusion_criteria": "inclusion criteria: \n\n No major organ disease \n\n Fasting blood glucose < 126 mg/dL \n\n BMI 25-35 kg/m2 \n\n Nonpregnant/nonlactating \n\n ",
+      "exclusion_criteria": ": \n\n pregnancy/lactation \n\n major organ disease \n\n drugs that influence insulin resistance \n\n unstable body weight or active weight loss program \n\n outside BMI range or age range \n\n diabetic by fasting glucose criteria 126 mg/dL or higher",
+      "brief_summary": "The biological basis for insulin resistance associated with obesity is unknown. By studying equally-overweight/obese individuals who are either insulin resistant or insulin sensitive, the investigators will compare characteristics of fat tissue to test several hypotheses: 1) impaired differentiation and fat storage in the subcutaneous fat depot characterize insulin resistant individuals, who have, as a result, fat in other tissues like liver and muscle, as well as more fat circulating in the blood; 2) inflammation is greater in visceral and/or subcutaneous adipose tissue depots in insulin resistant individuals as compared with insulin sensitive individuals."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease_now",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now",
+  "patient_has_finding_of_cough_now",
+  "patient_has_finding_of_dyspnea_now",
+  "patient_is_exposed_to_sputum_now",
+  "patient_has_finding_of_chronic_obstructive_lung_disease_now",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_has_finding_of_cyanosis_now",
+  "patient_has_finding_of_dyspnea_at_rest_now",
+  "patient_has_finding_of_edema_now",
+  "patients_uncertain_diagnosis_is_positive_now",
+  "patient_has_clinical_signs_of_cyanosis_now",
+  "patient_has_clinical_signs_of_edema_now",
+  "patients_uncertain_diagnosis_is_abnormal_now",
+  "patient_cigarette_pack_years_value_recorded_now_withunit_pack_years",
+  "patient_has_finding_of_ex_smoker_now",
+  "patient_has_finding_of_smoker_now",
+  "patient_is_exposed_to_drug_or_medicament_now"
+]

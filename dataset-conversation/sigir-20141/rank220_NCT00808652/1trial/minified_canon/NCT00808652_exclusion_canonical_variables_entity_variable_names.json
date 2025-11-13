@@ -1,0 +1,16 @@
+[
+  "patient_has_finding_of_patient_unsuitable_for_procedure_now",
+  "patient_is_pregnant_now",
+  "patient_is_able_to_be_pregnant_now",
+  "patient_has_undergone_angioplasty_of_blood_vessel_inthehistory",
+  "patient_has_finding_of_cerebrovascular_accident_inthehistory",
+  "patient_has_undergone_coronary_angiography_inthehistory",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_has_finding_of_echocardiogram_abnormal_inthehistory",
+  "patient_has_finding_of_electrocardiogram_abnormal_inthehistory",
+  "patient_has_undergone_fluoroscopic_angiography_of_coronary_artery_and_insertion_of_stent_inthehistory",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_peripheral_vascular_disease_inthehistory",
+  "patient_has_finding_of_alcohol_abuse_inthehistory",
+  "patient_has_finding_of_chronic_liver_disease_now"
+]

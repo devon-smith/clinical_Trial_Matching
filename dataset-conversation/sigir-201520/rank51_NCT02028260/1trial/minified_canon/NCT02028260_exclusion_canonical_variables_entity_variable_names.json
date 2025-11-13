@@ -1,0 +1,14 @@
+[
+  "patient_has_diagnosis_of_myocardial_infarction_inthepast2weeks",
+  "patient_has_finding_of_bundle_branch_block_now",
+  "patient_has_finding_of_heart_failure_now",
+  "patient_has_finding_of_prolonged_qt_interval_now",
+  "patient_has_intolerance_to_drug_or_medicament_now",
+  "patient_has_finding_of_mania_inthehistory",
+  "patient_has_finding_of_psychotic_disorder_inthehistory",
+  "patient_has_finding_of_disorder_of_nervous_system_inthehistory",
+  "patient_has_undergone_transfer_of_care_from_hospital_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_alcohol_withdrawal_syndrome_now",
+  "patient_has_diagnosis_of_end_stage_liver_disease_inthehistory"
+]

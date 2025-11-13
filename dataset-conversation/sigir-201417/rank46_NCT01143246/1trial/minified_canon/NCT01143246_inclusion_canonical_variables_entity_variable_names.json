@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_ascites_now",
+  "patient_has_finding_of_cirrhosis_of_liver_now",
+  "patient_is_exposed_to_albumin_now",
+  "patient_renal_function_value_recorded_now_withunit_unit",
+  "patient_serum_creatinine_level_finding_value_recorded_inthepast2weeks_withunit_mg_per_dl",
+  "patient_serum_creatinine_level_finding_value_recorded_inthepast48hours_withunit_mg_per_dl",
+  "patient_serum_creatinine_level_finding_value_recorded_now_withunit_mg_per_dl"
+]

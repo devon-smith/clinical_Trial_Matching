@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_allergy_to_drug_now",
+  "patient_has_finding_of_propensity_to_adverse_reactions_to_drug_now",
+  "patient_has_diagnosis_of_amyotrophic_lateral_sclerosis_now",
+  "patient_has_diagnosis_of_myasthenia_gravis_now",
+  "patient_has_undergone_operation_on_submaxillary_gland_inthehistory",
+  "patient_is_exposed_to_acetylcholine_receptor_antagonist_now",
+  "patient_has_finding_of_dribbling_from_mouth_now"
+]

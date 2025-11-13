@@ -1,0 +1,23 @@
+[
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_has_diagnosis_of_type_2_diabetes_mellitus_now",
+  "patient_has_finding_of_adverse_reaction_to_food_now",
+  "patient_has_finding_of_intolerance_to_lactose_now",
+  "patient_has_finding_of_intolerance_to_milk_now",
+  "patient_has_diagnosis_of_disease_of_liver_inthehistory",
+  "patient_has_diagnosis_of_disorder_of_endocrine_system_inthehistory",
+  "patient_has_diagnosis_of_kidney_disease_inthehistory",
+  "patient_has_diagnosis_of_eating_disorder_inthehistory",
+  "patient_has_finding_of_disorder_of_gastrointestinal_tract_now",
+  "patient_has_finding_of_malabsorption_syndrome_now",
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_taken_caffeine_containing_product_inthepast6months",
+  "patient_has_taken_ephedrine_containing_product_inthepast6months",
+  "patient_has_taken_phenylpropanolamine_containing_product_inthepast6months",
+  "patient_is_exposed_to_tobacco_inthepast12weeks",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_exposed_to_psychotropic_agent_inthepast12weeks",
+  "patient_has_undergone_hormone_replacement_therapy_inthepast12weeks",
+  "patient_has_finding_of_contraception_inthepast12weeks"
+]

@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:42:45",
+  "trial_id": "NCT01113749",
+  "contextual": {
+    "_id": "NCT01113749",
+    "title": "Improving Decision Making About Feeding Options for Dementia",
+    "text": "Summary: This study is a randomized trial to test whether a decision aid can help to improve the quality of decision making about feeding options in care of patients with dementia.\nInclusion criteria: inclusion criteria: \n\n dementia diagnosis \n\n advanced cognitive impairment \n\n feeding problem \n\n age >= 65 \n\n surrogate decision maker \n\n \nExclusion criteria: : \n\n feeding tube decision made \n\n hospice \n\n BMI > 26 \n\n major psychosis or developmental delay",
+    "metadata": {
+      "brief_title": "Improving Decision Making About Feeding Options for Dementia",
+      "phase": "",
+      "drugs": "['Feeding Options in Dementia Decision Aid']",
+      "drugs_list": [
+        "Feeding Options in Dementia Decision Aid"
+      ],
+      "diseases": "['Dementia']",
+      "diseases_list": [
+        "Dementia"
+      ],
+      "enrollment": "256.0",
+      "inclusion_criteria": "inclusion criteria: \n\n dementia diagnosis \n\n advanced cognitive impairment \n\n feeding problem \n\n age >= 65 \n\n surrogate decision maker \n\n ",
+      "exclusion_criteria": ": \n\n feeding tube decision made \n\n hospice \n\n BMI > 26 \n\n major psychosis or developmental delay",
+      "brief_summary": "This study is a randomized trial to test whether a decision aid can help to improve the quality of decision making about feeding options in care of patients with dementia."
+    }
+  },
+  "linked_result": {
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_female_now",
+  "patient_is_able_to_be_pregnant_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_chronic_obstructive_lung_disease_now",
+  "patient_has_finding_of_dyspnea_now",
+  "patient_has_finding_of_increasing_frequency_of_cough_now",
+  "patient_has_finding_of_purulent_sputum_now",
+  "patient_has_diagnosis_of_community_acquired_pneumonia_now",
+  "patient_has_diagnosis_of_lower_respiratory_tract_infection_now",
+  "patient_has_finding_of_radiologic_infiltrate_of_lung_now",
+  "patient_tobacco_smoking_behavior_finding_value_recorded_inthehistory_withunit_pack_years"
+]

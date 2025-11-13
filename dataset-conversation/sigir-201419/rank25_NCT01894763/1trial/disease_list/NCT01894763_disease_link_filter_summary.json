@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:41:53",
+  "trial_id": "NCT01894763",
+  "contextual": {
+    "_id": "NCT01894763",
+    "title": "Prospective Comparison of Large vs. Small Diameter Esophageal Stents for Palliation of Malignant Dysphagia",
+    "text": "Summary: Esophageal cancer often causes difficulty swallowing (dysphagia) that can be relieved by placement of a stent (a flexible, expandable tube that props open the blockage caused by the cancer). Stents are effective but can cause complications. Stents come in different diameters. The purpose of this study is to learn if stents of different diameters are more or less effective for treatment of dysphagia caused by esophageal cancer.\nInclusion criteria: inclusion criteria: \n\n age ≥ 18 years \n\n dysphagia due to unresectable esophageal cancer \n\n participant resides within 50 km of Tenwek Hospital \n\n tumor is ≤ 9 cm in length and > 2 cm distal to the upper esophageal sphincter (UES) \n\n no esophago-respiratory fistula (ERF) or suspected perforation is present \n\n \nExclusion criteria: : \n\n unable to provide written informed consent",
+    "metadata": {
+      "brief_title": "Prospective Comparison of Large vs. Small Diameter Esophageal Stents for Palliation of Malignant Dysphagia",
+      "phase": "Phase 1",
+      "drugs": "['Self-expandable metal stent']",
+      "drugs_list": [
+        "Self-expandable metal stent"
+      ],
+      "diseases": "['Esophageal Cancer']",
+      "diseases_list": [
+        "Esophageal Cancer"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n age ≥ 18 years \n\n dysphagia due to unresectable esophageal cancer \n\n participant resides within 50 km of Tenwek Hospital \n\n tumor is ≤ 9 cm in length and > 2 cm distal to the upper esophageal sphincter (UES) \n\n no esophago-respiratory fistula (ERF) or suspected perforation is present \n\n ",
+      "exclusion_criteria": ": \n\n unable to provide written informed consent",
+      "brief_summary": "Esophageal cancer often causes difficulty swallowing (dysphagia) that can be relieved by placement of a stent (a flexible, expandable tube that props open the blockage caused by the cancer). Stents are effective but can cause complications. Stents come in different diameters. The purpose of this study is to learn if stents of different diameters are more or less effective for treatment of dysphagia caused by esophageal cancer."
+    }
+  },
+  "linked_result": {
+    "Esophageal Cancer": {
+      "conceptId": "363402007",
+      "preferred_term": "Malignant tumor of esophagus",
+      "fully_specified_name": "Malignant tumor of esophagus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the esophagus.",
+      "best_match_term": "Esophageal cancer",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Esophageal Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Esophageal Cancer": {
+      "disease": "Esophageal Cancer",
+      "conceptId": "363402007",
+      "preferred_term": "Malignant tumor of esophagus",
+      "fully_specified_name": "Malignant tumor of esophagus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the esophagus.",
+      "best_match_term": "Esophageal cancer"
+    }
+  }
+}

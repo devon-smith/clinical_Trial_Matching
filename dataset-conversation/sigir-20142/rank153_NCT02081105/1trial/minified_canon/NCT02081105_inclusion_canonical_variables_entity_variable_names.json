@@ -1,0 +1,12 @@
+[
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_has_undergone_insertion_of_endotracheal_tube_now",
+  "patient_has_finding_of_no_sensitivity_to_pain_now",
+  "patient_is_undergoing_sedation_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_acute_respiratory_distress_syndrome_now",
+  "patient_has_undergone_plain_chest_x_ray_inthehistory",
+  "patient_has_finding_of_pneumothorax_now",
+  "patient_pleural_effusion_value_recorded_now_withunit_milliliters",
+  "patient_has_childbearing_potential_now"
+]

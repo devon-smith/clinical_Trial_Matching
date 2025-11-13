@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T22:32:13",
+  "trial_id": "NCT00192218",
+  "contextual": {
+    "_id": "NCT00192218",
+    "title": "Study to Evaluate the Effectiveness of FluMist Vaccination in a School-Based Intervention Program",
+    "text": "Summary: To measure the effectiveness of influenza vaccination in school children by comparing, between target(i.e., children are offered FluMist) and control (i.e., children are not offered FluMist) school families.\nInclusion criteria: inclusion criteria: \n\n Healthy children enrolled in the target schools. \n\n Written informed consent obtained from the child's parent(s) if they agree to participate. \n\n \nExclusion criteria: : \n\n History of severe hypersensitivity (anaphylactic response) to egg products or previous FluMist \n\n FluMist is licensed exclusively for use in healthy individuals age 5-49 years. Therefore children for whom annual receipt of inactivated influenza vaccine for specific medical condition(s) is recommended will not be eligible. These conditions include: \n\n Asthma, other chronic pulmonary diseases, kidney disease, metabolic disease, heart disease, or hemoglobinopathy \n\n Immunosuppression of child \n\n Severe immunosuppression of a household member \n\n Pregnancy \n\n Past history of Guillian-Barre Syndrome \n\n Aspirin therapy within 1 month prior to FluMist or the anticipated use of aspirin containing products for one month after FluMist administration \n\n Administration of any inactivated vaccine within 2 weeks or any live vaccine within 4 weeks prior to receipt of FluMist \n\n Received anti-influenza medication in the past 48 hours \n\n Fever in the past 72 hours \n\n Moderate to severe nasal congestion (inability to breathe through the nose) or acute phase URI symptoms until the congestion has improved",
+    "metadata": {
+      "brief_title": "Study to Evaluate the Effectiveness of FluMist Vaccination in a School-Based Intervention Program",
+      "phase": "Phase 4",
+      "drugs": "['FluMist']",
+      "drugs_list": [
+        "FluMist"
+      ],
+      "diseases": "['Influenza']",
+      "diseases_list": [
+        "Influenza"
+      ],
+      "enrollment": "3022.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Healthy children enrolled in the target schools. \n\n Written informed consent obtained from the child's parent(s) if they agree to participate. \n\n ",
+      "exclusion_criteria": ": \n\n History of severe hypersensitivity (anaphylactic response) to egg products or previous FluMist \n\n FluMist is licensed exclusively for use in healthy individuals age 5-49 years. Therefore children for whom annual receipt of inactivated influenza vaccine for specific medical condition(s) is recommended will not be eligible. These conditions include: \n\n Asthma, other chronic pulmonary diseases, kidney disease, metabolic disease, heart disease, or hemoglobinopathy \n\n Immunosuppression of child \n\n Severe immunosuppression of a household member \n\n Pregnancy \n\n Past history of Guillian-Barre Syndrome \n\n Aspirin therapy within 1 month prior to FluMist or the anticipated use of aspirin containing products for one month after FluMist administration \n\n Administration of any inactivated vaccine within 2 weeks or any live vaccine within 4 weeks prior to receipt of FluMist \n\n Received anti-influenza medication in the past 48 hours \n\n Fever in the past 72 hours \n\n Moderate to severe nasal congestion (inability to breathe through the nose) or acute phase URI symptoms until the congestion has improved",
+      "brief_summary": "To measure the effectiveness of influenza vaccination in school children by comparing, between target(i.e., children are offered FluMist) and control (i.e., children are not offered FluMist) school families."
+    }
+  },
+  "linked_result": {
+    "Influenza": {
+      "conceptId": "6142004",
+      "preferred_term": "Influenza",
+      "fully_specified_name": "Influenza (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acute viral infection in humans involving the respiratory tract. It is marked by inflammation of the NASAL MUCOSA; the PHARYNX; and conjunctiva, and by headache and severe, often generalized, myalgia.",
+      "best_match_term": "Influenza",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Influenza": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Influenza": {
+      "disease": "Influenza",
+      "conceptId": "6142004",
+      "preferred_term": "Influenza",
+      "fully_specified_name": "Influenza (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acute viral infection in humans involving the respiratory tract. It is marked by inflammation of the NASAL MUCOSA; the PHARYNX; and conjunctiva, and by headache and severe, often generalized, myalgia.",
+      "best_match_term": "Influenza"
+    }
+  }
+}

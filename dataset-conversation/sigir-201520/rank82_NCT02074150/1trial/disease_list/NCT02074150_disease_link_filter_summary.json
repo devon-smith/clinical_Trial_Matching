@@ -1,0 +1,77 @@
+{
+  "generated": "2025-10-20T22:41:37",
+  "trial_id": "NCT02074150",
+  "contextual": {
+    "_id": "NCT02074150",
+    "title": "ASIS for Botox in Upper Limb Spasticity",
+    "text": "Summary: Botox act on nerve endings, yet there are no nerve endings inside the muscle, where they are typically injected. All nerves terminate on the fascia, where ASIS device can precisely deliver Botox by creating that subdermal bloodless space, between the skin and muscle. Thus enhancing and prolonging Botox's efficacy, at the same time prevent it's unnecessary adverse reactions and distant spread, especially since Botox has no reason to travel to the rest of the body any way.\nInclusion criteria: inclusion criteria: \n\n Adults with history of stroke that resulted in a unilateral, upper-limb focal spasticity \n\n Wrist flexor tone of more than 2 and finger flexor tone of more than 2 as measured by the Ashworth Scale \n\n Ability to understand and follow verbal directions \n\n At least 1 functional disability item (hygiene, dressing, pain, or limb posture) with a rating of more than 2 on the Disability Assessment Scale (DAS) \n\n At least 1 functional task score at Day 0 that met the following criteria: nail filing less than 6, hand cleaning less than 6, holding a water bottle less than 4, brushing teeth less than 4, holding fruit (small, medium, or large equals no. \n\n \nExclusion criteria: : \n\n Stroke within 6 months of the study enrollment visit \n\n Females who are pregnant, nursing, or planning a pregnancy during the study period or who are not using a reliable means of contraception \n\n Previous or current Botox therapy of any type in the study limb \n\n Any medical condition that may put the patient at increased risk with Botox exposure or any other disorder that might have interfered with neuromuscular function \n\n Presence of fixed contracture of the study limb \n\n Limited use of the wrist and fingers",
+    "metadata": {
+      "brief_title": "ASIS for Botox in Upper Limb Spasticity",
+      "phase": "Phase 1; Phase 2",
+      "drugs": "['Gadolinium', 'Gadolinium', 'Gadolinium', 'Efficacy of Botox intramuscularly at Week 6', 'Efficacy of Botox intramuscularly at Week 12,', 'Efficacy of Botox intramuscularly at Week 18', 'Efficacy of Botox intramuscularly at Week 24', 'Efficacy of Botox intramuscularly at Week 30', 'Efficacy of Botox subdermally at Week 6', 'Efficacy of Botox subdermally at Week 12', 'Efficacy of Botox subdermally at Week 18', 'Efficacy of Botox subdermally at Week 24', 'Efficacy of Botox subdermally at Week 30', 'Adverse Reactions of Botox intramuscularly', 'Adverse Reactions of Botox subdermally']",
+      "drugs_list": [
+        "Gadolinium",
+        "Gadolinium",
+        "Gadolinium",
+        "Efficacy of Botox intramuscularly at Week 6",
+        "Efficacy of Botox intramuscularly at Week 12,",
+        "Efficacy of Botox intramuscularly at Week 18",
+        "Efficacy of Botox intramuscularly at Week 24",
+        "Efficacy of Botox intramuscularly at Week 30",
+        "Efficacy of Botox subdermally at Week 6",
+        "Efficacy of Botox subdermally at Week 12",
+        "Efficacy of Botox subdermally at Week 18",
+        "Efficacy of Botox subdermally at Week 24",
+        "Efficacy of Botox subdermally at Week 30",
+        "Adverse Reactions of Botox intramuscularly",
+        "Adverse Reactions of Botox subdermally"
+      ],
+      "diseases": "['Upper Limb Spasticity Unilaterally in Adults With History of Stroke', 'Increased Muscle Tone in Elbow, Wrist, Finger, and Thumb Flexors.']",
+      "diseases_list": [
+        "Upper Limb Spasticity Unilaterally in Adults With History of Stroke",
+        "Increased Muscle Tone in Elbow",
+        "Wrist",
+        "Finger",
+        "and Thumb Flexors."
+      ],
+      "enrollment": "60.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Adults with history of stroke that resulted in a unilateral, upper-limb focal spasticity \n\n Wrist flexor tone of more than 2 and finger flexor tone of more than 2 as measured by the Ashworth Scale \n\n Ability to understand and follow verbal directions \n\n At least 1 functional disability item (hygiene, dressing, pain, or limb posture) with a rating of more than 2 on the Disability Assessment Scale (DAS) \n\n At least 1 functional task score at Day 0 that met the following criteria: nail filing less than 6, hand cleaning less than 6, holding a water bottle less than 4, brushing teeth less than 4, holding fruit (small, medium, or large equals no. \n\n ",
+      "exclusion_criteria": ": \n\n Stroke within 6 months of the study enrollment visit \n\n Females who are pregnant, nursing, or planning a pregnancy during the study period or who are not using a reliable means of contraception \n\n Previous or current Botox therapy of any type in the study limb \n\n Any medical condition that may put the patient at increased risk with Botox exposure or any other disorder that might have interfered with neuromuscular function \n\n Presence of fixed contracture of the study limb \n\n Limited use of the wrist and fingers",
+      "brief_summary": "Botox act on nerve endings, yet there are no nerve endings inside the muscle, where they are typically injected. All nerves terminate on the fascia, where ASIS device can precisely deliver Botox by creating that subdermal bloodless space, between the skin and muscle. Thus enhancing and prolonging Botox's efficacy, at the same time prevent it's unnecessary adverse reactions and distant spread, especially since Botox has no reason to travel to the rest of the body any way."
+    }
+  },
+  "linked_result": {
+    "Upper Limb Spasticity Unilaterally in Adults With History of Stroke": {
+      "conceptId": "291121000119103",
+      "preferred_term": "Monoplegia of arm as late effect of stroke",
+      "fully_specified_name": "Monoplegia of upper limb due to and following cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Monoplegia of upper limb due to and following cerebrovascular accident",
+      "match_reason": "Ancestor"
+    },
+    "Increased Muscle Tone in Elbow, Wrist, Finger, and Thumb Flexors.": {
+      "conceptId": "56731001",
+      "preferred_term": "Increased muscle tone",
+      "fully_specified_name": "Increased muscle tone (finding)",
+      "type": "Clinical finding",
+      "definition": "Abnormal increase in skeletal or smooth muscle tone. Skeletal muscle hypertonicity may be associated with PYRAMIDAL TRACT lesions or BASAL GANGLIA DISEASES.",
+      "best_match_term": "High muscle tone",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Increased Muscle Tone in Elbow, Wrist, Finger, and Thumb Flexors.": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Increased Muscle Tone in Elbow, Wrist, Finger, and Thumb Flexors.": {
+      "disease": "Increased Muscle Tone in Elbow, Wrist, Finger, and Thumb Flexors.",
+      "conceptId": "56731001",
+      "preferred_term": "Increased muscle tone",
+      "fully_specified_name": "Increased muscle tone (finding)",
+      "type": "Clinical finding",
+      "definition": "Abnormal increase in skeletal or smooth muscle tone. Skeletal muscle hypertonicity may be associated with PYRAMIDAL TRACT lesions or BASAL GANGLIA DISEASES.",
+      "best_match_term": "High muscle tone"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+# Volitional Swallowing in Stroke Patients With Chronic Dysphagia
+**NCT**: `NCT00306501`
+## Brief Summary
+This study will compare several techniques designed to improve the ability to swallow in stroke patients with chronic dysphagia (difficulty swallowing).~Healthy volunteers 20 to 60 years of age and people 20 to 90 years of age who have had a stroke resulting in swallowing problems may be eligible for this study. Volunteers are screened with a medical history, physical examination, and urine test for women to rule out pregnancy. Stroke patients are screened additionally with a chest x-ray, physical examination, cognitive screening, swallowing questionnaires, nasoendoscopy (examination of the nasal passages in the back of the throat using a lighted telescopic instrument) and FEESST (passage of a thin, flexible telescope through the nose to the voice box), videofluoroscopy (x-ray of the head and neck during swallowing) and button press training (learning how to press a button on a table in coordination with swallowing).~All participants undergo the following procedures:~Transcranial magnetic stimulation (TMS): A metal coil is placed on the head and sends a pulse of energy to the brain through the scalp. The muscle response to the pulse is recorded from the muscles in the throat that are associated with swallowing.~Electromyography: A needle is used to insert tiny wires in specific muscles of the throat to record the muscle response to the TMS pulses.~Magnetic resonance imaging (MRI): During brain MRI scanning, subjects lie quietly and images of the brain are taken.~In addition to the above tests, stroke patients undergo the following:~Water test: The subject swallows a small amount of water and the number of times required to clear the throat or cough is counted. This test is repeated five times.~Experimental training. Subjects have a total of 12 60-minute training sessions, one session a day for up to 5 sessions a week.~Button press training: The subject swallows small amounts of water. A device placed on the throat senses when swallowing occurs. The subject learns how to coordinate pressing a button on a table in coordination with swallowing.~Vibrotactile stimulator training: A device that uses a buzzing vibration is placed on the throat at times during the swallowing training.~Transcranial direct current stimulation (tDCS): Wires attached to sponge electrodes are placed on the scalp and over the eye. Small electric currents are delivered to areas of the brain involved with swallowing. This is done at times during the swallowing training.~Participants may receive one of several combinations of training approaches; all receive the volitional (button-press) training. Within 5 days of completing training, subjects repeat the tests. TMS, MRI, MEG and x-ray study of swallowing function are also repeated to see if any changes have occurred in the brain or in the ability to swallow after training. Patients are contacted by telephone and in writing 3 and 6 months after training for follow-up on their swallowing status and oral intake.
+## Inclusion Criteria
+inclusion criteria FOR PATIENTS WITH CHRONIC PHARYNGEAL DYSPHAGIA DUE TO BRAIN INJURY 
+
+ Inclusive ages of 20 to 90 
+
+ History of brain injury. No specific localization of brain injury or brain injuyr type will be required for inclusion. 
+
+ Evidence of pharyngeal phase dysphagia following the brain injury that places the patient at risk for aspiration. 
+
+ Risk for aspiration or frank aspiration will be based on the medical history and evidence from a videofluoroscopic swallowing study. Absence of aspiration is not cause for exclusion if the risk for aspiration is deemed present due to impaired pharyngeal phase of swallowing as judged by an expert experienced in the evaluation of dysphagia. The patient may demonstrate evidence of aspiration or the risk for aspiration on any consistency, perhaps secondary to pharyngeal retention. Aspiration is defined as passage of food, liquid, or secretions into the trachea below the level of the vocal folds. If the patient does not demonstrate either aspiration or a risk for aspiration in previous assessment or during preliminary studies, they will be excluded from participation. 
+
+ Impaired pharyngeal phase of swallowing may be evidenced by pharyngeal delay, reduced hyolaryngeal elevation, reduced laryngeal closure, and reduced pharyngeal clearance of the bolus. Signs of pharyngeal delay include hesitation of the material in the vallecula at times with spill over into the pyriform sinuses. Normally the pharyngeal phase of swallowing should be less than 1 second from onset until the passage of the bolus into the posterior pharynx. Delay will be defined as the time from the entry of the head of the bolus into the oropharynx at the posterior tongue and the lower posterior edge of the angle of the mandible, to the beginning of elevation of the hyoid bone and larynx. Reduced hyolaryngeal elevation will be identified when the larynx is not protected and remains open to the bolus during a swallow on videoendoscopy. Reduced pharyngeal clearance will be seen during videoendoscopy when the bolus remains in the vallecula and/or pyriform sinuses. 
+
+ Chronic dysphagia can occur as a result of stroke or other brain injury. Lesions in either hemisphere and/or the brain stem may cause dysphagia and aspiration. 
+
+ Duration of 4 months or greater post-onset of brain injury and dysphagia 
+
+ Participants may have other health problems such as diabetes mellitus, arteriosclerotic coronary vascular disease and a history of smoking. These will not be cause for automatic exclusion, but will be examined on an individual basis by the otolaryngologist in determining the potential risk and benefit to the individual participant. 
+
+ Prior history of tracheostomy or current tracheostomy is not a cause for exclusion. The otolaryngologist will determine if an individual with tracheostomy is an appropriate candidate for the study. 
+
+ Patients should be on a restricted diet level. This may include a diet level restriction such as pureed or chopped solids, restrictions to certain solid food items, or thickened liquids. Patients may be receiving alternate means of nutrition and hydration (PEG, PEJ, PPN/TPN) for some or all of their nutritional intake, or they may be receiving all of their nutritional intake orally. 
+
+ Adequate cognitive skills as demonstrated by a Mini-Mental State Examination (MMSE) score greater than or equal to 23 
+
+ Stable medical status. 
+
+ To determine if a patient has stable vital signs prior to admission, the patient will be asked to provide a letter from their physician stating that the patient is medically stable and may participate in the study.
+## Exclusion Criteria
+FOR PATIENTS WITH CHRONIC PHARYNGEAL DYSPHAGIA DUE TO BRAIN INJURY 
+
+ History of epileptic seizure 
+
+ If subject is participating in TMS, history of cardiac rhythm condition (including heart murmur or cardiac arrhythmia) or a cardiac pacemaker in place 
+
+ History of progressive neurodegenerative disorders, such as progressive dementia, Parkinson's Disease, multiple sclerosis, and amyotrophic lateral sclerosis 
+
+ History of malignant brain tumor 
+
+ Severe oral phase swallowing deficits that prevent bolus retention in the oral cavity 
+
+ Esophageal motility disorder preventing food or liquid from adequately moving through the esophagus into the stomach 
+
+ Pregnant women will be excluded from participation because the study involves radiation exposure and MRI scanning (for anatomical co-registration purposes). 
+
+ Current psychiatric disorder other than depression, as evidenced by being under the care of a psychiatrist, or on medications for treatment of a psychiatric disorder. Examples of psychiatric disorders to be excluded are: somatoform disorders, conversion disorders, schizophrenia or bipolar disorder. 
+
+ Presence of metal in the body (prostheses, electrodes, shrapnel, aneurism clips, other medical hardware) and presence of certain tattoos with ferromagnetic metal or permanent makeup will exclude subjects due to the exposure to high magnetic force through MRI/fMRI/TMS procedures due to the exposure to high magnetic force in both procedures. Subjects who were metal workers as a previous occupation will also be excluded only from MRI/TMS procedures due to the possibility of unknown/undetected metal in their body. Subjects who have MRI-compatible metal implants (e.g. titanium implants) may still be considered as candidates for MRI study, pending review and discussion of documentation regarding the device material and safety of the device in a 3T scanner by the Principal Investigator, LSS staff physician, and an MRI technologist. 
+
+ No person with the presence of broken skin in the area of the tDCS or TMS stimulating electrodes will participate in tDCS or TMS. 
+
+ Inability to coordinate button or switch press with swallow (as determined during screening) will exclude patients from participating 
+
+ Presence of severe pulmonary disease, defined in pulmonary testing by a Forced Expiratory Volume in 1 sec (FEV1) less than 50% of the predicted value based on sex, age and height may exclude patients from participating at the discretion of the Internal Medicine Service. 
+
+ inclusion criteria FOR HEALTHY VOLUNTEERS (FOR PILOT STUDY) 
+
+ Inclusive ages of 18 to 75 
+
+ The healthy volunteers will be without cardiac, neurological, psychiatric, speech or swallowing problems as determined by medical history and examination by a physician
+## Full Text
+Summary: This study will compare several techniques designed to improve the ability to swallow in stroke patients with chronic dysphagia (difficulty swallowing).~Healthy volunteers 20 to 60 years of age and people 20 to 90 years of age who have had a stroke resulting in swallowing problems may be eligible for this study. Volunteers are screened with a medical history, physical examination, and urine test for women to rule out pregnancy. Stroke patients are screened additionally with a chest x-ray, physical examination, cognitive screening, swallowing questionnaires, nasoendoscopy (examination of the nasal passages in the back of the throat using a lighted telescopic instrument) and FEESST (passage of a thin, flexible telescope through the nose to the voice box), videofluoroscopy (x-ray of the head and neck during swallowing) and button press training (learning how to press a button on a table in coordination with swallowing).~All participants undergo the following procedures:~Transcranial magnetic stimulation (TMS): A metal coil is placed on the head and sends a pulse of energy to the brain through the scalp. The muscle response to the pulse is recorded from the muscles in the throat that are associated with swallowing.~Electromyography: A needle is used to insert tiny wires in specific muscles of the throat to record the muscle response to the TMS pulses.~Magnetic resonance imaging (MRI): During brain MRI scanning, subjects lie quietly and images of the brain are taken.~In addition to the above tests, stroke patients undergo the following:~Water test: The subject swallows a small amount of water and the number of times required to clear the throat or cough is counted. This test is repeated five times.~Experimental training. Subjects have a total of 12 60-minute training sessions, one session a day for up to 5 sessions a week.~Button press training: The subject swallows small amounts of water. A device placed on the throat senses when swallowing occurs. The subject learns how to coordinate pressing a button on a table in coordination with swallowing.~Vibrotactile stimulator training: A device that uses a buzzing vibration is placed on the throat at times during the swallowing training.~Transcranial direct current stimulation (tDCS): Wires attached to sponge electrodes are placed on the scalp and over the eye. Small electric currents are delivered to areas of the brain involved with swallowing. This is done at times during the swallowing training.~Participants may receive one of several combinations of training approaches; all receive the volitional (button-press) training. Within 5 days of completing training, subjects repeat the tests. TMS, MRI, MEG and x-ray study of swallowing function are also repeated to see if any changes have occurred in the brain or in the ability to swallow after training. Patients are contacted by telephone and in writing 3 and 6 months after training for follow-up on their swallowing status and oral intake.
+Inclusion criteria: inclusion criteria FOR PATIENTS WITH CHRONIC PHARYNGEAL DYSPHAGIA DUE TO BRAIN INJURY 
+
+ Inclusive ages of 20 to 90 
+
+ History of brain injury. No specific localization of brain injury or brain injuyr type will be required for inclusion. 
+
+ Evidence of pharyngeal phase dysphagia following the brain injury that places the patient at risk for aspiration. 
+
+ Risk for aspiration or frank aspiration will be based on the medical history and evidence from a videofluoroscopic swallowing study. Absence of aspiration is not cause for exclusion if the risk for aspiration is deemed present due to impaired pharyngeal phase of swallowing as judged by an expert experienced in the evaluation of dysphagia. The patient may demonstrate evidence of aspiration or the risk for aspiration on any consistency, perhaps secondary to pharyngeal retention. Aspiration is defined as passage of food, liquid, or secretions into the trachea below the level of the vocal folds. If the patient does not demonstrate either aspiration or a risk for aspiration in previous assessment or during preliminary studies, they will be excluded from participation. 
+
+ Impaired pharyngeal phase of swallowing may be evidenced by pharyngeal delay, reduced hyolaryngeal elevation, reduced laryngeal closure, and reduced pharyngeal clearance of the bolus. Signs of pharyngeal delay include hesitation of the material in the vallecula at times with spill over into the pyriform sinuses. Normally the pharyngeal phase of swallowing should be less than 1 second from onset until the passage of the bolus into the posterior pharynx. Delay will be defined as the time from the entry of the head of the bolus into the oropharynx at the posterior tongue and the lower posterior edge of the angle of the mandible, to the beginning of elevation of the hyoid bone and larynx. Reduced hyolaryngeal elevation will be identified when the larynx is not protected and remains open to the bolus during a swallow on videoendoscopy. Reduced pharyngeal clearance will be seen during videoendoscopy when the bolus remains in the vallecula and/or pyriform sinuses. 
+
+ Chronic dysphagia can occur as a result of stroke or other brain injury. Lesions in either hemisphere and/or the brain stem may cause dysphagia and aspiration. 
+
+ Duration of 4 months or greater post-onset of brain injury and dysphagia 
+
+ Participants may have other health problems such as diabetes mellitus, arteriosclerotic coronary vascular disease and a history of smoking. These will not be cause for automatic exclusion, but will be examined on an individual basis by the otolaryngologist in determining the potential risk and benefit to the individual participant. 
+
+ Prior history of tracheostomy or current tracheostomy is not a cause for exclusion. The otolaryngologist will determine if an individual with tracheostomy is an appropriate candidate for the study. 
+
+ Patients should be on a restricted diet level. This may include a diet level restriction such as pureed or chopped solids, restrictions to certain solid food items, or thickened liquids. Patients may be receiving alternate means of nutrition and hydration (PEG, PEJ, PPN/TPN) for some or all of their nutritional intake, or they may be receiving all of their nutritional intake orally. 
+
+ Adequate cognitive skills as demonstrated by a Mini-Mental State Examination (MMSE) score greater than or equal to 23 
+
+ Stable medical status. 
+
+ To determine if a patient has stable vital signs prior to admission, the patient will be asked to provide a letter from their physician stating that the patient is medically stable and may participate in the study. 
+
+ 
+Exclusion criteria:  FOR PATIENTS WITH CHRONIC PHARYNGEAL DYSPHAGIA DUE TO BRAIN INJURY 
+
+ History of epileptic seizure 
+
+ If subject is participating in TMS, history of cardiac rhythm condition (including heart murmur or cardiac arrhythmia) or a cardiac pacemaker in place 
+
+ History of progressive neurodegenerative disorders, such as progressive dementia, Parkinson's Disease, multiple sclerosis, and amyotrophic lateral sclerosis 
+
+ History of malignant brain tumor 
+
+ Severe oral phase swallowing deficits that prevent bolus retention in the oral cavity 
+
+ Esophageal motility disorder preventing food or liquid from adequately moving through the esophagus into the stomach 
+
+ Pregnant women will be excluded from participation because the study involves radiation exposure and MRI scanning (for anatomical co-registration purposes). 
+
+ Current psychiatric disorder other than depression, as evidenced by being under the care of a psychiatrist, or on medications for treatment of a psychiatric disorder. Examples of psychiatric disorders to be excluded are: somatoform disorders, conversion disorders, schizophrenia or bipolar disorder. 
+
+ Presence of metal in the body (prostheses, electrodes, shrapnel, aneurism clips, other medical hardware) and presence of certain tattoos with ferromagnetic metal or permanent makeup will exclude subjects due to the exposure to high magnetic force through MRI/fMRI/TMS procedures due to the exposure to high magnetic force in both procedures. Subjects who were metal workers as a previous occupation will also be excluded only from MRI/TMS procedures due to the possibility of unknown/undetected metal in their body. Subjects who have MRI-compatible metal implants (e.g. titanium implants) may still be considered as candidates for MRI study, pending review and discussion of documentation regarding the device material and safety of the device in a 3T scanner by the Principal Investigator, LSS staff physician, and an MRI technologist. 
+
+ No person with the presence of broken skin in the area of the tDCS or TMS stimulating electrodes will participate in tDCS or TMS. 
+
+ Inability to coordinate button or switch press with swallow (as determined during screening) will exclude patients from participating 
+
+ Presence of severe pulmonary disease, defined in pulmonary testing by a Forced Expiratory Volume in 1 sec (FEV1) less than 50% of the predicted value based on sex, age and height may exclude patients from participating at the discretion of the Internal Medicine Service. 
+
+ inclusion criteria FOR HEALTHY VOLUNTEERS (FOR PILOT STUDY) 
+
+ Inclusive ages of 18 to 75 
+
+ The healthy volunteers will be without cardiac, neurological, psychiatric, speech or swallowing problems as determined by medical history and examination by a physician

@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_dysphagia_now",
+  "patient_can_undergo_biopsy_now",
+  "patient_can_undergo_esophagogastroduodenoscopy_now"
+]

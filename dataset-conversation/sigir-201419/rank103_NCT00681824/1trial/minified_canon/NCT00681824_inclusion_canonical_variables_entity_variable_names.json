@@ -1,0 +1,13 @@
+[
+  "patient_has_diagnosis_of_benign_neoplastic_disease_now",
+  "patient_has_diagnosis_of_chiari_malformation_type_i_now",
+  "patient_has_diagnosis_of_congenital_vascular_malformation_now",
+  "patient_is_undergoing_craniectomy_now",
+  "patient_is_undergoing_craniotomy_now",
+  "patient_is_exposed_to_dural_substitute_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_mastoidectomy_inthehistory",
+  "patient_is_exposed_to_autologous_fascia_lata_now",
+  "patient_can_undergo_closure_by_suture_now"
+]

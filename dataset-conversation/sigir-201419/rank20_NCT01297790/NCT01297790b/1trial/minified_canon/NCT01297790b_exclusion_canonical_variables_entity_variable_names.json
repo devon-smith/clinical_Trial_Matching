@@ -1,0 +1,15 @@
+[
+  "patient_has_symptoms_of_upper_respiratory_infection_inthepast6weeks",
+  "patient_has_taken_pharmaceutical_biologic_product_inthepast4weeks",
+  "patient_is_taking_angiotensin_converting_enzyme_inhibitor_now",
+  "patient_is_taking_codeine_phosphate_now",
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_is_taking_morphine_sulfate_now",
+  "patient_has_diagnosis_of_disorder_of_respiratory_system_now",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_litre",
+  "patient_has_diagnosis_of_cerebrovascular_accident_now",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_diagnosis_of_multiple_sclerosis_now",
+  "patient_has_diagnosis_of_parkinson_s_disease_now"
+]

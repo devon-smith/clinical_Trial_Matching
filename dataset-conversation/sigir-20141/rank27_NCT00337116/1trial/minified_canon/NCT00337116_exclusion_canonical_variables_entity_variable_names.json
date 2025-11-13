@@ -1,0 +1,17 @@
+[
+  "patient_has_finding_of_left_bundle_branch_block_now",
+  "patient_has_finding_of_st_segment_elevation_now",
+  "patient_st_segment_elevation_contiguous_leads_count_recorded_now",
+  "patient_st_segment_elevation_value_recorded_now_withunit_millivolt",
+  "patient_has_finding_of_acute_pulmonary_edema_now",
+  "patient_has_finding_of_sepsis_now",
+  "patient_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_cardiogenic_shock_now",
+  "patient_is_pregnant_now",
+  "patient_is_exposed_to_nitrate_salt_now",
+  "patient_has_finding_of_aortic_valve_stenosis_now",
+  "patient_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_has_allergy_to_nitrate_salt_now",
+  "patient_has_hypersensitivity_to_nitrate_salt_now",
+  "patient_has_finding_of_cerebrovascular_accident_now"
+]

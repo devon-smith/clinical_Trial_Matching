@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T22:04:34",
+  "trial_id": "NCT01041261",
+  "contextual": {
+    "_id": "NCT01041261",
+    "title": "Effects of a Novel Dietary Intervention on Body Composition After Laparoscopic Gastric Bypass Surgery",
+    "text": "Summary: We propose to compare the standard of care with the use of a novel medical food in 6 bariatric surgery patients by measuring outcomes of body composition, quality of life, hair loss, muscle strength, resting energy expenditure, and biochemical parameters.\nInclusion criteria: inclusion criteria: \n\n Obese and morbidly obese women (BMI 30 - 50) \n\n 25 years and older undergoing laparoscopic gastric bypass surgery \n\n Present with at least either metabolic syndrome or diabetes \n\n \nExclusion criteria: : \n\n Have smoked in the past 4 weeks \n\n Pregnant \n\n Allergic or intolerant to ingredients used in the study (e.g. soy and THIAA) \n\n There is a sound medical, psychiatric and/or social reason as determined by the Principal Investigator (PI) that makes the subject unsuitable for the study",
+    "metadata": {
+      "brief_title": "Effects of a Novel Dietary Intervention on Body Composition After Laparoscopic Gastric Bypass Surgery",
+      "phase": "",
+      "drugs": "['BariatrX Essentials 360 Treatment']",
+      "drugs_list": [
+        "BariatrX Essentials 360 Treatment"
+      ],
+      "diseases": "['Obesity', 'Morbid Obesity']",
+      "diseases_list": [
+        "Obesity",
+        "Morbid Obesity"
+      ],
+      "enrollment": "7.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Obese and morbidly obese women (BMI 30 - 50) \n\n 25 years and older undergoing laparoscopic gastric bypass surgery \n\n Present with at least either metabolic syndrome or diabetes \n\n ",
+      "exclusion_criteria": ": \n\n Have smoked in the past 4 weeks \n\n Pregnant \n\n Allergic or intolerant to ingredients used in the study (e.g. soy and THIAA) \n\n There is a sound medical, psychiatric and/or social reason as determined by the Principal Investigator (PI) that makes the subject unsuitable for the study",
+      "brief_summary": "We propose to compare the standard of care with the use of a novel medical food in 6 bariatric surgery patients by measuring outcomes of body composition, quality of life, hair loss, muscle strength, resting energy expenditure, and biochemical parameters."
+    }
+  },
+  "linked_result": {
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    },
+    "Morbid Obesity": {
+      "conceptId": "238136002",
+      "preferred_term": "Morbid obesity",
+      "fully_specified_name": "Morbid obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The condition of weighing two, three, or more times the ideal weight, so called because it is associated with many serious and life-threatening disorders. In the BODY MASS INDEX, morbid obesity is defined as having a BMI greater than 40.0 kg/m2.",
+      "best_match_term": "Morbid obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Obesity": 1,
+    "Morbid Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    },
+    "Morbid Obesity": {
+      "disease": "Morbid Obesity",
+      "conceptId": "238136002",
+      "preferred_term": "Morbid obesity",
+      "fully_specified_name": "Morbid obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The condition of weighing two, three, or more times the ideal weight, so called because it is associated with many serious and life-threatening disorders. In the BODY MASS INDEX, morbid obesity is defined as having a BMI greater than 40.0 kg/m2.",
+      "best_match_term": "Morbid obesity"
+    }
+  }
+}

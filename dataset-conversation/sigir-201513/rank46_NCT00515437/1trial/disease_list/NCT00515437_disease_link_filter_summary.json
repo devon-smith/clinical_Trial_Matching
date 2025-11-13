@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:40:36",
+  "trial_id": "NCT00515437",
+  "contextual": {
+    "_id": "NCT00515437",
+    "title": "A Multi-Center Study of MYOBLOC for the Treatment of Sialorrhea in Parkinson's Disease Patients",
+    "text": "Summary: To determine safety, tolerability and preliminary efficacy of intraglandular injections of MYOBLOC for the treatment of sialorrhea in Parkinsons' Disease patients\nInclusion criteria: inclusion criteria: \n\n Parkinsons' Disease patients with Sialorrhea for at least 3 months \n\n \nExclusion criteria: : \n\n Patients with non-idiopathic PD parkinsonism \n\n Patients previously exposed to botulinum toxins \n\n Patients with a history of aspiration pneumonia, moderate/severe choking and/or moderate/severe dysphagia \n\n Patients with prior salivary gland surgery",
+    "metadata": {
+      "brief_title": "A Multi-Center Study of MYOBLOC for the Treatment of Sialorrhea in Parkinson's Disease Patients",
+      "phase": "Phase 2",
+      "drugs": "['Botulinum Toxin Type B (Myobloc)', 'Matched placebo to Myobloc']",
+      "drugs_list": [
+        "Botulinum Toxin Type B (Myobloc)",
+        "Matched placebo to Myobloc"
+      ],
+      "diseases": "['Drooling']",
+      "diseases_list": [
+        "Drooling"
+      ],
+      "enrollment": "54.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Parkinsons' Disease patients with Sialorrhea for at least 3 months \n\n ",
+      "exclusion_criteria": ": \n\n Patients with non-idiopathic PD parkinsonism \n\n Patients previously exposed to botulinum toxins \n\n Patients with a history of aspiration pneumonia, moderate/severe choking and/or moderate/severe dysphagia \n\n Patients with prior salivary gland surgery",
+      "brief_summary": "To determine safety, tolerability and preliminary efficacy of intraglandular injections of MYOBLOC for the treatment of sialorrhea in Parkinsons' Disease patients"
+    }
+  },
+  "linked_result": {
+    "Drooling": {
+      "conceptId": "62718007",
+      "preferred_term": "Dribbling from mouth",
+      "fully_specified_name": "Dribbling from mouth (finding)",
+      "type": "Clinical finding",
+      "definition": "Saliva spilling out of the mouth.",
+      "best_match_term": "Drooling",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Drooling": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Drooling": {
+      "disease": "Drooling",
+      "conceptId": "62718007",
+      "preferred_term": "Dribbling from mouth",
+      "fully_specified_name": "Dribbling from mouth (finding)",
+      "type": "Clinical finding",
+      "definition": "Saliva spilling out of the mouth.",
+      "best_match_term": "Drooling"
+    }
+  }
+}

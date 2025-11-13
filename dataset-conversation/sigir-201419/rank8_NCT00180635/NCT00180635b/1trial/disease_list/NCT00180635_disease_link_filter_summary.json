@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-22T21:25:41",
+  "trial_id": "NCT00180635",
+  "contextual": {
+    "_id": "NCT00180635",
+    "title": "NO Donors and Inhibitors to Study Imbalance of Nitrogen Stress and Antioxidant Defense in COPD",
+    "text": "Summary: The primary aim of this study is to investigate the effects of oral and inhaled administration of L-arginine and of inhaled aminoguanidine on bronchial and alveolar exhaled NO and NO metabolites in exhaled breath condensate, induced sputum, nasal lavage and mouth wash fluid in healthy non-smokers, current smokers and patients with COPD.\nInclusion criteria: inclusion criteria: \n\n Healthy non-smokers \n\n Normal spirometry (FEV1 >90 % predicted; exhaled NO bigger than or equal to 10 ppb; flow 50 ml/s) \n\n At risk (current smokers) \n\n Normal spirometry, with or without chronic symptoms (cough, sputum production) \n\n FEV1 reversibility of <15% after inhaled beta2-agonists* \n\n Moderate COPD \n\n FEV1 greater than or equal to 30% and < 80% \n\n FEV1/FVC < 70% predicted \n\n FEV1 reversibility of <15% after inhaled beta2-agonists \n\n With or without chronic symptoms (cough, sputum production, dyspnea) \n\n Able to comprehend and grant a written informed consent \n\n \nExclusion criteria: : \n\n Concomitant use or pre-treatment within the last 4 weeks with oral steroids \n\n Respiratory infection within 4 weeks prior to entry into the trial \n\n Females who are pregnant or lactating \n\n History of current or past drug or alcohol abuse",
+    "metadata": {
+      "brief_title": "NO Donors and Inhibitors to Study Imbalance of Nitrogen Stress and Antioxidant Defense in COPD",
+      "phase": "",
+      "drugs": "['Aminoguanidine', 'Placebos']",
+      "drugs_list": [
+        "Aminoguanidine",
+        "Placebos"
+      ],
+      "diseases": "['Chronic Obstructive Pulmonary Disease']",
+      "diseases_list": [
+        "Chronic Obstructive Pulmonary Disease"
+      ],
+      "enrollment": "30.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Healthy non-smokers \n\n Normal spirometry (FEV1 >90 % predicted; exhaled NO bigger than or equal to 10 ppb; flow 50 ml/s) \n\n At risk (current smokers) \n\n Normal spirometry, with or without chronic symptoms (cough, sputum production) \n\n FEV1 reversibility of <15% after inhaled beta2-agonists* \n\n Moderate COPD \n\n FEV1 greater than or equal to 30% and < 80% \n\n FEV1/FVC < 70% predicted \n\n FEV1 reversibility of <15% after inhaled beta2-agonists \n\n With or without chronic symptoms (cough, sputum production, dyspnea) \n\n Able to comprehend and grant a written informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Concomitant use or pre-treatment within the last 4 weeks with oral steroids \n\n Respiratory infection within 4 weeks prior to entry into the trial \n\n Females who are pregnant or lactating \n\n History of current or past drug or alcohol abuse",
+      "brief_summary": "The primary aim of this study is to investigate the effects of oral and inhaled administration of L-arginine and of inhaled aminoguanidine on bronchial and alveolar exhaled NO and NO metabolites in exhaled breath condensate, induced sputum, nasal lavage and mouth wash fluid in healthy non-smokers, current smokers and patients with COPD."
+    }
+  },
+  "linked_result": {
+    "Chronic Obstructive Pulmonary Disease": {
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Chronic Obstructive Pulmonary Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chronic Obstructive Pulmonary Disease": {
+      "disease": "Chronic Obstructive Pulmonary Disease",
+      "conceptId": "13645005",
+      "preferred_term": "Chronic obstructive lung disease",
+      "fully_specified_name": "Chronic obstructive lung disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease of chronic diffuse irreversible airflow obstruction. Subcategories of COPD include CHRONIC BRONCHITIS and PULMONARY EMPHYSEMA.",
+      "best_match_term": "Chronic obstructive pulmonary disease"
+    }
+  }
+}

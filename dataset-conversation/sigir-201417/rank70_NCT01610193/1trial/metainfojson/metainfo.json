@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT01610193",
+  "contextual": {
+    "_id": "NCT01610193",
+    "title": "The Value of Pancreatic Stone Protein in Predicting Acute Appendicitis",
+    "text": "Summary: PSP (Pancreatic Stone Protein) is a compound naturally produced mainly in the pancreas and the gut. There is evidence from experimental and clinical trials that the levels of PSP in the blood rise in the presence of inflammation or infection. What is not yet well known about PSP is whether it is superior to other established blood tests (e.g. WBC or CRP) in predicting appendicitis in patients that present at the emergency room with abdominal pain and a clinical suspicion of appendicitis.\nInclusion criteria: inclusion criteria: \n\n Age >18 years of age (subject to the current ethics approval protocol, may change) \n\n Clinical suspicion of appendicitis as the primary or differential diagnoses \n\n Patients able to provide informed consent \n\n \nExclusion criteria: : \n\n Age <18 years of age (subject to the current ethics approval protocol, may change) \n\n Abdominal discomfort without tenderness or rebound or clinical suspicion of appendicitis \n\n Pregnancy \n\n Patients with impaired consciousness \n\n Patients not able to provide informed consent \n\n Patients that will receive an appendicectomy as part of another elective procedure",
+    "metadata": {
+      "brief_title": "The Value of Pancreatic Stone Protein in Predicting Acute Appendicitis",
+      "phase": "",
+      "drugs": "['Appendicectomy']",
+      "drugs_list": [
+        "Appendicectomy"
+      ],
+      "diseases": "['Appendicitis', 'Abdominal Pain', 'Abdominal Sepsis']",
+      "diseases_list": [
+        "Appendicitis",
+        "Abdominal Pain",
+        "Abdominal Sepsis"
+      ],
+      "enrollment": "245.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age >18 years of age (subject to the current ethics approval protocol, may change) \n\n Clinical suspicion of appendicitis as the primary or differential diagnoses \n\n Patients able to provide informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Age <18 years of age (subject to the current ethics approval protocol, may change) \n\n Abdominal discomfort without tenderness or rebound or clinical suspicion of appendicitis \n\n Pregnancy \n\n Patients with impaired consciousness \n\n Patients not able to provide informed consent \n\n Patients that will receive an appendicectomy as part of another elective procedure",
+      "brief_summary": "PSP (Pancreatic Stone Protein) is a compound naturally produced mainly in the pancreas and the gut. There is evidence from experimental and clinical trials that the levels of PSP in the blood rise in the presence of inflammation or infection. What is not yet well known about PSP is whether it is superior to other established blood tests (e.g. WBC or CRP) in predicting appendicitis in patients that present at the emergency room with abdominal pain and a clinical suspicion of appendicitis."
+    }
+  }
+}

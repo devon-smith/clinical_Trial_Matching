@@ -1,0 +1,13 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_clinical_signs_of_cyanosis_now",
+  "patient_has_clinical_signs_of_daytime_somnolence_now",
+  "patient_has_diagnosis_of_obstructive_sleep_apnea_syndrome_now",
+  "patient_has_clinical_signs_of_restless_sleep_now",
+  "patient_has_clinical_signs_of_snoring_now",
+  "patient_has_finding_of_cyanosis_now",
+  "patient_has_finding_of_daytime_somnolence_now",
+  "patient_has_finding_of_restless_sleep_now",
+  "patient_has_finding_of_snoring_now",
+  "patient_has_undergone_polysomnography_now_outcome_is_abnormal"
+]

@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT01173666",
+  "contextual": {
+    "_id": "NCT01173666",
+    "title": "Stenting of Renal Artery Stenosis in Coronary Artery Disease Study",
+    "text": "Summary: The Stenting of Renal Artery Stenosis in Coronary Artery Disease (RASCAD) study is a randomized controlled trial designed to evaluate the effect of renal artery stenting+medical therapy versus medical therapy alone on left ventricular mass progression and cardiovascular morbidity and mortality in patients affected by coronary artery disease and renal artery stenosis.\nInclusion criteria: inclusion criteria: \n\n ischemic heart disease \n\n angiographic diagnosis of atherosclerotic RAS >50% and ≤80% \n\n \nExclusion criteria: : \n\n Atherosclerotic RAS>80% \n\n RAS secondary to fibromuscular dysplasia \n\n AMI \n\n single functioning kidney and/or sCr >4 mg/dl \n\n severe aortic valve stenosis \n\n aortic aneurism necessitating surgery",
+    "metadata": {
+      "brief_title": "Stenting of Renal Artery Stenosis in Coronary Artery Disease Study",
+      "phase": "Phase 3",
+      "drugs": "['stenting angioplasty plus medical therapy', 'Medical therapy']",
+      "drugs_list": [
+        "stenting angioplasty plus medical therapy",
+        "Medical therapy"
+      ],
+      "diseases": "['Renal Artery Stenosis', 'Left Ventricular Hypertrophy']",
+      "diseases_list": [
+        "Renal Artery Stenosis",
+        "Left Ventricular Hypertrophy"
+      ],
+      "enrollment": "168.0",
+      "inclusion_criteria": "inclusion criteria: \n\n ischemic heart disease \n\n angiographic diagnosis of atherosclerotic RAS >50% and ≤80% \n\n ",
+      "exclusion_criteria": ": \n\n Atherosclerotic RAS>80% \n\n RAS secondary to fibromuscular dysplasia \n\n AMI \n\n single functioning kidney and/or sCr >4 mg/dl \n\n severe aortic valve stenosis \n\n aortic aneurism necessitating surgery",
+      "brief_summary": "The Stenting of Renal Artery Stenosis in Coronary Artery Disease (RASCAD) study is a randomized controlled trial designed to evaluate the effect of renal artery stenting+medical therapy versus medical therapy alone on left ventricular mass progression and cardiovascular morbidity and mortality in patients affected by coronary artery disease and renal artery stenosis."
+    }
+  }
+}

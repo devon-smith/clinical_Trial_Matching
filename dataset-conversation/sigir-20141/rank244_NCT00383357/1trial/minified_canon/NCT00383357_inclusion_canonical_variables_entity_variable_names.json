@@ -1,0 +1,13 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_gastroesophageal_reflux_disease_now",
+  "patient_has_finding_of_hypercholesterolemia_now",
+  "patient_has_finding_of_hypertensive_disorder_now",
+  "patient_has_finding_of_hyperthyroidism_now",
+  "patient_has_finding_of_hypothyroidism_now",
+  "patient_has_finding_of_irritable_bowel_syndrome_now",
+  "patient_has_finding_of_large_prostate_now",
+  "patient_has_finding_of_urinary_incontinence_now"
+]

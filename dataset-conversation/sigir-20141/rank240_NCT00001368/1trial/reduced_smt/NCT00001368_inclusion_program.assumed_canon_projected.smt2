@@ -1,0 +1,31 @@
+;; ===================== PROJECTED CANON (QE) =====================
+;; Each clause below is entailed by Proj = ∃W.F over the canonical vocabulary.
+;; Units appear first for clarity; OR-clauses (SAT-filtered) follow.
+;; ==================================================================
+
+;; Additional OR-clauses (SAT-filtered)
+(assert (or (not patient_has_diagnosis_of_hypercholesterolemia_inthepast1years) (not patient_has_diagnosis_of_hypertensive_disorder_inthepast1years)))
+(assert (or patient_has_diagnosis_of_hypercholesterolemia_inthepast1years (not patient_has_diagnosis_of_hypertensive_disorder_inthepast1years)))
+(assert (or (not patient_has_diagnosis_of_diabetes_mellitus_inthepast1years) (not patient_has_diagnosis_of_hypertensive_disorder_inthepast1years)))
+(assert (or patient_has_diagnosis_of_diabetes_mellitus_inthepast1years (not patient_has_diagnosis_of_hypertensive_disorder_inthepast1years)))
+(assert (or patient_has_diagnosis_of_cerebrovascular_accident_inthehistory (not patient_has_diagnosis_of_hypertensive_disorder_inthepast1years)))
+(assert (or (not patient_has_diagnosis_of_hypertensive_disorder_inthepast1years) patient_has_diagnosis_of_transient_cerebral_ischemia_inthehistory))
+(assert (or (not patient_has_diagnosis_of_hypercholesterolemia_inthepast1years) patient_has_diagnosis_of_hypertensive_disorder_inthepast1years))
+(assert (or patient_has_diagnosis_of_hypercholesterolemia_inthepast1years patient_has_diagnosis_of_hypertensive_disorder_inthepast1years))
+(assert (or (not patient_has_diagnosis_of_diabetes_mellitus_inthepast1years) patient_has_diagnosis_of_hypertensive_disorder_inthepast1years))
+(assert (or patient_has_diagnosis_of_diabetes_mellitus_inthepast1years patient_has_diagnosis_of_hypertensive_disorder_inthepast1years))
+(assert (or patient_has_diagnosis_of_cerebrovascular_accident_inthehistory patient_has_diagnosis_of_hypertensive_disorder_inthepast1years))
+(assert (or patient_has_diagnosis_of_hypertensive_disorder_inthepast1years patient_has_diagnosis_of_transient_cerebral_ischemia_inthehistory))
+(assert (or (not patient_has_diagnosis_of_diabetes_mellitus_inthepast1years) (not patient_has_diagnosis_of_hypercholesterolemia_inthepast1years)))
+(assert (or patient_has_diagnosis_of_diabetes_mellitus_inthepast1years (not patient_has_diagnosis_of_hypercholesterolemia_inthepast1years)))
+(assert (or patient_has_diagnosis_of_cerebrovascular_accident_inthehistory (not patient_has_diagnosis_of_hypercholesterolemia_inthepast1years)))
+(assert (or (not patient_has_diagnosis_of_hypercholesterolemia_inthepast1years) patient_has_diagnosis_of_transient_cerebral_ischemia_inthehistory))
+(assert (or (not patient_has_diagnosis_of_diabetes_mellitus_inthepast1years) patient_has_diagnosis_of_hypercholesterolemia_inthepast1years))
+(assert (or patient_has_diagnosis_of_diabetes_mellitus_inthepast1years patient_has_diagnosis_of_hypercholesterolemia_inthepast1years))
+(assert (or patient_has_diagnosis_of_cerebrovascular_accident_inthehistory patient_has_diagnosis_of_hypercholesterolemia_inthepast1years))
+(assert (or patient_has_diagnosis_of_hypercholesterolemia_inthepast1years patient_has_diagnosis_of_transient_cerebral_ischemia_inthehistory))
+(assert (or patient_has_diagnosis_of_cerebrovascular_accident_inthehistory (not patient_has_diagnosis_of_diabetes_mellitus_inthepast1years)))
+(assert (or (not patient_has_diagnosis_of_diabetes_mellitus_inthepast1years) patient_has_diagnosis_of_transient_cerebral_ischemia_inthehistory))
+(assert (or patient_has_diagnosis_of_cerebrovascular_accident_inthehistory patient_has_diagnosis_of_diabetes_mellitus_inthepast1years))
+(assert (or patient_has_diagnosis_of_diabetes_mellitus_inthepast1years patient_has_diagnosis_of_transient_cerebral_ischemia_inthehistory))
+(assert (or patient_has_diagnosis_of_cerebrovascular_accident_inthehistory patient_has_diagnosis_of_transient_cerebral_ischemia_inthehistory))

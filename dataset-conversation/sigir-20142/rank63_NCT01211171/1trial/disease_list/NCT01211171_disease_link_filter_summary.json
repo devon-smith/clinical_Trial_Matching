@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:29:48",
+  "trial_id": "NCT01211171",
+  "contextual": {
+    "_id": "NCT01211171",
+    "title": "COugh Among Hypertensive Patients Treated With Telmisartan, Who Had to Stop previoUs ACE-I Treatment Due to couGH in Poland",
+    "text": "Summary: In the light of ONTARGET and TRANSCEND studies results, it would be interesting to investigate the real-life telmisartan treatment tolerability. It is well known and accepted that the Real-life setting is much more adequate to reflect the antihypertensive and safety properties of the drug in comparison to the organized and scheduled setting of the clinical trial. Because there are not much data on the cough in relation to telmisartan, therefore it would we worth to observe the cough frequency and general treatment tolerance in patients treated with telmisartan, who had to stop their previous ACE-I treatment due to cough.\nInclusion criteria: inclusion criteria: - hypertension \n\n age > 18 \n\n ACE-I related cough \nExclusion criteria: : - Current treatment with telmisartan \n\n Cholestatic disorders and severe hepatic failure \n\n Allergy to telmisartan \n\n Pregnancy and lactation period",
+    "metadata": {
+      "brief_title": "COugh Among Hypertensive Patients Treated With Telmisartan, Who Had to Stop previoUs ACE-I Treatment Due to couGH in Poland",
+      "phase": "",
+      "drugs": "['Telmisartan (Kinzal/Pritor, BAY68-9291)']",
+      "drugs_list": [
+        "Telmisartan (Kinzal/Pritor",
+        "BAY68-9291)"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "2498.0",
+      "inclusion_criteria": "inclusion criteria: - hypertension \n\n age > 18 \n\n ACE-I related cough ",
+      "exclusion_criteria": ": - Current treatment with telmisartan \n\n Cholestatic disorders and severe hepatic failure \n\n Allergy to telmisartan \n\n Pregnancy and lactation period",
+      "brief_summary": "In the light of ONTARGET and TRANSCEND studies results, it would be interesting to investigate the real-life telmisartan treatment tolerability. It is well known and accepted that the Real-life setting is much more adequate to reflect the antihypertensive and safety properties of the drug in comparison to the organized and scheduled setting of the clinical trial. Because there are not much data on the cough in relation to telmisartan, therefore it would we worth to observe the cough frequency and general treatment tolerance in patients treated with telmisartan, who had to stop their previous ACE-I treatment due to cough."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

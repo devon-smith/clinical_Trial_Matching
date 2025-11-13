@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_black_water_fever_now",
+  "patient_has_finding_of_falciparum_malaria_now",
+  "patient_body_temperature_value_recorded_now_withunit_celsius",
+  "patient_has_finding_of_fever_inthepast24hours"
+]

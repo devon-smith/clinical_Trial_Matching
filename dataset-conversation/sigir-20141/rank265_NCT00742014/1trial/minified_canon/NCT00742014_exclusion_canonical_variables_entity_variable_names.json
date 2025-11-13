@@ -1,0 +1,8 @@
+[
+  "patient_pulmonary_artery_pressure_value_recorded_now_withunit_mm_hg",
+  "patient_has_finding_of_right_ventricular_failure_now",
+  "patient_has_finding_of_ventricular_arrhythmia_inthehistory",
+  "patient_has_contraindication_to_sildenafil_now",
+  "patient_has_finding_of_social_personal_history_observable_now",
+  "patient_is_pregnant_now"
+]

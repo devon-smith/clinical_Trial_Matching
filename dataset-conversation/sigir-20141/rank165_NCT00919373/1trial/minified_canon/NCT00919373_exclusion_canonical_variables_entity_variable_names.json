@@ -1,0 +1,19 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_left_ventricular_thrombus_now",
+  "patient_has_diagnosis_of_acute_myocardial_infarction_inthepast1months",
+  "patient_has_finding_of_heart_failure_now",
+  "patient_has_diagnosis_of_heart_valve_disorder_now",
+  "patient_has_finding_of_preinfarction_syndrome_now",
+  "patient_serum_creatinine_level_finding_value_recorded_now_withunit_mmol_per_l",
+  "patient_has_finding_of_blood_coagulation_disorder_now",
+  "patient_has_finding_of_thrombocytopenic_disorder_now",
+  "patient_has_finding_of_contraindication_to_heparin_now",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_acute_disease_now",
+  "patient_has_finding_of_sepsis_now",
+  "patient_has_finding_of_disease_now",
+  "patient_has_finding_of_problem_now",
+  "patient_has_finding_of_ventricular_tachycardia_now",
+  "patient_has_finding_of_bundle_branch_reentrant_ventricular_tachycardia_now"
+]

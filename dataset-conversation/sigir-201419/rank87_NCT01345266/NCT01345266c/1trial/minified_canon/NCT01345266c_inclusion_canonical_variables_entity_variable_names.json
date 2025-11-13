@@ -1,0 +1,17 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_is_pregnant_inthepast0days",
+  "patient_has_undergone_high_resolution_ct_of_lungs_inthehistory",
+  "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+  "patient_body_weight_value_recorded_now_withunit_kilograms",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_inthehistory",
+  "patient_cigarette_pack_years_value_recorded_inthehistory_withunit_pack_years",
+  "patient_has_finding_of_ex_smoker_now",
+  "patient_has_finding_of_smoker_now",
+  "patient_has_finding_of_acute_respiratory_disease_inthehistory",
+  "patient_has_diagnosis_of_carcinoma_of_lung_inthehistory",
+  "patient_bronchodilator_value_recorded_inthefuture_withunit_hours"
+]

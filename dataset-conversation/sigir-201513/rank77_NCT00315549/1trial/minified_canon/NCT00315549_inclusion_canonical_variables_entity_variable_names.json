@@ -1,0 +1,19 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_has_finding_of_contraception_now",
+  "patient_has_finding_of_normal_period_now",
+  "patient_has_diagnosis_of_acute_tonsillitis_now",
+  "patient_has_undergone_antimicrobial_susceptibility_test_now",
+  "patient_has_undergone_bacterial_culture_now",
+  "patient_has_undergone_microbial_identification_kit_rapid_strep_method_now_outcome_is_positive",
+  "patient_has_diagnosis_of_streptococcal_sore_throat_now",
+  "patient_has_finding_of_cervical_lymphadenopathy_now",
+  "patient_has_finding_of_edema_of_uvula_now",
+  "patient_has_finding_of_exudate_on_tonsils_now",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_red_throat_now",
+  "patient_has_finding_of_sore_throat_symptom_now",
+  "patient_has_finding_of_swallowing_painful_now"
+]

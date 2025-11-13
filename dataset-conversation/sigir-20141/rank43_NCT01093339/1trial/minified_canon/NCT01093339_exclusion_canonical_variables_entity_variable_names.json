@@ -1,0 +1,16 @@
+[
+  "patient_has_undergone_upper_gastrointestinal_operation_inthehistory",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_is_taking_opioid_receptor_agonist_containing_product_now",
+  "patient_is_taking_benzodiazepine_containing_product_now",
+  "patient_is_exposed_to_psychotropic_agent_now",
+  "patient_has_finding_of_mental_health_impairment_inthehistory",
+  "patient_has_finding_of_finding_relating_to_alcohol_drinking_behavior_inthehistory",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_finding_of_neuropathy_now",
+  "patient_has_finding_of_seizure_now",
+  "patient_has_finding_of_sleep_apnea_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_has_childbearing_potential_now"
+]

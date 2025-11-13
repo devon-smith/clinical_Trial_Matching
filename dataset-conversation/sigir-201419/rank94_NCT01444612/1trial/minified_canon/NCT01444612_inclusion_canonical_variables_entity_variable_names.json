@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+  "patient_has_undergone_surgical_procedure_now",
+  "patient_has_undergone_anticoagulant_therapy_now"
+]

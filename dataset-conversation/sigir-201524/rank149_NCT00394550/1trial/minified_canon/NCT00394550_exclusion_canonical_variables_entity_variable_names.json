@@ -1,0 +1,11 @@
+[
+  "patient_has_undergone_adenoid_excision_inthehistory",
+  "patient_has_undergone_tonsillectomy_inthehistory",
+  "patient_has_finding_of_stridor_now",
+  "patient_has_finding_of_respiratory_distress_now",
+  "patient_recurrent_pneumonia_value_recorded_inthehistory_withunit_count",
+  "patient_has_finding_of_cyst_of_larynx_now",
+  "patient_has_finding_of_vocal_cord_paralysis_now",
+  "patient_has_finding_of_neoplastic_disease_now",
+  "patient_has_finding_of_paradoxical_movement_of_vocal_cord_on_respiration_now"
+]

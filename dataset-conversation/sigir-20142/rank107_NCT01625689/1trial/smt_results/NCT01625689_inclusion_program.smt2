@@ -1,0 +1,63 @@
+;; ===================== Declarations for the criterion (REQ 0) =====================
+(declare-const patient_has_finding_of_fit_and_well_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient is currently healthy (fit and well).","when_to_set_to_false":"Set to false if the patient is currently not healthy (not fit and well).","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient is currently healthy (fit and well).","meaning":"Boolean indicating whether the patient is currently healthy (fit and well)."}  ;; "be a child who is healthy"
+(declare-const patient_sex_is_male_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient's current sex is documented as male.","when_to_set_to_false":"Set to false if the patient's current sex is documented as not male (e.g., female or other).","when_to_set_to_null":"Set to null if the patient's current sex is unknown, not documented, or cannot be determined.","meaning":"Boolean value indicating whether the patient's current sex is male."}  ;; "be male"
+(declare-const patient_sex_is_female_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient's current sex is documented as female.","when_to_set_to_false":"Set to false if the patient's current sex is documented as not female (e.g., male or other).","when_to_set_to_null":"Set to null if the patient's current sex is unknown, not documented, or cannot be determined.","meaning":"Boolean value indicating whether the patient's current sex is female."}  ;; "be female"
+(declare-const patient_age_value_recorded_now_in_months Real) ;; {"when_to_set_to_value":"Set to the patient's current age in months if it is known and documented.","when_to_set_to_null":"Set to null if the patient's current age in months is unknown, not documented, or cannot be determined.","meaning":"Numeric value indicating the patient's current age in months."}  ;; "be aged ≥ 24 months AND ≤ 59 months at the time of study vaccination"
+
+;; ===================== Constraint Assertions (REQ 0) =====================
+;; Component 0: "be a child who is healthy"
+(assert
+  (! patient_has_finding_of_fit_and_well_now
+     :named REQ0_COMPONENT0_OTHER_REQUIREMENTS)) ;; "To be included, the patient must be a child who is healthy."
+
+;; Component 1: "(be male) OR (be female)"
+(assert
+  (! (or patient_sex_is_male_now patient_sex_is_female_now)
+     :named REQ0_COMPONENT1_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE)) ;; "To be included, the patient must (be male) OR (be female)."
+
+;; Component 2: "be aged ≥ 24 months AND ≤ 59 months at the time of study vaccination"
+(assert
+  (! (and (>= patient_age_value_recorded_now_in_months 24.0)
+          (<= patient_age_value_recorded_now_in_months 59.0))
+     :named REQ0_COMPONENT2_PRESCREEN_NOTES_MUST_COMPLETELY_SUFFICE)) ;; "To be included, the patient must be aged ≥ 24 months AND ≤ 59 months at the time of study vaccination."
+
+;; ===================== Declarations for the criterion (REQ 1) =====================
+(declare-const parent_primary_residence_in_kamalapur_catchment_at_study_vaccination Bool) ;; {"when_to_set_to_true":"Set to true if the patient's parent has their primary residence within the Kamalapur surveillance site catchment area at the time of study vaccination.","when_to_set_to_false":"Set to false if the patient's parent does not have their primary residence within the Kamalapur surveillance site catchment area at the time of study vaccination.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient's parent has their primary residence within the Kamalapur surveillance site catchment area at the time of study vaccination.","meaning":"Boolean indicating whether the patient's parent has their primary residence within the Kamalapur surveillance site catchment area at the time of study vaccination."} ;; "a parent whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination"
+(declare-const legal_guardian_primary_residence_in_kamalapur_catchment_at_study_vaccination Bool) ;; {"when_to_set_to_true":"Set to true if the patient's legal guardian has their primary residence within the Kamalapur surveillance site catchment area at the time of study vaccination.","when_to_set_to_false":"Set to false if the patient's legal guardian does not have their primary residence within the Kamalapur surveillance site catchment area at the time of study vaccination.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient's legal guardian has their primary residence within the Kamalapur surveillance site catchment area at the time of study vaccination.","meaning":"Boolean indicating whether the patient's legal guardian has their primary residence within the Kamalapur surveillance site catchment area at the time of study vaccination."} ;; "a legal guardian whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination"
+(declare-const parent_primary_residence_in_kamalapur_catchment_at_study_vaccination@@intends_presence_in_kamalapur_catchment_for_trial_duration Bool) ;; {"when_to_set_to_true":"Set to true if the patient's parent, whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination, intends to be present in the Kamalapur surveillance site catchment area for the duration of the trial.","when_to_set_to_false":"Set to false if the patient's parent, whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination, does not intend to be present in the Kamalapur surveillance site catchment area for the duration of the trial.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient's parent, whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination, intends to be present in the Kamalapur surveillance site catchment area for the duration of the trial.","meaning":"Boolean indicating whether the patient's parent, whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination, intends to be present in the Kamalapur surveillance site catchment area for the duration of the trial."} ;; "a parent whose intention is to be present in the Kamalapur surveillance site catchment area for the duration of the trial"
+(declare-const legal_guardian_primary_residence_in_kamalapur_catchment_at_study_vaccination@@intends_presence_in_kamalapur_catchment_for_trial_duration Bool) ;; {"when_to_set_to_true":"Set to true if the patient's legal guardian, whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination, intends to be present in the Kamalapur surveillance site catchment area for the duration of the trial.","when_to_set_to_false":"Set to false if the patient's legal guardian, whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination, does not intend to be present in the Kamalapur surveillance site catchment area for the duration of the trial.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient's legal guardian, whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination, intends to be present in the Kamalapur surveillance site catchment area for the duration of the trial.","meaning":"Boolean indicating whether the patient's legal guardian, whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination, intends to be present in the Kamalapur surveillance site catchment area for the duration of the trial."} ;; "a legal guardian whose intention is to be present in the Kamalapur surveillance site catchment area for the duration of the trial"
+
+;; ===================== Auxiliary Assertions (REQ 1) =====================
+;; Qualifier variables imply corresponding stem variables
+(assert
+  (! (=> parent_primary_residence_in_kamalapur_catchment_at_study_vaccination@@intends_presence_in_kamalapur_catchment_for_trial_duration
+         parent_primary_residence_in_kamalapur_catchment_at_study_vaccination)
+     :named REQ1_AUXILIARY0)) ;; "parent whose intention is to be present in Kamalapur for the trial duration" implies "parent whose primary residence is in Kamalapur at study vaccination"
+
+(assert
+  (! (=> legal_guardian_primary_residence_in_kamalapur_catchment_at_study_vaccination@@intends_presence_in_kamalapur_catchment_for_trial_duration
+         legal_guardian_primary_residence_in_kamalapur_catchment_at_study_vaccination)
+     :named REQ1_AUXILIARY1)) ;; "legal guardian whose intention is to be present in Kamalapur for the trial duration" implies "legal guardian whose primary residence is in Kamalapur at study vaccination"
+
+;; ===================== Constraint Assertions (REQ 1) =====================
+;; Component 0: (a parent OR a legal guardian) whose primary residence is within Kamalapur catchment at study vaccination
+(assert
+  (! (or parent_primary_residence_in_kamalapur_catchment_at_study_vaccination
+         legal_guardian_primary_residence_in_kamalapur_catchment_at_study_vaccination)
+     :named REQ1_COMPONENT0_OTHER_REQUIREMENTS)) ;; "must have (a parent OR a legal guardian) whose primary residence is within the Kamalapur surveillance site catchment area at the time of study vaccination"
+
+;; Component 1: (a parent OR a legal guardian) whose intention is to be present in Kamalapur for the trial duration
+(assert
+  (! (or parent_primary_residence_in_kamalapur_catchment_at_study_vaccination@@intends_presence_in_kamalapur_catchment_for_trial_duration
+         legal_guardian_primary_residence_in_kamalapur_catchment_at_study_vaccination@@intends_presence_in_kamalapur_catchment_for_trial_duration)
+     :named REQ1_COMPONENT1_OTHER_REQUIREMENTS)) ;; "must have (a parent OR a legal guardian) whose intention is to be present in the Kamalapur surveillance site catchment area for the duration of the trial"
+
+;; ===================== Declarations for the criterion (REQ 2) =====================
+(declare-const parent_is_willing_to_provide_written_informed_consent_prior_to_study_vaccination Bool) ;; {"when_to_set_to_true":"Set to true if the patient's parent is willing to provide written informed consent prior to the patient's study vaccination.","when_to_set_to_false":"Set to false if the patient's parent is not willing to provide written informed consent prior to the patient's study vaccination.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient's parent is willing to provide written informed consent prior to the patient's study vaccination.","meaning":"Boolean indicating whether the patient's parent is willing to provide written informed consent prior to the patient's study vaccination."}  ;; "a parent ... who is willing to provide written informed consent prior to the patient's study vaccination"
+(declare-const legal_guardian_is_willing_to_provide_written_informed_consent_prior_to_study_vaccination Bool) ;; {"when_to_set_to_true":"Set to true if the patient's legal guardian is willing to provide written informed consent prior to the patient's study vaccination.","when_to_set_to_false":"Set to false if the patient's legal guardian is not willing to provide written informed consent prior to the patient's study vaccination.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient's legal guardian is willing to provide written informed consent prior to the patient's study vaccination.","meaning":"Boolean indicating whether the patient's legal guardian is willing to provide written informed consent prior to the patient's study vaccination."}  ;; "a legal guardian ... who is willing to provide written informed consent prior to the patient's study vaccination"
+
+;; ===================== Constraint Assertions (REQ 2) =====================
+(assert
+  (! (or parent_is_willing_to_provide_written_informed_consent_prior_to_study_vaccination
+         legal_guardian_is_willing_to_provide_written_informed_consent_prior_to_study_vaccination)
+     :named REQ2_COMPONENT0_NOT_REQUIREMNET_OR_ALWAYS_SATISFIABLE_WITH_ACTION)) ;; "the patient must have (a parent OR a legal guardian) who is willing to provide written informed consent prior to the patient's study vaccination"

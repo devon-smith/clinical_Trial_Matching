@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T22:03:19",
+  "trial_id": "NCT01665521",
+  "contextual": {
+    "_id": "NCT01665521",
+    "title": "Efficacy Evaluation of the HEART Pathway in Emergency Department Patients With Acute Chest Pain",
+    "text": "Summary: Our research will examine a chest pain care strategy, called the HEART pathway, which is designed to correctly identify Emergency Department patients at high-risk for cardiovascular events, likely to benefit from further testing, and patients at very-low-risk for cardiovascular events, who may be safely discharged home. By using an individual's risk assessment to determining testing, we hope to improve the quality and efficiency of the care delivered to Emergency Department patients with chest pain. Our study will determine if the HEART pathway, which combines a clinical decision rule, the HEART score, and two serial troponin measurements, will reduce stress testing and cardiovascular imaging, decrease hospital length of stay, and reduce cost compared to usual care, while maintaining safety.\nInclusion criteria: inclusion criteria: \n\n Age greater than or equal to 21 years \n\n Chest discomfort or other symptoms consistent with possible ACS \n\n The treating physician feels the patient could be discharged home if cardiac disease was excluded \n\n \nExclusion criteria: : \n\n New ST-segment elevation in contiguous leads on any electrocardiogram (>/= 1 mV) \n\n Unstable vitals signs: symptomatic hypotension at the time of enrollment (systolic < 90 mm Hg), tachycardia (HR>120), bradycardia (HR<40), and hypoxemia (<90% pulse-oximetry on room air or normal home oxygen flow rate) \n\n Terminal diagnosis with life expectancy less than 1 year \n\n A non-cardiac medical, surgical, or psychiatric illness determined by the provider to require admission, increase risk of objective cardiac testing, or prevent immediate discharge following negative testing. \n\n Prior enrollment \n\n Incapacity or unwillingness to provide consent and comply with study procedures \n\n Non-English speaking \n\n Sub-study I & II \n\n inclusion criteria: \n\n ED attending physicians \n\n ",
+    "metadata": {
+      "brief_title": "Efficacy Evaluation of the HEART Pathway in Emergency Department Patients With Acute Chest Pain",
+      "phase": "",
+      "drugs": "['HEART Pathway']",
+      "drugs_list": [
+        "HEART Pathway"
+      ],
+      "diseases": "['Acute Coronary Syndrome', 'Chest Pain']",
+      "diseases_list": [
+        "Acute Coronary Syndrome",
+        "Chest Pain"
+      ],
+      "enrollment": "282.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age greater than or equal to 21 years \n\n Chest discomfort or other symptoms consistent with possible ACS \n\n The treating physician feels the patient could be discharged home if cardiac disease was excluded \n\n ",
+      "exclusion_criteria": ": \n\n New ST-segment elevation in contiguous leads on any electrocardiogram (>/= 1 mV) \n\n Unstable vitals signs: symptomatic hypotension at the time of enrollment (systolic < 90 mm Hg), tachycardia (HR>120), bradycardia (HR<40), and hypoxemia (<90% pulse-oximetry on room air or normal home oxygen flow rate) \n\n Terminal diagnosis with life expectancy less than 1 year \n\n A non-cardiac medical, surgical, or psychiatric illness determined by the provider to require admission, increase risk of objective cardiac testing, or prevent immediate discharge following negative testing. \n\n Prior enrollment \n\n Incapacity or unwillingness to provide consent and comply with study procedures \n\n Non-English speaking \n\n Sub-study I & II \n\n inclusion criteria: \n\n ED attending physicians \n\n ",
+      "brief_summary": "Our research will examine a chest pain care strategy, called the HEART pathway, which is designed to correctly identify Emergency Department patients at high-risk for cardiovascular events, likely to benefit from further testing, and patients at very-low-risk for cardiovascular events, who may be safely discharged home. By using an individual's risk assessment to determining testing, we hope to improve the quality and efficiency of the care delivered to Emergency Department patients with chest pain. Our study will determine if the HEART pathway, which combines a clinical decision rule, the HEART score, and two serial troponin measurements, will reduce stress testing and cardiovascular imaging, decrease hospital length of stay, and reduce cost compared to usual care, while maintaining safety."
+    }
+  },
+  "linked_result": {
+    "Acute Coronary Syndrome": {
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome",
+      "match_reason": "Exact"
+    },
+    "Chest Pain": {
+      "conceptId": "29857009",
+      "preferred_term": "Chest pain",
+      "fully_specified_name": "Chest pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Pressure, burning, or numbness in the chest.",
+      "best_match_term": "Chest pain",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Acute Coronary Syndrome": 1,
+    "Chest Pain": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Acute Coronary Syndrome": {
+      "disease": "Acute Coronary Syndrome",
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome"
+    },
+    "Chest Pain": {
+      "disease": "Chest Pain",
+      "conceptId": "29857009",
+      "preferred_term": "Chest pain",
+      "fully_specified_name": "Chest pain (finding)",
+      "type": "Clinical finding",
+      "definition": "Pressure, burning, or numbness in the chest.",
+      "best_match_term": "Chest pain"
+    }
+  }
+}

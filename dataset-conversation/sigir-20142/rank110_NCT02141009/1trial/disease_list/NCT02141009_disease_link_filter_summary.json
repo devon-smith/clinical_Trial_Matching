@@ -1,0 +1,80 @@
+{
+  "generated": "2025-10-20T23:45:48",
+  "trial_id": "NCT02141009",
+  "contextual": {
+    "_id": "NCT02141009",
+    "title": "Community Acquired Pneumonia: Outcome, Quality of Life and Immune Status",
+    "text": "Summary: Community acquired pneumonia (CAP) is an important health problem with significant morbidity, mortality and cost. The most identified pathogen in CAP is Streptococcus pneumoniae. This was also the causative agent most frequently found in the Ovidius and Triple-P study, two consecutive clinical trials initiated by the St. Antonius Hospital Nieuwegein. Diagnosis of pneumococcal pneumonia can be based on positive blood cultures, sputum cultures, urine antigen testing or a serotype specific antibody response. When pneumococcal pneumonia is diagnosed by a positive culture, a matching serotype specific antibody response is expected. However not all patients in the Ovidius and Triple-P study with a culture proven pneumococcal pneumonia showed an antibody response against the infecting pneumococcal serotype. Patients who survived pneumococcal pneumonia are considered as a high-risk population for pneumococcal disease in the future. Possibly these patients have an impaired immune response against S. pneumoniae. In this study, pneumococcal vaccination of patients with S. pneumoniae CAP in the past enables investigating their immune response after vaccination compared to patients with CAP due another causative agent. Furthermore this study provides information to determine if there is a difference in vaccination response between pneumococcal pneumonia patients who had a culture matching serotype specific antibody response and between pneumococcal pneumonia patients who failed to elicit this response previously. Possibly these latter patients had a temporarily low titre due to the infection but another explanation is that there might be a structurally impaired immune response against S. pneumoniae or certain serotypes.\nInclusion criteria: inclusion criteria: \n\n Patients who participated in the Ovidius or Triple-P study (2004-2009). \n\n Diagnosis in these studies with pneumococcal pneumonia or pneumonia due another identified organism. \n\n Age ≥ 18 years. \n\n Signing of informed consent. \n\n \nExclusion criteria: : \n\n Diagnosis of pneumonia without an identified causative organism. \n\n Fever at time of vaccination. \n\n Previous/known allergic reaction to any of the components of the vaccine given. \n\n Mentally incompetent. \n\n Previous pneumococcal conjugate vaccination. \n\n Pneumococcal polysaccharide vaccination within 6 months prior to inclusion. \n\n Clinical pneumonia within 1 month prior to inclusion.",
+    "metadata": {
+      "brief_title": "Community Acquired Pneumonia: Outcome, Quality of Life and Immune Status",
+      "phase": "Phase 4",
+      "drugs": "['Prevnar 13']",
+      "drugs_list": [
+        "Prevnar 13"
+      ],
+      "diseases": "['Pneumonia', 'Streptococcus Pneumoniae', 'Immune Response']",
+      "diseases_list": [
+        "Pneumonia",
+        "Streptococcus Pneumoniae",
+        "Immune Response"
+      ],
+      "enrollment": "60.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients who participated in the Ovidius or Triple-P study (2004-2009). \n\n Diagnosis in these studies with pneumococcal pneumonia or pneumonia due another identified organism. \n\n Age ≥ 18 years. \n\n Signing of informed consent. \n\n ",
+      "exclusion_criteria": ": \n\n Diagnosis of pneumonia without an identified causative organism. \n\n Fever at time of vaccination. \n\n Previous/known allergic reaction to any of the components of the vaccine given. \n\n Mentally incompetent. \n\n Previous pneumococcal conjugate vaccination. \n\n Pneumococcal polysaccharide vaccination within 6 months prior to inclusion. \n\n Clinical pneumonia within 1 month prior to inclusion.",
+      "brief_summary": "Community acquired pneumonia (CAP) is an important health problem with significant morbidity, mortality and cost. The most identified pathogen in CAP is Streptococcus pneumoniae. This was also the causative agent most frequently found in the Ovidius and Triple-P study, two consecutive clinical trials initiated by the St. Antonius Hospital Nieuwegein. Diagnosis of pneumococcal pneumonia can be based on positive blood cultures, sputum cultures, urine antigen testing or a serotype specific antibody response. When pneumococcal pneumonia is diagnosed by a positive culture, a matching serotype specific antibody response is expected. However not all patients in the Ovidius and Triple-P study with a culture proven pneumococcal pneumonia showed an antibody response against the infecting pneumococcal serotype. Patients who survived pneumococcal pneumonia are considered as a high-risk population for pneumococcal disease in the future. Possibly these patients have an impaired immune response against S. pneumoniae. In this study, pneumococcal vaccination of patients with S. pneumoniae CAP in the past enables investigating their immune response after vaccination compared to patients with CAP due another causative agent. Furthermore this study provides information to determine if there is a difference in vaccination response between pneumococcal pneumonia patients who had a culture matching serotype specific antibody response and between pneumococcal pneumonia patients who failed to elicit this response previously. Possibly these latter patients had a temporarily low titre due to the infection but another explanation is that there might be a structurally impaired immune response against S. pneumoniae or certain serotypes."
+    }
+  },
+  "linked_result": {
+    "Pneumonia": {
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia",
+      "match_reason": "Exact"
+    },
+    "Streptococcus Pneumoniae": {
+      "conceptId": "717216007",
+      "preferred_term": "Streptococcus pneumoniae or Streptococcus viridans group",
+      "fully_specified_name": "Streptococcus pneumoniae or Streptococcus viridans group (finding)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Streptococcus pneumoniae or Streptococcus viridans group",
+      "match_reason": "Exact"
+    },
+    "Immune Response": {
+      "conceptId": "35024006",
+      "preferred_term": "Immune response",
+      "fully_specified_name": "Immune response, function (observable entity)",
+      "type": "Observable entity",
+      "definition": "Nonsusceptibility to the invasive or pathogenic effects of foreign microorganisms or to the toxic effect of antigenic substances.",
+      "best_match_term": "Immune response",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Pneumonia": 1,
+    "Immune Response": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Pneumonia": {
+      "disease": "Pneumonia",
+      "conceptId": "233604007",
+      "preferred_term": "Pneumonia",
+      "fully_specified_name": "Pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lung often accompanied by inflammation.",
+      "best_match_term": "Pneumonia"
+    },
+    "Immune Response": {
+      "disease": "Immune Response",
+      "conceptId": "35024006",
+      "preferred_term": "Immune response",
+      "fully_specified_name": "Immune response, function (observable entity)",
+      "type": "Observable entity",
+      "definition": "Nonsusceptibility to the invasive or pathogenic effects of foreign microorganisms or to the toxic effect of antigenic substances.",
+      "best_match_term": "Immune response"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+[
+  "patient_is_exposed_to_anticoagulant_inthehistory",
+  "patient_has_diagnosis_of_deep_venous_thrombosis_of_lower_extremity_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_has_diagnosis_of_pulmonary_embolism_now",
+  "patient_is_exposed_to_anticoagulant_inthepast12months",
+  "patient_is_exposed_to_anticoagulant_now"
+]

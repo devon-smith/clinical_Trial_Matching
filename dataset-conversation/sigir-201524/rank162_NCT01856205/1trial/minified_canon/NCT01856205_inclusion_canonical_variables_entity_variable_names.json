@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_cell_count_cerebrospinal_fluid_value_recorded_now_withunit_cells_per_mm3",
+  "patient_has_diagnosis_of_encephalitis_now",
+  "patient_has_finding_of_fever_inthehistory",
+  "patient_glucose_csf_glucose_plasma_ratio_measurement_value_recorded_now_withunit_percent",
+  "patient_has_undergone_gram_stain_method_now_outcome_is_negative",
+  "patient_has_finding_of_seizure_inthehistory",
+  "patient_has_undergone_gram_stain_method_now"
+]

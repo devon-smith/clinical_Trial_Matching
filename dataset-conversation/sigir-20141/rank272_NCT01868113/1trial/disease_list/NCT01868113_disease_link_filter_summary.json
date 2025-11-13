@@ -1,0 +1,81 @@
+{
+  "generated": "2025-10-22T21:06:42",
+  "trial_id": "NCT01868113",
+  "contextual": {
+    "_id": "NCT01868113",
+    "title": "Inhaled Corticosteroids in U-5 Children With Acute Respiratory Infection in Uganda: A Randomised Trial",
+    "text": "Summary: The purpose of this study is to find out whether adjunct treatment with inhaled corticosteroids lead to faster improvement and reduce mortality of children under 5 years of age admitted to hospital with ALRI.\nInclusion criteria: inclusion criteria: \n\n children aged 2 to 59 months with cough and or difficult breathing \n\n \nExclusion criteria: : \n\n Presence of a serious concurrent illness such as meningitis, Children with congenital or acquired heart disease Severe anaemia Measles pneumonia Foreign body inhalation A confirmed diagnosis of pulmonary tuberculosis",
+    "metadata": {
+      "brief_title": "Inhaled Corticosteroids in U-5 Children With Acute Respiratory Infection in Uganda: A Randomised Trial",
+      "phase": "Phase 3",
+      "drugs": "['Inhaled corticosteroid', 'Placebo']",
+      "drugs_list": [
+        "Inhaled corticosteroid",
+        "Placebo"
+      ],
+      "diseases": "['Bacterial Pneumonia', 'Viral Pneumonia', 'Acute Asthma']",
+      "diseases_list": [
+        "Bacterial Pneumonia",
+        "Viral Pneumonia",
+        "Acute Asthma"
+      ],
+      "enrollment": "1010.0",
+      "inclusion_criteria": "inclusion criteria: \n\n children aged 2 to 59 months with cough and or difficult breathing \n\n ",
+      "exclusion_criteria": ": \n\n Presence of a serious concurrent illness such as meningitis, Children with congenital or acquired heart disease Severe anaemia Measles pneumonia Foreign body inhalation A confirmed diagnosis of pulmonary tuberculosis",
+      "brief_summary": "The purpose of this study is to find out whether adjunct treatment with inhaled corticosteroids lead to faster improvement and reduce mortality of children under 5 years of age admitted to hospital with ALRI."
+    }
+  },
+  "linked_result": {
+    "Bacterial Pneumonia": {
+      "conceptId": "53084003",
+      "preferred_term": "Bacterial pneumonia",
+      "fully_specified_name": "Bacterial pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the lung parenchyma that is caused by bacterial infections.",
+      "best_match_term": "Bacterial pneumonia",
+      "match_reason": "Exact"
+    },
+    "Viral Pneumonia": {
+      "conceptId": "75570004",
+      "preferred_term": "Viral pneumonia",
+      "fully_specified_name": "Viral pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the lung parenchyma that is caused by a viral infection.",
+      "best_match_term": "Viral pneumonia",
+      "match_reason": "Exact"
+    },
+    "Acute Asthma": {
+      "conceptId": "281239006",
+      "preferred_term": "Exacerbation of asthma",
+      "fully_specified_name": "Exacerbation of asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Acute asthma",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Bacterial Pneumonia": 1,
+    "Viral Pneumonia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Bacterial Pneumonia": {
+      "disease": "Bacterial Pneumonia",
+      "conceptId": "53084003",
+      "preferred_term": "Bacterial pneumonia",
+      "fully_specified_name": "Bacterial pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the lung parenchyma that is caused by bacterial infections.",
+      "best_match_term": "Bacterial pneumonia"
+    },
+    "Viral Pneumonia": {
+      "disease": "Viral Pneumonia",
+      "conceptId": "75570004",
+      "preferred_term": "Viral pneumonia",
+      "fully_specified_name": "Viral pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the lung parenchyma that is caused by a viral infection.",
+      "best_match_term": "Viral pneumonia"
+    }
+  }
+}

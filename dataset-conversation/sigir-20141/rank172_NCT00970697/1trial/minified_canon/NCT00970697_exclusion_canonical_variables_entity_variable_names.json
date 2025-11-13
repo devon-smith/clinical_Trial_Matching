@@ -1,0 +1,18 @@
+[
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_disorder_of_connective_tissue_now",
+  "patient_has_finding_of_heart_failure_now",
+  "patient_has_finding_of_hepatic_failure_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_renal_failure_syndrome_now",
+  "patient_has_finding_of_systemic_disease_now",
+  "patient_has_finding_of_thrombosis_now",
+  "patient_has_finding_of_vasculitis_now",
+  "patient_has_diagnosis_of_cryoglobulinemia_now",
+  "patient_has_finding_of_diabetic_poor_control_now",
+  "patient_fasting_blood_glucose_measurement_value_recorded_now_withunit_grams_per_liter",
+  "patient_serum_creatinine_level_finding_value_recorded_now_withunit_micromoles_per_liter",
+  "patient_is_exposed_to_iloprost_now",
+  "patient_has_finding_of_skin_loss_exposing_bone_now",
+  "patient_is_exposed_to_cytotoxic_inthepast3months"
+]

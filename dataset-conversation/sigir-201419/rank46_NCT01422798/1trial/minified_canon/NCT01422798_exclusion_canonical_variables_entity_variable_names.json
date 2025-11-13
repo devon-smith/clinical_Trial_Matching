@@ -1,0 +1,6 @@
+[
+  "patient_tb_chemotherapy_value_recorded_inthehistory_withunit_days",
+  "patient_has_undergone_tb_chemotherapy_inthepast6months",
+  "patient_is_undergoing_tb_chemotherapy_now",
+  "patient_is_undergoing_tuberculosis_prophylaxis_now"
+]

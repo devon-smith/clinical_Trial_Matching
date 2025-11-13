@@ -1,0 +1,101 @@
+{
+  "generated": "2025-10-22T20:56:54",
+  "trial_id": "NCT01682096",
+  "contextual": {
+    "_id": "NCT01682096",
+    "title": "Pilot Safety Study of Coronary CTA for the Diagnosis of Acute Coronary Syndrome in the Emergency Room",
+    "text": "Summary: The Diagnosis of acute coronary syndrome in patients presenting with acute chest pain is problematic when both, electrocardiogram and serum troponins are normal. Multidetector row computed tomography angiography (CTA) allows direct and rapid non-invasive visualization of coronary artery disease.~The investigator's aim is to assess the diagnostic accuracy and safety of a novel diagnostic strategy based on MDCT as compared to a strategy using stress echocardiography in the workup of patient with chest pain, normal electrocardiogram, normal troponins and suspected coronary artery disease. Additionally, the cost associated with both strategies will be compared.~Methods. A total of 150 patients with acute chest pain coming to the emergency room with intermediate probability of significant coronary artery disease, normal ECG and troponins will be prospectively randomized to MDCT or stress echocardiography with exercise. Patients showing coronary stenosis >50% at MDCT or abnormal stress echocardiography or inconclusive results will be admitted for further study. The primary endpoint of the study is the detection of an acute coronary syndrome, defined as typical or atypical angina with documented significant coronary artery disease (>50% stenosis) on invasive coronariography, a positive stress test or the occurrence of cardiac death, myocardial infarction or need for revascularization during 6 month follow-up. All MDCT angiograms and echocardiograms will be evaluated by an experienced radiologist and cardiologist.\nInclusion criteria: inclusion criteria: \n\n Patient is in Sinus Rhythm \n\n Typical or atypical chest pain lasting more than 5 min in the last 24 hs. \n\n Estimated pre-test probability of significant coronary artery disease more than 15%. \n\n Absence of ECG changes suggestive of myocardial ischemia (ST-segment deviation >1 mm or T Wave inversion > 4 mm in at least two contiguous leads). \n\n Negative initial troponins I at admission (<0.05 ng/ml) \n\n \nExclusion criteria: : \n\n Known allergy to iodinated contrast. \n\n Known renal insufficiency or Creatinine >1.5 mg/dl at admission. \n\n History of known coronary artery disease or prior myocardial revascularization \n\n Any of the following:hemodynamic instability, persistent chest pain despite treatment, Systolic blood pressure <100 mm Hg. \n\n Cardiac arrhythmia with rapid or irregular ventricular response. \n\n Inability to perform an exercise test. \n\n Patient is incapable of providing informed consent.",
+    "metadata": {
+      "brief_title": "Pilot Safety Study of Coronary CTA for the Diagnosis of Acute Coronary Syndrome in the Emergency Room",
+      "phase": "",
+      "drugs": "['computed coronary angiography', 'Exercise stress echocardiography']",
+      "drugs_list": [
+        "computed coronary angiography",
+        "Exercise stress echocardiography"
+      ],
+      "diseases": "['Acute Coronary Syndrome', 'Coronary Artery Disease', 'Cardiac Death', 'Myocardial Infarction']",
+      "diseases_list": [
+        "Acute Coronary Syndrome",
+        "Coronary Artery Disease",
+        "Cardiac Death",
+        "Myocardial Infarction"
+      ],
+      "enrollment": "150.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patient is in Sinus Rhythm \n\n Typical or atypical chest pain lasting more than 5 min in the last 24 hs. \n\n Estimated pre-test probability of significant coronary artery disease more than 15%. \n\n Absence of ECG changes suggestive of myocardial ischemia (ST-segment deviation >1 mm or T Wave inversion > 4 mm in at least two contiguous leads). \n\n Negative initial troponins I at admission (<0.05 ng/ml) \n\n ",
+      "exclusion_criteria": ": \n\n Known allergy to iodinated contrast. \n\n Known renal insufficiency or Creatinine >1.5 mg/dl at admission. \n\n History of known coronary artery disease or prior myocardial revascularization \n\n Any of the following:hemodynamic instability, persistent chest pain despite treatment, Systolic blood pressure <100 mm Hg. \n\n Cardiac arrhythmia with rapid or irregular ventricular response. \n\n Inability to perform an exercise test. \n\n Patient is incapable of providing informed consent.",
+      "brief_summary": "The Diagnosis of acute coronary syndrome in patients presenting with acute chest pain is problematic when both, electrocardiogram and serum troponins are normal. Multidetector row computed tomography angiography (CTA) allows direct and rapid non-invasive visualization of coronary artery disease.~The investigator's aim is to assess the diagnostic accuracy and safety of a novel diagnostic strategy based on MDCT as compared to a strategy using stress echocardiography in the workup of patient with chest pain, normal electrocardiogram, normal troponins and suspected coronary artery disease. Additionally, the cost associated with both strategies will be compared.~Methods. A total of 150 patients with acute chest pain coming to the emergency room with intermediate probability of significant coronary artery disease, normal ECG and troponins will be prospectively randomized to MDCT or stress echocardiography with exercise. Patients showing coronary stenosis >50% at MDCT or abnormal stress echocardiography or inconclusive results will be admitted for further study. The primary endpoint of the study is the detection of an acute coronary syndrome, defined as typical or atypical angina with documented significant coronary artery disease (>50% stenosis) on invasive coronariography, a positive stress test or the occurrence of cardiac death, myocardial infarction or need for revascularization during 6 month follow-up. All MDCT angiograms and echocardiograms will be evaluated by an experienced radiologist and cardiologist."
+    }
+  },
+  "linked_result": {
+    "Acute Coronary Syndrome": {
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome",
+      "match_reason": "Exact"
+    },
+    "Coronary Artery Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary artery disease",
+      "match_reason": "Exact"
+    },
+    "Cardiac Death": {
+      "conceptId": "95281009",
+      "preferred_term": "Sudden cardiac death",
+      "fully_specified_name": "Sudden cardiac death (disorder)",
+      "type": "Clinical finding",
+      "definition": "Unexpected rapid natural death due to cardiovascular collapse within one hour of initial symptoms. It is usually caused by the worsening of existing heart diseases. The sudden onset of symptoms, such as CHEST PAIN and CARDIAC ARRHYTHMIAS, particularly VENTRICULAR TACHYCARDIA, can lead to the loss of consciousness and cardiac arrest followed by biological death. (from Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine, 7th ed., 2005)",
+      "best_match_term": "Sudden cardiac death",
+      "match_reason": "Ancestor"
+    },
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Acute Coronary Syndrome": 1,
+    "Coronary Artery Disease": 1,
+    "Myocardial Infarction": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Acute Coronary Syndrome": {
+      "disease": "Acute Coronary Syndrome",
+      "conceptId": "394659003",
+      "preferred_term": "Acute coronary syndrome",
+      "fully_specified_name": "Acute coronary syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "An episode of MYOCARDIAL ISCHEMIA that generally lasts longer than a transient anginal episode that ultimately may lead to MYOCARDIAL INFARCTION.",
+      "best_match_term": "Acute coronary syndrome"
+    },
+    "Coronary Artery Disease": {
+      "disease": "Coronary Artery Disease",
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary artery disease"
+    },
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    }
+  }
+}

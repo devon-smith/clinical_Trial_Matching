@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:43:27",
+  "trial_id": "NCT02271750",
+  "contextual": {
+    "_id": "NCT02271750",
+    "title": "IGF and Other Neurotrophic Factors in Patients With Dementia",
+    "text": "Summary: The global prevalence of dementia is close to 36 million (2010). Furthermore the number is predicted to double in the next 20 years, primarily due to the demographic ageing. A perspective that will challenge the current healthcare systems and national economies.~Dementia is characterized by progressive deterioration in cognition, function and behavior that is sufficiently severe to compromise social and occupational functioning.~The pathogenesis of dementia remains elusive. Thus, there is a need to increase our understanding of the mechanisms leading to the most common forms of dementia. A better understanding of the disease may enable an earlier diagnosis and importantly, a causal treatment of Alzheimer as opposed to the merely symptomatic options available to day.~An experiment with rats and memory might already have taken the first step towards this. The experiment has demonstrated that administration of IGF-II to rats significantly enhances memory retention and prevents forgetting. Furthermore inhibitory avoidance learning leads to an increase in the hippocampal expression of IGF-II. Finally, yet importantly, injections of recombinant IGF-II into hippocampus after training or memory retrieval significantly enhance memory retention and prevent forgetting.~The spinal fluid and the serum will be analysed at the Medical Research Laboratory. The immunological concentrations of IGF-I and -II are measured by validated in-house analyses. Furthermore, Aarhus University Hospital has a unique technique, whereby it is possible to measure the bioactivity of IGF-I and -II in the cerebrospinal fluid. The concentrations of NGF, BDNF and sCD-163 in spinal fluid and serum will be analysed by already established techniques.~The purpose of this study is therefore to define the concentration and biological activity of IGF-I, IGF-II, BDNF, NGF and sCD-163 in the cerebrospinal fluid and serum in patients with Alzheimer's compared with controls.\nInclusion criteria: inclusion criteria: \n\n dementia, controls(lumbar puncture at our department) \n\n \nExclusion criteria: : \n\n <18år \n\n other CNS disease",
+    "metadata": {
+      "brief_title": "IGF and Other Neurotrophic Factors in Patients With Dementia",
+      "phase": "",
+      "drugs": "['lumbar puncture']",
+      "drugs_list": [
+        "lumbar puncture"
+      ],
+      "diseases": "['Dementia']",
+      "diseases_list": [
+        "Dementia"
+      ],
+      "enrollment": "120.0",
+      "inclusion_criteria": "inclusion criteria: \n\n dementia, controls(lumbar puncture at our department) \n\n ",
+      "exclusion_criteria": ": \n\n <18år \n\n other CNS disease",
+      "brief_summary": "The global prevalence of dementia is close to 36 million (2010). Furthermore the number is predicted to double in the next 20 years, primarily due to the demographic ageing. A perspective that will challenge the current healthcare systems and national economies.~Dementia is characterized by progressive deterioration in cognition, function and behavior that is sufficiently severe to compromise social and occupational functioning.~The pathogenesis of dementia remains elusive. Thus, there is a need to increase our understanding of the mechanisms leading to the most common forms of dementia. A better understanding of the disease may enable an earlier diagnosis and importantly, a causal treatment of Alzheimer as opposed to the merely symptomatic options available to day.~An experiment with rats and memory might already have taken the first step towards this. The experiment has demonstrated that administration of IGF-II to rats significantly enhances memory retention and prevents forgetting. Furthermore inhibitory avoidance learning leads to an increase in the hippocampal expression of IGF-II. Finally, yet importantly, injections of recombinant IGF-II into hippocampus after training or memory retrieval significantly enhance memory retention and prevent forgetting.~The spinal fluid and the serum will be analysed at the Medical Research Laboratory. The immunological concentrations of IGF-I and -II are measured by validated in-house analyses. Furthermore, Aarhus University Hospital has a unique technique, whereby it is possible to measure the bioactivity of IGF-I and -II in the cerebrospinal fluid. The concentrations of NGF, BDNF and sCD-163 in spinal fluid and serum will be analysed by already established techniques.~The purpose of this study is therefore to define the concentration and biological activity of IGF-I, IGF-II, BDNF, NGF and sCD-163 in the cerebrospinal fluid and serum in patients with Alzheimer's compared with controls."
+    }
+  },
+  "linked_result": {
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    }
+  }
+}

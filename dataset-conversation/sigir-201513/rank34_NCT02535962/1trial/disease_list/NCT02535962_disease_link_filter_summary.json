@@ -1,0 +1,111 @@
+{
+  "generated": "2025-10-20T22:17:51",
+  "trial_id": "NCT02535962",
+  "contextual": {
+    "_id": "NCT02535962",
+    "title": "Probiotics and Corticosteroids for Treating Periodic Fever, Aphthous Stomatitis, Pharyngitis, Cervical Adenitis (PFAPA)",
+    "text": "Summary: The purpose of study is to see if adding probiotics to corticosteroid treatment for children with PFAPA could improve the health and daily of patients through reduction in febrile period frequency and length, along with concomitant reduction of associated symptoms. Current standard of care incorporates the administration of corticosteroids; however, while limiting the symptoms associated with PFAPA, corticosteroid use has been shown to increase the frequency at which these symptoms occur. Investigators hypothesize that administration of probiotics along with corticosteroids will work to decrease the frequency at which the febrile episodes occur. Additionally, probiotics may decrease the maximal fever experienced during these episodes, amount of corticosteroid needed to control the symptoms, average length of the episodes, and the number of patients who ultimately undergo tonsillectomy due to unsuccessful treatment with medication.\nInclusion criteria: inclusion criteria: \n\n diagnosis or confirmation of diagnosis of PFAPA from Dr. Bennett based on clinical or laboratory data \n\n is or will be undergoing treatment for PFAPA at CCMC \n\n agrees to the consent and, if necessary, assent forms \n\n is between 1 and 12 years of age \n\n \nExclusion criteria: : \n\n is currently taking another probiotic regularly (>=2 times/ week) \n\n is allergic to ingredients in the probiotic or placebo \n\n may react adversely to the probiotic due to any form of immune deficiency or chronic disease including pulmonary, renal, cardiac disorders including underlying structural heart disease, gastrointestinal disease, or diabetes \n\n is not a proficient English speaker \n\n does not agree to the consent and/or assent forms \n\n patients who use antibiotics or have used them within a month of the study start",
+    "metadata": {
+      "brief_title": "Probiotics and Corticosteroids for Treating Periodic Fever, Aphthous Stomatitis, Pharyngitis, Cervical Adenitis (PFAPA)",
+      "phase": "Phase 2",
+      "drugs": "['Lactobacillus acidophilus and Bifidobacterium lactis', 'Placebo']",
+      "drugs_list": [
+        "Lactobacillus acidophilus and Bifidobacterium lactis",
+        "Placebo"
+      ],
+      "diseases": "['Periodic Fever', 'Aphthous Stomatitis', 'Pharyngitis', 'Cervical Adenitis']",
+      "diseases_list": [
+        "Periodic Fever",
+        "Aphthous Stomatitis",
+        "Pharyngitis",
+        "Cervical Adenitis"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n diagnosis or confirmation of diagnosis of PFAPA from Dr. Bennett based on clinical or laboratory data \n\n is or will be undergoing treatment for PFAPA at CCMC \n\n agrees to the consent and, if necessary, assent forms \n\n is between 1 and 12 years of age \n\n ",
+      "exclusion_criteria": ": \n\n is currently taking another probiotic regularly (>=2 times/ week) \n\n is allergic to ingredients in the probiotic or placebo \n\n may react adversely to the probiotic due to any form of immune deficiency or chronic disease including pulmonary, renal, cardiac disorders including underlying structural heart disease, gastrointestinal disease, or diabetes \n\n is not a proficient English speaker \n\n does not agree to the consent and/or assent forms \n\n patients who use antibiotics or have used them within a month of the study start",
+      "brief_summary": "The purpose of study is to see if adding probiotics to corticosteroid treatment for children with PFAPA could improve the health and daily of patients through reduction in febrile period frequency and length, along with concomitant reduction of associated symptoms. Current standard of care incorporates the administration of corticosteroids; however, while limiting the symptoms associated with PFAPA, corticosteroid use has been shown to increase the frequency at which these symptoms occur. Investigators hypothesize that administration of probiotics along with corticosteroids will work to decrease the frequency at which the febrile episodes occur. Additionally, probiotics may decrease the maximal fever experienced during these episodes, amount of corticosteroid needed to control the symptoms, average length of the episodes, and the number of patients who ultimately undergo tonsillectomy due to unsuccessful treatment with medication."
+    }
+  },
+  "linked_result": {
+    "Periodic Fever": {
+      "conceptId": "77957000",
+      "preferred_term": "Intermittent fever",
+      "fully_specified_name": "Intermittent fever (finding)",
+      "type": "Clinical finding",
+      "definition": "Cycles of fever with intervening periods of normothermia.",
+      "best_match_term": "Periodic fever, not disease",
+      "match_reason": "Exact"
+    },
+    "Aphthous Stomatitis": {
+      "conceptId": "398870000",
+      "preferred_term": "Recurrent aphthous ulcer",
+      "fully_specified_name": "Recurrent aphthous ulcer (disorder)",
+      "type": "Clinical finding",
+      "definition": "Recurrent episodes of ulceration of the oral mucosa, typically presenting as painful, sharply circumscribed fibrin-covered mucosal defects with a hyperemic border. [https://orcid.org/0000-0002-0736-9199]",
+      "best_match_term": "Aphthous stomatitis",
+      "match_reason": "Exact"
+    },
+    "Pharyngitis": {
+      "conceptId": "405737000",
+      "preferred_term": "Pharyngitis",
+      "fully_specified_name": "Pharyngitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the throat (PHARYNX).",
+      "best_match_term": "Pharyngitis",
+      "match_reason": "Exact"
+    },
+    "Cervical Adenitis": {
+      "conceptId": "3502005",
+      "preferred_term": "Cervical lymphadenitis",
+      "fully_specified_name": "Cervical lymphadenitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the cervical lymph nodes.",
+      "best_match_term": "Cervical adenitis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Periodic Fever": 1,
+    "Aphthous Stomatitis": 1,
+    "Pharyngitis": 1,
+    "Cervical Adenitis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Periodic Fever": {
+      "disease": "Periodic Fever",
+      "conceptId": "77957000",
+      "preferred_term": "Intermittent fever",
+      "fully_specified_name": "Intermittent fever (finding)",
+      "type": "Clinical finding",
+      "definition": "Cycles of fever with intervening periods of normothermia.",
+      "best_match_term": "Periodic fever, not disease"
+    },
+    "Aphthous Stomatitis": {
+      "disease": "Aphthous Stomatitis",
+      "conceptId": "398870000",
+      "preferred_term": "Recurrent aphthous ulcer",
+      "fully_specified_name": "Recurrent aphthous ulcer (disorder)",
+      "type": "Clinical finding",
+      "definition": "Recurrent episodes of ulceration of the oral mucosa, typically presenting as painful, sharply circumscribed fibrin-covered mucosal defects with a hyperemic border. [https://orcid.org/0000-0002-0736-9199]",
+      "best_match_term": "Aphthous stomatitis"
+    },
+    "Pharyngitis": {
+      "disease": "Pharyngitis",
+      "conceptId": "405737000",
+      "preferred_term": "Pharyngitis",
+      "fully_specified_name": "Pharyngitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the throat (PHARYNX).",
+      "best_match_term": "Pharyngitis"
+    },
+    "Cervical Adenitis": {
+      "disease": "Cervical Adenitis",
+      "conceptId": "3502005",
+      "preferred_term": "Cervical lymphadenitis",
+      "fully_specified_name": "Cervical lymphadenitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the cervical lymph nodes.",
+      "best_match_term": "Cervical adenitis"
+    }
+  }
+}

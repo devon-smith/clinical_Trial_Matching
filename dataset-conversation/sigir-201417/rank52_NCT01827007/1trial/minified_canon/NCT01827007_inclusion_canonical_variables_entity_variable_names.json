@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_septic_shock_now",
+  "patient_has_undergone_pulmonary_catheterization_with_swan_ganz_catheter_now",
+  "patient_has_undergone_radial_artery_cannula_insertion_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_sinus_rhythm_now",
+  "patient_has_finding_of_hemodynamically_stable_now",
+  "patient_norepinephrine_value_recorded_now_withunit_micrograms_per_kilogram_per_minute",
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_is_undergoing_sedation_now",
+  "patient_pulmonary_artery_wedge_pressure_value_recorded_now_withunit_millimeters_of_mercury"
+]

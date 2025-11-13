@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_pregnant_now",
+  "patient_has_diagnosis_of_major_depressive_disorder_inthehistory",
+  "patient_has_undergone_bariatric_operative_procedure_inthehistory",
+  "patient_has_undergone_operation_on_stomach_inthehistory",
+  "patient_has_finding_of_achalasia_now",
+  "patient_has_finding_of_patient_condition_finding_now"
+]

@@ -1,0 +1,21 @@
+{
+  "_id": "NCT01631916",
+  "title": "Corticosteroids in Community-acquired Pneumonia",
+  "text": "Summary: The purpose of this study is to determine the efficacy of addition of corticosteroid therapy to antibiotics in children hospitalized with community-acquired pneumonia.~The hypothesis is that the use of corticosteroids decreases the length of stay in children hospitalized with community-acquired pneumonia.\nInclusion criteria: inclusion criteria: \n\n Children hospitalized for community-acquired pneumonia \n\n 2-18 years old \n\n \nExclusion criteria: : \n\n Pulmonary chronic disease (including asthma) \n\n Immunodeficiency \n\n Diseases wich requires corticosteroids therapy (i.e. rheumatic diseases) \n\n Wheezing in current disease \n\n Previous hospitalization (14 days prior to admission) \n\n Pleural effusion on admission \n\n Malnutrition",
+  "metadata": {
+    "brief_title": "Corticosteroids in Community-acquired Pneumonia",
+    "phase": "",
+    "drugs": "['corticosteroid']",
+    "drugs_list": [
+      "corticosteroid"
+    ],
+    "diseases": "['Community-acquired Pneumonia']",
+    "diseases_list": [
+      "Community-acquired Pneumonia"
+    ],
+    "enrollment": "0.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Children hospitalized for community-acquired pneumonia \n\n 2-18 years old \n\n ",
+    "exclusion_criteria": ": \n\n Pulmonary chronic disease (including asthma) \n\n Immunodeficiency \n\n Diseases wich requires corticosteroids therapy (i.e. rheumatic diseases) \n\n Wheezing in current disease \n\n Previous hospitalization (14 days prior to admission) \n\n Pleural effusion on admission \n\n Malnutrition",
+    "brief_summary": "The purpose of this study is to determine the efficacy of addition of corticosteroid therapy to antibiotics in children hospitalized with community-acquired pneumonia.~The hypothesis is that the use of corticosteroids decreases the length of stay in children hospitalized with community-acquired pneumonia."
+  }
+}

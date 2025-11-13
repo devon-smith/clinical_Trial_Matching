@@ -1,0 +1,21 @@
+[
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_fractional_flow_reserve_value_recorded_now_withunit_none",
+  "patient_is_undergoing_procedure_now",
+  "patient_has_finding_of_coronary_artery_stenosis_now",
+  "patient_heart_rate_value_recorded_now_withunit_beats_per_minute",
+  "patient_has_finding_of_complete_atrioventricular_block_now",
+  "patient_has_finding_of_sick_sinus_syndrome_now",
+  "patient_has_finding_of_permanent_cardiac_pacemaker_now",
+  "patient_has_diagnosis_of_congenital_long_qt_syndrome_now",
+  "patient_has_allergy_to_allergy_to_beta_adrenergic_receptor_antagonist_now",
+  "patient_has_intolerance_to_beta_adrenergic_receptor_antagonist_containing_product_now",
+  "patient_has_intolerance_to_ivabradine_now",
+  "patient_is_taking_beta_adrenergic_receptor_antagonist_containing_product_now",
+  "patient_is_exposed_to_bisoprolol_now",
+  "patient_is_exposed_to_ivabradine_now",
+  "patient_has_contraindication_to_adenosine_containing_product_in_parenteral_dose_form_now",
+  "patient_has_contraindication_to_magnetic_resonance_imaging_now",
+  "patient_glomerular_filtration_rate_value_recorded_now_withunit_milliliters_per_minute",
+  "patient_has_finding_of_disease_of_liver_now"
+]

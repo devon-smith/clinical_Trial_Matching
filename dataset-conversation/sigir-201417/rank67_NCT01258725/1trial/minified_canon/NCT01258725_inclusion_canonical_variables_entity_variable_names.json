@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_pregnant_now",
+  "patient_has_undergone_ultrasonography_inthehistory",
+  "patient_has_undergone_ultrasonography_now",
+  "patient_is_undergoing_ultrasonography_now"
+]

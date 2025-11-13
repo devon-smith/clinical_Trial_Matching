@@ -1,0 +1,27 @@
+{
+  "trial_id": "NCT02236416",
+  "contextual": {
+    "_id": "NCT02236416",
+    "title": "Physical Exercise for Prevention of Dementia",
+    "text": "Summary: The principal aim of this study is to verify whether a program of supervised, multimodal physical exercise improves cognitive function and/or reduces the rate of cognitive decline in older adults\nInclusion criteria: inclusion criteria: \n\n Age > 50 years old \n\n \nExclusion criteria: : \n\n Medical conditions that compromise survival or limit physical activity \n\n Geriatric Depression Scale-15 score of 6 or higher \n\n Alcohol intake > 4 units/day \n\n Mini- Mental State Examination < 24 \n\n Clinical Dementia Rating score of 1 or more",
+    "metadata": {
+      "brief_title": "Physical Exercise for Prevention of Dementia",
+      "phase": "",
+      "drugs": "['Intervention group', 'Control group']",
+      "drugs_list": [
+        "Intervention group",
+        "Control group"
+      ],
+      "diseases": "['Memory Disorders', 'Mild Cognitive Impairment', 'Aging']",
+      "diseases_list": [
+        "Memory Disorders",
+        "Mild Cognitive Impairment",
+        "Aging"
+      ],
+      "enrollment": "1000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age > 50 years old \n\n ",
+      "exclusion_criteria": ": \n\n Medical conditions that compromise survival or limit physical activity \n\n Geriatric Depression Scale-15 score of 6 or higher \n\n Alcohol intake > 4 units/day \n\n Mini- Mental State Examination < 24 \n\n Clinical Dementia Rating score of 1 or more",
+      "brief_summary": "The principal aim of this study is to verify whether a program of supervised, multimodal physical exercise improves cognitive function and/or reduces the rate of cognitive decline in older adults"
+    }
+  }
+}

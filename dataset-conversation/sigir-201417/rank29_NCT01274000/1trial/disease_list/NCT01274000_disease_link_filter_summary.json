@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-22T20:48:30",
+  "trial_id": "NCT01274000",
+  "contextual": {
+    "_id": "NCT01274000",
+    "title": "A Study to Evaluate Efficacy of YM060 on Diarrhea-predominant Irritable Bowel Syndrome (D-IBS) in Female Patients",
+    "text": "Summary: A study to verify the superiority of YM060 (ramosetron) to placebo for female patients with diarrhea-predominant irritable bowel syndrome (D-IBS) and to evaluate its safety.\nInclusion criteria: inclusion criteria: \n\n Patients meeting the Rome III Diagnostic Criteria \n\n Loose (mushy) or watery stools within the last 3 months \n\n Abdominal discomfort and/or pain during their non-menstrual period \n\n \nExclusion criteria: : \n\n Patients with a history of surgical resection of the stomach, small intestine or large intestine \n\n Patients with a history or current diagnosis of inflammatory bowel disease (Crohn's disease or colitis ulcerative) \n\n Patients with a history or current diagnosis of colitis ischemic \n\n Patients with a current diagnosis of enteritis infectious \n\n Patients with a current diagnosis of hyperthyroidism or hypothyroidism \n\n Patients who are currently participating in another clinical trial (including a post-marketing clinical study) or those who participated in another clinical trial (including a post-marketing clinical study) within 12 weeks before the study \n\n Patients with a history or current diagnosis of malignant tumor \n\n Patients with a history of abuse of drugs or alcohol within 1 year or those who are currently abusing them",
+    "metadata": {
+      "brief_title": "A Study to Evaluate Efficacy of YM060 on Diarrhea-predominant Irritable Bowel Syndrome (D-IBS) in Female Patients",
+      "phase": "Phase 2",
+      "drugs": "['YM060', 'placebo']",
+      "drugs_list": [
+        "YM060",
+        "placebo"
+      ],
+      "diseases": "['Irritable Bowel Syndrome']",
+      "diseases_list": [
+        "Irritable Bowel Syndrome"
+      ],
+      "enrollment": "409.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients meeting the Rome III Diagnostic Criteria \n\n Loose (mushy) or watery stools within the last 3 months \n\n Abdominal discomfort and/or pain during their non-menstrual period \n\n ",
+      "exclusion_criteria": ": \n\n Patients with a history of surgical resection of the stomach, small intestine or large intestine \n\n Patients with a history or current diagnosis of inflammatory bowel disease (Crohn's disease or colitis ulcerative) \n\n Patients with a history or current diagnosis of colitis ischemic \n\n Patients with a current diagnosis of enteritis infectious \n\n Patients with a current diagnosis of hyperthyroidism or hypothyroidism \n\n Patients who are currently participating in another clinical trial (including a post-marketing clinical study) or those who participated in another clinical trial (including a post-marketing clinical study) within 12 weeks before the study \n\n Patients with a history or current diagnosis of malignant tumor \n\n Patients with a history of abuse of drugs or alcohol within 1 year or those who are currently abusing them",
+      "brief_summary": "A study to verify the superiority of YM060 (ramosetron) to placebo for female patients with diarrhea-predominant irritable bowel syndrome (D-IBS) and to evaluate its safety."
+    }
+  },
+  "linked_result": {
+    "Irritable Bowel Syndrome": {
+      "conceptId": "10743008",
+      "preferred_term": "Irritable bowel syndrome",
+      "fully_specified_name": "Irritable bowel syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder with chronic or recurrent colonic symptoms without a clearcut etiology. This condition is characterized by chronic or recurrent ABDOMINAL PAIN, bloating, MUCUS in FECES, and an erratic disturbance of DEFECATION.",
+      "best_match_term": "Irritable bowel syndrome",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Irritable Bowel Syndrome": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Irritable Bowel Syndrome": {
+      "disease": "Irritable Bowel Syndrome",
+      "conceptId": "10743008",
+      "preferred_term": "Irritable bowel syndrome",
+      "fully_specified_name": "Irritable bowel syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder with chronic or recurrent colonic symptoms without a clearcut etiology. This condition is characterized by chronic or recurrent ABDOMINAL PAIN, bloating, MUCUS in FECES, and an erratic disturbance of DEFECATION.",
+      "best_match_term": "Irritable bowel syndrome"
+    }
+  }
+}

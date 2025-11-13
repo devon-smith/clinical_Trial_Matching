@@ -1,0 +1,8 @@
+;; ===================== PROJECTED CANON (QE) =====================
+;; Each clause below is entailed by Proj = ∃W.F over the canonical vocabulary.
+;; Units appear first for clarity; OR-clauses (SAT-filtered) follow.
+;; ==================================================================
+
+;; Unit Bool constraints (entailed)
+(assert patient_is_exposed_to_drug_or_medicament_now)
+(assert patient_is_taking_antidepressant_now)

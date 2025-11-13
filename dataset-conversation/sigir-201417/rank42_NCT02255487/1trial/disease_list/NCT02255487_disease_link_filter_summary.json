@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T22:13:31",
+  "trial_id": "NCT02255487",
+  "contextual": {
+    "_id": "NCT02255487",
+    "title": "Irrisept Versus Standard of Care in the Prevention of Surgical Site Infections",
+    "text": "Summary: The purpose of this study was to compare the rate of surgical site infections in patients randomized to Irrisept versus SoC, who had an open abdominal laparotomy for abdominal trauma or acute surgical abdomen.\nInclusion criteria: inclusion criteria: \n\n Is male or female, 18 years of age or older \n\n Has provided written informed consent or has surrogate consent provided by a Legally Authorized Representative (LAR) \n\n Has experienced abdominal trauma, blunt or penetrating, requiring open abdominal laparotomy with primary closure or \n\n Has experienced acute surgical abdomen requiring open abdominal laparotomy with primary closure \n\n \nExclusion criteria: : \n\n Known allergy to Chlorhexidine Gluconate (CHG) \n\n Estimated Abbreviated Injury Scale (AIS) score of six (6) at the time of surgery, for all trauma patients \n\n American Society of Anesthesiologists Physical Status Classification (ASA) score of five (5) or greater (As ASA scoring is a subjective measure, if the PI finds the patient stable enough for study participation despite a score of 5, enrollment may continue.) \n\n Female volunteers who are pregnant and/or breast feeding \n\n Damage control laparotomy \n\n Abdominal incision created prior to operating room (i.e. incision made in trauma bay to cross clamp the aorta) \n\n Currently enrolled in an ongoing, interventional, randomized clinical trial",
+    "metadata": {
+      "brief_title": "Irrisept Versus Standard of Care in the Prevention of Surgical Site Infections",
+      "phase": "",
+      "drugs": "['IrriSept System', 'No Intervention - Standard of Care (SoC) only']",
+      "drugs_list": [
+        "IrriSept System",
+        "No Intervention - Standard of Care (SoC) only"
+      ],
+      "diseases": "['Surgical Site Infection']",
+      "diseases_list": [
+        "Surgical Site Infection"
+      ],
+      "enrollment": "627.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Is male or female, 18 years of age or older \n\n Has provided written informed consent or has surrogate consent provided by a Legally Authorized Representative (LAR) \n\n Has experienced abdominal trauma, blunt or penetrating, requiring open abdominal laparotomy with primary closure or \n\n Has experienced acute surgical abdomen requiring open abdominal laparotomy with primary closure \n\n ",
+      "exclusion_criteria": ": \n\n Known allergy to Chlorhexidine Gluconate (CHG) \n\n Estimated Abbreviated Injury Scale (AIS) score of six (6) at the time of surgery, for all trauma patients \n\n American Society of Anesthesiologists Physical Status Classification (ASA) score of five (5) or greater (As ASA scoring is a subjective measure, if the PI finds the patient stable enough for study participation despite a score of 5, enrollment may continue.) \n\n Female volunteers who are pregnant and/or breast feeding \n\n Damage control laparotomy \n\n Abdominal incision created prior to operating room (i.e. incision made in trauma bay to cross clamp the aorta) \n\n Currently enrolled in an ongoing, interventional, randomized clinical trial",
+      "brief_summary": "The purpose of this study was to compare the rate of surgical site infections in patients randomized to Irrisept versus SoC, who had an open abdominal laparotomy for abdominal trauma or acute surgical abdomen."
+    }
+  },
+  "linked_result": {
+    "Surgical Site Infection": {
+      "conceptId": "433202001",
+      "preferred_term": "Surgical site infection",
+      "fully_specified_name": "Surgical site infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection occurring at the site of a surgical incision.",
+      "best_match_term": "Surgical site infection",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Surgical Site Infection": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Surgical Site Infection": {
+      "disease": "Surgical Site Infection",
+      "conceptId": "433202001",
+      "preferred_term": "Surgical site infection",
+      "fully_specified_name": "Surgical site infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection occurring at the site of a surgical incision.",
+      "best_match_term": "Surgical site infection"
+    }
+  }
+}

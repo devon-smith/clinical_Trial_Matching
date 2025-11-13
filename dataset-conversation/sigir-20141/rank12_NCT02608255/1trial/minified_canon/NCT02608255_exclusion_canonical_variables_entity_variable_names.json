@@ -1,0 +1,18 @@
+[
+  "patient_has_finding_of_disability_now",
+  "patient_has_finding_of_physical_handicap_now",
+  "patient_has_undergone_anticoagulant_therapy_inthehistory",
+  "patient_has_undergone_collection_of_blood_specimen_for_laboratory_inthehistory",
+  "patient_has_undergone_coronary_angioplasty_inthehistory",
+  "patient_has_diagnosis_of_neoplastic_disease_now",
+  "patient_has_diagnosis_of_renal_failure_syndrome_now",
+  "patient_has_undergone_surgical_procedure_inthehistory",
+  "patient_has_undergone_transplant_of_kidney_inthehistory",
+  "patient_has_undergone_transplantation_of_heart_inthehistory",
+  "patient_has_undergone_transplantation_of_liver_inthehistory",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_acute_coronary_syndrome_now",
+  "patient_has_finding_of_crushing_injury_now",
+  "patient_has_finding_of_penetrating_wound_now",
+  "patient_has_finding_of_dead_inthehistory"
+]

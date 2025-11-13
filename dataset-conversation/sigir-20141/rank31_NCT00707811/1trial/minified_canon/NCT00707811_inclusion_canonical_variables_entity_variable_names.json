@@ -1,0 +1,7 @@
+[
+  "patient_has_finding_of_dyspnea_inthepast24hours",
+  "patient_has_finding_of_hyperventilation_inthepast24hours",
+  "patient_has_finding_of_tachypnea_inthepast24hours",
+  "patients_cardiac_output_is_normal_now",
+  "patient_age_value_recorded_now_in_years"
+]

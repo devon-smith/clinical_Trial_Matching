@@ -1,0 +1,218 @@
+{
+  "generated": "2025-10-22T21:20:51",
+  "trial_id": "NCT00005547",
+  "contextual": {
+    "_id": "NCT00005547",
+    "title": "Infection and Cardiovascular Disease",
+    "text": "Summary: To investigate the role of chronic infection as a risk factor for vascular disease in a study of Native Americans. The primary focus is on the two most common agents Chlamydia pneumoniae and cytomegalovirus with a secondary emphasis on Helicobacter pylori.\nInclusion criteria: No eligibility criteria\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Infection and Cardiovascular Disease",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Cardiovascular Diseases', 'Coronary Disease', 'Cerebrovascular Accident', 'Heart Diseases', 'Myocardial Infarction', 'Infection', 'Chlamydia Infections', 'Cytomegalovirus Infections', 'Helicobacter Infections', 'Atherosclerosis']",
+      "diseases_list": [
+        "Cardiovascular Diseases",
+        "Coronary Disease",
+        "Cerebrovascular Accident",
+        "Heart Diseases",
+        "Myocardial Infarction",
+        "Infection",
+        "Chlamydia Infections",
+        "Cytomegalovirus Infections",
+        "Helicobacter Infections",
+        "Atherosclerosis"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "No eligibility criteria",
+      "exclusion_criteria": "",
+      "brief_summary": "To investigate the role of chronic infection as a risk factor for vascular disease in a study of Native Americans. The primary focus is on the two most common agents Chlamydia pneumoniae and cytomegalovirus with a secondary emphasis on Helicobacter pylori."
+    }
+  },
+  "linked_result": {
+    "Cardiovascular Diseases": {
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease",
+      "match_reason": "Exact"
+    },
+    "Coronary Disease": {
+      "conceptId": "53741008",
+      "preferred_term": "Coronary arteriosclerosis",
+      "fully_specified_name": "Coronary arteriosclerosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.",
+      "best_match_term": "Coronary heart disease",
+      "match_reason": "Exact"
+    },
+    "Cerebrovascular Accident": {
+      "conceptId": "230690007",
+      "preferred_term": "Cerebrovascular accident",
+      "fully_specified_name": "Cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)",
+      "best_match_term": "Cerebrovascular accident",
+      "match_reason": "Exact"
+    },
+    "Heart Diseases": {
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease",
+      "match_reason": "Exact"
+    },
+    "Myocardial Infarction": {
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction",
+      "match_reason": "Exact"
+    },
+    "Infection": {
+      "conceptId": "40733004",
+      "preferred_term": "Disorder due to infection",
+      "fully_specified_name": "Infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "An illness caused by an infectious agent or its toxins that occurs through the direct or indirect transmission of the infectious agent or its products from an infected individual or via an animal, vector or the inanimate environment to a susceptible animal or human host.",
+      "best_match_term": "Infection",
+      "match_reason": "Exact"
+    },
+    "Chlamydia Infections": {
+      "conceptId": "105629000",
+      "preferred_term": "Chlamydial infection",
+      "fully_specified_name": "Chlamydial infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections with bacteria of the genus CHLAMYDIA.",
+      "best_match_term": "Chlamydial infection",
+      "match_reason": "Exact"
+    },
+    "Cytomegalovirus Infections": {
+      "conceptId": "28944009",
+      "preferred_term": "Cytomegalovirus infection",
+      "fully_specified_name": "Cytomegalovirus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection with CYTOMEGALOVIRUS, characterized by enlarged cells bearing intranuclear inclusions. Infection may be in almost any organ, but the salivary glands are the most common site in children, as are the lungs in adults.",
+      "best_match_term": "Cytomegalovirus infection",
+      "match_reason": "Exact"
+    },
+    "Helicobacter Infections": {
+      "conceptId": "6185008",
+      "preferred_term": "Helicobacter-associated disease",
+      "fully_specified_name": "Helicobacter-associated disease (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Helicobacter-associated disease (disorder)",
+      "match_reason": "Exact"
+    },
+    "Atherosclerosis": {
+      "conceptId": "441574008",
+      "preferred_term": "Atherosclerosis of artery",
+      "fully_specified_name": "Atherosclerosis of artery (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Atherosclerosis artery",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cardiovascular Diseases": 1,
+    "Cerebrovascular Accident": 1,
+    "Heart Diseases": 1,
+    "Myocardial Infarction": 1,
+    "Infection": 1,
+    "Chlamydia Infections": 1,
+    "Cytomegalovirus Infections": 1,
+    "Helicobacter Infections": 1,
+    "Atherosclerosis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cardiovascular Diseases": {
+      "disease": "Cardiovascular Diseases",
+      "conceptId": "49601007",
+      "preferred_term": "Disorder of cardiovascular system",
+      "fully_specified_name": "Disorder of cardiovascular system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.",
+      "best_match_term": "Cardiovascular disease"
+    },
+    "Cerebrovascular Accident": {
+      "disease": "Cerebrovascular Accident",
+      "conceptId": "230690007",
+      "preferred_term": "Cerebrovascular accident",
+      "fully_specified_name": "Cerebrovascular accident (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)",
+      "best_match_term": "Cerebrovascular accident"
+    },
+    "Heart Diseases": {
+      "disease": "Heart Diseases",
+      "conceptId": "56265001",
+      "preferred_term": "Heart disease",
+      "fully_specified_name": "Heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathological conditions involving the HEART including its structural and functional abnormalities.",
+      "best_match_term": "Heart disease"
+    },
+    "Myocardial Infarction": {
+      "disease": "Myocardial Infarction",
+      "conceptId": "22298006",
+      "preferred_term": "Myocardial infarction",
+      "fully_specified_name": "Myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).",
+      "best_match_term": "Myocardial infarction"
+    },
+    "Infection": {
+      "disease": "Infection",
+      "conceptId": "40733004",
+      "preferred_term": "Disorder due to infection",
+      "fully_specified_name": "Infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "An illness caused by an infectious agent or its toxins that occurs through the direct or indirect transmission of the infectious agent or its products from an infected individual or via an animal, vector or the inanimate environment to a susceptible animal or human host.",
+      "best_match_term": "Infection"
+    },
+    "Chlamydia Infections": {
+      "disease": "Chlamydia Infections",
+      "conceptId": "105629000",
+      "preferred_term": "Chlamydial infection",
+      "fully_specified_name": "Chlamydial infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections with bacteria of the genus CHLAMYDIA.",
+      "best_match_term": "Chlamydial infection"
+    },
+    "Cytomegalovirus Infections": {
+      "disease": "Cytomegalovirus Infections",
+      "conceptId": "28944009",
+      "preferred_term": "Cytomegalovirus infection",
+      "fully_specified_name": "Cytomegalovirus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection with CYTOMEGALOVIRUS, characterized by enlarged cells bearing intranuclear inclusions. Infection may be in almost any organ, but the salivary glands are the most common site in children, as are the lungs in adults.",
+      "best_match_term": "Cytomegalovirus infection"
+    },
+    "Helicobacter Infections": {
+      "disease": "Helicobacter Infections",
+      "conceptId": "6185008",
+      "preferred_term": "Helicobacter-associated disease",
+      "fully_specified_name": "Helicobacter-associated disease (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Helicobacter-associated disease (disorder)"
+    },
+    "Atherosclerosis": {
+      "disease": "Atherosclerosis",
+      "conceptId": "441574008",
+      "preferred_term": "Atherosclerosis of artery",
+      "fully_specified_name": "Atherosclerosis of artery (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Atherosclerosis artery"
+    }
+  }
+}

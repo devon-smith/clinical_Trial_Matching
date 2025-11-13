@@ -1,0 +1,53 @@
+{
+  "generated": "2025-10-20T23:27:51",
+  "trial_id": "NCT00143195",
+  "contextual": {
+    "_id": "NCT00143195",
+    "title": "Amlodipine vs Nitrates Study in Patients With Chronic Stable Angina",
+    "text": "Summary: The objective of study is to compare the anti-ischemic efficacy and safety profiles of once daily amlodipine or isosorbide-5-mononitrate in the treatment of stable asymptomatic and symptomatic myocardial ischemia\nInclusion criteria: inclusion criteria: \n\n Outpatients > =18 years of age with diagnosed clinically stable angina pectoris \n\n \nExclusion criteria: : \n\n Patients with congestive heart failure, clinically significant cardiovascular disease, standing systolic blood pressure of less than 100mmHg, concomitant anti-anginal therapies similar to sublingual NTG",
+    "metadata": {
+      "brief_title": "Amlodipine vs Nitrates Study in Patients With Chronic Stable Angina",
+      "phase": "Phase 4",
+      "drugs": "['Amlodipine', 'iso- 5 - mononitrate', 'Blood tests', 'Exercise Stress Test']",
+      "drugs_list": [
+        "Amlodipine",
+        "iso- 5 - mononitrate",
+        "Blood tests",
+        "Exercise Stress Test"
+      ],
+      "diseases": "['Myocardial Ischemia']",
+      "diseases_list": [
+        "Myocardial Ischemia"
+      ],
+      "enrollment": "200.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Outpatients > =18 years of age with diagnosed clinically stable angina pectoris \n\n ",
+      "exclusion_criteria": ": \n\n Patients with congestive heart failure, clinically significant cardiovascular disease, standing systolic blood pressure of less than 100mmHg, concomitant anti-anginal therapies similar to sublingual NTG",
+      "brief_summary": "The objective of study is to compare the anti-ischemic efficacy and safety profiles of once daily amlodipine or isosorbide-5-mononitrate in the treatment of stable asymptomatic and symptomatic myocardial ischemia"
+    }
+  },
+  "linked_result": {
+    "Myocardial Ischemia": {
+      "conceptId": "414795007",
+      "preferred_term": "Myocardial ischemia",
+      "fully_specified_name": "Myocardial ischemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Myocardial ischemia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Myocardial Ischemia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Myocardial Ischemia": {
+      "disease": "Myocardial Ischemia",
+      "conceptId": "414795007",
+      "preferred_term": "Myocardial ischemia",
+      "fully_specified_name": "Myocardial ischemia (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Myocardial ischemia"
+    }
+  }
+}

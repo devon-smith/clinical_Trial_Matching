@@ -1,0 +1,13 @@
+[
+  "patient_has_finding_of_diabetes_mellitus_now",
+  "patient_has_finding_of_hypertensive_disorder_now",
+  "patient_has_finding_of_osteoporosis_now",
+  "patient_is_exposed_to_alcohol_now",
+  "patient_has_finding_of_cocaine_abuse_now",
+  "patient_has_finding_of_cocaine_dependence_now",
+  "patient_has_finding_of_illicit_medication_use_now",
+  "patient_has_finding_of_opioid_abuse_now",
+  "patient_has_finding_of_opioid_dependence_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now"
+]

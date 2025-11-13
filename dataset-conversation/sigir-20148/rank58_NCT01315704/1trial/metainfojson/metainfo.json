@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT01315704",
+  "contextual": {
+    "_id": "NCT01315704",
+    "title": "Alzheimer's Disease and Related Disorders",
+    "text": "Summary: The purpose of this study is to compare characteristics of gait and balance measured among patients with Alzheimer's disease or related disorders separated into 3 groups according to the stage of disease (i.e., pre-dementia, mild and moderate dementia stages); to determine the effects of anti-dementia drugs and vitamin D on cognitive motor abnormalities; and to establish a database at Angers University Memory Centre.\nInclusion criteria: inclusion criteria: \n\n All elderly patients from the University Memory Center of Angers University Hospital. \n\n Able to walk without any walking aid on 15 meters \n\n Mini-Mental Status Examination score > 10 \n\n Being affiliated to a social security regime \n\n \nExclusion criteria: : \n\n Mini-Mental Status Examination score ≤ 10 \n\n Subject suffering from pre-existing impellent disturbances \n\n History of cerebrovascular accident or other cerebro-spinal pathology \n\n Poor workmanship of the written or oral French language \n\n Use of walking aid such as walking frame with wheels or tricycle. \n\n Acute medical or surgical disease in the past 3 months \n\n Refusal to participate (or trustworthy person) \n\n Near visual acuity < 2/10",
+    "metadata": {
+      "brief_title": "Alzheimer's Disease and Related Disorders",
+      "phase": "",
+      "drugs": "['Drug intervention']",
+      "drugs_list": [
+        "Drug intervention"
+      ],
+      "diseases": "[\"Alzheimer's Disease\", 'Gait Apraxia', 'Impaired Cognition']",
+      "diseases_list": [
+        "Alzheimer's Disease",
+        "Gait Apraxia",
+        "Impaired Cognition"
+      ],
+      "enrollment": "700.0",
+      "inclusion_criteria": "inclusion criteria: \n\n All elderly patients from the University Memory Center of Angers University Hospital. \n\n Able to walk without any walking aid on 15 meters \n\n Mini-Mental Status Examination score > 10 \n\n Being affiliated to a social security regime \n\n ",
+      "exclusion_criteria": ": \n\n Mini-Mental Status Examination score ≤ 10 \n\n Subject suffering from pre-existing impellent disturbances \n\n History of cerebrovascular accident or other cerebro-spinal pathology \n\n Poor workmanship of the written or oral French language \n\n Use of walking aid such as walking frame with wheels or tricycle. \n\n Acute medical or surgical disease in the past 3 months \n\n Refusal to participate (or trustworthy person) \n\n Near visual acuity < 2/10",
+      "brief_summary": "The purpose of this study is to compare characteristics of gait and balance measured among patients with Alzheimer's disease or related disorders separated into 3 groups according to the stage of disease (i.e., pre-dementia, mild and moderate dementia stages); to determine the effects of anti-dementia drugs and vitamin D on cognitive motor abnormalities; and to establish a database at Angers University Memory Centre."
+    }
+  }
+}

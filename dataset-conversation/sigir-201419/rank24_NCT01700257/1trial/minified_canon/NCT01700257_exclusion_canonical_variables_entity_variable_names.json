@@ -1,0 +1,12 @@
+[
+  "patient_has_undergone_ct_of_chest_inthepast24months",
+  "patient_has_diagnosis_of_malignant_neoplasm_of_skin_inthepast10years",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthepast10years",
+  "patient_has_diagnosis_of_malignant_tumor_of_cervix_inthepast10years",
+  "patient_has_finding_of_illness_now",
+  "patient_is_exposed_to_oxygen_now",
+  "patient_has_finding_of_cardiac_arrhythmia_now",
+  "patient_has_finding_of_congestive_heart_failure_now",
+  "patient_can_undergo_operation_on_lung_now",
+  "patient_has_finding_of_severe_chronic_obstructive_pulmonary_disease_now"
+]

@@ -1,0 +1,16 @@
+[
+  "patient_is_exposed_to_glycopyrrolate_inthepast24hours",
+  "patient_is_exposed_to_drug_or_medicament_inthehistory",
+  "patient_has_taken_clostridium_botulinum_toxin_containing_product_inthehistory",
+  "patient_has_finding_of_dribbling_from_mouth_inthehistory",
+  "patient_has_undergone_acupuncture_inthehistory",
+  "patient_has_finding_of_electrocardiogram_abnormal_now",
+  "patient_has_finding_of_allergic_disposition_now",
+  "patient_has_finding_of_epilepsy_control_poor_now",
+  "patient_has_diagnosis_of_intestinal_obstruction_inthehistory",
+  "patient_has_finding_of_renal_impairment_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_is_exposed_to_drug_or_medicament_inthepast30days",
+  "patient_has_finding_of_mental_disorder_now"
+]

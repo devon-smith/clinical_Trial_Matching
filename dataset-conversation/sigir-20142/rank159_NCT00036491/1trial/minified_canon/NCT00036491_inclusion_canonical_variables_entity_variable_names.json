@@ -1,0 +1,14 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_systemic_lupus_erythematosus_now",
+  "patient_has_finding_of_disorder_of_intestine_now",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_has_finding_of_disorder_of_stomach_now",
+  "patient_has_finding_of_heart_disease_now",
+  "patient_has_finding_of_kidney_disease_now",
+  "patient_has_intolerance_to_immunosuppressant_inthehistory",
+  "patient_is_exposed_to_immunosuppressant_inthehistory",
+  "patient_has_taken_corticosteroid_and_corticosteroid_derivative_containing_product_inthehistory",
+  "patient_is_taking_corticosteroid_and_corticosteroid_derivative_containing_product_now",
+  "patient_has_finding_of_autoantibody_level_finding_now"
+]

@@ -1,0 +1,17 @@
+[
+  "patient_has_finding_of_blood_coagulation_disorder_now",
+  "patient_has_finding_of_atrial_fibrillation_now",
+  "patient_has_finding_of_multifocal_pvcs_now",
+  "patient_has_finding_of_ventricular_premature_complex_now",
+  "patient_has_finding_of_ventricular_tachycardia_now",
+  "patient_hemoglobin_saturation_with_oxygen_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_hypoxemia_now",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_diagnosis_of_congestive_heart_failure_now",
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_diagnosis_of_acute_bronchitis_inthepast8weeks",
+  "patient_has_diagnosis_of_pneumonia_inthepast8weeks",
+  "patient_has_finding_of_cough_inthehistory",
+  "patient_has_finding_of_smoker_now"
+]

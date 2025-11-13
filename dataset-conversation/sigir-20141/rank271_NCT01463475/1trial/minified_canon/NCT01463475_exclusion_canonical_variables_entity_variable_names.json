@@ -1,0 +1,17 @@
+[
+  "patient_has_finding_of_at_risk_of_variant_creutzfeldt_jakob_disease_now",
+  "patient_has_finding_of_human_immunodeficiency_virus_i_infection_now",
+  "patient_has_finding_of_human_immunodeficiency_virus_ii_infection_now",
+  "patient_has_finding_of_human_t_lymphotropic_virus_1_infection_now",
+  "patient_has_finding_of_human_t_lymphotropic_virus_2_infection_now",
+  "patient_has_finding_of_prion_disease_now",
+  "patient_has_finding_of_syphilis_now",
+  "patient_has_finding_of_type_b_viral_hepatitis_now",
+  "patient_has_finding_of_viral_hepatitis_c_now",
+  "patient_has_undergone_xenogeneic_transplantation_inthehistory",
+  "patient_has_finding_of_cytomegalovirus_infection_now",
+  "patient_has_finding_of_disease_due_to_west_nile_virus_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_can_undergo_donation_of_bone_marrow_now"
+]

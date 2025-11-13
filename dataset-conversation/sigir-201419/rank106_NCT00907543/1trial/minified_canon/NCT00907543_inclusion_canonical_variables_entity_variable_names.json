@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_malignant_adenomatous_neoplasm_now",
+  "patient_has_finding_of_primary_adenocarcinoma_of_esophagogastric_junction_now",
+  "patient_has_finding_of_squamous_cell_carcinoma_now",
+  "patient_has_diagnosis_of_secondary_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_secondary_malignant_neoplastic_disease_now",
+  "patient_has_undergone_esophagogastroscopy_now",
+  "patient_has_undergone_chemotherapy_inthehistory",
+  "patient_has_diagnosis_of_malignant_neoplasm_of_skin_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_age_value_recorded_now_in_years"
+]

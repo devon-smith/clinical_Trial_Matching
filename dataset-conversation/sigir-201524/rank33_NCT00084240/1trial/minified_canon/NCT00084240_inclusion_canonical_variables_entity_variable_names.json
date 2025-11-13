@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_fever_inthehistory",
+  "patient_has_finding_of_fever_now",
+  "patient_has_diagnosis_of_malaria_now",
+  "patient_glucose_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_has_undergone_immunochromatographic_test_now",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_gonadotropin_value_recorded_now_withunit_unit"
+]

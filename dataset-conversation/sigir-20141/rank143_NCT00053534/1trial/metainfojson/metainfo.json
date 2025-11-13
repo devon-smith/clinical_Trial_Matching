@@ -1,0 +1,28 @@
+{
+  "trial_id": "NCT00053534",
+  "contextual": {
+    "_id": "NCT00053534",
+    "title": "Heart Failure in the Community",
+    "text": "Summary: To monitor trends in congestive heart failure in Olmsted County, Minnesota.\nInclusion criteria: No eligibility criteria\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Heart Failure in the Community",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Cardiovascular Diseases', 'Heart Diseases', 'Heart Failure', 'Coronary Disease', 'Diabetes Mellitus', 'Hypertension', 'Obesity']",
+      "diseases_list": [
+        "Cardiovascular Diseases",
+        "Heart Diseases",
+        "Heart Failure",
+        "Coronary Disease",
+        "Diabetes Mellitus",
+        "Hypertension",
+        "Obesity"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "No eligibility criteria",
+      "exclusion_criteria": "",
+      "brief_summary": "To monitor trends in congestive heart failure in Olmsted County, Minnesota."
+    }
+  }
+}

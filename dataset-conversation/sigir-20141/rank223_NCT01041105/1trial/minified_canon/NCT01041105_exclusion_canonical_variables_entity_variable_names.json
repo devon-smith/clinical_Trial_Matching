@@ -1,0 +1,7 @@
+[
+  "patient_has_undergone_bariatric_operative_procedure_inthehistory",
+  "patient_has_undergone_surgical_procedure_inthehistory",
+  "patient_has_undergone_revision_inthehistory",
+  "patient_has_finding_of_insufficient_clinical_detail_given_now",
+  "patient_has_finding_of_patient_medical_record_not_available_now"
+]

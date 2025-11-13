@@ -1,0 +1,110 @@
+{
+  "generated": "2025-10-20T23:39:07",
+  "trial_id": "NCT01050881",
+  "contextual": {
+    "_id": "NCT01050881",
+    "title": "Notification of Donors With Positive Microbiology Markers",
+    "text": "Summary: Each year around 200 blood donors in the UK are found to be infected with blood-borne diseases (HIV, hepatitis B, hepatitis C, and HTLV), while several others have been identified as having an increased risk of variant Creutzfeldt-Jakob Disease (vCJD). Although the notification procedures for these infections vary, their effectiveness and appropriateness have never been evaluated in a systematic study.~The proposed research has been designed to assess the responses of blood donors to notification and their satisfaction with how they were informed about the infection. The study will be implemented using standard questionnaire-based measures (French et al, 2004; Marteau & Bekker, 1992).~The study will involve approximately 600 blood donors who were informed of an infection or possible infection with blood-borne diseases in 2008 and 2009, and approximately 100 donors notified of possible risk of vCJD infection in 2005. A comparable group of 2005 donors will be included to control for the effects of time. As the majority of donors testing positive donated to NHS Blood and Transplant (NHSBT), the participants will be identified from the NHSBT database only, and their availability confirmed through their GP or specialist clinician. A standardized questionnaire will be then sent to all those identified as eligible.~The study will last 12 months, but direct participant involvement will be limited to the time required to complete the questionnaire, which should take under one hour. To safeguard confidentiality, no identifiable personal data will be used in the analysis. Where demographic or medical information already held by NHSBT is retrieved to minimise response burden, this will be pseudonymised before use.~The study is sponsored by the blood services for England, Wales, Scotland and Northern Ireland. The results will be used to inform notification procedures in the future.\nInclusion criteria: inclusion criteria: \n\n deferred blood donor status, and \n\n deferral due to a positive result of a routine blood test for HIV, or hepatitis B, or hepatitis C, or HTLV, or having been identified as at risk of vCJD; and \n\n deferral occured in 2008 or 2009 (2007 for the pilot; 2005 for those at risk of vCJD); and \n\n donor registered at one of the NHSBT centres (English Blood Service in England and Wales); \n\n \nExclusion criteria: : \n\n not a blood donor; or \n\n no record of notification having taken place; or \n\n a member of Armed Forces or other profession where contact at the address provided could lead to a breach of confidentiality; or \n\n deferred before 2008 (if not in the pilot or notified of increased risk of vCJD); \n\n deferred as a result of a non-routine test or syphilis infection only; or \n\n donor registered with and notified by the Welsh, Scottish or Northern Irish Blood Services;",
+    "metadata": {
+      "brief_title": "Notification of Donors With Positive Microbiology Markers",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Human Immunodeficiency Virus', 'Hepatitis B', 'Hepatitis C', 'Human T-lymphotropic Virus I & II', 'Creutzfeldt-Jakob Syndrome']",
+      "diseases_list": [
+        "Human Immunodeficiency Virus",
+        "Hepatitis B",
+        "Hepatitis C",
+        "Human T-lymphotropic Virus I & II",
+        "Creutzfeldt-Jakob Syndrome"
+      ],
+      "enrollment": "217.0",
+      "inclusion_criteria": "inclusion criteria: \n\n deferred blood donor status, and \n\n deferral due to a positive result of a routine blood test for HIV, or hepatitis B, or hepatitis C, or HTLV, or having been identified as at risk of vCJD; and \n\n deferral occured in 2008 or 2009 (2007 for the pilot; 2005 for those at risk of vCJD); and \n\n donor registered at one of the NHSBT centres (English Blood Service in England and Wales); \n\n ",
+      "exclusion_criteria": ": \n\n not a blood donor; or \n\n no record of notification having taken place; or \n\n a member of Armed Forces or other profession where contact at the address provided could lead to a breach of confidentiality; or \n\n deferred before 2008 (if not in the pilot or notified of increased risk of vCJD); \n\n deferred as a result of a non-routine test or syphilis infection only; or \n\n donor registered with and notified by the Welsh, Scottish or Northern Irish Blood Services;",
+      "brief_summary": "Each year around 200 blood donors in the UK are found to be infected with blood-borne diseases (HIV, hepatitis B, hepatitis C, and HTLV), while several others have been identified as having an increased risk of variant Creutzfeldt-Jakob Disease (vCJD). Although the notification procedures for these infections vary, their effectiveness and appropriateness have never been evaluated in a systematic study.~The proposed research has been designed to assess the responses of blood donors to notification and their satisfaction with how they were informed about the infection. The study will be implemented using standard questionnaire-based measures (French et al, 2004; Marteau & Bekker, 1992).~The study will involve approximately 600 blood donors who were informed of an infection or possible infection with blood-borne diseases in 2008 and 2009, and approximately 100 donors notified of possible risk of vCJD infection in 2005. A comparable group of 2005 donors will be included to control for the effects of time. As the majority of donors testing positive donated to NHS Blood and Transplant (NHSBT), the participants will be identified from the NHSBT database only, and their availability confirmed through their GP or specialist clinician. A standardized questionnaire will be then sent to all those identified as eligible.~The study will last 12 months, but direct participant involvement will be limited to the time required to complete the questionnaire, which should take under one hour. To safeguard confidentiality, no identifiable personal data will be used in the analysis. Where demographic or medical information already held by NHSBT is retrieved to minimise response burden, this will be pseudonymised before use.~The study is sponsored by the blood services for England, Wales, Scotland and Northern Ireland. The results will be used to inform notification procedures in the future."
+    }
+  },
+  "linked_result": {
+    "Human Immunodeficiency Virus": {
+      "conceptId": "86406008",
+      "preferred_term": "Human immunodeficiency virus infection",
+      "fully_specified_name": "Human immunodeficiency virus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Includes the spectrum of human immunodeficiency virus infections that range from asymptomatic seropositivity, thru AIDS-related complex (ARC), to acquired immunodeficiency syndrome (AIDS).",
+      "best_match_term": "Human immunodeficiency virus infection",
+      "match_reason": "Exact"
+    },
+    "Hepatitis B": {
+      "conceptId": "66071002",
+      "preferred_term": "Type B viral hepatitis",
+      "fully_specified_name": "Viral hepatitis type B (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of the LIVER in humans caused by a member of the ORTHOHEPADNAVIRUS genus, HEPATITIS B VIRUS. It is primarily transmitted by parenteral exposure, such as transfusion of contaminated blood or blood products, but can also be transmitted via sexual or intimate personal contact.",
+      "best_match_term": "Hepatitis B",
+      "match_reason": "Exact"
+    },
+    "Hepatitis C": {
+      "conceptId": "50711007",
+      "preferred_term": "Viral hepatitis C",
+      "fully_specified_name": "Viral hepatitis type C (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of the LIVER in humans caused by HEPATITIS C VIRUS, a single-stranded RNA virus. Its incubation period is 30-90 days. Hepatitis C is transmitted primarily by contaminated blood parenterally and is often associated with transfusion and intravenous drug abuse. However, in a significant number of cases, the source of hepatitis C infection is unknown.",
+      "best_match_term": "Hepatitis C",
+      "match_reason": "Exact"
+    },
+    "Human T-lymphotropic Virus I & II": null,
+    "Creutzfeldt-Jakob Syndrome": {
+      "conceptId": "792004",
+      "preferred_term": "Creutzfeldt-Jakob disease",
+      "fully_specified_name": "Jakob-Creutzfeldt disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A rare transmissible encephalopathy most prevalent between the ages of 50 and 70 years. Affected individuals may present with sleep disturbances, personality changes, ATAXIA; APHASIA, visual loss, weakness, muscle atrophy, MYOCLONUS, progressive dementia, and death within one year of disease onset. A familial form exhibiting autosomal dominant inheritance and a new variant CJD (potentially associated with ENCEPHALOPATHY, BOVINE SPONGIFORM) have been described. Pathological features include prominent cerebellar and cerebral cortical spongiform degeneration and the presence of PRIONS. (From N Engl J Med, 1998 Dec 31;339(27))",
+      "best_match_term": "Creutzfeldt-Jakob disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Human Immunodeficiency Virus": 1,
+    "Hepatitis B": 1,
+    "Hepatitis C": 1,
+    "Creutzfeldt-Jakob Syndrome": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Human Immunodeficiency Virus": {
+      "disease": "Human Immunodeficiency Virus",
+      "conceptId": "86406008",
+      "preferred_term": "Human immunodeficiency virus infection",
+      "fully_specified_name": "Human immunodeficiency virus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Includes the spectrum of human immunodeficiency virus infections that range from asymptomatic seropositivity, thru AIDS-related complex (ARC), to acquired immunodeficiency syndrome (AIDS).",
+      "best_match_term": "Human immunodeficiency virus infection"
+    },
+    "Hepatitis B": {
+      "disease": "Hepatitis B",
+      "conceptId": "66071002",
+      "preferred_term": "Type B viral hepatitis",
+      "fully_specified_name": "Viral hepatitis type B (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of the LIVER in humans caused by a member of the ORTHOHEPADNAVIRUS genus, HEPATITIS B VIRUS. It is primarily transmitted by parenteral exposure, such as transfusion of contaminated blood or blood products, but can also be transmitted via sexual or intimate personal contact.",
+      "best_match_term": "Hepatitis B"
+    },
+    "Hepatitis C": {
+      "disease": "Hepatitis C",
+      "conceptId": "50711007",
+      "preferred_term": "Viral hepatitis C",
+      "fully_specified_name": "Viral hepatitis type C (disorder)",
+      "type": "Clinical finding",
+      "definition": "INFLAMMATION of the LIVER in humans caused by HEPATITIS C VIRUS, a single-stranded RNA virus. Its incubation period is 30-90 days. Hepatitis C is transmitted primarily by contaminated blood parenterally and is often associated with transfusion and intravenous drug abuse. However, in a significant number of cases, the source of hepatitis C infection is unknown.",
+      "best_match_term": "Hepatitis C"
+    },
+    "Creutzfeldt-Jakob Syndrome": {
+      "disease": "Creutzfeldt-Jakob Syndrome",
+      "conceptId": "792004",
+      "preferred_term": "Creutzfeldt-Jakob disease",
+      "fully_specified_name": "Jakob-Creutzfeldt disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A rare transmissible encephalopathy most prevalent between the ages of 50 and 70 years. Affected individuals may present with sleep disturbances, personality changes, ATAXIA; APHASIA, visual loss, weakness, muscle atrophy, MYOCLONUS, progressive dementia, and death within one year of disease onset. A familial form exhibiting autosomal dominant inheritance and a new variant CJD (potentially associated with ENCEPHALOPATHY, BOVINE SPONGIFORM) have been described. Pathological features include prominent cerebellar and cerebral cortical spongiform degeneration and the presence of PRIONS. (From N Engl J Med, 1998 Dec 31;339(27))",
+      "best_match_term": "Creutzfeldt-Jakob disease"
+    }
+  }
+}

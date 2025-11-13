@@ -1,0 +1,26 @@
+{
+  "_id": "NCT02200783",
+  "title": "Randomized Comparison of Radiological Exposure With TRIPTable® in Patients With Acute Coronary Syndromes",
+  "text": "Summary: Excessive radiation received by the operator has been described as a possible drawback of the radial catheterization technique when compared with the femoral access.~The study hypothesis is that the use of radial access device dedicated radioprotective TRIPTable ® (Transradial Intervention Table Protection) is not inferior to standard femoral technique and superior to standard radial technique as radioprotection strategy to the operator in patients with acute coronary syndromes acute and submitted to cardiac catheterization.\nInclusion criteria: inclusion criteria: \n\n Unstable angina with an indication for invasive stratification \n\n Acute coronary syndrome without ST-segment elevation \n\n Acute coronary syndrome with ST-segment elevation \n\n Patient informed of the nature of the study and have signed the Informed Consent \n\n Patient suitable for coronary angiography and / or percutaneous coronary intervention either by radial access as the femoral \n\n \nExclusion criteria: : \n\n Below 18 years of age \n\n Pregnancy \n\n Chronic use of vitamin K antagonists, or direct thrombin inhibitors or antagonists of factor Xa, \n\n Active bleeding or high risk of bleeding (severe hepatic insufficiency, active peptic ulcer disease, creatinine clearance <30 mL / min, platelet count <100,000 mm3); \n\n Uncontrolled hypertension; \n\n Cardiogenic shock; \n\n Previous coronary artery bypass graft surgery with the use of ≥ 1 graft \n\n Patients not candidates for the use of any of the specified vascular access \n\n Concomitant severe disease with life expectancy less than 12 months life; \n\n Medical, geographical, or social conditions that impede study participation \n\n Refusal or inability to understand and sign the informed consent form.",
+  "metadata": {
+    "brief_title": "Randomized Comparison of Radiological Exposure With TRIPTable® in Patients With Acute Coronary Syndromes",
+    "phase": "",
+    "drugs": "['TripTable', 'Radial', 'Femoral']",
+    "drugs_list": [
+      "TripTable",
+      "Radial",
+      "Femoral"
+    ],
+    "diseases": "['Acute Coronary Syndromes', 'Angioplasty, Transluminal, Percutaneous Coronary']",
+    "diseases_list": [
+      "Acute Coronary Syndromes",
+      "Angioplasty",
+      "Transluminal",
+      "Percutaneous Coronary"
+    ],
+    "enrollment": "99.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Unstable angina with an indication for invasive stratification \n\n Acute coronary syndrome without ST-segment elevation \n\n Acute coronary syndrome with ST-segment elevation \n\n Patient informed of the nature of the study and have signed the Informed Consent \n\n Patient suitable for coronary angiography and / or percutaneous coronary intervention either by radial access as the femoral \n\n ",
+    "exclusion_criteria": ": \n\n Below 18 years of age \n\n Pregnancy \n\n Chronic use of vitamin K antagonists, or direct thrombin inhibitors or antagonists of factor Xa, \n\n Active bleeding or high risk of bleeding (severe hepatic insufficiency, active peptic ulcer disease, creatinine clearance <30 mL / min, platelet count <100,000 mm3); \n\n Uncontrolled hypertension; \n\n Cardiogenic shock; \n\n Previous coronary artery bypass graft surgery with the use of ≥ 1 graft \n\n Patients not candidates for the use of any of the specified vascular access \n\n Concomitant severe disease with life expectancy less than 12 months life; \n\n Medical, geographical, or social conditions that impede study participation \n\n Refusal or inability to understand and sign the informed consent form.",
+    "brief_summary": "Excessive radiation received by the operator has been described as a possible drawback of the radial catheterization technique when compared with the femoral access.~The study hypothesis is that the use of radial access device dedicated radioprotective TRIPTable ® (Transradial Intervention Table Protection) is not inferior to standard femoral technique and superior to standard radial technique as radioprotection strategy to the operator in patients with acute coronary syndromes acute and submitted to cardiac catheterization."
+  }
+}

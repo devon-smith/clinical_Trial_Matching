@@ -1,0 +1,52 @@
+{
+  "generated": "2025-10-20T22:26:51",
+  "trial_id": "NCT01050062",
+  "contextual": {
+    "_id": "NCT01050062",
+    "title": "Post-Marketing Surveillance of Micombi Tablets Survey on the Long-term Use",
+    "text": "Summary: The survey is conducted to collect safety and effectiveness information in Hypertensive patients treated with Micombi Tablets on the long term use in daily clinical settings in Japan.\nInclusion criteria: inclusion criteria: \n\n Hypertensive patients who have never taken Micombi Tablets. \n\n \nExclusion criteria: : \n\n None",
+    "metadata": {
+      "brief_title": "Post-Marketing Surveillance of Micombi Tablets Survey on the Long-term Use",
+      "phase": "",
+      "drugs": "['Telmisartan 80mg', 'Telmisartan 40mg', 'Hydrochlorothiazide 12.5mg']",
+      "drugs_list": [
+        "Telmisartan 80mg",
+        "Telmisartan 40mg",
+        "Hydrochlorothiazide 12.5mg"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "1452.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Hypertensive patients who have never taken Micombi Tablets. \n\n ",
+      "exclusion_criteria": ": \n\n None",
+      "brief_summary": "The survey is conducted to collect safety and effectiveness information in Hypertensive patients treated with Micombi Tablets on the long term use in daily clinical settings in Japan."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

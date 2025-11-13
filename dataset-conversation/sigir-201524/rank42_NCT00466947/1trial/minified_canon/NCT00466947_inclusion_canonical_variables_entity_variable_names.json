@@ -1,0 +1,8 @@
+[
+  "patient_has_undergone_active_immunization_now",
+  "patient_has_finding_of_premature_infant_now",
+  "patient_has_diagnosis_of_acute_otitis_media_now",
+  "patient_has_diagnosis_of_community_acquired_pneumonia_now",
+  "patient_can_undergo_immunization_inthefuture",
+  "patient_has_undergone_physical_examination_inthehistory"
+]

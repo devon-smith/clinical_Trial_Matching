@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT00314704",
+  "contextual": {
+    "_id": "NCT00314704",
+    "title": "Dopamine and Norepinephrine in Shock Patients",
+    "text": "Summary: The purpose of this study is to compare the efficacy of dopamine and norepinephrine, two commonly used vasopressor agents, in the treatment of shock.\nInclusion criteria: inclusion criteria: \n\n Mean arterial pressure less than 70 mmHg or systolic pressure less than 100 mmHg persisting despite adequate fluid loading (in example with at least 1000 mL crystalloid or 500 ml colloid) unless central venous pressure (CVP) or pulmonary artery occluded pressure (PAOP) are elevated (e.g. CVP> 12 mmHg or PAOP > 14 mmHg). \n\n \nExclusion criteria: : \n\n Serious arrhythmia such as rapid atrial fibrillation (> 160/min) or ventricular tachycardia. \n\n Brain death. \n\n Open label administration of dopamine, norepinephrine, epinephrine or phenylephrine for more than 4hours.",
+    "metadata": {
+      "brief_title": "Dopamine and Norepinephrine in Shock Patients",
+      "phase": "Phase 3",
+      "drugs": "['dopamine versus norepinephrine']",
+      "drugs_list": [
+        "dopamine versus norepinephrine"
+      ],
+      "diseases": "['Shock']",
+      "diseases_list": [
+        "Shock"
+      ],
+      "enrollment": "1679.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Mean arterial pressure less than 70 mmHg or systolic pressure less than 100 mmHg persisting despite adequate fluid loading (in example with at least 1000 mL crystalloid or 500 ml colloid) unless central venous pressure (CVP) or pulmonary artery occluded pressure (PAOP) are elevated (e.g. CVP> 12 mmHg or PAOP > 14 mmHg). \n\n ",
+      "exclusion_criteria": ": \n\n Serious arrhythmia such as rapid atrial fibrillation (> 160/min) or ventricular tachycardia. \n\n Brain death. \n\n Open label administration of dopamine, norepinephrine, epinephrine or phenylephrine for more than 4hours.",
+      "brief_summary": "The purpose of this study is to compare the efficacy of dopamine and norepinephrine, two commonly used vasopressor agents, in the treatment of shock."
+    }
+  }
+}

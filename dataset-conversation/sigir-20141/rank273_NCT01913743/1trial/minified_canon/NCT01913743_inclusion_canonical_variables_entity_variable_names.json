@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_body_weight_value_recorded_now_withunit_kg",
+  "patient_has_finding_of_right_handed_now"
+]

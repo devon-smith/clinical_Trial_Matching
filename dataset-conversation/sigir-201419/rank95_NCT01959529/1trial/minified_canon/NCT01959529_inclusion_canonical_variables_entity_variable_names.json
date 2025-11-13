@@ -1,0 +1,9 @@
+[
+  "patient_has_diagnosis_of_type_2_diabetes_mellitus_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_disorder_of_cardiovascular_system_inthehistory",
+  "patient_has_diagnosis_of_kidney_disease_inthehistory",
+  "patients_risk_factor_is_positive_now",
+  "patient_glycosylated_hemoglobin_value_recorded_now_withunit_percent",
+  "patient_insulin_value_recorded_now_withunit_units_per_day"
+]

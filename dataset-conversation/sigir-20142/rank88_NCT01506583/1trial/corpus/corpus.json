@@ -1,0 +1,25 @@
+{
+  "_id": "NCT01506583",
+  "title": "Clinical Evaluation of QFlu Combo Test",
+  "text": "Summary: Currently effective antivials for influenza treatment are two influenza viral neuraminidase inhibitors, oseltamivir (Tamiflu) and zanamivir (Relenza). Resistance to these drugs is reflected by reduced susceptibility of viral neuraminidase to these drugs. The hypothesis is that the signal ratio of two reagents (with or without a single concentration of the drug) correlates the IC50 value, an accurate measurement of drug resistance but impractical for clinical use.\nInclusion criteria: inclusion criteria: \n\n Those who exhibit flu-like symptom(s) during a flu season and who (or whose guardians) are willing to participate in the study.\nExclusion criteria: ",
+  "metadata": {
+    "brief_title": "Clinical Evaluation of QFlu Combo Test",
+    "phase": "",
+    "drugs": "",
+    "drugs_list": [],
+    "diseases": "['Cough', 'Myalgia', 'Nasal Obstruction', 'Sore Throat', 'Headache', 'Fatigue', 'Fever']",
+    "diseases_list": [
+      "Cough",
+      "Myalgia",
+      "Nasal Obstruction",
+      "Sore Throat",
+      "Headache",
+      "Fatigue",
+      "Fever"
+    ],
+    "enrollment": "506.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Those who exhibit flu-like symptom(s) during a flu season and who (or whose guardians) are willing to participate in the study.",
+    "exclusion_criteria": "",
+    "brief_summary": "Currently effective antivials for influenza treatment are two influenza viral neuraminidase inhibitors, oseltamivir (Tamiflu) and zanamivir (Relenza). Resistance to these drugs is reflected by reduced susceptibility of viral neuraminidase to these drugs. The hypothesis is that the signal ratio of two reagents (with or without a single concentration of the drug) correlates the IC50 value, an accurate measurement of drug resistance but impractical for clinical use."
+  }
+}

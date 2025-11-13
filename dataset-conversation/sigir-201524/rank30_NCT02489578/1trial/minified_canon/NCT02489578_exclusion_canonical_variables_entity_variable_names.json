@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_hospital_acquired_pneumonia_now",
+  "patient_has_diagnosis_of_active_tuberculosis_now",
+  "patient_is_undergoing_tb_chemotherapy_now",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_has_finding_of_hiv_positive_now"
+]

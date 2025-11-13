@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01944397",
+  "contextual": {
+    "_id": "NCT01944397",
+    "title": "A CALIBER Study: Risk Factors for Stroke, Heart Failure, and Myocardial Infarction in Atrial Fibrillation",
+    "text": "Summary: We aim to investigate the prognosis of patients diagnosed with AF, particularly in relation to the development of subsequent stroke, heart failure, and myocardial infarction. We will explore the relationship between these outcomes and a range of risk factors.\nInclusion criteria: inclusion criteria: \n\n Patients with a coded diagnosis for atrial fibrillation in their primary or secondary care record. \n\n Patients in GPRD practices which are deemed up to standard by GPRD criteria \n\n Patients whose records are deemed acceptable by GPRD criteria and contain at least one year of data \n\n Patients whose age and sex, as recorded in GPRD is the same as that recorded in HES. \n\n \nExclusion criteria: : \n\n A diagnosis of heart failure, stroke, or myocardial infarction occurring before diagnosis of atrial fibrillation",
+    "metadata": {
+      "brief_title": "A CALIBER Study: Risk Factors for Stroke, Heart Failure, and Myocardial Infarction in Atrial Fibrillation",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Atrial Fibrillation', 'Heart Failure', 'Stroke', 'Myocardial Infarction']",
+      "diseases_list": [
+        "Atrial Fibrillation",
+        "Heart Failure",
+        "Stroke",
+        "Myocardial Infarction"
+      ],
+      "enrollment": "125000.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients with a coded diagnosis for atrial fibrillation in their primary or secondary care record. \n\n Patients in GPRD practices which are deemed up to standard by GPRD criteria \n\n Patients whose records are deemed acceptable by GPRD criteria and contain at least one year of data \n\n Patients whose age and sex, as recorded in GPRD is the same as that recorded in HES. \n\n ",
+      "exclusion_criteria": ": \n\n A diagnosis of heart failure, stroke, or myocardial infarction occurring before diagnosis of atrial fibrillation",
+      "brief_summary": "We aim to investigate the prognosis of patients diagnosed with AF, particularly in relation to the development of subsequent stroke, heart failure, and myocardial infarction. We will explore the relationship between these outcomes and a range of risk factors."
+    }
+  }
+}

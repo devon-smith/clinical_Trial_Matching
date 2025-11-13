@@ -1,0 +1,92 @@
+{
+  "generated": "2025-10-22T21:15:06",
+  "trial_id": "NCT00374270",
+  "contextual": {
+    "_id": "NCT00374270",
+    "title": "Improving Blood Pressure Management in Patients With Diabetes",
+    "text": "Summary: About 22% of Canadians have high blood pressure, or hypertension. However, studies have shown that only 1 out of 5 people with hypertension have their blood pressure controlled.~Diabetes is also an important risk factor for heart disease and stroke. About half of people with diabetes also have hypertension - a deadly combination. Studies have shown that only about 1 in 10 people with diabetes have their blood pressure controlled adequately - clearly something needs to be done to improve this.~Heart disease, stroke, hypertension, and diabetes are conditions that occur in the community, so we need to explore innovative solutions that will work in the community. Pharmacists are well-placed in the community to help identify people with diabetes and hypertension. This has worked very well in previous studies in patients with high cholesterol levels. Pharmacists and nurses have complementary skills which, when working as a team, may help identify and better manage hypertension in people with diabetes.~Our main objective is to test whether a community pharmacist and nurse team can improve blood pressure control in people with diabetes and hypertension.\nInclusion criteria: inclusion criteria: \n\n The following patients will be eligible for study participation: \n\n Patients with either type 1 or type 2 diabetes. Diabetes will be defined as those patients presently taking either oral hypoglycemic agents or insulin therapy (oral hypoglycemic agents to include all drugs in the drug classes of: alpha-glucosidase inhibitors, biguanides, meglitinides, sulfonylureas, thiazolidinediones and adjunctive therapy) taken for >6 months to rule-out steroid-induced diabetes and gestational diabetes. \n\n \nExclusion criteria: : \n\n Patients will be excluded from the study if they: \n\n Do not provide or are unable to provide written informed consent \n\n Refuse or are unlikely to attend follow-up visits for BP measurements \n\n Are institutionalized \n\n Are <18 years of age \n\n Do not understand English \n\n Enrolled in other diabetes or hypertension trials \n\n Subjects will be recruited whether or not they are receiving antihypertensive therapy.",
+    "metadata": {
+      "brief_title": "Improving Blood Pressure Management in Patients With Diabetes",
+      "phase": "Phase 4",
+      "drugs": "['Lifestyle Counselling; Opinion Leader Influence Statements']",
+      "drugs_list": [
+        "Lifestyle Counselling; Opinion Leader Influence Statements"
+      ],
+      "diseases": "['Hypertension', 'Diabetes Mellitus, Type 1', 'Diabetes Mellitus, Type 2']",
+      "diseases_list": [
+        "Hypertension",
+        "Diabetes Mellitus",
+        "Type 1",
+        "Diabetes Mellitus",
+        "Type 2"
+      ],
+      "enrollment": "227.0",
+      "inclusion_criteria": "inclusion criteria: \n\n The following patients will be eligible for study participation: \n\n Patients with either type 1 or type 2 diabetes. Diabetes will be defined as those patients presently taking either oral hypoglycemic agents or insulin therapy (oral hypoglycemic agents to include all drugs in the drug classes of: alpha-glucosidase inhibitors, biguanides, meglitinides, sulfonylureas, thiazolidinediones and adjunctive therapy) taken for >6 months to rule-out steroid-induced diabetes and gestational diabetes. \n\n ",
+      "exclusion_criteria": ": \n\n Patients will be excluded from the study if they: \n\n Do not provide or are unable to provide written informed consent \n\n Refuse or are unlikely to attend follow-up visits for BP measurements \n\n Are institutionalized \n\n Are <18 years of age \n\n Do not understand English \n\n Enrolled in other diabetes or hypertension trials \n\n Subjects will be recruited whether or not they are receiving antihypertensive therapy.",
+      "brief_summary": "About 22% of Canadians have high blood pressure, or hypertension. However, studies have shown that only 1 out of 5 people with hypertension have their blood pressure controlled.~Diabetes is also an important risk factor for heart disease and stroke. About half of people with diabetes also have hypertension - a deadly combination. Studies have shown that only about 1 in 10 people with diabetes have their blood pressure controlled adequately - clearly something needs to be done to improve this.~Heart disease, stroke, hypertension, and diabetes are conditions that occur in the community, so we need to explore innovative solutions that will work in the community. Pharmacists are well-placed in the community to help identify people with diabetes and hypertension. This has worked very well in previous studies in patients with high cholesterol levels. Pharmacists and nurses have complementary skills which, when working as a team, may help identify and better manage hypertension in people with diabetes.~Our main objective is to test whether a community pharmacist and nurse team can improve blood pressure control in people with diabetes and hypertension."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Diabetes Mellitus, Type 1": {
+      "conceptId": "46635009",
+      "preferred_term": "Type 1 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 1 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subtype of DIABETES MELLITUS that is characterized by INSULIN deficiency. It is manifested by the sudden onset of severe HYPERGLYCEMIA, rapid progression to DIABETIC KETOACIDOSIS, and DEATH unless treated with insulin. The disease may occur at any age, but is most common in childhood or adolescence.",
+      "best_match_term": "Diabetes mellitus type 1",
+      "match_reason": "Exact"
+    },
+    "Diabetes Mellitus, Type 2": {
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "Diabetes mellitus type 2",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1,
+    "Diabetes Mellitus, Type 1": 1,
+    "Diabetes Mellitus, Type 2": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Diabetes Mellitus, Type 1": {
+      "disease": "Diabetes Mellitus, Type 1",
+      "conceptId": "46635009",
+      "preferred_term": "Type 1 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 1 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subtype of DIABETES MELLITUS that is characterized by INSULIN deficiency. It is manifested by the sudden onset of severe HYPERGLYCEMIA, rapid progression to DIABETIC KETOACIDOSIS, and DEATH unless treated with insulin. The disease may occur at any age, but is most common in childhood or adolescence.",
+      "best_match_term": "Diabetes mellitus type 1"
+    },
+    "Diabetes Mellitus, Type 2": {
+      "disease": "Diabetes Mellitus, Type 2",
+      "conceptId": "44054006",
+      "preferred_term": "Type 2 diabetes mellitus",
+      "fully_specified_name": "Diabetes mellitus type 2 (disorder)",
+      "type": "Clinical finding",
+      "definition": "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.",
+      "best_match_term": "Diabetes mellitus type 2"
+    }
+  }
+}

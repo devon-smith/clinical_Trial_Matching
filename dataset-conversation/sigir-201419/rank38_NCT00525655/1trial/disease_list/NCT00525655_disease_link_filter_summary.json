@@ -1,0 +1,71 @@
+{
+  "generated": "2025-10-20T22:23:02",
+  "trial_id": "NCT00525655",
+  "contextual": {
+    "_id": "NCT00525655",
+    "title": "Multimedia Intervention in Patients With Familial Adenomatous Polyposis (FAP)",
+    "text": "Summary: The goal of this research study is to test the first version of a website that will offer information and support for adolescents and young adults with FAP. Researchers want to see if the website will be helpful, easy to understand, and easy to use for young patients with FAP.\nInclusion criteria: Eligibility: (List All Criteria) \n\n inclusion criteria: \n\n 1) Having a confirmed genetic or clinical diagnosis of FAP between the age of 13-24 at the time of recruitment to this study. \n\n 18-21 year old with a previous cancer diagnosis. \n\n Able to read and speak English. \n\n \nExclusion criteria: : \n\n 1) n/a",
+    "metadata": {
+      "brief_title": "Multimedia Intervention in Patients With Familial Adenomatous Polyposis (FAP)",
+      "phase": "",
+      "drugs": "['Web-Based Multimedia Intervention', 'Questionnaire']",
+      "drugs_list": [
+        "Web-Based Multimedia Intervention",
+        "Questionnaire"
+      ],
+      "diseases": "['Familial Adenomatous Polyposis', 'Colorectal Cancer']",
+      "diseases_list": [
+        "Familial Adenomatous Polyposis",
+        "Colorectal Cancer"
+      ],
+      "enrollment": "31.0",
+      "inclusion_criteria": "Eligibility: (List All Criteria) \n\n inclusion criteria: \n\n 1) Having a confirmed genetic or clinical diagnosis of FAP between the age of 13-24 at the time of recruitment to this study. \n\n 18-21 year old with a previous cancer diagnosis. \n\n Able to read and speak English. \n\n ",
+      "exclusion_criteria": ": \n\n 1) n/a",
+      "brief_summary": "The goal of this research study is to test the first version of a website that will offer information and support for adolescents and young adults with FAP. Researchers want to see if the website will be helpful, easy to understand, and easy to use for young patients with FAP."
+    }
+  },
+  "linked_result": {
+    "Familial Adenomatous Polyposis": {
+      "conceptId": "72900001",
+      "preferred_term": "Familial multiple polyposis syndrome",
+      "fully_specified_name": "Familial multiple polyposis syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A polyposis syndrome due to an autosomal dominant mutation of the APC genes (GENES, APC) on CHROMOSOME 5. The syndrome is characterized by the development of hundreds of ADENOMATOUS POLYPS in the COLON and RECTUM of affected individuals by early adulthood.",
+      "best_match_term": "Familial adenomatous polyposis",
+      "match_reason": "Exact"
+    },
+    "Colorectal Cancer": {
+      "conceptId": "363510005",
+      "preferred_term": "Malignant tumor of large intestine",
+      "fully_specified_name": "Malignant tumor of large intestine (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm that affects the colon or rectum. Representative examples include carcinoma, lymphoma, and sarcoma.",
+      "best_match_term": "Colorectal cancer",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Familial Adenomatous Polyposis": 1,
+    "Colorectal Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Familial Adenomatous Polyposis": {
+      "disease": "Familial Adenomatous Polyposis",
+      "conceptId": "72900001",
+      "preferred_term": "Familial multiple polyposis syndrome",
+      "fully_specified_name": "Familial multiple polyposis syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A polyposis syndrome due to an autosomal dominant mutation of the APC genes (GENES, APC) on CHROMOSOME 5. The syndrome is characterized by the development of hundreds of ADENOMATOUS POLYPS in the COLON and RECTUM of affected individuals by early adulthood.",
+      "best_match_term": "Familial adenomatous polyposis"
+    },
+    "Colorectal Cancer": {
+      "disease": "Colorectal Cancer",
+      "conceptId": "363510005",
+      "preferred_term": "Malignant tumor of large intestine",
+      "fully_specified_name": "Malignant tumor of large intestine (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm that affects the colon or rectum. Representative examples include carcinoma, lymphoma, and sarcoma.",
+      "best_match_term": "Colorectal cancer"
+    }
+  }
+}

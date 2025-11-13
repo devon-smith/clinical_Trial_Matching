@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_undergoing_artificial_respiration_now",
+  "patient_is_undergoing_intubation_now",
+  "patient_has_undergone_plain_chest_x_ray_now_outcome_is_abnormal",
+  "patient_has_undergone_antibiotic_therapy_inthehistory",
+  "patient_has_suspicion_of_bacterial_pneumonia_now"
+]

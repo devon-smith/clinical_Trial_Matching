@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_months",
+  "patient_has_finding_of_fever_inthepast48hours",
+  "patient_peripheral_blood_smear_interpretation_value_recorded_now_withunit_per_microliter",
+  "patient_temperature_value_recorded_now_withunit_degrees_celsius",
+  "patient_hemoglobin_finding_value_recorded_now_withunit_grams_per_liter"
+]

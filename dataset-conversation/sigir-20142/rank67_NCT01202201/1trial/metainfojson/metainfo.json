@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01202201",
+  "contextual": {
+    "_id": "NCT01202201",
+    "title": "A Retrospective Survey of the Burden of Rotavirus Gastroenteritis (RV GE) and Nosocomial RV GE in Japan",
+    "text": "Summary: The purpose of this study is to evaluate the epidemiology and baseline disease burden of rotavirus gastroenteritis in children < 6 years of age, in Japan.\nInclusion criteria: inclusion criteria: \n\n A male or female child aged <6 years at the time of admission in hospital. A child will become ineligible on the day of her/his sixth birthday. \n\n A subject who is hospitalized with any acute gastroenteritis or rotavirus gastroenteritis during the survey period. \n\n \nExclusion criteria: : \n\n Participants of any kind of rotavirus vaccine clinical trial.",
+    "metadata": {
+      "brief_title": "A Retrospective Survey of the Burden of Rotavirus Gastroenteritis (RV GE) and Nosocomial RV GE in Japan",
+      "phase": "",
+      "drugs": "['Database analysis']",
+      "drugs_list": [
+        "Database analysis"
+      ],
+      "diseases": "['Nosocomial Rotavirus Gastroenteritis', 'Rotavirus Gastroenteritis']",
+      "diseases_list": [
+        "Nosocomial Rotavirus Gastroenteritis",
+        "Rotavirus Gastroenteritis"
+      ],
+      "enrollment": "13767.0",
+      "inclusion_criteria": "inclusion criteria: \n\n A male or female child aged <6 years at the time of admission in hospital. A child will become ineligible on the day of her/his sixth birthday. \n\n A subject who is hospitalized with any acute gastroenteritis or rotavirus gastroenteritis during the survey period. \n\n ",
+      "exclusion_criteria": ": \n\n Participants of any kind of rotavirus vaccine clinical trial.",
+      "brief_summary": "The purpose of this study is to evaluate the epidemiology and baseline disease burden of rotavirus gastroenteritis in children < 6 years of age, in Japan."
+    }
+  }
+}

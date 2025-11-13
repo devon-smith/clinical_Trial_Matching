@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:36:55",
+  "trial_id": "NCT00711399",
+  "contextual": {
+    "_id": "NCT00711399",
+    "title": "Assessment of Cough and Wheeze With Breath Sound Documenting Device",
+    "text": "Summary: The study goal is to create a database of respiratory sounds recordings, to evaluate and validate the WIM technology and to evaluate the efficacy of a specific treatment by comparing the severity of the respiratory symptoms before and after the administration of the treatment.\nInclusion criteria: inclusion criteria: \n\n Patient and/or parents/guardian signed informed consent \n\n Patients with cough or shortness of breath \n\n \nExclusion criteria: : \n\n Chest tubes \n\n Skin lesions precluding attachment of sensors \n\n Respiratory distress \n\n Pregnant women",
+    "metadata": {
+      "brief_title": "Assessment of Cough and Wheeze With Breath Sound Documenting Device",
+      "phase": "",
+      "drugs": "['PulmoTrack® 2010 with WIM-PC™ and WIM-CC™ Technologies']",
+      "drugs_list": [
+        "PulmoTrack® 2010 with WIM-PC™ and WIM-CC™ Technologies"
+      ],
+      "diseases": "['Respiratory Sounds']",
+      "diseases_list": [
+        "Respiratory Sounds"
+      ],
+      "enrollment": "55.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patient and/or parents/guardian signed informed consent \n\n Patients with cough or shortness of breath \n\n ",
+      "exclusion_criteria": ": \n\n Chest tubes \n\n Skin lesions precluding attachment of sensors \n\n Respiratory distress \n\n Pregnant women",
+      "brief_summary": "The study goal is to create a database of respiratory sounds recordings, to evaluate and validate the WIM technology and to evaluate the efficacy of a specific treatment by comparing the severity of the respiratory symptoms before and after the administration of the treatment."
+    }
+  },
+  "linked_result": {
+    "Respiratory Sounds": {
+      "conceptId": "52653008",
+      "preferred_term": "Respiratory sounds",
+      "fully_specified_name": "Respiratory sounds (observable entity)",
+      "type": "Observable entity",
+      "definition": "Noises, normal and abnormal, heard on auscultation over any part of the RESPIRATORY TRACT.",
+      "best_match_term": "Respiratory sounds",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Respiratory Sounds": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Respiratory Sounds": {
+      "disease": "Respiratory Sounds",
+      "conceptId": "52653008",
+      "preferred_term": "Respiratory sounds",
+      "fully_specified_name": "Respiratory sounds (observable entity)",
+      "type": "Observable entity",
+      "definition": "Noises, normal and abnormal, heard on auscultation over any part of the RESPIRATORY TRACT.",
+      "best_match_term": "Respiratory sounds"
+    }
+  }
+}

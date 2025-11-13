@@ -1,0 +1,12 @@
+[
+  "patient_has_undergone_whole_blood_unit_collection_inthehistory",
+  "patient_has_finding_of_chronic_infectious_disease_now",
+  "patient_has_finding_of_diabetes_mellitus_now",
+  "patient_has_finding_of_disorder_of_gastrointestinal_tract_now",
+  "patient_has_finding_of_hyperlipidemia_now",
+  "patient_has_finding_of_hypertensive_disorder_now",
+  "patient_has_finding_of_tobacco_smoking_behavior_finding_now",
+  "patient_alcoholic_beverage_value_recorded_inthehistory_withunit_drinks_per_week",
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_is_taking_nutritional_supplement_now"
+]

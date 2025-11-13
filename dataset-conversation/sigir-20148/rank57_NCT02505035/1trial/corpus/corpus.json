@@ -1,0 +1,23 @@
+{
+  "_id": "NCT02505035",
+  "title": "Randomized Evaluation of Default Access to Palliative Services",
+  "text": "Summary: This is a large pragmatic, randomized controlled trial to test the real-world effectiveness of inpatient palliative care consultative services in improving a number of patient- and family-centered processes and outcomes of care among seriously ill hospitalized patients. The investigators hypothesize that improved patient-centered outcomes can be achieved without higher costs by simply changing the default option for inpatient palliative care consultation for eligible patients from an opt-in to an opt-out system. To test this hypothesis the investigators will conduct a clinical trial at 11 hospitals using the same electronic health record within Ascension Health, the largest non-profit health system in the U.S.\nInclusion criteria: inclusion criteria: \n\n Age 65 years or older \n\n Current hospitalization of at least 3 calendar days (modified ITT) \n\n Diagnosis of one or more of the following: \n\n End-stage renal disease (ESRD) on dialysis \n\n Chronic obstructive pulmonary disease (COPD) with home oxygen dependence or 2 or more hospitalizations in the past 12 months \n\n Dementia admitted from a long-term care facility or prior placement of a surgical feeding tube or 2 or more additional hospitalizations in the past 12 months \n\n \nExclusion criteria: : \n\n 1. Patients younger than 65 years old will not receive the intervention",
+  "metadata": {
+    "brief_title": "Randomized Evaluation of Default Access to Palliative Services",
+    "phase": "",
+    "drugs": "['Default ordering of palliative consult']",
+    "drugs_list": [
+      "Default ordering of palliative consult"
+    ],
+    "diseases": "['COPD', 'ESRD', 'Dementia']",
+    "diseases_list": [
+      "COPD",
+      "ESRD",
+      "Dementia"
+    ],
+    "enrollment": "34239.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Age 65 years or older \n\n Current hospitalization of at least 3 calendar days (modified ITT) \n\n Diagnosis of one or more of the following: \n\n End-stage renal disease (ESRD) on dialysis \n\n Chronic obstructive pulmonary disease (COPD) with home oxygen dependence or 2 or more hospitalizations in the past 12 months \n\n Dementia admitted from a long-term care facility or prior placement of a surgical feeding tube or 2 or more additional hospitalizations in the past 12 months \n\n ",
+    "exclusion_criteria": ": \n\n 1. Patients younger than 65 years old will not receive the intervention",
+    "brief_summary": "This is a large pragmatic, randomized controlled trial to test the real-world effectiveness of inpatient palliative care consultative services in improving a number of patient- and family-centered processes and outcomes of care among seriously ill hospitalized patients. The investigators hypothesize that improved patient-centered outcomes can be achieved without higher costs by simply changing the default option for inpatient palliative care consultation for eligible patients from an opt-in to an opt-out system. To test this hypothesis the investigators will conduct a clinical trial at 11 hospitals using the same electronic health record within Ascension Health, the largest non-profit health system in the U.S."
+  }
+}

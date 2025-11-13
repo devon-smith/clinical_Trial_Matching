@@ -1,0 +1,16 @@
+[
+  "patient_has_finding_of_left_main_coronary_artery_disease_now",
+  "patient_has_finding_of_unprotected_left_main_coronary_artery_disease_now",
+  "patient_has_finding_of_exertional_hypotension_now",
+  "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+  "patient_is_exposed_to_technetium_now",
+  "patient_is_exposed_to_thallium_now",
+  "patient_has_finding_of_transient_ischemic_dilatation_of_left_ventricular_cavity_now",
+  "patient_fractional_flow_reserve_value_recorded_now_withunit_unitless",
+  "patient_has_finding_of_coronary_arteriosclerosis_now",
+  "patient_can_undergo_coronary_artery_bypass_graft_now",
+  "patient_can_undergo_percutaneous_coronary_intervention_now",
+  "patient_has_finding_of_myocardial_infarction_now",
+  "patient_has_finding_of_silent_myocardial_ischemia_now",
+  "patient_has_finding_of_stable_angina_now"
+]

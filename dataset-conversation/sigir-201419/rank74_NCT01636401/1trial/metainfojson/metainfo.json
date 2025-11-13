@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT01636401",
+  "contextual": {
+    "_id": "NCT01636401",
+    "title": "Efficacy and Safety of 400 μg Twice Daily of Aclidinium Bromide vs. Placebo When Administered to Patients With Moderate to Severe Chronic Obstructive Pulmonary Disease (COPD)",
+    "text": "Summary: The purpose of this study was to observe the Efficacy and safety of 400 μg twice daily of aclidinium bromide vs. placebo when administered to patients with moderate to severe chronic obstructive pulmonary disease (COPD).\nInclusion criteria: inclusion criteria: \n\n A diagnosis of stable moderate to severe COPD as defined by GOLD (the Global Initiative for Chronic Obstructive Lung Disease) guidelines(http://www.goldcopd.org); a postbronchodilator FEV1/forced vital capacity [FVC] ratio < 70% and FEV1 ≥ 30% to <80% of the predicted value. \n\n Current or former cigarette smokers with a smoking history of at least 10 pack-years. \n\n \nExclusion criteria: : \n\n History or current diagnosis of asthma \n\n Patients who have been hospitalized for an acute COPD exacerbation within 3 months prior to Visit 1 \n\n Any respiratory tract infection (including the upper respiratory tract) or COPD exacerbation in the 6 weeks before Visit 1. \n\n Patients with any clinically significant respiratory conditions other than COPD",
+    "metadata": {
+      "brief_title": "Efficacy and Safety of 400 μg Twice Daily of Aclidinium Bromide vs. Placebo When Administered to Patients With Moderate to Severe Chronic Obstructive Pulmonary Disease (COPD)",
+      "phase": "Phase 3",
+      "drugs": "['aclidinium bromide 400 μg', 'aclidinium bromide placebo']",
+      "drugs_list": [
+        "aclidinium bromide 400 μg",
+        "aclidinium bromide placebo"
+      ],
+      "diseases": "['COPD']",
+      "diseases_list": [
+        "COPD"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "inclusion criteria: \n\n A diagnosis of stable moderate to severe COPD as defined by GOLD (the Global Initiative for Chronic Obstructive Lung Disease) guidelines(http://www.goldcopd.org); a postbronchodilator FEV1/forced vital capacity [FVC] ratio < 70% and FEV1 ≥ 30% to <80% of the predicted value. \n\n Current or former cigarette smokers with a smoking history of at least 10 pack-years. \n\n ",
+      "exclusion_criteria": ": \n\n History or current diagnosis of asthma \n\n Patients who have been hospitalized for an acute COPD exacerbation within 3 months prior to Visit 1 \n\n Any respiratory tract infection (including the upper respiratory tract) or COPD exacerbation in the 6 weeks before Visit 1. \n\n Patients with any clinically significant respiratory conditions other than COPD",
+      "brief_summary": "The purpose of this study was to observe the Efficacy and safety of 400 μg twice daily of aclidinium bromide vs. placebo when administered to patients with moderate to severe chronic obstructive pulmonary disease (COPD)."
+    }
+  }
+}

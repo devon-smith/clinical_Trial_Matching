@@ -1,0 +1,23 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_has_diagnosis_of_abdominal_abscess_now",
+  "patient_has_diagnosis_of_abscess_now",
+  "patient_has_diagnosis_of_abscess_of_appendix_now",
+  "patient_has_diagnosis_of_abscess_of_liver_now",
+  "patient_has_diagnosis_of_acute_gangrenous_cholecystitis_now",
+  "patient_has_diagnosis_of_diverticular_disease_now",
+  "patient_has_diagnosis_of_inflammatory_bowel_disease_now",
+  "patient_has_diagnosis_of_peritonitis_now",
+  "patient_has_diagnosis_of_postoperative_peritonitis_now",
+  "patient_has_diagnosis_of_primary_bacterial_peritonitis_now",
+  "patient_has_diagnosis_of_splenic_abscess_now",
+  "patient_has_diagnosis_of_vascular_insufficiency_of_intestine_now",
+  "patient_has_finding_of_abscess_now",
+  "patient_will_undergo_surgical_procedure_now",
+  "patient_will_undergo_surgical_procedure_inthefuture",
+  "patient_has_finding_of_abdominal_abscess_now",
+  "patient_has_finding_of_perforation_of_intestine_now",
+  "patient_has_finding_of_microbiologic_culture_positive_now"
+]

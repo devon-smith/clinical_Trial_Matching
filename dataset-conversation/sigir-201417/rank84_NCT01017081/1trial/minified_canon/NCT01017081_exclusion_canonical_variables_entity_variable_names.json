@@ -1,0 +1,11 @@
+[
+  "patient_is_undergoing_admission_to_intensive_care_unit_now",
+  "patient_has_finding_of_pleural_effusion_now",
+  "patient_has_finding_of_atelectasis_now",
+  "patient_has_diagnosis_of_pleural_effusion_inthepast6months",
+  "patient_has_diagnosis_of_pneumonia_inthepast6months",
+  "patient_has_finding_of_cerebral_palsy_now",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_has_finding_of_heart_disease_now",
+  "patient_has_finding_of_immune_defect_now"
+]

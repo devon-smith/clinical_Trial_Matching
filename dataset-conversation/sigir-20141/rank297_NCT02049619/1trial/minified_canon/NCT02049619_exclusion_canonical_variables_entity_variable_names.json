@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_esophageal_varices_inthehistory",
+  "patient_has_undergone_operation_on_esophagus_inthehistory",
+  "patient_has_finding_of_stricture_of_esophagus_inthehistory",
+  "patient_will_undergo_surgical_procedure_inthefuture",
+  "patient_is_undergoing_emergency_operation_now",
+  "patient_has_finding_of_migraine_inthehistory",
+  "patient_has_finding_of_motion_sickness_inthehistory",
+  "patient_has_finding_of_postoperative_nausea_and_vomiting_inthehistory",
+  "patient_has_finding_of_vertigo_inthehistory"
+]

@@ -1,0 +1,90 @@
+{
+  "generated": "2025-10-22T20:57:03",
+  "trial_id": "NCT00383357",
+  "contextual": {
+    "_id": "NCT00383357",
+    "title": "Sleepiness and the Risk of Falling",
+    "text": "Summary: The purpose of this project is to examine the impact of sleeping pills and waking up in the middle of the night on walking balance and cognitive function, to identify risk factors for falls in older adults. A significant percentage of falls, approximately 33 to 52 percent, occur during the nighttime and morning hours when people are normally sleeping; therefore, it is possible that sleep and sleeping medication related impairments in balance may contribute to this risk.\nInclusion criteria: inclusion criteria: \n\n Males and females \n\n Aged 18 to 35, or 60 to 85 \n\n Lived at Denver altitude or higher for at least one year \n\n Stable treated diseases: thyroid dysfunction (including hypothyroidism and hyperthyroidism), hypertension, hypercholesterolemia, urinary incontinence, prostate enlargement, gastroesophageal reflux disease, irritable bowel syndrome \n\n \nExclusion criteria: : \n\n Aged 36 to 59, under 18, or over 85 \n\n BMI less than 18.6 or greater than 30 kg/m2, women below 95 pounds regardless of BMI \n\n Sleep duration is less than 5 or more than 9 hours \n\n Sensitivity to sleeping medications \n\n Night work in the preceding 6 months \n\n Transmeridian travel (across more than 2 time zones) in the last 1 month \n\n Bone mineral density DXA T-score of less than -1.75 \n\n Orthostatic intolerance \n\n Prior history of falls in past year \n\n Prior history of injurious fall in past 5 years \n\n Hip fracture following a fall \n\n Difficulty rising from a sitting position without use of hands to push off \n\n Needing to walk slowly or with a wide base of support to maintain balance \n\n Hormone replacement therapy for less than 3 months \n\n Connective Tissue and Joint Disorders \n\n Neurologic Disorders \n\n Musculoskeletal Disorders \n\n Immune Disorders \n\n Sleep Disorders \n\n Chronobiologic Disorders \n\n Cardiovascular Disorders \n\n Respiratory Disorders \n\n Kidney and Urinary Tract Disorders \n\n Infectious Diseases \n\n Gastrointestinal Disorders \n\n Hematopoietic Disorders \n\n Neoplastic Diseases \n\n Endocrine and Metabolic Diseases \n\n Psychopathology \n\n Dementia \n\n Drug dependency",
+    "metadata": {
+      "brief_title": "Sleepiness and the Risk of Falling",
+      "phase": "",
+      "drugs": "['zolpidem']",
+      "drugs_list": [
+        "zolpidem"
+      ],
+      "diseases": "['Aging', 'Balance', 'Sleep']",
+      "diseases_list": [
+        "Aging",
+        "Balance",
+        "Sleep"
+      ],
+      "enrollment": "24.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Males and females \n\n Aged 18 to 35, or 60 to 85 \n\n Lived at Denver altitude or higher for at least one year \n\n Stable treated diseases: thyroid dysfunction (including hypothyroidism and hyperthyroidism), hypertension, hypercholesterolemia, urinary incontinence, prostate enlargement, gastroesophageal reflux disease, irritable bowel syndrome \n\n ",
+      "exclusion_criteria": ": \n\n Aged 36 to 59, under 18, or over 85 \n\n BMI less than 18.6 or greater than 30 kg/m2, women below 95 pounds regardless of BMI \n\n Sleep duration is less than 5 or more than 9 hours \n\n Sensitivity to sleeping medications \n\n Night work in the preceding 6 months \n\n Transmeridian travel (across more than 2 time zones) in the last 1 month \n\n Bone mineral density DXA T-score of less than -1.75 \n\n Orthostatic intolerance \n\n Prior history of falls in past year \n\n Prior history of injurious fall in past 5 years \n\n Hip fracture following a fall \n\n Difficulty rising from a sitting position without use of hands to push off \n\n Needing to walk slowly or with a wide base of support to maintain balance \n\n Hormone replacement therapy for less than 3 months \n\n Connective Tissue and Joint Disorders \n\n Neurologic Disorders \n\n Musculoskeletal Disorders \n\n Immune Disorders \n\n Sleep Disorders \n\n Chronobiologic Disorders \n\n Cardiovascular Disorders \n\n Respiratory Disorders \n\n Kidney and Urinary Tract Disorders \n\n Infectious Diseases \n\n Gastrointestinal Disorders \n\n Hematopoietic Disorders \n\n Neoplastic Diseases \n\n Endocrine and Metabolic Diseases \n\n Psychopathology \n\n Dementia \n\n Drug dependency",
+      "brief_summary": "The purpose of this project is to examine the impact of sleeping pills and waking up in the middle of the night on walking balance and cognitive function, to identify risk factors for falls in older adults. A significant percentage of falls, approximately 33 to 52 percent, occur during the nighttime and morning hours when people are normally sleeping; therefore, it is possible that sleep and sleeping medication related impairments in balance may contribute to this risk."
+    }
+  },
+  "linked_result": {
+    "Aging": {
+      "conceptId": "248280005",
+      "preferred_term": "Aging",
+      "fully_specified_name": "Aging (finding)",
+      "type": "Clinical finding",
+      "definition": "The gradual irreversible changes in structure and function of an organism that occur as a result of the passage of time.",
+      "best_match_term": "Aging",
+      "match_reason": "Exact"
+    },
+    "Balance": {
+      "conceptId": "249982003",
+      "preferred_term": "Balance",
+      "fully_specified_name": "Balance (observable entity)",
+      "type": "Observable entity",
+      "definition": "see:http://www.nlm.nih.gov/mesh/MBrowser.html",
+      "best_match_term": "Balance",
+      "match_reason": "Exact"
+    },
+    "Sleep": {
+      "conceptId": "258158006",
+      "preferred_term": "Sleep",
+      "fully_specified_name": "Sleep, function (observable entity)",
+      "type": "Observable entity",
+      "definition": "A readily reversible suspension of sensorimotor interaction with the environment, usually associated with recumbency and immobility.",
+      "best_match_term": "Sleep",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Aging": 1,
+    "Balance": 1,
+    "Sleep": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Aging": {
+      "disease": "Aging",
+      "conceptId": "248280005",
+      "preferred_term": "Aging",
+      "fully_specified_name": "Aging (finding)",
+      "type": "Clinical finding",
+      "definition": "The gradual irreversible changes in structure and function of an organism that occur as a result of the passage of time.",
+      "best_match_term": "Aging"
+    },
+    "Balance": {
+      "disease": "Balance",
+      "conceptId": "249982003",
+      "preferred_term": "Balance",
+      "fully_specified_name": "Balance (observable entity)",
+      "type": "Observable entity",
+      "definition": "see:http://www.nlm.nih.gov/mesh/MBrowser.html",
+      "best_match_term": "Balance"
+    },
+    "Sleep": {
+      "disease": "Sleep",
+      "conceptId": "258158006",
+      "preferred_term": "Sleep",
+      "fully_specified_name": "Sleep, function (observable entity)",
+      "type": "Observable entity",
+      "definition": "A readily reversible suspension of sensorimotor interaction with the environment, usually associated with recumbency and immobility.",
+      "best_match_term": "Sleep"
+    }
+  }
+}

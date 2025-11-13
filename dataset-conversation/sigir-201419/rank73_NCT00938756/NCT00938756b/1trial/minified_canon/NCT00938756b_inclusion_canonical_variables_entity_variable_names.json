@@ -1,0 +1,8 @@
+[
+  "patient_has_finding_of_malignant_meningitis_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_has_undergone_medication_administration_intrathecal_inthehistory"
+]

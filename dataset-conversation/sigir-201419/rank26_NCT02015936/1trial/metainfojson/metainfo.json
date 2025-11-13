@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT02015936",
+  "contextual": {
+    "_id": "NCT02015936",
+    "title": "Physical Activity for Advanced Stage Cancer Patients",
+    "text": "Summary: The purpose of this study is to understand if a home-based physical activity program can improve symptoms and physical function among patients with advanced stage cancer.\nInclusion criteria: inclusion criteria: \n\n have stage III or IV cancer diagnosis \n\n able to understand English \n\n have a Karnofsky Performance Status (KPS) score of 60% (able to care for most of the personal needs) \n\n have fatigue and/or two other target symptoms \n\n have been cleared by their provider to engage low to moderate intensity physical activities \n\n \nExclusion criteria: : \n\n are hospitalized \n\n have lesion or metastasis of bone \n\n have a cardiac pacemaker \n\n have a history of seizure or loss of consciousness \n\n have been using a Wii Fit \n\n diagnosed cognitive impairment",
+    "metadata": {
+      "brief_title": "Physical Activity for Advanced Stage Cancer Patients",
+      "phase": "",
+      "drugs": "['Six Week Physical Activity Intervention', 'Progress Reporting']",
+      "drugs_list": [
+        "Six Week Physical Activity Intervention",
+        "Progress Reporting"
+      ],
+      "diseases": "['Cancer']",
+      "diseases_list": [
+        "Cancer"
+      ],
+      "enrollment": "10.0",
+      "inclusion_criteria": "inclusion criteria: \n\n have stage III or IV cancer diagnosis \n\n able to understand English \n\n have a Karnofsky Performance Status (KPS) score of 60% (able to care for most of the personal needs) \n\n have fatigue and/or two other target symptoms \n\n have been cleared by their provider to engage low to moderate intensity physical activities \n\n ",
+      "exclusion_criteria": ": \n\n are hospitalized \n\n have lesion or metastasis of bone \n\n have a cardiac pacemaker \n\n have a history of seizure or loss of consciousness \n\n have been using a Wii Fit \n\n diagnosed cognitive impairment",
+      "brief_summary": "The purpose of this study is to understand if a home-based physical activity program can improve symptoms and physical function among patients with advanced stage cancer."
+    }
+  }
+}

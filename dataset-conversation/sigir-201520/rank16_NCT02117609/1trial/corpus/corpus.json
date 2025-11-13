@@ -1,0 +1,22 @@
+{
+  "_id": "NCT02117609",
+  "title": "Effect of a New High-protein Oral Supplement on Functional Parameters in Patients in Nursing Homes",
+  "text": "Summary: The objective of this study is to determine whether a supplementation with a new high-protein oral supplement can improve the evolution of functional parameters in elderly patients in nursing homes.\nInclusion criteria: inclusion criteria: \n\n Man or woman aged more than 60 years old \n\n Living in a nursing home for at least 2 months \n\n Malnourished or at risk of malnutrition (MNA<23.5 or BMI<24 or albumin<35 g/l or weight loss of more than 5 kg in the last 6 months) \n\n Without dementia or with moderate dementia (MMSE > or =10/30) \n\n Able to walk without human assistance (technical assistance allowed) \n\n No vitamin D supplementation \n\n Able to follow the study procedures and agreed to consume oral supplement \n\n \nExclusion criteria: : \n\n Severe dementia (MMSE < 10/30) \n\n Enteral nutrition \n\n Severe renal or hepatic impairment \n\n Cancer with chemotherapy \n\n Uncontrolled diabetes \n\n Lactose intolerance \n\n Cow's milk protein allergy",
+  "metadata": {
+    "brief_title": "Effect of a New High-protein Oral Supplement on Functional Parameters in Patients in Nursing Homes",
+    "phase": "Phase 2",
+    "drugs": "['New DELICAL formula', 'Standard DELICAL formula']",
+    "drugs_list": [
+      "New DELICAL formula",
+      "Standard DELICAL formula"
+    ],
+    "diseases": "['Malnutrition']",
+    "diseases_list": [
+      "Malnutrition"
+    ],
+    "enrollment": "110.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Man or woman aged more than 60 years old \n\n Living in a nursing home for at least 2 months \n\n Malnourished or at risk of malnutrition (MNA<23.5 or BMI<24 or albumin<35 g/l or weight loss of more than 5 kg in the last 6 months) \n\n Without dementia or with moderate dementia (MMSE > or =10/30) \n\n Able to walk without human assistance (technical assistance allowed) \n\n No vitamin D supplementation \n\n Able to follow the study procedures and agreed to consume oral supplement \n\n ",
+    "exclusion_criteria": ": \n\n Severe dementia (MMSE < 10/30) \n\n Enteral nutrition \n\n Severe renal or hepatic impairment \n\n Cancer with chemotherapy \n\n Uncontrolled diabetes \n\n Lactose intolerance \n\n Cow's milk protein allergy",
+    "brief_summary": "The objective of this study is to determine whether a supplementation with a new high-protein oral supplement can improve the evolution of functional parameters in elderly patients in nursing homes."
+  }
+}

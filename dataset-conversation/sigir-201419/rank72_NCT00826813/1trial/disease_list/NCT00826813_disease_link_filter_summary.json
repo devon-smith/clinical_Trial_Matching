@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:34:08",
+  "trial_id": "NCT00826813",
+  "contextual": {
+    "_id": "NCT00826813",
+    "title": "Trial Using 125I Embedded Stent in Patients With Advanced Esophageal Cancer",
+    "text": "Summary: More than half of patients with esophageal cancer are inoperable because of late stage cancer or metastasis and they have to undergo palliative treatments. Dysphagia is the major symptom of patients with inoperable esophageal cancer. To relieve the dysphagia and improve the quality of life of such patients, stent placement has been widely accepted to be an option for palliation of the symptoms. However, recurrence of the neoplastic stricture remains a challenge after stent placement. To combine the advantages of the immediate relief of the esophageal dysphagia with the stent placement and radiation therapy with brachytherapy, a novel esophageal stent loaded with 125I seeds has been developed in the authors' institute. The preliminary clinical trial in a single institute has demonstrated better results than the conventional stent. This prospective multiple center trial is designed to further demonstrate the clinical outcomes with this irradiation, stent in patients compared to those using a conventional covered stent.\nInclusion criteria: inclusion criteria: \n\n Histologically confirmed primary cancer of esophagus, \n\n Must be dysphagia caused by esophageal cancer, \n\n Without esophageal fistulas, \n\n Must be an inpatient, \n\n Life expectancy is over 6 months \n\n \nExclusion criteria: : \n\n Esophageal fistulas, \n\n Tracheal compression with symptoms, \n\n WBC <2000/mm3 and Platelet count <50,000/mm3, \n\n Concurrent therapies after stenting:surgery, chemotherapy,radiotherapy, Traditional Chinese Medicine",
+    "metadata": {
+      "brief_title": "Trial Using 125I Embedded Stent in Patients With Advanced Esophageal Cancer",
+      "phase": "",
+      "drugs": "['Esophageal stent placement']",
+      "drugs_list": [
+        "Esophageal stent placement"
+      ],
+      "diseases": "['Esophageal Cancer']",
+      "diseases_list": [
+        "Esophageal Cancer"
+      ],
+      "enrollment": "250.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Histologically confirmed primary cancer of esophagus, \n\n Must be dysphagia caused by esophageal cancer, \n\n Without esophageal fistulas, \n\n Must be an inpatient, \n\n Life expectancy is over 6 months \n\n ",
+      "exclusion_criteria": ": \n\n Esophageal fistulas, \n\n Tracheal compression with symptoms, \n\n WBC <2000/mm3 and Platelet count <50,000/mm3, \n\n Concurrent therapies after stenting:surgery, chemotherapy,radiotherapy, Traditional Chinese Medicine",
+      "brief_summary": "More than half of patients with esophageal cancer are inoperable because of late stage cancer or metastasis and they have to undergo palliative treatments. Dysphagia is the major symptom of patients with inoperable esophageal cancer. To relieve the dysphagia and improve the quality of life of such patients, stent placement has been widely accepted to be an option for palliation of the symptoms. However, recurrence of the neoplastic stricture remains a challenge after stent placement. To combine the advantages of the immediate relief of the esophageal dysphagia with the stent placement and radiation therapy with brachytherapy, a novel esophageal stent loaded with 125I seeds has been developed in the authors' institute. The preliminary clinical trial in a single institute has demonstrated better results than the conventional stent. This prospective multiple center trial is designed to further demonstrate the clinical outcomes with this irradiation, stent in patients compared to those using a conventional covered stent."
+    }
+  },
+  "linked_result": {
+    "Esophageal Cancer": {
+      "conceptId": "363402007",
+      "preferred_term": "Malignant tumor of esophagus",
+      "fully_specified_name": "Malignant tumor of esophagus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the esophagus.",
+      "best_match_term": "Esophageal cancer",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Esophageal Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Esophageal Cancer": {
+      "disease": "Esophageal Cancer",
+      "conceptId": "363402007",
+      "preferred_term": "Malignant tumor of esophagus",
+      "fully_specified_name": "Malignant tumor of esophagus (disorder)",
+      "type": "Clinical finding",
+      "definition": "A primary or metastatic malignant neoplasm involving the esophagus.",
+      "best_match_term": "Esophageal cancer"
+    }
+  }
+}

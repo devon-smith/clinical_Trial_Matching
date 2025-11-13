@@ -1,0 +1,52 @@
+{
+  "generated": "2025-10-20T23:39:03",
+  "trial_id": "NCT01438060",
+  "contextual": {
+    "_id": "NCT01438060",
+    "title": "Aripiprazole in the Treatment of Patients With Psychosis Associated With Dementia of Alzheimer's Type",
+    "text": "Summary: The primary objective of the study is to compare the efficacy of aripiprazole with placebo in patients with psychosis associated with Alzheimer's dementia.\nInclusion criteria: inclusion criteria: \n\n Non-institutionalized patients with a diagnosis of Alzheimer's disease as defined by Diagnostic and Statistical Manual of Mental Disorders - Fourth Edition (DSM-IV) criteria with symptoms of delusions or hallucinations, which have been present, at least intermittently for one month or longer \n\n Mini Mental State Examination (MMSE) score of 6 to 24 points \n\n Patients capable of self locomotion or locomotion with the aid of an assistive device \n\n Patients with an identified caregiver or proxy \n\n For Extension Phase: \n\n Eligible patients were males and females who had completed the 10-week Acute Phase in either treatment group; had a Week 10 Total Score of ≥ 6 on the NPI; and were, in the judgment of the investigator, deemed suitable for participation in the long-term trial. \n\n Treatment beyond 140 weeks: \n\n All subjects who completed the extension phase of CN138-006 in any French Investigational Site may be considered eligible for entry until they are no longer receiving clinical benefit, per the investigator's judgment \n\n \nExclusion criteria: : \n\n Patients with an Axis I (DSM IV) diagnosis of: \n\n delirium \n\n amnestic disorders \n\n bipolar disorder \n\n schizophrenia or schizoaffective disorder \n\n mood disorder with psychotic features \n\n Patients with reversible causes of dementia \n\n Patients with psychotic symptoms continuously present since prior to the onset of the symptoms of dementia \n\n Patients with psychotic symptoms that are better accounted for by another general medical condition or by direct physiological effects of a substance \n\n Patients with a current major depressive episode with psychotic symptoms of hallucinations or delusions \n\n Patients with a diagnosis of dementia related to infection with the human immunodeficiency virus \n\n Patients with substance-induced persistent dementia \n\n Patients with dementia due to vascular causes, multi-infarct, head trauma, Pick's disease, Parkinson's disease, frontal or temporal dementia, Lewy body dementia, or any specific non-Alzheimer's type dementia \n\n Patients with seizure disorders \n\n Patients who have been refractory to neuroleptics used to treat psychotic symptoms in the past when treated for an adequate period with a therapeutic dose, unless permission is obtained from Bristol-Myers Squibb \n\n Patients who have met DSM-IV criteria for any significant substance use disorder within the 6 months prior to the start of screening",
+    "metadata": {
+      "brief_title": "Aripiprazole in the Treatment of Patients With Psychosis Associated With Dementia of Alzheimer's Type",
+      "phase": "Phase 3",
+      "drugs": "['Aripiprazole (BMS-337039)', 'Placebo']",
+      "drugs_list": [
+        "Aripiprazole (BMS-337039)",
+        "Placebo"
+      ],
+      "diseases": "['Dementia, Alzheimer Type']",
+      "diseases_list": [
+        "Dementia",
+        "Alzheimer Type"
+      ],
+      "enrollment": "232.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Non-institutionalized patients with a diagnosis of Alzheimer's disease as defined by Diagnostic and Statistical Manual of Mental Disorders - Fourth Edition (DSM-IV) criteria with symptoms of delusions or hallucinations, which have been present, at least intermittently for one month or longer \n\n Mini Mental State Examination (MMSE) score of 6 to 24 points \n\n Patients capable of self locomotion or locomotion with the aid of an assistive device \n\n Patients with an identified caregiver or proxy \n\n For Extension Phase: \n\n Eligible patients were males and females who had completed the 10-week Acute Phase in either treatment group; had a Week 10 Total Score of ≥ 6 on the NPI; and were, in the judgment of the investigator, deemed suitable for participation in the long-term trial. \n\n Treatment beyond 140 weeks: \n\n All subjects who completed the extension phase of CN138-006 in any French Investigational Site may be considered eligible for entry until they are no longer receiving clinical benefit, per the investigator's judgment \n\n ",
+      "exclusion_criteria": ": \n\n Patients with an Axis I (DSM IV) diagnosis of: \n\n delirium \n\n amnestic disorders \n\n bipolar disorder \n\n schizophrenia or schizoaffective disorder \n\n mood disorder with psychotic features \n\n Patients with reversible causes of dementia \n\n Patients with psychotic symptoms continuously present since prior to the onset of the symptoms of dementia \n\n Patients with psychotic symptoms that are better accounted for by another general medical condition or by direct physiological effects of a substance \n\n Patients with a current major depressive episode with psychotic symptoms of hallucinations or delusions \n\n Patients with a diagnosis of dementia related to infection with the human immunodeficiency virus \n\n Patients with substance-induced persistent dementia \n\n Patients with dementia due to vascular causes, multi-infarct, head trauma, Pick's disease, Parkinson's disease, frontal or temporal dementia, Lewy body dementia, or any specific non-Alzheimer's type dementia \n\n Patients with seizure disorders \n\n Patients who have been refractory to neuroleptics used to treat psychotic symptoms in the past when treated for an adequate period with a therapeutic dose, unless permission is obtained from Bristol-Myers Squibb \n\n Patients who have met DSM-IV criteria for any significant substance use disorder within the 6 months prior to the start of screening",
+      "brief_summary": "The primary objective of the study is to compare the efficacy of aripiprazole with placebo in patients with psychosis associated with Alzheimer's dementia."
+    }
+  },
+  "linked_result": {
+    "Dementia, Alzheimer Type": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer dementia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Dementia, Alzheimer Type": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dementia, Alzheimer Type": {
+      "disease": "Dementia, Alzheimer Type",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer dementia"
+    }
+  }
+}

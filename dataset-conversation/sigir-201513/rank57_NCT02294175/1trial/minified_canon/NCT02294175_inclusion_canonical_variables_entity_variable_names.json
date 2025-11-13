@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_chronic_ulcer_of_lower_extremity_now",
+  "patient_has_finding_of_diabetic_foot_ulcer_now",
+  "patient_is_undergoing_debridement_of_wound_of_skin_now",
+  "patient_wound_value_recorded_now_withunit_centimeters"
+]

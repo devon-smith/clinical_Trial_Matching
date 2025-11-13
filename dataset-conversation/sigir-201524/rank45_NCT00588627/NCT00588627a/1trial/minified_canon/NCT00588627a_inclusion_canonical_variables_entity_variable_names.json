@@ -1,0 +1,13 @@
+[
+  "patient_has_finding_of_posterior_rhinorrhea_now",
+  "patient_has_finding_of_cough_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_asthma_now",
+  "patient_has_finding_of_chronic_cough_now",
+  "patient_has_diagnosis_of_cough_variant_asthma_now",
+  "patient_has_undergone_methacholine_challenge_inthepast1years_outcome_is_negative",
+  "patient_has_undergone_ct_of_chest_inthepast6months_outcome_is_negative",
+  "patient_has_undergone_plain_chest_x_ray_inthehistory_outcome_is_negative",
+  "patient_has_diagnosis_of_gastroesophageal_reflux_disease_now",
+  "patient_is_taking_h_k_exchanging_atpase_inhibitor_containing_product_now"
+]

@@ -1,0 +1,10 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_acute_pharyngitis_now",
+  "patient_has_diagnosis_of_acute_tonsillitis_now",
+  "patients_streptococcus_pyogenes_antigen_is_positive_now",
+  "patient_can_undergo_product_manufactured_as_oral_dose_form_now",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_contraception_now"
+]

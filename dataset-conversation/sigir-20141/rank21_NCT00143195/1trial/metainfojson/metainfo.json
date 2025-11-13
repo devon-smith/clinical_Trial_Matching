@@ -1,0 +1,27 @@
+{
+  "trial_id": "NCT00143195",
+  "contextual": {
+    "_id": "NCT00143195",
+    "title": "Amlodipine vs Nitrates Study in Patients With Chronic Stable Angina",
+    "text": "Summary: The objective of study is to compare the anti-ischemic efficacy and safety profiles of once daily amlodipine or isosorbide-5-mononitrate in the treatment of stable asymptomatic and symptomatic myocardial ischemia\nInclusion criteria: inclusion criteria: \n\n Outpatients > =18 years of age with diagnosed clinically stable angina pectoris \n\n \nExclusion criteria: : \n\n Patients with congestive heart failure, clinically significant cardiovascular disease, standing systolic blood pressure of less than 100mmHg, concomitant anti-anginal therapies similar to sublingual NTG",
+    "metadata": {
+      "brief_title": "Amlodipine vs Nitrates Study in Patients With Chronic Stable Angina",
+      "phase": "Phase 4",
+      "drugs": "['Amlodipine', 'iso- 5 - mononitrate', 'Blood tests', 'Exercise Stress Test']",
+      "drugs_list": [
+        "Amlodipine",
+        "iso- 5 - mononitrate",
+        "Blood tests",
+        "Exercise Stress Test"
+      ],
+      "diseases": "['Myocardial Ischemia']",
+      "diseases_list": [
+        "Myocardial Ischemia"
+      ],
+      "enrollment": "200.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Outpatients > =18 years of age with diagnosed clinically stable angina pectoris \n\n ",
+      "exclusion_criteria": ": \n\n Patients with congestive heart failure, clinically significant cardiovascular disease, standing systolic blood pressure of less than 100mmHg, concomitant anti-anginal therapies similar to sublingual NTG",
+      "brief_summary": "The objective of study is to compare the anti-ischemic efficacy and safety profiles of once daily amlodipine or isosorbide-5-mononitrate in the treatment of stable asymptomatic and symptomatic myocardial ischemia"
+    }
+  }
+}

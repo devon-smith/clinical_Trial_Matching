@@ -1,0 +1,13 @@
+[
+  "patient_has_finding_of_obesity_inthehistory",
+  "patient_is_undergoing_biopsy_of_liver_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_is_pregnant_inthefuture",
+  "patient_is_lactating_now",
+  "patient_is_lactating_inthefuture",
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_has_diagnosis_of_autoimmune_connective_tissue_disorder_inthehistory",
+  "patient_has_finding_of_dementia_now",
+  "patient_has_finding_of_mental_disorder_now"
+]

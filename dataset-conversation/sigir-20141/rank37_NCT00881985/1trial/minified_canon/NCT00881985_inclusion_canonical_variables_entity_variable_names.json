@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_hypertensive_disorder_now",
+  "patient_is_taking_hypotensive_agent_now",
+  "patient_apnea_hypopnea_index_value_recorded_now_withunit_per_hour"
+]

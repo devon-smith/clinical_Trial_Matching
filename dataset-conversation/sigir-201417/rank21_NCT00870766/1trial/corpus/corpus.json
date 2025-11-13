@@ -1,0 +1,21 @@
+{
+  "_id": "NCT00870766",
+  "title": "Computer Tomography (CT) Trial of Acute Abdomen",
+  "text": "Summary: The purpose of this study is to determine the impact of routinely performed early CT scanning in terms of diagnostic accuracy, patient management and cost-effectiveness compared to current imaging practice in patients suffering from acute abdomen.\nInclusion criteria: inclusion criteria: \n\n age > 18 \n\n abdominal pain > 2h and < 7 days \n\n \nExclusion criteria: : \n\n pregnancy \n\n acute abdominal trauma \n\n allergy to iodinated contrast media \n\n severe renal insufficiency \n\n metformin medication combined with elevated plasma creatinin level \n\n lack of cooperation (if informed consent is not possible) \n\n abdominal pain combined with bleeding shock",
+  "metadata": {
+    "brief_title": "Computer Tomography (CT) Trial of Acute Abdomen",
+    "phase": "",
+    "drugs": "['Abdominal contrast-enhanced CT scanning']",
+    "drugs_list": [
+      "Abdominal contrast-enhanced CT scanning"
+    ],
+    "diseases": "['Acute Abdomen']",
+    "diseases_list": [
+      "Acute Abdomen"
+    ],
+    "enrollment": "250.0",
+    "inclusion_criteria": "inclusion criteria: \n\n age > 18 \n\n abdominal pain > 2h and < 7 days \n\n ",
+    "exclusion_criteria": ": \n\n pregnancy \n\n acute abdominal trauma \n\n allergy to iodinated contrast media \n\n severe renal insufficiency \n\n metformin medication combined with elevated plasma creatinin level \n\n lack of cooperation (if informed consent is not possible) \n\n abdominal pain combined with bleeding shock",
+    "brief_summary": "The purpose of this study is to determine the impact of routinely performed early CT scanning in terms of diagnostic accuracy, patient management and cost-effectiveness compared to current imaging practice in patients suffering from acute abdomen."
+  }
+}

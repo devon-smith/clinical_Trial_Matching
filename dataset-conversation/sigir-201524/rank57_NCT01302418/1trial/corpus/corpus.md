@@ -1,0 +1,30 @@
+# Collection and Testing of Respiratory Samples
+**NCT**: `NCT01302418`
+## Brief Summary
+The study will be conducted using nasopharyngeal swab specimens collected prospectively from individuals suspected of having the signs and symptoms of an acute respiratory tract infection caused by a respiratory virus. A series of standard viral culture tests validated for routine use in the clinical laboratory, and/or a series of PCR-based Laboratory Developed Tests (PCR-LDT) validated by a central reference laboratory will be used to verify the performance of the investigational artus Influenza A/B RT-PCR test and the QIAGEN ResPlex II Advanced Panel test. From each specimen five (5) aliquots will be prepared: (a) one aliquot will be tested in real-time using the assigned viral culture reference methods; (b) one aliquot will be used to extract nucleic acid in real-time for investigational testing; (c) one aliquot of the specimen will be stored at --70C for subsequent shipment to the reference laboratory for PCR-LDT testing, (d) one aliquot will be archived at -70C for subsequent follow-up by the reference laboratory (e.g., bi-directional sequencing of positive specimens), and (e) any remaining specimen will be stored for the Fresh vs. Frozen Study. The extracted nucleic acid generated from the second aliquot (i.e., b above) will be split and subjected to testing by both the artus Influenza A/B RT-PCR test and the ResPlex II Advanced Panel test.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Subjects that sign the Informed Consent form required for prospectively enrolling patients into the study. 
+
+ Subjects that present at a hospital, clinic, or physician's office with the signs and symptoms of a respiratory tract infection. 
+
+ Subjects with an acute respiratory infection where said acute respiratory infection is suspected of being caused by an Influenza virus.
+## Exclusion Criteria
+: 
+
+ Subjects where the duration of the symptoms of such an acute respiratory infection is greater than or equal to 5 days (i.e., ≥5).
+## Full Text
+Summary: The study will be conducted using nasopharyngeal swab specimens collected prospectively from individuals suspected of having the signs and symptoms of an acute respiratory tract infection caused by a respiratory virus. A series of standard viral culture tests validated for routine use in the clinical laboratory, and/or a series of PCR-based Laboratory Developed Tests (PCR-LDT) validated by a central reference laboratory will be used to verify the performance of the investigational artus Influenza A/B RT-PCR test and the QIAGEN ResPlex II Advanced Panel test. From each specimen five (5) aliquots will be prepared: (a) one aliquot will be tested in real-time using the assigned viral culture reference methods; (b) one aliquot will be used to extract nucleic acid in real-time for investigational testing; (c) one aliquot of the specimen will be stored at --70C for subsequent shipment to the reference laboratory for PCR-LDT testing, (d) one aliquot will be archived at -70C for subsequent follow-up by the reference laboratory (e.g., bi-directional sequencing of positive specimens), and (e) any remaining specimen will be stored for the Fresh vs. Frozen Study. The extracted nucleic acid generated from the second aliquot (i.e., b above) will be split and subjected to testing by both the artus Influenza A/B RT-PCR test and the ResPlex II Advanced Panel test.
+Inclusion criteria: inclusion criteria: 
+
+ Subjects that sign the Informed Consent form required for prospectively enrolling patients into the study. 
+
+ Subjects that present at a hospital, clinic, or physician's office with the signs and symptoms of a respiratory tract infection. 
+
+ Subjects with an acute respiratory infection where said acute respiratory infection is suspected of being caused by an Influenza virus. 
+
+ 
+Exclusion criteria: : 
+
+ Subjects where the duration of the symptoms of such an acute respiratory infection is greater than or equal to 5 days (i.e., ≥5).

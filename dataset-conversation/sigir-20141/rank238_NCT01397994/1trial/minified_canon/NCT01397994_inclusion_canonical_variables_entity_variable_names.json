@@ -1,0 +1,8 @@
+[
+  "patient_has_diagnosis_of_angina_pectoris_now",
+  "patient_has_undergone_radionuclide_imaging_of_perfusion_of_myocardium_under_exercise_stress_now_outcome_is_abnormal",
+  "patient_has_finding_of_angina_pectoris_now",
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years"
+]

@@ -1,0 +1,48 @@
+{
+  "generated": "2025-10-22T21:05:32",
+  "trial_id": "NCT00042705",
+  "contextual": {
+    "_id": "NCT00042705",
+    "title": "Asthma Severity in Children and Environmental Agents",
+    "text": "Summary: This study measures residential exposures (indoor allergens, mold, nitrogen dioxide, nicotine) and relates exposure levels to daily symptoms (wheeze, persistent cough, chest tightness, shortness of breath) and medication use, in a population of children with physician diagnosed asthma, followed for 12 months.\nInclusion criteria: Siblings of a birth cohort recruited 1997-1999 \n\n Age less than 11 years \n\n Physician diagnosed asthma \n\n Active symptoms (wheeze, persistent cough, chest tightness, shortness of breath) or medication use in the 12 months prior to enrollment.\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Asthma Severity in Children and Environmental Agents",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Asthma']",
+      "diseases_list": [
+        "Asthma"
+      ],
+      "enrollment": "",
+      "inclusion_criteria": "Siblings of a birth cohort recruited 1997-1999 \n\n Age less than 11 years \n\n Physician diagnosed asthma \n\n Active symptoms (wheeze, persistent cough, chest tightness, shortness of breath) or medication use in the 12 months prior to enrollment.",
+      "exclusion_criteria": "",
+      "brief_summary": "This study measures residential exposures (indoor allergens, mold, nitrogen dioxide, nicotine) and relates exposure levels to daily symptoms (wheeze, persistent cough, chest tightness, shortness of breath) and medication use, in a population of children with physician diagnosed asthma, followed for 12 months."
+    }
+  },
+  "linked_result": {
+    "Asthma": {
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Asthma",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Asthma": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Asthma": {
+      "disease": "Asthma",
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Asthma"
+    }
+  }
+}

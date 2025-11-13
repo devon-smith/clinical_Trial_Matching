@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:43:03",
+  "trial_id": "NCT01565642",
+  "contextual": {
+    "_id": "NCT01565642",
+    "title": "Goals of Care: A Nursing Home Trial of Decision Support for Advanced Dementia",
+    "text": "Summary: This cluster randomized controlled trial is to examine whether decision support for goals of care can improve quality of communication and decision-making and improve the quality of palliative care for nursing home residents with advanced dementia.\nInclusion criteria: inclusion criteria: \n\n Surrogate for nursing home resident with advanced dementia, paired with resident with advanced dementia \n\n \nExclusion criteria: : \n\n Non-related legal surrogate without personal knowledge of resident",
+    "metadata": {
+      "brief_title": "Goals of Care: A Nursing Home Trial of Decision Support for Advanced Dementia",
+      "phase": "",
+      "drugs": "['Goals of care decision support']",
+      "drugs_list": [
+        "Goals of care decision support"
+      ],
+      "diseases": "['Dementia']",
+      "diseases_list": [
+        "Dementia"
+      ],
+      "enrollment": "302.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Surrogate for nursing home resident with advanced dementia, paired with resident with advanced dementia \n\n ",
+      "exclusion_criteria": ": \n\n Non-related legal surrogate without personal knowledge of resident",
+      "brief_summary": "This cluster randomized controlled trial is to examine whether decision support for goals of care can improve quality of communication and decision-making and improve the quality of palliative care for nursing home residents with advanced dementia."
+    }
+  },
+  "linked_result": {
+    "Dementia": {
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Dementia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Dementia": {
+      "disease": "Dementia",
+      "conceptId": "52448006",
+      "preferred_term": "Dementia",
+      "fully_specified_name": "Dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.",
+      "best_match_term": "Dementia"
+    }
+  }
+}

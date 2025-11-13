@@ -1,0 +1,23 @@
+[
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_non_smoker_now",
+  "patient_has_finding_of_smoker_now",
+  "patient_measure_of_duration_of_menstrual_cycle_value_recorded_now_withunit_days",
+  "patient_has_finding_of_regular_periods_now",
+  "patient_is_taking_antidepressant_now",
+  "patient_has_diagnosis_of_dysthymia_now",
+  "patient_has_diagnosis_of_major_depressive_disorder_now",
+  "patient_has_diagnosis_of_minor_depressive_disorder_now",
+  "patient_is_taking_antidepressant_inthehistory",
+  "patient_is_exposed_to_antidepressant_now",
+  "patients_madrs_montgomery_asberg_depression_rating_scale_score_is_positive_inthehistory",
+  "patient_has_undergone_manual_pelvic_examination_inthepast12months_outcome_is_normal",
+  "patient_is_taking_thyroid_hormone_containing_product_now",
+  "patient_has_undergone_thyroid_stimulating_hormone_measurement_now_outcome_is_normal",
+  "patient_has_undergone_serum_total_hcg_measurement_now_outcome_is_negative",
+  "patient_has_undergone_urine_chorionic_gonadotrophin_measurement_now_outcome_is_negative",
+  "patient_has_finding_of_potassium_level_finding_now",
+  "patient_has_finding_of_barrier_contraception_method_now",
+  "patient_has_finding_of_general_well_being_finding_now"
+]

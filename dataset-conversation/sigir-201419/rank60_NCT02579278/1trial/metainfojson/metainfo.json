@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT02579278",
+  "contextual": {
+    "_id": "NCT02579278",
+    "title": "Circulating Tumour DNA (ctDNA) Rectal Cancer and the Relationship to Extramural Venous Invasion",
+    "text": "Summary: In almost one third of patients with rectal cancer, cancer spreads through the bowel wall into nearby veins which can be seen on MRI scans and is known as mrEMVI. It has been observed that this is linked with worse survival due to the spread of cancer to the liver and other organs. The investigators think that this may occur by spread of cancer cells in the blood stream. Circulating cell-free tumour DNA (ctDNA) can be detected in the blood of patients with both metastatic and primary carcinoma (but not healthy individuals).~This trial does not interfere with the patient's routine treatment pathway. Participants will be chosen if they demonstrate mrEMVI on their baseline MRI scan. 20 patients who become mrEMVI positive (following pre-operative therapy) and 20 patients who are mrEMVI negative will have blood samples taken before and during surgery and a comparison will be made between the two groups. If the investigators can find a link between the cancer cells seen in blood to mrEMVI they may be able to use this test to help guide treatment in the future. This study will serve as the feasibility of a larger, comparative study.\nInclusion criteria: inclusion criteria: \n\n High-risk patients with biopsy proven rectal adenocarcinoma who will undergo long-course chemoradiotherapy (CRT) and who are potentially eligible for curative surgery \n\n Patients who have persistently (i.e. in baseline and post-treatment MRI) mrEMVI positive (with superior rectal vein invasion) or mrEMVI negative tumours. \n\n Patients aged over 18 years \n\n Negative (on CT) for metastatic disease \n\n \nExclusion criteria: : \n\n Under 18 years of age \n\n Patients with any metastatic disease \n\n Patients with a synchronous second malignancy",
+    "metadata": {
+      "brief_title": "Circulating Tumour DNA (ctDNA) Rectal Cancer and the Relationship to Extramural Venous Invasion",
+      "phase": "",
+      "drugs": "['Blood sample (mrEMVI positive patient)', 'Blood sample (mrEMVI negative patient)']",
+      "drugs_list": [
+        "Blood sample (mrEMVI positive patient)",
+        "Blood sample (mrEMVI negative patient)"
+      ],
+      "diseases": "['Cancer', 'Rectal Cancer']",
+      "diseases_list": [
+        "Cancer",
+        "Rectal Cancer"
+      ],
+      "enrollment": "40.0",
+      "inclusion_criteria": "inclusion criteria: \n\n High-risk patients with biopsy proven rectal adenocarcinoma who will undergo long-course chemoradiotherapy (CRT) and who are potentially eligible for curative surgery \n\n Patients who have persistently (i.e. in baseline and post-treatment MRI) mrEMVI positive (with superior rectal vein invasion) or mrEMVI negative tumours. \n\n Patients aged over 18 years \n\n Negative (on CT) for metastatic disease \n\n ",
+      "exclusion_criteria": ": \n\n Under 18 years of age \n\n Patients with any metastatic disease \n\n Patients with a synchronous second malignancy",
+      "brief_summary": "In almost one third of patients with rectal cancer, cancer spreads through the bowel wall into nearby veins which can be seen on MRI scans and is known as mrEMVI. It has been observed that this is linked with worse survival due to the spread of cancer to the liver and other organs. The investigators think that this may occur by spread of cancer cells in the blood stream. Circulating cell-free tumour DNA (ctDNA) can be detected in the blood of patients with both metastatic and primary carcinoma (but not healthy individuals).~This trial does not interfere with the patient's routine treatment pathway. Participants will be chosen if they demonstrate mrEMVI on their baseline MRI scan. 20 patients who become mrEMVI positive (following pre-operative therapy) and 20 patients who are mrEMVI negative will have blood samples taken before and during surgery and a comparison will be made between the two groups. If the investigators can find a link between the cancer cells seen in blood to mrEMVI they may be able to use this test to help guide treatment in the future. This study will serve as the feasibility of a larger, comparative study."
+    }
+  }
+}

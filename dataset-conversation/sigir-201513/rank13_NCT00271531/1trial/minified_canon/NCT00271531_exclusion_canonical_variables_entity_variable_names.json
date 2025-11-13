@@ -1,0 +1,13 @@
+[
+  "patient_has_finding_of_hypoxia_now",
+  "patient_has_finding_of_raised_intracranial_pressure_now",
+  "patient_has_finding_of_hemodynamic_instability_inthepast4hours",
+  "patient_has_undergone_intravenous_antibiotic_therapy_inthehistory",
+  "patient_has_undergone_oral_antibiotic_therapy_inthehistory",
+  "patient_has_finding_of_bacterial_pneumonia_inthehistory",
+  "patient_has_finding_of_blood_coagulation_disorder_now",
+  "patient_is_undergoing_high_frequency_oscillatory_ventilation_now",
+  "patient_has_diagnosis_of_cystic_fibrosis_now",
+  "patient_has_finding_of_functional_single_ventricle_now",
+  "patient_has_undergone_microbial_culture_inthehistory_outcome_is_positive"
+]

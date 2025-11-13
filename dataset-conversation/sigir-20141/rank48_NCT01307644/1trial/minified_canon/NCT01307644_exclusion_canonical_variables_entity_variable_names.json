@@ -1,0 +1,9 @@
+[
+  "patient_has_diagnosis_of_type_1_diabetes_mellitus_now",
+  "patient_has_diagnosis_of_type_2_diabetes_mellitus_now",
+  "patient_weight_loss_value_recorded_inthepast6months_withunit_percent",
+  "patient_has_finding_of_weight_decreased_now",
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_has_finding_of_healthy_diet_now",
+  "patient_has_finding_of_physical_activity_target_moderate_exercise_now"
+]

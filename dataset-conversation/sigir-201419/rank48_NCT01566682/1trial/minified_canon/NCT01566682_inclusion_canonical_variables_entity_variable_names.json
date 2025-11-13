@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_undergone_computerized_axial_tomography_inthehistory",
+  "patient_has_finding_of_lesion_of_lung_inthehistory",
+  "patient_has_finding_of_solitary_nodule_of_lung_inthehistory",
+  "patient_can_undergo_biopsy_now",
+  "patient_can_undergo_lung_excision_now",
+  "patient_has_undergone_biopsy_inthehistory",
+  "patient_has_undergone_computerized_axial_tomography_inthehistory_outcome_is_abnormal",
+  "patient_has_undergone_excision_inthehistory"
+]

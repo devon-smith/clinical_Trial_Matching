@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-22T20:58:21",
+  "trial_id": "NCT01259141",
+  "contextual": {
+    "_id": "NCT01259141",
+    "title": "The Optimization of Mycoplasm Pneumonia Antibiotic Therapy",
+    "text": "Summary: Mycoplasma pneumoniae, an important pathogen of community acquired pneumonia,are becoming more and more resistant to macrolide. The study aim is to optimize anti-infection therapy.\nInclusion criteria: inclusion criteria: \n\n Confirmed community acquired pneumonia \n\n 60ys≥age≥18 ys \n\n Respiratory symptom (cough accompanied by little or no sputum) \n\n New infiltration showed by chest radiology(x-ray or CT) \n\n Lung signs was not obvious \n\n White blood cell<10,000/mm3 \n\n Without underlying diseases or mild \n\n \nExclusion criteria: : \n\n Age<18ys or >60ys \n\n Pregnancy or breast-feeding \n\n Over one week after the onset of symptoms \n\n HIV infection \n\n Recent 90-day hospitalized history(length of stay greater than 2 days) \n\n Live in nursing homes or rehabilitation hospitals \n\n Taken macrolides or quinolones medicines before enrollment",
+    "metadata": {
+      "brief_title": "The Optimization of Mycoplasm Pneumonia Antibiotic Therapy",
+      "phase": "",
+      "drugs": "['Moxifloxacin', 'Cephalosporins and azithromycin']",
+      "drugs_list": [
+        "Moxifloxacin",
+        "Cephalosporins and azithromycin"
+      ],
+      "diseases": "['Mycoplasma Pneumonia']",
+      "diseases_list": [
+        "Mycoplasma Pneumonia"
+      ],
+      "enrollment": "208.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Confirmed community acquired pneumonia \n\n 60ys≥age≥18 ys \n\n Respiratory symptom (cough accompanied by little or no sputum) \n\n New infiltration showed by chest radiology(x-ray or CT) \n\n Lung signs was not obvious \n\n White blood cell<10,000/mm3 \n\n Without underlying diseases or mild \n\n ",
+      "exclusion_criteria": ": \n\n Age<18ys or >60ys \n\n Pregnancy or breast-feeding \n\n Over one week after the onset of symptoms \n\n HIV infection \n\n Recent 90-day hospitalized history(length of stay greater than 2 days) \n\n Live in nursing homes or rehabilitation hospitals \n\n Taken macrolides or quinolones medicines before enrollment",
+      "brief_summary": "Mycoplasma pneumoniae, an important pathogen of community acquired pneumonia,are becoming more and more resistant to macrolide. The study aim is to optimize anti-infection therapy."
+    }
+  },
+  "linked_result": {
+    "Mycoplasma Pneumonia": {
+      "conceptId": "46970008",
+      "preferred_term": "Mycoplasma pneumonia",
+      "fully_specified_name": "Pneumonia caused by Mycoplasma pneumoniae (disorder)",
+      "type": "Clinical finding",
+      "definition": "Interstitial pneumonia caused by extensive infection of the lungs (LUNG) and BRONCHI, particularly the lower lobes of the lungs, by MYCOPLASMA PNEUMONIAE in humans. In SHEEP, it is caused by MYCOPLASMA OVIPNEUMONIAE. In CATTLE, it may be caused by MYCOPLASMA DISPAR.",
+      "best_match_term": "Mycoplasma pneumonia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Mycoplasma Pneumonia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Mycoplasma Pneumonia": {
+      "disease": "Mycoplasma Pneumonia",
+      "conceptId": "46970008",
+      "preferred_term": "Mycoplasma pneumonia",
+      "fully_specified_name": "Pneumonia caused by Mycoplasma pneumoniae (disorder)",
+      "type": "Clinical finding",
+      "definition": "Interstitial pneumonia caused by extensive infection of the lungs (LUNG) and BRONCHI, particularly the lower lobes of the lungs, by MYCOPLASMA PNEUMONIAE in humans. In SHEEP, it is caused by MYCOPLASMA OVIPNEUMONIAE. In CATTLE, it may be caused by MYCOPLASMA DISPAR.",
+      "best_match_term": "Mycoplasma pneumonia"
+    }
+  }
+}

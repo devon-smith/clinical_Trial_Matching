@@ -1,0 +1,78 @@
+{
+  "generated": "2025-10-20T22:59:44",
+  "trial_id": "NCT02197936",
+  "contextual": {
+    "_id": "NCT02197936",
+    "title": "Norwegian Adenomyosis Study III: Peristalsis",
+    "text": "Summary: Spontaneous contractions (peristalsis) of the non-pregnant uterus is widely investigated and the role of correct peristalsis is most important for correct sperm transport towards the fallopian tubes and implantation of the embryo, thus obtaining pregnancy. At the same time, an impaired uterine peristalsis is discussed to be the reason for lower pregnancy rates and may also account for heavy menstrual bleedings and menstrual pain.~In this study, the uterine peristalsis of women with adenomyosis will be investigated. This condition is associated to heavy menstrual bleeding, menstrual pain and infertility.\nInclusion criteria: inclusion criteria: \n\n Premenopausal women aged 20-45 years having been diagnosed with adenomyosis earlier and have no other pathology of the uterus, regardless of clinical symptoms. \n\n \nExclusion criteria: : \n\n Postmenopausal women, \n\n Pregnant women, \n\n Gynaecological cancer, \n\n GnRH analog therapy or systemic hormone therapy in the last three months prior to hysterectomy, \n\n Endometriosis, \n\n Uterine fibroids",
+    "metadata": {
+      "brief_title": "Norwegian Adenomyosis Study III: Peristalsis",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Adenomyosis', 'Infertility', 'Dysmenorrhea']",
+      "diseases_list": [
+        "Adenomyosis",
+        "Infertility",
+        "Dysmenorrhea"
+      ],
+      "enrollment": "3.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Premenopausal women aged 20-45 years having been diagnosed with adenomyosis earlier and have no other pathology of the uterus, regardless of clinical symptoms. \n\n ",
+      "exclusion_criteria": ": \n\n Postmenopausal women, \n\n Pregnant women, \n\n Gynaecological cancer, \n\n GnRH analog therapy or systemic hormone therapy in the last three months prior to hysterectomy, \n\n Endometriosis, \n\n Uterine fibroids",
+      "brief_summary": "Spontaneous contractions (peristalsis) of the non-pregnant uterus is widely investigated and the role of correct peristalsis is most important for correct sperm transport towards the fallopian tubes and implantation of the embryo, thus obtaining pregnancy. At the same time, an impaired uterine peristalsis is discussed to be the reason for lower pregnancy rates and may also account for heavy menstrual bleedings and menstrual pain.~In this study, the uterine peristalsis of women with adenomyosis will be investigated. This condition is associated to heavy menstrual bleeding, menstrual pain and infertility."
+    }
+  },
+  "linked_result": {
+    "Adenomyosis": {
+      "conceptId": "76376003",
+      "preferred_term": "Endometriosis of uterus",
+      "fully_specified_name": "Endometriosis of uterus (disorder)",
+      "type": "Clinical finding",
+      "definition": "Nenádorové onemocnění, které vzniká následkem přesunu normální žlázové výstelky děložní dutiny (endometria) do vrstvy děložní svaloviny (myometria). Žlázová tkáň postupně vrůstá stále hlouběji do svalové vrstvy, u které, na rozdíl od endometria, nedochází k typickým cyklickým změnám v rámci menstruačního cyklu. Příčina takovéhoto chování endometria není známa, uvažuje se o vlivu estrogenu a mechanické příčině (opakované porody) ve smyslu poškození bazální membrány jako fyziologické bariéry mezi sliznicí a svalovinou dělohy. Adenomyóza postihuje hlavně ženy v plodném věku starší 30 let, které vícekrát rodily. Často se vyskytuje v kombinaci s endometriózou a leimyomem dělohy. (cit. Wikipedie 2018 http://www.cs.wikipedia.org/)",
+      "best_match_term": "Adenomyosis",
+      "match_reason": "Exact"
+    },
+    "Infertility": {
+      "conceptId": "8619003",
+      "preferred_term": "Infertile",
+      "fully_specified_name": "Infertile (finding)",
+      "type": "Clinical finding",
+      "definition": "A reduced or absent capacity to reproduce.",
+      "best_match_term": "Infertile",
+      "match_reason": "Exact"
+    },
+    "Dysmenorrhea": {
+      "conceptId": "266599000",
+      "preferred_term": "Dysmenorrhea",
+      "fully_specified_name": "Dysmenorrhea (disorder)",
+      "type": "Clinical finding",
+      "definition": "Painful menstruation.",
+      "best_match_term": "Dysmenorrhea",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Infertility": 1,
+    "Dysmenorrhea": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Infertility": {
+      "disease": "Infertility",
+      "conceptId": "8619003",
+      "preferred_term": "Infertile",
+      "fully_specified_name": "Infertile (finding)",
+      "type": "Clinical finding",
+      "definition": "A reduced or absent capacity to reproduce.",
+      "best_match_term": "Infertile"
+    },
+    "Dysmenorrhea": {
+      "disease": "Dysmenorrhea",
+      "conceptId": "266599000",
+      "preferred_term": "Dysmenorrhea",
+      "fully_specified_name": "Dysmenorrhea (disorder)",
+      "type": "Clinical finding",
+      "definition": "Painful menstruation.",
+      "best_match_term": "Dysmenorrhea"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[
+  "patient_has_finding_of_cerebrovascular_accident_inthepast30days",
+  "patient_has_finding_of_myocardial_infarction_inthepast30days",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_has_finding_of_renal_artery_stenosis_now",
+  "patient_can_undergo_renal_sympathectomy_now",
+  "patient_has_finding_of_renal_vascular_disorder_now",
+  "patient_is_undergoing_dialysis_procedure_now",
+  "patient_glomerular_filtration_rate_value_recorded_now_withunit_milliliters_per_minute",
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_is_undergoing_anticoagulant_therapy_now",
+  "patient_has_finding_of_gastrointestinal_hemorrhage_now",
+  "patient_is_pregnant_now",
+  "patient_has_undergone_human_chorionic_gonadotropin_measurement_inthepast7days_outcome_is_positive",
+  "patient_has_finding_of_ventricular_tachycardia_now"
+]

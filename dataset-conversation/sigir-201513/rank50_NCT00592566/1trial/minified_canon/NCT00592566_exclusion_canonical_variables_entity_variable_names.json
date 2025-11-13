@@ -1,0 +1,9 @@
+[
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_has_diagnosis_of_blood_coagulation_disorder_inthehistory",
+  "patient_has_finding_of_chronic_liver_disease_now",
+  "patient_has_finding_of_diabetes_mellitus_now",
+  "patient_is_exposed_to_diuretic_now",
+  "patient_is_exposed_to_glucocorticoid_now"
+]

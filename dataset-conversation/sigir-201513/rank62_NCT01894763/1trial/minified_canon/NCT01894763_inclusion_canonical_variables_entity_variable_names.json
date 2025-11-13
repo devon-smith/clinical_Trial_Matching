@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_dysphagia_now",
+  "patient_tumor_finding_distance_from_upper_esophageal_sphincter_now_withunit_centimeter",
+  "patient_tumor_finding_value_recorded_now_withunit_centimeter"
+]

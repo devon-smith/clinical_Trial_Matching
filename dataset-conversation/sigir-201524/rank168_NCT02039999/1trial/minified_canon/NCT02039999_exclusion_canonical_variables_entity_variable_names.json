@@ -1,0 +1,16 @@
+[
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_cardiac_pacemaker_in_situ_now",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now",
+  "patient_has_diagnosis_of_heart_failure_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_dementia_now",
+  "patient_has_finding_of_mental_disorder_now",
+  "patient_has_finding_of_exacerbation_of_asthma_now",
+  "patient_has_finding_of_upper_respiratory_infection_inthepast3weeks",
+  "patient_has_finding_of_upper_respiratory_infection_now",
+  "patient_has_taken_cough_and_or_decongestant_agent_inthepast12hours",
+  "patient_has_taken_caffeine_containing_product_inthepast1hours",
+  "patient_has_taken_menthol_containing_product_inthepast1hours"
+]

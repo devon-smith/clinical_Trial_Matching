@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-22T21:03:55",
+  "trial_id": "NCT01259336",
+  "contextual": {
+    "_id": "NCT01259336",
+    "title": "Efficacy Of Itraconazole In Chronic Cavitary Pulmonary Aspergillosis",
+    "text": "Summary: The purpose of this study is to determine whether there itraconazole is effective in the treatment of chronic cavitary pulmonary aspergillosis\nInclusion criteria: inclusion criteria: \n\n Clinical symptoms: -presence of chronic pulmonary/systemic symptoms lasting ≥ six weeks. \n\n Radiological findings: \n\n Evidence of slowly progressive pulmonary lesions over weeks-months including cavities with surrounding inflammation. \n\n presence of intracavitary mass with a surrounding crescent of air,and presence of pleural thickening in peripheral lesions. \n\n Microbiological/Immunological findings: Positive results in the aspergillus precipitin test, demonstration of aspergillus hyphae in sputum or BAL fluid or cultures of BAL/sputum growing aspergillus species. \n\n The diagnosis of CCPA will be made if \n\n Patient satisfies at least 1, 2a or 2b and/ or any of the 3rd criteria. \n\n FNAC from the cavity wall will be considered in atypical cases \n\n \nExclusion criteria: : \n\n Invasive aspergillosis \n\n Allergic broncho-pulmonary aspergillosis (ABPA) \n\n Active tuberculosis or malignancy \n\n Pregnant females",
+    "metadata": {
+      "brief_title": "Efficacy Of Itraconazole In Chronic Cavitary Pulmonary Aspergillosis",
+      "phase": "Phase 4",
+      "drugs": "['Itraconazole', 'treatment in cavitary pulmonary aspergillosis']",
+      "drugs_list": [
+        "Itraconazole",
+        "treatment in cavitary pulmonary aspergillosis"
+      ],
+      "diseases": "['Chronic Cavitary Pulmonary Aspergillosis']",
+      "diseases_list": [
+        "Chronic Cavitary Pulmonary Aspergillosis"
+      ],
+      "enrollment": "31.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Clinical symptoms: -presence of chronic pulmonary/systemic symptoms lasting ≥ six weeks. \n\n Radiological findings: \n\n Evidence of slowly progressive pulmonary lesions over weeks-months including cavities with surrounding inflammation. \n\n presence of intracavitary mass with a surrounding crescent of air,and presence of pleural thickening in peripheral lesions. \n\n Microbiological/Immunological findings: Positive results in the aspergillus precipitin test, demonstration of aspergillus hyphae in sputum or BAL fluid or cultures of BAL/sputum growing aspergillus species. \n\n The diagnosis of CCPA will be made if \n\n Patient satisfies at least 1, 2a or 2b and/ or any of the 3rd criteria. \n\n FNAC from the cavity wall will be considered in atypical cases \n\n ",
+      "exclusion_criteria": ": \n\n Invasive aspergillosis \n\n Allergic broncho-pulmonary aspergillosis (ABPA) \n\n Active tuberculosis or malignancy \n\n Pregnant females",
+      "brief_summary": "The purpose of this study is to determine whether there itraconazole is effective in the treatment of chronic cavitary pulmonary aspergillosis"
+    }
+  },
+  "linked_result": {
+    "Chronic Cavitary Pulmonary Aspergillosis": {
+      "conceptId": "733171006",
+      "preferred_term": "Chronic pulmonary aspergillosis",
+      "fully_specified_name": "Chronic pulmonary aspergillosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "A spectrum of disorders associated with long-term Aspergillus infection of the lung that usually occur in immunocompetent individuals with underlying respiratory disorders, and may be characterized by pulmonary fibrosis or cavitation.",
+      "best_match_term": "Chronic pulmonary aspergillosis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Chronic Cavitary Pulmonary Aspergillosis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chronic Cavitary Pulmonary Aspergillosis": {
+      "disease": "Chronic Cavitary Pulmonary Aspergillosis",
+      "conceptId": "733171006",
+      "preferred_term": "Chronic pulmonary aspergillosis",
+      "fully_specified_name": "Chronic pulmonary aspergillosis (disorder)",
+      "type": "Clinical finding",
+      "definition": "A spectrum of disorders associated with long-term Aspergillus infection of the lung that usually occur in immunocompetent individuals with underlying respiratory disorders, and may be characterized by pulmonary fibrosis or cavitation.",
+      "best_match_term": "Chronic pulmonary aspergillosis"
+    }
+  }
+}

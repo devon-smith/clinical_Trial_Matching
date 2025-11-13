@@ -1,0 +1,15 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_abdominal_pain_now",
+  "patient_has_finding_of_erythema_now",
+  "patient_has_finding_of_exudate_on_tonsils_now",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_lymphadenopathy_now",
+  "patient_has_finding_of_pain_in_throat_now",
+  "patient_has_finding_of_petechiae_now",
+  "patient_has_finding_of_tenderness_of_neck_now",
+  "patient_has_undergone_throat_culture_inthehistory",
+  "patient_has_finding_of_throat_swab_culture_positive_now",
+  "patient_has_finding_of_throat_swab_culture_positive_inthehistory",
+  "patient_has_finding_of_allergy_to_penicillin_inthehistory"
+]

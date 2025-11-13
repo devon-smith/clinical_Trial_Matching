@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_secondary_hypertension_now",
+  "patient_has_diagnosis_of_atrial_fibrillation_now",
+  "patient_has_diagnosis_of_cerebrovascular_disease_inthehistory",
+  "patient_has_clinical_signs_of_cerebrovascular_disease_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_chronic_renal_failure_now",
+  "patient_has_finding_of_congestive_heart_failure_now",
+  "patient_has_finding_of_hyperkalemia_now",
+  "patient_has_finding_of_bilateral_renal_artery_stenosis_now"
+]

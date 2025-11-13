@@ -1,0 +1,12 @@
+[
+  "patient_is_pregnant_now",
+  "patient_has_intolerance_to_aspirin_now",
+  "patient_has_intolerance_to_clopidogrel_now",
+  "patient_has_intolerance_to_contrast_media_now",
+  "patient_has_intolerance_to_everolimus_now",
+  "patient_has_intolerance_to_heparin_now",
+  "patient_has_intolerance_to_sirolimus_now",
+  "patient_has_intolerance_to_stainless_steel_material_now",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+  "patient_will_undergo_surgical_procedure_inthefuture"
+]

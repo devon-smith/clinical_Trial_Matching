@@ -1,0 +1,15 @@
+[
+  "patient_has_finding_of_musculoskeletal_pain_now",
+  "patient_has_finding_of_acute_pain_now",
+  "patient_has_finding_of_chronic_neck_pain_now",
+  "patient_has_finding_of_chronic_pain_now",
+  "patient_has_finding_of_decreased_range_of_cervical_spine_movement_now",
+  "patient_has_finding_of_decreased_range_of_shoulder_movement_now",
+  "patient_has_finding_of_scar_now",
+  "patient_has_finding_of_inflammatory_disorder_now",
+  "patient_has_finding_of_functional_disorder_now",
+  "patient_has_finding_of_shoulder_strain_now",
+  "patient_has_finding_of_strain_of_neck_muscle_now",
+  "patient_visual_analog_scale_pain_score_value_recorded_now_withunit_score",
+  "patient_age_value_recorded_now_in_years"
+]

@@ -1,0 +1,9 @@
+[
+  "patient_sex_is_female_now",
+  "patient_sex_is_male_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_hypertensive_disorder_inthehistory",
+  "patient_has_undergone_12_lead_ecg_now",
+  "patient_has_undergone_ambulatory_ecg_now",
+  "patient_has_diagnosis_of_atrial_fibrillation_inthehistory"
+]

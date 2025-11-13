@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T22:55:17",
+  "trial_id": "NCT01736709",
+  "contextual": {
+    "_id": "NCT01736709",
+    "title": "The Immunogenicity and Safety of 2012-2013 Trivalent Seasonal Influenza Vaccine",
+    "text": "Summary: The purpose of this study is to evaluate the immunogenicity and safety of 2012-2013 trivalent seasonal influenza vaccine in 60 healthy infants aged 6-35 months old, 60 healthy adults aged 18-60 years old, and 60 healthy older people aged > 60 years.\nInclusion criteria: For adults and old people: \n\n inclusion criteria: \n\n Healthy adults aged 18-60 years old, and healthy old people aged >60 years \n\n Be able to show legal identity card for the sake of recruitment Without vaccination history of seasonal split influenza vaccine in the recent 3 years \n\n Not participate in any other clinical trials during the study \n\n Not receive any immunosuppressive agents during and one month prior to the study \n\n Be able to understand and sign the informed consent. \n\n \nExclusion criteria: : \n\n Woman： Who breast-feeding or planning to become pregnant during the study \n\n Any history of allergic reactions; was allergic to any component of the vaccine, such as eggs or ovalbumin \n\n Any history of severe adverse reactions to vaccines, such as anaphylaxis, hives, respiratory difficulty, angioedema, or abdominal pain \n\n Autoimmune disease or immunodeficiency \n\n Acute episode of chronic diseases or conditions, including chronic hepatitis, hypertension, diabetes mellitus and cardiovascular diseases \n\n Guillain-Barre Syndrome \n\n Women subjects with positive urinary pregnancy test \n\n Any history of immunosuppressive medications or cytotoxic medications or inhaled corticosteroids within the past six months (with the exception of corticosteroid nasal spray for allergic rhinitis or topical corticosteroids for an acute uncomplicated dermatitis) \n\n Axillary temperature >37.0 centigrade at the time of dosing \n\n Psychiatric condition that precludes compliance with the protocol; past or present psychoses; past or present bipolar disorder requiring therapy that has not been well controlled on medication for the past two years; disorder requiring lithium; or suicidal ideation occurring within five years prior to enrollment \n\n Any medical, psychiatric, social condition, occupational reason or other responsibility that, in the judgment of the investigator, is a contraindication to protocol participation or impairs a volunteer's ability to give informed consent. \n\n For infants: \n\n inclusion criteria: \n\n Healthy male or female aged between 6 and 35 months \n\n Full-term birth, birth weight 2,500 grams or more \n\n provided birth certification or vaccination card Parent(s) or legal guardian(s) are able to understand and sign the informed consent \n\n ",
+    "metadata": {
+      "brief_title": "The Immunogenicity and Safety of 2012-2013 Trivalent Seasonal Influenza Vaccine",
+      "phase": "Phase 4",
+      "drugs": "['2012-2013 trivalent seasonal influenza vaccine']",
+      "drugs_list": [
+        "2012-2013 trivalent seasonal influenza vaccine"
+      ],
+      "diseases": "['Influenza']",
+      "diseases_list": [
+        "Influenza"
+      ],
+      "enrollment": "202.0",
+      "inclusion_criteria": "For adults and old people: \n\n inclusion criteria: \n\n Healthy adults aged 18-60 years old, and healthy old people aged >60 years \n\n Be able to show legal identity card for the sake of recruitment Without vaccination history of seasonal split influenza vaccine in the recent 3 years \n\n Not participate in any other clinical trials during the study \n\n Not receive any immunosuppressive agents during and one month prior to the study \n\n Be able to understand and sign the informed consent. \n\n ",
+      "exclusion_criteria": ": \n\n Woman： Who breast-feeding or planning to become pregnant during the study \n\n Any history of allergic reactions; was allergic to any component of the vaccine, such as eggs or ovalbumin \n\n Any history of severe adverse reactions to vaccines, such as anaphylaxis, hives, respiratory difficulty, angioedema, or abdominal pain \n\n Autoimmune disease or immunodeficiency \n\n Acute episode of chronic diseases or conditions, including chronic hepatitis, hypertension, diabetes mellitus and cardiovascular diseases \n\n Guillain-Barre Syndrome \n\n Women subjects with positive urinary pregnancy test \n\n Any history of immunosuppressive medications or cytotoxic medications or inhaled corticosteroids within the past six months (with the exception of corticosteroid nasal spray for allergic rhinitis or topical corticosteroids for an acute uncomplicated dermatitis) \n\n Axillary temperature >37.0 centigrade at the time of dosing \n\n Psychiatric condition that precludes compliance with the protocol; past or present psychoses; past or present bipolar disorder requiring therapy that has not been well controlled on medication for the past two years; disorder requiring lithium; or suicidal ideation occurring within five years prior to enrollment \n\n Any medical, psychiatric, social condition, occupational reason or other responsibility that, in the judgment of the investigator, is a contraindication to protocol participation or impairs a volunteer's ability to give informed consent. \n\n For infants: \n\n inclusion criteria: \n\n Healthy male or female aged between 6 and 35 months \n\n Full-term birth, birth weight 2,500 grams or more \n\n provided birth certification or vaccination card Parent(s) or legal guardian(s) are able to understand and sign the informed consent \n\n ",
+      "brief_summary": "The purpose of this study is to evaluate the immunogenicity and safety of 2012-2013 trivalent seasonal influenza vaccine in 60 healthy infants aged 6-35 months old, 60 healthy adults aged 18-60 years old, and 60 healthy older people aged > 60 years."
+    }
+  },
+  "linked_result": {
+    "Influenza": {
+      "conceptId": "6142004",
+      "preferred_term": "Influenza",
+      "fully_specified_name": "Influenza (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acute viral infection in humans involving the respiratory tract. It is marked by inflammation of the NASAL MUCOSA; the PHARYNX; and conjunctiva, and by headache and severe, often generalized, myalgia.",
+      "best_match_term": "Influenza",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Influenza": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Influenza": {
+      "disease": "Influenza",
+      "conceptId": "6142004",
+      "preferred_term": "Influenza",
+      "fully_specified_name": "Influenza (disorder)",
+      "type": "Clinical finding",
+      "definition": "An acute viral infection in humans involving the respiratory tract. It is marked by inflammation of the NASAL MUCOSA; the PHARYNX; and conjunctiva, and by headache and severe, often generalized, myalgia.",
+      "best_match_term": "Influenza"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_body_mass_index_value_recorded_now_withunit_kilograms_per_square_meter",
+  "patient_has_finding_of_obesity_now",
+  "patient_has_finding_of_overweight_now",
+  "patient_has_finding_of_impaired_fasting_glycaemia_now",
+  "patient_has_finding_of_impaired_glucose_tolerance_now",
+  "patient_plasma_fasting_glucose_measurement_value_recorded_now_withunit_millimoles_per_liter",
+  "patient_has_finding_of_prediabetes_now",
+  "patient_has_undergone_hemoglobin_a1c_measurement_now",
+  "patient_has_finding_of_smoker_now"
+]

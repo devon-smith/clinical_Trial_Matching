@@ -1,0 +1,15 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_lyme_immunoblot_negative_now",
+  "patient_has_finding_of_acute_lyme_disease_inthehistory",
+  "patient_has_finding_of_erythema_chronica_migrans_inthehistory",
+  "patient_has_finding_of_erythema_chronica_migrans_now",
+  "patient_has_finding_of_lyme_disease_inthehistory",
+  "patient_has_finding_of_lyme_disease_now",
+  "patient_has_finding_of_fatigue_inthehistory",
+  "patient_has_finding_of_memory_impairment_inthehistory",
+  "patient_has_finding_of_musculoskeletal_pain_inthehistory",
+  "patient_has_finding_of_neuralgia_inthehistory",
+  "patient_has_finding_of_neurological_symptom_inthehistory",
+  "patient_has_undergone_antibiotic_therapy_inthehistory"
+]

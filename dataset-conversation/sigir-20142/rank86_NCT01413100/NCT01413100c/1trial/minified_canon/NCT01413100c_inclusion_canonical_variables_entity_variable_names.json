@@ -1,0 +1,14 @@
+[
+  "patient_has_diagnosis_of_systemic_sclerosis_now",
+  "patient_has_finding_of_systemic_sclerosis_now",
+  "patient_has_taken_cyclophosphamide_inthehistory",
+  "patient_has_taken_mycophenolate_mofetil_inthehistory",
+  "patient_carbon_monoxide_diffusing_capacity_measurement_value_recorded_now_withunit_percent_predicted",
+  "patient_erythrocyte_sedimentation_rate_finding_value_recorded_now_withunit_mm_per_1st_hour",
+  "patient_forced_vital_capacity_value_recorded_now_withunit_percent_predicted",
+  "patient_hemoglobin_value_recorded_now_withunit_g_per_dl",
+  "patient_has_finding_of_interstitial_lung_disease_now",
+  "patient_has_finding_of_lung_involvement_associated_with_another_disorder_now",
+  "patient_has_finding_of_simple_pulmonary_alveolitis_now",
+  "patient_has_finding_of_thickening_of_skin_now"
+]

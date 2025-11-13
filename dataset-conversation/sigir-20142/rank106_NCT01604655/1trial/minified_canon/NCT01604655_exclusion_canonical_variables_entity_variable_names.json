@@ -1,0 +1,11 @@
+[
+  "patient_has_diagnosis_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_diagnosis_of_acute_non_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+  "patient_serum_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_has_finding_of_atrial_fibrillation_now",
+  "patient_has_finding_of_irregular_heart_beat_now",
+  "patient_heart_rate_value_recorded_now_withunit_bpm",
+  "patient_has_allergy_to_iodinated_contrast_media_now",
+  "patient_is_pregnant_now"
+]

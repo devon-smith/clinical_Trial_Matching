@@ -1,0 +1,91 @@
+{
+  "generated": "2025-10-20T23:43:54",
+  "trial_id": "NCT02521558",
+  "contextual": {
+    "_id": "NCT02521558",
+    "title": "Effectiveness of Home-based Electronic Cognitive Therapy in Alzheimer's Disease",
+    "text": "Summary: The current study will examine the use of a mobile electronic application used to deliver cognitive rehabilitation to patients with mild cognitive impairment due (MCI) due to Alzheimer's disease (AD), and patients with mild AD. Patients will be given a specific cognitive rehabilitation program on their mobile device (iPad) with specific tasks for them to complete. The goal of this study is to determine if a) patients are able to use and adhere to a cognitive rehabilitation program delivered to their mobile device and b) to determine if patients can improve their language, attention, and memory by completing cognitive rehabilitation tasks assigned to them.\nInclusion criteria: inclusion criteria: \n\n A diagnosis of mild cognitive impairment due to Alzheimer's disease (MCI due to AD) by the patient's referring clinician per recent National Institutes of Aging-Alzheimer's Association criteria (Albert et al., 2011). \n\n A diagnosis of mild Alzheimer's disease by the patient's referring clinician per recent National Institutes of Aging-Alzheimer's Association criteria (McKhann et al., 2011). \n\n 50-90 years of age. \n\n \nExclusion criteria: : \n\n Younger than the age of 50 or older than the age of 90. \n\n Any self-reported history of substance abuse or alcohol abuse. \n\n Any self-reported history of prior head trauma (e.g., stroke, traumatic brain injury) \n\n Any prior self-reported history of significant depression or other mood disorder.",
+    "metadata": {
+      "brief_title": "Effectiveness of Home-based Electronic Cognitive Therapy in Alzheimer's Disease",
+      "phase": "",
+      "drugs": "['Intervention Group', 'Control Group']",
+      "drugs_list": [
+        "Intervention Group",
+        "Control Group"
+      ],
+      "diseases": "['Memory Disorders', 'Mild Cognitive Impairment', \"Alzheimer's Disease\"]",
+      "diseases_list": [
+        "Memory Disorders",
+        "Mild Cognitive Impairment",
+        "Alzheimer's Disease"
+      ],
+      "enrollment": "30.0",
+      "inclusion_criteria": "inclusion criteria: \n\n A diagnosis of mild cognitive impairment due to Alzheimer's disease (MCI due to AD) by the patient's referring clinician per recent National Institutes of Aging-Alzheimer's Association criteria (Albert et al., 2011). \n\n A diagnosis of mild Alzheimer's disease by the patient's referring clinician per recent National Institutes of Aging-Alzheimer's Association criteria (McKhann et al., 2011). \n\n 50-90 years of age. \n\n ",
+      "exclusion_criteria": ": \n\n Younger than the age of 50 or older than the age of 90. \n\n Any self-reported history of substance abuse or alcohol abuse. \n\n Any self-reported history of prior head trauma (e.g., stroke, traumatic brain injury) \n\n Any prior self-reported history of significant depression or other mood disorder.",
+      "brief_summary": "The current study will examine the use of a mobile electronic application used to deliver cognitive rehabilitation to patients with mild cognitive impairment due (MCI) due to Alzheimer's disease (AD), and patients with mild AD. Patients will be given a specific cognitive rehabilitation program on their mobile device (iPad) with specific tasks for them to complete. The goal of this study is to determine if a) patients are able to use and adhere to a cognitive rehabilitation program delivered to their mobile device and b) to determine if patients can improve their language, attention, and memory by completing cognitive rehabilitation tasks assigned to them."
+    }
+  },
+  "linked_result": {
+    "Memory Disorders": {
+      "conceptId": "386807006",
+      "preferred_term": "Memory impairment",
+      "fully_specified_name": "Memory impairment (finding)",
+      "type": "Clinical finding",
+      "definition": "Deterioration in memory function.",
+      "best_match_term": "Memory dysfunction",
+      "match_reason": "Exact"
+    },
+    "Mild Cognitive Impairment": {
+      "conceptId": "386805003",
+      "preferred_term": "Mild cognitive disorder",
+      "fully_specified_name": "Mild cognitive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "<p>Some forgetfulness can be a normal part of aging. However, some people have more <a href=\"https://medlineplus.gov/memory.html\">memory</a> problems than other people their age. This condition is called mild cognitive impairment, or MCI. People with MCI can take care of themselves and do their normal activities.</p> <p>MCI memory problems may include:</p><ul> <li>Losing things often</li> <li>Forgetting to go to events and appointments</li> <li>Having more trouble coming up with words than other people of the same age</li> </ul> <p>Memory problems can also have other causes, including certain medicines and diseases that affect the blood vessels that supply the brain. Some of the problems brought on by these conditions can be managed or reversed.</p> <p>Your health care provider can do thinking, memory, and language tests to see if you have MCI. You may also need to see a specialist for more tests. Because MCI may be an early sign of <a href=\"https://medlineplus.gov/alzheimersdisease.html\">Alzheimer's disease</a>, it's really important to see your health care provider every 6 to 12 months.</p> <p>At this time, there is no proven drug treatment for MCI. Your health care provider can check to see if you have any changes in your memory or thinking skills over time.</p> <p class=\"\">NIH: National Institute on Aging</p>",
+      "best_match_term": "Mild cognitive impairment",
+      "match_reason": "Exact"
+    },
+    "Alzheimer's Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Memory Disorders": 1,
+    "Mild Cognitive Impairment": 1,
+    "Alzheimer's Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Memory Disorders": {
+      "disease": "Memory Disorders",
+      "conceptId": "386807006",
+      "preferred_term": "Memory impairment",
+      "fully_specified_name": "Memory impairment (finding)",
+      "type": "Clinical finding",
+      "definition": "Deterioration in memory function.",
+      "best_match_term": "Memory dysfunction"
+    },
+    "Mild Cognitive Impairment": {
+      "disease": "Mild Cognitive Impairment",
+      "conceptId": "386805003",
+      "preferred_term": "Mild cognitive disorder",
+      "fully_specified_name": "Mild cognitive disorder (disorder)",
+      "type": "Clinical finding",
+      "definition": "<p>Some forgetfulness can be a normal part of aging. However, some people have more <a href=\"https://medlineplus.gov/memory.html\">memory</a> problems than other people their age. This condition is called mild cognitive impairment, or MCI. People with MCI can take care of themselves and do their normal activities.</p> <p>MCI memory problems may include:</p><ul> <li>Losing things often</li> <li>Forgetting to go to events and appointments</li> <li>Having more trouble coming up with words than other people of the same age</li> </ul> <p>Memory problems can also have other causes, including certain medicines and diseases that affect the blood vessels that supply the brain. Some of the problems brought on by these conditions can be managed or reversed.</p> <p>Your health care provider can do thinking, memory, and language tests to see if you have MCI. You may also need to see a specialist for more tests. Because MCI may be an early sign of <a href=\"https://medlineplus.gov/alzheimersdisease.html\">Alzheimer's disease</a>, it's really important to see your health care provider every 6 to 12 months.</p> <p>At this time, there is no proven drug treatment for MCI. Your health care provider can check to see if you have any changes in your memory or thinking skills over time.</p> <p class=\"\">NIH: National Institute on Aging</p>",
+      "best_match_term": "Mild cognitive impairment"
+    },
+    "Alzheimer's Disease": {
+      "disease": "Alzheimer's Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer's disease"
+    }
+  }
+}

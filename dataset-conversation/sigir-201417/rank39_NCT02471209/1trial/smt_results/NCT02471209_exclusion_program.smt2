@@ -1,0 +1,9 @@
+;; ===================== Declarations for the exclusion criterion (REQ 0) =====================
+(declare-const patient_has_finding_of_concomitant_cardiovascular_malformation_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient currently has a concomitant cardiovascular malformation.","when_to_set_to_false":"Set to false if the patient currently does not have a concomitant cardiovascular malformation.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a concomitant cardiovascular malformation.","meaning":"Boolean indicating whether the patient currently has a concomitant cardiovascular malformation."} ;; "the patient has a concomitant cardiovascular malformation"
+(declare-const patient_has_finding_of_concomitant_abdominal_organ_malformation_now Bool) ;; {"when_to_set_to_true":"Set to true if the patient currently has a concomitant abdominal organ malformation.","when_to_set_to_false":"Set to false if the patient currently does not have a concomitant abdominal organ malformation.","when_to_set_to_null":"Set to null if it is unknown, not documented, or cannot be determined whether the patient currently has a concomitant abdominal organ malformation.","meaning":"Boolean indicating whether the patient currently has a concomitant abdominal organ malformation."} ;; "the patient has a concomitant abdominal organ malformation"
+
+;; ===================== Constraint Assertions (REQ 0) =====================
+(assert
+  (! (not (or patient_has_finding_of_concomitant_cardiovascular_malformation_now
+              patient_has_finding_of_concomitant_abdominal_organ_malformation_now))
+     :named REQ0_COMPONENT0_OTHER_REQUIREMENTS)) ;; "The patient is excluded if (the patient has a concomitant cardiovascular malformation) OR (the patient has a concomitant abdominal organ malformation)."

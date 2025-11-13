@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT01724996",
+  "contextual": {
+    "_id": "NCT01724996",
+    "title": "Usefulness of Chest Wall Tenderness as Bedside Test to Exclude Acute Coronary Syndrome in Different Demographic Groups",
+    "text": "Summary: To determine the significance of a simple bedside clinical test (chest wall tenderness) to exclude myocardial ischemia in different demographic groups.\nInclusion criteria: inclusion criteria: All patients over the age of 18 years presenting with the leading symptom of first time or recurrent acute chest pain in the emergency room of the Department of Internal Medicine, University Hospital of Zurich. \n\n \nExclusion criteria: : \n\n Missing informed consent. \n\n Cardiopulmonary unstable patients. \n\n No self reported chest pain. \n\n Recent thoracic surgery within1 year, inflammatory joint disease, fibromyalgia, cardiogenic shock.",
+    "metadata": {
+      "brief_title": "Usefulness of Chest Wall Tenderness as Bedside Test to Exclude Acute Coronary Syndrome in Different Demographic Groups",
+      "phase": "",
+      "drugs": "['Clinical examination: chest wall tenderness']",
+      "drugs_list": [
+        "Clinical examination: chest wall tenderness"
+      ],
+      "diseases": "['Chest Pain']",
+      "diseases_list": [
+        "Chest Pain"
+      ],
+      "enrollment": "110.0",
+      "inclusion_criteria": "inclusion criteria: All patients over the age of 18 years presenting with the leading symptom of first time or recurrent acute chest pain in the emergency room of the Department of Internal Medicine, University Hospital of Zurich. \n\n ",
+      "exclusion_criteria": ": \n\n Missing informed consent. \n\n Cardiopulmonary unstable patients. \n\n No self reported chest pain. \n\n Recent thoracic surgery within1 year, inflammatory joint disease, fibromyalgia, cardiogenic shock.",
+      "brief_summary": "To determine the significance of a simple bedside clinical test (chest wall tenderness) to exclude myocardial ischemia in different demographic groups."
+    }
+  }
+}

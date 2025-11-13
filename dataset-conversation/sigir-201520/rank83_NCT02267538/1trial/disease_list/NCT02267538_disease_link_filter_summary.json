@@ -1,0 +1,91 @@
+{
+  "generated": "2025-10-20T22:09:07",
+  "trial_id": "NCT02267538",
+  "contextual": {
+    "_id": "NCT02267538",
+    "title": "Dexmedetomidine and Delirium in Patients After Cardiac Surgery",
+    "text": "Summary: Postoperative delirium (POD) is a frequently occurring complication after cardiac surgery. Its occurrence is associated with worse outcomes of patients, including increased morbidity, prolonged hospital stay, increased medical cost, and higher mortality. It is also associated with long-term cognitive decline and decreased quality of life. However, until recently, pharmacological interventions that can effectively prevent its occurrence are still limited. The purpose of this study is to investigate whether perioperative dexmedetomidine use can decrease the incidence of postoperative delirium in patients undergoing cardiac surgery.\nInclusion criteria: inclusion criteria: \n\n Patients of 60 years or older who are planning to receive cardiac surgery (CABG and/or valve replacement surgery) \n\n \nExclusion criteria: : \n\n Patients will be excluded if they meet any of the following criteria: \n\n Refuse to participate; \n\n Preoperative history of schizophrenia, epilepsia, Parkinson syndrome, or severe dementia; \n\n Inability to communicate in the preoperative period because of severe visual/auditory dysfunction or language barrier; \n\n History of brain injury or neurosurgery; \n\n Preoperative sick sinus syndrome, severe bradycardia (HR < 50 bpm), second-degree or above atrioventricular block without pacemaker; \n\n Severe hepatic dysfunction (Child-Pugh class C); \n\n Severe renal dysfunction (requirement of renal replacement therapy); \n\n Other conditions that are considered unsuitable for participation.",
+    "metadata": {
+      "brief_title": "Dexmedetomidine and Delirium in Patients After Cardiac Surgery",
+      "phase": "Phase 4",
+      "drugs": "['dexmedetomidine hydrochloride for injection', '0.9% sodium chloride for injection']",
+      "drugs_list": [
+        "dexmedetomidine hydrochloride for injection",
+        "0.9% sodium chloride for injection"
+      ],
+      "diseases": "['Delirium', 'C.Surgical Procedure; Cardiac', 'Postoperative Complications']",
+      "diseases_list": [
+        "Delirium",
+        "C.Surgical Procedure; Cardiac",
+        "Postoperative Complications"
+      ],
+      "enrollment": "285.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients of 60 years or older who are planning to receive cardiac surgery (CABG and/or valve replacement surgery) \n\n ",
+      "exclusion_criteria": ": \n\n Patients will be excluded if they meet any of the following criteria: \n\n Refuse to participate; \n\n Preoperative history of schizophrenia, epilepsia, Parkinson syndrome, or severe dementia; \n\n Inability to communicate in the preoperative period because of severe visual/auditory dysfunction or language barrier; \n\n History of brain injury or neurosurgery; \n\n Preoperative sick sinus syndrome, severe bradycardia (HR < 50 bpm), second-degree or above atrioventricular block without pacemaker; \n\n Severe hepatic dysfunction (Child-Pugh class C); \n\n Severe renal dysfunction (requirement of renal replacement therapy); \n\n Other conditions that are considered unsuitable for participation.",
+      "brief_summary": "Postoperative delirium (POD) is a frequently occurring complication after cardiac surgery. Its occurrence is associated with worse outcomes of patients, including increased morbidity, prolonged hospital stay, increased medical cost, and higher mortality. It is also associated with long-term cognitive decline and decreased quality of life. However, until recently, pharmacological interventions that can effectively prevent its occurrence are still limited. The purpose of this study is to investigate whether perioperative dexmedetomidine use can decrease the incidence of postoperative delirium in patients undergoing cardiac surgery."
+    }
+  },
+  "linked_result": {
+    "Delirium": {
+      "conceptId": "2776000",
+      "preferred_term": "Delirium",
+      "fully_specified_name": "Delirium (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Delirium",
+      "match_reason": "Exact"
+    },
+    "C.Surgical Procedure; Cardiac": {
+      "conceptId": "64915003",
+      "preferred_term": "Operation on heart",
+      "fully_specified_name": "Operation on heart (procedure)",
+      "type": "Procedure",
+      "definition": "Surgery performed on the heart.",
+      "best_match_term": "Cardiac surgery procedure",
+      "match_reason": "Exact"
+    },
+    "Postoperative Complications": {
+      "conceptId": "385486001",
+      "preferred_term": "Postoperative complication",
+      "fully_specified_name": "Postoperative complication (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.",
+      "best_match_term": "Postoperative complication",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Delirium": 1,
+    "C.Surgical Procedure; Cardiac": 1,
+    "Postoperative Complications": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Delirium": {
+      "disease": "Delirium",
+      "conceptId": "2776000",
+      "preferred_term": "Delirium",
+      "fully_specified_name": "Delirium (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Delirium"
+    },
+    "C.Surgical Procedure; Cardiac": {
+      "disease": "C.Surgical Procedure; Cardiac",
+      "conceptId": "64915003",
+      "preferred_term": "Operation on heart",
+      "fully_specified_name": "Operation on heart (procedure)",
+      "type": "Procedure",
+      "definition": "Surgery performed on the heart.",
+      "best_match_term": "Cardiac surgery procedure"
+    },
+    "Postoperative Complications": {
+      "disease": "Postoperative Complications",
+      "conceptId": "385486001",
+      "preferred_term": "Postoperative complication",
+      "fully_specified_name": "Postoperative complication (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.",
+      "best_match_term": "Postoperative complication"
+    }
+  }
+}

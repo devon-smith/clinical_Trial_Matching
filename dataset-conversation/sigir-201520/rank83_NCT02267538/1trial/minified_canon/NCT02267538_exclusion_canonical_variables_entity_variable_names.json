@@ -1,0 +1,14 @@
+[
+  "patient_has_diagnosis_of_dementia_inthehistory",
+  "patient_has_diagnosis_of_epilepsy_inthehistory",
+  "patient_has_diagnosis_of_schizophrenia_inthehistory",
+  "patient_has_finding_of_auditory_dysfunction_now",
+  "patients_language_barrier_is_positive_now",
+  "patient_has_undergone_operation_on_nervous_system_inthehistory",
+  "patient_has_diagnosis_of_traumatic_and_or_non_traumatic_brain_injury_inthehistory",
+  "patient_has_finding_of_atrioventricular_block_now",
+  "patient_has_finding_of_bradycardia_now",
+  "patient_has_finding_of_sick_sinus_syndrome_now",
+  "patient_has_finding_of_abnormal_liver_function_now",
+  "patient_has_finding_of_renal_impairment_now"
+]

@@ -1,0 +1,7 @@
+[
+  "patient_has_finding_of_nausea_now",
+  "patient_has_finding_of_vomiting_now",
+  "patient_has_undergone_chemotherapy_inthehistory",
+  "patient_has_undergone_administration_of_antineoplastic_agent_inthehistory",
+  "patient_is_exposed_to_dopamine_receptor_antagonist_inthehistory"
+]

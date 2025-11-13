@@ -1,0 +1,22 @@
+{
+  "_id": "NCT02487394",
+  "title": "Protein Biomarker Discovery and Validation in Chronic Obstructive Pulmonary Disease (COPD) And Asthma",
+  "text": "Summary: The purpose of the study is to better understand proteomics of asthma and COPD, and response to therapy. There are two Phases to this study broken into two arms. In Phase I, we propose is to use discovery proteomics and techniques to identify protein expression signatures. Subjects who complete Phase I are eligible, but not required, to enroll in Phase II. In Phase II, we propose to establish and validate the predictive value of protein signatures for treatment responses using inhaled corticosteroids.\nInclusion criteria: inclusion criteria: \n\n Criteria for Asthma \n\n INCLUSION \n\n History consistent with asthma: episodic wheezing, shortness of breath, or cough \n\n Airway lability recognized by at least 12% improvement in Forced Expiratory Volume (FEV1) after 2 puffs of beta2 agonist Age >18yrs \n\n FEV1 >40% predicted \n\n Never smoker, current smoker, or quit smoking ≥5 years ago Criteria for COPD \n\n INCLUSION \n\n History consistent with COPD: dyspnea with exertion, productive cough, progressive course \n\n Smoking history of at least 20 pack years \n\n Current smoker or quit smoking ≥5 years ago \n\n Age >18yrs \n\n FEV1: Forced Vital Capacity (FVC) ratio < 0.70 following 2 puffs of albuterol \n\n FEV1 greater than 50% predicted \n\n \nExclusion criteria: : \n\n Exclusion for Asthma EXCLUSION \n\n Other respiratory illness other than asthma \n\n Chronic infectious process \n\n Significant other medical illness \n\n Inability to consent \n\n Pregnancy Exclusion for COPD EXCLUSION \n\n Other respiratory illness other than COPD \n\n Chronic infectious process \n\n Significant other medical illness \n\n Inability to consent \n\n Pregnancy",
+  "metadata": {
+    "brief_title": "Protein Biomarker Discovery and Validation in Chronic Obstructive Pulmonary Disease (COPD) And Asthma",
+    "phase": "",
+    "drugs": "['Exhaled Breath Condensate (EBC)']",
+    "drugs_list": [
+      "Exhaled Breath Condensate (EBC)"
+    ],
+    "diseases": "['Asthma', 'COPD']",
+    "diseases_list": [
+      "Asthma",
+      "COPD"
+    ],
+    "enrollment": "9.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Criteria for Asthma \n\n INCLUSION \n\n History consistent with asthma: episodic wheezing, shortness of breath, or cough \n\n Airway lability recognized by at least 12% improvement in Forced Expiratory Volume (FEV1) after 2 puffs of beta2 agonist Age >18yrs \n\n FEV1 >40% predicted \n\n Never smoker, current smoker, or quit smoking ≥5 years ago Criteria for COPD \n\n INCLUSION \n\n History consistent with COPD: dyspnea with exertion, productive cough, progressive course \n\n Smoking history of at least 20 pack years \n\n Current smoker or quit smoking ≥5 years ago \n\n Age >18yrs \n\n FEV1: Forced Vital Capacity (FVC) ratio < 0.70 following 2 puffs of albuterol \n\n FEV1 greater than 50% predicted \n\n ",
+    "exclusion_criteria": ": \n\n Exclusion for Asthma EXCLUSION \n\n Other respiratory illness other than asthma \n\n Chronic infectious process \n\n Significant other medical illness \n\n Inability to consent \n\n Pregnancy Exclusion for COPD EXCLUSION \n\n Other respiratory illness other than COPD \n\n Chronic infectious process \n\n Significant other medical illness \n\n Inability to consent \n\n Pregnancy",
+    "brief_summary": "The purpose of the study is to better understand proteomics of asthma and COPD, and response to therapy. There are two Phases to this study broken into two arms. In Phase I, we propose is to use discovery proteomics and techniques to identify protein expression signatures. Subjects who complete Phase I are eligible, but not required, to enroll in Phase II. In Phase II, we propose to establish and validate the predictive value of protein signatures for treatment responses using inhaled corticosteroids."
+  }
+}

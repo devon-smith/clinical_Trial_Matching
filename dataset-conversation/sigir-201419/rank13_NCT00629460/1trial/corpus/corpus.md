@@ -1,0 +1,26 @@
+# A Pilot Study of PET-CT in the Assessment of Pulmonary Nodules in Children With Malignant Solid Tumors
+**NCT**: `NCT00629460`
+## Brief Summary
+Because the management of children with solid tumors hinges on the extent of disease, it is crucial to identify metastatic sites. Helical chest computed tomography (CT) is the standard method of excluding pulmonary metastases. However, CT lacks molecular information regarding nodule histology and often biopsy is required to exclude malignancy. Biopsy procedures carry known risks including those associated with anesthesia and sedation, infection, pneumothorax, hemorrhage, pain and other post-procedure and post-operative complications and may also add unnecessary cost to the management of the patient. We found that the ability of three experienced pediatric radiologists to correctly predict nodule histology based on CT imaging features was limited (57% to 67% rate of correct classification). Also, there was only slight to moderate agreement in nodule classification between these reviewers.~Furthermore, of 50 children who have undergone pulmonary nodule biopsy at St. Jude in the last five years, 44% (22/50) had only benign nodules.~Adult studies have shown that a nuclear medicine scan called fluoro-deoxyglucose (FDG) positron emission tomography (PET) and the fusion modality PET-CT are superior to diagnostic CT in distinguishing benign from malignant pulmonary nodules because FDG PET gives information about the metabolic activity of the nodule. Nodules that are malignant have more metabolic activity, hence more FDG uptake/intensity, than those that are benign. There has been little work done in children to determine the value of PET or PET-CT in the evaluation of pulmonary nodules.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Participant has a known or clinically suspected solid malignancy (excluding brain tumor) 
+
+ Nodule must be discovered at the time of diagnosis of the primary malignancy or after the completion of therapy
+## Exclusion Criteria
+: 
+
+ Participant has not been off therapy for at least 3 weeks before undergoing PET-CT
+## Full Text
+Summary: Because the management of children with solid tumors hinges on the extent of disease, it is crucial to identify metastatic sites. Helical chest computed tomography (CT) is the standard method of excluding pulmonary metastases. However, CT lacks molecular information regarding nodule histology and often biopsy is required to exclude malignancy. Biopsy procedures carry known risks including those associated with anesthesia and sedation, infection, pneumothorax, hemorrhage, pain and other post-procedure and post-operative complications and may also add unnecessary cost to the management of the patient. We found that the ability of three experienced pediatric radiologists to correctly predict nodule histology based on CT imaging features was limited (57% to 67% rate of correct classification). Also, there was only slight to moderate agreement in nodule classification between these reviewers.~Furthermore, of 50 children who have undergone pulmonary nodule biopsy at St. Jude in the last five years, 44% (22/50) had only benign nodules.~Adult studies have shown that a nuclear medicine scan called fluoro-deoxyglucose (FDG) positron emission tomography (PET) and the fusion modality PET-CT are superior to diagnostic CT in distinguishing benign from malignant pulmonary nodules because FDG PET gives information about the metabolic activity of the nodule. Nodules that are malignant have more metabolic activity, hence more FDG uptake/intensity, than those that are benign. There has been little work done in children to determine the value of PET or PET-CT in the evaluation of pulmonary nodules.
+Inclusion criteria: inclusion criteria: 
+
+ Participant has a known or clinically suspected solid malignancy (excluding brain tumor) 
+
+ Nodule must be discovered at the time of diagnosis of the primary malignancy or after the completion of therapy 
+
+ 
+Exclusion criteria: : 
+
+ Participant has not been off therapy for at least 3 weeks before undergoing PET-CT

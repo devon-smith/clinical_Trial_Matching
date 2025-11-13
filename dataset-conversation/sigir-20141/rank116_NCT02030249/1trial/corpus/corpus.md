@@ -1,0 +1,70 @@
+# Sub-Study of the PREVIEW Study Australia
+**NCT**: `NCT02030249`
+## Brief Summary
+The aim of this study is to investigate possible enduring effects of a standard 2-month weight loss program on appetite regulation, bone homeostasis and muscle strength in younger and older adults, as well as the impact of differences in dietary composition during weight maintenance.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Age 25 - 45 years and 55 - 70 years 
+
+ Overweight or obesity status BMI>25 kg/m2 
+
+ Pre-diabetes. The criteria from WHO/IDF (International Diabetes Foundation) for assessing pre-diabetes will be used as the formal inclusion criteria, i.e. having: Impaired Fasting Glucose (IFG): Fasting venous plasma glucose concentration 5.6 - 6.9 mmol/l or Impaired Glucose Tolerance (IGT): Venous Plasma glucose concentration of 7.8 - 11.0 mmol/l at 2 h after oral administration of 75 g glucose (oral glucose tolerance test, OGTT), with fasting plasma glucose less than 7.0 mmol/l. Due to potential between-lab variation (local assessments), HbA1c is not used as an inclusion criteria in the screening. 
+
+ Informed consent required 
+
+ Ethnic group - No restrictions 
+
+ Smoking - Smoking is allowed, provided subjects have not recently (within 1 month) changed habits. However, smoking status is monitored throughout the study and used as a confounding variable. 
+
+ Motivation - Motivation and willingness to be randomized to any of the groups and to do his/hers best to follow the given protocol 
+
+ Other - Able to participate at CID's during normal working hours.
+## Exclusion Criteria
+: 
+
+ Based on interview and/or questionnaire, individuals with the following problems will be excluded: 
+
+ Medical conditions as known by the subjects: Diabetes mellitus (other than gestational diabetes mellitus); Significant cardiovascular disease including current angina; myocardial infarction or stroke within the past 6 months; heart failure; symptomatic peripheral vascular disease; Systolic blood pressure above 160 mmHg and/or diastolic blood pressure above 100 mmHg whether on or off treatment for hypertension. If being treated, no change in drug treatment within last 3 months; Advanced chronic renal impairment; Significant liver disease e.g. cirrhosis (fatty liver disease allowed); Malignancy which is currently active or in remission for less than five years after last treatment (local basal and squamous cell skin cancer allowed); Active inflammatory bowel disease, celiac disease, chronic pancreatitis or other disorder potentially causing malabsorption; Previous bariatric surgery; Chronic respiratory, neurological, musculoskeletal or other disorders where, in the judgement of the investigator, participants would have unacceptable risk or difficulty in complying with the protocol (e.g. physical activity program); A recent surgical procedure until after full convalescence (investigators judgement); Transmissible blood-borne diseases e.g. hepatitis B, HIV; Psychiatric illness (e.g. major depression, bipolar disorder). 
+
+ Medication: Use currently or within the previous 3 months of prescription medication that has the potential of affecting body weight or glucose metabolism such as glucocorticoids (but excluding inhaled and topical steroids; bronchodilators are allowed), psychoactive medication, epileptic medication, or weight loss medications (either prescription, over the counter or herbal). Low dose antidepressants are allowed if they, in the judgement of the investigator, do not affect weight or participation to the study protocol. Levothyroxine for treatment of hypothyroidism is allowed if the participant has been on a stable dose for at least 3 months. 
+
+ Personal/Other: Engagement in competitive sports; Self-reported weight change of >5 % (increase or decrease) within 2 months prior to screening; Special diets (e.g. vegan, Atkins) within 2 months prior to study start. A lacto-vegetarian diet is allowed; Severe food intolerance expected to interfere with the study; Regularly drinking > 21 alcoholic units/week (men), or > 14 alcoholic units/week (women); Use of drugs of abuse within the previous 12 months; Blood donation or transfusion within the past 1 month before baseline or CID's; Self-reported eating disorders; Pregnancy or lactation, including plans to become pregnant within the next 36 months; No access to either phone or Internet (this is necessary when being contacted by the instructor's during the maintenance phase); Adequate understanding of national language; Psychological or behavioral problems which, in the judgement of the investigator, would lead to difficulty in complying with the protocol. 
+
+ Laboratory screening: If all of the above criteria are satisfied, the participant is eligible for a glucose tolerance test (blood at 0 and 120 mins), and blood glucose concentrations are analyzed immediately (Haemocue). In addition full blood count, urea, and electrolytes may be analyzed as a further safety evaluation. 
+
+ ONLY IF the glucose tolerance test meets the entry criteria for the study, the remaining samples are sent to the local laboratory for a safety check, with the following
+## Full Text
+Summary: The aim of this study is to investigate possible enduring effects of a standard 2-month weight loss program on appetite regulation, bone homeostasis and muscle strength in younger and older adults, as well as the impact of differences in dietary composition during weight maintenance.
+Inclusion criteria: inclusion criteria: 
+
+ Age 25 - 45 years and 55 - 70 years 
+
+ Overweight or obesity status BMI>25 kg/m2 
+
+ Pre-diabetes. The criteria from WHO/IDF (International Diabetes Foundation) for assessing pre-diabetes will be used as the formal inclusion criteria, i.e. having: Impaired Fasting Glucose (IFG): Fasting venous plasma glucose concentration 5.6 - 6.9 mmol/l or Impaired Glucose Tolerance (IGT): Venous Plasma glucose concentration of 7.8 - 11.0 mmol/l at 2 h after oral administration of 75 g glucose (oral glucose tolerance test, OGTT), with fasting plasma glucose less than 7.0 mmol/l. Due to potential between-lab variation (local assessments), HbA1c is not used as an inclusion criteria in the screening. 
+
+ Informed consent required 
+
+ Ethnic group - No restrictions 
+
+ Smoking - Smoking is allowed, provided subjects have not recently (within 1 month) changed habits. However, smoking status is monitored throughout the study and used as a confounding variable. 
+
+ Motivation - Motivation and willingness to be randomized to any of the groups and to do his/hers best to follow the given protocol 
+
+ Other - Able to participate at CID's during normal working hours. 
+
+ 
+Exclusion criteria: : 
+
+ Based on interview and/or questionnaire, individuals with the following problems will be excluded: 
+
+ Medical conditions as known by the subjects: Diabetes mellitus (other than gestational diabetes mellitus); Significant cardiovascular disease including current angina; myocardial infarction or stroke within the past 6 months; heart failure; symptomatic peripheral vascular disease; Systolic blood pressure above 160 mmHg and/or diastolic blood pressure above 100 mmHg whether on or off treatment for hypertension. If being treated, no change in drug treatment within last 3 months; Advanced chronic renal impairment; Significant liver disease e.g. cirrhosis (fatty liver disease allowed); Malignancy which is currently active or in remission for less than five years after last treatment (local basal and squamous cell skin cancer allowed); Active inflammatory bowel disease, celiac disease, chronic pancreatitis or other disorder potentially causing malabsorption; Previous bariatric surgery; Chronic respiratory, neurological, musculoskeletal or other disorders where, in the judgement of the investigator, participants would have unacceptable risk or difficulty in complying with the protocol (e.g. physical activity program); A recent surgical procedure until after full convalescence (investigators judgement); Transmissible blood-borne diseases e.g. hepatitis B, HIV; Psychiatric illness (e.g. major depression, bipolar disorder). 
+
+ Medication: Use currently or within the previous 3 months of prescription medication that has the potential of affecting body weight or glucose metabolism such as glucocorticoids (but excluding inhaled and topical steroids; bronchodilators are allowed), psychoactive medication, epileptic medication, or weight loss medications (either prescription, over the counter or herbal). Low dose antidepressants are allowed if they, in the judgement of the investigator, do not affect weight or participation to the study protocol. Levothyroxine for treatment of hypothyroidism is allowed if the participant has been on a stable dose for at least 3 months. 
+
+ Personal/Other: Engagement in competitive sports; Self-reported weight change of >5 % (increase or decrease) within 2 months prior to screening; Special diets (e.g. vegan, Atkins) within 2 months prior to study start. A lacto-vegetarian diet is allowed; Severe food intolerance expected to interfere with the study; Regularly drinking > 21 alcoholic units/week (men), or > 14 alcoholic units/week (women); Use of drugs of abuse within the previous 12 months; Blood donation or transfusion within the past 1 month before baseline or CID's; Self-reported eating disorders; Pregnancy or lactation, including plans to become pregnant within the next 36 months; No access to either phone or Internet (this is necessary when being contacted by the instructor's during the maintenance phase); Adequate understanding of national language; Psychological or behavioral problems which, in the judgement of the investigator, would lead to difficulty in complying with the protocol. 
+
+ Laboratory screening: If all of the above criteria are satisfied, the participant is eligible for a glucose tolerance test (blood at 0 and 120 mins), and blood glucose concentrations are analyzed immediately (Haemocue). In addition full blood count, urea, and electrolytes may be analyzed as a further safety evaluation. 
+
+ ONLY IF the glucose tolerance test meets the entry criteria for the study, the remaining samples are sent to the local laboratory for a safety check, with the following

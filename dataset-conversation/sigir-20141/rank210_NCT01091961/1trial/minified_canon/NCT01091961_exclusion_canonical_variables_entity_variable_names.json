@@ -1,0 +1,11 @@
+[
+  "patient_is_taking_angiotensin_converting_enzyme_inhibitor_containing_product_now",
+  "patient_is_taking_angiotensin_ii_receptor_antagonist_containing_product_now",
+  "patient_has_undergone_perioperative_care_management_now",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_hypertensive_disorder_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_finding_of_low_blood_pressure_now",
+  "patient_has_undergone_enrollment_in_clinical_trial_inthehistory",
+  "patient_is_exposed_to_hypotensive_agent_now"
+]

@@ -1,0 +1,68 @@
+{
+  "generated": "2025-10-20T23:43:19",
+  "trial_id": "NCT02055092",
+  "contextual": {
+    "_id": "NCT02055092",
+    "title": "Young Onset Dementia - the Difficult Diagnosis and the Stressful Life for the Whole Family",
+    "text": "Summary: People diagnosed with young onset dementia are today mostly assigned to the same healthcare services as people developing dementia at an older age. They and their families are however in a quite different life situation, which is likely to generate different challenges and specific needs for tailored healthcare services, of importance in maintaining their perceived quality of life.~The investigators of this study wish to assess the factors influencing these families' quality of life, their specific needs and their use of healthcare services by the use a combination of quantitative and qualitative methods. The main aim of this study is to provide better future healthcare services to these families, and to develop a programme for optimal collaboration between specialist healthcare services and the local dementia teams.\nInclusion criteria: inclusion criteria: \n\n Debut of dementia symptoms before the age of 65 years, but age at time of inclusion may be up to 70 years. \n\n FTD (Neary et al 1998 criteria) \n\n Primary progressive aphasia (Mesulam 2003 criteria) \n\n AD (DSM-IV) \n\n Community living, excl. dementia-specific living facilities manned 24/7 \n\n Family member with regular contact at least x 1/week. \n\n \nExclusion criteria: : \n\n Lack of informed consent \n\n No close or appropriate family member \n\n Frontal lobe dysfunction due to non-progressive injury, i.e. cerebral infarction \n\n Frontal lobe dysfunction due to motor neuron disease (ALS) \n\n Other dementia specific condition with frontal lobe dysfunction (Huntington, HIV, Down syndrome, alcoholic dementia) \n\n Mental retardation \n\n Current substance abuse, incl. excessive alcohol consumption for the past 12 months",
+    "metadata": {
+      "brief_title": "Young Onset Dementia - the Difficult Diagnosis and the Stressful Life for the Whole Family",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Frontotemporal Dementia', 'Alzheimer Disease']",
+      "diseases_list": [
+        "Frontotemporal Dementia",
+        "Alzheimer Disease"
+      ],
+      "enrollment": "250.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Debut of dementia symptoms before the age of 65 years, but age at time of inclusion may be up to 70 years. \n\n FTD (Neary et al 1998 criteria) \n\n Primary progressive aphasia (Mesulam 2003 criteria) \n\n AD (DSM-IV) \n\n Community living, excl. dementia-specific living facilities manned 24/7 \n\n Family member with regular contact at least x 1/week. \n\n ",
+      "exclusion_criteria": ": \n\n Lack of informed consent \n\n No close or appropriate family member \n\n Frontal lobe dysfunction due to non-progressive injury, i.e. cerebral infarction \n\n Frontal lobe dysfunction due to motor neuron disease (ALS) \n\n Other dementia specific condition with frontal lobe dysfunction (Huntington, HIV, Down syndrome, alcoholic dementia) \n\n Mental retardation \n\n Current substance abuse, incl. excessive alcohol consumption for the past 12 months",
+      "brief_summary": "People diagnosed with young onset dementia are today mostly assigned to the same healthcare services as people developing dementia at an older age. They and their families are however in a quite different life situation, which is likely to generate different challenges and specific needs for tailored healthcare services, of importance in maintaining their perceived quality of life.~The investigators of this study wish to assess the factors influencing these families' quality of life, their specific needs and their use of healthcare services by the use a combination of quantitative and qualitative methods. The main aim of this study is to provide better future healthcare services to these families, and to develop a programme for optimal collaboration between specialist healthcare services and the local dementia teams."
+    }
+  },
+  "linked_result": {
+    "Frontotemporal Dementia": {
+      "conceptId": "230270009",
+      "preferred_term": "Frontotemporal dementia",
+      "fully_specified_name": "Frontotemporal dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "The most common clinical form of FRONTOTEMPORAL LOBAR DEGENERATION, this dementia presents with personality and behavioral changes often associated with disinhibition, apathy, and lack of insight.",
+      "best_match_term": "Frontotemporal dementia",
+      "match_reason": "Exact"
+    },
+    "Alzheimer Disease": {
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Frontotemporal Dementia": 1,
+    "Alzheimer Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Frontotemporal Dementia": {
+      "disease": "Frontotemporal Dementia",
+      "conceptId": "230270009",
+      "preferred_term": "Frontotemporal dementia",
+      "fully_specified_name": "Frontotemporal dementia (disorder)",
+      "type": "Clinical finding",
+      "definition": "The most common clinical form of FRONTOTEMPORAL LOBAR DEGENERATION, this dementia presents with personality and behavioral changes often associated with disinhibition, apathy, and lack of insight.",
+      "best_match_term": "Frontotemporal dementia"
+    },
+    "Alzheimer Disease": {
+      "disease": "Alzheimer Disease",
+      "conceptId": "26929004",
+      "preferred_term": "Alzheimer's disease",
+      "fully_specified_name": "Alzheimer's disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)",
+      "best_match_term": "Alzheimer disease"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_chronic_obstructive_lung_disease_now",
+  "patient_has_finding_of_dyspnea_now",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_forced_expired_volume_in_1_second_value_recorded_now_withunit_liters",
+  "patient_forced_vital_capacity_value_recorded_now_withunit_liters",
+  "patient_percentage_predicted_forced_expiratory_volume_in_1_second_after_bronchodilation_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_pulmonary_emphysema_now",
+  "patient_hemoglobin_saturation_with_oxygen_value_recorded_now_withunit_percent",
+  "patient_is_undergoing_oxygen_therapy_now",
+  "patient_cigarette_smoking_tobacco_value_recorded_inthehistory_withunit_pack_years",
+  "patient_is_exposed_to_tobacco_now"
+]

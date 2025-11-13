@@ -1,0 +1,52 @@
+{
+  "generated": "2025-10-22T20:50:48",
+  "trial_id": "NCT02084602",
+  "contextual": {
+    "_id": "NCT02084602",
+    "title": "Assessment of Artesunate/Mefloquine in the Peruvian Amazon",
+    "text": "Summary: There is growing evidence of the emergence of P. falciparum resistance to artesunate (a derivative of artemisin) in Southeast Asia. The emergence and spread of resistant strains to artemisinin would represent an alarming threat to the success of the antimalarial combination therapy in the region. The delayed clearance of parasitemia for more than 24 hours has been taken as an early sign of resistance, a phenomenon seen at the Thai-Cambodia border.~The purpose of this research study, is to assess the in vitro and in vivo efficacy of combinated artesunate/mefloquine therapy to treatment of uncomplicated Plasmodium falciparum malaria in the Peruvian Amazon through the analysis of the rate of clearance of parasitemia and other important outcomes.\nInclusion criteria: inclusion criteria: \n\n Age between 5 and 65 years old inclusive \n\n Monoinfection of P. falciparum confirmed by microscopy \n\n Documented fever (axillary temperature > 37.5°C) and/or history of fever during the previous 48 hours in the absence of other obvious causes of fever (such as pneumonia, otitis media, etc) \n\n Infection with P. falciparum of 1000 and 100,000 asexual parasites per microliter (μl) to be determined by microscopic examination of a thick or thin smear, and positive confirmation by polymerase chain reaction (PCR); * Presence of sexual form of P. vivax is acceptable; ** PCR confirmation is not an enrollment requirement \n\n Informed consent must be obtained from the participant or both parents/guardian (in the case of children), and assent from the child (from 8 to 17 years old) \n\n Willingness of the participant to return to the health facility for regular check-ups during the follow-up period of 42 days \n\n Willingness of the participant to transfer to the Hospital de Apoyo Iquitos to start treatment \n\n \nExclusion criteria: : \n\n Severe malaria signs (as defined by the World Health Organization): \n\n Cerebral malaria (irreversible coma) \n\n Severe anemia (hematocrit < 15%, or clinic signs) \n\n Clinic signs of kidney failure (e.g., serum creatinine > 3 mg/dL) \n\n Pulmonary edema \n\n Hypoglycemia (glucose in the blood <40mg/dL or clinic signs) \n\n Shock (PA systolic < 70 mm Hg in adults; < 50 in children) \n\n Spontaneous bleeding/Disseminated intravascular coagulation (CID) \n\n Recurrent generalized convulsions \n\n Acidemia/acidosis (clinic signs) \n\n Macroscopic hemoglobinuria \n\n Jaundice Laboratory tests for measuring some of these conditions may not be available at all study sites. If they are not, we will use clinical criteria of severe malaria at the discretion of the study physician \n\n Background of other chronic or severe diseases (e.g., heart, kidney, liver diseases, HIV/AIDS, severe malnutrition), determined clinically by medical history and physical examination \n\n Background of hypersensitivity to any of the drugs tested or used as an alternative treatment: AS, MQ, quinine or tetracycline/clindamycin \n\n Gestation (based on a serum pregnancy test or medical history) or desire to become pregnant during the study period, or not using any family planning method while being sexually active (confirmed by urine pregnancy test) \n\n Breastfeeding a child under 6 months old \n\n Have received antimalarial drugs in the previous 7 days \n\n Inability to eat or drink, vomiting (more than twice in the last 24 hours), recent history of seizures (one or more in the previous 24 hours), altered level of consciousness, inability to sit or stand \n\n Splenectomy background",
+    "metadata": {
+      "brief_title": "Assessment of Artesunate/Mefloquine in the Peruvian Amazon",
+      "phase": "Phase 4",
+      "drugs": "['Artesunate', 'Mefloquine']",
+      "drugs_list": [
+        "Artesunate",
+        "Mefloquine"
+      ],
+      "diseases": "['Malaria, Falciparum']",
+      "diseases_list": [
+        "Malaria",
+        "Falciparum"
+      ],
+      "enrollment": "45.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age between 5 and 65 years old inclusive \n\n Monoinfection of P. falciparum confirmed by microscopy \n\n Documented fever (axillary temperature > 37.5°C) and/or history of fever during the previous 48 hours in the absence of other obvious causes of fever (such as pneumonia, otitis media, etc) \n\n Infection with P. falciparum of 1000 and 100,000 asexual parasites per microliter (μl) to be determined by microscopic examination of a thick or thin smear, and positive confirmation by polymerase chain reaction (PCR); * Presence of sexual form of P. vivax is acceptable; ** PCR confirmation is not an enrollment requirement \n\n Informed consent must be obtained from the participant or both parents/guardian (in the case of children), and assent from the child (from 8 to 17 years old) \n\n Willingness of the participant to return to the health facility for regular check-ups during the follow-up period of 42 days \n\n Willingness of the participant to transfer to the Hospital de Apoyo Iquitos to start treatment \n\n ",
+      "exclusion_criteria": ": \n\n Severe malaria signs (as defined by the World Health Organization): \n\n Cerebral malaria (irreversible coma) \n\n Severe anemia (hematocrit < 15%, or clinic signs) \n\n Clinic signs of kidney failure (e.g., serum creatinine > 3 mg/dL) \n\n Pulmonary edema \n\n Hypoglycemia (glucose in the blood <40mg/dL or clinic signs) \n\n Shock (PA systolic < 70 mm Hg in adults; < 50 in children) \n\n Spontaneous bleeding/Disseminated intravascular coagulation (CID) \n\n Recurrent generalized convulsions \n\n Acidemia/acidosis (clinic signs) \n\n Macroscopic hemoglobinuria \n\n Jaundice Laboratory tests for measuring some of these conditions may not be available at all study sites. If they are not, we will use clinical criteria of severe malaria at the discretion of the study physician \n\n Background of other chronic or severe diseases (e.g., heart, kidney, liver diseases, HIV/AIDS, severe malnutrition), determined clinically by medical history and physical examination \n\n Background of hypersensitivity to any of the drugs tested or used as an alternative treatment: AS, MQ, quinine or tetracycline/clindamycin \n\n Gestation (based on a serum pregnancy test or medical history) or desire to become pregnant during the study period, or not using any family planning method while being sexually active (confirmed by urine pregnancy test) \n\n Breastfeeding a child under 6 months old \n\n Have received antimalarial drugs in the previous 7 days \n\n Inability to eat or drink, vomiting (more than twice in the last 24 hours), recent history of seizures (one or more in the previous 24 hours), altered level of consciousness, inability to sit or stand \n\n Splenectomy background",
+      "brief_summary": "There is growing evidence of the emergence of P. falciparum resistance to artesunate (a derivative of artemisin) in Southeast Asia. The emergence and spread of resistant strains to artemisinin would represent an alarming threat to the success of the antimalarial combination therapy in the region. The delayed clearance of parasitemia for more than 24 hours has been taken as an early sign of resistance, a phenomenon seen at the Thai-Cambodia border.~The purpose of this research study, is to assess the in vitro and in vivo efficacy of combinated artesunate/mefloquine therapy to treatment of uncomplicated Plasmodium falciparum malaria in the Peruvian Amazon through the analysis of the rate of clearance of parasitemia and other important outcomes."
+    }
+  },
+  "linked_result": {
+    "Malaria, Falciparum": {
+      "conceptId": "62676009",
+      "preferred_term": "Falciparum malaria",
+      "fully_specified_name": "Falciparum malaria (disorder)",
+      "type": "Clinical finding",
+      "definition": "Malaria caused by PLASMODIUM FALCIPARUM. This is the severest form of malaria and is associated with the highest levels of parasites in the blood. This disease is characterized by irregularly recurring febrile paroxysms that in extreme cases occur with acute cerebral, renal, or gastrointestinal manifestations.",
+      "best_match_term": "Falciparum malaria",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Malaria, Falciparum": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Malaria, Falciparum": {
+      "disease": "Malaria, Falciparum",
+      "conceptId": "62676009",
+      "preferred_term": "Falciparum malaria",
+      "fully_specified_name": "Falciparum malaria (disorder)",
+      "type": "Clinical finding",
+      "definition": "Malaria caused by PLASMODIUM FALCIPARUM. This is the severest form of malaria and is associated with the highest levels of parasites in the blood. This disease is characterized by irregularly recurring febrile paroxysms that in extreme cases occur with acute cerebral, renal, or gastrointestinal manifestations.",
+      "best_match_term": "Falciparum malaria"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_acute_abdomen_now",
+  "patient_body_weight_value_recorded_now_withunit_kilograms",
+  "patient_apnea_value_recorded_now_withunit_seconds"
+]

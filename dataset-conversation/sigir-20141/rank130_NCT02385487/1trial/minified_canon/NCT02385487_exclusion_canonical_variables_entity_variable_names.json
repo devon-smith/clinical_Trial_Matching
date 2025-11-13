@@ -1,0 +1,20 @@
+[
+  "patient_has_finding_of_myocardial_infarction_now",
+  "patient_has_finding_of_preinfarction_syndrome_now",
+  "patient_has_undergone_myocardial_revascularization_inthepast7days",
+  "patient_has_finding_of_exacerbation_of_congestive_heart_failure_now",
+  "patient_has_finding_of_heart_valve_disorder_now",
+  "patient_has_diagnosis_of_dissection_of_aorta_now",
+  "patient_has_finding_of_heart_disease_now",
+  "patient_has_finding_of_hypertrophic_cardiomyopathy_now",
+  "patient_has_finding_of_myocarditis_now",
+  "patient_has_diagnosis_of_pulmonary_embolism_now",
+  "patient_has_undergone_electrocardiographic_procedure_now",
+  "patient_st_segment_elevation_value_recorded_now_withunit_millimeter",
+  "patient_serum_troponin_i_measurement_has_clear_rise_or_fall_pattern_now",
+  "patient_serum_troponin_i_measurement_value_recorded_now_withunit_nanogram_per_milliliter",
+  "patient_has_diagnosis_of_chronic_inflammatory_disorder_inthehistory",
+  "patient_is_exposed_to_anticoagulant_now",
+  "patient_is_taking_platelet_aggregation_inhibitor_containing_product_now",
+  "patient_is_pregnant_now"
+]

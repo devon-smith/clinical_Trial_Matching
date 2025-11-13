@@ -1,0 +1,52 @@
+{
+  "generated": "2025-10-22T20:58:11",
+  "trial_id": "NCT00881985",
+  "contextual": {
+    "_id": "NCT00881985",
+    "title": "Effect of Continuous Positive Airway Pressure for Treatment of Obstructive Sleep Apnea on Resistant Hypertension",
+    "text": "Summary: The objectives of this study are to investigate the effect of continuous positive airway pressure (CPAP) treatment on blood pressure control and vascular inflammation in subjects with resistant hypertension and moderate obstructive sleep apnea (OSA).\nInclusion criteria: inclusion criteria: \n\n Age 18 - 65 \n\n known hypertension on ≧ 3 anti-hypertensive drugs \n\n Apnea-hypopnea index ≧15 \n\n able to give informed written consent \n\n \nExclusion criteria: : \n\n moderate renal impairment (glomerular filtration rate <30 mL/min/m2 ) \n\n endocrine/renal/cardiac causes of secondary HT \n\n congestive heart failure and clinically fluid overloaded \n\n On drugs that elevates BP e.g. NSAID, steroid \n\n Non-compliance to anti-hypertensive medications \n\n Unstable medical conditions such as unstable angina, recent myocardial infarction/stroke within 3 months \n\n Active inflammatory/infective conditions e.g. rheumatoid arthritis \n\n Excessive sleepiness that can be risky e.g. occupational driver, machine operator \n\n Modification/changes of anti-hypertensive regimen within 8 weeks",
+    "metadata": {
+      "brief_title": "Effect of Continuous Positive Airway Pressure for Treatment of Obstructive Sleep Apnea on Resistant Hypertension",
+      "phase": "",
+      "drugs": "['continuous positive airway pressure']",
+      "drugs_list": [
+        "continuous positive airway pressure"
+      ],
+      "diseases": "['Resistant Hypertension', 'Obstructive Sleep Apnea']",
+      "diseases_list": [
+        "Resistant Hypertension",
+        "Obstructive Sleep Apnea"
+      ],
+      "enrollment": "92.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Age 18 - 65 \n\n known hypertension on ≧ 3 anti-hypertensive drugs \n\n Apnea-hypopnea index ≧15 \n\n able to give informed written consent \n\n ",
+      "exclusion_criteria": ": \n\n moderate renal impairment (glomerular filtration rate <30 mL/min/m2 ) \n\n endocrine/renal/cardiac causes of secondary HT \n\n congestive heart failure and clinically fluid overloaded \n\n On drugs that elevates BP e.g. NSAID, steroid \n\n Non-compliance to anti-hypertensive medications \n\n Unstable medical conditions such as unstable angina, recent myocardial infarction/stroke within 3 months \n\n Active inflammatory/infective conditions e.g. rheumatoid arthritis \n\n Excessive sleepiness that can be risky e.g. occupational driver, machine operator \n\n Modification/changes of anti-hypertensive regimen within 8 weeks",
+      "brief_summary": "The objectives of this study are to investigate the effect of continuous positive airway pressure (CPAP) treatment on blood pressure control and vascular inflammation in subjects with resistant hypertension and moderate obstructive sleep apnea (OSA)."
+    }
+  },
+  "linked_result": {
+    "Resistant Hypertension": null,
+    "Obstructive Sleep Apnea": {
+      "conceptId": "78275009",
+      "preferred_term": "Obstructive sleep apnea syndrome",
+      "fully_specified_name": "Obstructive sleep apnea syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder characterized by recurrent apneas during sleep despite persistent respiratory efforts. It is due to upper airway obstruction. The respiratory pauses may induce HYPERCAPNIA or HYPOXIA. Cardiac arrhythmias and elevation of systemic and pulmonary arterial pressures may occur. Frequent partial arousals occur throughout sleep, resulting in relative SLEEP DEPRIVATION and daytime tiredness. Associated conditions include OBESITY; ACROMEGALY; MYXEDEMA; micrognathia; MYOTONIC DYSTROPHY; adenotonsilar dystrophy; and NEUROMUSCULAR DISEASES. (From Adams et al., Principles of Neurology, 6th ed, p395)",
+      "best_match_term": "Obstructive sleep apnea",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Obstructive Sleep Apnea": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Obstructive Sleep Apnea": {
+      "disease": "Obstructive Sleep Apnea",
+      "conceptId": "78275009",
+      "preferred_term": "Obstructive sleep apnea syndrome",
+      "fully_specified_name": "Obstructive sleep apnea syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder characterized by recurrent apneas during sleep despite persistent respiratory efforts. It is due to upper airway obstruction. The respiratory pauses may induce HYPERCAPNIA or HYPOXIA. Cardiac arrhythmias and elevation of systemic and pulmonary arterial pressures may occur. Frequent partial arousals occur throughout sleep, resulting in relative SLEEP DEPRIVATION and daytime tiredness. Associated conditions include OBESITY; ACROMEGALY; MYXEDEMA; micrognathia; MYOTONIC DYSTROPHY; adenotonsilar dystrophy; and NEUROMUSCULAR DISEASES. (From Adams et al., Principles of Neurology, 6th ed, p395)",
+      "best_match_term": "Obstructive sleep apnea"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_disease_of_liver_inthehistory",
+  "patient_has_finding_of_heart_disease_inthehistory",
+  "patient_has_finding_of_kidney_disease_inthehistory",
+  "patient_has_finding_of_disorder_of_endocrine_system_now",
+  "patient_has_finding_of_thyroid_dysfunction_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_is_exposed_to_alcohol_now",
+  "patient_is_taking_antidepressant_now",
+  "patient_has_diagnosis_of_mental_disorder_now",
+  "patient_has_diagnosis_of_eating_disorder_inthehistory"
+]

@@ -1,0 +1,6 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_measure_of_duration_of_menstrual_cycle_value_recorded_inthehistory_withunit_days",
+  "patient_has_finding_of_normal_menstrual_cycle_inthehistory",
+  "patient_dysmenorrhea_value_recorded_inthehistory_withunit_points"
+]

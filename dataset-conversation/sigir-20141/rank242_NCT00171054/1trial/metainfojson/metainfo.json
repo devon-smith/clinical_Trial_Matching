@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT00171054",
+  "contextual": {
+    "_id": "NCT00171054",
+    "title": "Efficacy and Safety of Valsartan Versus Amlodipine in Postmenopausal Women With Hypertension",
+    "text": "Summary: The purpose of this study is compare treatment with valsartan with the possible addition of a diuretic, hydrochlorothiazide, on high blood pressure with the drug amlodipine with the possible addition of a diuretic, hydrochlorothiazide. In particular, the effect of treatment on the stiffness of the blood vessels will be studied.\nInclusion criteria: inclusion criteria: \n\n Postmenopausal women \n\n Mild to moderate hypertension \n\n Statin therapy or LDL≤ 4.1 mmol/L \n\n \nExclusion criteria: : \n\n Severe hypertension \n\n LDL > 4.1 mmol/L if not taking anti-hyperlipidemic medication \n\n Certain hormonal therapy \n\n History of stroke, myocardial infarction, heart failure, chest pain, abnormal heart rhythm \n\n Liver, kidney, or pancreas disease \n\n Diabetes \n\n Raynaud's disease or any other significant peripheral vascular disease \n\n Allergy to certain medications used to treat high blood pressure \n\n Other protocol-defined inclusion/",
+    "metadata": {
+      "brief_title": "Efficacy and Safety of Valsartan Versus Amlodipine in Postmenopausal Women With Hypertension",
+      "phase": "Phase 4",
+      "drugs": "['Valsartan 320 mg', 'Amlodipine 10 mg', 'Hydrochlorothiazide']",
+      "drugs_list": [
+        "Valsartan 320 mg",
+        "Amlodipine 10 mg",
+        "Hydrochlorothiazide"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "125.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Postmenopausal women \n\n Mild to moderate hypertension \n\n Statin therapy or LDL≤ 4.1 mmol/L \n\n ",
+      "exclusion_criteria": ": \n\n Severe hypertension \n\n LDL > 4.1 mmol/L if not taking anti-hyperlipidemic medication \n\n Certain hormonal therapy \n\n History of stroke, myocardial infarction, heart failure, chest pain, abnormal heart rhythm \n\n Liver, kidney, or pancreas disease \n\n Diabetes \n\n Raynaud's disease or any other significant peripheral vascular disease \n\n Allergy to certain medications used to treat high blood pressure \n\n Other protocol-defined inclusion/",
+      "brief_summary": "The purpose of this study is compare treatment with valsartan with the possible addition of a diuretic, hydrochlorothiazide, on high blood pressure with the drug amlodipine with the possible addition of a diuretic, hydrochlorothiazide. In particular, the effect of treatment on the stiffness of the blood vessels will be studied."
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_stable_angina_now",
+  "patient_has_finding_of_exercise_tolerance_test_abnormal_inthehistory",
+  "patient_can_undergo_angioplasty_of_blood_vessel_now",
+  "patient_can_undergo_coronary_artery_bypass_graft_now",
+  "patient_has_diagnosis_of_type_2_diabetes_mellitus_now",
+  "patient_has_finding_of_type_2_diabetes_mellitus_now",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2"
+]

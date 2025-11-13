@@ -1,0 +1,9 @@
+[
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_inthehistory",
+  "patient_has_undergone_heart_revascularization_inthehistory",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_undergone_thrombolysis_inthehistory",
+  "patient_has_diagnosis_of_coronary_arteriosclerosis_now",
+  "patient_left_ventricular_ejection_fraction_value_recorded_inthehistory_withunit_percent",
+  "patient_has_finding_of_ventricular_tachycardia_inthehistory"
+]

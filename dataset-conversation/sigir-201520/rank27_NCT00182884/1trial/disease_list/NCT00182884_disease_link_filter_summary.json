@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T22:07:29",
+  "trial_id": "NCT00182884",
+  "contextual": {
+    "_id": "NCT00182884",
+    "title": "Donepezil in Preventing Delirium in Hospitalized Elderly",
+    "text": "Summary: The purpose of this study is to explore the efficacy of a perioperative daily dose of Donepezil (a cholinergic enhancer) in reducing the incidence and severity of delirium.\nInclusion criteria: inclusion criteria: \n\n Community-dwelling individuals aged 65 or older \n\n Admitted to Methodist Hospital for surgical repair of hip fracture \n\n No evidence of delirium at admission to hospital \n\n MMSE total score below 24 points after adjustment for education and age \n\n Consent to participate in the study \n\n \nExclusion criteria: : \n\n Severely demented as defined by MMSE score below 10 \n\n Metastatic cancer or other comorbid illnesses likely to reduce life expectancy to under 6 months \n\n Multiple trauma or pathological fractures \n\n Aphasic, legally blind, or deaf \n\n Use of Donepezil or other cholinesterase inhibitors within one month prior to surgery \n\n Allergy to Donepezil",
+    "metadata": {
+      "brief_title": "Donepezil in Preventing Delirium in Hospitalized Elderly",
+      "phase": "Phase 4",
+      "drugs": "['Donepezil']",
+      "drugs_list": [
+        "Donepezil"
+      ],
+      "diseases": "['Postoperative Complications', 'Delirium']",
+      "diseases_list": [
+        "Postoperative Complications",
+        "Delirium"
+      ],
+      "enrollment": "30.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Community-dwelling individuals aged 65 or older \n\n Admitted to Methodist Hospital for surgical repair of hip fracture \n\n No evidence of delirium at admission to hospital \n\n MMSE total score below 24 points after adjustment for education and age \n\n Consent to participate in the study \n\n ",
+      "exclusion_criteria": ": \n\n Severely demented as defined by MMSE score below 10 \n\n Metastatic cancer or other comorbid illnesses likely to reduce life expectancy to under 6 months \n\n Multiple trauma or pathological fractures \n\n Aphasic, legally blind, or deaf \n\n Use of Donepezil or other cholinesterase inhibitors within one month prior to surgery \n\n Allergy to Donepezil",
+      "brief_summary": "The purpose of this study is to explore the efficacy of a perioperative daily dose of Donepezil (a cholinergic enhancer) in reducing the incidence and severity of delirium."
+    }
+  },
+  "linked_result": {
+    "Postoperative Complications": {
+      "conceptId": "385486001",
+      "preferred_term": "Postoperative complication",
+      "fully_specified_name": "Postoperative complication (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.",
+      "best_match_term": "Postoperative complication",
+      "match_reason": "Exact"
+    },
+    "Delirium": {
+      "conceptId": "2776000",
+      "preferred_term": "Delirium",
+      "fully_specified_name": "Delirium (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Delirium",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Postoperative Complications": 1,
+    "Delirium": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Postoperative Complications": {
+      "disease": "Postoperative Complications",
+      "conceptId": "385486001",
+      "preferred_term": "Postoperative complication",
+      "fully_specified_name": "Postoperative complication (disorder)",
+      "type": "Clinical finding",
+      "definition": "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.",
+      "best_match_term": "Postoperative complication"
+    },
+    "Delirium": {
+      "disease": "Delirium",
+      "conceptId": "2776000",
+      "preferred_term": "Delirium",
+      "fully_specified_name": "Delirium (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Delirium"
+    }
+  }
+}

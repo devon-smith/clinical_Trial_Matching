@@ -1,0 +1,16 @@
+[
+  "patient_has_finding_of_impaired_cognition_now",
+  "patient_is_undergoing_anticoagulant_therapy_now",
+  "patient_international_normalized_ratio_value_recorded_inthepast1weeks_withunit_none",
+  "patient_has_diagnosis_of_aids_now",
+  "patient_has_undergone_chemotherapy_inthepast4weeks",
+  "patient_is_taking_corticosteroid_and_corticosteroid_derivative_containing_product_inthepast7days",
+  "patient_has_finding_of_immunosuppression_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_has_diagnosis_of_rheumatoid_arthritis_now",
+  "patient_has_taken_corticosteroid_and_corticosteroid_derivative_containing_product_inthepast7days",
+  "patient_ankle_brachial_pressure_index_value_recorded_now_withunit_ratio",
+  "patient_has_finding_of_dorsalis_pulse_absent_now",
+  "patient_has_finding_of_finding_of_wound_healing_now",
+  "patient_can_undergo_sampling_of_tissue_specimen_now"
+]

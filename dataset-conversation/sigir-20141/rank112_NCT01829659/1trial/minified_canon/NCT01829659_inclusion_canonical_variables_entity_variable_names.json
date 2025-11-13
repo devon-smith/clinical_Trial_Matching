@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_postmenopausal_state_now",
+  "patient_has_finding_of_acute_coronary_syndrome_now",
+  "patient_creatine_kinase_isoenzyme_mb_fraction_value_recorded_now_withunit_times_upper_limit_of_normal",
+  "patient_st_segment_depression_value_recorded_now_withunit_millimeter",
+  "patient_st_segment_elevation_value_recorded_now_withunit_millimeter",
+  "patient_troponin_value_recorded_now_withunit_times_upper_limit_of_normal",
+  "patient_is_exposed_to_aspirin_now"
+]

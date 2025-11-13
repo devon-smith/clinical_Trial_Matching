@@ -1,0 +1,14 @@
+[
+  "patient_has_finding_of_allergy_to_doxycycline_inthehistory",
+  "patient_has_finding_of_allergy_to_tetracycline_inthehistory",
+  "patient_has_finding_of_allergy_to_coconut_oil_inthehistory",
+  "patient_has_finding_of_allergy_to_soy_protein_inthehistory",
+  "patient_has_finding_of_secondary_malignant_neoplasm_of_skin_now",
+  "patient_has_finding_of_eczema_now",
+  "patient_has_finding_of_eruption_now",
+  "patient_has_finding_of_tattoo_of_skin_now",
+  "patient_neutrophil_count_value_recorded_now_withunit_per_cubic_millimeter",
+  "patient_neutrophil_count_value_recorded_now_withunit_per_liter",
+  "patient_platelet_count_value_recorded_now_withunit_per_cubic_millimeter",
+  "patient_platelet_count_value_recorded_now_withunit_per_liter"
+]

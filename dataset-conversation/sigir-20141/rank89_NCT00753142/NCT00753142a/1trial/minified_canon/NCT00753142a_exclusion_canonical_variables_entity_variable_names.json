@@ -1,0 +1,19 @@
+[
+  "patients_anti_pancreatic_islet_cell_antibody_is_positive_now",
+  "patients_glutamic_acid_decarboxylase_antibody_is_positive_now",
+  "patient_has_finding_of_chronic_renal_insufficiency_now",
+  "patient_has_finding_of_congestive_heart_failure_now",
+  "patient_has_finding_of_hepatic_failure_now",
+  "patient_has_finding_of_myocardial_ischemia_now",
+  "patient_has_finding_of_acromegaly_now",
+  "patient_has_finding_of_disorder_of_endocrine_system_now",
+  "patient_has_finding_of_hypercortisolism_now",
+  "patient_has_finding_of_hyperthyroidism_now",
+  "patient_has_finding_of_blood_coagulation_disorder_now",
+  "patient_has_finding_of_coag_bleeding_tests_abnormal_now",
+  "patient_has_finding_of_thrombocytopenic_disorder_now",
+  "patient_blood_glucose_level_finding_value_recorded_now_withunit_mg_per_dl",
+  "patient_has_finding_of_hyperglycemia_now",
+  "patient_is_exposed_to_insulin_now",
+  "patient_is_pregnant_now"
+]

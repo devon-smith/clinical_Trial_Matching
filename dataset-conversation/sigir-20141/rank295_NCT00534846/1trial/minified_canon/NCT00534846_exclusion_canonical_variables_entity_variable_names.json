@@ -1,0 +1,10 @@
+[
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_carcinoma_of_corpus_uteri_now",
+  "patient_has_finding_of_malignant_tumor_of_breast_now",
+  "patient_has_finding_of_disorder_of_menstruation_now",
+  "patient_is_undergoing_estrogen_hormone_therapy_now",
+  "patient_is_undergoing_progestogen_hormone_therapy_now",
+  "patient_has_undergone_hysterectomy_inthehistory",
+  "patient_has_undergone_oophorectomy_inthehistory"
+]

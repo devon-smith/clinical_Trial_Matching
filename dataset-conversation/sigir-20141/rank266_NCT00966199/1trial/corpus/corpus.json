@@ -1,0 +1,21 @@
+{
+  "_id": "NCT00966199",
+  "title": "The Effects of Blood Pressure Reduction on Cerebral Perfusion and Cognition in the Elderly Population",
+  "text": "Summary: The purpose of this study is to determine if a reduction in systolic blood pressure induced by anti-hypertensive medication results in changes in cerebral perfusion and cognition in hypertensive elderly. Hypertensive elderly will be treated using open-label anti-hypertensive medication for 8-12 weeks. Changes in cerebral perfusion and cognition will be assessed before and after treatment.\nInclusion criteria: inclusion criteria: \n\n Age >= 70 years \n\n Systolic office blood pressure >= 160 mmHg \n\n Systolic home blood pressure >= 155 mmHg \n\n \nExclusion criteria: : \n\n Diabetes Mellitus \n\n Atrial fibrillation \n\n Dementia \n\n Renal failure requiring dialysis \n\n Life expectancy of less than 1 year \n\n Disabling stroke \n\n Contraindication for MRI or anti-hypertensive medication \n\n Systolic blood pressure > 220 mmHg",
+  "metadata": {
+    "brief_title": "The Effects of Blood Pressure Reduction on Cerebral Perfusion and Cognition in the Elderly Population",
+    "phase": "Phase 4",
+    "drugs": "['anti-hypertensive medication']",
+    "drugs_list": [
+      "anti-hypertensive medication"
+    ],
+    "diseases": "['Hypertension']",
+    "diseases_list": [
+      "Hypertension"
+    ],
+    "enrollment": "60.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Age >= 70 years \n\n Systolic office blood pressure >= 160 mmHg \n\n Systolic home blood pressure >= 155 mmHg \n\n ",
+    "exclusion_criteria": ": \n\n Diabetes Mellitus \n\n Atrial fibrillation \n\n Dementia \n\n Renal failure requiring dialysis \n\n Life expectancy of less than 1 year \n\n Disabling stroke \n\n Contraindication for MRI or anti-hypertensive medication \n\n Systolic blood pressure > 220 mmHg",
+    "brief_summary": "The purpose of this study is to determine if a reduction in systolic blood pressure induced by anti-hypertensive medication results in changes in cerebral perfusion and cognition in hypertensive elderly. Hypertensive elderly will be treated using open-label anti-hypertensive medication for 8-12 weeks. Changes in cerebral perfusion and cognition will be assessed before and after treatment."
+  }
+}

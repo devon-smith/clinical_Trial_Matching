@@ -1,0 +1,19 @@
+[
+  "patient_has_taken_atorvastatin_containing_product_inthepast1months",
+  "patient_has_taken_pitavastatin_containing_product_inthepast1months",
+  "patient_has_taken_rosuvastatin_containing_product_inthepast1months",
+  "patient_has_diagnosis_of_familial_hypercholesterolemia_now",
+  "patient_serum_triglyceride_levels_finding_value_recorded_now_withunit_mg_per_dl",
+  "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+  "patient_has_diagnosis_of_preinfarction_syndrome_inthehistory",
+  "patient_has_finding_of_cerebrovascular_accident_inthehistory",
+  "patient_has_finding_of_heart_failure_now",
+  "patient_has_finding_of_allergy_to_3_hydroxy_3_methylglutaryl_coenzyme_a_reductase_inhibitor_inthehistory",
+  "patient_has_diagnosis_of_drug_induced_myopathy_inthehistory",
+  "patient_has_finding_of_cardiac_arrhythmia_now",
+  "patient_has_finding_of_disease_of_liver_now",
+  "patient_has_finding_of_kidney_disease_now",
+  "patient_has_finding_of_disease_now",
+  "patient_is_pregnant_now",
+  "patient_is_able_to_be_pregnant_now"
+]

@@ -1,0 +1,22 @@
+# Reliability of Subjective Assessment of Fever by Parents and Health Care Providers in Children and Adolescents
+**NCT**: `NCT01038219`
+## Brief Summary
+Background: Fever is a widespread symptom in many diseases. Therefore, its value and diagnostic importance are well known. Fever in children is one of the common reasons for a visit to the pediatrician. Also, taking temperature is a very simple action and accessible to the general public.~Temperature is measured in various parts of the body by using medical equipment. The type of method and thermometer varies according to the patient's age but often temperature is estimated by touch. Temperature measurement serves as a means for monitoring the patient's condition. For that reason, supervision of the body temperature is an important factor in the process of taking medical decisions.~Study rationale: the parent is often asked if the child's temperature has been taken. The most frequent answer is: I didn't measure, but I felt that he has a temperature. The few studies carried out on this subject showed that many parents used touch to evaluate the child's body temperature, especially in infants.~Some studies checked the reliability of parents to estimate the child's body temperature by touch only. To the best of our knowledge, the reliability of medical staff (nurses) to estimate the child's body temperature by touch has never been studied.~The aim of the current study is to investigate whether parents and nurses correctly estimate the child's body temperature by touch, as compared to thermometer measurement during the pediatric unit's routine work.
+## Inclusion Criteria
+inclusion criteria: 
+
+ The estimates and the measurements will be carried out on children who are referred to an emergency unit and who are hospitalized in the pediatric department-- both boys and girls of all ages. A patient might be measured several times.
+## Exclusion Criteria
+: 
+
+ None
+## Full Text
+Summary: Background: Fever is a widespread symptom in many diseases. Therefore, its value and diagnostic importance are well known. Fever in children is one of the common reasons for a visit to the pediatrician. Also, taking temperature is a very simple action and accessible to the general public.~Temperature is measured in various parts of the body by using medical equipment. The type of method and thermometer varies according to the patient's age but often temperature is estimated by touch. Temperature measurement serves as a means for monitoring the patient's condition. For that reason, supervision of the body temperature is an important factor in the process of taking medical decisions.~Study rationale: the parent is often asked if the child's temperature has been taken. The most frequent answer is: I didn't measure, but I felt that he has a temperature. The few studies carried out on this subject showed that many parents used touch to evaluate the child's body temperature, especially in infants.~Some studies checked the reliability of parents to estimate the child's body temperature by touch only. To the best of our knowledge, the reliability of medical staff (nurses) to estimate the child's body temperature by touch has never been studied.~The aim of the current study is to investigate whether parents and nurses correctly estimate the child's body temperature by touch, as compared to thermometer measurement during the pediatric unit's routine work.
+Inclusion criteria: inclusion criteria: 
+
+ The estimates and the measurements will be carried out on children who are referred to an emergency unit and who are hospitalized in the pediatric department-- both boys and girls of all ages. A patient might be measured several times. 
+
+ 
+Exclusion criteria: : 
+
+ None

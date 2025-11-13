@@ -1,0 +1,16 @@
+[
+  "patient_has_finding_of_diabetes_mellitus_now",
+  "patient_has_finding_of_disease_of_liver_now",
+  "patient_has_finding_of_disorder_of_nervous_system_now",
+  "patient_has_finding_of_heart_disease_now",
+  "patient_has_finding_of_hypertensive_disorder_now",
+  "patient_has_finding_of_hypothyroidism_now",
+  "patient_has_finding_of_impaired_fasting_glycaemia_now",
+  "patient_has_finding_of_kidney_disease_now",
+  "patient_has_finding_of_metabolic_syndrome_x_now",
+  "patient_has_diagnosis_of_alcoholism_now",
+  "patient_has_diagnosis_of_mental_disorder_now",
+  "patient_is_pregnant_now",
+  "patient_is_able_to_be_pregnant_now",
+  "patient_is_exposed_to_drug_or_medicament_now"
+]

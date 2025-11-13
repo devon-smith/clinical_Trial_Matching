@@ -1,0 +1,22 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_undergone_serum_pregnancy_test_now_outcome_is_negative",
+  "patient_has_finding_of_radiologic_infiltrate_of_lung_now",
+  "patient_has_symptoms_of_cough_now",
+  "patient_has_finding_of_decreased_blood_leukocyte_number_now",
+  "patient_has_symptoms_of_dyspnea_now",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_finding_by_auscultation_now",
+  "patient_has_finding_of_hypothermia_now",
+  "patient_has_finding_of_hypoxemia_now",
+  "patient_has_finding_of_increased_blood_leukocyte_number_now",
+  "patient_has_finding_of_lung_consolidation_now",
+  "patient_has_symptoms_of_purulent_sputum_now",
+  "patient_is_exposed_to_sputum_now",
+  "patient_has_symptoms_of_tachypnea_now",
+  "patient_has_finding_of_pneumonia_now"
+]

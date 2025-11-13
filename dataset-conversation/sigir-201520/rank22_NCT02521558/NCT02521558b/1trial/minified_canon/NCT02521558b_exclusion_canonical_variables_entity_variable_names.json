@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_alcohol_abuse_inthehistory",
+  "patient_has_finding_of_substance_misuse_behavior_inthehistory",
+  "patient_has_finding_of_cerebrovascular_accident_inthehistory",
+  "patient_has_finding_of_traumatic_brain_injury_inthehistory",
+  "patient_has_finding_of_depressive_disorder_inthehistory",
+  "patient_has_finding_of_mood_disorder_inthehistory"
+]

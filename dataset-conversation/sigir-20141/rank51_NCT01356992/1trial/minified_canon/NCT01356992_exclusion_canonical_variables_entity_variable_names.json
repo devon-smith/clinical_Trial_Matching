@@ -1,0 +1,20 @@
+[
+  "patient_has_undergone_12_lead_ecg_now",
+  "patient_has_diagnosis_of_angina_pectoris_now",
+  "patient_has_taken_low_molecular_weight_heparin_containing_product_inthepast48hours",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_has_finding_of_renal_failure_syndrome_now",
+  "patient_has_diagnosis_of_cerebrovascular_accident_inthepast12months",
+  "patient_will_undergo_operation_on_heart_inthefuture",
+  "patient_has_finding_of_alcohol_abuse_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_has_undergone_operation_on_nervous_system_inthepast3months",
+  "patient_has_undergone_surgical_procedure_on_eye_proper_inthepast3months",
+  "patient_has_finding_of_blood_coagulation_disorder_inthehistory",
+  "patient_has_diagnosis_of_blood_coagulation_disorder_now",
+  "patient_has_finding_of_allergy_to_drug_now",
+  "patient_has_finding_of_intolerance_to_drug_now",
+  "patient_has_finding_of_propensity_to_adverse_reactions_to_drug_now",
+  "patient_has_undergone_clinical_trial_inthepast12months"
+]

@@ -1,0 +1,16 @@
+[
+  "patient_has_finding_of_malignant_hypertension_now",
+  "patient_has_finding_of_secondary_hypertension_now",
+  "patient_has_finding_of_heart_failure_now",
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_decreased_liver_function_now",
+  "patient_is_undergoing_dialysis_procedure_now",
+  "patient_has_finding_of_renal_impairment_now",
+  "patient_serum_creatinine_level_finding_value_recorded_now_withunit_mg_per_dl",
+  "patient_is_undergoing_beta_adrenergic_receptor_blocking_agent_therapy_now",
+  "patient_is_undergoing_calcium_channel_blocker_therapy_now",
+  "patient_has_diagnosis_of_hypertensive_disorder_now",
+  "patient_is_exposed_to_thiazide_diuretic_now",
+  "patient_has_finding_of_adverse_reaction_to_drug_inthehistory",
+  "patient_has_finding_of_illness_now"
+]

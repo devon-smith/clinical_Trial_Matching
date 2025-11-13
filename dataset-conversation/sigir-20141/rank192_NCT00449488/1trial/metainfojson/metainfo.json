@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT00449488",
+  "contextual": {
+    "_id": "NCT00449488",
+    "title": "Clinical Study to Examine the Effects of Erythropoietin on Left Ventricular Function After Acute Myocardial Infarction",
+    "text": "Summary: The primary objective of this study is to establish the effects of a single bolus of EPO, administered within three hours after a primary PCI for a first acute myocardial infarction, on left ventricular function.\nInclusion criteria: inclusion criteria: \n\n Successful primary PCI (TIMI 2/3) for a first acute myocardial infarction, diagnosed by: \n\n chest pain suggestive for acute myocardial infarction \n\n symptom onset < 12 hour before hospital admission, or < 24 hour in case ongoing ischemia \n\n ECG with ST-T segment elevation > 1 mV in 2 or more leads \n\n TIMI flow 0/1 before primary PCI on diagnostic coronary angiography; \n\n \nExclusion criteria: : \n\n Hemoglobin levels > 10.6 mmol/L; \n\n Anticipated additional revascularisation within 4 months; \n\n Cardiogenic shock; \n\n Presence of other serious medical conditions \n\n Pregnancy/breast feeding \n\n Malignant hypertension \n\n End stage renal failure (creatinin > 220 micromol/l) \n\n Previous treatment with rh-EPO \n\n Blood transfusion <12 weeks prior to randomisation \n\n Polycythemia vera \n\n Previous acute myocardial infarction \n\n Concomitant inflammatory or malignant disease \n\n Recent trauma or major surgery \n\n Unwilling to sign informed consent \n\n Atrial fibrillation",
+    "metadata": {
+      "brief_title": "Clinical Study to Examine the Effects of Erythropoietin on Left Ventricular Function After Acute Myocardial Infarction",
+      "phase": "Phase 2",
+      "drugs": "['epoetin alfa']",
+      "drugs_list": [
+        "epoetin alfa"
+      ],
+      "diseases": "['Myocardial Infarction']",
+      "diseases_list": [
+        "Myocardial Infarction"
+      ],
+      "enrollment": "529.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Successful primary PCI (TIMI 2/3) for a first acute myocardial infarction, diagnosed by: \n\n chest pain suggestive for acute myocardial infarction \n\n symptom onset < 12 hour before hospital admission, or < 24 hour in case ongoing ischemia \n\n ECG with ST-T segment elevation > 1 mV in 2 or more leads \n\n TIMI flow 0/1 before primary PCI on diagnostic coronary angiography; \n\n ",
+      "exclusion_criteria": ": \n\n Hemoglobin levels > 10.6 mmol/L; \n\n Anticipated additional revascularisation within 4 months; \n\n Cardiogenic shock; \n\n Presence of other serious medical conditions \n\n Pregnancy/breast feeding \n\n Malignant hypertension \n\n End stage renal failure (creatinin > 220 micromol/l) \n\n Previous treatment with rh-EPO \n\n Blood transfusion <12 weeks prior to randomisation \n\n Polycythemia vera \n\n Previous acute myocardial infarction \n\n Concomitant inflammatory or malignant disease \n\n Recent trauma or major surgery \n\n Unwilling to sign informed consent \n\n Atrial fibrillation",
+      "brief_summary": "The primary objective of this study is to establish the effects of a single bolus of EPO, administered within three hours after a primary PCI for a first acute myocardial infarction, on left ventricular function."
+    }
+  }
+}

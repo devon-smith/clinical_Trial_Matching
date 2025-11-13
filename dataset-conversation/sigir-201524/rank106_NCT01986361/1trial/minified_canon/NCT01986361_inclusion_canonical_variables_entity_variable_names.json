@@ -1,0 +1,21 @@
+[
+  "patient_has_diagnosis_of_pharyngitis_now",
+  "patient_has_symptoms_of_sore_throat_symptom_now",
+  "patient_has_symptoms_of_cough_now",
+  "patient_has_symptoms_of_fever_now",
+  "patient_has_symptoms_of_pain_in_throat_now",
+  "patient_has_symptoms_of_upper_respiratory_infection_now",
+  "patient_has_finding_of_pain_in_throat_now",
+  "patient_sex_is_female_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_breastfeeding_now",
+  "patient_is_lactating_now",
+  "patients_breastfeeding_is_positive_now",
+  "patient_is_pregnant_now",
+  "patient_has_undergone_urine_pregnancy_test_now",
+  "patient_is_exposed_to_drug_or_medicament_now",
+  "patient_is_exposed_to_candy_now",
+  "patient_is_exposed_to_foods_now",
+  "patient_is_exposed_to_liquid_substance_now",
+  "patient_is_exposed_to_tobacco_smoking_behavior_finding_now"
+]

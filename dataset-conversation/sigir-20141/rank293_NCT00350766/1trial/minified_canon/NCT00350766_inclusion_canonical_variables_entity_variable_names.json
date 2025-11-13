@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_has_finding_of_chest_pain_now",
+  "patient_has_diagnosis_of_acute_st_segment_elevation_myocardial_infarction_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_cardiac_ejection_fraction_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_segmental_dysfunction_now",
+  "patient_has_undergone_thrombolytic_therapy_inthehistory"
+]

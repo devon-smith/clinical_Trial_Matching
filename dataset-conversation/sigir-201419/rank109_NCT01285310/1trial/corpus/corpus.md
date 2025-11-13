@@ -1,0 +1,226 @@
+# Study of Apremilast to Evaluate the Safety and Effectiveness for Patients With Rheumatoid Arthritis
+**NCT**: `NCT01285310`
+## Brief Summary
+The purpose of this study is to determine whether Apremilast is safe and effective in the treatment of patients with rheumatoid arthritis, specifically in improving signs and symptoms of rheumatoid arthritis (tender and swollen joints, pain, physical function and structure) in treated patients who have had an inadequate response to Methotrexate.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Must have a documented diagnosis of Rheumatoid Arthritis (1987 American College of Rheumatology Criteria) with onset of signs/symptoms of disease ≥ 4 months of duration from randomization. 
+
+ Must be receiving treatment on an outpatient basis. 
+
+ Must have active disease despite current methotrexate treatment as defined below: 
+
+ ≥ 6 swollen joints (66 swollen joint count) AND 
+
+ ≥ 6 tender joints (68 tender joint count) 
+
+ -. Must meet at least one of the four lab requirements below: 
+
+ High Sensitivity C-Reactive Protein (hsCRP) ≥ 10 mg/L 
+
+ Erythrocyte Sedimentation Rate (ESR) > 28 mm after the first 1 hour 
+
+ Positive for Rheumatoid Factor (RF) 
+
+ Positive for Anti-cyclic Citrullinated Peptide (anti-CCP) antibodies 
+
+ For participants participating in the Magnetic Resonance Imaging (MRI) assessment: 
+
+ • Must have Rheumatoid Arthritis joint involvement, as assessed by swollen joint counts in: 1) at least two Metacarpophalangeal (MCP) swollen joints on the same hand, or 2) at least one swollen Metacarpophalangeal (MCP) joint and swollen wrist on the same hand. 
+
+ Must have been treated with methotrexate for at least 4 months prior to randomization, and must be on stable dose. Participants will be required to maintain their stable dose through Week 52 of the study. Oral folate (folic acid) supplementation is required with a minimum dose of 5 mg/week, or instead leucovorin may be used up to 10 mg/week orally. 
+
+ • Non-steroidal anti-inflammatory drugs (NSAIDs) and pain medications are allowed, however, must be on stable regimen for at least 7 days prior to randomization and through Week 52 of the study. 
+
+ Oral corticosteroids (if taken) are allowed, however, must be on stable dose of prednisone ≤ 10 mg/day or equivalent for at least 28 days prior to randomization and through Week 52 of the study. 
+
+ Must meet the following laboratory criteria at screening: 
+
+ White blood cell count ≥ 3000/mm^3 (≥ 3.0 x 10^9/L) and < 14,000/mm^3 (< 14 x 10^9/L) 
+
+ Platelet count (≥ 100,000/μL ((≥ 100 x 10^9/L) 
+
+ Serum creatinine ≤ 1.5 mg/dL (≤ 132.6 μmol/L) 
+
+ Aspartate aminotransferase or serum glutamic oxaloacetic transaminase (AST/SGOT) and alanine aminotransferase or serum glutamic-pyruvic transaminase (ALT/ SGPT) ≤ 2 x upper limit of normal (ULN). If initial test shows Aspartate aminotransferase (AST) or alanine aminotransferase (SLT) or 2 times the upper limit of normal (ULN), one repeat test is allowed during the screening period. 
+
+ Total bilirubin ≤ 2 mg/dL (≤ 34 μmol/L). If initial test result is > 2 mg/dL, one repeat test is allowed during the screening period. 
+
+ Hemoglobin ≥ 9 g/dL (≥ 5.6 mmol/L) 
+
+ Hemoglobin A1c ≤ 9.0% 
+
+ Negative for hepatitis B surface antigen 
+
+ Negative for hepatitis C antibody 
+
+ Males who engage in activity in which conception is possible must use protocol described barrier contraception while on Investigational Product and for at least 28 days after the last dose of Investigational Product. 
+
+ Females of childbearing potential (FCBP) must have a negative pregnancy test at Screening and Baseline. FCBP who engage in activity in which conception is possible must use protocol described contraception while on Investigational Product and for at least 28 days after taking the last dose or Investigational Product.
+## Exclusion Criteria
+: 
+
+ Major surgery (including joint surgery) within 8 weeks prior to screening or planned major surgery within 6 months following randomization. 
+
+ Rheumatic autoimmune disease other than Rheumatoid Arthritis, including systemic lupus erythematosus, mixed connective tissue disease, scleroderma, polymyositis or significant systemic involvement secondary to Rheumatoid Arthritis (eg, vasculitis, pulmonary fibrosis or Felty syndrome). Sjögren syndrome secondary to Rheumatoid Arthritis is allowable. 
+
+ Functional Class IV as defined by the American College of Rheumatology (ACR) Classification of Functional Status in Rheumatoid Arthritis. 
+
+ Prior history of, or current, inflammatory joint disease other than Rheumatoid Arthritis (eg, gout, reactive arthritis, psoriatic arthritis, ankylosing spondylitis, Lyme disease). 
+
+ Receiving treatment with Disease-modifying antirheumatic drugs (DMARDs) (other than methotrexate), including biologic Disease-modifying antirheumatic drugs (DMARDs)Previous use is only allowed after adequate washout prior to randomization. 
+
+ Inadequate response to treatment with an anti-tumor necrosis factor (anti-TNF) agent. Patients who terminated previous anti-tumor necrosis factor (anti-TNF) treatment due to cost or safety reason, such as discomfort with the subcutaneous injections, may participate in this study after adequate washout. 
+
+ Treatment with any investigational agent within four weeks (or five half-lives of the investigational drug, whichever is longer) of screening. 
+
+ Previous treatment with any cell depleting therapies, including investigational agents. 
+
+ Treatment with intravenous gamma globulin, plasmapheresis or Prosorba® column within 6 months of baseline. 
+
+ Intra-articular or parenteral corticosteroids are not allowed within 6 weeks prior to randomization. 
+
+ Any previous treatment with alkylating agents such as cyclophosphamide or chlorambucil, or with total lymphoid irradiation. 
+
+ Pregnant women or nursing (breast feeding) mothers. 
+
+ Evidence of serious uncontrolled concomitant cardiovascular, nervous system, pulmonary (including severe or very severe chronic obstructive pulmonary disease), renal, hepatic, endocrine (including uncontrolled diabetes mellitus as defined by Hemoglobin A1c > 9.0%) or gastrointestinal (GI) disease. 
+
+ Uncontrolled disease states, such as asthma, psoriasis or inflammatory bowel disease, where flares are commonly treated with oral or parenteral corticosteroids. 
+
+ Known active current or history of recurrent bacterial, viral, fungal, mycobacterial or other infections (including but not limited to tuberculosis and atypical mycobacterial disease, Hepatitis B and C, and herpes zoster, but excluding onychomycosis) or any major episode of infection requiring hospitalization or treatment with IV or oral antibiotics within 4 weeks of screening. 
+
+ History of positive Human Immunodeficiency Virus (HIV), or congenital or acquired immunodeficiency (eg, Common Variable Immunodeficiency Disease). 
+
+ History of malignancy, including solid tumors and hematologic malignancies (except basal cell carcinoma of the skin that has been excised and cured). 
+
+ History of alcohol, drug or chemical abuse within the 6 months prior to screening. 
+
+ Any significant medical condition, laboratory abnormality, or psychiatric illness that would prevent the subject from participating in the study. 
+
+ Any condition including the presence of laboratory abnormalities, which places the subject at unacceptable risk if he/she were to participate in the study. 
+
+ Any condition that in the investigator's opinion would interfere significantly with the efficacy evaluations, including the pain and joint assessments (eg, fibromyalgia). 
+
+ For Magnetic Resonance Imaging (MRI) Only: 
+
+ Receiving medication(s) or will require medication(s) during the study that impact on vascular flow (eg, nitrates, calcium channel blockers, ergot containing drugs) on the day of the Magnetic Resonance Imaging (MRI test and in the investigator's judgement the subject cannot hold back from taking these medications on the day of the Magnetic Resonance Imaging (MRI) prior to the Magnetic Resonance Imaging (MRI) test. The subject can continue taking the medication(s) at any time after the Magnetic Resonance Imaging (MRI) test is completed, as clinically indicated and scheduled. Exclusions of antihypertensive and migraine medications can be determined after discussion with the Sponsor. 
+
+ Unable to undergo an Magnetic Resonance Imaging (MRI) examination, including but not limited to the presence of a pacemaker, defibrillator, or other implanted device such as anterior interbody cages, aneurysm clip, pedicle screws, or any other metal contained in the body (eg, such as tattoos that contain metallic pigment, or metal in the eyes from metal grinding [eg, a metal worker, etc]), or severe claustrophobia, or any other contraindication to an Magnetic Resonance Imaging (MRI) as per local imaging center guidelines. 
+
+ Allergic or adverse reactions to gadolinium 
+
+ Estimated glomerular filtration rate (eGFR) below 60 mL/min/1.73m2 (based on the Modification of Diet in Renal Disease [MDRD] formula).
+## Full Text
+Summary: The purpose of this study is to determine whether Apremilast is safe and effective in the treatment of patients with rheumatoid arthritis, specifically in improving signs and symptoms of rheumatoid arthritis (tender and swollen joints, pain, physical function and structure) in treated patients who have had an inadequate response to Methotrexate.
+Inclusion criteria: inclusion criteria: 
+
+ Must have a documented diagnosis of Rheumatoid Arthritis (1987 American College of Rheumatology Criteria) with onset of signs/symptoms of disease ≥ 4 months of duration from randomization. 
+
+ Must be receiving treatment on an outpatient basis. 
+
+ Must have active disease despite current methotrexate treatment as defined below: 
+
+ ≥ 6 swollen joints (66 swollen joint count) AND 
+
+ ≥ 6 tender joints (68 tender joint count) 
+
+ -. Must meet at least one of the four lab requirements below: 
+
+ High Sensitivity C-Reactive Protein (hsCRP) ≥ 10 mg/L 
+
+ Erythrocyte Sedimentation Rate (ESR) > 28 mm after the first 1 hour 
+
+ Positive for Rheumatoid Factor (RF) 
+
+ Positive for Anti-cyclic Citrullinated Peptide (anti-CCP) antibodies 
+
+ For participants participating in the Magnetic Resonance Imaging (MRI) assessment: 
+
+ • Must have Rheumatoid Arthritis joint involvement, as assessed by swollen joint counts in: 1) at least two Metacarpophalangeal (MCP) swollen joints on the same hand, or 2) at least one swollen Metacarpophalangeal (MCP) joint and swollen wrist on the same hand. 
+
+ Must have been treated with methotrexate for at least 4 months prior to randomization, and must be on stable dose. Participants will be required to maintain their stable dose through Week 52 of the study. Oral folate (folic acid) supplementation is required with a minimum dose of 5 mg/week, or instead leucovorin may be used up to 10 mg/week orally. 
+
+ • Non-steroidal anti-inflammatory drugs (NSAIDs) and pain medications are allowed, however, must be on stable regimen for at least 7 days prior to randomization and through Week 52 of the study. 
+
+ Oral corticosteroids (if taken) are allowed, however, must be on stable dose of prednisone ≤ 10 mg/day or equivalent for at least 28 days prior to randomization and through Week 52 of the study. 
+
+ Must meet the following laboratory criteria at screening: 
+
+ White blood cell count ≥ 3000/mm^3 (≥ 3.0 x 10^9/L) and < 14,000/mm^3 (< 14 x 10^9/L) 
+
+ Platelet count (≥ 100,000/μL ((≥ 100 x 10^9/L) 
+
+ Serum creatinine ≤ 1.5 mg/dL (≤ 132.6 μmol/L) 
+
+ Aspartate aminotransferase or serum glutamic oxaloacetic transaminase (AST/SGOT) and alanine aminotransferase or serum glutamic-pyruvic transaminase (ALT/ SGPT) ≤ 2 x upper limit of normal (ULN). If initial test shows Aspartate aminotransferase (AST) or alanine aminotransferase (SLT) or 2 times the upper limit of normal (ULN), one repeat test is allowed during the screening period. 
+
+ Total bilirubin ≤ 2 mg/dL (≤ 34 μmol/L). If initial test result is > 2 mg/dL, one repeat test is allowed during the screening period. 
+
+ Hemoglobin ≥ 9 g/dL (≥ 5.6 mmol/L) 
+
+ Hemoglobin A1c ≤ 9.0% 
+
+ Negative for hepatitis B surface antigen 
+
+ Negative for hepatitis C antibody 
+
+ Males who engage in activity in which conception is possible must use protocol described barrier contraception while on Investigational Product and for at least 28 days after the last dose of Investigational Product. 
+
+ Females of childbearing potential (FCBP) must have a negative pregnancy test at Screening and Baseline. FCBP who engage in activity in which conception is possible must use protocol described contraception while on Investigational Product and for at least 28 days after taking the last dose or Investigational Product. 
+
+ 
+Exclusion criteria: : 
+
+ Major surgery (including joint surgery) within 8 weeks prior to screening or planned major surgery within 6 months following randomization. 
+
+ Rheumatic autoimmune disease other than Rheumatoid Arthritis, including systemic lupus erythematosus, mixed connective tissue disease, scleroderma, polymyositis or significant systemic involvement secondary to Rheumatoid Arthritis (eg, vasculitis, pulmonary fibrosis or Felty syndrome). Sjögren syndrome secondary to Rheumatoid Arthritis is allowable. 
+
+ Functional Class IV as defined by the American College of Rheumatology (ACR) Classification of Functional Status in Rheumatoid Arthritis. 
+
+ Prior history of, or current, inflammatory joint disease other than Rheumatoid Arthritis (eg, gout, reactive arthritis, psoriatic arthritis, ankylosing spondylitis, Lyme disease). 
+
+ Receiving treatment with Disease-modifying antirheumatic drugs (DMARDs) (other than methotrexate), including biologic Disease-modifying antirheumatic drugs (DMARDs)Previous use is only allowed after adequate washout prior to randomization. 
+
+ Inadequate response to treatment with an anti-tumor necrosis factor (anti-TNF) agent. Patients who terminated previous anti-tumor necrosis factor (anti-TNF) treatment due to cost or safety reason, such as discomfort with the subcutaneous injections, may participate in this study after adequate washout. 
+
+ Treatment with any investigational agent within four weeks (or five half-lives of the investigational drug, whichever is longer) of screening. 
+
+ Previous treatment with any cell depleting therapies, including investigational agents. 
+
+ Treatment with intravenous gamma globulin, plasmapheresis or Prosorba® column within 6 months of baseline. 
+
+ Intra-articular or parenteral corticosteroids are not allowed within 6 weeks prior to randomization. 
+
+ Any previous treatment with alkylating agents such as cyclophosphamide or chlorambucil, or with total lymphoid irradiation. 
+
+ Pregnant women or nursing (breast feeding) mothers. 
+
+ Evidence of serious uncontrolled concomitant cardiovascular, nervous system, pulmonary (including severe or very severe chronic obstructive pulmonary disease), renal, hepatic, endocrine (including uncontrolled diabetes mellitus as defined by Hemoglobin A1c > 9.0%) or gastrointestinal (GI) disease. 
+
+ Uncontrolled disease states, such as asthma, psoriasis or inflammatory bowel disease, where flares are commonly treated with oral or parenteral corticosteroids. 
+
+ Known active current or history of recurrent bacterial, viral, fungal, mycobacterial or other infections (including but not limited to tuberculosis and atypical mycobacterial disease, Hepatitis B and C, and herpes zoster, but excluding onychomycosis) or any major episode of infection requiring hospitalization or treatment with IV or oral antibiotics within 4 weeks of screening. 
+
+ History of positive Human Immunodeficiency Virus (HIV), or congenital or acquired immunodeficiency (eg, Common Variable Immunodeficiency Disease). 
+
+ History of malignancy, including solid tumors and hematologic malignancies (except basal cell carcinoma of the skin that has been excised and cured). 
+
+ History of alcohol, drug or chemical abuse within the 6 months prior to screening. 
+
+ Any significant medical condition, laboratory abnormality, or psychiatric illness that would prevent the subject from participating in the study. 
+
+ Any condition including the presence of laboratory abnormalities, which places the subject at unacceptable risk if he/she were to participate in the study. 
+
+ Any condition that in the investigator's opinion would interfere significantly with the efficacy evaluations, including the pain and joint assessments (eg, fibromyalgia). 
+
+ For Magnetic Resonance Imaging (MRI) Only: 
+
+ Receiving medication(s) or will require medication(s) during the study that impact on vascular flow (eg, nitrates, calcium channel blockers, ergot containing drugs) on the day of the Magnetic Resonance Imaging (MRI test and in the investigator's judgement the subject cannot hold back from taking these medications on the day of the Magnetic Resonance Imaging (MRI) prior to the Magnetic Resonance Imaging (MRI) test. The subject can continue taking the medication(s) at any time after the Magnetic Resonance Imaging (MRI) test is completed, as clinically indicated and scheduled. Exclusions of antihypertensive and migraine medications can be determined after discussion with the Sponsor. 
+
+ Unable to undergo an Magnetic Resonance Imaging (MRI) examination, including but not limited to the presence of a pacemaker, defibrillator, or other implanted device such as anterior interbody cages, aneurysm clip, pedicle screws, or any other metal contained in the body (eg, such as tattoos that contain metallic pigment, or metal in the eyes from metal grinding [eg, a metal worker, etc]), or severe claustrophobia, or any other contraindication to an Magnetic Resonance Imaging (MRI) as per local imaging center guidelines. 
+
+ Allergic or adverse reactions to gadolinium 
+
+ Estimated glomerular filtration rate (eGFR) below 60 mL/min/1.73m2 (based on the Modification of Diet in Renal Disease [MDRD] formula).

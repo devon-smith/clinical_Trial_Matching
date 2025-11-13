@@ -1,0 +1,88 @@
+{
+  "generated": "2025-10-22T20:58:32",
+  "trial_id": "NCT01264055",
+  "contextual": {
+    "_id": "NCT01264055",
+    "title": "Cross-sectional Characterization of Idiopathic Bronchiectasis",
+    "text": "Summary: Background:~- Bronchiectasis is a type of lung condition in which the lungs airways are abnormally stretched and widened. This stretching and widening makes it difficult for mucus and other substances to move out of the lungs, encouraging the growth of bacteria and leading to breathing problems or infection. Bronchiectasis can be caused by genetic disorders or diseases such as tuberculosis or rheumatoid arthritis. Researchers are interested in developing better ways to diagnose and treat a lung problem called idiopathic or unexplained bronchiectasis.~Objectives:~- To better describe the physical characteristics, radiographic patterns, and airway microbiology of unexplained bronchiectasis and to look for possible genetic links or risk factors.~Eligibility:~Individuals at least 18 years of age who have a chronic cough and who have had a CT scan that has revealed signs of bronchiectasis.~Current smokers or those who have smoked for at least 10 years, as well as individuals who have known causes of bronchiectasis or who have had organ transplants, are not eligible to participate.~Design:~Participants will have one outpatient clinic visit for evaluation with a physical examination including detailed body size measurements and medical history and for collection of blood samples for routine lab tests and genetic analyses and a chest x-ray if no recent one is available.~Participants will also have tests of lung function, and measurement of a gas called nitric oxide in the nose. Participants whose initial tests show abnormal results may also be asked to have a nasal scrape to collect cell samples and/or a skin sweat test to measure salt concentrations.~Participants will also have a sputum specimen collected during the visit and will be asked to collect two additional early morning sputum samples and a mouth rinse at home within 2 weeks of the clinic visit, and mail the sample collection materials to the research team.\nInclusion criteria: inclusion criteria: \n\n The criteria for participants to enter the study mandates that each patient have received a standard (current clinical practice) diagnostic evaluation that includes a CT scan of the chest to document bronchiectasis, prior to enrolling in the Consortium study. To enter this protocol, adults must have bronchiectasis and meet the following criteria: \n\n Males or females, age greater than or equal to18 years \n\n Chronic cough \n\n An available CT of the chest (on a CD) that shows evidence of dilated airways fulfilling radiographic criteria for bronchiectasis in more than one lobe \n\n Ability to provide informed consent, including HIPAA consent \n\n \nExclusion criteria: : \n\n A participant should not be in the study if they have not had a standard clinical evaluation to rule out other potential causes of chronic sino-pulmonary disease. \n\n Known diagnosis of cystic fibrosis with classic clinical presentation and elevated sweat chloride levels and/or two known disease-causing CFTR mutations \n\n History of tuberculosis or other known explanation for bronchiectasis, such as alpha 1-antitrypsin deficiency (ZZ or ZS), confirmed or probable PCD, inflammatory bowel disease, rheumatoid arthritis, Sjogren s syndrome, allergic bronchopulmonary aspergillosis, or documented primary or acquired immunodeficiency \n\n Current smoker or > 10 pack-year history of tobacco use \n\n Prior solid organ transplant",
+    "metadata": {
+      "brief_title": "Cross-sectional Characterization of Idiopathic Bronchiectasis",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Infection', 'Bronchial Diseases', 'Respiratory Tract Diseases']",
+      "diseases_list": [
+        "Infection",
+        "Bronchial Diseases",
+        "Respiratory Tract Diseases"
+      ],
+      "enrollment": "275.0",
+      "inclusion_criteria": "inclusion criteria: \n\n The criteria for participants to enter the study mandates that each patient have received a standard (current clinical practice) diagnostic evaluation that includes a CT scan of the chest to document bronchiectasis, prior to enrolling in the Consortium study. To enter this protocol, adults must have bronchiectasis and meet the following criteria: \n\n Males or females, age greater than or equal to18 years \n\n Chronic cough \n\n An available CT of the chest (on a CD) that shows evidence of dilated airways fulfilling radiographic criteria for bronchiectasis in more than one lobe \n\n Ability to provide informed consent, including HIPAA consent \n\n ",
+      "exclusion_criteria": ": \n\n A participant should not be in the study if they have not had a standard clinical evaluation to rule out other potential causes of chronic sino-pulmonary disease. \n\n Known diagnosis of cystic fibrosis with classic clinical presentation and elevated sweat chloride levels and/or two known disease-causing CFTR mutations \n\n History of tuberculosis or other known explanation for bronchiectasis, such as alpha 1-antitrypsin deficiency (ZZ or ZS), confirmed or probable PCD, inflammatory bowel disease, rheumatoid arthritis, Sjogren s syndrome, allergic bronchopulmonary aspergillosis, or documented primary or acquired immunodeficiency \n\n Current smoker or > 10 pack-year history of tobacco use \n\n Prior solid organ transplant",
+      "brief_summary": "Background:~- Bronchiectasis is a type of lung condition in which the lungs airways are abnormally stretched and widened. This stretching and widening makes it difficult for mucus and other substances to move out of the lungs, encouraging the growth of bacteria and leading to breathing problems or infection. Bronchiectasis can be caused by genetic disorders or diseases such as tuberculosis or rheumatoid arthritis. Researchers are interested in developing better ways to diagnose and treat a lung problem called idiopathic or unexplained bronchiectasis.~Objectives:~- To better describe the physical characteristics, radiographic patterns, and airway microbiology of unexplained bronchiectasis and to look for possible genetic links or risk factors.~Eligibility:~Individuals at least 18 years of age who have a chronic cough and who have had a CT scan that has revealed signs of bronchiectasis.~Current smokers or those who have smoked for at least 10 years, as well as individuals who have known causes of bronchiectasis or who have had organ transplants, are not eligible to participate.~Design:~Participants will have one outpatient clinic visit for evaluation with a physical examination including detailed body size measurements and medical history and for collection of blood samples for routine lab tests and genetic analyses and a chest x-ray if no recent one is available.~Participants will also have tests of lung function, and measurement of a gas called nitric oxide in the nose. Participants whose initial tests show abnormal results may also be asked to have a nasal scrape to collect cell samples and/or a skin sweat test to measure salt concentrations.~Participants will also have a sputum specimen collected during the visit and will be asked to collect two additional early morning sputum samples and a mouth rinse at home within 2 weeks of the clinic visit, and mail the sample collection materials to the research team."
+    }
+  },
+  "linked_result": {
+    "Infection": {
+      "conceptId": "40733004",
+      "preferred_term": "Disorder due to infection",
+      "fully_specified_name": "Infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "An illness caused by an infectious agent or its toxins that occurs through the direct or indirect transmission of the infectious agent or its products from an infected individual or via an animal, vector or the inanimate environment to a susceptible animal or human host.",
+      "best_match_term": "Infection",
+      "match_reason": "Exact"
+    },
+    "Bronchial Diseases": {
+      "conceptId": "41427001",
+      "preferred_term": "Disorder of bronchus",
+      "fully_specified_name": "Disorder of bronchus (disorder)",
+      "type": "Clinical finding",
+      "definition": "Diseases involving the BRONCHI.",
+      "best_match_term": "Bronchial disorder",
+      "match_reason": "Exact"
+    },
+    "Respiratory Tract Diseases": {
+      "conceptId": "50043002",
+      "preferred_term": "Disorder of respiratory system",
+      "fully_specified_name": "Disorder of respiratory system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Diseases of the respiratory system in general or unspecified or for a specific respiratory disease not available.",
+      "best_match_term": "Respiratory disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Infection": 1,
+    "Bronchial Diseases": 1,
+    "Respiratory Tract Diseases": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Infection": {
+      "disease": "Infection",
+      "conceptId": "40733004",
+      "preferred_term": "Disorder due to infection",
+      "fully_specified_name": "Infectious disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "An illness caused by an infectious agent or its toxins that occurs through the direct or indirect transmission of the infectious agent or its products from an infected individual or via an animal, vector or the inanimate environment to a susceptible animal or human host.",
+      "best_match_term": "Infection"
+    },
+    "Bronchial Diseases": {
+      "disease": "Bronchial Diseases",
+      "conceptId": "41427001",
+      "preferred_term": "Disorder of bronchus",
+      "fully_specified_name": "Disorder of bronchus (disorder)",
+      "type": "Clinical finding",
+      "definition": "Diseases involving the BRONCHI.",
+      "best_match_term": "Bronchial disorder"
+    },
+    "Respiratory Tract Diseases": {
+      "disease": "Respiratory Tract Diseases",
+      "conceptId": "50043002",
+      "preferred_term": "Disorder of respiratory system",
+      "fully_specified_name": "Disorder of respiratory system (disorder)",
+      "type": "Clinical finding",
+      "definition": "Diseases of the respiratory system in general or unspecified or for a specific respiratory disease not available.",
+      "best_match_term": "Respiratory disease"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "generated": "2025-10-22T20:57:28",
+  "trial_id": "NCT02518633",
+  "contextual": {
+    "_id": "NCT02518633",
+    "title": "Obstructive Sleep Apnoea and Adipose Tissue Dysfunction",
+    "text": "Summary: Dysfunctional adipose tissue predisposes to cardiovascular disease. Similarly, the risk of cardiovascular disease appears to be increased in subjects with obstructive sleep apnoea. Reduced adipose tissue oxygen availability has been described in obesity and may also be a mechanism in obstructive sleep apnoea. Hypoxia induces inflammation and fibrosis in adipose tissue which are factors contributing to cardiovascular risk. The investigators hypothesize that adipose tissue's oxygen uptake is reduced in subjects with obstructive sleep apnoea by comparing in vivo AT oxygenation and blood flow in tissue of control subjects.\nInclusion criteria: inclusion criteria: \n\n men with or without obstructive sleep apnoea \n\n \nExclusion criteria: : \n\n weight loss interventions \n\n steroid use \n\n active smoking",
+    "metadata": {
+      "brief_title": "Obstructive Sleep Apnoea and Adipose Tissue Dysfunction",
+      "phase": "",
+      "drugs": "['Continuous positive airway pressure devices']",
+      "drugs_list": [
+        "Continuous positive airway pressure devices"
+      ],
+      "diseases": "['Obstructive Sleep Apnoea', 'Obesity', 'Hypoxia']",
+      "diseases_list": [
+        "Obstructive Sleep Apnoea",
+        "Obesity",
+        "Hypoxia"
+      ],
+      "enrollment": "15.0",
+      "inclusion_criteria": "inclusion criteria: \n\n men with or without obstructive sleep apnoea \n\n ",
+      "exclusion_criteria": ": \n\n weight loss interventions \n\n steroid use \n\n active smoking",
+      "brief_summary": "Dysfunctional adipose tissue predisposes to cardiovascular disease. Similarly, the risk of cardiovascular disease appears to be increased in subjects with obstructive sleep apnoea. Reduced adipose tissue oxygen availability has been described in obesity and may also be a mechanism in obstructive sleep apnoea. Hypoxia induces inflammation and fibrosis in adipose tissue which are factors contributing to cardiovascular risk. The investigators hypothesize that adipose tissue's oxygen uptake is reduced in subjects with obstructive sleep apnoea by comparing in vivo AT oxygenation and blood flow in tissue of control subjects."
+    }
+  },
+  "linked_result": {
+    "Obstructive Sleep Apnoea": {
+      "conceptId": "78275009",
+      "preferred_term": "Obstructive sleep apnea syndrome",
+      "fully_specified_name": "Obstructive sleep apnea syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder characterized by recurrent apneas during sleep despite persistent respiratory efforts. It is due to upper airway obstruction. The respiratory pauses may induce HYPERCAPNIA or HYPOXIA. Cardiac arrhythmias and elevation of systemic and pulmonary arterial pressures may occur. Frequent partial arousals occur throughout sleep, resulting in relative SLEEP DEPRIVATION and daytime tiredness. Associated conditions include OBESITY; ACROMEGALY; MYXEDEMA; micrognathia; MYOTONIC DYSTROPHY; adenotonsilar dystrophy; and NEUROMUSCULAR DISEASES. (From Adams et al., Principles of Neurology, 6th ed, p395)",
+      "best_match_term": "Obstructive sleep apnoea",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    },
+    "Hypoxia": {
+      "conceptId": "389086002",
+      "preferred_term": "Hypoxia",
+      "fully_specified_name": "Hypoxia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Sub-optimal OXYGEN levels in the ambient air of living organisms.",
+      "best_match_term": "Hypoxia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Obstructive Sleep Apnoea": 1,
+    "Obesity": 1,
+    "Hypoxia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Obstructive Sleep Apnoea": {
+      "disease": "Obstructive Sleep Apnoea",
+      "conceptId": "78275009",
+      "preferred_term": "Obstructive sleep apnea syndrome",
+      "fully_specified_name": "Obstructive sleep apnea syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder characterized by recurrent apneas during sleep despite persistent respiratory efforts. It is due to upper airway obstruction. The respiratory pauses may induce HYPERCAPNIA or HYPOXIA. Cardiac arrhythmias and elevation of systemic and pulmonary arterial pressures may occur. Frequent partial arousals occur throughout sleep, resulting in relative SLEEP DEPRIVATION and daytime tiredness. Associated conditions include OBESITY; ACROMEGALY; MYXEDEMA; micrognathia; MYOTONIC DYSTROPHY; adenotonsilar dystrophy; and NEUROMUSCULAR DISEASES. (From Adams et al., Principles of Neurology, 6th ed, p395)",
+      "best_match_term": "Obstructive sleep apnoea"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    },
+    "Hypoxia": {
+      "disease": "Hypoxia",
+      "conceptId": "389086002",
+      "preferred_term": "Hypoxia",
+      "fully_specified_name": "Hypoxia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Sub-optimal OXYGEN levels in the ambient air of living organisms.",
+      "best_match_term": "Hypoxia"
+    }
+  }
+}

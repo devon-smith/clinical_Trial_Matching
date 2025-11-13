@@ -1,0 +1,13 @@
+[
+  "patient_has_diagnosis_of_hypertensive_disorder_now",
+  "patient_has_diagnosis_of_cerebrovascular_disease_inthehistory",
+  "patient_has_diagnosis_of_chronic_heart_failure_now",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_diagnosis_of_disorder_of_lipid_metabolism_now",
+  "patient_has_finding_of_electrocardiogram_abnormal_now",
+  "patient_has_diagnosis_of_ischemic_heart_disease_inthehistory",
+  "patient_has_finding_of_left_ventricular_hypertrophy_now",
+  "patient_obesity_value_recorded_now_withunit_kg_per_m2",
+  "patients_risk_factor_is_positive_now",
+  "patient_has_finding_of_tobacco_smoking_behavior_finding_now"
+]

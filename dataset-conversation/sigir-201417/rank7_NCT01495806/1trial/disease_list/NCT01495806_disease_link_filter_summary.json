@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-22T21:28:27",
+  "trial_id": "NCT01495806",
+  "contextual": {
+    "_id": "NCT01495806",
+    "title": "Glucomannan for the Treatment of Abdominal Pain-related Functional Gastrointestinal Disorders in Childhood",
+    "text": "Summary: Background: Functional abdominal pain disorders (FAPD) are common in school-aged children; however, there is no reliable treatment.~Aim: To determine the efficacy and safety of glucomannan for treating FAPD in children.~Trial Setting: Department of Pediatrics, The Medical University of Warsaw.~Intervention: Patients will be enrolled in a double-blind, randomized controlled trial in which they will receive either glucomannan (10g) or placebo for 4 weeks.\nInclusion criteria: inclusion criteria: \n\n abdominal pain related disorder (functional dyspepsia, irritable bowel syndrome or functional abdominal pain (FAPS) diagnosed according to Rome III criteria. \n\n \nExclusion criteria: : \n\n organic gastrointestinal disease (as established by medical history, complete blood count, urinalysis, stool examination for occult blood, ova and parasites, blood chemistries, abdominal ultrasound, breath hydrogen testing and endoscopy, if needed) \n\n other chronic disease \n\n growth failure",
+    "metadata": {
+      "brief_title": "Glucomannan for the Treatment of Abdominal Pain-related Functional Gastrointestinal Disorders in Childhood",
+      "phase": "Phase 4",
+      "drugs": "['Glucomannan', 'placebo']",
+      "drugs_list": [
+        "Glucomannan",
+        "placebo"
+      ],
+      "diseases": "['Functional Gastrointestinal Disorders']",
+      "diseases_list": [
+        "Functional Gastrointestinal Disorders"
+      ],
+      "enrollment": "90.0",
+      "inclusion_criteria": "inclusion criteria: \n\n abdominal pain related disorder (functional dyspepsia, irritable bowel syndrome or functional abdominal pain (FAPS) diagnosed according to Rome III criteria. \n\n ",
+      "exclusion_criteria": ": \n\n organic gastrointestinal disease (as established by medical history, complete blood count, urinalysis, stool examination for occult blood, ova and parasites, blood chemistries, abdominal ultrasound, breath hydrogen testing and endoscopy, if needed) \n\n other chronic disease \n\n growth failure",
+      "brief_summary": "Background: Functional abdominal pain disorders (FAPD) are common in school-aged children; however, there is no reliable treatment.~Aim: To determine the efficacy and safety of glucomannan for treating FAPD in children.~Trial Setting: Department of Pediatrics, The Medical University of Warsaw.~Intervention: Patients will be enrolled in a double-blind, randomized controlled trial in which they will receive either glucomannan (10g) or placebo for 4 weeks."
+    }
+  },
+  "linked_result": {
+    "Functional Gastrointestinal Disorders": {
+      "conceptId": "150541000119104",
+      "preferred_term": "Functional disorder of gastrointestinal tract",
+      "fully_specified_name": "Functional disorder of gastrointestinal tract (disorder)",
+      "type": "Clinical finding",
+      "definition": "Chronic or recurrent gastrointestinal disorders without an identifiable structural or biochemical explanation by the routine diagnostic tests. Functional gastrointestinal disorders are classified according to the presumed site of the disorder, such as IRRITABLE BOWEL SYNDROME, non-ulcer DYSPEPSIA, and non-cardiac CHEST PAIN.",
+      "best_match_term": "Functional disorder of gastrointestinal tract",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Functional Gastrointestinal Disorders": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Functional Gastrointestinal Disorders": {
+      "disease": "Functional Gastrointestinal Disorders",
+      "conceptId": "150541000119104",
+      "preferred_term": "Functional disorder of gastrointestinal tract",
+      "fully_specified_name": "Functional disorder of gastrointestinal tract (disorder)",
+      "type": "Clinical finding",
+      "definition": "Chronic or recurrent gastrointestinal disorders without an identifiable structural or biochemical explanation by the routine diagnostic tests. Functional gastrointestinal disorders are classified according to the presumed site of the disorder, such as IRRITABLE BOWEL SYNDROME, non-ulcer DYSPEPSIA, and non-cardiac CHEST PAIN.",
+      "best_match_term": "Functional disorder of gastrointestinal tract"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_malignant_neoplastic_disease_now",
+  "patient_has_finding_of_malignant_tumor_of_lymphoid_hemopoietic_and_related_tissue_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_limited_life_expectancy_of_approximately_one_year_now",
+  "patient_has_diagnosis_of_major_depressive_disorder_now",
+  "patient_madrs_montgomery_asberg_depression_rating_scale_score_value_recorded_now_withunit_score",
+  "patient_will_undergo_selective_serotonin_re_uptake_inhibitor_containing_product_inthefuture",
+  "patient_is_taking_selective_serotonin_re_uptake_inhibitor_containing_product_now",
+  "patient_is_undergoing_administration_of_medication_now"
+]

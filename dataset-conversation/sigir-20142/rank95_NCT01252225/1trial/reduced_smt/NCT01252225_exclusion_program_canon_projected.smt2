@@ -1,0 +1,32 @@
+;; ===================== PROJECTED CANON (QE) =====================
+;; Each clause below is entailed by Proj = ∃W.F over the canonical vocabulary.
+;; Units appear first for clarity; OR-clauses (SAT-filtered) follow.
+;; ==================================================================
+
+;; Unit Bool constraints (entailed)
+(assert (not patient_has_finding_of_smoker_now))
+(assert (not patient_is_exposed_to_antitussive_agent_now))
+(assert (not patient_is_taking_antiarrhythmic_agent_now))
+(assert (not patient_is_taking_beta_adrenergic_receptor_antagonist_containing_product_now))
+(assert (not patient_is_taking_cimetidine_containing_product_now))
+(assert (not patient_has_finding_of_bradycardia_now))
+(assert (not patient_has_finding_of_heart_block_now))
+(assert (not patient_has_finding_of_sinus_node_dysfunction_now))
+(assert (not patient_has_diagnosis_of_heart_failure_inthehistory))
+(assert (not patient_has_diagnosis_of_ischemic_heart_disease_inthehistory))
+(assert (not patient_has_undergone_operation_on_heart_inthehistory))
+(assert (not patient_has_diagnosis_of_asthma_now))
+(assert (not patient_has_diagnosis_of_epilepsy_now))
+(assert (not patient_has_diagnosis_of_myasthenia_gravis_now))
+(assert (not patient_has_finding_of_abnormal_liver_function_inthehistory))
+(assert (not patient_has_finding_of_renal_impairment_inthehistory))
+(assert (not patient_has_diagnosis_of_porphyria_now))
+(assert (not patient_has_finding_of_allergy_to_lidocaine_inthehistory))
+(assert (not patient_is_pregnant_now))
+(assert (not patient_is_breastfeeding_now))
+(assert (not patients_breastfeeding_is_positive_now))
+(assert (not patient_has_finding_of_patient_entered_into_trial_inthepast6weeks))
+(assert (not patient_has_finding_of_injury_of_mouth_now))
+(assert (not patient_has_finding_of_ulcer_of_mouth_now))
+(assert (not patient_has_finding_of_lower_respiratory_tract_infection_inthepast6weeks))
+(assert (not patient_has_finding_of_upper_respiratory_infection_inthepast6weeks))

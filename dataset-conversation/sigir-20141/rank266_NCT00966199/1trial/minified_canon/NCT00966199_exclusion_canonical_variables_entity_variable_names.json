@@ -1,0 +1,11 @@
+[
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_diagnosis_of_atrial_fibrillation_now",
+  "patient_has_diagnosis_of_dementia_now",
+  "patient_has_finding_of_renal_failure_syndrome_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_cerebrovascular_accident_now",
+  "patient_can_undergo_hypotensive_agent_now",
+  "patient_can_undergo_magnetic_resonance_imaging_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg"
+]

@@ -1,0 +1,23 @@
+[
+  "patient_is_undergoing_clinical_trial_now",
+  "patient_is_exposed_to_drug_or_medicament_inthepast1years",
+  "patient_is_exposed_to_immunosuppressant_inthehistory",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+  "patient_has_finding_of_bleeding_inthehistory",
+  "patient_has_finding_of_bleeding_now",
+  "patient_axillary_temperature_value_recorded_now_withunit_celsius",
+  "patient_has_finding_of_disorder_due_to_infection_now",
+  "patient_has_diagnosis_of_autoimmune_disease_now",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_has_undergone_surgical_procedure_inthepast6months",
+  "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_decreased_liver_function_now",
+  "patient_has_finding_of_end_stage_renal_disease_now",
+  "patient_has_finding_of_anemia_now",
+  "patient_has_finding_of_hemodynamic_instability_now",
+  "patient_has_finding_of_thrombocytopenic_disorder_now",
+  "patient_has_finding_of_lost_to_follow_up_now"
+]

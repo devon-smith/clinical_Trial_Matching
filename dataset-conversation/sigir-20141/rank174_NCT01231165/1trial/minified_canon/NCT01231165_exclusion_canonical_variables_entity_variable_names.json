@@ -1,0 +1,21 @@
+[
+  "patient_has_finding_of_hypertensive_disorder_now",
+  "patient_has_finding_of_myocardial_infarction_inthepast90days",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthepast90days",
+  "patient_has_finding_of_atrial_fibrillation_now",
+  "patient_resting_heart_rate_value_recorded_now_withunit_beats_per_minute",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthepast30days",
+  "patient_has_finding_of_cardiac_pacemaker_in_situ_now",
+  "patient_has_finding_of_cerebrovascular_accident_inthepast90days",
+  "patient_is_exposed_to_aldosterone_receptor_antagonist_inthepast7days",
+  "patient_is_exposed_to_potassium_sparing_diuretic_inthepast7days",
+  "patient_is_taking_lithium_containing_product_now",
+  "patient_has_finding_of_disease_condition_finding_now",
+  "patient_has_finding_of_hyperkalemia_inthepast6months",
+  "patient_potassium_level_finding_value_recorded_inthepast2weeks_withunit_millimoles_per_liter",
+  "patient_potassium_level_finding_value_recorded_inthepast6months_withunit_millimoles_per_liter",
+  "patient_has_finding_of_renal_impairment_now",
+  "patient_has_finding_of_disease_of_liver_now",
+  "patient_has_finding_of_chronic_lung_disease_now",
+  "patient_has_finding_of_heart_valve_disorder_now"
+]

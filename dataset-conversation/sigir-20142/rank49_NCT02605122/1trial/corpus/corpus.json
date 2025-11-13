@@ -1,0 +1,22 @@
+{
+  "_id": "NCT02605122",
+  "title": "Safety and Efficacy of Solithromycin in Adolescents and Children With Community-Acquired Bacterial Pneumonia",
+  "text": "Summary: This is a phase 2/3, randomized, open-label, active control, multi-center study to assess the safety and efficacy of solithromycin in children and adolescents with community-acquired bacterial pneumonia (CABP).\nInclusion criteria: inclusion criteria: \n\n History of and/or documented fever (rectal, ear, or oral temperature ≥38°C or axillary temperature ≥37.5°C) or hypothermia (rectal, ear, or oral temperature <35°C or axillary temperature <34.5°C) \n\n Chest radiograph infiltrates consistent with bacterial pneumonia (or pneumonia caused by atypical bacterial agents); if a subject is outpatient and starting on oral therapy, a radiograph is not required. \n\n Presence of at least 2 of the following signs or symptoms: \n\n Cough \n\n Difficulty breathing \n\n Production of purulent sputum \n\n Chest pain \n\n Grunting \n\n Hypotension \n\n Tachycardia, defined as follows: \n\n 2 months to <24 months: ≥160 beats/min 24 months to <10 years: ≥140 beats/min \n\n 10 years: ≥100 beats/min \n\n Tachypnea, defined as follows: \n\n 2 months to <12 months: ≥50 breaths/min 12 months to <5 years: ≥40 breaths/min \n\n 5 years: ≥20 breaths/min \n\n Physical exam consistent with pulmonary consolidation \n\n Presence of at least 1 of the following: \n\n Leukocytosis (≥12,000 white blood cells [WBC]/mm3) \n\n Leukopenia (<5000 WBC/mm3) \n\n ≥10% immature neutrophils (bands) regardless of total peripheral WBC \n\n Elevated inflammatory markers (C-reactive protein or procalcitonin) \n\n Oxygen saturation <97% on room air \n\n Organism consistent with a typical respiratory pathogen identified \n\n \nExclusion criteria: : \n\n Ventilator-associated or hospital-acquired pneumonia \n\n >48 hours of systemic antibacterial therapy \n\n confirmed or suspected bacterial meningitis \n\n breast-feeding females \n\n positive pregnancy test",
+  "metadata": {
+    "brief_title": "Safety and Efficacy of Solithromycin in Adolescents and Children With Community-Acquired Bacterial Pneumonia",
+    "phase": "Phase 2; Phase 3",
+    "drugs": "['Solithromycin', 'Standard of Care']",
+    "drugs_list": [
+      "Solithromycin",
+      "Standard of Care"
+    ],
+    "diseases": "['Community-acquired Bacterial Pneumonia']",
+    "diseases_list": [
+      "Community-acquired Bacterial Pneumonia"
+    ],
+    "enrollment": "97.0",
+    "inclusion_criteria": "inclusion criteria: \n\n History of and/or documented fever (rectal, ear, or oral temperature ≥38°C or axillary temperature ≥37.5°C) or hypothermia (rectal, ear, or oral temperature <35°C or axillary temperature <34.5°C) \n\n Chest radiograph infiltrates consistent with bacterial pneumonia (or pneumonia caused by atypical bacterial agents); if a subject is outpatient and starting on oral therapy, a radiograph is not required. \n\n Presence of at least 2 of the following signs or symptoms: \n\n Cough \n\n Difficulty breathing \n\n Production of purulent sputum \n\n Chest pain \n\n Grunting \n\n Hypotension \n\n Tachycardia, defined as follows: \n\n 2 months to <24 months: ≥160 beats/min 24 months to <10 years: ≥140 beats/min \n\n 10 years: ≥100 beats/min \n\n Tachypnea, defined as follows: \n\n 2 months to <12 months: ≥50 breaths/min 12 months to <5 years: ≥40 breaths/min \n\n 5 years: ≥20 breaths/min \n\n Physical exam consistent with pulmonary consolidation \n\n Presence of at least 1 of the following: \n\n Leukocytosis (≥12,000 white blood cells [WBC]/mm3) \n\n Leukopenia (<5000 WBC/mm3) \n\n ≥10% immature neutrophils (bands) regardless of total peripheral WBC \n\n Elevated inflammatory markers (C-reactive protein or procalcitonin) \n\n Oxygen saturation <97% on room air \n\n Organism consistent with a typical respiratory pathogen identified \n\n ",
+    "exclusion_criteria": ": \n\n Ventilator-associated or hospital-acquired pneumonia \n\n >48 hours of systemic antibacterial therapy \n\n confirmed or suspected bacterial meningitis \n\n breast-feeding females \n\n positive pregnancy test",
+    "brief_summary": "This is a phase 2/3, randomized, open-label, active control, multi-center study to assess the safety and efficacy of solithromycin in children and adolescents with community-acquired bacterial pneumonia (CABP)."
+  }
+}

@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_months",
+  "patient_age_value_recorded_now_in_years",
+  "patient_croup_value_recorded_inthepast12months_withunit_count",
+  "patient_has_finding_of_barking_cough_now",
+  "patient_has_finding_of_croup_now",
+  "patient_has_finding_of_inspiratory_stridor_now",
+  "patient_has_finding_of_respiratory_distress_now"
+]

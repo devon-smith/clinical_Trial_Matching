@@ -1,0 +1,13 @@
+[
+  "patient_has_diagnosis_of_radiologic_infiltrate_of_lung_now",
+  "patient_has_finding_of_radiologic_infiltrate_of_lung_now",
+  "patient_has_undergone_transfusion_of_red_blood_cells_inthepast60days",
+  "patient_age_value_recorded_now_in_years",
+  "patient_is_exposed_to_drug_or_medicament_inthepast30days",
+  "patient_has_taken_hydroxyurea_containing_product_inthepast30days",
+  "patient_has_finding_of_allosensitization_inthehistory",
+  "patient_has_finding_of_blood_transfusion_reaction_inthehistory",
+  "patient_has_undergone_transfusion_of_blood_product_inthehistory",
+  "patient_is_exposed_to_steroid_inthehistory",
+  "patient_is_pregnant_now"
+]

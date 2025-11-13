@@ -1,0 +1,22 @@
+{
+  "_id": "NCT01078779",
+  "title": "The Chloroquine for Influenza Prevention Trial",
+  "text": "Summary: A randomised controlled trial to determine the efficacy of chloroquine for the prevention of influenza\nInclusion criteria: inclusion criteria: \n\n Age 18 -65 \n\n Have the ability to provide informed consent \n\n If a woman of child-bearing potential, willing to use contraception for the period of the trial \n\n \nExclusion criteria: : \n\n Acute influenza-like illness at screening \n\n History of psoriasis, porphyria cutanea tarda, epilepsy, myasthenia gravis, myopathy of any cause, cardiac arrhythmias, or serious hepatic or renal disease \n\n Pregnancy or breast feeding \n\n Current use of medication with known serious hepatotoxic effects \n\n Current use of medication with known serious interaction with CQ: amiodarone, anticonvulsants, ciclosporin, digoxin, mefloquine, moxifloxacin \n\n Current severe depression (as indicated by current use of antidepressant medication) \n\n Known serious retinal disease \n\n Current or recent (within the past 30 days) participation in any other clinical intervention trial. \n\n Known G6PD deficiency \n\n Vaccination for influenza (seasonal or H1N1 strain) within the 3 months prior to screening",
+  "metadata": {
+    "brief_title": "The Chloroquine for Influenza Prevention Trial",
+    "phase": "Phase 2",
+    "drugs": "['Chloroquine', 'Placebo']",
+    "drugs_list": [
+      "Chloroquine",
+      "Placebo"
+    ],
+    "diseases": "['Influenza']",
+    "diseases_list": [
+      "Influenza"
+    ],
+    "enrollment": "1516.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Age 18 -65 \n\n Have the ability to provide informed consent \n\n If a woman of child-bearing potential, willing to use contraception for the period of the trial \n\n ",
+    "exclusion_criteria": ": \n\n Acute influenza-like illness at screening \n\n History of psoriasis, porphyria cutanea tarda, epilepsy, myasthenia gravis, myopathy of any cause, cardiac arrhythmias, or serious hepatic or renal disease \n\n Pregnancy or breast feeding \n\n Current use of medication with known serious hepatotoxic effects \n\n Current use of medication with known serious interaction with CQ: amiodarone, anticonvulsants, ciclosporin, digoxin, mefloquine, moxifloxacin \n\n Current severe depression (as indicated by current use of antidepressant medication) \n\n Known serious retinal disease \n\n Current or recent (within the past 30 days) participation in any other clinical intervention trial. \n\n Known G6PD deficiency \n\n Vaccination for influenza (seasonal or H1N1 strain) within the 3 months prior to screening",
+    "brief_summary": "A randomised controlled trial to determine the efficacy of chloroquine for the prevention of influenza"
+  }
+}

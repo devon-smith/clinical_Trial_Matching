@@ -1,0 +1,12 @@
+[
+  "patient_has_finding_of_serious_physical_health_problem_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_acute_st_segment_elevation_myocardial_infarction_inthepast4weeks",
+  "patient_has_diagnosis_of_heart_valve_disorder_now",
+  "patient_can_undergo_cardiac_mri_now",
+  "patient_glomerular_filtration_rate_value_recorded_now_withunit_milliliters_per_minute_per_1_73_square_meters",
+  "patient_has_finding_of_permanent_cardiac_pacemaker_now",
+  "patient_can_undergo_positron_emission_tomography_now",
+  "patient_can_undergo_single_photon_emission_computerized_tomography_now",
+  "patient_is_pregnant_now"
+]

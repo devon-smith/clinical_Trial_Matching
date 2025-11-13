@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_peritonitis_now",
+  "patient_has_finding_of_allergic_reaction_caused_by_antibacterial_agent_now",
+  "patient_has_finding_of_allergy_to_penicillin_now",
+  "patient_has_undergone_antibiotic_therapy_inthehistory",
+  "patient_is_undergoing_antibiotic_therapy_now",
+  "patient_has_undergone_appendectomy_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_has_diagnosis_of_inflammatory_bowel_disease_inthehistory",
+  "patient_has_suspicion_of_inflammatory_bowel_disease_now"
+]

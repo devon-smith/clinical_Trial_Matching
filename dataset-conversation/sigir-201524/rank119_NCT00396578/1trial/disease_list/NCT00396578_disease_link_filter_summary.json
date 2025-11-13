@@ -1,0 +1,90 @@
+{
+  "generated": "2025-10-20T23:44:25",
+  "trial_id": "NCT00396578",
+  "contextual": {
+    "_id": "NCT00396578",
+    "title": "Aerosolized Antibiotics and Respiratory Tract Infection in Patients on Mechanical Ventilation",
+    "text": "Summary: The purpose of this study was to determine the effect of aerosolized antibiotics on respiratory infection in mechanically ventilated patients.We hypothesize that aerosolized antibiotics , which achieve high drug concentrations in the airway, would more effectively treat respiratory infection, decrease the need for systemic antibiotics and decrease antibiotic resistance.\nInclusion criteria: inclusion criteria: \n\n be on mechanical ventilation greater than 3 days \n\n greater than or equal to 18 years of age survival greater than 14 days \n\n greater than 2 ccs of tracheal secretions/4 hours \n\n \nExclusion criteria: : \n\n allergy to drugs, pregnancy",
+    "metadata": {
+      "brief_title": "Aerosolized Antibiotics and Respiratory Tract Infection in Patients on Mechanical Ventilation",
+      "phase": "Phase 2",
+      "drugs": "['aerosolized vancomycin or gentamicin']",
+      "drugs_list": [
+        "aerosolized vancomycin or gentamicin"
+      ],
+      "diseases": "['Ventilator Associated Pneumonia', 'Respiratory Infection', 'Tracheobronchitis']",
+      "diseases_list": [
+        "Ventilator Associated Pneumonia",
+        "Respiratory Infection",
+        "Tracheobronchitis"
+      ],
+      "enrollment": "80.0",
+      "inclusion_criteria": "inclusion criteria: \n\n be on mechanical ventilation greater than 3 days \n\n greater than or equal to 18 years of age survival greater than 14 days \n\n greater than 2 ccs of tracheal secretions/4 hours \n\n ",
+      "exclusion_criteria": ": \n\n allergy to drugs, pregnancy",
+      "brief_summary": "The purpose of this study was to determine the effect of aerosolized antibiotics on respiratory infection in mechanically ventilated patients.We hypothesize that aerosolized antibiotics , which achieve high drug concentrations in the airway, would more effectively treat respiratory infection, decrease the need for systemic antibiotics and decrease antibiotic resistance."
+    }
+  },
+  "linked_result": {
+    "Ventilator Associated Pneumonia": {
+      "conceptId": "429271009",
+      "preferred_term": "Ventilator associated pneumonia",
+      "fully_specified_name": "Ventilator-acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Serious INFLAMMATION of the LUNG in patients who required the use of PULMONARY VENTILATOR. It is usually caused by bacterial CROSS INFECTION in hospitals.",
+      "best_match_term": "Ventilator associated pneumonia",
+      "match_reason": "Exact"
+    },
+    "Respiratory Infection": {
+      "conceptId": "275498002",
+      "preferred_term": "Respiratory tract infection",
+      "fully_specified_name": "Respiratory tract infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Invasion of the host RESPIRATORY SYSTEM by microorganisms, usually leading to pathological processes or diseases.",
+      "best_match_term": "Respiratory tract infection (disorder)",
+      "match_reason": "Exact"
+    },
+    "Tracheobronchitis": {
+      "conceptId": "13617004",
+      "preferred_term": "Tracheobronchitis",
+      "fully_specified_name": "Tracheobronchitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the tracheobronchial tree.",
+      "best_match_term": "Tracheobronchitis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Ventilator Associated Pneumonia": 1,
+    "Respiratory Infection": 1,
+    "Tracheobronchitis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Ventilator Associated Pneumonia": {
+      "disease": "Ventilator Associated Pneumonia",
+      "conceptId": "429271009",
+      "preferred_term": "Ventilator associated pneumonia",
+      "fully_specified_name": "Ventilator-acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Serious INFLAMMATION of the LUNG in patients who required the use of PULMONARY VENTILATOR. It is usually caused by bacterial CROSS INFECTION in hospitals.",
+      "best_match_term": "Ventilator associated pneumonia"
+    },
+    "Respiratory Infection": {
+      "disease": "Respiratory Infection",
+      "conceptId": "275498002",
+      "preferred_term": "Respiratory tract infection",
+      "fully_specified_name": "Respiratory tract infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Invasion of the host RESPIRATORY SYSTEM by microorganisms, usually leading to pathological processes or diseases.",
+      "best_match_term": "Respiratory tract infection (disorder)"
+    },
+    "Tracheobronchitis": {
+      "disease": "Tracheobronchitis",
+      "conceptId": "13617004",
+      "preferred_term": "Tracheobronchitis",
+      "fully_specified_name": "Tracheobronchitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the tracheobronchial tree.",
+      "best_match_term": "Tracheobronchitis"
+    }
+  }
+}

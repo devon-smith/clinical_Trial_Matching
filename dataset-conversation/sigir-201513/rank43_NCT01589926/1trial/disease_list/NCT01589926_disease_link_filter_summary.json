@@ -1,0 +1,71 @@
+{
+  "generated": "2025-10-20T23:37:39",
+  "trial_id": "NCT01589926",
+  "contextual": {
+    "_id": "NCT01589926",
+    "title": "Bi-Level Positive Airway Ventilation for Acute Chest Syndrome",
+    "text": "Summary: Acute chest syndrome (ACS) is a frequent complication of sickle cell disease and is diagnosed by having findings on a chest x-ray and one of the following: chest pain, fever, or trouble breathing. Patients with Acute Chest Syndrome can get very sick and require an exchange transfusion (special large blood transfusion) and mechanical ventilation. Bi-level Positive Airway Pressure (also known as BLPAP or BiPAP) is a device that blows air into a patients lungs via a mask that covers the nose. The goal of this study is to determine whether giving children BiPAP when they have ACS, in addition to providing standard clinical care for ACS, alters the clinical course of these patients. The investigators hypothesize that patients receiving effective BiPAP will have milder clinical courses resulting in shorter hospital stays and fewer transfers to the intensive care unit and exchange transfusions.\nInclusion criteria: inclusion criteria: \n\n patients diagnosed with Hemoglobin SS (HB SS), the most common type of sickle cell disease \n\n patients diagnosed with Hemoglobin SC (HB SC), the second most common type of sickle cell disease. \n\n patients diagnosed with Hemoglobin sickle beta-zero thalassemia ( HB SB0thal) or Hemoglobin sickle thalassemia (HB SBthal) \n\n Must meet clinical criteria for ACS- an infiltrate on Chest X-ray and one of the following: \n\n Respiratory symptoms/signs (patients pulse oximetry < 92% or oxygen saturation < 2% below their baseline, tachypnea, cough, and increased work of breathing) \n\n Fever \n\n Chest pain AND \n\n Patients' eligible for a simple transfusion based on one of the following criteria: \n\n Hypoxemia (patients pulse oximetry < 92% or oxygen saturation < 2% below their baseline) \n\n Hemoglobin < 5 gm/dl \n\n Increased work of breathing \n\n \nExclusion criteria: : \n\n Patient requires exchange transfusion within first 24 hours of admission \n\n Patient requires PCCU transfer within first 24 hours of admission \n\n Hemoglobin > 9gm/dl secondary to these patients requiring an exchange transfusion",
+    "metadata": {
+      "brief_title": "Bi-Level Positive Airway Ventilation for Acute Chest Syndrome",
+      "phase": "",
+      "drugs": "['Bi-level positive airway pressure device', 'Sham CPAP']",
+      "drugs_list": [
+        "Bi-level positive airway pressure device",
+        "Sham CPAP"
+      ],
+      "diseases": "['Sickle Cell Anemia', 'Acute Chest Syndrome']",
+      "diseases_list": [
+        "Sickle Cell Anemia",
+        "Acute Chest Syndrome"
+      ],
+      "enrollment": "3.0",
+      "inclusion_criteria": "inclusion criteria: \n\n patients diagnosed with Hemoglobin SS (HB SS), the most common type of sickle cell disease \n\n patients diagnosed with Hemoglobin SC (HB SC), the second most common type of sickle cell disease. \n\n patients diagnosed with Hemoglobin sickle beta-zero thalassemia ( HB SB0thal) or Hemoglobin sickle thalassemia (HB SBthal) \n\n Must meet clinical criteria for ACS- an infiltrate on Chest X-ray and one of the following: \n\n Respiratory symptoms/signs (patients pulse oximetry < 92% or oxygen saturation < 2% below their baseline, tachypnea, cough, and increased work of breathing) \n\n Fever \n\n Chest pain AND \n\n Patients' eligible for a simple transfusion based on one of the following criteria: \n\n Hypoxemia (patients pulse oximetry < 92% or oxygen saturation < 2% below their baseline) \n\n Hemoglobin < 5 gm/dl \n\n Increased work of breathing \n\n ",
+      "exclusion_criteria": ": \n\n Patient requires exchange transfusion within first 24 hours of admission \n\n Patient requires PCCU transfer within first 24 hours of admission \n\n Hemoglobin > 9gm/dl secondary to these patients requiring an exchange transfusion",
+      "brief_summary": "Acute chest syndrome (ACS) is a frequent complication of sickle cell disease and is diagnosed by having findings on a chest x-ray and one of the following: chest pain, fever, or trouble breathing. Patients with Acute Chest Syndrome can get very sick and require an exchange transfusion (special large blood transfusion) and mechanical ventilation. Bi-level Positive Airway Pressure (also known as BLPAP or BiPAP) is a device that blows air into a patients lungs via a mask that covers the nose. The goal of this study is to determine whether giving children BiPAP when they have ACS, in addition to providing standard clinical care for ACS, alters the clinical course of these patients. The investigators hypothesize that patients receiving effective BiPAP will have milder clinical courses resulting in shorter hospital stays and fewer transfers to the intensive care unit and exchange transfusions."
+    }
+  },
+  "linked_result": {
+    "Sickle Cell Anemia": {
+      "conceptId": "127040003",
+      "preferred_term": "Sickle cell-hemoglobin SS disease",
+      "fully_specified_name": "Sickle cell-hemoglobin SS disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease characterized by chronic hemolytic anemia, episodic painful crises, and pathologic involvement of many organs. It is the clinical expression of homozygosity for hemoglobin S.",
+      "best_match_term": "Sickle cell anemia",
+      "match_reason": "Exact"
+    },
+    "Acute Chest Syndrome": {
+      "conceptId": "372146004",
+      "preferred_term": "Acute chest syndrome",
+      "fully_specified_name": "Acute chest syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "Respiratory syndrome characterized by the appearance of a new pulmonary infiltrate on chest x-ray, accompanied by symptoms of fever, cough, chest pain, tachypnea, or DYSPNEA, often seen in patients with SICKLE CELL ANEMIA. Multiple factors (e.g., infection, and pulmonary FAT EMBOLISM) may contribute to the development of the syndrome.",
+      "best_match_term": "Acute chest syndrome",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Sickle Cell Anemia": 1,
+    "Acute Chest Syndrome": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Sickle Cell Anemia": {
+      "disease": "Sickle Cell Anemia",
+      "conceptId": "127040003",
+      "preferred_term": "Sickle cell-hemoglobin SS disease",
+      "fully_specified_name": "Sickle cell-hemoglobin SS disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disease characterized by chronic hemolytic anemia, episodic painful crises, and pathologic involvement of many organs. It is the clinical expression of homozygosity for hemoglobin S.",
+      "best_match_term": "Sickle cell anemia"
+    },
+    "Acute Chest Syndrome": {
+      "disease": "Acute Chest Syndrome",
+      "conceptId": "372146004",
+      "preferred_term": "Acute chest syndrome",
+      "fully_specified_name": "Acute chest syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "Respiratory syndrome characterized by the appearance of a new pulmonary infiltrate on chest x-ray, accompanied by symptoms of fever, cough, chest pain, tachypnea, or DYSPNEA, often seen in patients with SICKLE CELL ANEMIA. Multiple factors (e.g., infection, and pulmonary FAT EMBOLISM) may contribute to the development of the syndrome.",
+      "best_match_term": "Acute chest syndrome"
+    }
+  }
+}

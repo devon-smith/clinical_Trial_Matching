@@ -1,0 +1,8 @@
+[
+  "patient_is_undergoing_antihypertensive_therapy_now",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_plasma_fasting_glucose_measurement_value_recorded_now_withunit_millimoles_per_liter",
+  "patient_post_prandial_blood_glucose_measurement_value_recorded_now_withunit_millimoles_per_liter",
+  "patient_is_undergoing_subcutaneous_injection_of_insulin_now"
+]

@@ -1,0 +1,25 @@
+{
+  "trial_id": "NCT00225355",
+  "contextual": {
+    "_id": "NCT00225355",
+    "title": "Rosiglitazone Versus Placebo in Chronic Stable Angina",
+    "text": "Summary: We wish to see if the drug rosiglitazone, currently used in the treatment of type 2 diabetes, could be used as a new treatment for angina when compared with placebo in overweight subjects who do not have overt diabetes. The drug will be given for 3 months and the subjects will be have their angina tested, by way of exercise testing, angina quality of life questionnaire and 24-hour ECG monitoring before and after using the drug.\nInclusion criteria: inclusion criteria: \n\n Chronic stable angina - to see if this improves \n\n Previous positive exercise tolerance test - to ensure that repeating it yields a result \n\n Disease not suitable for coronary intervention (Coronary artery bypass grafting or angioplasty) - so that best routine care is not withheld \n\n Do not have overt diabetes - work on this is being undertaken elsewhere \n\n Body mass index (BMI) greater than 25 \n\n \nExclusion criteria: : \n\n Diabetes mellitus - see above \n\n Liver failure (ALT>70U/l, AST>80U/l) \n\n Renal failure (creatinine > 130mmol/l) \n\n Cardiac failure - rosiglitazone is contraindicated in those with NYHA 3 and 4 cardiac failure \n\n Physical disability - if it precludes treadmill testing \n\n Women of child bearing capacity \n\n Breast feeding mothers",
+    "metadata": {
+      "brief_title": "Rosiglitazone Versus Placebo in Chronic Stable Angina",
+      "phase": "Phase 4",
+      "drugs": "['Rosiglitazone']",
+      "drugs_list": [
+        "Rosiglitazone"
+      ],
+      "diseases": "['Angina Pectoris', 'Metabolic Syndrome X']",
+      "diseases_list": [
+        "Angina Pectoris",
+        "Metabolic Syndrome X"
+      ],
+      "enrollment": "80.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Chronic stable angina - to see if this improves \n\n Previous positive exercise tolerance test - to ensure that repeating it yields a result \n\n Disease not suitable for coronary intervention (Coronary artery bypass grafting or angioplasty) - so that best routine care is not withheld \n\n Do not have overt diabetes - work on this is being undertaken elsewhere \n\n Body mass index (BMI) greater than 25 \n\n ",
+      "exclusion_criteria": ": \n\n Diabetes mellitus - see above \n\n Liver failure (ALT>70U/l, AST>80U/l) \n\n Renal failure (creatinine > 130mmol/l) \n\n Cardiac failure - rosiglitazone is contraindicated in those with NYHA 3 and 4 cardiac failure \n\n Physical disability - if it precludes treadmill testing \n\n Women of child bearing capacity \n\n Breast feeding mothers",
+      "brief_summary": "We wish to see if the drug rosiglitazone, currently used in the treatment of type 2 diabetes, could be used as a new treatment for angina when compared with placebo in overweight subjects who do not have overt diabetes. The drug will be given for 3 months and the subjects will be have their angina tested, by way of exercise testing, angina quality of life questionnaire and 24-hour ECG monitoring before and after using the drug."
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:34:37",
+  "trial_id": "NCT01125384",
+  "contextual": {
+    "_id": "NCT01125384",
+    "title": "Comparison Between Two Methods of Throat Swabbing",
+    "text": "Summary: Throat swabbing is an important instrument in the diagnosis of strep pharyngitis and sometimes the main argument for antibiotic treatment. There is no firm knowledge about an appropriate method of the swabbing for receiving maximal sensitivity. We hypothesize that accurate swabbing from the pus will increase the sensitivity of the swabbing as compared to free swabbing. In order to check this hypothesis we will compare two swabs from the same throat. One that will be taken by a physician specifically from the pass and the second will be taken by a nurse as she used to do it. An increase of 10% of positive results will be accepted as a significant advantage.\nInclusion criteria: inclusion criteria: \n\n patients with sore throat, classified 2-3 according to Cantor's criteria \n\n \nExclusion criteria: : \n\n patients on antibiotic treatment \n\n suspected carriers of streptococcus",
+    "metadata": {
+      "brief_title": "Comparison Between Two Methods of Throat Swabbing",
+      "phase": "",
+      "drugs": "['additional swabbing']",
+      "drugs_list": [
+        "additional swabbing"
+      ],
+      "diseases": "['Pharyngitis']",
+      "diseases_list": [
+        "Pharyngitis"
+      ],
+      "enrollment": "500.0",
+      "inclusion_criteria": "inclusion criteria: \n\n patients with sore throat, classified 2-3 according to Cantor's criteria \n\n ",
+      "exclusion_criteria": ": \n\n patients on antibiotic treatment \n\n suspected carriers of streptococcus",
+      "brief_summary": "Throat swabbing is an important instrument in the diagnosis of strep pharyngitis and sometimes the main argument for antibiotic treatment. There is no firm knowledge about an appropriate method of the swabbing for receiving maximal sensitivity. We hypothesize that accurate swabbing from the pus will increase the sensitivity of the swabbing as compared to free swabbing. In order to check this hypothesis we will compare two swabs from the same throat. One that will be taken by a physician specifically from the pass and the second will be taken by a nurse as she used to do it. An increase of 10% of positive results will be accepted as a significant advantage."
+    }
+  },
+  "linked_result": {
+    "Pharyngitis": {
+      "conceptId": "405737000",
+      "preferred_term": "Pharyngitis",
+      "fully_specified_name": "Pharyngitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the throat (PHARYNX).",
+      "best_match_term": "Pharyngitis",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Pharyngitis": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Pharyngitis": {
+      "disease": "Pharyngitis",
+      "conceptId": "405737000",
+      "preferred_term": "Pharyngitis",
+      "fully_specified_name": "Pharyngitis (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the throat (PHARYNX).",
+      "best_match_term": "Pharyngitis"
+    }
+  }
+}

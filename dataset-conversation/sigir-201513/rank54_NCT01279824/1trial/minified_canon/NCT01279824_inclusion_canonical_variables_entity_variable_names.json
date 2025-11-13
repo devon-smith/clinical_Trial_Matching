@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_cerebrovascular_accident_inthehistory",
+  "patient_has_finding_of_oropharyngeal_dysphagia_now",
+  "patient_has_finding_of_oropharyngeal_dysphagia_inthehistory",
+  "patient_has_finding_of_injury_of_head_inthehistory",
+  "patient_has_finding_of_injury_of_neck_inthehistory",
+  "patient_has_undergone_operation_on_neck_inthehistory",
+  "patient_has_undergone_operative_procedure_on_head_inthehistory",
+  "patient_has_finding_of_disorder_of_nervous_system_now",
+  "patient_has_finding_of_parkinson_s_disease_now"
+]

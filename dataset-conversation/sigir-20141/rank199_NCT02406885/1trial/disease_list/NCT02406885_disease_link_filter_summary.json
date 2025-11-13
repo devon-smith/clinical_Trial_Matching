@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-20T22:29:53",
+  "trial_id": "NCT02406885",
+  "contextual": {
+    "_id": "NCT02406885",
+    "title": "Apixaban Pharmacokinetics in Bariatric Patients (APB)",
+    "text": "Summary: The Center for Bariatric Surgery is interested in conducting a pharmacokinetic study of apixaban (an oral anticoagulant with FDA approval for use of venous thrombo embolism (VTE) prophylaxis and treatment) in the obese adult population to determine if bariatric surgery influences apixaban exposure. More interesting would be to see how the dose may need to change pre- vs. post-bariatric surgery (this will be important for physicians as more and more patients undergo this procedure worldwide and many may require anticoagulation in their future healthcare).~Physicians and surgeons are very interested in oral anticoagulants for this special patient population. To date, there is no approved dosing for the obese patient (especially when considering surgical intervention such as bariatric surgery).~Primary outcome variable.~To determine the durability or change in pharmacokinetics and pharmacodynamics of apixaban in patients with a body mass index (BMI) of 35 kg/m2 or greater following one of two bariatric surgical procedures (pre-operative versus post-operative vertical sleeve gastrectomy or Roux-en-Y gastric bypass patients).~Secondary outcome variables.~To compare/contrast the pharmacokinetics and pharmacodynamics of apixaban in bariatric surgical patients who have undergone RYGB vs. VSG.~To determine how the pharmacokinetics of the drug may differ when there is significant post-operative surgical weight loss (>40% estimated excess body weight) 12 to 18 months following surgery versus those patients who have suboptimal weight loss following bariatric surgery (< 40% of estimated excess body weight).\nInclusion criteria: inclusion criteria: \n\n Men or women, 18 to 65 years old with a BMI of 35 kg/m2 or greater who will be undergoing bariatric surgery (VSG and RYGB) \n\n Signed written informed consent \n\n Women of childbearing potential (WOCBP) must have a negative serum or urine pregnancy test (minimum sensitivity 25 IU/L or equivalent units of HCG) within 24 hours prior to the start of study drug \n\n Women must not be breastfeeding \n\n \nExclusion criteria: : \n\n History of documented clotting/coagulation disorder \n\n History of cancer (within the last year) \n\n Any diagnosis requiring anti-coagulation \n\n History of hypersensitivity reaction to apixaban \n\n Active clinically significant bleeding \n\n Creatinine > 1.5 mg/dL \n\n Participants currently receiving any type of anticoagulation or blood thinning medications, including heparin, low molecular weight heparins, Plavix, aspirin, NSAIDS \n\n Participant who is taking any of the excluded medications \n\n Combined P-glycoprotein and strong cytochrome P450 (CYP) 3A4 inhibitor \n\n Combined P-glycoprotein and moderate CYP 3A4 inhibitor \n\n Combined P-glycoprotein inducer and strong CYP 3A4 inducer \n\n Inducers of p-glycoprotein \n\n Strong inducers of CYP 3A4",
+    "metadata": {
+      "brief_title": "Apixaban Pharmacokinetics in Bariatric Patients (APB)",
+      "phase": "Phase 4",
+      "drugs": "['Apixaban']",
+      "drugs_list": [
+        "Apixaban"
+      ],
+      "diseases": "['Bariatric Surgery', 'Obesity']",
+      "diseases_list": [
+        "Bariatric Surgery",
+        "Obesity"
+      ],
+      "enrollment": "33.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Men or women, 18 to 65 years old with a BMI of 35 kg/m2 or greater who will be undergoing bariatric surgery (VSG and RYGB) \n\n Signed written informed consent \n\n Women of childbearing potential (WOCBP) must have a negative serum or urine pregnancy test (minimum sensitivity 25 IU/L or equivalent units of HCG) within 24 hours prior to the start of study drug \n\n Women must not be breastfeeding \n\n ",
+      "exclusion_criteria": ": \n\n History of documented clotting/coagulation disorder \n\n History of cancer (within the last year) \n\n Any diagnosis requiring anti-coagulation \n\n History of hypersensitivity reaction to apixaban \n\n Active clinically significant bleeding \n\n Creatinine > 1.5 mg/dL \n\n Participants currently receiving any type of anticoagulation or blood thinning medications, including heparin, low molecular weight heparins, Plavix, aspirin, NSAIDS \n\n Participant who is taking any of the excluded medications \n\n Combined P-glycoprotein and strong cytochrome P450 (CYP) 3A4 inhibitor \n\n Combined P-glycoprotein and moderate CYP 3A4 inhibitor \n\n Combined P-glycoprotein inducer and strong CYP 3A4 inducer \n\n Inducers of p-glycoprotein \n\n Strong inducers of CYP 3A4",
+      "brief_summary": "The Center for Bariatric Surgery is interested in conducting a pharmacokinetic study of apixaban (an oral anticoagulant with FDA approval for use of venous thrombo embolism (VTE) prophylaxis and treatment) in the obese adult population to determine if bariatric surgery influences apixaban exposure. More interesting would be to see how the dose may need to change pre- vs. post-bariatric surgery (this will be important for physicians as more and more patients undergo this procedure worldwide and many may require anticoagulation in their future healthcare).~Physicians and surgeons are very interested in oral anticoagulants for this special patient population. To date, there is no approved dosing for the obese patient (especially when considering surgical intervention such as bariatric surgery).~Primary outcome variable.~To determine the durability or change in pharmacokinetics and pharmacodynamics of apixaban in patients with a body mass index (BMI) of 35 kg/m2 or greater following one of two bariatric surgical procedures (pre-operative versus post-operative vertical sleeve gastrectomy or Roux-en-Y gastric bypass patients).~Secondary outcome variables.~To compare/contrast the pharmacokinetics and pharmacodynamics of apixaban in bariatric surgical patients who have undergone RYGB vs. VSG.~To determine how the pharmacokinetics of the drug may differ when there is significant post-operative surgical weight loss (>40% estimated excess body weight) 12 to 18 months following surgery versus those patients who have suboptimal weight loss following bariatric surgery (< 40% of estimated excess body weight)."
+    }
+  },
+  "linked_result": {
+    "Bariatric Surgery": {
+      "conceptId": "430715008",
+      "preferred_term": "Bariatric operative procedure",
+      "fully_specified_name": "Bariatric operative procedure (procedure)",
+      "type": "Procedure",
+      "definition": "Surgical procedures aimed at affecting metabolism and producing major WEIGHT REDUCTION in patients with MORBID OBESITY.",
+      "best_match_term": "Bariatric surgery",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Bariatric Surgery": 1,
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Bariatric Surgery": {
+      "disease": "Bariatric Surgery",
+      "conceptId": "430715008",
+      "preferred_term": "Bariatric operative procedure",
+      "fully_specified_name": "Bariatric operative procedure (procedure)",
+      "type": "Procedure",
+      "definition": "Surgical procedures aimed at affecting metabolism and producing major WEIGHT REDUCTION in patients with MORBID OBESITY.",
+      "best_match_term": "Bariatric surgery"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

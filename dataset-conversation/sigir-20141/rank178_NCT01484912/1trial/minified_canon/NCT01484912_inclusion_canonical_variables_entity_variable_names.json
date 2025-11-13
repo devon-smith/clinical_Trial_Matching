@@ -1,0 +1,19 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_coronary_arteriosclerosis_now",
+  "patient_has_finding_of_exercise_induced_angina_now",
+  "patient_has_finding_of_myocardial_infarction_inthehistory",
+  "patient_has_finding_of_angina_pectoris_inthepast7days",
+  "patient_has_finding_of_exercise_tolerance_test_abnormal_inthepast7days",
+  "patient_has_finding_of_angina_pectoris_now",
+  "patient_exercise_tolerance_test_value_recorded_inthepast7days_withunit_minutes",
+  "patient_has_undergone_exercise_tolerance_test_inthepast7days",
+  "patient_has_finding_of_exercise_tolerance_test_abnormal_now",
+  "patient_has_childbearing_potential_now",
+  "patient_is_lactating_now",
+  "patient_is_pregnant_inthepast14days",
+  "patient_has_undergone_urine_pregnancy_test_inthepast14days",
+  "patient_has_undergone_urine_pregnancy_test_inthehistory_outcome_is_negative"
+]

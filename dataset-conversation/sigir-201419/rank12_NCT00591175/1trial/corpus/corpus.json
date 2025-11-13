@@ -1,0 +1,23 @@
+{
+  "_id": "NCT00591175",
+  "title": "A Randomized Clinical Trial Assessing Smoking Cessation Interventions In Dental Clinic Smokers",
+  "text": "Summary: The goal of this study is to see if giving patients information about how smoking affects oral health will help them quit smoking. What we learn from this study will help researchers find new ways to help smokers.\nInclusion criteria: inclusion criteria: \n\n Patient seeking routine dental care at NYU College of Dentistry and meets medical clearance for routine care \n\n Active smokers (active smoking as self-reported regular use of at least 10 cigarettes per day) \n\n Able to provide a telephone number or collateral contact information where they can be reached over the subsequent 12 months \n\n Fluent in English or Spanish \n\n \nExclusion criteria: : \n\n History of mouth or throat cancer",
+  "metadata": {
+    "brief_title": "A Randomized Clinical Trial Assessing Smoking Cessation Interventions In Dental Clinic Smokers",
+    "phase": "",
+    "drugs": "['Standard Care only', 'Dental Hygienist provided counseling + Brief Questionnaire', 'Dental Hygienist provided counseling with personalized risk communication + Brief Questionnaire']",
+    "drugs_list": [
+      "Standard Care only",
+      "Dental Hygienist provided counseling + Brief Questionnaire",
+      "Dental Hygienist provided counseling with personalized risk communication + Brief Questionnaire"
+    ],
+    "diseases": "['Smoking Cessation']",
+    "diseases_list": [
+      "Smoking Cessation"
+    ],
+    "enrollment": "1072.0",
+    "inclusion_criteria": "inclusion criteria: \n\n Patient seeking routine dental care at NYU College of Dentistry and meets medical clearance for routine care \n\n Active smokers (active smoking as self-reported regular use of at least 10 cigarettes per day) \n\n Able to provide a telephone number or collateral contact information where they can be reached over the subsequent 12 months \n\n Fluent in English or Spanish \n\n ",
+    "exclusion_criteria": ": \n\n History of mouth or throat cancer",
+    "brief_summary": "The goal of this study is to see if giving patients information about how smoking affects oral health will help them quit smoking. What we learn from this study will help researchers find new ways to help smokers."
+  }
+}

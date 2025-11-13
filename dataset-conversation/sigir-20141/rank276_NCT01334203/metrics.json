@@ -1,0 +1,13 @@
+{
+  "canonical_nct_id": "NCT01334203",
+  "status": "eliminated",
+  "rep_trial_id": 2236,
+  "rep_status": "eliminated",
+  "total_clauses": 3,
+  "unsat_any": 1,
+  "unsat_explicit": 1,
+  "frac_unsat_any": 0.333333,
+  "pct_unsat_any": 33.333,
+  "pct_unsat_explicit": 33.333,
+  "best_sub_rank": 309
+}

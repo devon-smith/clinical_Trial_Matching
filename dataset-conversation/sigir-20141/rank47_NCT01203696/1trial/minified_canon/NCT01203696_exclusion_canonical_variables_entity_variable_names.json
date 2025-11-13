@@ -1,0 +1,9 @@
+[
+  "patient_is_taking_amlodipine_containing_product_now",
+  "patient_has_finding_of_thrombocytopenic_disorder_now",
+  "patient_has_finding_of_end_stage_renal_disease_now",
+  "patient_has_finding_of_allergy_to_amlodipine_now",
+  "patient_is_pregnant_now",
+  "patient_is_lactating_now",
+  "patient_is_exposed_to_cytochrome_p450_cyp3a4_enzyme_inthepast7days"
+]

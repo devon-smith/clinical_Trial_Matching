@@ -1,0 +1,16 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_infectious_disease_of_abdomen_now",
+  "patient_has_finding_of_acute_appendicitis_now",
+  "patient_has_finding_of_acute_appendicitis_with_appendix_abscess_now",
+  "patient_has_finding_of_acute_perforated_appendicitis_now",
+  "patient_has_finding_of_diverticulitis_now",
+  "patient_has_diagnosis_of_acute_cholecystitis_now",
+  "patient_has_diagnosis_of_acute_gangrenous_cholecystitis_now",
+  "patient_has_finding_of_duodenal_perforation_now",
+  "patient_has_finding_of_perforation_of_stomach_now",
+  "patient_has_finding_of_peritonitis_now",
+  "patient_has_finding_of_abdominal_abscess_now",
+  "patient_has_finding_of_abscess_of_liver_now",
+  "patient_has_finding_of_splenic_abscess_now"
+]

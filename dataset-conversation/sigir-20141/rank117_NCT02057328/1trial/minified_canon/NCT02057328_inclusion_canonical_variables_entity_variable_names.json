@@ -1,0 +1,6 @@
+[
+  "patient_has_undergone_ambulatory_blood_pressure_recording_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_has_undergone_ambulatory_blood_pressure_recording_inthehistory",
+  "patient_systolic_blood_pressure_value_recorded_inthehistory_withunit_millimeters_of_mercury"
+]

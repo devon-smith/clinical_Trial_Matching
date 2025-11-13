@@ -1,0 +1,30 @@
+;; ===================== PROJECTED CANON (QE) =====================
+;; Each clause below is entailed by Proj = ∃W.F over the canonical vocabulary.
+;; Units appear first for clarity; OR-clauses (SAT-filtered) follow.
+;; ==================================================================
+
+;; Unit Bool constraints (entailed)
+(assert (not patient_has_diagnosis_of_cerebrovascular_accident_inthehistory))
+(assert (not patient_has_diagnosis_of_seizure_disorder_inthehistory))
+(assert (not patient_has_finding_of_kidney_stone_inthehistory))
+(assert (not patient_has_finding_of_hiv_positive_now))
+(assert (not patient_has_diagnosis_of_diabetes_mellitus_now))
+(assert (not patient_has_diagnosis_of_malignant_neoplastic_disease_inthepast5years))
+(assert (not patient_will_undergo_bariatric_operative_procedure_inthefuture1years))
+(assert (not patient_has_undergone_bariatric_operative_procedure_inthehistory))
+(assert (not patient_has_finding_of_suicidal_now))
+(assert (not patient_has_diagnosis_of_major_depressive_disorder_inthepast6months))
+(assert (not patient_has_diagnosis_of_bipolar_disorder_inthehistory))
+(assert (not patient_has_diagnosis_of_psychotic_disorder_inthehistory))
+(assert (not patient_is_taking_anti_psychotic_agent_now))
+(assert (not patient_has_finding_of_alcohol_abuse_inthepast6months))
+(assert (not patient_has_finding_of_substance_misuse_behavior_inthepast6months))
+(assert (not patient_is_exposed_to_anticonvulsant_now))
+(assert (not patient_is_taking_zonisamide_containing_product_now))
+(assert (not patient_has_finding_of_allergy_to_sulfonamide_inthehistory))
+(assert (not patient_is_pregnant_now))
+(assert (not patient_is_pregnant_inthefuture1years))
+(assert (not patient_is_breastfeeding_now))
+(assert (not patient_has_finding_of_carbohydrate_restricted_diet_now))
+(assert (not patient_has_finding_of_high_fat_diet_now))
+(assert (not patient_has_finding_of_increased_protein_diet_now))

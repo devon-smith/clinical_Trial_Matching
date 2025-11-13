@@ -1,0 +1,13 @@
+[
+  "patient_has_finding_of_fever_now",
+  "patient_can_undergo_implantation_of_insertable_loop_recorder_now",
+  "patient_has_finding_of_persistent_infection_now",
+  "patient_has_finding_of_sepsis_now",
+  "patient_has_finding_of_palpitations_now",
+  "patient_has_finding_of_pulse_missed_beats_now",
+  "patient_has_finding_of_heart_valve_disorder_now",
+  "patient_has_finding_of_myocardial_disease_now",
+  "patient_has_finding_of_heart_murmur_now",
+  "patient_has_finding_of_electrocardiogram_abnormal_now",
+  "patient_has_finding_of_thyrotoxicosis_now"
+]

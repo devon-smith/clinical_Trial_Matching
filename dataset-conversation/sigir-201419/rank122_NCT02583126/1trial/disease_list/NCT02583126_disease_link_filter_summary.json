@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-22T21:08:50",
+  "trial_id": "NCT02583126",
+  "contextual": {
+    "_id": "NCT02583126",
+    "title": "Guided Imagery and Music for the Reduction of Side Effects of Chemotherapy in Teenagers",
+    "text": "Summary: The purpose of this study is to determine whether a modified and resource-oriented form of Guided Imagery and Music (GIM) is effective in reducing side effects of chemotherapy in teenagers with cancer.\nInclusion criteria: inclusion criteria: \n\n Teenagers at the ages 12-17 \n\n Four or five (dependent on their overall plan of medical treatment) consecutive courses of chemotherapy administrated at the involved child cancer units and (administered) over a period of minimum 24 hours incl. hydration with assumed moderate to severe nausea and vomiting. \n\n The specific type of chemotherapy may vary across the four/five consecutive courses but shall include one of the following moderate and/or highly emetogenic types of chemotherapy: \n\n Moderate emetogenic chemotherapy: \n\n Carboplatin \n\n Cyclophosphamide <1500 mg/m2 \n\n Cytarabine >1 g/m2 \n\n Daunorubicin \n\n Doxorubicin \n\n Epirubicin \n\n Idarubicin \n\n Ifosfamide \n\n Mitoxantrone \n\n Methotrexate >1000 mg/m2 \n\n Highly emetogenic chemotherapy: \n\n Cisplatin >25 mg/m2 \n\n Cyclophosphamide >1500 mg/m2 \n\n Dacarbazine \n\n Understand Norwegian/Danish \n\n Read Norwegian/Danish (teenagers or alternatively parents) \n\n No significant hearing impairment \n\n Informed written consent (teenagers ≥16 years and parents) \n\n Subsequent verbal confirmation of written informed consent before enrolment in study \n\n \nExclusion criteria: : \n\n Previous and/or acute psychiatric diagnosis \n\n Cognitive and mental deficits or impaired functioning",
+    "metadata": {
+      "brief_title": "Guided Imagery and Music for the Reduction of Side Effects of Chemotherapy in Teenagers",
+      "phase": "",
+      "drugs": "['Guided Imagery and Music']",
+      "drugs_list": [
+        "Guided Imagery and Music"
+      ],
+      "diseases": "['Cancer']",
+      "diseases_list": [
+        "Cancer"
+      ],
+      "enrollment": "68.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Teenagers at the ages 12-17 \n\n Four or five (dependent on their overall plan of medical treatment) consecutive courses of chemotherapy administrated at the involved child cancer units and (administered) over a period of minimum 24 hours incl. hydration with assumed moderate to severe nausea and vomiting. \n\n The specific type of chemotherapy may vary across the four/five consecutive courses but shall include one of the following moderate and/or highly emetogenic types of chemotherapy: \n\n Moderate emetogenic chemotherapy: \n\n Carboplatin \n\n Cyclophosphamide <1500 mg/m2 \n\n Cytarabine >1 g/m2 \n\n Daunorubicin \n\n Doxorubicin \n\n Epirubicin \n\n Idarubicin \n\n Ifosfamide \n\n Mitoxantrone \n\n Methotrexate >1000 mg/m2 \n\n Highly emetogenic chemotherapy: \n\n Cisplatin >25 mg/m2 \n\n Cyclophosphamide >1500 mg/m2 \n\n Dacarbazine \n\n Understand Norwegian/Danish \n\n Read Norwegian/Danish (teenagers or alternatively parents) \n\n No significant hearing impairment \n\n Informed written consent (teenagers ≥16 years and parents) \n\n Subsequent verbal confirmation of written informed consent before enrolment in study \n\n ",
+      "exclusion_criteria": ": \n\n Previous and/or acute psychiatric diagnosis \n\n Cognitive and mental deficits or impaired functioning",
+      "brief_summary": "The purpose of this study is to determine whether a modified and resource-oriented form of Guided Imagery and Music (GIM) is effective in reducing side effects of chemotherapy in teenagers with cancer."
+    }
+  },
+  "linked_result": {
+    "Cancer": {
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Cancer",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Cancer": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Cancer": {
+      "disease": "Cancer",
+      "conceptId": "363346000",
+      "preferred_term": "Malignant neoplastic disease",
+      "fully_specified_name": "Malignant neoplastic disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A neoplasm composed of atypical neoplastic, often pleomorphic cells that invade other tissues. Malignant neoplasms often metastasize to distant anatomic sites and may recur after excision. The most common malignant neoplasms are carcinomas, Hodgkin and non-Hodgkin lymphomas, leukemias, melanomas, and sarcomas.",
+      "best_match_term": "Cancer"
+    }
+  }
+}

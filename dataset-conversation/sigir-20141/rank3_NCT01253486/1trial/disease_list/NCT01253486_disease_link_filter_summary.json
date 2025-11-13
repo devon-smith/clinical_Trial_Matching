@@ -1,0 +1,72 @@
+{
+  "generated": "2025-10-20T23:29:57",
+  "trial_id": "NCT01253486",
+  "contextual": {
+    "_id": "NCT01253486",
+    "title": "Expressive Writing for Heart Healing",
+    "text": "Summary: This study will determine whether the psychological and physical benefits of expressive writing extend to obese in-patients with Ischemic Heart Disease (IHD)referred to cardiac rehabilitation\nInclusion criteria: inclusion criteria: \n\n obesity \n\n Ischemic Heart disease \n\n Signed informed consent \n\n \nExclusion criteria: : \n\n Visual or manual limitations that preclude reading and writing \n\n Unwilling to participate",
+    "metadata": {
+      "brief_title": "Expressive Writing for Heart Healing",
+      "phase": "",
+      "drugs": "['Disease-related Expressive writing', 'Active Comparator: Traditional expressive writing', 'Sham Comparator: Neutral writing']",
+      "drugs_list": [
+        "Disease-related Expressive writing",
+        "Active Comparator: Traditional expressive writing",
+        "Sham Comparator: Neutral writing"
+      ],
+      "diseases": "['Ischemic Heart Disease', 'Obesity']",
+      "diseases_list": [
+        "Ischemic Heart Disease",
+        "Obesity"
+      ],
+      "enrollment": "100.0",
+      "inclusion_criteria": "inclusion criteria: \n\n obesity \n\n Ischemic Heart disease \n\n Signed informed consent \n\n ",
+      "exclusion_criteria": ": \n\n Visual or manual limitations that preclude reading and writing \n\n Unwilling to participate",
+      "brief_summary": "This study will determine whether the psychological and physical benefits of expressive writing extend to obese in-patients with Ischemic Heart Disease (IHD)referred to cardiac rehabilitation"
+    }
+  },
+  "linked_result": {
+    "Ischemic Heart Disease": {
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease",
+      "match_reason": "Exact"
+    },
+    "Obesity": {
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Ischemic Heart Disease": 1,
+    "Obesity": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Ischemic Heart Disease": {
+      "disease": "Ischemic Heart Disease",
+      "conceptId": "414545008",
+      "preferred_term": "Ischemic heart disease",
+      "fully_specified_name": "Ischemic heart disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).",
+      "best_match_term": "Ischemic heart disease"
+    },
+    "Obesity": {
+      "disease": "Obesity",
+      "conceptId": "414916001",
+      "preferred_term": "Obesity",
+      "fully_specified_name": "Obesity (disorder)",
+      "type": "Clinical finding",
+      "definition": "The amount of fat or lipid deposit at a site or an organ in the body, an indicator of body fat status.",
+      "best_match_term": "Obesity"
+    }
+  }
+}

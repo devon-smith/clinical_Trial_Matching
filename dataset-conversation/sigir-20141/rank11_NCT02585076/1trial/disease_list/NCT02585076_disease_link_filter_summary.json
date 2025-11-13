@@ -1,0 +1,70 @@
+{
+  "generated": "2025-10-22T21:21:23",
+  "trial_id": "NCT02585076",
+  "contextual": {
+    "_id": "NCT02585076",
+    "title": "A Cross-sectional Study for the Determination of the Prevalence of Non-valvular Atrial Fibrillation Among Patients Diagnosed With Hypertension",
+    "text": "Summary: Arterial hypertension has been recognized as a major causal factor for atrial fibrillation (AF), the most common sustained cardiac arrhythmia. In light of its worldwide increasing prevalence and incidence and the accompanied increase in the risk of stroke, thromboembolic events and mortality, AF has emerged as a global healthcare problem.~Early diagnosis of AF, prior to the occurrence of complications is a recognized priority for the prevention of strokes. Once diagnosed, anticoagulant therapy is the cornerstone in the management of the risk of stroke in AF patients. The 2012 ESC Guidelines recommend the use of a risk factor-based approach to stroke risk stratification for AF patients.~This study aims towards gaining real-world data on the prevalence of non-valvular atrial fibrillation (NVAF) among hypertensives in Greece. The rate of ESC guideline-adherent antithrombotic therapy on the basis of stroke and bleeding risk assessments, and factors influencing treatment decision-making will be assessed as well in patients diagnosed with the arrhythmia.~Finally, potential differences in the NVAF prevalence in adequately and inadequately controlled hypertensives will be documented.\nInclusion criteria: inclusion criteria: \n\n Female and male outpatients aged 60 years and older \n\n Patients having being diagnosed with arterial hypertension \n\n For patients without a history of AF diagnosis, the decision to perform electrocardiography testing, either standard 12-lead ECG or ambulatory ECG, at the study visit has been made as per the investigator's routine practice \n\n Patients with available medical records \n\n Written signed and dated informed consent \n\n \nExclusion criteria:  \n\n Presence of any condition/circumstance which in the opinion of the investigator would make the patient unfit to participate in the study or would compromise the quality of the study data (e.g., non-native speaker or patient who does not understand the local language unless reliable interpreter services are available; failure to cooperate due to major psychiatric disturbances, dementia, or substance use disorder) \n\n Patients currently participating in any investigational program with interventions outside of routine clinical practice or who have received any investigational product within 1 month or 5 half-lives of the investigational agent (whichever is longer) prior to enrollment",
+    "metadata": {
+      "brief_title": "A Cross-sectional Study for the Determination of the Prevalence of Non-valvular Atrial Fibrillation Among Patients Diagnosed With Hypertension",
+      "phase": "",
+      "drugs": "['Standard of care']",
+      "drugs_list": [
+        "Standard of care"
+      ],
+      "diseases": "['Hypertension', 'Atrial Fibrillation']",
+      "diseases_list": [
+        "Hypertension",
+        "Atrial Fibrillation"
+      ],
+      "enrollment": "1119.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Female and male outpatients aged 60 years and older \n\n Patients having being diagnosed with arterial hypertension \n\n For patients without a history of AF diagnosis, the decision to perform electrocardiography testing, either standard 12-lead ECG or ambulatory ECG, at the study visit has been made as per the investigator's routine practice \n\n Patients with available medical records \n\n Written signed and dated informed consent \n\n ",
+      "exclusion_criteria": " \n\n Presence of any condition/circumstance which in the opinion of the investigator would make the patient unfit to participate in the study or would compromise the quality of the study data (e.g., non-native speaker or patient who does not understand the local language unless reliable interpreter services are available; failure to cooperate due to major psychiatric disturbances, dementia, or substance use disorder) \n\n Patients currently participating in any investigational program with interventions outside of routine clinical practice or who have received any investigational product within 1 month or 5 half-lives of the investigational agent (whichever is longer) prior to enrollment",
+      "brief_summary": "Arterial hypertension has been recognized as a major causal factor for atrial fibrillation (AF), the most common sustained cardiac arrhythmia. In light of its worldwide increasing prevalence and incidence and the accompanied increase in the risk of stroke, thromboembolic events and mortality, AF has emerged as a global healthcare problem.~Early diagnosis of AF, prior to the occurrence of complications is a recognized priority for the prevention of strokes. Once diagnosed, anticoagulant therapy is the cornerstone in the management of the risk of stroke in AF patients. The 2012 ESC Guidelines recommend the use of a risk factor-based approach to stroke risk stratification for AF patients.~This study aims towards gaining real-world data on the prevalence of non-valvular atrial fibrillation (NVAF) among hypertensives in Greece. The rate of ESC guideline-adherent antithrombotic therapy on the basis of stroke and bleeding risk assessments, and factors influencing treatment decision-making will be assessed as well in patients diagnosed with the arrhythmia.~Finally, potential differences in the NVAF prevalence in adequately and inadequately controlled hypertensives will be documented."
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    },
+    "Atrial Fibrillation": {
+      "conceptId": "49436004",
+      "preferred_term": "Atrial fibrillation",
+      "fully_specified_name": "Atrial fibrillation (disorder)",
+      "type": "Clinical finding",
+      "definition": "Abnormal cardiac rhythm that is characterized by rapid, uncoordinated firing of electrical impulses in the upper chambers of the heart (HEART ATRIA). In such case, blood cannot be effectively pumped into the lower chambers of the heart (HEART VENTRICLES). It is caused by abnormal impulse generation.",
+      "best_match_term": "Atrial fibrillation",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1,
+    "Atrial Fibrillation": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    },
+    "Atrial Fibrillation": {
+      "disease": "Atrial Fibrillation",
+      "conceptId": "49436004",
+      "preferred_term": "Atrial fibrillation",
+      "fully_specified_name": "Atrial fibrillation (disorder)",
+      "type": "Clinical finding",
+      "definition": "Abnormal cardiac rhythm that is characterized by rapid, uncoordinated firing of electrical impulses in the upper chambers of the heart (HEART ATRIA). In such case, blood cannot be effectively pumped into the lower chambers of the heart (HEART VENTRICLES). It is caused by abnormal impulse generation.",
+      "best_match_term": "Atrial fibrillation"
+    }
+  }
+}

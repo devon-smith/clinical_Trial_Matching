@@ -1,0 +1,60 @@
+{
+  "generated": "2025-10-22T21:21:16",
+  "trial_id": "NCT01356992",
+  "contextual": {
+    "_id": "NCT01356992",
+    "title": "Patients With High-risk Acute Coronary Syndrome Without ST-segment Elevation",
+    "text": "Summary: This non-inferiority study aims at comparing Versa® to the reference enoxaparin (Clexane®, Sanofi-Aventis) in patients with high-risk unstable angina and NSTEMI. The main justification is the search for scientific evidence to prove the Versa® effectiveness for this new therapeutic indication, since it is a product with potential for reducing costs, with effectiveness and safety comparable to the reference drug.\nInclusion criteria: inclusion criteria: \n\n ICF signature; \n\n The research subject must agree about following all instructions and perform the procedures and study visits; \n\n Men and women over the age of 18 and below the age of 75; \n\n History of angina of rest with a minimum duration of 20 minutes in the last 24 hours at the beginning and at least for 10 days. \n\n Patient Randomization up to 6 hours after the arrival at the emergency sector. \n\n Evidence of NSTEMI or unstable angina due to one or more of the following criteria: \n\n 1. Dynamic alterations on the T-wave (ST-segment depression or elevation > 1 mm, and/or T-wave inversions which are solved at least partially when the symptoms are relieved) or 2. Unevenly ST-segment (depression or elevation) in a transitional way under continuous derivations (V1+V2 or V3+V4 or V5+V6 or D1+AVL or D2+D3+AVF) or 3. Biochemical alteration on the myocardial necrosis markers (CKMB mass, troponin T or I and CPK), with the appearance of enzymatic curve, characterizing myocardial injury or 5. Pulmonary Edema; or 6. Angina associated to murmur of mitral regurgitation; or 7. Angina with heart sound to cardiac auscultation or throes; or 8. Angina with hypotension; \n\n \nExclusion criteria: : \n\n 12-derivation-ECG with persistent ST-segment elevation; \n\n Diagnosis of angina by secondary cause (e.g., anemia, fever, hypovolemia, dehydration, use of cocaine); \n\n Use of non-fractionated heparin or low-molecular weight heparin in the prior 48 to the randomization; \n\n Concomitant diseases, such as severe renal failure (creatinine clearance lower than 30ml/min.) and hepatic, or other significant comorbidities under investigator judgment; \n\n Recent hemorrhagic cerebrovascular accident (last 12 months); \n\n Patient scheduled for cardiac surgery of myocardial revascularization; \n\n Use of drugs, alcohol abuse; \n\n Pregnancy or lactation; \n\n Recent neurosurgery or ophthalmic surgery (last 3 months); \n\n History or diagnosis of coagulopathy; \n\n Medical record containing allergy, hypersensibility or intolerance to any of the drug components to be used on this study, which is judged as clinically significant in the main investigator's opinion; \n\n Recent participation (last 12 months) in a clinical study.",
+    "metadata": {
+      "brief_title": "Patients With High-risk Acute Coronary Syndrome Without ST-segment Elevation",
+      "phase": "Phase 3",
+      "drugs": "['Enoxaparin']",
+      "drugs_list": [
+        "Enoxaparin"
+      ],
+      "diseases": "['Non ST Segment Elevation Myocardial Infarction', 'Unstable Angina']",
+      "diseases_list": [
+        "Non ST Segment Elevation Myocardial Infarction",
+        "Unstable Angina"
+      ],
+      "enrollment": "62.0",
+      "inclusion_criteria": "inclusion criteria: \n\n ICF signature; \n\n The research subject must agree about following all instructions and perform the procedures and study visits; \n\n Men and women over the age of 18 and below the age of 75; \n\n History of angina of rest with a minimum duration of 20 minutes in the last 24 hours at the beginning and at least for 10 days. \n\n Patient Randomization up to 6 hours after the arrival at the emergency sector. \n\n Evidence of NSTEMI or unstable angina due to one or more of the following criteria: \n\n 1. Dynamic alterations on the T-wave (ST-segment depression or elevation > 1 mm, and/or T-wave inversions which are solved at least partially when the symptoms are relieved) or 2. Unevenly ST-segment (depression or elevation) in a transitional way under continuous derivations (V1+V2 or V3+V4 or V5+V6 or D1+AVL or D2+D3+AVF) or 3. Biochemical alteration on the myocardial necrosis markers (CKMB mass, troponin T or I and CPK), with the appearance of enzymatic curve, characterizing myocardial injury or 5. Pulmonary Edema; or 6. Angina associated to murmur of mitral regurgitation; or 7. Angina with heart sound to cardiac auscultation or throes; or 8. Angina with hypotension; \n\n ",
+      "exclusion_criteria": ": \n\n 12-derivation-ECG with persistent ST-segment elevation; \n\n Diagnosis of angina by secondary cause (e.g., anemia, fever, hypovolemia, dehydration, use of cocaine); \n\n Use of non-fractionated heparin or low-molecular weight heparin in the prior 48 to the randomization; \n\n Concomitant diseases, such as severe renal failure (creatinine clearance lower than 30ml/min.) and hepatic, or other significant comorbidities under investigator judgment; \n\n Recent hemorrhagic cerebrovascular accident (last 12 months); \n\n Patient scheduled for cardiac surgery of myocardial revascularization; \n\n Use of drugs, alcohol abuse; \n\n Pregnancy or lactation; \n\n Recent neurosurgery or ophthalmic surgery (last 3 months); \n\n History or diagnosis of coagulopathy; \n\n Medical record containing allergy, hypersensibility or intolerance to any of the drug components to be used on this study, which is judged as clinically significant in the main investigator's opinion; \n\n Recent participation (last 12 months) in a clinical study.",
+      "brief_summary": "This non-inferiority study aims at comparing Versa® to the reference enoxaparin (Clexane®, Sanofi-Aventis) in patients with high-risk unstable angina and NSTEMI. The main justification is the search for scientific evidence to prove the Versa® effectiveness for this new therapeutic indication, since it is a product with potential for reducing costs, with effectiveness and safety comparable to the reference drug."
+    }
+  },
+  "linked_result": {
+    "Non ST Segment Elevation Myocardial Infarction": {
+      "conceptId": "401314000",
+      "preferred_term": "Acute non-ST segment elevation myocardial infarction",
+      "fully_specified_name": "Acute non-ST segment elevation myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "NSTEMI - Non-ST segment elevation MI",
+      "match_reason": "Exact"
+    },
+    "Unstable Angina": {
+      "conceptId": "4557003",
+      "preferred_term": "Preinfarction syndrome",
+      "fully_specified_name": "Preinfarction syndrome (disorder)",
+      "type": "Clinical finding",
+      "definition": "Precordial pain at rest, which may precede a MYOCARDIAL INFARCTION.",
+      "best_match_term": "Unstable angina",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Non ST Segment Elevation Myocardial Infarction": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Non ST Segment Elevation Myocardial Infarction": {
+      "disease": "Non ST Segment Elevation Myocardial Infarction",
+      "conceptId": "401314000",
+      "preferred_term": "Acute non-ST segment elevation myocardial infarction",
+      "fully_specified_name": "Acute non-ST segment elevation myocardial infarction (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "NSTEMI - Non-ST segment elevation MI"
+    }
+  }
+}

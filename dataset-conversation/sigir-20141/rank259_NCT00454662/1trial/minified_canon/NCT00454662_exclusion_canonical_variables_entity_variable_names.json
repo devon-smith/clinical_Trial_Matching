@@ -1,0 +1,23 @@
+[
+  "patient_has_finding_of_malignant_hypertension_now",
+  "patient_has_finding_of_secondary_hypertension_now",
+  "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+  "patient_has_diagnosis_of_transient_cerebral_ischemia_inthehistory",
+  "patient_will_undergo_coronary_artery_bypass_graft_inthefuture",
+  "patient_has_undergone_coronary_artery_bypass_graft_inthehistory",
+  "patient_will_undergo_percutaneous_coronary_intervention_inthefuture",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthehistory",
+  "patient_has_finding_of_angina_pectoris_inthehistory",
+  "patient_has_finding_of_heart_failure_inthehistory",
+  "patient_has_finding_of_heart_failure_now",
+  "patient_has_finding_of_abnormal_liver_function_now",
+  "patient_is_undergoing_dialysis_procedure_now",
+  "patient_has_finding_of_renal_impairment_now",
+  "patient_is_exposed_to_calcium_channel_blocker_now",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_is_exposed_to_diuretic_now",
+  "patient_has_hypersensitivity_to_angiotensin_ii_receptor_antagonist_containing_product_inthehistory",
+  "patient_has_hypersensitivity_to_calcium_channel_blocker_inthehistory",
+  "patient_has_hypersensitivity_to_diuretic_inthehistory",
+  "patient_has_finding_of_malignant_neoplastic_disease_now"
+]

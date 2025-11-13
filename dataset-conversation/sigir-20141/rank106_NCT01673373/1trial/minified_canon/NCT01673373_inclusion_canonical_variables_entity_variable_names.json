@@ -1,0 +1,11 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_renal_artery_stenosis_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_mmhg",
+  "patient_is_exposed_to_hypotensive_agent_inthehistory",
+  "patient_hypotensive_agent_value_recorded_inthehistory_withunit_count",
+  "patient_has_diagnosis_of_hypertensive_disorder_inthehistory",
+  "patient_has_undergone_ct_angiography_inthehistory",
+  "patient_has_undergone_magnetic_resonance_imaging_mri_of_vessels_inthehistory",
+  "patient_has_undergone_ultrasonography_inthehistory"
+]

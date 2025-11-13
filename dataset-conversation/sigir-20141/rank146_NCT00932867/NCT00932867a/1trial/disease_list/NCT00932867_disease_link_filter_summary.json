@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:29:14",
+  "trial_id": "NCT00932867",
+  "contextual": {
+    "_id": "NCT00932867",
+    "title": "Surveillance of Efficacy and Safety of Drug PRITOR in patieNts With Arterial Hypertension, Who do Not Tolerate ACE inhibitoR Treatment",
+    "text": "Summary: Surveillance of efficacy and safety of drug PRITOR in patieNts with arterial hypertension, who do not tolerate ACE inhibitoR treatment\nInclusion criteria: inclusion criteria: \n\n Patients over 18 years of age \n\n Arterial hypertension (SBP < 160 mmHg and DBP < 100 mmHg) \n\n Patients, who do not tolerate ACE inhibitors (must be documented in the official ambulant documentation) \n\n inclusion criteria for the control arm (treated by ACEi): \n\n Patients over 18 years of age \n\n Arterial hypertension (SBP < 160 mmHg and DBP < 100 mmHg) \n\n Patients, who tolerate ACEi treatment \n\n \nExclusion criteria: : \n\n Cholestasis, severe hepatic insufficiency \n\n Allergy to telmisartan \n\n Gravidity or lactation \n\n ",
+    "metadata": {
+      "brief_title": "Surveillance of Efficacy and Safety of Drug PRITOR in patieNts With Arterial Hypertension, Who do Not Tolerate ACE inhibitoR Treatment",
+      "phase": "",
+      "drugs": "['Kinzal/Pritor (Telmisartan, BAY68-9291)']",
+      "drugs_list": [
+        "Kinzal/Pritor (Telmisartan",
+        "BAY68-9291)"
+      ],
+      "diseases": "['Hypertension']",
+      "diseases_list": [
+        "Hypertension"
+      ],
+      "enrollment": "3114.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patients over 18 years of age \n\n Arterial hypertension (SBP < 160 mmHg and DBP < 100 mmHg) \n\n Patients, who do not tolerate ACE inhibitors (must be documented in the official ambulant documentation) \n\n inclusion criteria for the control arm (treated by ACEi): \n\n Patients over 18 years of age \n\n Arterial hypertension (SBP < 160 mmHg and DBP < 100 mmHg) \n\n Patients, who tolerate ACEi treatment \n\n ",
+      "exclusion_criteria": ": \n\n Cholestasis, severe hepatic insufficiency \n\n Allergy to telmisartan \n\n Gravidity or lactation \n\n ",
+      "brief_summary": "Surveillance of efficacy and safety of drug PRITOR in patieNts with arterial hypertension, who do not tolerate ACE inhibitoR treatment"
+    }
+  },
+  "linked_result": {
+    "Hypertension": {
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Hypertension": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Hypertension": {
+      "disease": "Hypertension",
+      "conceptId": "38341003",
+      "preferred_term": "Hypertensive disorder",
+      "fully_specified_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.",
+      "best_match_term": "Hypertension"
+    }
+  }
+}

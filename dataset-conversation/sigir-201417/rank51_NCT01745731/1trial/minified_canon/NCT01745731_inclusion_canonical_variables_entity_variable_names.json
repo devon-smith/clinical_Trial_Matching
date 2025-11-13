@@ -1,0 +1,19 @@
+[
+  "patient_sex_is_male_now",
+  "patient_sex_is_female_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_alanine_aminotransferase_measurement_value_recorded_now_withunit_units_per_liter",
+  "patient_aspartate_transaminase_level_value_recorded_now_withunit_units_per_liter",
+  "patient_creatinine_level_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_neutrophil_count_value_recorded_now_withunit_cells_per_microliter",
+  "patient_platelet_count_value_recorded_now_withunit_cells_per_microliter",
+  "patient_white_blood_cell_count_value_recorded_now_withunit_cells_per_microliter",
+  "patient_has_finding_of_space_occupying_lesion_of_liver_now",
+  "patient_will_undergo_embolization_procedure_inthefuture",
+  "patient_has_undergone_hepatic_function_panel_now",
+  "patient_has_finding_of_liver_cell_carcinoma_now",
+  "patient_has_finding_of_liver_damage_now",
+  "patient_has_finding_of_secondary_malignant_neoplasm_of_liver_now",
+  "patient_has_finding_of_secondary_malignant_neoplastic_disease_now",
+  "patient_will_undergo_tylectomy_inthefuture"
+]

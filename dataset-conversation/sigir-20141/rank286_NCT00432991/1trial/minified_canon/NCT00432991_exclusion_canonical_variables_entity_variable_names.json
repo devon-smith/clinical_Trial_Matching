@@ -1,0 +1,14 @@
+[
+  "patient_has_contraindication_to_spinal_anesthesia_now",
+  "patient_has_finding_of_allergy_to_drug_now",
+  "patient_has_finding_of_pre_eclampsia_inthehistory",
+  "patient_has_finding_of_pregnancy_induced_hypertension_inthehistory",
+  "patient_has_finding_of_hypertensive_disorder_inthehistory",
+  "patient_has_diagnosis_of_diabetes_mellitus_now",
+  "patient_has_finding_of_hyperemesis_gravidarum_now",
+  "patient_has_finding_of_nausea_inthehistory",
+  "patient_has_finding_of_vomiting_inthehistory",
+  "patient_has_finding_of_motion_sickness_inthehistory",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_fetal_anomaly_present_in_specimen_now"
+]

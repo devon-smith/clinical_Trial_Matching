@@ -1,0 +1,16 @@
+[
+  "patient_has_finding_of_human_immunodeficiency_virus_infection_now",
+  "patient_has_finding_of_neutropenia_now",
+  "patient_has_finding_of_patient_immunosuppressed_now",
+  "patient_is_exposed_to_prednisone_now",
+  "patient_prednisone_value_recorded_now_withunit_days",
+  "patient_prednisone_value_recorded_now_withunit_milligrams_per_day",
+  "patient_has_undergone_solid_organ_transplant_inthehistory",
+  "patient_has_undergone_splenectomy_inthehistory",
+  "patient_has_finding_of_abscess_now",
+  "patient_has_finding_of_bacterial_endocarditis_now",
+  "patient_has_finding_of_disorder_due_to_infection_now",
+  "patient_has_finding_of_pneumonia_now",
+  "patient_has_finding_of_pleural_effusion_associated_with_pulmonary_infection_now",
+  "patient_has_finding_of_dead_inthehistory"
+]

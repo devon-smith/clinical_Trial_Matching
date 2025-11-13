@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_injury_of_head_inthehistory",
+  "patient_loss_of_consciousness_value_recorded_inthehistory_withunit_minutes",
+  "patient_has_finding_of_hearing_loss_now",
+  "patient_has_finding_of_claustrophobia_now",
+  "patient_has_finding_of_foreign_body_now",
+  "patient_can_undergo_magnetic_resonance_imaging_now",
+  "patient_has_finding_of_alcohol_abuse_now"
+]

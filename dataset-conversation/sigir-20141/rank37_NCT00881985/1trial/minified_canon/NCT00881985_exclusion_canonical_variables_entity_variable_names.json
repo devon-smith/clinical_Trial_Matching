@@ -1,0 +1,19 @@
+[
+  "patient_glomerular_filtration_rate_value_recorded_now_withunit_ml_per_min_per_m2",
+  "patient_has_finding_of_renal_impairment_now",
+  "patient_has_finding_of_hypertension_secondary_to_endocrine_disorder_now",
+  "patient_has_finding_of_secondary_hypertension_now",
+  "patient_has_finding_of_congestive_heart_failure_now",
+  "patient_blood_pressure_value_recorded_now_withunit_mm_hg",
+  "patient_is_taking_corticosteroid_and_corticosteroid_derivative_containing_product_now",
+  "patient_is_exposed_to_non_steroidal_anti_inflammatory_agent_now",
+  "patient_is_exposed_to_hypotensive_agent_now",
+  "patient_has_diagnosis_of_cerebrovascular_accident_inthehistory",
+  "patient_has_diagnosis_of_myocardial_infarction_inthehistory",
+  "patient_has_diagnosis_of_preinfarction_syndrome_now",
+  "patient_has_finding_of_disorder_due_to_infection_now",
+  "patient_has_finding_of_rheumatoid_arthritis_now",
+  "patient_has_finding_of_hypersomnia_now",
+  "patient_has_undergone_antihypertensive_therapy_inthehistory",
+  "patient_has_undergone_antihypertensive_therapy_inthepast8weeks"
+]

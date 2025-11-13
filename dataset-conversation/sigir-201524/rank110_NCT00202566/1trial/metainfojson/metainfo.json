@@ -1,0 +1,24 @@
+{
+  "trial_id": "NCT00202566",
+  "contextual": {
+    "_id": "NCT00202566",
+    "title": "Efficacy and Safety of Ivabradine on Top of Atenolol in Stable Angina Pectoris",
+    "text": "Summary: To test whether ivabradine when given in combination with atenolol is able to improve the exercise tolerance of patients with stable angina pectoris\nInclusion criteria: inclusion criteria: \n\n Chronic stable angina pectoris \n\n Documented coronary artery disease \n\n Previous treatment with atenolol or other beta-blocker agent \n\n Exercise tolerance test positivity and stability \n\n \nExclusion criteria: : \n\n Heart rate < 60 bpm \n\n Congestive heart failure",
+    "metadata": {
+      "brief_title": "Efficacy and Safety of Ivabradine on Top of Atenolol in Stable Angina Pectoris",
+      "phase": "Phase 3",
+      "drugs": "['Ivabradine']",
+      "drugs_list": [
+        "Ivabradine"
+      ],
+      "diseases": "['Angina Pectoris']",
+      "diseases_list": [
+        "Angina Pectoris"
+      ],
+      "enrollment": "750.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Chronic stable angina pectoris \n\n Documented coronary artery disease \n\n Previous treatment with atenolol or other beta-blocker agent \n\n Exercise tolerance test positivity and stability \n\n ",
+      "exclusion_criteria": ": \n\n Heart rate < 60 bpm \n\n Congestive heart failure",
+      "brief_summary": "To test whether ivabradine when given in combination with atenolol is able to improve the exercise tolerance of patients with stable angina pectoris"
+    }
+  }
+}

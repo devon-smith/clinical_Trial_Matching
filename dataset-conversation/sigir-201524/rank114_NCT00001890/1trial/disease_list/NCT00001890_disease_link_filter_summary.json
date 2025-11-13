@@ -1,0 +1,131 @@
+{
+  "generated": "2025-10-22T21:19:19",
+  "trial_id": "NCT00001890",
+  "contextual": {
+    "_id": "NCT00001890",
+    "title": "Effects of Hormone Therapy on the Immune Systems of Postmenopausal Women With Chronic Infections",
+    "text": "Summary: Hardening of the arteries (atherosclerosis) and heart disease are much more common in men than in women. However, as women grow older, especially after menopause the incidence of atherosclerosis and heart disease increases. These findings suggest that estrogen may be protective and help in preventing heart disease.~Studies of large groups of post-menopausal women suggest that hormone replacement therapy (therapy that includes estrogen) reduces the risk of heart disease. Estrogen causes favorable changes in particles that carry cholesterol in the blood stream and improves function of blood vessels. Estrogen may also stimulate the immune system's ability to fight off infections that may lead to or contribute to atherosclerosis.~Researchers believe two specific infectious agents (Chlamydia pneumoniae and human cytomegalovirus) may cause damage to the lining of blood vessels resulting in inflammation and the development of atherosclerosis.~The purpose of this study is to determine if estrogen treatment can change how the immune system responds to chronic infections, by Chlamydia pneumoniae and human cytomegalovirus, in postmenopausal women.\nInclusion criteria: Must be a postmenopausal woman 65 years of age or younger. \n\n Time since last date of menses should be at least 12 months, with plasma estradiol less than 50 pg/ml and FSH greater than 50 pg/ml. \n\n Women must be without clinical evidence of CAD as determined by history, cardiovascular physical examination, and EKG. \n\n Must not have used hormone replacement therapy within past 6 months. \n\n Must not have used dietary supplements and any medication (over-the-counter or prescribed) within 1 month. Acetaminophen use is allowed. \n\n Must not have a history of alcoholism or binge-drinking. \n\n Must not have diabetes mellitus or known abnormal glucose intolerance test. \n\n Must not have a history of stroke, angina or myocardial infarction. \n\n Must not have a history of deep venous thrombosis/pulmonary embolism. \n\n Must not have a history of cancer (except for treated squamous cell and basal cell carcinomas). \n\n Must not have evidence of liver disease (liver function enzymes greater than twice the upper limit of normal). \n\n Must not have impaired renal function (creatinine greater than 1.6 mg/dl). \n\n Must not have a diagnosis of an autoimmune disease (e.g., systemic lupus erythematosus, rheumatoid arthritis, thyroiditis, Raynaud's Disease). \n\n Must not have a history of intermittent vaginal bleeding. \n\n Must not have serum triglycerides greater than 400 mg/dL.\nExclusion criteria: ",
+    "metadata": {
+      "brief_title": "Effects of Hormone Therapy on the Immune Systems of Postmenopausal Women With Chronic Infections",
+      "phase": "Phase 2",
+      "drugs": "['Estrogen therapy']",
+      "drugs_list": [
+        "Estrogen therapy"
+      ],
+      "diseases": "['Atherosclerosis', 'Chlamydia Infections', 'Cytomegalovirus Infections', 'Pneumonia, Bacterial', 'Postmenopause']",
+      "diseases_list": [
+        "Atherosclerosis",
+        "Chlamydia Infections",
+        "Cytomegalovirus Infections",
+        "Pneumonia",
+        "Bacterial",
+        "Postmenopause"
+      ],
+      "enrollment": "80.0",
+      "inclusion_criteria": "Must be a postmenopausal woman 65 years of age or younger. \n\n Time since last date of menses should be at least 12 months, with plasma estradiol less than 50 pg/ml and FSH greater than 50 pg/ml. \n\n Women must be without clinical evidence of CAD as determined by history, cardiovascular physical examination, and EKG. \n\n Must not have used hormone replacement therapy within past 6 months. \n\n Must not have used dietary supplements and any medication (over-the-counter or prescribed) within 1 month. Acetaminophen use is allowed. \n\n Must not have a history of alcoholism or binge-drinking. \n\n Must not have diabetes mellitus or known abnormal glucose intolerance test. \n\n Must not have a history of stroke, angina or myocardial infarction. \n\n Must not have a history of deep venous thrombosis/pulmonary embolism. \n\n Must not have a history of cancer (except for treated squamous cell and basal cell carcinomas). \n\n Must not have evidence of liver disease (liver function enzymes greater than twice the upper limit of normal). \n\n Must not have impaired renal function (creatinine greater than 1.6 mg/dl). \n\n Must not have a diagnosis of an autoimmune disease (e.g., systemic lupus erythematosus, rheumatoid arthritis, thyroiditis, Raynaud's Disease). \n\n Must not have a history of intermittent vaginal bleeding. \n\n Must not have serum triglycerides greater than 400 mg/dL.",
+      "exclusion_criteria": "",
+      "brief_summary": "Hardening of the arteries (atherosclerosis) and heart disease are much more common in men than in women. However, as women grow older, especially after menopause the incidence of atherosclerosis and heart disease increases. These findings suggest that estrogen may be protective and help in preventing heart disease.~Studies of large groups of post-menopausal women suggest that hormone replacement therapy (therapy that includes estrogen) reduces the risk of heart disease. Estrogen causes favorable changes in particles that carry cholesterol in the blood stream and improves function of blood vessels. Estrogen may also stimulate the immune system's ability to fight off infections that may lead to or contribute to atherosclerosis.~Researchers believe two specific infectious agents (Chlamydia pneumoniae and human cytomegalovirus) may cause damage to the lining of blood vessels resulting in inflammation and the development of atherosclerosis.~The purpose of this study is to determine if estrogen treatment can change how the immune system responds to chronic infections, by Chlamydia pneumoniae and human cytomegalovirus, in postmenopausal women."
+    }
+  },
+  "linked_result": {
+    "Atherosclerosis": {
+      "conceptId": "441574008",
+      "preferred_term": "Atherosclerosis of artery",
+      "fully_specified_name": "Atherosclerosis of artery (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Atherosclerosis artery",
+      "match_reason": "Exact"
+    },
+    "Chlamydia Infections": {
+      "conceptId": "105629000",
+      "preferred_term": "Chlamydial infection",
+      "fully_specified_name": "Chlamydial infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections with bacteria of the genus CHLAMYDIA.",
+      "best_match_term": "Chlamydial infection",
+      "match_reason": "Exact"
+    },
+    "Cytomegalovirus Infections": {
+      "conceptId": "28944009",
+      "preferred_term": "Cytomegalovirus infection",
+      "fully_specified_name": "Cytomegalovirus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection with CYTOMEGALOVIRUS, characterized by enlarged cells bearing intranuclear inclusions. Infection may be in almost any organ, but the salivary glands are the most common site in children, as are the lungs in adults.",
+      "best_match_term": "Cytomegalovirus infection",
+      "match_reason": "Exact"
+    },
+    "Pneumonia, Bacterial": {
+      "conceptId": "53084003",
+      "preferred_term": "Bacterial pneumonia",
+      "fully_specified_name": "Bacterial pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the lung parenchyma that is caused by bacterial infections.",
+      "best_match_term": "Bacterial pneumonia",
+      "match_reason": "Exact"
+    },
+    "Postmenopause": {
+      "conceptId": "76498008",
+      "preferred_term": "Postmenopausal state",
+      "fully_specified_name": "Postmenopausal state (finding)",
+      "type": "Clinical finding",
+      "definition": "After menopause.",
+      "best_match_term": "Postmenopausal",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Atherosclerosis": 1,
+    "Chlamydia Infections": 1,
+    "Cytomegalovirus Infections": 1,
+    "Pneumonia, Bacterial": 1,
+    "Postmenopause": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Atherosclerosis": {
+      "disease": "Atherosclerosis",
+      "conceptId": "441574008",
+      "preferred_term": "Atherosclerosis of artery",
+      "fully_specified_name": "Atherosclerosis of artery (disorder)",
+      "type": "Clinical finding",
+      "definition": null,
+      "best_match_term": "Atherosclerosis artery"
+    },
+    "Chlamydia Infections": {
+      "disease": "Chlamydia Infections",
+      "conceptId": "105629000",
+      "preferred_term": "Chlamydial infection",
+      "fully_specified_name": "Chlamydial infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infections with bacteria of the genus CHLAMYDIA.",
+      "best_match_term": "Chlamydial infection"
+    },
+    "Cytomegalovirus Infections": {
+      "disease": "Cytomegalovirus Infections",
+      "conceptId": "28944009",
+      "preferred_term": "Cytomegalovirus infection",
+      "fully_specified_name": "Cytomegalovirus infection (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection with CYTOMEGALOVIRUS, characterized by enlarged cells bearing intranuclear inclusions. Infection may be in almost any organ, but the salivary glands are the most common site in children, as are the lungs in adults.",
+      "best_match_term": "Cytomegalovirus infection"
+    },
+    "Pneumonia, Bacterial": {
+      "disease": "Pneumonia, Bacterial",
+      "conceptId": "53084003",
+      "preferred_term": "Bacterial pneumonia",
+      "fully_specified_name": "Bacterial pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Inflammation of the lung parenchyma that is caused by bacterial infections.",
+      "best_match_term": "Bacterial pneumonia"
+    },
+    "Postmenopause": {
+      "disease": "Postmenopause",
+      "conceptId": "76498008",
+      "preferred_term": "Postmenopausal state",
+      "fully_specified_name": "Postmenopausal state (finding)",
+      "type": "Clinical finding",
+      "definition": "After menopause.",
+      "best_match_term": "Postmenopausal"
+    }
+  }
+}

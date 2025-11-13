@@ -1,0 +1,9 @@
+[
+  "patient_has_finding_of_rapid_atrial_fibrillation_now",
+  "patient_has_finding_of_ventricular_tachycardia_now",
+  "patient_has_finding_of_brainstem_death_now",
+  "patient_dopamine_containing_product_value_recorded_inthehistory_withunit_hours",
+  "patient_epinephrine_containing_product_value_recorded_inthehistory_withunit_hours",
+  "patient_norepinephrine_containing_product_value_recorded_inthehistory_withunit_hours",
+  "patient_phenylephrine_containing_product_value_recorded_inthehistory_withunit_hours"
+]

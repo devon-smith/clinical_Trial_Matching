@@ -1,0 +1,15 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_diagnosis_of_malignant_neoplastic_disease_now",
+  "patient_longevity_value_recorded_now_withunit_months",
+  "patient_will_undergo_chemotherapy_inthefuture",
+  "patient_is_exposed_to_fluorouracil_inthefuture",
+  "patient_is_exposed_to_folinic_acid_inthefuture",
+  "patient_is_exposed_to_irinotecan_inthefuture",
+  "patient_is_exposed_to_oxaliplatin_inthefuture",
+  "patient_is_undergoing_chemotherapy_now",
+  "patient_is_exposed_to_fluorouracil_now",
+  "patient_is_exposed_to_folinic_acid_now",
+  "patient_is_exposed_to_irinotecan_now",
+  "patient_is_exposed_to_oxaliplatin_now"
+]

@@ -1,0 +1,51 @@
+{
+  "generated": "2025-10-20T23:30:21",
+  "trial_id": "NCT01484912",
+  "contextual": {
+    "_id": "NCT01484912",
+    "title": "Phase II Study of STA-2 in Patients With Chronic Stable Angina",
+    "text": "Summary: The objectives of this study are to evaluate the efficacy, pharmacological activities and safety of STA-2 in the treatment of chronic stable angina.\nInclusion criteria: inclusion criteria: \n\n Male or female aged > 20; \n\n Patients who had effort-induced angina which was relieved by rest or nitroglycerin, or who had catheterization-documented coronary artery disease or previous myocardial infarction ≥ 3 months before screening; \n\n Patients who manifested positive ETT (exercise tolerance testing) (defined as ST-segment depression ≥ 1 mm compared with at rest, with or without limiting angina) at screening (Day -7); \n\n Patients who manifested positive ETT (exercise tolerance testing) (defined as ST-segment depression ≥ 1 mm compared with at rest, with or without limiting angina) on the day of enrollment (Day 0). ETT performance between Day -7 and Day 0 were required not differ by >20% in total exercise time; \n\n Female patient who was in the post-menopausal stage or of childbearing potential who: \n\n used adequate contraception since last menstruation and no plan for conception during the study; \n\n was non-lactating; \n\n had negative pregnancy test (urine) within 14 days prior to the study; \n\n Able to provide written informed consent. \n\n \nExclusion criteria: : \n\n Patients with pre-excitation, conduction abnormalities, pacemaker rhythm, unstable angina or myocardial infarction within the preceding 3 months; \n\n Patients with heart failure (New York Heart Association class III or IV), uncorrected valvular or congenital heart disease, patients who needed digoxin, isosorbide mononitrate, nitroglycerin sustained release preparation, theophylline, class I antiarrhythmic agents, digitalis, or monoamine oxidase inhibitors, as judged by the investigator; \n\n Patients with any EKG abnormalities preventing the interpretation of ischemia (complete left bundle branch block); \n\n Patients with Chronic Obstructive Pulmonary Disease (COPD) requiring bronchodilators; \n\n Patients with hepatic failure (defined as aspartate transaminase (AST) and/or alanine transaminase (ALT) > 3X the upper limit of normal values), and/or renal failure (defined as serum creatinine > 3 mg/dL); \n\n Patients with severe gastrointestinal illness as judged by the investigator; \n\n Patient with any conditions that interfered the performance of exercise tolerance test as judged by investigator (e.g., knee/ankle arthropathy, Parkinsonism, stroke).",
+    "metadata": {
+      "brief_title": "Phase II Study of STA-2 in Patients With Chronic Stable Angina",
+      "phase": "Phase 2",
+      "drugs": "['STA-2', 'Placebo']",
+      "drugs_list": [
+        "STA-2",
+        "Placebo"
+      ],
+      "diseases": "['Chronic Stable Angina']",
+      "diseases_list": [
+        "Chronic Stable Angina"
+      ],
+      "enrollment": "79.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Male or female aged > 20; \n\n Patients who had effort-induced angina which was relieved by rest or nitroglycerin, or who had catheterization-documented coronary artery disease or previous myocardial infarction ≥ 3 months before screening; \n\n Patients who manifested positive ETT (exercise tolerance testing) (defined as ST-segment depression ≥ 1 mm compared with at rest, with or without limiting angina) at screening (Day -7); \n\n Patients who manifested positive ETT (exercise tolerance testing) (defined as ST-segment depression ≥ 1 mm compared with at rest, with or without limiting angina) on the day of enrollment (Day 0). ETT performance between Day -7 and Day 0 were required not differ by >20% in total exercise time; \n\n Female patient who was in the post-menopausal stage or of childbearing potential who: \n\n used adequate contraception since last menstruation and no plan for conception during the study; \n\n was non-lactating; \n\n had negative pregnancy test (urine) within 14 days prior to the study; \n\n Able to provide written informed consent. \n\n ",
+      "exclusion_criteria": ": \n\n Patients with pre-excitation, conduction abnormalities, pacemaker rhythm, unstable angina or myocardial infarction within the preceding 3 months; \n\n Patients with heart failure (New York Heart Association class III or IV), uncorrected valvular or congenital heart disease, patients who needed digoxin, isosorbide mononitrate, nitroglycerin sustained release preparation, theophylline, class I antiarrhythmic agents, digitalis, or monoamine oxidase inhibitors, as judged by the investigator; \n\n Patients with any EKG abnormalities preventing the interpretation of ischemia (complete left bundle branch block); \n\n Patients with Chronic Obstructive Pulmonary Disease (COPD) requiring bronchodilators; \n\n Patients with hepatic failure (defined as aspartate transaminase (AST) and/or alanine transaminase (ALT) > 3X the upper limit of normal values), and/or renal failure (defined as serum creatinine > 3 mg/dL); \n\n Patients with severe gastrointestinal illness as judged by the investigator; \n\n Patient with any conditions that interfered the performance of exercise tolerance test as judged by investigator (e.g., knee/ankle arthropathy, Parkinsonism, stroke).",
+      "brief_summary": "The objectives of this study are to evaluate the efficacy, pharmacological activities and safety of STA-2 in the treatment of chronic stable angina."
+    }
+  },
+  "linked_result": {
+    "Chronic Stable Angina": {
+      "conceptId": "233819005",
+      "preferred_term": "Stable angina",
+      "fully_specified_name": "Stable angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistent and reproducible chest discomfort usually precipitated by a physical exertion that dissipates upon cessation of such an activity. The symptoms are manifestations of MYOCARDIAL ISCHEMIA.",
+      "best_match_term": "Stable angina",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Chronic Stable Angina": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Chronic Stable Angina": {
+      "disease": "Chronic Stable Angina",
+      "conceptId": "233819005",
+      "preferred_term": "Stable angina",
+      "fully_specified_name": "Stable angina (disorder)",
+      "type": "Clinical finding",
+      "definition": "Persistent and reproducible chest discomfort usually precipitated by a physical exertion that dissipates upon cessation of such an activity. The symptoms are manifestations of MYOCARDIAL ISCHEMIA.",
+      "best_match_term": "Stable angina"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "trial_id": "NCT00263380",
+  "contextual": {
+    "_id": "NCT00263380",
+    "title": "Investigation on the Role of Corticosteroids and Beta-Agonists on Cytokine Production in COPD Patients",
+    "text": "Summary: Research on the synergistic effect of corticosteroids and beta-agonists on the cytokine production in COPD patients. Blood will be obtained from healthy volunteers and COPD patients and blood monocytes will be stimulated to produce cytokines with or without the prementioned drugs.\nInclusion criteria: inclusion criteria: \n\n clinical COPD \n\n smoking \n\n age > 40 years \n\n \nExclusion criteria: : \n\n age < 40 years \n\n use of antibiotics, corticosteroids or beta-agonists",
+    "metadata": {
+      "brief_title": "Investigation on the Role of Corticosteroids and Beta-Agonists on Cytokine Production in COPD Patients",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['COPD']",
+      "diseases_list": [
+        "COPD"
+      ],
+      "enrollment": "90.0",
+      "inclusion_criteria": "inclusion criteria: \n\n clinical COPD \n\n smoking \n\n age > 40 years \n\n ",
+      "exclusion_criteria": ": \n\n age < 40 years \n\n use of antibiotics, corticosteroids or beta-agonists",
+      "brief_summary": "Research on the synergistic effect of corticosteroids and beta-agonists on the cytokine production in COPD patients. Blood will be obtained from healthy volunteers and COPD patients and blood monocytes will be stimulated to produce cytokines with or without the prementioned drugs."
+    }
+  }
+}

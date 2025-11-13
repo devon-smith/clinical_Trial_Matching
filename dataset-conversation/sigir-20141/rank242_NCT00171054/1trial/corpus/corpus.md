@@ -1,0 +1,62 @@
+# Efficacy and Safety of Valsartan Versus Amlodipine in Postmenopausal Women With Hypertension
+**NCT**: `NCT00171054`
+## Brief Summary
+The purpose of this study is compare treatment with valsartan with the possible addition of a diuretic, hydrochlorothiazide, on high blood pressure with the drug amlodipine with the possible addition of a diuretic, hydrochlorothiazide. In particular, the effect of treatment on the stiffness of the blood vessels will be studied.
+## Inclusion Criteria
+inclusion criteria: 
+
+ Postmenopausal women 
+
+ Mild to moderate hypertension 
+
+ Statin therapy or LDL≤ 4.1 mmol/L
+## Exclusion Criteria
+: 
+
+ Severe hypertension 
+
+ LDL > 4.1 mmol/L if not taking anti-hyperlipidemic medication 
+
+ Certain hormonal therapy 
+
+ History of stroke, myocardial infarction, heart failure, chest pain, abnormal heart rhythm 
+
+ Liver, kidney, or pancreas disease 
+
+ Diabetes 
+
+ Raynaud's disease or any other significant peripheral vascular disease 
+
+ Allergy to certain medications used to treat high blood pressure 
+
+ Other protocol-defined inclusion/
+## Full Text
+Summary: The purpose of this study is compare treatment with valsartan with the possible addition of a diuretic, hydrochlorothiazide, on high blood pressure with the drug amlodipine with the possible addition of a diuretic, hydrochlorothiazide. In particular, the effect of treatment on the stiffness of the blood vessels will be studied.
+Inclusion criteria: inclusion criteria: 
+
+ Postmenopausal women 
+
+ Mild to moderate hypertension 
+
+ Statin therapy or LDL≤ 4.1 mmol/L 
+
+ 
+Exclusion criteria: : 
+
+ Severe hypertension 
+
+ LDL > 4.1 mmol/L if not taking anti-hyperlipidemic medication 
+
+ Certain hormonal therapy 
+
+ History of stroke, myocardial infarction, heart failure, chest pain, abnormal heart rhythm 
+
+ Liver, kidney, or pancreas disease 
+
+ Diabetes 
+
+ Raynaud's disease or any other significant peripheral vascular disease 
+
+ Allergy to certain medications used to treat high blood pressure 
+
+ Other protocol-defined inclusion/

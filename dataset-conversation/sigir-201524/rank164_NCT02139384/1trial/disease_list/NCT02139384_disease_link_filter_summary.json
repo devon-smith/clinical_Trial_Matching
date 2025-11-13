@@ -1,0 +1,48 @@
+{
+  "generated": "2025-10-20T23:45:37",
+  "trial_id": "NCT02139384",
+  "contextual": {
+    "_id": "NCT02139384",
+    "title": "Clinical Pediatric Pneumonia Score in Critically Ill Children",
+    "text": "Summary: The purpose of the study is to create a clinical pneumonia tool that can be used to predict the cause of community-acquired pneumonia, which is a lung infection that began outside of the hospital in critically ill children therefore limiting unnecessary antibiotic use. The investigators will enroll critically ill children admitted with acute respiratory failure and suspected pneumonia. Each patient will receive a clinical pneumonia score blinded from culture and respiratory viral panel results. All care after samples obtained will be at the discretion of the PICU team. The investigators believe that our clinical pneumonia scale with procalcitonin will accurately designate viral from bacterial etiologies.\nInclusion criteria: inclusion criteria: \n\n All intubated pediatric patients \n\n Age 1 day to 21 years \n\n Admitted to the LLUCH PICU with suspected pneumonia for the next 6 months \n\n Have received antibiotics for less than 12 hours \n\n Have been intubated for less than 24 hours \n\n Patients must be English or Spanish speaking for consent purposes. \n\n \nExclusion criteria: : \n\n Patients who have received antibiotics for greater than 12 hours \n\n Patients who have been intubated for greater than 24 hours \n\n Patients who are unable to tolerate non-bronchoscopic bronchoalveolar lavage",
+    "metadata": {
+      "brief_title": "Clinical Pediatric Pneumonia Score in Critically Ill Children",
+      "phase": "",
+      "drugs": "",
+      "drugs_list": [],
+      "diseases": "['Community Acquired Pneumonia']",
+      "diseases_list": [
+        "Community Acquired Pneumonia"
+      ],
+      "enrollment": "0.0",
+      "inclusion_criteria": "inclusion criteria: \n\n All intubated pediatric patients \n\n Age 1 day to 21 years \n\n Admitted to the LLUCH PICU with suspected pneumonia for the next 6 months \n\n Have received antibiotics for less than 12 hours \n\n Have been intubated for less than 24 hours \n\n Patients must be English or Spanish speaking for consent purposes. \n\n ",
+      "exclusion_criteria": ": \n\n Patients who have received antibiotics for greater than 12 hours \n\n Patients who have been intubated for greater than 24 hours \n\n Patients who are unable to tolerate non-bronchoscopic bronchoalveolar lavage",
+      "brief_summary": "The purpose of the study is to create a clinical pneumonia tool that can be used to predict the cause of community-acquired pneumonia, which is a lung infection that began outside of the hospital in critically ill children therefore limiting unnecessary antibiotic use. The investigators will enroll critically ill children admitted with acute respiratory failure and suspected pneumonia. Each patient will receive a clinical pneumonia score blinded from culture and respiratory viral panel results. All care after samples obtained will be at the discretion of the PICU team. The investigators believe that our clinical pneumonia scale with procalcitonin will accurately designate viral from bacterial etiologies."
+    }
+  },
+  "linked_result": {
+    "Community Acquired Pneumonia": {
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Community Acquired Pneumonia": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Community Acquired Pneumonia": {
+      "disease": "Community Acquired Pneumonia",
+      "conceptId": "385093006",
+      "preferred_term": "Community acquired pneumonia",
+      "fully_specified_name": "Community acquired pneumonia (disorder)",
+      "type": "Clinical finding",
+      "definition": "Infection of the lungs in a patient who is not hospitalized or who has not resided in a long-term care facility for 14 days prior to the onset of symptoms. It is associated with some signs and symptoms of acute infection and is accompanied by the presence of an acute infiltrate on chest radiograph.(US Pharm. 2007;32(10):44-5 https://www.uspharmacist.com/article/community-acquired-pneumonia)",
+      "best_match_term": "Community acquired pneumonia"
+    }
+  }
+}

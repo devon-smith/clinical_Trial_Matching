@@ -1,0 +1,7 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_ischemic_chest_pain_inthepast24hours",
+  "patient_has_finding_of_left_bundle_branch_block_now",
+  "patient_has_undergone_coronary_angiography_inthehistory",
+  "patient_has_undergone_percutaneous_coronary_intervention_inthehistory"
+]

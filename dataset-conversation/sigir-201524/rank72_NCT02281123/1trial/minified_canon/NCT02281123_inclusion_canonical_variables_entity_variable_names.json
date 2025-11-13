@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_inthehistory_in_years",
+  "patient_has_undergone_consultation_inthehistory",
+  "patient_has_finding_of_fever_now",
+  "patient_has_finding_of_joint_pain_now",
+  "patient_has_diagnosis_of_arthritis_inthehistory",
+  "patient_is_exposed_to_drug_or_medicament_inthepast2weeks",
+  "patient_is_exposed_to_non_steroidal_anti_inflammatory_agent_inthepast2weeks"
+]

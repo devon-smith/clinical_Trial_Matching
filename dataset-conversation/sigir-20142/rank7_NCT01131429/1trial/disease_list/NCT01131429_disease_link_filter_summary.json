@@ -1,0 +1,108 @@
+{
+  "generated": "2025-10-20T23:34:55",
+  "trial_id": "NCT01131429",
+  "contextual": {
+    "_id": "NCT01131429",
+    "title": "A Chinese Randomized Crossover Study of Erlotinib Versus Docetaxel/Cisplatin in Previously Untreated Stage IIIB/IV Lung Adenocarcinoma With EGFR Mutations",
+    "text": "Summary: Objective: the objective of this study in china is to clarify, whether the overall survival is different between previously untreated stage IIIB/IV lung adenocarcinoma with EGFR mutations receiving first-line erlotinib plus second-line docetaxel/cisplatin and those receiving first-line docetaxel/cisplatin plus second-line erlotinib .\nInclusion criteria: inclusion criteria: \n\n Male and female patients aged over 18 years \n\n Histologically proven lung adenocarcinoma \n\n clinical stage IIIB/IV \n\n ECOG performance status 0-2 \n\n Had no prior anticancer agent, radiation or surgical therapy for lung adenocarcinoma \n\n At least one measurable lesion (according to RECIST) \n\n Provision of written informed consent \n\n Life expectancy of at least 12 weeks \n\n \nExclusion criteria: : \n\n History of malignant disease. \n\n Evidence of clinically active interstitial lung diseases (patients with chronic, stable, radiographic changes who are asymptomatic need not be excluded) \n\n Expected life expectancy less than 2 months \n\n As judged by the investigator, any evidence of severe or uncontrolled systemic disease (e.g. unstable or uncompensated respiratory, cardiac, hepatic, or renal disease) \n\n Aspartate aminotransferase (AST/SGOT) or alanine aminotransferase (ALT/SGPT) ≥ 2.5 x ULN if no demonstrable liver metastases (or >5 x in presence of liver metastases) \n\n Evidence of any other significant clinical disorder or laboratory finding that makes it undesirable for the subject to participate in the study \n\n Pregnancy or breast-feeding women (women of child¬bearing potential). Women of childbearing potential must practice acceptable methods of birth control to prevent pregnancy.",
+    "metadata": {
+      "brief_title": "A Chinese Randomized Crossover Study of Erlotinib Versus Docetaxel/Cisplatin in Previously Untreated Stage IIIB/IV Lung Adenocarcinoma With EGFR Mutations",
+      "phase": "Phase 2",
+      "drugs": "['Erlotinib', 'Docetaxel', 'Cisplatin', 'Docetaxel', 'Cisplatin', 'Erlotinib']",
+      "drugs_list": [
+        "Erlotinib",
+        "Docetaxel",
+        "Cisplatin",
+        "Docetaxel",
+        "Cisplatin",
+        "Erlotinib"
+      ],
+      "diseases": "['Neoplasms, Lung', 'Carcinoma, Non-Small Cell Lung', 'Drug Therapy', 'Genes, EGFR']",
+      "diseases_list": [
+        "Neoplasms",
+        "Lung",
+        "Carcinoma",
+        "Non-Small Cell Lung",
+        "Drug Therapy",
+        "Genes",
+        "EGFR"
+      ],
+      "enrollment": "60.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Male and female patients aged over 18 years \n\n Histologically proven lung adenocarcinoma \n\n clinical stage IIIB/IV \n\n ECOG performance status 0-2 \n\n Had no prior anticancer agent, radiation or surgical therapy for lung adenocarcinoma \n\n At least one measurable lesion (according to RECIST) \n\n Provision of written informed consent \n\n Life expectancy of at least 12 weeks \n\n ",
+      "exclusion_criteria": ": \n\n History of malignant disease. \n\n Evidence of clinically active interstitial lung diseases (patients with chronic, stable, radiographic changes who are asymptomatic need not be excluded) \n\n Expected life expectancy less than 2 months \n\n As judged by the investigator, any evidence of severe or uncontrolled systemic disease (e.g. unstable or uncompensated respiratory, cardiac, hepatic, or renal disease) \n\n Aspartate aminotransferase (AST/SGOT) or alanine aminotransferase (ALT/SGPT) ≥ 2.5 x ULN if no demonstrable liver metastases (or >5 x in presence of liver metastases) \n\n Evidence of any other significant clinical disorder or laboratory finding that makes it undesirable for the subject to participate in the study \n\n Pregnancy or breast-feeding women (women of child¬bearing potential). Women of childbearing potential must practice acceptable methods of birth control to prevent pregnancy.",
+      "brief_summary": "Objective: the objective of this study in china is to clarify, whether the overall survival is different between previously untreated stage IIIB/IV lung adenocarcinoma with EGFR mutations receiving first-line erlotinib plus second-line docetaxel/cisplatin and those receiving first-line docetaxel/cisplatin plus second-line erlotinib ."
+    }
+  },
+  "linked_result": {
+    "Neoplasms, Lung": {
+      "conceptId": "126713003",
+      "preferred_term": "Neoplasm of lung",
+      "fully_specified_name": "Neoplasm of lung (disorder)",
+      "type": "Clinical finding",
+      "definition": "Tumors or cancer of the LUNG.",
+      "best_match_term": "Neoplasm of lung",
+      "match_reason": "Exact"
+    },
+    "Carcinoma, Non-Small Cell Lung": {
+      "conceptId": "254637007",
+      "preferred_term": "Non-small cell lung cancer",
+      "fully_specified_name": "Non-small cell lung cancer (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heterogeneous aggregate of at least three distinct histological types of lung cancer, including SQUAMOUS CELL CARCINOMA; ADENOCARCINOMA; and LARGE CELL CARCINOMA. They are dealt with collectively because of their shared treatment strategy.",
+      "best_match_term": "Non-small cell lung cancer (disorder)",
+      "match_reason": "Exact"
+    },
+    "Drug Therapy": {
+      "conceptId": "416608005",
+      "preferred_term": "Drug therapy",
+      "fully_specified_name": "Drug therapy (procedure)",
+      "type": "Procedure",
+      "definition": "The use of DRUGS to treat a DISEASE or its symptoms. One example is the use of ANTINEOPLASTIC AGENTS to treat CANCER.",
+      "best_match_term": "Drug therapy",
+      "match_reason": "Exact"
+    },
+    "Genes, EGFR": {
+      "conceptId": "86960007",
+      "preferred_term": "Epidermal growth factor-urogastrone receptor",
+      "fully_specified_name": "Epidermal growth factor-urogastrone receptor (substance)",
+      "type": "Substance",
+      "definition": null,
+      "best_match_term": "EGFR - epidermal growth factor receptor",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Neoplasms, Lung": 1,
+    "Carcinoma, Non-Small Cell Lung": 1,
+    "Drug Therapy": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Neoplasms, Lung": {
+      "disease": "Neoplasms, Lung",
+      "conceptId": "126713003",
+      "preferred_term": "Neoplasm of lung",
+      "fully_specified_name": "Neoplasm of lung (disorder)",
+      "type": "Clinical finding",
+      "definition": "Tumors or cancer of the LUNG.",
+      "best_match_term": "Neoplasm of lung"
+    },
+    "Carcinoma, Non-Small Cell Lung": {
+      "disease": "Carcinoma, Non-Small Cell Lung",
+      "conceptId": "254637007",
+      "preferred_term": "Non-small cell lung cancer",
+      "fully_specified_name": "Non-small cell lung cancer (disorder)",
+      "type": "Clinical finding",
+      "definition": "A heterogeneous aggregate of at least three distinct histological types of lung cancer, including SQUAMOUS CELL CARCINOMA; ADENOCARCINOMA; and LARGE CELL CARCINOMA. They are dealt with collectively because of their shared treatment strategy.",
+      "best_match_term": "Non-small cell lung cancer (disorder)"
+    },
+    "Drug Therapy": {
+      "disease": "Drug Therapy",
+      "conceptId": "416608005",
+      "preferred_term": "Drug therapy",
+      "fully_specified_name": "Drug therapy (procedure)",
+      "type": "Procedure",
+      "definition": "The use of DRUGS to treat a DISEASE or its symptoms. One example is the use of ANTINEOPLASTIC AGENTS to treat CANCER.",
+      "best_match_term": "Drug therapy"
+    }
+  }
+}

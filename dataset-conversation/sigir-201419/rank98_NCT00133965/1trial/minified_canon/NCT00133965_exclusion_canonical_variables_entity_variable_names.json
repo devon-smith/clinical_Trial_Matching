@@ -1,0 +1,18 @@
+[
+  "patient_is_undergoing_management_of_drug_regimen_now",
+  "patient_has_finding_of_mental_disorder_now",
+  "patient_has_finding_of_psychiatric_symptom_now",
+  "patient_is_undergoing_psychotherapy_now",
+  "patient_is_exposed_to_antidepressant_now",
+  "patient_is_undergoing_group_psychotherapy_now",
+  "patient_is_undergoing_individual_psychotherapy_now",
+  "patient_has_diagnosis_of_mania_now",
+  "patient_has_finding_of_paranoid_ideation_now",
+  "patient_has_diagnosis_of_psychotic_disorder_now",
+  "patient_is_exposed_to_psychotropic_agent_now",
+  "patient_has_diagnosis_of_schizophrenia_now",
+  "patient_has_finding_of_delirium_now",
+  "patient_has_finding_of_dementia_now",
+  "patient_has_finding_of_impaired_cognition_now",
+  "patient_has_finding_of_impairment_now"
+]

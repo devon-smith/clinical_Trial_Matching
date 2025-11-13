@@ -1,0 +1,11 @@
+[
+  "patient_has_allergy_to_chlorhexidine_gluconate_now",
+  "patient_has_finding_of_traumatic_injury_now",
+  "patient_american_society_of_anesthesiologists_physical_status_class_value_recorded_now_withunit_none",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now",
+  "patient_has_undergone_laparotomy_inthehistory",
+  "patient_has_undergone_abdomen_incision_inthehistory",
+  "patient_is_undergoing_clinical_trial_now"
+]

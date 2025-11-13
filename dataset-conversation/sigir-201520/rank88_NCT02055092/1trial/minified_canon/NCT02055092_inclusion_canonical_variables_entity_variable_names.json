@@ -1,0 +1,8 @@
+[
+  "patient_age_value_recorded_inthehistory_in_years",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_dementia_inthehistory",
+  "patient_has_diagnosis_of_frontotemporal_dementia_now",
+  "patient_has_finding_of_aphasia_now",
+  "patient_has_diagnosis_of_alzheimer_s_disease_now"
+]

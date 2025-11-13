@@ -1,0 +1,19 @@
+[
+  "patient_sex_is_female_now",
+  "patient_sex_is_male_now",
+  "patient_body_mass_index_value_recorded_now_withunit_kg_per_m2",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_dysthymia_now",
+  "patient_has_finding_of_major_depressive_disorder_now",
+  "patient_has_diagnosis_of_dysthymia_now",
+  "patient_has_diagnosis_of_major_depressive_disorder_now",
+  "patient_blood_glucose_level_finding_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_diastolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_is_taking_drug_or_medicament_now",
+  "patient_hdl_cholesterol_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_has_diagnosis_of_metabolic_syndrome_x_now",
+  "patient_systolic_blood_pressure_value_recorded_now_withunit_millimeters_of_mercury",
+  "patient_triacylglycerol_value_recorded_now_withunit_milligrams_per_deciliter",
+  "patient_waist_circumference_value_recorded_now_withunit_centimeters",
+  "patient_has_finding_of_metabolic_syndrome_x_now"
+]

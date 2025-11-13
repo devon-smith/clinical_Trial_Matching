@@ -1,0 +1,18 @@
+[
+  "patient_has_finding_of_bacterial_pneumonia_now",
+  "patient_has_finding_of_community_acquired_pneumonia_now",
+  "patient_is_exposed_to_microbial_agent_now",
+  "patient_has_finding_of_respiratory_tract_infection_now",
+  "patient_has_finding_of_empyema_of_pleura_now",
+  "patient_has_finding_of_radiologic_infiltrate_of_lung_now",
+  "patient_has_finding_of_disorder_due_to_infection_now",
+  "patient_beta_lactam_value_recorded_inthepast96hours_withunit_hours",
+  "patient_has_finding_of_long_term_systemic_steroid_user_inthehistory",
+  "patient_has_diagnosis_of_disease_of_liver_now",
+  "patient_has_finding_of_disorder_of_cellular_component_of_blood_now",
+  "patient_has_finding_of_disorder_of_immune_function_now",
+  "patient_has_finding_of_hypersensitivity_reaction_inthehistory",
+  "patient_sex_is_female_now",
+  "patient_is_pregnant_now",
+  "patient_is_breastfeeding_now"
+]

@@ -1,0 +1,53 @@
+{
+  "generated": "2025-10-22T21:17:24",
+  "trial_id": "NCT00489346",
+  "contextual": {
+    "_id": "NCT00489346",
+    "title": "A Study to Evaluate MK0476 and Fluticasone to Control Asthma in Patients With Mild Persistent Asthma (0476-910)",
+    "text": "Summary: A study to evaluate MK0476 and Fluticasone to control asthma in patients with mild persistent asthma.\nInclusion criteria: inclusion criteria: \n\n Patient is male or female, 6-14 years of age with mild persistent asthma \n\n Patient has a history of the following symptoms: wheezing, chest tightness, cough, etc. \n\n Patient has asthma diagnosed by a doctor \n\n \nExclusion criteria: : \n\n Patient is hospitalized \n\n Patient has had major surgery or participated in another clinical trial in the last 4 weeks \n\n Patient has been on a breathing tube for asthma",
+    "metadata": {
+      "brief_title": "A Study to Evaluate MK0476 and Fluticasone to Control Asthma in Patients With Mild Persistent Asthma (0476-910)",
+      "phase": "Phase 3",
+      "drugs": "['MK0476, montelukast sodium / Duration of Treatment: 1 Year', 'Comparator : fluticasone propionate / Duration of Treatment: 1 Year']",
+      "drugs_list": [
+        "MK0476",
+        "montelukast sodium / Duration of Treatment: 1 Year",
+        "Comparator : fluticasone propionate / Duration of Treatment: 1 Year"
+      ],
+      "diseases": "['Asthma, Bronchial']",
+      "diseases_list": [
+        "Asthma",
+        "Bronchial"
+      ],
+      "enrollment": "994.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Patient is male or female, 6-14 years of age with mild persistent asthma \n\n Patient has a history of the following symptoms: wheezing, chest tightness, cough, etc. \n\n Patient has asthma diagnosed by a doctor \n\n ",
+      "exclusion_criteria": ": \n\n Patient is hospitalized \n\n Patient has had major surgery or participated in another clinical trial in the last 4 weeks \n\n Patient has been on a breathing tube for asthma",
+      "brief_summary": "A study to evaluate MK0476 and Fluticasone to control asthma in patients with mild persistent asthma."
+    }
+  },
+  "linked_result": {
+    "Asthma, Bronchial": {
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Bronchial asthma",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Asthma, Bronchial": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Asthma, Bronchial": {
+      "disease": "Asthma, Bronchial",
+      "conceptId": "195967001",
+      "preferred_term": "Asthma",
+      "fully_specified_name": "Asthma (disorder)",
+      "type": "Clinical finding",
+      "definition": "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).",
+      "best_match_term": "Bronchial asthma"
+    }
+  }
+}

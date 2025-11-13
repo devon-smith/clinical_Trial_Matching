@@ -1,0 +1,22 @@
+[
+  "patient_has_undergone_transfer_of_care_from_hospital_inthehistory",
+  "patient_has_undergone_collection_of_blood_specimen_for_laboratory_inthehistory",
+  "patient_has_diagnosis_of_asthma_now",
+  "patient_has_diagnosis_of_wheezing_now",
+  "patient_has_diagnosis_of_bronchiolitis_now",
+  "patient_has_undergone_plain_chest_x_ray_now",
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_finding_of_acute_disease_now",
+  "patient_illness_value_recorded_now_withunit_days",
+  "patient_can_undergo_follow_up_visit_now",
+  "patient_has_diagnosis_of_aspiration_pneumonia_now",
+  "patient_has_diagnosis_of_community_acquired_pneumonia_now",
+  "patient_has_finding_of_pleural_effusion_associated_with_pulmonary_infection_now",
+  "patient_has_finding_of_pneumonia_now",
+  "patient_has_undergone_noninvasive_ventilation_inthehistory",
+  "patient_has_finding_of_co_morbid_conditions_now",
+  "patient_is_exposed_to_macrolide_antibacterial_now",
+  "patient_has_finding_of_meningitis_now",
+  "patient_has_finding_of_allergy_to_penicillin_now",
+  "patient_has_finding_of_recurrent_pneumonia_now"
+]

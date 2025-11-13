@@ -1,0 +1,50 @@
+{
+  "generated": "2025-10-20T23:38:09",
+  "trial_id": "NCT00104663",
+  "contextual": {
+    "_id": "NCT00104663",
+    "title": "PRION-1: Quinacrine for Human Prion Disease",
+    "text": "Summary: PRION-1 aims to assess the activity and safety of Quinacrine (Mepacrine hydrochloride) in human prion disease. It also aims to establish an appropriate framework for the clinical assessment of therapeutic options for human prion disease that can be refined or expanded in the future, as new agents become available.\nInclusion criteria: inclusion criteria: \n\n Aged 12 years or more, diagnosed with any type of human prion disease. \n\n \nExclusion criteria: : \n\n In a coma, or in a pre-terminal phase of disease such that prolongation of the current quality of life would not be supported \n\n Known sensitivity to quinacrine \n\n Been taking any other putative anti-prion therapy for less than 8 weeks",
+    "metadata": {
+      "brief_title": "PRION-1: Quinacrine for Human Prion Disease",
+      "phase": "",
+      "drugs": "['Quinacrine']",
+      "drugs_list": [
+        "Quinacrine"
+      ],
+      "diseases": "['Prion Disease']",
+      "diseases_list": [
+        "Prion Disease"
+      ],
+      "enrollment": "160.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Aged 12 years or more, diagnosed with any type of human prion disease. \n\n ",
+      "exclusion_criteria": ": \n\n In a coma, or in a pre-terminal phase of disease such that prolongation of the current quality of life would not be supported \n\n Known sensitivity to quinacrine \n\n Been taking any other putative anti-prion therapy for less than 8 weeks",
+      "brief_summary": "PRION-1 aims to assess the activity and safety of Quinacrine (Mepacrine hydrochloride) in human prion disease. It also aims to establish an appropriate framework for the clinical assessment of therapeutic options for human prion disease that can be refined or expanded in the future, as new agents become available."
+    }
+  },
+  "linked_result": {
+    "Prion Disease": {
+      "conceptId": "20484008",
+      "preferred_term": "Prion disease",
+      "fully_specified_name": "Prion disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of genetic, infectious, or sporadic degenerative human and animal nervous system disorders associated with abnormal PRIONS. These diseases are characterized by conversion of the normal prion protein to an abnormal configuration via a post-translational process. In humans, these conditions generally feature DEMENTIA; ATAXIA; and a fatal outcome. Pathologic features include a spongiform encephalopathy without evidence of inflammation. The older literature occasionally refers to these as unconventional SLOW VIRUS DISEASES. (From Proc Natl Acad Sci USA 1998 Nov 10;95(23):13363-83)",
+      "best_match_term": "Prion disease",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Prion Disease": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Prion Disease": {
+      "disease": "Prion Disease",
+      "conceptId": "20484008",
+      "preferred_term": "Prion disease",
+      "fully_specified_name": "Prion disease (disorder)",
+      "type": "Clinical finding",
+      "definition": "A group of genetic, infectious, or sporadic degenerative human and animal nervous system disorders associated with abnormal PRIONS. These diseases are characterized by conversion of the normal prion protein to an abnormal configuration via a post-translational process. In humans, these conditions generally feature DEMENTIA; ATAXIA; and a fatal outcome. Pathologic features include a spongiform encephalopathy without evidence of inflammation. The older literature occasionally refers to these as unconventional SLOW VIRUS DISEASES. (From Proc Natl Acad Sci USA 1998 Nov 10;95(23):13363-83)",
+      "best_match_term": "Prion disease"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[
+  "patient_age_value_recorded_now_in_years",
+  "patient_has_clinical_signs_of_pharyngitis_now",
+  "patient_has_undergone_throat_culture_inthehistory",
+  "patient_has_undergone_throat_culture_now",
+  "patient_has_finding_of_throat_swab_culture_negative_now",
+  "patient_has_finding_of_allergy_to_penicillin_inthehistory",
+  "patient_is_exposed_to_drug_or_medicament_now"
+]

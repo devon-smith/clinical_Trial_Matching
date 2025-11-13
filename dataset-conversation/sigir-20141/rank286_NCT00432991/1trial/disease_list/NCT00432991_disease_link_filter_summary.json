@@ -1,0 +1,92 @@
+{
+  "generated": "2025-10-20T22:30:26",
+  "trial_id": "NCT00432991",
+  "contextual": {
+    "_id": "NCT00432991",
+    "title": "Study of the Effect of Intramuscular Ephedrine on the Incidence of Nausea and Vomiting During Elective Cesarean Section",
+    "text": "Summary: The purpose of this research study is to investigate if the incidence of nausea and vomiting that subjects experience during and after a Cesarean section can be reduced by giving a shot of the drug ephedrine into the thigh muscle at the time of spinal anesthesia administration.\nInclusion criteria: inclusion criteria: \n\n Must be pregnant with a single baby \n\n Must be at term in their pregnancy (estimated gestational age of at least 38 weeks) \n\n Must be scheduled for an elective Cesarean section \n\n Must be between 60-70 tall \n\n Must be free of severe systemic disease (ASA class I or II) \n\n \nExclusion criteria: : \n\n Contraindication to spinal anesthesia \n\n Any allergy to any of the medications included in the study \n\n History of pregnancy-induced hypertension or preeclampsia \n\n History of preexisting hypertension \n\n Diabetes mellitus \n\n Hyperemesis gravidum \n\n Previous perioperative nausea and vomiting \n\n History of motion sickness \n\n Women carrying a fetus with a known abnormality will also be excluded from the study",
+    "metadata": {
+      "brief_title": "Study of the Effect of Intramuscular Ephedrine on the Incidence of Nausea and Vomiting During Elective Cesarean Section",
+      "phase": "Phase 2",
+      "drugs": "['Ephedrine [Synonyms: Ephedra, Ephedrinum]', 'Saline Placebo']",
+      "drugs_list": [
+        "Ephedrine [Synonyms: Ephedra",
+        "Ephedrinum]",
+        "Saline Placebo"
+      ],
+      "diseases": "['Nausea', 'Vomiting', 'Cesarean Section']",
+      "diseases_list": [
+        "Nausea",
+        "Vomiting",
+        "Cesarean Section"
+      ],
+      "enrollment": "53.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Must be pregnant with a single baby \n\n Must be at term in their pregnancy (estimated gestational age of at least 38 weeks) \n\n Must be scheduled for an elective Cesarean section \n\n Must be between 60-70 tall \n\n Must be free of severe systemic disease (ASA class I or II) \n\n ",
+      "exclusion_criteria": ": \n\n Contraindication to spinal anesthesia \n\n Any allergy to any of the medications included in the study \n\n History of pregnancy-induced hypertension or preeclampsia \n\n History of preexisting hypertension \n\n Diabetes mellitus \n\n Hyperemesis gravidum \n\n Previous perioperative nausea and vomiting \n\n History of motion sickness \n\n Women carrying a fetus with a known abnormality will also be excluded from the study",
+      "brief_summary": "The purpose of this research study is to investigate if the incidence of nausea and vomiting that subjects experience during and after a Cesarean section can be reduced by giving a shot of the drug ephedrine into the thigh muscle at the time of spinal anesthesia administration."
+    }
+  },
+  "linked_result": {
+    "Nausea": {
+      "conceptId": "422587007",
+      "preferred_term": "Nausea",
+      "fully_specified_name": "Nausea (finding)",
+      "type": "Clinical finding",
+      "definition": "An unpleasant sensation in the stomach usually accompanied by the urge to vomit. Common causes are early pregnancy, sea and motion sickness, emotional stress, intense pain, food poisoning, and various enteroviruses.",
+      "best_match_term": "Nausea",
+      "match_reason": "Exact"
+    },
+    "Vomiting": {
+      "conceptId": "422400008",
+      "preferred_term": "Vomiting",
+      "fully_specified_name": "Vomiting (disorder)",
+      "type": "Clinical finding",
+      "definition": "The forcible expulsion of the contents of the STOMACH through the MOUTH.",
+      "best_match_term": "Vomiting",
+      "match_reason": "Exact"
+    },
+    "Cesarean Section": {
+      "conceptId": "11466000",
+      "preferred_term": "Cesarean section",
+      "fully_specified_name": "Cesarean section (procedure)",
+      "type": "Procedure",
+      "definition": "Extraction of the FETUS by means of abdominal HYSTEROTOMY.",
+      "best_match_term": "Cesarean section",
+      "match_reason": "Exact"
+    }
+  },
+  "kept_counts": {
+    "Nausea": 1,
+    "Vomiting": 1,
+    "Cesarean Section": 1
+  },
+  "final_selected_concept_by_disease": {
+    "Nausea": {
+      "disease": "Nausea",
+      "conceptId": "422587007",
+      "preferred_term": "Nausea",
+      "fully_specified_name": "Nausea (finding)",
+      "type": "Clinical finding",
+      "definition": "An unpleasant sensation in the stomach usually accompanied by the urge to vomit. Common causes are early pregnancy, sea and motion sickness, emotional stress, intense pain, food poisoning, and various enteroviruses.",
+      "best_match_term": "Nausea"
+    },
+    "Vomiting": {
+      "disease": "Vomiting",
+      "conceptId": "422400008",
+      "preferred_term": "Vomiting",
+      "fully_specified_name": "Vomiting (disorder)",
+      "type": "Clinical finding",
+      "definition": "The forcible expulsion of the contents of the STOMACH through the MOUTH.",
+      "best_match_term": "Vomiting"
+    },
+    "Cesarean Section": {
+      "disease": "Cesarean Section",
+      "conceptId": "11466000",
+      "preferred_term": "Cesarean section",
+      "fully_specified_name": "Cesarean section (procedure)",
+      "type": "Procedure",
+      "definition": "Extraction of the FETUS by means of abdominal HYSTEROTOMY.",
+      "best_match_term": "Cesarean section"
+    }
+  }
+}

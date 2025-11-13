@@ -1,0 +1,17 @@
+[
+  "patient_has_finding_of_acute_exacerbation_of_chronic_obstructive_airways_disease_inthehistory",
+  "patient_has_undergone_antibiotic_therapy_inthehistory",
+  "patient_has_taken_corticosteroid_and_corticosteroid_derivative_containing_product_inthehistory",
+  "patient_has_undergone_oxygen_therapy_inthehistory",
+  "patient_has_finding_of_chronic_obstructive_lung_disease_now",
+  "patient_has_undergone_lung_excision_inthepast6months",
+  "patient_has_undergone_open_heart_surgery_inthepast6months",
+  "patient_has_undergone_opening_of_chest_inthepast6months",
+  "patient_has_undergone_procedure_inthepast6months",
+  "patient_has_undergone_sternotomy_inthepast6months",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_desaturation_of_blood_value_recorded_now_withunit_percent",
+  "patient_has_finding_of_disease_inthefuture6months",
+  "patient_has_finding_of_unable_to_comply_with_treatment_inthefuture6months",
+  "patient_has_finding_of_disease_now"
+]

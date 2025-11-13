@@ -1,0 +1,8 @@
+[
+  "patient_creatinine_value_recorded_now_withunit_mg_per_dl",
+  "patient_has_finding_of_renal_insufficiency_now",
+  "patient_is_undergoing_anticoagulant_therapy_now",
+  "patient_has_finding_of_bleeding_now",
+  "patient_is_pregnant_now",
+  "patient_has_finding_of_hypersensitivity_condition_now"
+]

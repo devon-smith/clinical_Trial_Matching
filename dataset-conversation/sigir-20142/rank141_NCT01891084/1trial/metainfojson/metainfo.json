@@ -1,0 +1,26 @@
+{
+  "trial_id": "NCT01891084",
+  "contextual": {
+    "_id": "NCT01891084",
+    "title": "The Benefit and Harm of Fever Suppression by Antipyretics in Influenza",
+    "text": "Summary: The purpose of this study is to investigate the potential benefits and risks of antipyretics use in naturally occurring influenza virus infections in humans.\nInclusion criteria: inclusion criteria: \n\n Adults aged between 18-30 \n\n Presenting with symptoms of acute URTI (at least two among the following symptoms: body temperature ≥37.8°C, cough, rhinorrhea, sore throat, headache, myalgia/arthralgia) within 48 hours of illness onset \n\n being tested positive with a QuickVue rapid influenza test \n\n \nExclusion criteria: : \n\n Allergic to paracetamol or any other antipyretics \n\n Have any underlying immunocompromized condition or be receiving immunosuppressive agents. \n\n Have any history of chronic liver disease, or any active lung, heart or renal diseases requiring regular medication.",
+    "metadata": {
+      "brief_title": "The Benefit and Harm of Fever Suppression by Antipyretics in Influenza",
+      "phase": "Phase 4",
+      "drugs": "['Paracetamol', 'Placebo', 'Backup NSAID ibuprofen']",
+      "drugs_list": [
+        "Paracetamol",
+        "Placebo",
+        "Backup NSAID ibuprofen"
+      ],
+      "diseases": "['Influenza']",
+      "diseases_list": [
+        "Influenza"
+      ],
+      "enrollment": "300.0",
+      "inclusion_criteria": "inclusion criteria: \n\n Adults aged between 18-30 \n\n Presenting with symptoms of acute URTI (at least two among the following symptoms: body temperature ≥37.8°C, cough, rhinorrhea, sore throat, headache, myalgia/arthralgia) within 48 hours of illness onset \n\n being tested positive with a QuickVue rapid influenza test \n\n ",
+      "exclusion_criteria": ": \n\n Allergic to paracetamol or any other antipyretics \n\n Have any underlying immunocompromized condition or be receiving immunosuppressive agents. \n\n Have any history of chronic liver disease, or any active lung, heart or renal diseases requiring regular medication.",
+      "brief_summary": "The purpose of this study is to investigate the potential benefits and risks of antipyretics use in naturally occurring influenza virus infections in humans."
+    }
+  }
+}

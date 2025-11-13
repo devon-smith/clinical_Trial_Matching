@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_allergic_disposition_now",
+  "patient_has_finding_of_chronic_disease_now",
+  "patient_has_finding_of_diabetes_mellitus_now",
+  "patient_has_finding_of_disorder_of_gastrointestinal_tract_now",
+  "patient_has_finding_of_disorder_of_lung_now",
+  "patient_has_finding_of_immunodeficiency_disorder_now",
+  "patient_has_finding_of_kidney_disease_now",
+  "patient_has_undergone_administration_of_antibiotic_inthehistory",
+  "patient_is_undergoing_administration_of_antibiotic_now"
+]

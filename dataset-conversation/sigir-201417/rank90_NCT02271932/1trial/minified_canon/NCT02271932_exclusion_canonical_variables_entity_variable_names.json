@@ -1,0 +1,11 @@
+[
+  "patient_has_finding_of_abdominal_pain_inthehistory",
+  "patient_has_finding_of_peritonitis_now",
+  "patient_is_pregnant_now",
+  "patient_white_blood_cell_count_value_recorded_now_withunit_cells_per_microliter",
+  "patient_has_finding_of_abscess_now",
+  "patient_has_finding_of_acute_perforated_appendicitis_now",
+  "patient_has_undergone_imaging_now",
+  "patient_has_finding_of_developmental_delay_now",
+  "patient_has_finding_of_difficulty_communicating_now"
+]
