@@ -1,0 +1,109 @@
+/* Custom styles for the chat interface */
+
+/* Chat container */
+#chat-container {
+    scroll-behavior: smooth;
+}
+
+/* Message bubbles */
+.message {
+    max-width: 80%;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* User message */
+.user-message {
+    margin-left: auto;
+    background-color: #3b82f6;
+    color: white;
+    border-top-right-radius: 0;
+}
+
+/* Assistant message */
+.assistant-message {
+    margin-right: auto;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    border-top-left-radius: 0;
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #9ca3af;
+    margin: 0 2px;
+    display: inline-block;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+/* Trial cards */
+.trial-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.trial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.trial-card h4 {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.trial-card p {
+    color: #4b5563;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.trial-card .badge {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .message {
+        max-width: 90%;
+    }
+    
+    #user-input {
+        font-size: 1rem;
+    }
+}

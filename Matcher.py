@@ -1,18 +1,34 @@
 import json
 import sqlite3
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple, Union
+from typing import Dict, List, Optional, Tuple, Union, Any
 
 from rag_retriever import EligibilityRAG
+from smt_matcher import SMTMatcher, ValueType
 
 DEFAULT_DB_PATH = Path(__file__).with_name("trial_data.sqlite")
 
 
 class TrialMatcher:
-    def __init__(self, db_path: Union[Path, str] = DEFAULT_DB_PATH):
-        """Initialize the matcher with a deterministic TrialDB backend."""
+    def __init__(self, db_path: Union[Path, str] = DEFAULT_DB_PATH, use_smt: bool = True):
+        """
+        Initialize the matcher with a deterministic TrialDB backend.
+        
+        Args:
+            db_path: Path to the SQLite database
+            use_smt: Whether to use SMT-based matching (more powerful but potentially slower)
+        """
         self.db_path = str(db_path)
         self.rag = EligibilityRAG(self.db_path)
+        self.use_smt = use_smt
+        self.smt_matcher = SMTMatcher(self.db_path) if use_smt else None
+    
+    @property
+    def trials(self):
+        """Get the trials from the SMT matcher if available."""
+        if self.smt_matcher:
+            return self.smt_matcher.trials
+        return {}
 
     def _connect(self) -> sqlite3.Connection:
         conn = sqlite3.connect(self.db_path)
@@ -22,6 +38,15 @@ class TrialMatcher:
     def load_patient_attributes(self, patient_id: str) -> Dict[str, object]:
         """
         Load canonical patient facts from the SIGIR dataset that have been ingested into TrialDB.
+        
+        Args:
+            patient_id: The ID of the patient to load
+            
+        Returns:
+            Dictionary of patient attributes
+            
+        Raises:
+            ValueError: If the patient ID is not found in the database
         """
         conn = self._connect()
         cursor = conn.cursor()
@@ -33,8 +58,14 @@ class TrialMatcher:
             """,
             (patient_id,),
         )
+        rows = cursor.fetchall()
+        
+        if not rows:
+            conn.close()
+            raise ValueError(f"Patient with ID '{patient_id}' not found in the database")
+            
         attributes: Dict[str, object] = {}
-        for row in cursor.fetchall():
+        for row in rows:
             attr_name = row["attribute_name"]
             value = self._deserialize_value(row["value"], row["value_type"])
             current = attributes.get(attr_name)
@@ -54,6 +85,32 @@ class TrialMatcher:
             status: 'PASS' | 'FAIL' | 'MISSING'
             missing_attributes: List of attribute names needed
         """
+        if not patient_attrs:
+            # If no patient attributes provided, check what's needed
+            conn = self._connect()
+            cursor = conn.cursor()
+            cursor.execute(
+                """
+                SELECT DISTINCT criterion_type 
+                FROM criteria 
+                WHERE nct_id = ? AND is_inclusion = 1
+                """,
+                (nct_id,),
+            )
+            missing = [row[0] for row in cursor.fetchall()]
+            conn.close()
+            return ("MISSING", missing)
+            
+        if self.use_smt and self.smt_matcher:
+            # Use SMT-based evaluation if enabled
+            result = self.smt_matcher.evaluate_trial(patient_attrs, nct_id)
+            return (result['status'], result['missing_attrs'])
+        else:
+            # Fall back to the original rule-based evaluation
+            return self._evaluate_trial_legacy(patient_attrs, nct_id)
+            
+    def _evaluate_trial_legacy(self, patient_attrs: Dict[str, object], nct_id: str) -> Tuple[str, List[str]]:
+        """Legacy rule-based evaluation (kept for backward compatibility)."""
         conn = self._connect()
         cursor = conn.cursor()
         cursor.execute(
@@ -103,6 +160,26 @@ class TrialMatcher:
         """
         patient_attrs = self.load_patient_attributes(patient_id)
         return self.get_all_matches(patient_attrs)
+        
+    def get_detailed_evaluation(self, patient_attrs: Dict[str, Any], nct_id: str) -> Dict[str, Any]:
+        """
+        Get a detailed evaluation of a patient against a specific trial.
+        
+        Returns:
+            Dictionary containing:
+            - status: 'PASS', 'FAIL', or 'MISSING'
+            - missing_attrs: List of missing attributes
+            - constraints: List of failed constraints with details
+        """
+        if self.use_smt and self.smt_matcher:
+            return self.smt_matcher.evaluate_trial(patient_attrs, nct_id)
+        else:
+            status, missing = self._evaluate_trial_legacy(patient_attrs, nct_id)
+            return {
+                'status': status,
+                'missing_attrs': missing,
+                'constraints': []
+            }
 
     def rag_rank_patient(self, patient_id: str, top_n: int = 10) -> List[Tuple[str, float]]:
         """Rank trials by semantic similarity between the patient note and eligibility text."""
