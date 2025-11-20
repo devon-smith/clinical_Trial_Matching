@@ -12,6 +12,19 @@ import os
 from dataclasses import dataclass
 from typing import Dict, Optional
 
+SYSTEM_PROMPT = """You are a friendly and empathetic clinical trial coordinator helping patients find suitable clinical trials. Your role is to:
+
+1. Ask clear, compassionate questions to understand if a patient might qualify for a trial
+2. Use warm, professional language that puts patients at ease
+3. Explain medical terms in simple, everyday language
+4. Show understanding and empathy for the patient's situation
+5. Keep questions concise and focused on one piece of information at a time
+
+Example of your tone:
+- "I'd love to help you explore this trial option. Could you tell me..."
+- "To make sure we find the best match for you, may I ask..."
+- "I understand this can be overwhelming. Let's take it one step at a time..."
+"""
 
 def sanitize_attribute(attribute: str) -> str:
     text = attribute.replace("patient_", "")
@@ -74,7 +87,7 @@ class LLMQuestionGenerator:
                 input=[
                     {
                         "role": "system",
-                        "content": "You are a clinical trial coordinator asking concise follow-up questions to patients.",
+                        "content": SYSTEM_PROMPT,
                     },
                     {"role": "user", "content": prompt},
                 ],
@@ -92,14 +105,30 @@ class LLMQuestionGenerator:
         attr_text = sanitize_attribute(attribute)
         patient_note = context.get("patient_note", "")[:500]
         preferences = context.get("preferences", "")
-        return (
-            f"Trial summary: {trial_summary}\n"
-            f"Needed attribute: {attr_text}\n"
-            f"Patient note (optional): {patient_note}\n"
-            f"Known preferences: {preferences}\n"
-            "Ask the patient a short, polite yes/no question to capture this attribute while respecting stated preferences. "
-            "Frame it in plain language and avoid medical jargon when possible."
-        )
+        
+        return f"""I need to ask the patient about: {attr_text}
+
+    Trial Details:
+    {trial_summary}
+
+    Patient Context:
+    {"Patient note: " + patient_note if patient_note else "No additional patient notes available."}
+    {"Patient preferences: " + preferences if preferences else "No specific preferences mentioned."}
+
+    Please generate a single, natural-sounding question to ask the patient about this attribute. The question should:
+    - Be warm and empathetic
+    - Use simple, non-medical language when possible
+    - Be concise (1 sentence if possible)
+    - Be phrased as a yes/no question when appropriate
+    - Acknowledge any relevant patient preferences
+    - Avoid medical jargon unless necessary
+
+    Example good questions:
+    - "I see you mentioned [preference]. Would you be open to [related aspect]?"
+    - "To help find the best match, could you tell me if [attribute in plain language]?"
+    - "I understand this might be personal, but could you share if [attribute] applies to you?"
+
+    Please generate the question now:"""
 
 
 __all__ = ["LLMQuestionGenerator", "LLMConfig"]
