@@ -119,26 +119,71 @@ class ConversationalTrialAssistant:
 
     def describe_trial(self, trial_row: Dict, rag_scores: Optional[Dict[str, float]] = None) -> str:
         characteristics = self.fetch_trial_characteristics(trial_row["nct_id"])
-        parts = [
-            trial_row["title"],
-            trial_row["phase"] or "Phase N/A",
-            characteristics.get("intervention_modality", {}).get("value", "Modality N/A"),
-            characteristics.get("risk_profile", {}).get("value", "Risk N/A"),
-        ]
-        summary = ", ".join(filter(None, parts))
+        # More natural phrasing
+        phase = trial_row.get("phase", "a clinical trial").lower()
+        title = trial_row.get("title", "This study")
+        # Build description parts naturally
+        description = [f"{title} is {phase}"]
+        # Add intervention if available
+        intervention = characteristics.get("intervention_modality", {}).get("value")
+        if intervention:
+            description.append(f"testing {intervention.lower()}")
+        # Add risk profile if available
+        risk = characteristics.get("risk_profile", {}).get("value")
+        if risk:
+            description.append(f"with a {risk.lower()} risk profile")
+        # Add logistics if available
         logistics = characteristics.get("logistics_profile", {}).get("value")
         if logistics:
-            summary += f" | Logistics: {logistics}"
+            description.append(f"involving {logistics.lower()}")
+        # Add relevance if score is high
         if rag_scores and trial_row["nct_id"] in rag_scores:
-            summary += f" | Similarity: {rag_scores[trial_row['nct_id']]:.2f}"
-        return summary
+            score = rag_scores[trial_row["nct_id"]]
+            if score > 0.7:
+                description.append("This trial seems particularly relevant based on your information.")
+        # Join with natural language
+        description_text = " ".join(description) + "."
+        return description_text[0].upper() + description_text[1:]  # Capitalize first letter
 
     def attribute_to_question(self, attribute: str) -> str:
-        text = attribute.replace("patient_", "")
-        text = text.replace("_", " ")
-        text = text.replace(" has ", " have ")
-        text = text.replace(" is ", " be ")
-        return f"Do we know whether the patient {text}?"
+        # Map common attributes to natural questions
+        question_map = {
+            "patient_has_cancer": "Have you been diagnosed with cancer?",
+            "patient_age": "Could you share your age?",
+            "patient_ecog_status": "How would you describe your ability to carry out daily activities?",
+            "patient_prior_treatment": "Have you received any previous treatments for your condition?",
+            "patient_biomarker_status": "Have you had any biomarker testing done?",
+            "patient_has_metastasis": "Has the cancer spread to other parts of your body?",
+            "patient_has_brain_metastases": "Has the cancer spread to your brain?",
+            "patient_has_liver_metastases": "Has the cancer spread to your liver?",
+            "patient_has_lung_metastases": "Has the cancer spread to your lungs?",
+            "patient_has_bone_metastases": "Has the cancer spread to your bones?",
+            "patient_has_lymph_node_metastases": "Has the cancer spread to your lymph nodes?",
+            "patient_has_heart_disease": "Do you have any history of heart disease?",
+            "patient_has_diabetes": "Have you been diagnosed with diabetes?",
+            "patient_has_hypertension": "Do you have high blood pressure?",
+            "patient_has_kidney_disease": "Do you have any kidney problems?",
+            "patient_has_liver_disease": "Do you have any liver conditions?",
+            "patient_has_lung_disease": "Do you have any lung conditions?",
+            "patient_has_autoimmune_disease": "Have you been diagnosed with any autoimmune disorders?",
+            "patient_is_smoker": "Do you currently smoke or have you smoked in the past?",
+            "patient_has_hiv": "Have you tested positive for HIV?",
+            "patient_has_hepatitis": "Do you have hepatitis B or C?",
+            "patient_has_organ_transplant": "Have you ever had an organ transplant?",
+            "patient_is_pregnant": "Are you currently pregnant or planning to become pregnant?",
+            "patient_is_breastfeeding": "Are you currently breastfeeding?",
+            "patient_has_bleeding_disorder": "Do you have any bleeding disorders?",
+            "patient_has_seizure_disorder": "Have you ever been diagnosed with a seizure disorder?",
+            "patient_has_mental_illness": "Have you been diagnosed with any mental health conditions?",
+            "patient_has_substance_abuse": "Have you struggled with substance abuse?",
+            "patient_has_allergies": "Do you have any medication allergies?",
+        }
+        # Use the predefined question if available
+        if attribute in question_map:
+            return question_map[attribute]
+        # Fallback to a more natural phrasing for other attributes
+        text = attribute.replace("patient_", "").replace("_", " ")
+        return f"Could you tell me about {text}?"
 
     def interpret_answer(self, answer: str) -> Optional[bool]:
         normalized = answer.strip().lower()
