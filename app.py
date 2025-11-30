@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, request, jsonify, session, send_from_directory
 from flask_cors import CORS
+from conversation_agent import ConversationalTrialAssistant
 import sqlite3
 import os
 from dotenv import load_dotenv
@@ -11,9 +12,15 @@ from llm_service import LLMService
 
 load_dotenv()
 
-app = Flask(__name__, static_folder='templates/static')
+app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key')
 CORS(app)
-app.secret_key = os.getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
+
+app.config.update(
+    SESSION_COOKIE_SECURE=True,
+    SESSION_COOKIE_HTTPONLY=True,
+    SESSION_COOKIE_SAMESITE='Lax',
+)
 
 # Add CSP headers
 @app.after_request
@@ -667,77 +674,85 @@ def index():
         session['awaiting_info'] = 'age'
     return render_template('index.html')
 
+# In app.py, update the chat endpoint
 @app.route('/api/chat', methods=['POST'])
 def chat():
-    """Handle chat messages from the user."""
     try:
         data = request.get_json()
         user_message = data.get('message', '').strip()
         
-        if not user_message:
-            return jsonify({
-                'text': "I didn't receive your message. Could you please try again?",
-                'error': 'Empty message'
-            }), 400
+        # Initialize session if needed
+        if 'assistant' not in session:
+            session['assistant'] = {
+                'conversation_state': 'initial',
+                'patient_data': {
+                    'age': None,
+                    'gender': None,
+                    'conditions': [],
+                    'symptoms': '',
+                    'primary_condition': None
+                }
+            }
         
-        # Add debug logging
-        print(f"\n--- New Chat Message ---")
-        print(f"Session state: {dict(session)}")
-        print(f"User message: {user_message}")
+        # Get or create conversation assistant
+        assistant = ConversationalTrialAssistant()
+        assistant.conversation_state = session['assistant']['conversation_state']
+        assistant.patient_data = session['assistant']['patient_data']
         
         # Process the message
-        try:
-            response = process_user_message(user_message, session)
-            print(f"Response: {response}")
-        except Exception as e:
-            print(f"Error in process_user_message: {str(e)}")
-            import traceback
-            traceback.print_exc()
-            raise
+        if assistant.conversation_state == 'ready_to_search' and user_message.lower() in ['yes', 'no', 'update']:
+            # Handle search confirmation/update flow
+            if user_message.lower() == 'yes':
+                patient_data = assistant.get_patient_data_for_matching()
+                # Save session before returning
+                session['assistant'] = {
+                    'conversation_state': assistant.conversation_state,
+                    'patient_data': assistant.patient_data
+                }
+                session.modified = True
+                
+                # Call your trial matching logic here
+                # matched_trials = assistant.matcher.find_matching_trials(patient_data)
+                return jsonify({
+                    'status': 'searching',
+                    'message': 'Searching for clinical trials...',
+                    'patient_data': patient_data
+                })
+            elif user_message.lower() == 'update':
+                return jsonify({
+                    'status': 'update',
+                    'message': 'What information would you like to update? (age/gender/conditions/symptoms)'
+                })
+            else:
+                return jsonify({
+                    'status': 'goodbye',
+                    'message': 'Thank you for using our service. Goodbye!'
+                })
         
-        # Save the session
+        # Process regular conversation flow
+        response, _ = assistant.process_response(user_message)
+        
+        # Update session
+        session['assistant'] = {
+            'conversation_state': assistant.conversation_state,
+            'patient_data': assistant.patient_data
+        }
         session.modified = True
         
-        return jsonify(response)
-        
-    except Exception as e:
-        error_msg = f"Error in chat endpoint: {str(e)}"
-        print(f"\n{'-'*50}")
-        print(error_msg)
-        import traceback
-        traceback.print_exc()
-        print(f"{'='*50}\n")
-        
-        # Add database diagnostics
-        db_status = {
-            'db_exists': os.path.exists(DB_PATH),
-            'db_size': f"{os.path.getsize(DB_PATH) / (1024*1024):.2f} MB" if os.path.exists(DB_PATH) else 'N/A',
-            'tables': []
-        }
-        
-        try:
-            import sqlite3
-            conn = sqlite3.connect(DB_PATH)
-            cursor = conn.cursor()
-            cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-            tables = cursor.fetchall()
-            db_status['tables'] = [t[0] for t in tables]
-            
-            # Check trials table
-            if 'trials' in db_status['tables']:
-                cursor.execute("SELECT COUNT(*) FROM trials;")
-                db_status['trials_count'] = cursor.fetchone()[0]
-                
-            conn.close()
-        except Exception as db_err:
-            db_status['error'] = str(db_err)
-        
-        print(f"Database status: {db_status}")
+        # Get next question
+        next_question = assistant.get_next_question()
         
         return jsonify({
-            'text': "I'm having trouble accessing the trial database. The technical team has been notified.",
-            'error': error_msg,
-            'db_status': db_status if 'db_status' in locals() else 'Unable to check database status'
+            'status': 'continue',
+            'response': response,
+            'next_question': next_question,
+            'conversation_state': assistant.conversation_state
+        })
+        
+    except Exception as e:
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
         }), 500
 
 @app.route('/api/trials/<nct_id>')
@@ -764,4 +779,4 @@ if __name__ == '__main__':
     os.makedirs('templates', exist_ok=True)
     
     # Run the app
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001, host='0.0.0.0')
