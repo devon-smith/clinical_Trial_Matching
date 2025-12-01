@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinical Trial Matching Assistant</title>
+    <!-- Add Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <style>
@@ -92,6 +93,7 @@
         </div>
     </div>
 
+    <!-- Move the script to the end of the body -->
     <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
     <script>
         // Add basic error handling for static files
