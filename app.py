@@ -12,12 +12,24 @@ from llm_service import LLMService
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, 
+    static_folder='static',
+    static_url_path='/static',
+    template_folder='templates'
+)
+
 app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key')
-CORS(app)
+CORS(app, resources={
+    r"/api/*": {
+        "origins": ["http://localhost:5001", "http://127.0.0.1:5001"],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"],
+        "supports_credentials": True
+    }
+})
 
 app.config.update(
-    SESSION_COOKIE_SECURE=True,
+    SESSION_COOKIE_SECURE=False,
     SESSION_COOKIE_HTTPONLY=True,
     SESSION_COOKIE_SAMESITE='Lax',
 )
@@ -36,14 +48,21 @@ def add_security_headers(response):
     response.headers['Content-Security-Policy'] = csp.replace('\n', ' ').strip()
     return response
 
+
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Credentials', 'true')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
+
 # Ensure the static files are served
 @app.route('/static/<path:path>')
 def serve_static(path):
     return send_from_directory('templates/static', path)
 
-
 # Database configuration
-DB_PATH = os.path.join(os.path.dirname(__file__), 'trial_data.sqlite')
+DB_PATH = os.getenv('DATABASE_URL', 'sqlite:///trial_data.sqlite').replace('sqlite:///', '')
 
 class TrialMatcher:
     def __init__(self):
@@ -681,10 +700,10 @@ def chat():
         data = request.get_json()
         user_message = data.get('message', '').strip()
         
-        # Initialize session if needed
+        # Initialize conversation assistant if not exists
         if 'assistant' not in session:
             session['assistant'] = {
-                'conversation_state': 'initial',
+                'conversation_state': 'get_age',
                 'patient_data': {
                     'age': None,
                     'gender': None,
@@ -700,37 +719,7 @@ def chat():
         assistant.patient_data = session['assistant']['patient_data']
         
         # Process the message
-        if assistant.conversation_state == 'ready_to_search' and user_message.lower() in ['yes', 'no', 'update']:
-            # Handle search confirmation/update flow
-            if user_message.lower() == 'yes':
-                patient_data = assistant.get_patient_data_for_matching()
-                # Save session before returning
-                session['assistant'] = {
-                    'conversation_state': assistant.conversation_state,
-                    'patient_data': assistant.patient_data
-                }
-                session.modified = True
-                
-                # Call your trial matching logic here
-                # matched_trials = assistant.matcher.find_matching_trials(patient_data)
-                return jsonify({
-                    'status': 'searching',
-                    'message': 'Searching for clinical trials...',
-                    'patient_data': patient_data
-                })
-            elif user_message.lower() == 'update':
-                return jsonify({
-                    'status': 'update',
-                    'message': 'What information would you like to update? (age/gender/conditions/symptoms)'
-                })
-            else:
-                return jsonify({
-                    'status': 'goodbye',
-                    'message': 'Thank you for using our service. Goodbye!'
-                })
-        
-        # Process regular conversation flow
-        response, _ = assistant.process_response(user_message)
+        response, done = assistant.process_response(user_message)
         
         # Update session
         session['assistant'] = {
@@ -744,12 +733,13 @@ def chat():
         
         return jsonify({
             'status': 'continue',
-            'response': response,
+            'response': response if response else '',
             'next_question': next_question,
             'conversation_state': assistant.conversation_state
         })
         
     except Exception as e:
+        print(f"Error in chat endpoint: {str(e)}")
         return jsonify({
             'status': 'error',
             'message': str(e)

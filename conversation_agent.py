@@ -5,16 +5,27 @@ using TrialDB rankings and trial characteristics.
 
 from __future__ import annotations
 
+from ast import Break
 import sqlite3
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Callable, Dict, List, Optional, Sequence, Set, Tuple
+from typing import Callable, Dict, List, Optional, Sequence, Set, Tuple, Union
 
 from Matcher import DEFAULT_DB_PATH, TrialMatcher
 from llm_questioner import LLMQuestionGenerator
 
 QuestionProvider = Callable[[str], str]
 
+CONVERSATION_STATES = {
+    'INITIAL': 'initial',
+    'GET_AGE': 'get_age',
+    'GET_GENDER': 'get_gender',
+    'GET_CONDITION': 'get_condition',
+    'GET_SYMPTOMS': 'get_symptoms',
+    'PRIORITIZE_CONDITIONS': 'prioritize_conditions',
+    'READY_TO_SEARCH': 'ready_to_search'
+}
 
 @dataclass
 class PreferenceState:
@@ -31,21 +42,327 @@ class PreferenceState:
 
 
 class ConversationalTrialAssistant:
-    def __init__(
-        self,
-        db_path: Path | str = DEFAULT_DB_PATH,
-        question_generator: Optional[LLMQuestionGenerator] = None,
-    ):
+    def __init__(self, db_path: Union[Path, str] = DEFAULT_DB_PATH, question_generator: Optional[LLMQuestionGenerator] = None):
         self.db_path = str(db_path)
         self.matcher = TrialMatcher(db_path)
         self.question_generator = question_generator or LLMQuestionGenerator()
         self._characteristic_cache: Dict[str, Dict] = {}
         self.last_preferences: Optional[PreferenceState] = None
+        self.conversation_state = CONVERSATION_STATES['INITIAL']
+        self.patient_data = {
+            'age': None,
+            'gender': None,
+            'conditions': [],
+            'symptoms': [],
+            'primary_condition': None
+        }
 
     def _connect(self) -> sqlite3.Connection:
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
         return conn
+
+    def _get_criteria_attributes(self) -> Set[str]:
+        """Get all unique criterion types from the database."""
+        conn = self._connect()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("SELECT DISTINCT criterion_type FROM criteria")
+            attributes = {row[0] for row in cursor.fetchall()}
+            print("Available criteria attributes in database:", attributes)
+            return attributes
+        finally:
+            conn.close()
+
+    def get_next_question(self) -> str:
+        """Get the next question based on the current conversation state."""
+        if self.conversation_state == CONVERSATION_STATES['INITIAL']:
+            self.conversation_state = CONVERSATION_STATES['GET_AGE']
+            return "To help find the most relevant clinical trials, I'll need some information. First, could you please tell me your age?"
+    
+        elif self.conversation_state == CONVERSATION_STATES['GET_AGE']:
+            self.conversation_state = CONVERSATION_STATES['GET_GENDER']
+            return "Thank you. Could you please share your gender? (e.g., male, female, non-binary, prefer not to say)"
+    
+        elif self.conversation_state == CONVERSATION_STATES['GET_GENDER']:
+            self.conversation_state = CONVERSATION_STATES['GET_CONDITION']
+            return ("Thank you. Now, could you please tell me about the main health condition or conditions "
+                    "you're experiencing? Please list any specific diagnoses you've received.")
+    
+        elif self.conversation_state == CONVERSATION_STATES['GET_CONDITION']:
+            self.conversation_state = CONVERSATION_STATES['GET_SYMPTOMS']
+            return ("I understand you mentioned these conditions: {}. "
+                "Could you describe your main symptoms in more detail? This will help me find the most relevant trials.".format(
+                    ", ".join(self.patient_data['conditions']) if self.patient_data['conditions'] else "a condition"
+                ))
+    
+        elif self.conversation_state == CONVERSATION_STATES['GET_SYMPTOMS']:
+            if len(self.patient_data['conditions']) > 1:
+                self.conversation_state = CONVERSATION_STATES['PRIORITIZE_CONDITIONS']
+                return ("I see you mentioned multiple conditions: {}. "
+                        "Which one would you like to prioritize for clinical trial matching? "
+                        "Please enter the number corresponding to your priority.".format(
+                        ", ".join(f"{i+1}. {cond}" for i, cond in enumerate(self.patient_data['conditions']))
+                    ))
+            else:
+                self.conversation_state = CONVERSATION_STATES['READY_TO_SEARCH']
+                return "Thank you for providing this information. I'll now search for relevant clinical trials based on your condition: {}.".format(
+                    self.patient_data['conditions'][0]
+                )
+    
+        elif self.conversation_state == CONVERSATION_STATES['PRIORITIZE_CONDITIONS']:
+            self.conversation_state = CONVERSATION_STATES['READY_TO_SEARCH']
+            return "Thank you. I'll prioritize finding trials related to {}.".format(
+                self.patient_data['primary_condition']
+            )
+        return "I'm ready to help you find clinical trials. What would you like to do next?"
+
+    def process_response(self, user_input: str) -> Tuple[str, bool]:
+        """Process user input and return (response_message, done)"""
+        print(f"Current state: {self.conversation_state}")
+        print(f"User input: {user_input}")
+        print(f"Patient data: {self.patient_data}")
+    
+        if not user_input.strip():
+            return "I didn't catch that. Could you please repeat?", False
+    
+        user_input = user_input.strip()
+    
+        if self.conversation_state == CONVERSATION_STATES['GET_AGE']:
+            try:
+                age = int(user_input)
+                if 1 <= age <= 120:
+                    self.patient_data['age'] = age
+                    self.conversation_state = CONVERSATION_STATES['GET_GENDER']
+                    return "Thank you. Could you please share your gender? (e.g., male, female, non-binary, prefer not to say)", False
+                return "Please enter a valid age between 1 and 120.", False
+            except ValueError:
+                return "Please enter your age as a number.", False
+    
+        elif self.conversation_state == CONVERSATION_STATES['GET_GENDER']:
+            # Normalize the input and check against common gender options
+            gender = user_input.lower().strip(' .!?')
+            valid_genders = ['male', 'female', 'non-binary', 'prefer not to say']
+            
+            if any(term in gender for term in valid_genders):
+                self.patient_data['gender'] = gender
+                self.conversation_state = CONVERSATION_STATES['GET_CONDITION']
+                return ("Thank you. Now, could you please tell me about the main health condition or conditions "
+                       "you're experiencing? Please list any specific diagnoses you've received."), False
+            return "Please specify your gender (e.g., male, female, non-binary, or prefer not to say).", False
+    
+        elif self.conversation_state == CONVERSATION_STATES['GET_CONDITION']:
+            if not user_input:
+                return "Please share at least one health condition to help us find relevant trials.", False
+            # Split conditions by common separators and clean up
+            conditions = [c.strip() for c in re.split(r'[,\n]', user_input) if c.strip()]
+            if not conditions:
+                return "I didn't catch that. Could you please list your health conditions separated by commas?", False
+        
+            self.patient_data['conditions'] = conditions
+            if len(conditions) == 1:
+                self.patient_data['primary_condition'] = conditions[0]
+                self.conversation_state = CONVERSATION_STATES['GET_SYMPTOMS']
+            else:
+                self.conversation_state = CONVERSATION_STATES['PRIORITIZE_CONDITIONS']
+                conditions_list = "\n".join(f"{i+1}. {cond}" for i, cond in enumerate(conditions))
+                return (f"I see you mentioned multiple conditions:\n{conditions_list}\n\n"
+                       "Which one would you like to prioritize for clinical trial matching? "
+                       "Please enter the number (1-{}) corresponding to your priority.".format(len(conditions))), False
+        
+            return ("Thank you. Could you describe your main symptoms in more detail? "
+                   "This will help me find the most relevant trials."), False
+    
+        elif self.conversation_state == CONVERSATION_STATES['PRIORITIZE_CONDITIONS']:
+            try:
+                choice = int(user_input.strip())
+                if 1 <= choice <= len(self.patient_data['conditions']):
+                    self.patient_data['primary_condition'] = self.patient_data['conditions'][choice-1]
+                    self.conversation_state = CONVERSATION_STATES['GET_SYMPTOMS']
+                    return ("Thank you. I'll prioritize finding trials related to {}. "
+                           "Could you describe your main symptoms in more detail?".format(
+                               self.patient_data['primary_condition'])), False
+                return f"Please enter a number between 1 and {len(self.patient_data['conditions'])}.", False
+            except ValueError:
+                return "Please enter the number corresponding to the condition you'd like to prioritize.", False
+    
+        elif self.conversation_state == CONVERSATION_STATES['GET_SYMPTOMS']:
+            if not user_input.strip():
+                return "Could you please describe your symptoms? This will help me find the most relevant trials.", False
+            
+            self.patient_data['symptoms'] = user_input
+            self.conversation_state = CONVERSATION_STATES['READY_TO_SEARCH']
+            return ("Thank you for providing this information. I'll now search for relevant clinical trials based on: "
+                   f"Age: {self.patient_data['age']}, "
+                   f"Gender: {self.patient_data['gender']}, "
+                   f"Condition: {self.patient_data['primary_condition']}, "
+                   f"Symptoms: {self.patient_data['symptoms']}"), False
+                   
+        elif self.conversation_state == CONVERSATION_STATES['READY_TO_SEARCH']:
+            # Perform the trial search with the collected patient data
+            from smt_matcher import SMTMatcher
+            import os
+            from dotenv import load_dotenv
+            
+            # Load environment variables and get database path
+            load_dotenv()
+            db_path = os.getenv('DATABASE_URL', 'sqlite:///Trials.db').replace('sqlite:///', '')
+            matcher = SMTMatcher(db_path=db_path)
+
+            # In the READY_TO_SEARCH state, before calling evaluate_all_trials
+
+            # First, let's see what criteria attributes exist in the database
+            criteria_attributes = self._get_criteria_attributes()
+
+            # In the READY_TO_SEARCH state, before calling evaluate_all_trials
+
+            # Map our collected data to the expected attribute names in the database
+            mapped_patient_data = {}
+
+            # Age mapping - handle both direct age and age range
+            if 'age' in self.patient_data and self.patient_data['age'] is not None:
+                age = int(self.patient_data['age'])
+                mapped_patient_data['age'] = age
+                mapped_patient_data['age_years'] = age
+
+            # Gender mapping - handle different formats
+            if 'gender' in self.patient_data and self.patient_data['gender']:
+                gender = self.patient_data['gender'].lower()
+                # Map to single character format (M/F) which is common in clinical trials
+                if gender in ['male', 'm', 'man']:
+                    mapped_patient_data['gender'] = 'M'
+                elif gender in ['female', 'f', 'woman']:
+                    mapped_patient_data['gender'] = 'F'
+                else:
+                    mapped_patient_data['gender'] = gender.upper()
+
+            # Conditions - map to diagnosis
+            if 'primary_condition' in self.patient_data and self.patient_data['primary_condition']:
+                condition = self.patient_data['primary_condition'].lower()
+                mapped_patient_data['diagnosis'] = condition
+                mapped_patient_data['condition'] = condition
+
+            # Additional conditions as a list
+            if 'conditions' in self.patient_data and self.patient_data['conditions']:
+                conditions = [c.lower() for c in self.patient_data['conditions']]
+                mapped_patient_data['conditions'] = conditions
+                mapped_patient_data['diagnoses'] = conditions  # Some trials might use 'diagnoses' plural
+
+            # Symptoms
+            if 'symptoms' in self.patient_data and self.patient_data['symptoms']:
+                symptoms = self.patient_data['symptoms'].lower()
+                mapped_patient_data['symptoms'] = symptoms
+                mapped_patient_data['symptom'] = symptoms  # Some trials might use singular
+
+            # Update the mapping section (around line 260) to:
+            required_criteria = ['age', 'gender', 'diagnosis']
+            for crit in required_criteria:
+                if crit not in mapped_patient_data:
+                    # Provide default values for required criteria
+                    if crit == 'age':
+                        mapped_patient_data[crit] = 30  # Default age
+                        # Add age in different formats
+                        mapped_patient_data['patient_age_value_recorded_now_in_years'] = 30
+                    elif crit == 'gender':
+                        mapped_patient_data[crit] = 'F'  # Default to Female
+                        # Add gender in different formats
+                        mapped_patient_data['patient_gender'] = 'F'
+                    elif crit == 'diagnosis' and 'primary_condition' in self.patient_data:
+                        diagnosis = self.patient_data['primary_condition'].lower()
+                        mapped_patient_data[crit] = diagnosis
+                        # Add diagnosis in different formats
+                        mapped_patient_data[f'patient_has_diagnosis_of_{diagnosis.replace(" ", "_")}'] = True
+                        mapped_patient_data[f'patient_has_diagnosis_of_{diagnosis.replace(" ", "_")}_inthehistory'] = True
+
+            # Add common conditions that might be in criteria
+            common_conditions = ['cancer', 'diabetes', 'hypertension', 'obesity']
+            for condition in common_conditions:
+                if condition in str(mapped_patient_data.get('diagnosis', '')).lower():
+                    mapped_patient_data[f'patient_has_diagnosis_of_{condition}'] = True
+                    mapped_patient_data[f'patient_has_diagnosis_of_{condition}_inthehistory'] = True
+
+            print("Mapped patient data for matching:", mapped_patient_data)
+            
+            # Debug: Print patient data being sent to matcher
+            print("\n=== DEBUG: Patient Data for Matching ===")
+            print("Mapped Patient Data:", mapped_patient_data)
+
+            try:
+                # Get matching trials using evaluate_all_trials
+                trial_results = matcher.evaluate_all_trials(mapped_patient_data)
+
+                # Debug: Print detailed matching results
+                print("\n=== DEBUG: Trial Matching Results ===")
+                passed_trials = [nct_id for nct_id, result in trial_results.items() if result['status'] == 'PASS']
+                print(f"Total trials passed: {len(passed_trials)}")
+                print(f"Total trials failed: {len(trial_results) - len(passed_trials)}")
+
+                # Print first few failed trials with reasons
+                print("\nSample failed trials:")
+                failed_count = 0
+                for nct_id, result in trial_results.items():
+                    if result['status'] != 'PASS' and failed_count < 3:  # Show first 3 failures
+                        print(f"\nTrial {nct_id}:")
+                        print(f"  Status: {result['status']}")
+                        if 'failed_constraints' in result:
+                            for fc in result['failed_constraints'][:3]:  # Show first 3 failed constraints
+                                print(f"  - Failed: {fc.get('attribute')} {fc.get('operator')} {fc.get('value')}")
+                        failed_count += 1
+                
+                # Filter for trials that passed
+                matching_trials = [
+                    {
+                        'nct_id': nct_id,
+                        'brief_title': self._get_trial_title(nct_id),
+                        'status': result['status']
+                    }
+                    for nct_id, result in trial_results.items()
+                    if result['status'] == 'PASS'  # Only include trials that passed all hard constraints
+                ]
+                
+                if not matching_trials:
+                    return "I couldn't find any matching clinical trials based on your information. Would you like to try a different search?", True
+                
+                # Format the results
+                trial_list = "\n".join([
+                    f"- {trial['nct_id']}: {trial.get('brief_title', 'No title available')}"
+                    for trial in matching_trials[:5]  # Show top 5 results
+                ])
+                
+                return (f"I found a number of clinical trials that might be a good match. "
+                       f"Here are the top results:\n\n{trial_list}\n\n"
+                       "Would you like more information about any of these trials?"), True
+                        
+            except Exception as e:
+                print(f"Error searching for trials: {str(e)}")
+                return "I encountered an error while searching for clinical trials. Please try again later.", True
+    
+        return "I'm not sure how to respond to that. Could you rephrase?", False
+    
+
+    def _get_trial_title(self, nct_id: str) -> str:
+        """Get the title of a clinical trial by its NCT ID.
+    
+        Args:
+            nct_id: The NCT ID of the trial
+    
+        Returns:
+            The trial's title or a default message if not found
+        """
+        conn = self._connect()
+        cursor = conn.cursor()
+        try:
+            cursor.execute(
+                "SELECT title FROM trials WHERE nct_id = ?",
+                (nct_id,)
+            )
+            row = cursor.fetchone()
+            return row[0] if row and row[0] else "No title available"
+        except Exception as e:
+            print(f"Error fetching title for trial {nct_id}: {e}")
+            return "No title available"
+        finally:
+            conn.close()
 
     def get_ranked_trials(self, patient_id: str, limit: int = 10) -> List[sqlite3.Row]:
         conn = self._connect()
@@ -193,65 +510,72 @@ class ConversationalTrialAssistant:
             return False
         return None
 
-    def conduct_session(
-        self,
-        patient_id: str,
-        max_questions: int = 5,
-        answer_provider: Optional[QuestionProvider] = None,
-        verbose: bool = True,
-    ) -> Dict[str, object]:
-        if answer_provider is None:
-            answer_provider = input
-
-        preferences = PreferenceState()
-        patient_attrs = self.matcher.load_patient_attributes(patient_id)
-        rag_scores_map = dict(self.matcher.rag_rank_patient(patient_id, top_n=50))
-        ranked_trials = self.filter_trials_by_preferences(self.get_ranked_trials(patient_id), preferences)
-        if not ranked_trials:
-            raise ValueError(f"No ranked trials found for patient {patient_id}")
-
-        if verbose:
-            print(f"Loaded {len(ranked_trials)} candidate trials for patient {patient_id}.")
-
-        for question_idx in range(max_questions):
-            ranked_missing = self.rank_missing_attributes(patient_attrs, ranked_trials)
-            if not ranked_missing:
-                if verbose:
-                    print("All prioritized trials have sufficient data—no more questions needed.")
+    def conduct_session(self):
+        """Conduct a conversation session with the user."""
+        print("Welcome to the Clinical Trial Matching System!")
+        print("I'll ask you some questions to find the most relevant clinical trials for you.\n")
+    
+        while True:
+            # Get the next question based on the current state
+            question = self.get_next_question()
+            print(f"\n{question}")
+        
+            # If we're ready to search, handle that separately
+            if self.conversation_state == CONVERSATION_STATES['READY_TO_SEARCH']:
+                print("\nI have all the information I need to search for clinical trials.")
+                print("Here's what I've gathered:")
+                print(f"Age: {self.patient_data['age']}")
+                print(f"Gender: {self.patient_data['gender']}")
+                print(f"Conditions: {', '.join(self.patient_data['conditions'])}")
+                if len(self.patient_data['conditions']) > 1:
+                    print(f"Primary condition for matching: {self.patient_data['primary_condition']}")
+            
+                while True:
+                    print("\nWould you like me to search for clinical trials now? (yes/no/update)")
+                    response = input("> ").strip().lower()
+                
+                    if response == 'yes':
+                        print("Searching for relevant clinical trials...")
+                        # matched_trials = self.matcher.find_matching_trials(self.patient_data)
+                        return self.get_patient_data_for_matching()
+                    elif response == 'no':
+                        print("Goodbye!")
+                        return None
+                    elif response == 'update':
+                        print("What information would you like to update? (age/gender/conditions/symptoms)")
+                        field = input("> ").strip().lower()
+                        if field in ['age', 'gender']:
+                            self.patient_data[field] = None
+                            self.conversation_state = CONVERSATION_STATES[f'GET_{field.upper()}']
+                            break
+                        elif field in ['conditions', 'symptoms']:
+                            self.patient_data[field] = [] if field == 'conditions' else ''
+                            self.conversation_state = CONVERSATION_STATES[f'GET_{field.upper()}']
+                            break
+                        else:
+                            print("Please enter 'age', 'gender', 'conditions', or 'symptoms'")
+                    else:
+                        print("Please answer with 'yes', 'no', or 'update'")
+                continue
+        
+            # For all other states, get user input
+            user_input = input("> ")
+            response, done = self.process_response(user_input)
+            if response:  # Only print if there's a response
+                print(response)
+            if done:
                 break
 
-            attribute, context = ranked_missing[0]
-            trial_info = context["trials"][0]
-            trial_summary = self.describe_trial(trial_info, rag_scores_map)
-            llm_context = {
-                "patient_note": self._fetch_patient_note(patient_id),
-                "preferences": preferences.summary(),
-            }
-            llm_question = self.question_generator.generate_question(
-                attribute,
-                trial_summary,
-                llm_context,
-            )
-            question = f"{question_idx + 1}. {llm_question}"
-            answer = answer_provider(question + "\n> ")
-            interpreted = self.interpret_answer(answer)
-
-            if interpreted is None:
-                preference_update = self._extract_preference(answer, trial_info)
-                if preference_update:
-                    self._apply_preference(preference_update, preferences, verbose)
-                    ranked_trials = self.filter_trials_by_preferences(ranked_trials, preferences)
-                    continue
-                if verbose:
-                    print("Skipping: unable to interpret the response as yes/no.")
-                continue
-
-            patient_attrs[attribute] = interpreted
-            if verbose:
-                print(f"Recorded {attribute} = {interpreted}. Re-evaluating priorities...")
-
-        self.last_preferences = preferences
-        return patient_attrs
+    def get_patient_data_for_matching(self) -> Dict:
+        """Get the patient data in a format suitable for trial matching."""
+        return {
+            'age': self.patient_data['age'],
+            'gender': self.patient_data['gender'],
+            'primary_condition': self.patient_data['primary_condition'] or 
+                               (self.patient_data['conditions'][0] if self.patient_data['conditions'] else None),
+            'all_conditions': self.patient_data['conditions'],
+            'symptoms': self.patient_data['symptoms']
+        }
 
     def _fetch_patient_note(self, patient_id: str) -> str:
         conn = self._connect()
