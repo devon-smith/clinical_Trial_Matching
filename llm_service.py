@@ -116,6 +116,54 @@ class LLMService:
         
         return queries[:5]  # Limit to 5 queries
     
+    def generate_plain_summary(self, trial_data: Dict) -> str:
+        """
+        Generate a patient-friendly summary of a clinical trial at an 8th-grade
+        reading level.
+
+        Args:
+            trial_data: Trial information including title, brief_summary, phase, etc.
+
+        Returns:
+            Plain-language summary string (2-4 sentences).
+        """
+        title = trial_data.get('title', '')
+        summary = trial_data.get('brief_summary', '')
+        phase = trial_data.get('phase', '')
+        drugs = trial_data.get('drugs', '')
+
+        prompt = (
+            "Rewrite this clinical trial description in simple, patient-friendly "
+            "language at an 8th-grade reading level. Use 2-4 short sentences. "
+            "Explain what the study is testing and what a participant would do. "
+            "Avoid medical jargon.\n\n"
+            f"Trial: {title}\n"
+            f"Phase: {phase}\n"
+            f"Drugs/Interventions: {drugs}\n"
+            f"Summary: {summary[:500]}"
+        )
+
+        try:
+            response = self.client.chat.completions.create(
+                model=self.deployment_name,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are a health educator who explains clinical trials "
+                            "to patients in plain, clear language."
+                        ),
+                    },
+                    {"role": "user", "content": prompt},
+                ],
+                max_tokens=200,
+                temperature=0.5,
+            )
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            print(f"Error generating plain summary: {e}")
+            return summary[:300] if summary else title
+
     def explain_trial_match(self, patient_data: Dict, trial_data: Dict) -> str:
         """
         Generate an explanation of why a trial matches the patient's condition.

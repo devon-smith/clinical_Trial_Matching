@@ -4,3 +4,24 @@ __pycache__/
 venv/
 *.pyc
 
+# Secrets and environment
+.env
+
+# Runtime artifacts
+server.log
+flask_session/
+
+# macOS
+.DS_Store
+
+# Claude Code
+.claude/plans/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Gunicorn
+gunicorn.ctl
+

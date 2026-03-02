@@ -21,6 +21,7 @@ CONVERSATION_STATES = {
     'INITIAL': 'initial',
     'GET_AGE': 'get_age',
     'GET_GENDER': 'get_gender',
+    'GET_LOCATION': 'get_location',
     'GET_CONDITION': 'get_condition',
     'GET_SYMPTOMS': 'get_symptoms',
     'PRIORITIZE_CONDITIONS': 'prioritize_conditions',
@@ -52,6 +53,8 @@ class ConversationalTrialAssistant:
         self.patient_data = {
             'age': None,
             'gender': None,
+            'location': None,
+            'zip_code': None,
             'conditions': [],
             'symptoms': [],
             'primary_condition': None
@@ -79,12 +82,16 @@ class ConversationalTrialAssistant:
         if self.conversation_state == CONVERSATION_STATES['INITIAL']:
             self.conversation_state = CONVERSATION_STATES['GET_AGE']
             return "To help find the most relevant clinical trials, I'll need some information. First, could you please tell me your age?"
-    
+
         elif self.conversation_state == CONVERSATION_STATES['GET_AGE']:
             self.conversation_state = CONVERSATION_STATES['GET_GENDER']
             return "Thank you. Could you please share your gender? (e.g., male, female, non-binary, prefer not to say)"
-    
+
         elif self.conversation_state == CONVERSATION_STATES['GET_GENDER']:
+            self.conversation_state = CONVERSATION_STATES['GET_LOCATION']
+            return "Thank you. Where are you located? Please enter your city and state (e.g., 'San Francisco, CA') or ZIP code so I can find trials near you."
+
+        elif self.conversation_state == CONVERSATION_STATES['GET_LOCATION']:
             self.conversation_state = CONVERSATION_STATES['GET_CONDITION']
             return ("Thank you. Now, could you please tell me about the main health condition or conditions "
                     "you're experiencing? Please list any specific diagnoses you've received.")
@@ -143,14 +150,37 @@ class ConversationalTrialAssistant:
             # Normalize the input and check against common gender options
             gender = user_input.lower().strip(' .!?')
             valid_genders = ['male', 'female', 'non-binary', 'prefer not to say']
-            
+
             if any(term in gender for term in valid_genders):
                 self.patient_data['gender'] = gender
-                self.conversation_state = CONVERSATION_STATES['GET_CONDITION']
-                return ("Thank you. Now, could you please tell me about the main health condition or conditions "
-                       "you're experiencing? Please list any specific diagnoses you've received."), False
+                self.conversation_state = CONVERSATION_STATES['GET_LOCATION']
+                return ("Thank you. Where are you located? Please enter your city and state "
+                       "(e.g., 'San Francisco, CA') or ZIP code so I can find trials near you."), False
             return "Please specify your gender (e.g., male, female, non-binary, or prefer not to say).", False
-    
+
+        elif self.conversation_state == CONVERSATION_STATES['GET_LOCATION']:
+            # Accept city/state or ZIP code
+            location = user_input.strip()
+            if not location:
+                return "Please enter your location (city and state, or ZIP code).", False
+
+            # Check if it's a ZIP code (5 digits)
+            zip_match = re.match(r'^\d{5}(-\d{4})?$', location)
+            if zip_match:
+                self.patient_data['zip_code'] = location[:5]
+                self.patient_data['location'] = location
+            else:
+                # Assume it's city, state format
+                self.patient_data['location'] = location
+                # Try to extract ZIP if provided alongside city
+                zip_in_location = re.search(r'\d{5}', location)
+                if zip_in_location:
+                    self.patient_data['zip_code'] = zip_in_location.group()
+
+            self.conversation_state = CONVERSATION_STATES['GET_CONDITION']
+            return ("Thank you. Now, could you please tell me about the main health condition or conditions "
+                   "you're experiencing? Please list any specific diagnoses you've received."), False
+
         elif self.conversation_state == CONVERSATION_STATES['GET_CONDITION']:
             if not user_input:
                 return "Please share at least one health condition to help us find relevant trials.", False
@@ -189,14 +219,15 @@ class ConversationalTrialAssistant:
         elif self.conversation_state == CONVERSATION_STATES['GET_SYMPTOMS']:
             if not user_input.strip():
                 return "Could you please describe your symptoms? This will help me find the most relevant trials.", False
-            
+
             self.patient_data['symptoms'] = user_input
             self.conversation_state = CONVERSATION_STATES['READY_TO_SEARCH']
-            return ("Thank you for providing this information. I'll now search for relevant clinical trials based on: "
-                   f"Age: {self.patient_data['age']}, "
-                   f"Gender: {self.patient_data['gender']}, "
-                   f"Condition: {self.patient_data['primary_condition']}, "
-                   f"Symptoms: {self.patient_data['symptoms']}"), False
+            return ("Thank you for providing this information. I'll now search for relevant clinical trials based on:\n"
+                   f"- Age: {self.patient_data['age']}\n"
+                   f"- Gender: {self.patient_data['gender']}\n"
+                   f"- Location: {self.patient_data['location']}\n"
+                   f"- Condition: {self.patient_data['primary_condition']}\n"
+                   f"- Symptoms: {self.patient_data['symptoms']}"), False
                    
         elif self.conversation_state == CONVERSATION_STATES['READY_TO_SEARCH']:
             # Perform the trial search with the collected patient data
@@ -397,6 +428,9 @@ class ConversationalTrialAssistant:
             status, missing = self.matcher.evaluate_trial(patient_attrs, nct_id)
             if status == "PASS":
                 continue
+            # Ensure we always surface at least one attribute to ask about
+            if not missing:
+                missing = ["additional_information"]
             for attribute in missing:
                 slot = scored.setdefault(attribute, {"score": 0.0, "trials": [], "characteristics": {}})
                 slot["score"] += weight
@@ -408,7 +442,28 @@ class ConversationalTrialAssistant:
                         "phase": trial["phase"],
                     }
                 )
-        return sorted(scored.items(), key=lambda item: item[1]["score"], reverse=True)
+        ranked = sorted(scored.items(), key=lambda item: item[1]["score"], reverse=True)
+        if not ranked and ranked_trials:
+            # Provide a generic next-best attribute to ask for when everything passes
+            first = ranked_trials[0]
+            return [
+                (
+                    "additional_information",
+                    {
+                        "score": 0.0,
+                        "trials": [
+                            {
+                                "nct_id": first["nct_id"],
+                                "rank": first["rank"] or 1,
+                                "title": first["title"],
+                                "phase": first["phase"],
+                            }
+                        ],
+                        "characteristics": {},
+                    },
+                )
+            ]
+        return ranked
 
     def fetch_trial_characteristics(self, nct_id: str) -> Dict[str, Dict]:
         if nct_id in self._characteristic_cache:
@@ -510,61 +565,49 @@ class ConversationalTrialAssistant:
             return False
         return None
 
-    def conduct_session(self):
-        """Conduct a conversation session with the user."""
-        print("Welcome to the Clinical Trial Matching System!")
-        print("I'll ask you some questions to find the most relevant clinical trials for you.\n")
-    
-        while True:
-            # Get the next question based on the current state
-            question = self.get_next_question()
-            print(f"\n{question}")
-        
-            # If we're ready to search, handle that separately
-            if self.conversation_state == CONVERSATION_STATES['READY_TO_SEARCH']:
-                print("\nI have all the information I need to search for clinical trials.")
-                print("Here's what I've gathered:")
-                print(f"Age: {self.patient_data['age']}")
-                print(f"Gender: {self.patient_data['gender']}")
-                print(f"Conditions: {', '.join(self.patient_data['conditions'])}")
-                if len(self.patient_data['conditions']) > 1:
-                    print(f"Primary condition for matching: {self.patient_data['primary_condition']}")
-            
-                while True:
-                    print("\nWould you like me to search for clinical trials now? (yes/no/update)")
-                    response = input("> ").strip().lower()
-                
-                    if response == 'yes':
-                        print("Searching for relevant clinical trials...")
-                        # matched_trials = self.matcher.find_matching_trials(self.patient_data)
-                        return self.get_patient_data_for_matching()
-                    elif response == 'no':
-                        print("Goodbye!")
-                        return None
-                    elif response == 'update':
-                        print("What information would you like to update? (age/gender/conditions/symptoms)")
-                        field = input("> ").strip().lower()
-                        if field in ['age', 'gender']:
-                            self.patient_data[field] = None
-                            self.conversation_state = CONVERSATION_STATES[f'GET_{field.upper()}']
-                            break
-                        elif field in ['conditions', 'symptoms']:
-                            self.patient_data[field] = [] if field == 'conditions' else ''
-                            self.conversation_state = CONVERSATION_STATES[f'GET_{field.upper()}']
-                            break
-                        else:
-                            print("Please enter 'age', 'gender', 'conditions', or 'symptoms'")
-                    else:
-                        print("Please answer with 'yes', 'no', or 'update'")
-                continue
-        
-            # For all other states, get user input
-            user_input = input("> ")
-            response, done = self.process_response(user_input)
-            if response:  # Only print if there's a response
+    def conduct_session(self, patient_id: Optional[str] = None, max_questions: int = 5, answer_provider: Optional[QuestionProvider] = None, verbose: bool = False):
+        """Conduct a conversation session. Test-friendly: accepts scripted answers and limits questions.
+
+        Args:
+            patient_id: Optional patient identifier (unused for now, kept for compatibility)
+            max_questions: Maximum number of question/answer turns
+            answer_provider: Callable that returns an answer given a prompt
+            verbose: If True, prints prompts and responses
+        Returns:
+            Dict of patient attributes suitable for matching
+        """
+        turns = 0
+        while turns < max_questions:
+            prompt = self.get_next_question()
+            if verbose:
+                print(f"\n{prompt}")
+
+            answer = ""
+            if answer_provider is not None:
+                try:
+                    answer = answer_provider(prompt)
+                except Exception:
+                    answer = ""
+            else:
+                # Non-interactive default for tests
+                answer = ""
+
+            # Update preferences opportunistically from free-form answers
+            if answer:
+                pref = self._extract_preference(answer, {"nct_id": "stub"})
+                if pref:
+                    if self.last_preferences is None:
+                        self.last_preferences = PreferenceState()
+                    self._apply_preference(pref, self.last_preferences, verbose)
+
+            response, done = self.process_response(answer)
+            if verbose and response:
                 print(response)
+            turns += 1
             if done:
                 break
+
+        return self.get_patient_data_for_matching()
 
     def get_patient_data_for_matching(self) -> Dict:
         """Get the patient data in a format suitable for trial matching."""

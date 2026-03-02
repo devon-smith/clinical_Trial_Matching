@@ -12,6 +12,10 @@ import os
 from dataclasses import dataclass
 from typing import Dict, Optional
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 def sanitize_attribute(attribute: str) -> str:
     text = attribute.replace("patient_", "")
@@ -33,7 +37,7 @@ class LLMQuestionGenerator:
         config: Optional[LLMConfig] = None,
         client: Optional[object] = None,
     ):
-        self.api_key = api_key or os.getenv("OPENAI_API_KEY")
+        self.api_key = api_key or os.getenv("AZURE_OPENAI_API_KEY")
         self.config = config or LLMConfig()
         self._client = client
         self._setup_client()
@@ -42,12 +46,17 @@ class LLMQuestionGenerator:
         if self._client or not self.api_key:
             return
         try:
-            from openai import OpenAI
+            from openai import AzureOpenAI
         except Exception:
             self._client = None
             return
         try:
-            self._client = OpenAI(api_key=self.api_key)
+            self._client = AzureOpenAI(
+                api_key=self.api_key,
+                api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-15-preview"),
+                azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT", ""),
+            )
+            self.config.model = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4.1")
         except Exception:
             self._client = None
 
@@ -67,11 +76,11 @@ class LLMQuestionGenerator:
 
         prompt = self._build_prompt(attribute, trial_summary, context)
         try:
-            response = self._client.responses.create(
+            response = self._client.chat.completions.create(
                 model=self.config.model,
                 temperature=self.config.temperature,
-                max_output_tokens=self.config.max_tokens,
-                input=[
+                max_tokens=self.config.max_tokens,
+                messages=[
                     {
                         "role": "system",
                         "content": "You are a clinical trial coordinator asking concise follow-up questions to patients.",
@@ -79,7 +88,7 @@ class LLMQuestionGenerator:
                     {"role": "user", "content": prompt},
                 ],
             )
-            text = response.output[0].content[0].text.strip()
+            text = response.choices[0].message.content.strip()
             return text or self.fallback_question(attribute, trial_summary)
         except Exception:
             return self.fallback_question(attribute, trial_summary)

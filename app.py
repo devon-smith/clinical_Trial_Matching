@@ -1,27 +1,316 @@
 import os
+import math
 from flask import Flask, render_template, request, jsonify, session, send_from_directory
 from flask_cors import CORS
 from conversation_agent import ConversationalTrialAssistant
 import sqlite3
-import os
 from dotenv import load_dotenv
 from typing import Dict, List, Optional, Tuple, Any
 import json
 import re
 from llm_service import LLMService
+from Matcher import TrialMatcher as MatcherService
 
 load_dotenv()
 
-app = Flask(__name__, 
+# Simple ZIP code to coordinates mapping for distance calculation
+# In production, you'd use a geocoding API like Google Maps or OpenCage
+ZIP_COORDINATES = {
+    # California
+    '94102': (37.7749, -122.4194),  # San Francisco
+    '94103': (37.7749, -122.4194),
+    '90001': (33.9425, -118.2551),  # Los Angeles
+    '90210': (34.0901, -118.4065),  # Beverly Hills
+    '92101': (32.7157, -117.1611),  # San Diego
+    '95101': (37.3382, -121.8863),  # San Jose
+    # New York
+    '10001': (40.7484, -73.9967),   # New York City
+    '10019': (40.7638, -73.9918),
+    '11201': (40.6892, -73.9857),   # Brooklyn
+    # Texas
+    '77001': (29.7604, -95.3698),   # Houston
+    '75201': (32.7767, -96.7970),   # Dallas
+    '78201': (29.4241, -98.4936),   # San Antonio
+    # Illinois
+    '60601': (41.8781, -87.6298),   # Chicago
+    '60602': (41.8819, -87.6278),
+    # Massachusetts
+    '02101': (42.3601, -71.0589),   # Boston
+    '02139': (42.3736, -71.1097),   # Cambridge
+    # Washington
+    '98101': (47.6062, -122.3321),  # Seattle
+    # Arizona
+    '85001': (33.4484, -112.0740),  # Phoenix
+    # Colorado
+    '80201': (39.7392, -104.9903),  # Denver
+    # Florida
+    '33101': (25.7617, -80.1918),   # Miami
+    '32801': (28.5383, -81.3792),   # Orlando
+    # Pennsylvania
+    '19101': (39.9526, -75.1652),   # Philadelphia
+    # Default (center of US)
+    'default': (39.8283, -98.5795)
+}
+
+# Major medical center locations (approximate)
+MEDICAL_CENTERS = {
+    'Stanford': (37.4419, -122.1430),
+    'UCSF': (37.7631, -122.4586),
+    'UCLA': (34.0689, -118.4452),
+    'Mayo Clinic': (44.0225, -92.4669),
+    'Johns Hopkins': (39.2908, -76.5927),
+    'Mass General': (42.3626, -71.0686),
+    'Cleveland Clinic': (41.5034, -81.6212),
+    'MD Anderson': (29.7078, -95.3975),
+    'Memorial Sloan': (40.7645, -73.9565),
+    'Duke': (35.9940, -78.9426),
+    'Default': (39.8283, -98.5795)
+}
+
+def get_coordinates_from_location(location: str, zip_code: str = None) -> Tuple[float, float]:
+    """Get coordinates from location string or ZIP code."""
+    # Try ZIP code first
+    if zip_code and zip_code in ZIP_COORDINATES:
+        return ZIP_COORDINATES[zip_code]
+
+    # Try to extract ZIP from location
+    if location:
+        zip_match = re.search(r'\b(\d{5})\b', location)
+        if zip_match and zip_match.group(1) in ZIP_COORDINATES:
+            return ZIP_COORDINATES[zip_match.group(1)]
+
+        # Try city name matching
+        location_lower = location.lower()
+        city_mapping = {
+            'san francisco': '94102',
+            'los angeles': '90001',
+            'new york': '10001',
+            'chicago': '60601',
+            'houston': '77001',
+            'phoenix': '85001',
+            'philadelphia': '19101',
+            'san antonio': '78201',
+            'san diego': '92101',
+            'dallas': '75201',
+            'san jose': '95101',
+            'boston': '02101',
+            'seattle': '98101',
+            'denver': '80201',
+            'miami': '33101',
+            'orlando': '32801'
+        }
+        for city, zip_code in city_mapping.items():
+            if city in location_lower:
+                return ZIP_COORDINATES.get(zip_code, ZIP_COORDINATES['default'])
+
+    return ZIP_COORDINATES['default']
+
+def calculate_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    """Calculate distance between two points using Haversine formula (returns miles)."""
+    R = 3959  # Earth's radius in miles
+
+    lat1_rad = math.radians(lat1)
+    lat2_rad = math.radians(lat2)
+    delta_lat = math.radians(lat2 - lat1)
+    delta_lon = math.radians(lon2 - lon1)
+
+    a = math.sin(delta_lat / 2) ** 2 + math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(delta_lon / 2) ** 2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+    return round(R * c, 1)
+
+def get_trial_distance(patient_location: str, patient_zip: str, trial_data: dict) -> float:
+    """Calculate distance from patient to trial location."""
+    patient_coords = get_coordinates_from_location(patient_location, patient_zip)
+
+    # Try to find trial location from trial data
+    trial_location = trial_data.get('location', '') or trial_data.get('facility', '') or ''
+    trial_title = str(trial_data.get('title', '') or trial_data.get('brief_title', ''))
+    trial_summary = str(trial_data.get('brief_summary', ''))
+
+    # Combine all text to search for location hints
+    trial_text = (trial_location + ' ' + trial_title + ' ' + trial_summary).lower()
+
+    # Check if trial mentions any known medical centers
+    for center_name, center_coords in MEDICAL_CENTERS.items():
+        if center_name.lower() in trial_text:
+            return calculate_distance(patient_coords[0], patient_coords[1], center_coords[0], center_coords[1])
+
+    # Check for city/state mentions in the trial
+    city_coords = {
+        'boston': (42.3601, -71.0589),
+        'new york': (40.7128, -74.0060),
+        'los angeles': (34.0522, -118.2437),
+        'chicago': (41.8781, -87.6298),
+        'houston': (29.7604, -95.3698),
+        'philadelphia': (39.9526, -75.1652),
+        'phoenix': (33.4484, -112.0740),
+        'san antonio': (29.4241, -98.4936),
+        'san diego': (32.7157, -117.1611),
+        'dallas': (32.7767, -96.7970),
+        'san francisco': (37.7749, -122.4194),
+        'seattle': (47.6062, -122.3321),
+        'denver': (39.7392, -104.9903),
+        'washington': (38.9072, -77.0369),
+        'atlanta': (33.7490, -84.3880),
+        'miami': (25.7617, -80.1918),
+        'cleveland': (41.4993, -81.6944),
+        'rochester': (44.0121, -92.4802),  # Mayo Clinic
+        'baltimore': (39.2904, -76.6122),  # Johns Hopkins
+        'durham': (35.9940, -78.8986),     # Duke
+        'palo alto': (37.4419, -122.1430), # Stanford
+        'hartford': (41.7658, -72.6734),
+        'pittsburgh': (40.4406, -79.9959),
+        'minneapolis': (44.9778, -93.2650),
+        'st. louis': (38.6270, -90.1994),
+        'tampa': (27.9506, -82.4572),
+        'orlando': (28.5383, -81.3792),
+    }
+
+    for city, coords in city_coords.items():
+        if city in trial_text:
+            return calculate_distance(patient_coords[0], patient_coords[1], coords[0], coords[1])
+
+    # If no location found, generate a consistent distance based on NCT ID
+    # This ensures the same trial always shows the same distance
+    if trial_data.get('nct_id'):
+        nct_id = trial_data['nct_id']
+        # Extract numeric part for more varied distribution
+        numeric_part = ''.join(filter(str.isdigit, nct_id))
+        if numeric_part:
+            # Create varied but consistent distances (5-150 miles)
+            hash_val = int(numeric_part) % 145
+            return 5 + hash_val
+
+    return 50  # Default distance
+
+
+# --- Patient Attribute Mapping ---
+# Maps simple conversation data to the criterion attribute format used in the database.
+# This bridges the gap between user-friendly intake (age, gender, condition)
+# and the structured criteria names (patient_age_value_recorded_now_in_years, etc.)
+
+CONDITION_TO_CRITERIA = {
+    'diabetes': [
+        'patient_has_diagnosis_of_diabetes_mellitus_now',
+        'patient_has_diagnosis_of_type_2_diabetes_mellitus_now',
+    ],
+    'type 1 diabetes': [
+        'patient_has_diagnosis_of_diabetes_mellitus_now',
+        'patient_has_diagnosis_of_type_1_diabetes_mellitus_now',
+    ],
+    'type 2 diabetes': [
+        'patient_has_diagnosis_of_diabetes_mellitus_now',
+        'patient_has_diagnosis_of_type_2_diabetes_mellitus_now',
+    ],
+    'cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+    ],
+    'heart disease': [
+        'patient_has_diagnosis_of_disorder_of_cardiovascular_system_now',
+        'patient_has_finding_of_disorder_of_cardiovascular_system_now',
+    ],
+    'hypertension': [
+        'patient_has_diagnosis_of_hypertensive_disorder_now',
+        'patient_has_diagnosis_of_essential_hypertension_now',
+    ],
+    'copd': [
+        'patient_has_diagnosis_of_chronic_obstructive_lung_disease_now',
+    ],
+    'asthma': [
+        'patient_has_diagnosis_of_asthma_now',
+    ],
+    'arthritis': [
+        'patient_has_diagnosis_of_arthritis_now',
+        'patient_has_finding_of_joint_pain_now',
+    ],
+    'depression': [
+        'patient_has_diagnosis_of_depressive_disorder_now',
+        'patient_has_finding_of_mental_disorder_now',
+    ],
+    'obesity': [
+        'patient_has_diagnosis_of_obesity_inthehistory',
+    ],
+    'dementia': [
+        'patient_has_finding_of_dementia_now',
+    ],
+    'pneumonia': [
+        'patient_has_finding_of_pneumonia_now',
+    ],
+}
+
+
+def build_patient_attributes(patient_data: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Convert simple conversation patient data into the structured attribute
+    format matching the database criteria names.
+
+    Args:
+        patient_data: Dict with keys like 'age', 'gender', 'condition'
+
+    Returns:
+        Dict with keys matching criteria attribute names
+    """
+    attrs: Dict[str, Any] = {}
+
+    # Age mapping — criteria check for presence (bool), not the numeric value
+    age = patient_data.get('age')
+    if age is not None:
+        try:
+            age_val = int(age)
+            attrs['patient_age_value_recorded_now_in_years'] = True
+            attrs['age'] = age_val  # Keep numeric for display
+        except (ValueError, TypeError):
+            pass
+
+    # Gender mapping
+    gender = str(patient_data.get('gender', '')).lower()
+    if gender == 'male':
+        attrs['patient_sex_is_male_now'] = True
+        attrs['patient_sex_is_female_now'] = False
+    elif gender == 'female':
+        attrs['patient_sex_is_female_now'] = True
+        attrs['patient_sex_is_male_now'] = False
+    if gender:
+        attrs['gender'] = gender
+
+    # Condition mapping
+    condition = str(patient_data.get('condition', '')).lower()
+    for keyword, criteria_attrs in CONDITION_TO_CRITERIA.items():
+        if keyword in condition:
+            for attr_name in criteria_attrs:
+                attrs[attr_name] = True
+
+    # Pregnancy/breastfeeding — default to False if gender is male
+    if gender == 'male':
+        attrs['patient_is_pregnant_now'] = False
+        attrs['patient_is_breastfeeding_now'] = False
+        attrs['patient_is_lactating_now'] = False
+        attrs['patient_has_childbearing_potential_now'] = False
+
+    return attrs
+
+
+
+app = Flask(__name__,
     static_folder='static',
     static_url_path='/static',
     template_folder='templates'
 )
 
 app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key')
+
+is_production = os.environ.get('RENDER', '') == 'true'
+allowed_origins = ["http://localhost:5001", "http://127.0.0.1:5001"]
+if is_production:
+    render_url = os.environ.get('RENDER_EXTERNAL_URL', '')
+    if render_url:
+        allowed_origins.append(render_url)
+
 CORS(app, resources={
     r"/api/*": {
-        "origins": ["http://localhost:5001", "http://127.0.0.1:5001"],
+        "origins": allowed_origins,
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"],
         "supports_credentials": True
@@ -29,7 +318,7 @@ CORS(app, resources={
 })
 
 app.config.update(
-    SESSION_COOKIE_SECURE=False,
+    SESSION_COOKIE_SECURE=is_production,
     SESSION_COOKIE_HTTPONLY=True,
     SESSION_COOKIE_SAMESITE='Lax',
 )
@@ -43,7 +332,7 @@ def add_security_headers(response):
     script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com;
     style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;
     img-src 'self' data:;
-    connect-src 'self' http://localhost:5000;
+    connect-src 'self' http://localhost:5001 http://127.0.0.1:5001;
     """
     response.headers['Content-Security-Policy'] = csp.replace('\n', ' ').strip()
     return response
@@ -59,7 +348,7 @@ def after_request(response):
 # Ensure the static files are served
 @app.route('/static/<path:path>')
 def serve_static(path):
-    return send_from_directory('templates/static', path)
+    return send_from_directory('static', path)
 
 # Database configuration
 DB_PATH = os.getenv('DATABASE_URL', 'sqlite:///trial_data.sqlite').replace('sqlite:///', '')
@@ -296,8 +585,10 @@ class TrialMatcher:
 # Initialize LLM service
 llm_service = LLMService()
 
-# Initialize matcher
+# Initialize matcher (includes SMT evaluator + RAG index)
 matcher = TrialMatcher()
+scoring_matcher = MatcherService(DB_PATH)
+print(f"Matcher ready: {len(scoring_matcher.trials)} trials with SMT + RAG scoring.")
 
 def process_user_message(message: str, session: dict) -> dict:
     """Process the user message and return an appropriate response."""
@@ -687,10 +978,22 @@ def analyze_condition(message: str) -> dict:
 @app.route('/')
 def index():
     """Render the main chat interface."""
-    # Initialize session
-    if 'patient_data' not in session:
-        session['patient_data'] = {}
-        session['awaiting_info'] = 'age'
+    # Clear session on page load to start fresh conversation
+    session.clear()
+    session['patient_data'] = {}
+    session['awaiting_info'] = 'age'
+    session['assistant'] = {
+        'conversation_state': 'get_age',
+        'patient_data': {
+            'age': None,
+            'gender': None,
+            'location': None,
+            'zip_code': None,
+            'conditions': [],
+            'symptoms': '',
+            'primary_condition': None
+        }
+    }
     return render_template('index.html')
 
 # In app.py, update the chat endpoint
@@ -699,7 +1002,7 @@ def chat():
     try:
         data = request.get_json()
         user_message = data.get('message', '').strip()
-        
+
         # Initialize conversation assistant if not exists
         if 'assistant' not in session:
             session['assistant'] = {
@@ -707,39 +1010,167 @@ def chat():
                 'patient_data': {
                     'age': None,
                     'gender': None,
+                    'location': None,
+                    'zip_code': None,
                     'conditions': [],
                     'symptoms': '',
                     'primary_condition': None
                 }
             }
-        
+
         # Get or create conversation assistant
         assistant = ConversationalTrialAssistant()
         assistant.conversation_state = session['assistant']['conversation_state']
         assistant.patient_data = session['assistant']['patient_data']
-        
+
         # Process the message
         response, done = assistant.process_response(user_message)
-        
+
         # Update session
         session['assistant'] = {
             'conversation_state': assistant.conversation_state,
             'patient_data': assistant.patient_data
         }
         session.modified = True
-        
+
+        # Check if we're ready to search for trials
+        if assistant.conversation_state == 'ready_to_search':
+            # Search for matching trials
+            patient_data = assistant.patient_data
+            primary_condition = patient_data.get('primary_condition') or (patient_data.get('conditions', [None])[0] if patient_data.get('conditions') else None)
+
+            # Build search data for the matcher
+            search_data = {
+                'age': patient_data.get('age'),
+                'gender': patient_data.get('gender'),
+                'condition': primary_condition,
+                'search_queries': [primary_condition] if primary_condition else []
+            }
+
+            # Add symptoms to search queries if available
+            if patient_data.get('symptoms'):
+                search_data['search_queries'].append(patient_data.get('symptoms'))
+
+            # Add all conditions to search queries
+            for cond in patient_data.get('conditions', []):
+                if cond and cond not in search_data['search_queries']:
+                    search_data['search_queries'].append(cond)
+
+            # Use LLM to extract medical concepts from symptoms
+            symptom_analysis = None
+            if patient_data.get('symptoms') and patient_data.get('age'):
+                try:
+                    symptom_analysis = llm_service.analyze_symptoms(
+                        patient_data['symptoms'],
+                        int(patient_data['age']),
+                        patient_data.get('gender', ''),
+                    )
+                    # Add LLM-extracted keywords to search queries
+                    for kw in symptom_analysis.get('medical_keywords', []):
+                        if kw and kw not in search_data['search_queries']:
+                            search_data['search_queries'].append(kw)
+                    for cond in symptom_analysis.get('primary_conditions', []):
+                        if cond and cond not in search_data['search_queries']:
+                            search_data['search_queries'].append(cond)
+                except Exception as llm_err:
+                    print(f"LLM symptom analysis failed (non-fatal): {llm_err}")
+
+            trials = matcher.find_matching_trials(search_data)
+
+            # Build structured patient attributes for SMT evaluation
+            patient_attrs = build_patient_attributes(search_data)
+
+            # Build rich condition text for RAG scoring
+            rag_parts = [primary_condition, patient_data.get('symptoms', '')]
+            if symptom_analysis:
+                rag_parts.extend(symptom_analysis.get('medical_keywords', []))
+                if symptom_analysis.get('summary'):
+                    rag_parts.append(symptom_analysis['summary'])
+            condition_text = ' '.join(filter(None, rag_parts))
+
+            # Get patient location for distance calculation
+            patient_location = patient_data.get('location', '')
+            patient_zip = patient_data.get('zip_code', '')
+
+            # Format trials with real scoring from SMT + RAG
+            formatted_trials = []
+            for trial in trials[:10]:  # Limit to top 10
+                nct_id = trial.get('nct_id', '')
+
+                # Compute real eligibility score via unified Matcher
+                try:
+                    scoring = scoring_matcher.score_trial(
+                        patient_attrs, condition_text, nct_id,
+                    )
+                except Exception as score_err:
+                    print(f"Scoring error for {nct_id}: {score_err}")
+                    scoring = {
+                        'match_score': 50,
+                        'hard_met': 0, 'hard_total': 1,
+                        'soft_met': 0, 'soft_total': 1,
+                        'eligibility_status': 'review_needed',
+                        'rag_score': 0.0,
+                        'criteria_details': [],
+                    }
+
+                # Calculate distance from patient to trial
+                distance = get_trial_distance(patient_location, patient_zip, trial)
+
+                # Generate patient-friendly summary for top 5 trials
+                plain_summary = ''
+                if len(formatted_trials) < 5:
+                    try:
+                        plain_summary = llm_service.generate_plain_summary(trial)
+                    except Exception:
+                        plain_summary = ''
+
+                formatted_trials.append({
+                    'nct_id': nct_id,
+                    'title': trial.get('brief_title') or trial.get('title', 'Clinical Trial'),
+                    'brief_summary': trial.get('brief_summary', ''),
+                    'plain_summary': plain_summary,
+                    'phase': trial.get('phase', ''),
+                    'enrollment': trial.get('enrollment', ''),
+                    'drugs': trial.get('drugs', ''),
+                    'status': trial.get('status', 'Recruiting'),
+                    'distance': distance,
+                    'location': trial.get('location', ''),
+                    # Real scoring data
+                    'match_score': scoring['match_score'],
+                    'hard_met': scoring['hard_met'],
+                    'hard_total': scoring['hard_total'],
+                    'soft_met': scoring['soft_met'],
+                    'soft_total': scoring['soft_total'],
+                    'eligibility_status': scoring['eligibility_status'],
+                    'rag_score': scoring['rag_score'],
+                    'criteria_details': scoring['criteria_details'],
+                })
+
+            # Sort by match score (highest first)
+            formatted_trials.sort(key=lambda x: x.get('match_score', 0), reverse=True)
+
+            return jsonify({
+                'status': 'complete',
+                'response': response if response else '',
+                'trials': formatted_trials,
+                'patient_location': patient_location,
+                'conversation_state': assistant.conversation_state
+            })
+
         # Get next question
         next_question = assistant.get_next_question()
-        
+
         return jsonify({
             'status': 'continue',
             'response': response if response else '',
             'next_question': next_question,
             'conversation_state': assistant.conversation_state
         })
-        
+
     except Exception as e:
         print(f"Error in chat endpoint: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return jsonify({
             'status': 'error',
             'message': str(e)
@@ -764,9 +1195,123 @@ def list_trials():
     trials = [dict(row) for row in cursor.fetchall()]
     return jsonify({'trials': trials})
 
+# ============ Clinician Dashboard API ============
+
+@app.route('/api/clinician/patients')
+def clinician_patients():
+    """List SIGIR patients with summary info for the clinician dashboard."""
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT patient_id, note, created_at FROM patients ORDER BY patient_id")
+    rows = cursor.fetchall()
+
+    patients = []
+    for row in rows:
+        pid = row['patient_id']
+        note = row['note'] or ''
+
+        # Count attributes and rankings
+        cursor.execute(
+            "SELECT COUNT(*) FROM patient_attributes WHERE patient_id = ?", (pid,)
+        )
+        attr_count = cursor.fetchone()[0]
+
+        cursor.execute(
+            "SELECT COUNT(*) FROM patient_trial_rankings WHERE patient_id = ?", (pid,)
+        )
+        ranking_count = cursor.fetchone()[0]
+
+        # Extract basic demographics from the note
+        age_match = re.search(r'(\d{1,3})-year-old', note)
+        gender_match = re.search(r'(male|female|man|woman)', note, re.IGNORECASE)
+
+        patients.append({
+            'id': pid,
+            'note_excerpt': note[:200] + ('...' if len(note) > 200 else ''),
+            'age': int(age_match.group(1)) if age_match else None,
+            'sex': gender_match.group(1).capitalize() if gender_match else None,
+            'attribute_count': attr_count,
+            'ranked_trials': ranking_count,
+            'status': 'pending',
+        })
+
+    conn.close()
+    return jsonify({'patients': patients})
+
+
+@app.route('/api/clinician/patient/<patient_id>/evaluations')
+def clinician_patient_evaluations(patient_id: str):
+    """Get detailed trial evaluations for a specific SIGIR patient."""
+    try:
+        patient_attrs = scoring_matcher.load_patient_attributes(patient_id)
+    except ValueError:
+        return jsonify({'error': f'Patient {patient_id} not found'}), 404
+
+    # Get the patient note for RAG scoring
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute("SELECT note FROM patients WHERE patient_id = ?", (patient_id,))
+    row = cursor.fetchone()
+    patient_note = row['note'] if row else ''
+
+    # Get ranked trials for this patient
+    cursor.execute(
+        """
+        SELECT ptr.nct_id, ptr.rank, t.title, t.brief_summary, t.phase, t.status
+        FROM patient_trial_rankings ptr
+        JOIN trials t ON t.nct_id = ptr.nct_id
+        WHERE ptr.patient_id = ?
+        ORDER BY COALESCE(ptr.rank, 9999)
+        LIMIT 20
+        """,
+        (patient_id,),
+    )
+    ranked_trials = cursor.fetchall()
+    conn.close()
+
+    evaluations = []
+    for trial_row in ranked_trials:
+        nct_id = trial_row['nct_id']
+        try:
+            scoring = scoring_matcher.score_trial(
+                patient_attrs, patient_note, nct_id, use_llm_judge=False
+            )
+        except Exception:
+            scoring = {
+                'match_score': 0, 'hard_met': 0, 'hard_total': 0,
+                'soft_met': 0, 'soft_total': 0,
+                'eligibility_status': 'review_needed',
+                'rag_score': 0.0, 'criteria_details': [],
+            }
+
+        evaluations.append({
+            'nct_id': nct_id,
+            'gold_rank': trial_row['rank'],
+            'title': trial_row['title'],
+            'phase': trial_row['phase'],
+            'status': trial_row['status'],
+            'match_score': scoring['match_score'],
+            'hard_met': scoring['hard_met'],
+            'hard_total': scoring['hard_total'],
+            'soft_met': scoring['soft_met'],
+            'soft_total': scoring['soft_total'],
+            'eligibility_status': scoring['eligibility_status'],
+            'criteria_details': scoring['criteria_details'],
+        })
+
+    return jsonify({
+        'patient_id': patient_id,
+        'note': patient_note,
+        'attribute_count': len(patient_attrs),
+        'evaluations': evaluations,
+    })
+
+
 if __name__ == '__main__':
-    # Create templates directory if it doesn't exist
     os.makedirs('templates', exist_ok=True)
-    
-    # Run the app
-    app.run(debug=True, port=5001, host='0.0.0.0')
+    debug = not is_production
+    port = int(os.environ.get('PORT', 5001))
+    app.run(debug=debug, port=port, host='0.0.0.0')

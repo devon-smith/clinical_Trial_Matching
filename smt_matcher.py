@@ -216,7 +216,9 @@ class SMTMatcher:
                 for c in criteria_by_trial[nct_id]:
                     # In the _load_trials method, update the constraint creation part:
                     try:
-                        value_type = ValueType[c['value_type'].upper()] if c['value_type'] else ValueType.UNKNOWN
+                        vt_str = (c['value_type'] or '').upper()
+                        vt_map = {'BOOL': ValueType.BOOLEAN, 'INT': ValueType.INTEGER, 'STR': ValueType.STRING}
+                        value_type = vt_map.get(vt_str) or ValueType.__members__.get(vt_str, ValueType.UNKNOWN)
                         constraint = Constraint(
                             attribute=c['attribute'],
                             operator=c['operator'] or '==',
@@ -233,16 +235,10 @@ class SMTMatcher:
         
             self.trials[nct_id] = trial
     
-        # 5. Debug: Print sample of loaded data
-        print("\n=== Sample of Loaded Trials ===")
-        for nct_id, trial in list(self.trials.items())[:3]:  # Show first 3 trials
-            constraints = getattr(trial, 'constraints', [])
-            print(f"\nTrial: {trial.title} ({nct_id})")
-            print(f"Constraints: {len(constraints)} total")
-            for i, c in enumerate(constraints[:3], 1):  # Show first 3 constraints
-                print(f"  {i}. {c.attribute} {c.operator} {c.value} "
-                  f"(Incl: {c.is_inclusion}, Hard: {c.hard_constraint})")
-    
+        trials_with_criteria = sum(1 for t in self.trials.values() if t.constraints)
+        total_loaded = sum(len(t.constraints) for t in self.trials.values())
+        print(f"Loaded {trials_with_criteria}/{len(self.trials)} trials with {total_loaded} constraints")
+
         conn.close()
     
     def create_patient_variables(self, patient_attrs: Dict[str, Any]) -> Dict[str, Z3Expr]:
@@ -265,15 +261,11 @@ class SMTMatcher:
     def evaluate_trial(self, patient_attrs: Dict[str, Any], nct_id: str) -> Dict[str, Any]:
         """
         Evaluate a patient against a specific trial's criteria.
+        Returns detailed results including per-constraint status.
         """
-        # Debug: Print trial and patient info
-        print(f"\n=== Evaluating trial {nct_id} ===")
-        print("Patient attributes:", patient_attrs)
-    
         self.patient_attrs = patient_attrs
-    
+
         if nct_id not in self.trials:
-            print(f"❌ Trial {nct_id} not found in database")
             return {
                 'status': 'MISSING',
                 'missing_attrs': ['trial_definition'],
@@ -282,22 +274,19 @@ class SMTMatcher:
                 'soft_constraints_met': [],
                 'soft_constraints_unmet': []
             }
-                    
+
         trial = self.trials[nct_id]
-        print(f"Found trial with {len(trial.get_hard_constraints())} hard and {len(trial.get_soft_constraints())} soft constraints")
-    
-        # Initialize variables
+
         hard_constraints = trial.get_hard_constraints()
         soft_constraints = trial.get_soft_constraints()
         missing = set()
         failed_hard = []
-        soft_met = []  # Initialize soft_met
-        soft_unmet = []  # Initialize soft_unmet
-    
+        soft_met = []
+        soft_unmet = []
+
         # Check hard constraints
         for constraint in hard_constraints:
             if constraint.attribute not in patient_attrs:
-                print(f"  ❌ Missing attribute: {constraint.attribute}")
                 missing.add(constraint.attribute)
                 failed_hard.append({
                     'attribute': constraint.attribute,
@@ -308,7 +297,6 @@ class SMTMatcher:
                     'reason': 'Missing attribute'
                 })
             elif not self._is_constraint_satisfied(constraint):
-                print(f"  ❌ Failed hard constraint: {constraint.attribute} {constraint.operator} {constraint.value}")
                 failed_hard.append({
                     'attribute': constraint.attribute,
                     'operator': constraint.operator,
@@ -317,13 +305,10 @@ class SMTMatcher:
                     'is_inclusion': constraint.is_inclusion,
                     'reason': 'Condition not met'
                 })
-            else:
-                print(f"  ✅ Passed hard constraint: {constraint.attribute} {constraint.operator} {constraint.value}")
-    
+
         # Check soft constraints
         for constraint in soft_constraints:
             if constraint.attribute not in patient_attrs:
-                print(f"  ⚠️ Missing attribute for soft constraint: {constraint.attribute}")
                 soft_unmet.append({
                     'attribute': constraint.attribute,
                     'operator': constraint.operator,
@@ -332,10 +317,9 @@ class SMTMatcher:
                     'is_inclusion': constraint.is_inclusion,
                     'reason': 'Missing attribute'
                 })
-                continue 
-            
+                continue
+
             if self._is_constraint_satisfied(constraint):
-                print(f"  ✅ Met soft constraint: {constraint.attribute} {constraint.operator} {constraint.value}")
                 soft_met.append({
                     'attribute': constraint.attribute,
                     'operator': constraint.operator,
@@ -344,7 +328,6 @@ class SMTMatcher:
                     'is_inclusion': constraint.is_inclusion
                 })
             else:
-                print(f"  ⚠️ Unmet soft constraint: {constraint.attribute} {constraint.operator} {constraint.value}")
                 soft_unmet.append({
                     'attribute': constraint.attribute,
                     'operator': constraint.operator,
@@ -353,9 +336,8 @@ class SMTMatcher:
                     'is_inclusion': constraint.is_inclusion,
                     'reason': 'Condition not met'
                 })
-    
+
         if missing or failed_hard:
-            print(f"❌ Trial {nct_id} FAILED: {len(failed_hard)} hard constraints failed")
             return {
                 'status': 'FAIL',
                 'missing_attrs': list(missing),
@@ -372,10 +354,7 @@ class SMTMatcher:
             'soft_constraints_met': [],
             'soft_constraints_unmet': []
         }
-        else:
-            print(f"✅ Trial {nct_id} PASSED hard constraints")
-            print(f"   Soft constraints: {len(soft_met)} met, {len(soft_unmet)} unmet")
-        
+
         all_constraints = []
         for c in hard_constraints:
             all_constraints.append({
@@ -404,40 +383,54 @@ class SMTMatcher:
         }
     
     def _is_constraint_satisfied(self, constraint: Constraint) -> bool:
-        """Check if a single constraint is satisfied."""
-        # Debug: Print constraint being checked
-        print(f"\nChecking constraint: {constraint.attribute} {constraint.operator} {constraint.value}")
-    
-        # Get the patient's value for this attribute
-        # Map complex criteria names to simpler patient attributes
-        attr_map = {
-            'patient_has_diagnosis_of_obesity_inthehistory': 'obesity',
-            'patient_has_diagnosis_of_hypertension': 'hypertension',
-            'patient_age_value_recorded_now_in_years': 'age',
-        # Add more mappings as needed
-        }
-    
-        # Use the mapped attribute name if available, otherwise use the original
-        attr_name = attr_map.get(constraint.attribute, constraint.attribute)
-    
+        """Check if a single constraint is satisfied by the patient's attributes."""
+        attr_name = constraint.attribute
+
         if attr_name not in self.patient_attrs:
-            print(f"  ❌ Missing patient attribute: {attr_name}")
             return False
-        
+
         patient_value = self.patient_attrs[attr_name]
-        constraint_value = constraint.value.lower() if isinstance(constraint.value, str) else constraint.value
-    
-        # Debug: Print values being compared
-        print(f"  Patient value: {patient_value} (type: {type(patient_value)})")
-        print(f"  Constraint value: {constraint_value} (type: {type(constraint_value)})")
-    
+        constraint_value = constraint.value
+
+        # Normalize constraint value for boolean comparisons
+        # The database stores boolean criteria as string "true"/"false"
+        constraint_is_bool = (
+            isinstance(constraint_value, str)
+            and constraint_value.lower() in ('true', 'false')
+        )
+
+        if constraint_is_bool:
+            expected_bool = constraint_value.lower() == 'true'
+            # Convert patient value to boolean for comparison
+            if isinstance(patient_value, bool):
+                patient_bool = patient_value
+            elif isinstance(patient_value, (int, float)):
+                # Non-zero/non-None means the attribute is present (truthy)
+                patient_bool = bool(patient_value)
+            elif isinstance(patient_value, str):
+                patient_bool = patient_value.lower() in ('true', '1', 'yes')
+            else:
+                patient_bool = bool(patient_value)
+
+            if constraint.operator in {'equals', '=='}:
+                return patient_bool == expected_bool
+            elif constraint.operator in {'!=', 'not_equals'}:
+                return patient_bool != expected_bool
+            return patient_bool == expected_bool
+
+        # Non-boolean comparisons
+        if isinstance(constraint_value, str):
+            constraint_value = constraint_value.lower()
+
         try:
-            # Handle different comparison operators
-            if constraint.operator == 'equals':
-                # Convert both to string and compare case-insensitive for string values
+            if constraint.operator in {'equals', '=='}:
                 if isinstance(patient_value, str) and isinstance(constraint_value, str):
-                    return patient_value.lower() == constraint_value.lower()
+                    return patient_value.lower() == constraint_value
                 return patient_value == constraint_value
+            elif constraint.operator in {'!=', 'not_equals'}:
+                if isinstance(patient_value, str) and isinstance(constraint_value, str):
+                    return patient_value.lower() != constraint_value
+                return patient_value != constraint_value
             elif constraint.operator == '>':
                 return float(patient_value) > float(constraint_value)
             elif constraint.operator == '>=':
@@ -447,7 +440,6 @@ class SMTMatcher:
             elif constraint.operator == '<=':
                 return float(patient_value) <= float(constraint_value)
             else:
-                print(f"  ⚠️ Unknown operator: {constraint.operator}")
                 return False
         except (ValueError, TypeError) as e:
             print(f"  ⚠️ Error comparing values: {e}")

@@ -5,6 +5,7 @@ from typing import Dict, List, Optional, Tuple, Union, Any
 
 from rag_retriever import EligibilityRAG
 from smt_matcher import SMTMatcher, ValueType
+from llm_eligibility_judge import LLMEligibilityJudge, CriterionJudgment
 
 DEFAULT_DB_PATH = Path(__file__).with_name("trial_data.sqlite")
 
@@ -22,6 +23,10 @@ class TrialMatcher:
         self.rag = EligibilityRAG(self.db_path)
         self.use_smt = use_smt
         self.smt_matcher = SMTMatcher(self.db_path) if use_smt else None
+        try:
+            self.llm_judge = LLMEligibilityJudge()
+        except Exception:
+            self.llm_judge = None
     
     @property
     def trials(self):
@@ -180,6 +185,130 @@ class TrialMatcher:
                 'missing_attrs': missing,
                 'constraints': []
             }
+
+    def score_trial(
+        self,
+        patient_attrs: Dict[str, Any],
+        patient_text: str,
+        nct_id: str,
+        *,
+        use_llm_judge: bool = True,
+    ) -> Dict[str, Any]:
+        """
+        Unified scoring: combine SMT constraint evaluation, RAG similarity,
+        and optional LLM eligibility judgment.
+
+        Hybrid approach: deterministic SMT for clear-cut boolean checks,
+        LLM judge for criteria with missing/unclear data.
+
+        Returns dict with match_score (0-100), eligibility_status, constraint
+        counts, RAG score, LLM judgments, and per-criterion details.
+        """
+        eval_result = self.get_detailed_evaluation(patient_attrs, nct_id)
+
+        constraints = eval_result.get('constraints', [])
+        hard_constraints = [c for c in constraints if c.get('hard_constraint')]
+        soft_constraints = [c for c in constraints if not c.get('hard_constraint')]
+
+        # --- LLM judge for unclear criteria ---
+        llm_judgments: List[CriterionJudgment] = []
+        unclear_criteria = [
+            c for c in hard_constraints
+            if not c.get('met') and c.get('attribute') not in patient_attrs
+        ]
+        if (
+            use_llm_judge
+            and self.llm_judge
+            and patient_text
+            and unclear_criteria
+        ):
+            try:
+                llm_judgments = self.llm_judge.evaluate_criteria(
+                    patient_text, unclear_criteria
+                )
+            except Exception as e:
+                print(f"LLM judge error for {nct_id}: {e}")
+
+        # Build lookup of LLM results
+        llm_by_attr = {j.criterion: j for j in llm_judgments}
+
+        # Count hard constraints with LLM upgrades
+        hard_met = 0
+        hard_failed_explicitly = 0
+        for c in hard_constraints:
+            attr = c.get('attribute', '')
+            if c.get('met'):
+                hard_met += 1
+            elif attr in llm_by_attr and llm_by_attr[attr].status == "MET":
+                hard_met += 1  # LLM resolved as MET
+            elif attr in patient_attrs:
+                hard_failed_explicitly += 1
+            elif attr in llm_by_attr and llm_by_attr[attr].status == "NOT_MET":
+                hard_failed_explicitly += 1  # LLM resolved as NOT_MET
+
+        hard_total = len(hard_constraints)
+
+        soft_met = sum(1 for c in soft_constraints if c.get('met'))
+        soft_total = max(len(soft_constraints), 1)
+
+        # Score components
+        hard_evaluable = hard_met + hard_failed_explicitly
+        hard_score = (
+            hard_met / max(hard_evaluable, 1) if hard_evaluable > 0 else 0.5
+        )
+        soft_score = soft_met / soft_total
+
+        rag_score = self.rag.score_trial(patient_text, nct_id) if patient_text else 0.0
+        rag_normalized = min(rag_score * 3, 1.0)
+
+        combined = 0.40 * hard_score + 0.20 * soft_score + 0.40 * rag_normalized
+        match_score = max(0, min(100, int(round(combined * 100))))
+
+        # Eligibility status
+        if eval_result['status'] == 'PASS' and hard_failed_explicitly == 0:
+            eligibility_status = 'eligible'
+        elif hard_failed_explicitly == 0:
+            eligibility_status = 'review_needed'
+        elif hard_failed_explicitly > 0:
+            eligibility_status = 'not_eligible'
+        else:
+            eligibility_status = 'review_needed'
+
+        # Build criteria details with LLM annotations
+        criteria_details = []
+        for c in constraints:
+            attr = c.get('attribute', '')
+            detail = {
+                'attribute': attr,
+                'operator': c.get('operator', ''),
+                'value': c.get('value', ''),
+                'description': c.get('description', ''),
+                'is_inclusion': c.get('is_inclusion', True),
+                'met': c.get('met', False),
+                'hard': c.get('hard_constraint', True),
+            }
+            # Annotate with LLM judgment if available
+            if attr in llm_by_attr:
+                j = llm_by_attr[attr]
+                detail['llm_status'] = j.status
+                detail['llm_confidence'] = j.confidence
+                detail['llm_evidence'] = j.evidence
+                detail['llm_reasoning'] = j.reasoning
+                if j.status == 'MET':
+                    detail['met'] = True
+            criteria_details.append(detail)
+
+        return {
+            'match_score': match_score,
+            'hard_met': hard_met,
+            'hard_total': hard_total,
+            'soft_met': soft_met,
+            'soft_total': len(soft_constraints),
+            'eligibility_status': eligibility_status,
+            'rag_score': rag_score,
+            'criteria_details': criteria_details,
+            'llm_judgments_count': len(llm_judgments),
+        }
 
     def rag_rank_patient(self, patient_id: str, top_n: int = 10) -> List[Tuple[str, float]]:
         """Rank trials by semantic similarity between the patient note and eligibility text."""

@@ -128,6 +128,13 @@ class EligibilityRAG:
         scores.sort(key=lambda item: item[1], reverse=True)
         return scores[:top_n]
 
+    def score_trial(self, patient_text: str, nct_id: str) -> float:
+        """Return RAG similarity score for a single patient-trial pair."""
+        patient_vec = self._vectorize_patient(patient_text)
+        if not patient_vec or nct_id not in self._trial_vectors:
+            return 0.0
+        return self._cosine(patient_vec, self._trial_vectors[nct_id])
+
     @staticmethod
     def _cosine(vec_a: Dict[str, float], vec_b: Dict[str, float]) -> float:
         if len(vec_a) > len(vec_b):
