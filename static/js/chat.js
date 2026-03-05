@@ -94,6 +94,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Get Tailwind color class for trial status
+    function getStatusColor(status) {
+        if (!status) return 'text-slate-500';
+        const s = status.toLowerCase();
+        if (s === 'recruiting') return 'text-green-600';
+        if (s.includes('active') || s.includes('enrolling')) return 'text-blue-600';
+        return 'text-slate-500';
+    }
+
     // Generate eligibility data for trial cards — uses real backend scores when available
     function generateEligibilityData(trial) {
         // Use real scores from the backend SMT matcher + RAG
@@ -304,8 +313,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>`;
 
-        chatMessages.appendChild(panelDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
+        messagesContainer.appendChild(panelDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
         // Wire up confirm button
         panelDiv.querySelector('#pref-confirm-btn').addEventListener('click', () => {
@@ -636,10 +645,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
 
-                    <!-- Status Chip + Phase -->
+                    <!-- Status Chip + Phase + Distance -->
                     <div class="flex flex-wrap items-center gap-2 mb-4">
                         ${getStatusChip(eligibility.hardStatus)}
                         ${trial.phase ? `<span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">${trial.phase}</span>` : ''}
+                        ${trial.distance && trial.distance < 9000 ? `<span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">${Math.round(trial.distance)} mi away</span>` : ''}
+                        ${trial.status ? `<span class="px-2.5 py-1 bg-slate-100 ${getStatusColor(trial.status)} rounded-full text-xs font-medium">${trial.status}</span>` : ''}
                     </div>
 
                     <!-- Action Links (Save, Share, ClinicalTrials.gov) -->
@@ -1187,8 +1198,14 @@ document.addEventListener('DOMContentLoaded', function() {
                             ` : ''}
                             <div class="bg-slate-50 p-3 rounded-lg text-center">
                                 <p class="text-xs text-slate-500 mb-1">Status</p>
-                                <p class="font-semibold text-green-600">Recruiting</p>
+                                <p class="font-semibold ${getStatusColor(trial.status)}">${trial.status || 'Unknown'}</p>
                             </div>
+                            ${trial.distance && trial.distance < 9000 ? `
+                                <div class="bg-slate-50 p-3 rounded-lg text-center">
+                                    <p class="text-xs text-slate-500 mb-1">Nearest Site</p>
+                                    <p class="font-semibold text-slate-800">${Math.round(trial.distance)} mi</p>
+                                </div>
+                            ` : ''}
                         </div>
 
                         ${trial.drugs ? `

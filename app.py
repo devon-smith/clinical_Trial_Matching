@@ -68,6 +68,27 @@ MEDICAL_CENTERS = {
     'Default': (39.8283, -98.5795)
 }
 
+_STATUS_LABELS = {
+    'RECRUITING': 'Recruiting',
+    'ACTIVE_NOT_RECRUITING': 'Active, not recruiting',
+    'ENROLLING_BY_INVITATION': 'Enrolling by invitation',
+    'NOT_YET_RECRUITING': 'Not yet recruiting',
+    'COMPLETED': 'Completed',
+    'TERMINATED': 'Terminated',
+    'WITHDRAWN': 'Withdrawn',
+    'SUSPENDED': 'Suspended',
+    'AVAILABLE': 'Available',
+    'UNKNOWN': 'Unknown',
+}
+
+
+def _format_status(raw_status: str | None) -> str:
+    """Convert API status enum to human-readable label."""
+    if not raw_status:
+        return 'Unknown'
+    return _STATUS_LABELS.get(raw_status.upper(), raw_status)
+
+
 def get_coordinates_from_location(location: str, zip_code: str = None) -> Tuple[float, float]:
     """Get coordinates from location string or ZIP code."""
     # Try ZIP code first
@@ -121,69 +142,46 @@ def calculate_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> fl
     return round(R * c, 1)
 
 def get_trial_distance(patient_location: str, patient_zip: str, trial_data: dict) -> float:
-    """Calculate distance from patient to trial location."""
+    """Calculate distance from patient to nearest trial facility using real coordinates."""
     patient_coords = get_coordinates_from_location(patient_location, patient_zip)
+    nct_id = trial_data.get('nct_id', '')
 
-    # Try to find trial location from trial data
-    trial_location = trial_data.get('location', '') or trial_data.get('facility', '') or ''
-    trial_title = str(trial_data.get('title', '') or trial_data.get('brief_title', ''))
-    trial_summary = str(trial_data.get('brief_summary', ''))
+    if nct_id:
+        try:
+            db_path = os.path.join(os.path.dirname(__file__), 'trial_data.sqlite')
+            conn = sqlite3.connect(db_path)
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            cursor.execute(
+                "SELECT latitude, longitude FROM trial_locations "
+                "WHERE nct_id = ? AND latitude IS NOT NULL AND longitude IS NOT NULL",
+                (nct_id,),
+            )
+            rows = cursor.fetchall()
+            conn.close()
 
-    # Combine all text to search for location hints
-    trial_text = (trial_location + ' ' + trial_title + ' ' + trial_summary).lower()
+            if rows:
+                distances = [
+                    calculate_distance(
+                        patient_coords[0], patient_coords[1],
+                        row['latitude'], row['longitude'],
+                    )
+                    for row in rows
+                ]
+                return min(distances)
+        except sqlite3.Error:
+            pass
 
-    # Check if trial mentions any known medical centers
+    # Fallback: text heuristic for trials without location data
+    trial_text = ' '.join(
+        str(trial_data.get(k, '') or '') for k in ('location', 'facility', 'title', 'brief_title', 'brief_summary')
+    ).lower()
+
     for center_name, center_coords in MEDICAL_CENTERS.items():
         if center_name.lower() in trial_text:
             return calculate_distance(patient_coords[0], patient_coords[1], center_coords[0], center_coords[1])
 
-    # Check for city/state mentions in the trial
-    city_coords = {
-        'boston': (42.3601, -71.0589),
-        'new york': (40.7128, -74.0060),
-        'los angeles': (34.0522, -118.2437),
-        'chicago': (41.8781, -87.6298),
-        'houston': (29.7604, -95.3698),
-        'philadelphia': (39.9526, -75.1652),
-        'phoenix': (33.4484, -112.0740),
-        'san antonio': (29.4241, -98.4936),
-        'san diego': (32.7157, -117.1611),
-        'dallas': (32.7767, -96.7970),
-        'san francisco': (37.7749, -122.4194),
-        'seattle': (47.6062, -122.3321),
-        'denver': (39.7392, -104.9903),
-        'washington': (38.9072, -77.0369),
-        'atlanta': (33.7490, -84.3880),
-        'miami': (25.7617, -80.1918),
-        'cleveland': (41.4993, -81.6944),
-        'rochester': (44.0121, -92.4802),  # Mayo Clinic
-        'baltimore': (39.2904, -76.6122),  # Johns Hopkins
-        'durham': (35.9940, -78.8986),     # Duke
-        'palo alto': (37.4419, -122.1430), # Stanford
-        'hartford': (41.7658, -72.6734),
-        'pittsburgh': (40.4406, -79.9959),
-        'minneapolis': (44.9778, -93.2650),
-        'st. louis': (38.6270, -90.1994),
-        'tampa': (27.9506, -82.4572),
-        'orlando': (28.5383, -81.3792),
-    }
-
-    for city, coords in city_coords.items():
-        if city in trial_text:
-            return calculate_distance(patient_coords[0], patient_coords[1], coords[0], coords[1])
-
-    # If no location found, generate a consistent distance based on NCT ID
-    # This ensures the same trial always shows the same distance
-    if trial_data.get('nct_id'):
-        nct_id = trial_data['nct_id']
-        # Extract numeric part for more varied distribution
-        numeric_part = ''.join(filter(str.isdigit, nct_id))
-        if numeric_part:
-            # Create varied but consistent distances (5-150 miles)
-            hash_val = int(numeric_part) % 145
-            return 5 + hash_val
-
-    return 50  # Default distance
+    return 9999.0  # Unknown location — large distance signals to preference scorer
 
 
 # --- Patient Attribute Mapping ---
@@ -486,6 +484,10 @@ class TrialMatcher:
                 FROM trials t
                 LEFT JOIN criteria c ON t.nct_id = c.nct_id
                 WHERE 1=1
+                AND (t.status IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                     'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING',
+                     'AVAILABLE')
+                     OR t.status IS NULL)
                 """
                 params: List[Any] = []
 
@@ -548,9 +550,13 @@ class TrialMatcher:
             try:
                 print("Attempting fallback query...")
                 cursor = self._execute_query("""
-                    SELECT * FROM trials 
-                    WHERE brief_summary IS NOT NULL 
-                    ORDER BY RANDOM() 
+                    SELECT * FROM trials
+                    WHERE brief_summary IS NOT NULL
+                    AND (status IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                         'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING',
+                         'AVAILABLE')
+                         OR status IS NULL)
+                    ORDER BY RANDOM()
                     LIMIT 3
                 """)
                 trials = [dict(row) for row in cursor.fetchall()]
@@ -1162,7 +1168,7 @@ def chat():
                     'phase': trial.get('phase', ''),
                     'enrollment': trial.get('enrollment', ''),
                     'drugs': trial.get('drugs', ''),
-                    'status': trial.get('status', 'Recruiting'),
+                    'status': _format_status(trial.get('status')),
                     'distance': distance,
                     'location': trial.get('location', ''),
                     # Real scoring data
