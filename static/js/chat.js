@@ -230,8 +230,141 @@ document.addEventListener('DOMContentLoaded', function() {
                         ${softPreview.map(renderCriterion).join('')}
                         ${moreSoft}
                     ` : ''}
+                    ${buildPreferenceBreakdown(trial)}
                 </div>
             </div>`;
+    }
+
+    // Render preference elicitation panel in chat
+    function renderPreferencePanel() {
+        const panelDiv = document.createElement('div');
+        panelDiv.className = 'flex justify-start';
+        panelDiv.innerHTML = `
+            <div class="max-w-lg bg-white border border-slate-200 rounded-xl shadow-sm p-4 space-y-4">
+                <div class="flex items-center gap-2 mb-1">
+                    <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    <h3 class="text-sm font-semibold text-slate-800">Your Practical Preferences</h3>
+                </div>
+                <p class="text-xs text-slate-500">These help rank trials by what matters to you beyond medical eligibility.</p>
+
+                <div class="space-y-3">
+                    <div>
+                        <label class="flex justify-between text-xs font-medium text-slate-600 mb-1">
+                            <span>Travel willingness</span>
+                            <span id="pref-travel-label" class="text-blue-600">Regional (60 mi)</span>
+                        </label>
+                        <input type="range" id="pref-travel" min="1" max="5" value="3"
+                            class="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-blue-600"
+                            oninput="document.getElementById('pref-travel-label').textContent = {1:'Local only (15 mi)',2:'Nearby (30 mi)',3:'Regional (60 mi)',4:'Statewide (100 mi)',5:'Anywhere (200 mi)'}[this.value]">
+                    </div>
+
+                    <div>
+                        <label class="flex justify-between text-xs font-medium text-slate-600 mb-1">
+                            <span>Risk tolerance</span>
+                            <span id="pref-risk-label" class="text-blue-600">Open to newer</span>
+                        </label>
+                        <input type="range" id="pref-risk" min="1" max="5" value="3"
+                            class="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-blue-600"
+                            oninput="document.getElementById('pref-risk-label').textContent = {1:'Proven only',2:'Mostly proven',3:'Open to newer',4:'Comfortable with experimental',5:'Fully experimental'}[this.value]">
+                    </div>
+
+                    <div>
+                        <label class="flex justify-between text-xs font-medium text-slate-600 mb-1">
+                            <span>Schedule flexibility</span>
+                            <span id="pref-schedule-label" class="text-blue-600">Moderate</span>
+                        </label>
+                        <input type="range" id="pref-schedule" min="1" max="5" value="3"
+                            class="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-blue-600"
+                            oninput="document.getElementById('pref-schedule-label').textContent = {1:'Very limited',2:'Somewhat limited',3:'Moderate',4:'Fairly flexible',5:'Very flexible'}[this.value]">
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-medium text-slate-600 mb-1 block">Treatment type preference</label>
+                        <div class="flex flex-wrap gap-1.5" id="pref-modalities">
+                            ${['Drug', 'Surgery', 'Device', 'Behavioral', 'Radiation'].map(m =>
+                                `<button type="button" data-modality="${m}"
+                                    class="pref-mod-btn px-2.5 py-1 text-xs rounded-full border border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
+                                    onclick="this.classList.toggle('bg-blue-50'); this.classList.toggle('text-blue-700'); this.classList.toggle('border-blue-200'); this.classList.toggle('bg-slate-100'); this.classList.toggle('text-slate-400'); this.classList.toggle('border-slate-200'); this.classList.toggle('line-through'); this.dataset.selected = this.dataset.selected === 'false' ? 'true' : 'false'"
+                                    data-selected="true">${m}</button>`
+                            ).join('')}
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-1">Click to toggle. Selected types are preferred.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 pt-1">
+                    <button type="button" id="pref-confirm-btn"
+                        class="flex-1 px-3 py-2 text-xs font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
+                        Confirm Preferences
+                    </button>
+                    <button type="button" id="pref-skip-btn"
+                        class="px-3 py-2 text-xs font-medium text-slate-500 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors">
+                        Skip
+                    </button>
+                </div>
+            </div>`;
+
+        chatMessages.appendChild(panelDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        // Wire up confirm button
+        panelDiv.querySelector('#pref-confirm-btn').addEventListener('click', () => {
+            const travel = parseInt(panelDiv.querySelector('#pref-travel').value);
+            const risk = parseInt(panelDiv.querySelector('#pref-risk').value);
+            const schedule = parseInt(panelDiv.querySelector('#pref-schedule').value);
+            const modBtns = panelDiv.querySelectorAll('.pref-mod-btn');
+            const modalities = [];
+            modBtns.forEach(btn => {
+                if (btn.dataset.selected !== 'false') modalities.push(btn.dataset.modality);
+            });
+
+            const prefJson = JSON.stringify({ travel, risk, schedule, modalities });
+
+            // Disable the panel
+            panelDiv.querySelectorAll('input, button').forEach(el => el.disabled = true);
+            panelDiv.querySelector('#pref-confirm-btn').textContent = 'Preferences saved';
+            panelDiv.querySelector('#pref-confirm-btn').className = 'flex-1 px-3 py-2 text-xs font-medium text-white bg-green-500 rounded-lg cursor-default';
+
+            // Send as chat message
+            userInput.value = prefJson;
+            messageForm.dispatchEvent(new Event('submit'));
+        });
+
+        // Wire up skip button
+        panelDiv.querySelector('#pref-skip-btn').addEventListener('click', () => {
+            panelDiv.querySelectorAll('input, button').forEach(el => el.disabled = true);
+            panelDiv.querySelector('#pref-skip-btn').textContent = 'Skipped';
+
+            userInput.value = 'skip';
+            messageForm.dispatchEvent(new Event('submit'));
+        });
+    }
+
+    // Build preference breakdown HTML for trial cards
+    function buildPreferenceBreakdown(trial) {
+        const breakdown = trial.preference_breakdown;
+        if (!breakdown || Object.keys(breakdown).length === 0) return '';
+
+        const icons = {
+            good: '<span class="text-green-500 font-bold text-xs">&#10003;</span>',
+            neutral: '<span class="text-amber-500 font-bold text-xs">&#8211;</span>',
+            poor: '<span class="text-red-500 font-bold text-xs">&#10007;</span>',
+        };
+
+        const labels = { travel: 'Travel', risk: 'Risk Level', schedule: 'Schedule', treatment: 'Treatment Type' };
+
+        const items = Object.entries(breakdown).map(([dim, info]) => {
+            const icon = icons[info.status] || icons.neutral;
+            const label = labels[dim] || dim;
+            return `<div class="py-0.5">${icon} <span class="text-xs text-slate-600">${label}:</span> <span class="text-xs text-slate-500">${info.detail}</span></div>`;
+        }).join('');
+
+        const prefScore = trial.preference_score != null ? Math.round(trial.preference_score * 100) : null;
+        const scoreLabel = prefScore != null ? `<span class="text-[10px] text-slate-500">${prefScore}% match</span>` : '';
+
+        return `
+            <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mt-2 mb-1">Your Preferences ${scoreLabel}</p>
+            ${items}`;
     }
 
     // Handle form submission
@@ -270,7 +403,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             removeTypingIndicator();
 
-            if (data.trials) {
+            if (data.status === 'preferences') {
+                if (data.response) {
+                    addMessage('assistant', data.response);
+                }
+                updateProgress(3);
+                renderPreferencePanel();
+            } else if (data.trials) {
                 if (data.trials.length > 0) {
                     updateProgress(4);
                     showTrialMatches(data.trials);

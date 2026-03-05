@@ -25,6 +25,7 @@ CONVERSATION_STATES = {
     'GET_CONDITION': 'get_condition',
     'GET_SYMPTOMS': 'get_symptoms',
     'PRIORITIZE_CONDITIONS': 'prioritize_conditions',
+    'GET_PREFERENCES': 'get_preferences',
     'READY_TO_SEARCH': 'ready_to_search'
 }
 
@@ -57,7 +58,8 @@ class ConversationalTrialAssistant:
             'zip_code': None,
             'conditions': [],
             'symptoms': [],
-            'primary_condition': None
+            'primary_condition': None,
+            'preferences': None,
         }
 
     def _connect(self) -> sqlite3.Connection:
@@ -112,16 +114,22 @@ class ConversationalTrialAssistant:
                         ", ".join(f"{i+1}. {cond}" for i, cond in enumerate(self.patient_data['conditions']))
                     ))
             else:
-                self.conversation_state = CONVERSATION_STATES['READY_TO_SEARCH']
-                return "Thank you for providing this information. I'll now search for relevant clinical trials based on your condition: {}.".format(
-                    self.patient_data['conditions'][0]
-                )
-    
+                self.conversation_state = CONVERSATION_STATES['GET_PREFERENCES']
+                return ("Thank you for providing your medical information. "
+                        "Before I search, I'd like to understand your practical preferences "
+                        "to better rank the results. You can set your preferences or skip this step.")
+
         elif self.conversation_state == CONVERSATION_STATES['PRIORITIZE_CONDITIONS']:
-            self.conversation_state = CONVERSATION_STATES['READY_TO_SEARCH']
-            return "Thank you. I'll prioritize finding trials related to {}.".format(
+            self.conversation_state = CONVERSATION_STATES['GET_PREFERENCES']
+            return ("Thank you. I'll prioritize finding trials related to {}. "
+                    "Before I search, I'd like to understand your practical preferences "
+                    "to better rank the results. You can set your preferences or skip this step.".format(
                 self.patient_data['primary_condition']
-            )
+            ))
+
+        elif self.conversation_state == CONVERSATION_STATES['GET_PREFERENCES']:
+            self.conversation_state = CONVERSATION_STATES['READY_TO_SEARCH']
+            return "Thank you! I'll now search for relevant clinical trials tailored to your preferences."
         return "I'm ready to help you find clinical trials. What would you like to do next?"
 
     def process_response(self, user_input: str) -> Tuple[str, bool]:
@@ -221,14 +229,38 @@ class ConversationalTrialAssistant:
                 return "Could you please describe your symptoms? This will help me find the most relevant trials.", False
 
             self.patient_data['symptoms'] = user_input
+            self.conversation_state = CONVERSATION_STATES['GET_PREFERENCES']
+            return ("Thank you for providing your medical information. "
+                    "Before I search, I'd like to understand your practical preferences "
+                    "to better rank the results. You can set your preferences below, or skip this step."), False
+
+        elif self.conversation_state == CONVERSATION_STATES['GET_PREFERENCES']:
+            stripped = user_input.strip().lower()
+            if stripped in ('skip', 'no', 'n', 'default', 'defaults', ''):
+                self.patient_data['preferences'] = None
+            else:
+                from preference_scorer import parse_preferences_from_message
+                prefs = parse_preferences_from_message(user_input)
+                # Store as plain dict for session serialization
+                self.patient_data['preferences'] = {
+                    'travel_willingness': prefs.travel_willingness,
+                    'risk_tolerance': prefs.risk_tolerance,
+                    'schedule_flexibility': prefs.schedule_flexibility,
+                    'acceptable_modalities': list(prefs.acceptable_modalities) if prefs.acceptable_modalities else None,
+                }
             self.conversation_state = CONVERSATION_STATES['READY_TO_SEARCH']
-            return ("Thank you for providing this information. I'll now search for relevant clinical trials based on:\n"
-                   f"- Age: {self.patient_data['age']}\n"
-                   f"- Gender: {self.patient_data['gender']}\n"
-                   f"- Location: {self.patient_data['location']}\n"
-                   f"- Condition: {self.patient_data['primary_condition']}\n"
-                   f"- Symptoms: {self.patient_data['symptoms']}"), False
-                   
+            summary_lines = [
+                f"- Age: {self.patient_data['age']}",
+                f"- Gender: {self.patient_data['gender']}",
+                f"- Location: {self.patient_data['location']}",
+                f"- Condition: {self.patient_data['primary_condition']}",
+                f"- Symptoms: {self.patient_data['symptoms']}",
+            ]
+            if self.patient_data['preferences'] is not None:
+                summary_lines.append("- Preferences: customized")
+            return ("Great! I'll now search for relevant clinical trials based on:\n"
+                    + "\n".join(summary_lines)), False
+
         elif self.conversation_state == CONVERSATION_STATES['READY_TO_SEARCH']:
             # Perform the trial search with the collected patient data
             from smt_matcher import SMTMatcher

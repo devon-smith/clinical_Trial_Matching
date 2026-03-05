@@ -6,6 +6,7 @@ from typing import Dict, List, Optional, Tuple, Union, Any
 from rag_retriever import EligibilityRAG
 from smt_matcher import SMTMatcher, ValueType
 from llm_eligibility_judge import LLMEligibilityJudge, CriterionJudgment
+from preference_scorer import PatientPreferences, score_preferences
 
 DEFAULT_DB_PATH = Path(__file__).with_name("trial_data.sqlite")
 
@@ -186,6 +187,20 @@ class TrialMatcher:
                 'constraints': []
             }
 
+    def _load_trial_characteristics(self, nct_id: str) -> Dict[str, str]:
+        """Load trial characteristics from the database as a flat dict."""
+        conn = sqlite3.connect(self.db_path)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT characteristic_key, characteristic_value "
+            "FROM trial_characteristics WHERE nct_id = ?",
+            (nct_id,),
+        )
+        chars = {row["characteristic_key"]: row["characteristic_value"] for row in cursor.fetchall()}
+        conn.close()
+        return chars
+
     def score_trial(
         self,
         patient_attrs: Dict[str, Any],
@@ -193,6 +208,8 @@ class TrialMatcher:
         nct_id: str,
         *,
         use_llm_judge: bool = True,
+        preferences: Optional[PatientPreferences] = None,
+        distance: Optional[float] = None,
     ) -> Dict[str, Any]:
         """
         Unified scoring: combine SMT constraint evaluation, RAG similarity,
@@ -261,7 +278,18 @@ class TrialMatcher:
         rag_score = self.rag.score_trial(patient_text, nct_id) if patient_text else 0.0
         rag_normalized = min(rag_score * 3, 1.0)
 
-        combined = 0.40 * hard_score + 0.20 * soft_score + 0.40 * rag_normalized
+        eligibility = 0.40 * hard_score + 0.20 * soft_score + 0.40 * rag_normalized
+
+        # Blend patient preferences when available
+        pref_result = None
+        if preferences is not None:
+            trial_chars = self._load_trial_characteristics(nct_id)
+            pref_result = score_preferences(preferences, trial_chars, distance)
+            pref_score = pref_result["preference_score"]
+            combined = 0.82 * eligibility + 0.18 * pref_score
+        else:
+            combined = eligibility
+
         match_score = max(0, min(100, int(round(combined * 100))))
 
         # Eligibility status
@@ -298,7 +326,7 @@ class TrialMatcher:
                     detail['met'] = True
             criteria_details.append(detail)
 
-        return {
+        result = {
             'match_score': match_score,
             'hard_met': hard_met,
             'hard_total': hard_total,
@@ -309,6 +337,11 @@ class TrialMatcher:
             'criteria_details': criteria_details,
             'llm_judgments_count': len(llm_judgments),
         }
+        if pref_result is not None:
+            result['preference_score'] = pref_result['preference_score']
+            result['preference_breakdown'] = pref_result['breakdown']
+
+        return result
 
     def rag_rank_patient(self, patient_id: str, top_n: int = 10) -> List[Tuple[str, float]]:
         """Rank trials by semantic similarity between the patient note and eligibility text."""

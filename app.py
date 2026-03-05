@@ -10,6 +10,7 @@ import json
 import re
 from llm_service import LLMService
 from Matcher import TrialMatcher as MatcherService
+from preference_scorer import PatientPreferences, parse_preferences_from_message
 
 load_dotenv()
 
@@ -1033,6 +1034,16 @@ def chat():
         }
         session.modified = True
 
+        # Signal frontend to show preference UI
+        if assistant.conversation_state == 'get_preferences':
+            next_question = assistant.get_next_question()
+            return jsonify({
+                'status': 'preferences',
+                'response': response if response else '',
+                'next_question': next_question,
+                'conversation_state': assistant.conversation_state,
+            })
+
         # Check if we're ready to search for trials
         if assistant.conversation_state == 'ready_to_search':
             # Search for matching trials
@@ -1092,15 +1103,37 @@ def chat():
             patient_location = patient_data.get('location', '')
             patient_zip = patient_data.get('zip_code', '')
 
-            # Format trials with real scoring from SMT + RAG
+            # Build patient preferences for scoring
+            raw_prefs = patient_data.get('preferences')
+            patient_preferences = None
+            if raw_prefs is not None:
+                if isinstance(raw_prefs, PatientPreferences):
+                    patient_preferences = raw_prefs
+                elif isinstance(raw_prefs, dict):
+                    patient_preferences = PatientPreferences(
+                        travel_willingness=raw_prefs.get('travel_willingness'),
+                        risk_tolerance=raw_prefs.get('risk_tolerance'),
+                        schedule_flexibility=raw_prefs.get('schedule_flexibility'),
+                        acceptable_modalities=(
+                            frozenset(raw_prefs['acceptable_modalities'])
+                            if raw_prefs.get('acceptable_modalities') else None
+                        ),
+                    )
+
+            # Format trials with real scoring from SMT + RAG + preferences
             formatted_trials = []
             for trial in trials[:10]:  # Limit to top 10
                 nct_id = trial.get('nct_id', '')
+
+                # Calculate distance from patient to trial
+                distance = get_trial_distance(patient_location, patient_zip, trial)
 
                 # Compute real eligibility score via unified Matcher
                 try:
                     scoring = scoring_matcher.score_trial(
                         patient_attrs, condition_text, nct_id,
+                        preferences=patient_preferences,
+                        distance=distance,
                     )
                 except Exception as score_err:
                     print(f"Scoring error for {nct_id}: {score_err}")
@@ -1112,9 +1145,6 @@ def chat():
                         'rag_score': 0.0,
                         'criteria_details': [],
                     }
-
-                # Calculate distance from patient to trial
-                distance = get_trial_distance(patient_location, patient_zip, trial)
 
                 # Generate patient-friendly summary for top 5 trials
                 plain_summary = ''
@@ -1144,6 +1174,8 @@ def chat():
                     'eligibility_status': scoring['eligibility_status'],
                     'rag_score': scoring['rag_score'],
                     'criteria_details': scoring['criteria_details'],
+                    'preference_score': scoring.get('preference_score'),
+                    'preference_breakdown': scoring.get('preference_breakdown', {}),
                 })
 
             # Sort by match score (highest first)
