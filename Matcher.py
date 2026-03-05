@@ -1,4 +1,5 @@
 import json
+import math
 import sqlite3
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Union, Any
@@ -280,15 +281,27 @@ class TrialMatcher:
 
         eligibility = 0.40 * hard_score + 0.20 * soft_score + 0.40 * rag_normalized
 
+        # Distance score — always applied, sigmoid decay around d_max
+        distance_score = 0.5  # neutral when distance unknown
+        if distance is not None:
+            d_max = 150.0  # default: 150 mile radius
+            if preferences and preferences.travel_willingness:
+                from preference_scorer import TRAVEL_DISTANCE_MAP
+                d_max = TRAVEL_DISTANCE_MAP.get(preferences.travel_willingness, d_max)
+            k = 1.2 / d_max  # steeper decay for tighter travel radius
+            distance_score = 1.0 / (1.0 + math.exp(k * (distance - d_max)))
+
+        base = 0.85 * eligibility + 0.15 * distance_score
+
         # Blend patient preferences when available
         pref_result = None
         if preferences is not None:
             trial_chars = self._load_trial_characteristics(nct_id)
             pref_result = score_preferences(preferences, trial_chars, distance)
             pref_score = pref_result["preference_score"]
-            combined = 0.82 * eligibility + 0.18 * pref_score
+            combined = 0.82 * base + 0.18 * pref_score
         else:
-            combined = eligibility
+            combined = base
 
         match_score = max(0, min(100, int(round(combined * 100))))
 
