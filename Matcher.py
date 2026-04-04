@@ -188,6 +188,50 @@ class TrialMatcher:
                 'constraints': []
             }
 
+    def _get_trial_diseases(self, nct_id: str) -> str:
+        """Retrieve the diseases field for a trial from the database."""
+        conn = self._connect()
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT COALESCE(diseases, '') FROM trials WHERE nct_id = ?",
+            (nct_id,),
+        )
+        row = cursor.fetchone()
+        conn.close()
+        return row[0] if row else ""
+
+    @staticmethod
+    def compute_disease_relevance(patient_condition: str, trial_diseases: str) -> float:
+        """
+        Compute how relevant a trial's disease focus is to the patient's condition.
+
+        Returns a score between 0.0 (no relevance) and 1.0 (strong match).
+        Uses token overlap between patient condition terms and trial disease terms.
+        """
+        if not patient_condition or not trial_diseases:
+            return 0.0
+
+        # Normalize and tokenize
+        condition_tokens = set(patient_condition.lower().split())
+        disease_tokens = set(trial_diseases.lower().replace(",", " ").split())
+
+        # Remove very common stop words that would cause false matches
+        stop_words = {"of", "the", "and", "or", "a", "an", "in", "for", "to", "with", "on", "at", "by", "is", "not"}
+        condition_tokens -= stop_words
+        disease_tokens -= stop_words
+
+        if not condition_tokens or not disease_tokens:
+            return 0.0
+
+        # Check for any exact token overlap
+        overlap = condition_tokens & disease_tokens
+        if overlap:
+            # Jaccard-like score weighted toward condition coverage
+            condition_coverage = len(overlap) / len(condition_tokens)
+            return min(condition_coverage * 1.2, 1.0)  # slight boost, capped at 1.0
+
+        return 0.0
+
     def _load_trial_characteristics(self, nct_id: str) -> Dict[str, str]:
         """Load trial characteristics from the database as a flat dict."""
         conn = sqlite3.connect(self.db_path)
@@ -279,7 +323,20 @@ class TrialMatcher:
         rag_score = self.rag.score_trial(patient_text, nct_id) if patient_text else 0.0
         rag_normalized = min(rag_score * 3, 1.0)
 
-        eligibility = 0.40 * hard_score + 0.20 * soft_score + 0.40 * rag_normalized
+        # Disease relevance — does this trial actually target the patient's condition?
+        patient_condition = patient_text.split()[0] if patient_text else ""
+        # Use the full patient text for broader matching
+        trial_diseases = self._get_trial_diseases(nct_id)
+        disease_relevance = self.compute_disease_relevance(patient_text, trial_diseases)
+
+        # Scoring: disease relevance gets 25% weight to ensure condition-appropriate trials rank higher
+        # Reduced hard/soft/RAG weights proportionally
+        eligibility = (
+            0.30 * hard_score
+            + 0.15 * soft_score
+            + 0.30 * rag_normalized
+            + 0.25 * disease_relevance
+        )
 
         # Distance score — always applied, sigmoid decay around d_max
         distance_score = 0.5  # neutral when distance unknown

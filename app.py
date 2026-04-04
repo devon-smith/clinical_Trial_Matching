@@ -478,8 +478,31 @@ class TrialMatcher:
             all_trials: List[Dict] = []
             seen: set = set()
 
+            # Build common filter clauses for age and gender
+            common_clauses = ""
+            common_params: List[Any] = []
+
+            if 'age' in patient_data and patient_data['age']:
+                try:
+                    age = int(patient_data['age'])
+                    common_clauses += " AND (c.criterion_type != 'age' OR (c.comparison = '>=' AND ? >= CAST(c.criterion_value AS INTEGER)) OR (c.comparison = '<=' AND ? <= CAST(c.criterion_value AS INTEGER)))"
+                    common_params.extend([age, age])
+                    print(f"Added age filter: {age}")
+                except (ValueError, TypeError) as e:
+                    print(f"Invalid age value: {patient_data['age']} - {e}")
+
+            if 'gender' in patient_data and patient_data['gender']:
+                gender = str(patient_data['gender']).lower()
+                common_clauses += " AND (c.criterion_type != 'gender' OR LOWER(c.criterion_value) = ?)"
+                common_params.append(gender)
+                print(f"Added gender filter: {gender}")
+
             for term in search_terms[:5]:
-                query = """
+                like = f"%{term.lower()}%"
+
+                # Phase 1: Strict search — only match against the diseases column
+                # This ensures trials that are actually ABOUT the condition rank first
+                strict_query = """
                 SELECT DISTINCT t.*
                 FROM trials t
                 LEFT JOIN criteria c ON t.nct_id = c.nct_id
@@ -488,51 +511,68 @@ class TrialMatcher:
                      'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING',
                      'AVAILABLE')
                      OR t.status IS NULL)
-                """
-                params: List[Any] = []
-
-                if 'age' in patient_data and patient_data['age']:
-                    try:
-                        age = int(patient_data['age'])
-                        query += " AND (c.criterion_type != 'age' OR (c.comparison = '>=' AND ? >= CAST(c.criterion_value AS INTEGER)) OR (c.comparison = '<=' AND ? <= CAST(c.criterion_value AS INTEGER)))"
-                        params.extend([age, age])
-                        print(f"Added age filter: {age}")
-                    except (ValueError, TypeError) as e:
-                        print(f"Invalid age value: {patient_data['age']} - {e}")
-
-                if 'gender' in patient_data and patient_data['gender']:
-                    gender = str(patient_data['gender']).lower()
-                    query += " AND (c.criterion_type != 'gender' OR LOWER(c.criterion_value) = ?)"
-                    params.append(gender)
-                    print(f"Added gender filter: {gender}")
-
-                like = f"%{term.lower()}%"
-                query += """
-                AND (LOWER(t.title) LIKE ?
-                     OR LOWER(t.brief_summary) LIKE ?
-                     OR LOWER(COALESCE(t.diseases,'')) LIKE ?
-                     OR LOWER(COALESCE(t.metadata_json,'')) LIKE ?)
+                """ + common_clauses + """
+                AND LOWER(COALESCE(t.diseases,'')) LIKE ?
                 GROUP BY t.nct_id
                 ORDER BY t.phase DESC, t.enrollment DESC
-                LIMIT 5
+                LIMIT 10
                 """
-                params.extend([like, like, like, like])
+                strict_params = list(common_params) + [like]
 
-                print(f"Executing query for term: {term}")
-                cursor = self._execute_query(query, params)
-                rows = cursor.fetchall()
-                print(f"Term '{term}' returned {len(rows)} trials")
+                print(f"Executing STRICT disease query for term: {term}")
+                cursor = self._execute_query(strict_query, strict_params)
+                strict_rows = cursor.fetchall()
+                print(f"Term '{term}' strict disease match returned {len(strict_rows)} trials")
 
-                for row in rows:
+                for row in strict_rows:
                     d = dict(row)
                     if d['nct_id'] in seen:
                         continue
                     seen.add(d['nct_id'])
+                    d['_disease_match'] = True
                     try:
                         d['explanation'] = llm_service.explain_trial_match(patient_data, d)
                     except Exception:
                         d['explanation'] = None
                     all_trials.append(d)
+
+                # Phase 2: Broader fallback — title and summary only if strict
+                # search returned fewer than 3 results
+                if len(strict_rows) < 3:
+                    broad_query = """
+                    SELECT DISTINCT t.*
+                    FROM trials t
+                    LEFT JOIN criteria c ON t.nct_id = c.nct_id
+                    WHERE 1=1
+                    AND (t.status IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                         'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING',
+                         'AVAILABLE')
+                         OR t.status IS NULL)
+                    """ + common_clauses + """
+                    AND (LOWER(t.title) LIKE ?
+                         OR LOWER(t.brief_summary) LIKE ?)
+                    GROUP BY t.nct_id
+                    ORDER BY t.phase DESC, t.enrollment DESC
+                    LIMIT 3
+                    """
+                    broad_params = list(common_params) + [like, like]
+
+                    print(f"Executing BROAD fallback query for term: {term}")
+                    cursor = self._execute_query(broad_query, broad_params)
+                    broad_rows = cursor.fetchall()
+                    print(f"Term '{term}' broad fallback returned {len(broad_rows)} trials")
+
+                    for row in broad_rows:
+                        d = dict(row)
+                        if d['nct_id'] in seen:
+                            continue
+                        seen.add(d['nct_id'])
+                        d['_disease_match'] = False
+                        try:
+                            d['explanation'] = llm_service.explain_trial_match(patient_data, d)
+                        except Exception:
+                            d['explanation'] = None
+                        all_trials.append(d)
 
             print(f"Returning {len(all_trials)} unique trials")
             return all_trials
