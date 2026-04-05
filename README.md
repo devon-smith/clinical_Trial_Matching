@@ -1,20 +1,40 @@
-# Clinical Trial Matching Assistant
+# Clinical Trial Matching
 
-A web-based application that helps patients find suitable clinical trials through a conversational interface.
+A conversational AI system that helps patients find clinical trials they're actually eligible for — instead of scrolling through ClinicalTrials.gov and hoping for the best.
 
-## Features
+Patients chat with the system, provide their details (age, gender, location, condition, symptoms), and get back ranked trial matches with eligibility assessments. The goal is to take a process that normally involves a research coordinator and a lot of back-and-forth and make it something a patient can do from a browser.
 
-- **Conversational Interface**: Chat with an AI assistant to find relevant clinical trials
-- **Trial Matching**: Matches patients with clinical trials based on their profile
-- **Trial Details**: View detailed information about each clinical trial
-- **Responsive Design**: Works on both desktop and mobile devices
+## How Matching Works
 
-## Prerequisites
+Matching patients to trials is harder than it sounds. A trial might require a specific age range, a confirmed diagnosis, certain lab values, proximity to a facility — and half of that might be buried in free-text eligibility criteria. So we built a hybrid pipeline that combines multiple scoring signals rather than relying on any single approach.
 
-- Python 3.8+
-- pip (Python package installer)
-- SQLite (included with Python)
+| Signal | Weight | What It Does |
+|---|---|---|
+| SMT Constraint Evaluation | 30% | Z3 solver checks hard eligibility criteria (age ranges, diagnoses, lab values) deterministically. Either you qualify or you don't. |
+| RAG Semantic Similarity | 30% | Embedding-based retrieval scores how well patient text aligns with trial eligibility descriptions. Catches the stuff Z3 can't parse. |
+| Disease Relevance | 25% | Token-overlap scoring ensures trials actually target the patient's condition — not just tangentially mention it in a footnote. |
+| Distance | 15% | Haversine distance from patient location to nearest trial facility, with sigmoid decay based on how far the patient is willing to travel. |
 
+An optional LLM Judge steps in when patient data is incomplete and structured criteria can't resolve eligibility on their own — it reads the free-text and makes an evidence-based call. Patient preferences (risk tolerance, schedule flexibility, treatment modality, travel willingness) are also collected through the UI and blended into ranking as a secondary signal at 18% weight.
+
+## What We Built
+
+- **Two-phase search** — strict disease-column matching first, then broader title/summary fallback. Cuts irrelevant results without killing recall.
+- **Disease relevance scoring** — added as a dedicated 25% scoring component so trials that actually treat your condition rank above ones that mention it in passing.
+- **Real distance calculation** — Haversine formula with geocoded trial locations pulled from the database. We were using placeholder estimates before, which is, you know, not ideal for a feature called "distance."
+- **Patient preference elicitation** — soft constraints (travel, risk, schedule, modality) collected via the UI and factored into ranking. Not everyone wants to fly across the country for a Phase I trial.
+- **Status filtering** — only active/recruiting trials shown, with clear status badges. No one needs to get excited about a trial that ended in 2019.
+- **LLM eligibility judge** — fills gaps when structured patient data is missing, using evidence-based reasoning over the free-text eligibility criteria.
+
+## Known Limitation
+
+The dataset contains 680 trials — a small subset of ClinicalTrials.gov's 400K+. For common conditions like diabetes, most trials in our dataset are completed or terminated, which means few active matches come back. This is a data coverage issue, not a filtering bug. Plugging into the full ClinicalTrials.gov API would solve it, but that's a different project.
+
+## Credits
+
+- [ClinicalTrials.gov](https://clinicaltrials.gov/)
+- [Z3 Theorem Prover](https://github.com/Z3Prover/z3)
+- [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings)
 ## Installation
 
 1. Clone the repository:
