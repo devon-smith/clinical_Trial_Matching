@@ -12,6 +12,7 @@ from llm_service import LLMService
 from Matcher import TrialMatcher as MatcherService
 from preference_scorer import PatientPreferences, parse_preferences_from_message
 from eligibility_visualizer import EligibilityVisualizer
+from concept_canonicalizer import ConceptCanonicalizer, _CONCEPT_HIERARCHY
 
 load_dotenv()
 
@@ -637,6 +638,7 @@ llm_service = LLMService()
 matcher = TrialMatcher()
 scoring_matcher = MatcherService(DB_PATH)
 eligibility_viz = EligibilityVisualizer(scoring_matcher.smt_matcher)
+concept_canon = ConceptCanonicalizer(DB_PATH)
 print(f"Matcher ready: {len(scoring_matcher.trials)} trials with SMT + RAG scoring.")
 
 def process_user_message(message: str, session: dict) -> dict:
@@ -1239,12 +1241,29 @@ def chat():
             # Sort by match score (highest first)
             formatted_trials.sort(key=lambda x: x.get('match_score', 0), reverse=True)
 
+            # Generate concept expansion audit for the search terms
+            concept_audit = []
+            search_terms = search_data.get('search_queries', [])
+            if primary_condition:
+                search_terms = [primary_condition] + [
+                    t for t in search_terms if t != primary_condition
+                ]
+            for term in search_terms[:5]:
+                try:
+                    expansion = concept_canon.canonicalize_query(term)
+                    concept_audit.append(
+                        concept_canon.expansion_to_dict(expansion)
+                    )
+                except Exception:
+                    pass
+
             return jsonify({
                 'status': 'complete',
                 'response': response if response else '',
                 'trials': formatted_trials,
                 'patient_location': patient_location,
-                'conversation_state': assistant.conversation_state
+                'conversation_state': assistant.conversation_state,
+                'concept_audit': concept_audit,
             })
 
         # Get next question
@@ -1284,6 +1303,64 @@ def list_trials():
     cursor.execute("SELECT nct_id, brief_title, brief_summary FROM trials LIMIT 20")
     trials = [dict(row) for row in cursor.fetchall()]
     return jsonify({'trials': trials})
+
+# ============ Concept Canonicalization API ============
+
+@app.route('/api/concepts/expand', methods=['POST'])
+def concept_expand():
+    """
+    Show the concept expansion tree for a search term.
+
+    Accepts JSON: { "query": "appendicitis" }
+    Returns the canonical concept matched, included/excluded children,
+    related concepts, and trial terms matched.
+    """
+    data = request.get_json() or {}
+    query = data.get('query', '').strip()
+    if not query:
+        return jsonify({'error': 'query is required'}), 400
+
+    expansion = concept_canon.canonicalize_query(query)
+    result = concept_canon.expansion_to_dict(expansion)
+    result['tree_display'] = concept_canon.build_tree_display(expansion)
+    return jsonify({'success': True, 'expansion': result})
+
+
+@app.route('/api/concepts/search-mapping', methods=['POST'])
+def concept_search_mapping():
+    """
+    Show the full transparency mapping for a user search query.
+
+    Returns what canonical concepts were mapped, what trial terms
+    would be matched, and what was considered but rejected.
+    """
+    data = request.get_json() or {}
+    query = data.get('query', '').strip()
+    if not query:
+        return jsonify({'error': 'query is required'}), 400
+
+    expansion = concept_canon.canonicalize_query(query)
+    result = concept_canon.expansion_to_dict(expansion)
+
+    # Add search-specific info: what DB criteria would actually be searched
+    if expansion.query_success and expansion.canonical_match:
+        concept_id = expansion.canonical_match.concept.concept_id
+        # Build the set of criteria attributes that would be searched
+        searched_attrs = []
+        for key in concept_canon._db_concepts:
+            if concept_id in key:
+                searched_attrs.append(f"patient_has_diagnosis_of_{key}_now")
+
+        hierarchy = _CONCEPT_HIERARCHY.get(concept_id, {})
+        for child_id in hierarchy.get("children", []):
+            for key in concept_canon._db_concepts:
+                if child_id in key:
+                    searched_attrs.append(f"patient_has_diagnosis_of_{key}_now")
+
+        result['searched_criteria_attributes'] = searched_attrs
+
+    return jsonify({'success': True, 'mapping': result})
+
 
 # ============ Eligibility Visualization API ============
 

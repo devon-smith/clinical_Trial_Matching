@@ -493,6 +493,150 @@ document.addEventListener('DOMContentLoaded', function() {
             ${items}`;
     }
 
+    // Render the concept audit transparency panel
+    function renderConceptAuditPanel(conceptAudit) {
+        const panelDiv = document.createElement('div');
+        panelDiv.className = 'flex justify-start w-full';
+
+        const auditItems = conceptAudit.map(audit => {
+            if (!audit.query_success) {
+                // Failed query
+                return `
+                    <div class="p-3 bg-red-50 border border-red-200 rounded-lg">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold">!</span>
+                            <span class="text-sm font-medium text-red-700">"${audit.query}"</span>
+                            <span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-600">No match</span>
+                        </div>
+                        <p class="text-xs text-red-600 ml-7">${audit.failure_reason || 'Could not map to a medical concept.'}</p>
+                        ${audit.suggestions && audit.suggestions.length > 0 ? `
+                            <div class="ml-7 mt-2">
+                                <p class="text-[10px] font-medium text-red-500 uppercase">Suggestions:</p>
+                                ${audit.suggestions.map(s => `<p class="text-xs text-red-600 mt-0.5">- ${s}</p>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>`;
+            }
+
+            const canon = audit.canonical_concept;
+            const included = audit.included_concepts || [];
+            const excluded = audit.excluded_concepts || [];
+            const related = audit.related_concepts || [];
+            const trialTerms = audit.trial_terms_matched || [];
+            const rejected = audit.rejected_concepts || [];
+
+            return `
+                <div class="p-3 bg-white border border-slate-200 rounded-lg">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold">&#10003;</span>
+                        <span class="text-sm font-medium text-slate-800">"${audit.query}"</span>
+                        <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        <span class="text-sm font-medium text-blue-700">${canon ? canon.canonical_name : audit.query}</span>
+                        ${canon ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-blue-100 text-blue-600">${canon.match_type} match</span>` : ''}
+                    </div>
+
+                    ${canon ? `<p class="text-[10px] font-mono text-slate-400 ml-7 mb-2">${canon.snomed_pattern}</p>` : ''}
+
+                    <div class="ml-7">
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.expand-text').textContent = this.nextElementSibling.classList.contains('hidden') ? 'Show details' : 'Hide details'"
+                                class="text-xs text-blue-600 hover:text-blue-800 mb-1">
+                            <span class="expand-text">Show details</span>
+                        </button>
+                        <div class="hidden space-y-2 mt-1">
+                            ${included.length > 0 ? `
+                                <div>
+                                    <p class="text-[10px] font-semibold text-green-600 uppercase">Included in search (${included.length})</p>
+                                    ${included.map(c => `
+                                        <div class="flex items-center gap-1 py-0.5">
+                                            <span class="text-green-500 text-[10px]">+</span>
+                                            <span class="text-xs text-slate-600">${c.canonical_name}</span>
+                                            ${c.trial_count > 0 ? `<span class="text-[10px] text-slate-400">(${c.trial_count} trials)</span>` : ''}
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+
+                            ${excluded.length > 0 ? `
+                                <div>
+                                    <p class="text-[10px] font-semibold text-red-500 uppercase">Excluded from search (${excluded.length})</p>
+                                    ${excluded.map(c => `
+                                        <div class="flex items-center gap-1 py-0.5">
+                                            <span class="text-red-400 text-[10px]">-</span>
+                                            <span class="text-xs text-slate-500">${c.canonical_name}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+
+                            ${rejected.length > 0 ? `
+                                <div>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase">Considered but rejected</p>
+                                    ${rejected.map(r => `
+                                        <div class="py-0.5">
+                                            <span class="text-xs text-slate-500">${r.concept}: </span>
+                                            <span class="text-[10px] text-slate-400 italic">${r.reason}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+
+                            ${related.length > 0 ? `
+                                <div>
+                                    <p class="text-[10px] font-semibold text-amber-600 uppercase">Related concepts (may entail)</p>
+                                    ${related.map(c => `
+                                        <div class="flex items-center gap-1 py-0.5">
+                                            <span class="text-amber-400 text-[10px]">~</span>
+                                            <span class="text-xs text-slate-600">${c.canonical_name}</span>
+                                            ${c.trial_count > 0 ? `<span class="text-[10px] text-slate-400">(${c.trial_count} trials)</span>` : ''}
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+
+                            ${trialTerms.length > 0 ? `
+                                <div>
+                                    <p class="text-[10px] font-semibold text-blue-600 uppercase">Trial eligibility terms matched</p>
+                                    ${trialTerms.slice(0, 8).map(t => `<p class="text-xs text-slate-600 py-0.5">${t}</p>`).join('')}
+                                    ${trialTerms.length > 8 ? `<p class="text-[10px] text-slate-400">+${trialTerms.length - 8} more...</p>` : ''}
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>`;
+        }).join('');
+
+        panelDiv.innerHTML = `
+            <div class="flex items-start space-x-3 w-full max-w-[98%]">
+                <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="border border-purple-200 rounded-xl overflow-hidden">
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.expand-icon').classList.toggle('rotate-180')"
+                                class="w-full flex items-center justify-between px-4 py-3 bg-purple-50 hover:bg-purple-100 transition-colors text-left">
+                            <span class="text-sm font-medium text-purple-800 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                                What We Searched For
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-purple-500">${conceptAudit.length} concept${conceptAudit.length > 1 ? 's' : ''} mapped</span>
+                                <svg class="w-4 h-4 text-purple-400 expand-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-4 py-3 bg-white space-y-3">
+                            <p class="text-xs text-slate-500">Here's how we interpreted your search and what medical concepts we looked for:</p>
+                            ${auditItems}
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+
+        messagesContainer.appendChild(panelDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
     // Handle form submission
     async function handleSubmit(e) {
         e.preventDefault();
@@ -538,8 +682,16 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (data.trials) {
                 if (data.trials.length > 0) {
                     updateProgress(4);
+                    // Show concept audit transparency panel if available
+                    if (data.concept_audit && data.concept_audit.length > 0) {
+                        renderConceptAuditPanel(data.concept_audit);
+                    }
                     showTrialMatches(data.trials);
                 } else {
+                    // Show concept audit even on failure to explain why
+                    if (data.concept_audit && data.concept_audit.length > 0) {
+                        renderConceptAuditPanel(data.concept_audit);
+                    }
                     addMessage('assistant', 'No matching trials found. Would you like to try a different search?');
                 }
             } else if (data.response) {
