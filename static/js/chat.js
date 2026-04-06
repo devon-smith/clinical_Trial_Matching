@@ -1613,6 +1613,17 @@ document.addEventListener('DOMContentLoaded', function() {
                             </a>
                         </div>
 
+                        <!-- Progressive Eligibility Check Button -->
+                        <div class="mt-4 mb-4">
+                            <button onclick="startProgressiveCheck('${trial.nct_id}')"
+                                class="w-full px-4 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium rounded-xl hover:from-indigo-700 hover:to-blue-700 transition-all flex items-center justify-center gap-2 shadow-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                                Check My Eligibility Step-by-Step
+                            </button>
+                            <p class="text-xs text-slate-500 text-center mt-1">Answer questions one at a time to see your updated eligibility</p>
+                        </div>
+                        <div id="progressive-check-container"></div>
+
                         ${criteriaHtml}
                     </div>
                 `;
@@ -1625,6 +1636,216 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             console.error('Error loading trial details:', error);
             addMessage('assistant', 'Sorry, something went wrong while loading the trial details.');
+        }
+    };
+
+    // ============ Progressive Eligibility Check ============
+
+    // Start progressive eligibility check for a trial
+    window.startProgressiveCheck = async function(nctId) {
+        const container = document.getElementById('progressive-check-container');
+        if (!container) return;
+
+        container.innerHTML = `
+            <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl">
+                <div class="flex items-center gap-2">
+                    <div class="typing-indicator-dots flex space-x-1">
+                        <div class="typing-dot w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <div class="typing-dot w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <div class="typing-dot w-2 h-2 bg-blue-400 rounded-full"></div>
+                    </div>
+                    <span class="text-sm text-blue-600">Starting eligibility check...</span>
+                </div>
+            </div>`;
+
+        try {
+            const response = await fetch('/api/eligibility/progressive/start', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ patient_profile: {}, nct_id: nctId }),
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                renderProgressiveState(container, data.state);
+            } else {
+                container.innerHTML = `<p class="text-sm text-red-600">Error: ${data.error}</p>`;
+            }
+        } catch (error) {
+            console.error('Progressive check error:', error);
+            container.innerHTML = `<p class="text-sm text-red-600">Failed to start eligibility check.</p>`;
+        }
+    };
+
+    // Render the current progressive check state
+    function renderProgressiveState(container, state) {
+        const progress = state.progress_percent || 0;
+        const statusColors = {
+            checking: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700', bar: 'bg-blue-500', label: 'Checking...' },
+            eligible: { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', label: 'Eligible' },
+            ineligible: { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-700', bar: 'bg-red-500', label: 'Not Eligible' },
+            needs_review: { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-700', bar: 'bg-amber-500', label: 'Needs Clinical Review' },
+        };
+        const sc = statusColors[state.current_status] || statusColors.checking;
+
+        // Answered criteria list
+        const answeredHtml = state.answered_criteria.map(a => {
+            const icon = a.status === 'eligible'
+                ? '<span class="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold">&#10003;</span>'
+                : a.status === 'ineligible'
+                ? '<span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold">&#10007;</span>'
+                : '<span class="w-5 h-5 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">?</span>';
+            return `
+                <div class="flex items-center gap-2 py-1.5 border-b border-slate-100 last:border-0">
+                    ${icon}
+                    <span class="text-sm text-slate-700 flex-1">${a.human_label}</span>
+                    ${a.patient_value ? `<span class="text-xs text-slate-400">(${a.patient_value})</span>` : ''}
+                </div>`;
+        }).join('');
+
+        // Hard exclusion banner
+        let exclusionBanner = '';
+        if (state.hard_exclusion_hit) {
+            exclusionBanner = `
+                <div class="p-3 bg-red-50 border border-red-200 rounded-lg mb-3">
+                    <div class="flex items-center gap-2 mb-1">
+                        <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <span class="font-medium text-red-700">Hard Exclusion</span>
+                    </div>
+                    <p class="text-sm text-red-600">${state.exclusion_reason}</p>
+                    <p class="text-xs text-red-500 mt-1">Remaining criteria checks have been skipped since this is a required criterion.</p>
+                </div>`;
+        }
+
+        // Boundary cases
+        let boundaryHtml = '';
+        if (state.boundary_cases && state.boundary_cases.length > 0) {
+            boundaryHtml = state.boundary_cases.map(bc => `
+                <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg mb-2">
+                    <div class="flex items-center gap-2 mb-1">
+                        <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <span class="text-sm font-medium text-amber-700">Boundary Case: ${bc.human_label}</span>
+                    </div>
+                    <p class="text-xs text-amber-600">${bc.boundary_info.boundary_explanation}</p>
+                    <p class="text-xs text-amber-700 font-medium mt-1">${bc.boundary_info.recommendation}</p>
+                </div>
+            `).join('');
+        }
+
+        // Next question UI
+        let questionHtml = '';
+        const nextQ = state.next_question;
+        if (nextQ && !state.hard_exclusion_hit) {
+            const priorityLabel = nextQ.priority <= 2 ? 'Critical Check' : nextQ.priority <= 4 ? 'Important Check' : 'Additional Info';
+            const priorityColor = nextQ.priority <= 2 ? 'text-red-600 bg-red-100' : nextQ.priority <= 4 ? 'text-amber-600 bg-amber-100' : 'text-blue-600 bg-blue-100';
+
+            questionHtml = `
+                <div class="p-4 bg-white border border-blue-200 rounded-xl mt-3">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2 py-0.5 text-[10px] font-medium rounded ${priorityColor}">${priorityLabel}</span>
+                        ${nextQ.is_hard ? '<span class="px-2 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-600">Required</span>' : '<span class="px-2 py-0.5 text-[10px] font-medium rounded bg-blue-100 text-blue-600">Preferred</span>'}
+                        ${nextQ.is_boundary_case ? '<span class="px-2 py-0.5 text-[10px] font-medium rounded bg-amber-100 text-amber-600">Boundary Case</span>' : ''}
+                    </div>
+                    <p class="text-sm font-medium text-slate-800 mb-1">${nextQ.human_label}</p>
+                    <p class="text-sm text-slate-600 mb-2">${nextQ.question}</p>
+                    <p class="text-xs text-slate-500 mb-1"><strong>Why this matters:</strong> ${nextQ.why_it_matters}</p>
+                    <p class="text-xs text-slate-400 mb-3"><strong>How to answer:</strong> ${nextQ.examples}</p>
+
+                    ${nextQ.is_boundary_case ? `
+                        <div class="p-2 bg-amber-50 border border-amber-100 rounded-lg mb-3">
+                            <p class="text-xs text-amber-700">${nextQ.boundary_explanation || ''}</p>
+                            ${nextQ.follow_up_questions ? `
+                                <p class="text-xs text-amber-600 font-medium mt-1">The trial coordinator may ask:</p>
+                                <ul class="text-xs text-amber-600 mt-0.5 list-disc list-inside">
+                                    ${nextQ.follow_up_questions.map(fq => `<li>${fq}</li>`).join('')}
+                                </ul>
+                            ` : ''}
+                        </div>
+                    ` : ''}
+
+                    <div class="flex gap-2">
+                        <input type="text" id="progressive-answer-input" placeholder="Type your answer..."
+                            class="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            onkeypress="if(event.key==='Enter')submitProgressiveAnswer('${state.nct_id}','${nextQ.attribute}')">
+                        <button onclick="submitProgressiveAnswer('${state.nct_id}','${nextQ.attribute}')"
+                            class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                            Submit
+                        </button>
+                        <button onclick="submitProgressiveAnswer('${state.nct_id}','${nextQ.attribute}','skip')"
+                            class="px-3 py-2 bg-slate-100 text-slate-500 text-sm rounded-lg hover:bg-slate-200 transition-colors">
+                            Skip
+                        </button>
+                    </div>
+                </div>`;
+        }
+
+        container.innerHTML = `
+            <div class="p-4 ${sc.bg} border ${sc.border} rounded-xl">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 ${sc.text}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        <span class="font-medium ${sc.text}">Progressive Eligibility Check</span>
+                        <span class="px-2 py-0.5 text-xs font-medium rounded ${sc.bg} ${sc.text} border ${sc.border}">${sc.label}</span>
+                    </div>
+                    <span class="text-sm ${sc.text}">${state.checked_criteria}/${state.total_criteria} checked</span>
+                </div>
+
+                <!-- Progress bar -->
+                <div class="h-2.5 bg-white/50 rounded-full overflow-hidden mb-3">
+                    <div class="h-full ${sc.bar} rounded-full transition-all duration-500" style="width: ${progress}%"></div>
+                </div>
+
+                <!-- Status counts -->
+                <div class="flex items-center gap-4 mb-3 text-xs">
+                    <span class="text-green-600"><strong>${state.eligible_count}</strong> eligible</span>
+                    <span class="text-red-600"><strong>${state.ineligible_count}</strong> ineligible</span>
+                    <span class="text-amber-600"><strong>${state.unknown_count}</strong> remaining</span>
+                </div>
+
+                ${exclusionBanner}
+                ${boundaryHtml}
+
+                <!-- Answered criteria -->
+                ${answeredHtml ? `
+                    <div class="bg-white/50 rounded-lg p-3 mb-2">
+                        <p class="text-[10px] font-semibold text-slate-500 uppercase mb-1">Evaluated Criteria</p>
+                        ${answeredHtml}
+                    </div>
+                ` : ''}
+
+                ${questionHtml}
+
+                ${!nextQ && !state.hard_exclusion_hit && state.current_status === 'eligible' ? `
+                    <div class="p-3 bg-green-100 border border-green-200 rounded-lg mt-3">
+                        <p class="text-sm font-medium text-green-700">All criteria checked — you appear eligible for this trial!</p>
+                        <p class="text-xs text-green-600 mt-1">We recommend discussing with your healthcare provider to confirm.</p>
+                    </div>
+                ` : ''}
+            </div>`;
+    }
+
+    // Submit answer in progressive check
+    window.submitProgressiveAnswer = async function(nctId, attribute, skipValue) {
+        const input = document.getElementById('progressive-answer-input');
+        const answer = skipValue || (input ? input.value.trim() : '');
+        if (!answer) return;
+
+        const container = document.getElementById('progressive-check-container');
+        if (!container) return;
+
+        try {
+            const response = await fetch('/api/eligibility/progressive/answer', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ attribute, answer }),
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                renderProgressiveState(container, data.state);
+            }
+        } catch (error) {
+            console.error('Progressive answer error:', error);
         }
     };
 

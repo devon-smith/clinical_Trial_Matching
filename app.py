@@ -13,6 +13,7 @@ from Matcher import TrialMatcher as MatcherService
 from preference_scorer import PatientPreferences, parse_preferences_from_message
 from eligibility_visualizer import EligibilityVisualizer
 from concept_canonicalizer import ConceptCanonicalizer, _CONCEPT_HIERARCHY
+from progressive_eligibility import ProgressiveEligibilityChecker
 
 load_dotenv()
 
@@ -639,6 +640,7 @@ matcher = TrialMatcher()
 scoring_matcher = MatcherService(DB_PATH)
 eligibility_viz = EligibilityVisualizer(scoring_matcher.smt_matcher)
 concept_canon = ConceptCanonicalizer(DB_PATH)
+progressive_checker = ProgressiveEligibilityChecker(scoring_matcher.smt_matcher)
 print(f"Matcher ready: {len(scoring_matcher.trials)} trials with SMT + RAG scoring.")
 
 def process_user_message(message: str, session: dict) -> dict:
@@ -1454,6 +1456,83 @@ def eligibility_questions(nct_id: str):
         'unknown_count': result['unknown_count'],
         'clarifying_questions': result['clarifying_questions'],
     })
+
+
+# ============ Progressive Eligibility API ============
+
+@app.route('/api/eligibility/progressive/start', methods=['POST'])
+def progressive_start():
+    """
+    Start a progressive eligibility check for a patient-trial pair.
+
+    Evaluates known criteria, then returns prioritized questions for
+    unknown ones. If a hard exclusion is hit, remaining questions are skipped.
+
+    Accepts JSON: { "patient_profile": {...}, "nct_id": "NCT..." }
+    """
+    data = request.get_json() or {}
+    patient_profile = data.get('patient_profile', {})
+    nct_id = data.get('nct_id', '')
+
+    if not nct_id:
+        return jsonify({'error': 'nct_id is required'}), 400
+
+    patient_attrs = build_patient_attributes(patient_profile)
+    for key, value in patient_profile.items():
+        if key not in ('age', 'gender', 'sex', 'condition', 'location', 'zip_code'):
+            patient_attrs[key] = value
+
+    state = progressive_checker.start_check(patient_attrs, nct_id)
+    result = progressive_checker.state_to_dict(state)
+
+    # Store state in session for multi-turn flow
+    session['progressive_state'] = {
+        'nct_id': nct_id,
+        'patient_attrs': patient_attrs,
+        'answered': {},
+    }
+
+    return jsonify({'success': True, 'state': result})
+
+
+@app.route('/api/eligibility/progressive/answer', methods=['POST'])
+def progressive_answer():
+    """
+    Process a patient's answer to a clarifying question and return
+    the updated eligibility state.
+
+    Accepts JSON: { "attribute": "...", "answer": "..." }
+    """
+    data = request.get_json() or {}
+    attribute = data.get('attribute', '')
+    answer = data.get('answer')
+
+    if not attribute:
+        return jsonify({'error': 'attribute is required'}), 400
+
+    prog_state = session.get('progressive_state')
+    if not prog_state:
+        return jsonify({'error': 'No progressive check in progress'}), 400
+
+    nct_id = prog_state['nct_id']
+    patient_attrs = prog_state['patient_attrs']
+
+    # Add the new answer to patient attributes
+    from progressive_eligibility import ProgressiveEligibilityChecker
+    parsed = ProgressiveEligibilityChecker._parse_answer(answer)
+    patient_attrs[attribute] = parsed
+    prog_state['answered'][attribute] = parsed
+
+    # Re-evaluate with updated attributes
+    state = progressive_checker.start_check(patient_attrs, nct_id)
+    result = progressive_checker.state_to_dict(state)
+
+    # Update session
+    prog_state['patient_attrs'] = patient_attrs
+    session['progressive_state'] = prog_state
+    session.modified = True
+
+    return jsonify({'success': True, 'state': result})
 
 
 # ============ Clinician Dashboard API ============
