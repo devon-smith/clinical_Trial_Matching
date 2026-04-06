@@ -155,8 +155,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Build the "Why This Match?" expandable criteria breakdown for trial cards
     function buildCriteriaBreakdown(trial, eligibility) {
+        // Prefer the rich eligibility_breakdown from the visualization API
+        const vizBreakdown = trial.eligibility_breakdown;
         const criteria = eligibility.criteriaDetails || [];
-        if (criteria.length === 0) {
+
+        if (!vizBreakdown && criteria.length === 0) {
             return `
                 <div class="bg-slate-50 rounded-lg p-3">
                     <div class="flex items-start gap-2">
@@ -166,14 +169,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>`;
         }
 
+        // Use visualization breakdown if available
+        if (vizBreakdown && vizBreakdown.criteria && vizBreakdown.criteria.length > 0) {
+            return buildVizCriteriaBreakdown(trial, vizBreakdown);
+        }
+
+        // Fallback to old criteria-based rendering
         const hardCriteria = criteria.filter(c => c.hard || c.hard_constraint);
         const softCriteria = criteria.filter(c => !c.hard && !c.hard_constraint);
 
-        // Count statuses
         const metCount = criteria.filter(c => c.met).length;
         const unclearCount = criteria.filter(c => !c.met && c.llm_status === 'UNCLEAR').length;
-        const notMetCount = criteria.filter(c => !c.met && !c.llm_status).length +
-                           criteria.filter(c => !c.met && c.llm_status === 'NOT_MET').length;
 
         function criterionIcon(c) {
             if (c.met) return '<span class="text-green-500 font-bold">&#10003;</span>';
@@ -209,7 +215,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return `<div class="py-1">${icon} <span class="text-xs text-slate-600">${label}</span>${llmBadge}${evidence}</div>`;
         }
 
-        // Only show first 5 of each type, with "show more" for the detail modal
         const hardPreview = hardCriteria.slice(0, 5);
         const softPreview = softCriteria.slice(0, 3);
         const moreHard = hardCriteria.length > 5 ? `<p class="text-[10px] text-slate-400 mt-1">+${hardCriteria.length - 5} more required criteria...</p>` : '';
@@ -239,6 +244,118 @@ document.addEventListener('DOMContentLoaded', function() {
                         ${softPreview.map(renderCriterion).join('')}
                         ${moreSoft}
                     ` : ''}
+                    ${buildPreferenceBreakdown(trial)}
+                </div>
+            </div>`;
+    }
+
+    // Build the rich visualization-based criteria breakdown for trial cards
+    function buildVizCriteriaBreakdown(trial, viz) {
+        const eligibleCount = viz.eligible_count || 0;
+        const ineligibleCount = viz.ineligible_count || 0;
+        const unknownCount = viz.unknown_count || 0;
+        const totalCount = viz.criteria ? viz.criteria.length : 0;
+
+        const hardCriteria = (viz.criteria || []).filter(c => c.is_hard);
+        const softCriteria = (viz.criteria || []).filter(c => !c.is_hard);
+
+        function statusIcon(status) {
+            if (status === 'eligible') return '<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-green-100 text-green-600 text-[10px] font-bold flex-shrink-0">&#10003;</span>';
+            if (status === 'ineligible') return '<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-red-100 text-red-600 text-[10px] font-bold flex-shrink-0">&#10007;</span>';
+            return '<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-amber-100 text-amber-600 text-[10px] font-bold flex-shrink-0">?</span>';
+        }
+
+        function statusBadge(status) {
+            const cfg = {
+                eligible: 'bg-green-100 text-green-700',
+                ineligible: 'bg-red-100 text-red-700',
+                unknown: 'bg-amber-100 text-amber-700',
+            }[status] || 'bg-slate-100 text-slate-600';
+            return `<span class="ml-auto px-1.5 py-0.5 text-[10px] font-medium rounded ${cfg}">${status}</span>`;
+        }
+
+        function renderVizCriterion(c) {
+            const icon = statusIcon(c.status);
+            const badge = statusBadge(c.status);
+            const patientFact = c.patient_value
+                ? `<span class="text-[10px] text-slate-400 ml-1">(yours: ${c.patient_value})</span>`
+                : '';
+            const explanation = c.explanation
+                ? `<p class="text-[10px] text-slate-400 mt-0.5 ml-5">${c.explanation}</p>`
+                : '';
+            return `
+                <div class="py-1.5 border-b border-slate-50 last:border-0">
+                    <div class="flex items-center gap-1.5">
+                        ${icon}
+                        <span class="text-xs text-slate-600 flex-1">${c.human_label}</span>
+                        ${patientFact}
+                        ${badge}
+                    </div>
+                    ${explanation}
+                </div>`;
+        }
+
+        // Ineligibility explanation banner
+        let ineligBanner = '';
+        if (viz.ineligibility_explanation) {
+            const lines = viz.ineligibility_explanation.split('\n').map(l => l.trim()).filter(Boolean);
+            ineligBanner = `
+                <div class="mb-2 p-2.5 bg-red-50 border border-red-200 rounded-lg">
+                    <p class="text-[11px] font-medium text-red-700 mb-1">Why you may not qualify:</p>
+                    ${lines.map(l => `<p class="text-[11px] text-red-600">${l}</p>`).join('')}
+                </div>`;
+        }
+
+        // Clarifying questions section
+        let questionsHtml = '';
+        if (viz.clarifying_questions && viz.clarifying_questions.length > 0) {
+            const previewQuestions = viz.clarifying_questions.slice(0, 2);
+            const moreCount = viz.clarifying_questions.length - 2;
+            questionsHtml = `
+                <div class="mt-2 p-2.5 bg-blue-50 border border-blue-200 rounded-lg">
+                    <p class="text-[11px] font-medium text-blue-700 mb-1.5">We need more info to check ${unknownCount} criteria:</p>
+                    ${previewQuestions.map(q => `
+                        <div class="mb-1.5 last:mb-0">
+                            <p class="text-[11px] text-blue-600">${q.question}</p>
+                        </div>
+                    `).join('')}
+                    ${moreCount > 0 ? `<p class="text-[10px] text-blue-400 mt-1">+${moreCount} more questions... (click View Full Details)</p>` : ''}
+                </div>`;
+        }
+
+        const hardPreview = hardCriteria.slice(0, 5);
+        const softPreview = softCriteria.slice(0, 3);
+        const moreHard = hardCriteria.length > 5 ? `<p class="text-[10px] text-slate-400 mt-1">+${hardCriteria.length - 5} more required criteria...</p>` : '';
+        const moreSoft = softCriteria.length > 3 ? `<p class="text-[10px] text-slate-400 mt-1">+${softCriteria.length - 3} more preference criteria...</p>` : '';
+
+        return `
+            <div class="border border-slate-200 rounded-lg overflow-hidden">
+                <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.expand-icon').classList.toggle('rotate-180')"
+                        class="w-full flex items-center justify-between px-3 py-2.5 bg-slate-50 hover:bg-slate-100 transition-colors text-left">
+                    <span class="text-xs font-medium text-slate-700 flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                        Eligibility Breakdown
+                    </span>
+                    <div class="flex items-center gap-1.5">
+                        <span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-green-100 text-green-700">${eligibleCount} met</span>
+                        ${ineligibleCount > 0 ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-700">${ineligibleCount} not met</span>` : ''}
+                        ${unknownCount > 0 ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-amber-100 text-amber-700">${unknownCount} unknown</span>` : ''}
+                        <svg class="w-3.5 h-3.5 text-slate-400 expand-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                </button>
+                <div class="hidden px-3 py-2 bg-white border-t border-slate-100 max-h-64 overflow-y-auto">
+                    ${ineligBanner}
+                    ${hardPreview.length > 0 ? `
+                        <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mb-1">Required Criteria</p>
+                        ${hardPreview.map(renderVizCriterion).join('')}
+                        ${moreHard}
+                    ` : ''}
+                    ${softPreview.length > 0 ? `
+                        <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mt-2 mb-1">Preference Criteria</p>
+                        ${softPreview.map(renderVizCriterion).join('')}
+                        ${moreSoft}
+                    ` : ''}
+                    ${questionsHtml}
                     ${buildPreferenceBreakdown(trial)}
                 </div>
             </div>`;
@@ -1039,6 +1156,166 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(`Share functionality coming soon!\n\nThe following trials would be shared with your healthcare provider:\n${trialIds}`);
     };
 
+    // Build the full eligibility visualization for the trial detail modal
+    function buildModalVizCriteria(viz) {
+        const hardCriteria = (viz.criteria || []).filter(c => c.is_hard);
+        const softCriteria = (viz.criteria || []).filter(c => !c.is_hard);
+
+        function statusConfig(status) {
+            return {
+                eligible: { border: 'border-green-400', bg: 'bg-green-50', icon: '&#10003;', iconColor: 'text-green-600', iconBg: 'bg-green-100', label: 'Eligible' },
+                ineligible: { border: 'border-red-400', bg: 'bg-red-50', icon: '&#10007;', iconColor: 'text-red-600', iconBg: 'bg-red-100', label: 'Ineligible' },
+                unknown: { border: 'border-amber-400', bg: 'bg-amber-50', icon: '?', iconColor: 'text-amber-600', iconBg: 'bg-amber-100', label: 'Unknown' },
+            }[status] || { border: 'border-slate-300', bg: 'bg-slate-50', icon: '-', iconColor: 'text-slate-500', iconBg: 'bg-slate-100', label: status };
+        }
+
+        function renderModalCriterion(c) {
+            const cfg = statusConfig(c.status);
+            const patientFactHtml = c.patient_value
+                ? `<p class="text-xs text-slate-500 ml-7 mt-0.5">Your value: <span class="font-medium">${c.patient_value}</span></p>`
+                : `<p class="text-xs text-slate-400 ml-7 mt-0.5 italic">No data available</p>`;
+            const formalHtml = c.formal_constraint
+                ? `<p class="text-[10px] font-mono text-slate-400 ml-7 mt-1">${c.formal_constraint}</p>`
+                : '';
+
+            return `
+                <div class="rounded-lg border-l-4 ${cfg.border} ${cfg.bg} overflow-hidden">
+                    <div class="p-4">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="w-5 h-5 rounded-full ${cfg.iconBg} ${cfg.iconColor} flex items-center justify-center text-sm font-bold">${cfg.icon}</span>
+                                    <span class="font-medium text-slate-800">${c.human_label}</span>
+                                    <span class="px-1.5 py-0.5 text-[10px] font-medium rounded ${cfg.iconBg} ${cfg.iconColor}">${cfg.label}</span>
+                                </div>
+                                ${patientFactHtml}
+                            </div>
+                            <button onclick="this.closest('.rounded-lg').querySelector('.criterion-detail').classList.toggle('hidden')" class="text-xs text-blue-600 hover:text-blue-800 whitespace-nowrap ml-2">
+                                Details
+                            </button>
+                        </div>
+                        <div class="criterion-detail hidden mt-3 ml-7 p-3 bg-white/50 rounded-lg border border-slate-200">
+                            <p class="text-sm text-slate-600">${c.explanation || 'No additional details.'}</p>
+                            ${formalHtml}
+                            ${c.description ? `<p class="text-xs text-slate-400 mt-1">Source: ${c.description}</p>` : ''}
+                        </div>
+                    </div>
+                </div>`;
+        }
+
+        // Ineligibility explanation section
+        let ineligSection = '';
+        if (viz.ineligibility_explanation) {
+            const lines = viz.ineligibility_explanation.split('\n').map(l => l.trim()).filter(Boolean);
+            const formalCore = (viz.unsat_core?.formal || []);
+            ineligSection = `
+                <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
+                    <div class="flex items-center gap-2 mb-2">
+                        <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <span class="font-medium text-red-700">Why You May Not Qualify</span>
+                    </div>
+                    <div class="space-y-1 mb-3">
+                        ${lines.map(l => `<p class="text-sm text-red-600">${l}</p>`).join('')}
+                    </div>
+                    ${formalCore.length > 0 ? `
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="text-xs text-red-500 hover:text-red-700">Show formal constraints</button>
+                        <div class="hidden mt-2 p-2 bg-red-100/50 rounded-lg">
+                            <p class="text-[10px] font-semibold text-red-500 uppercase mb-1">Formal Constraint Representation (UNSAT Core)</p>
+                            ${formalCore.map(f => `<p class="text-xs font-mono text-red-600">${f}</p>`).join('')}
+                        </div>
+                    ` : ''}
+                </div>`;
+        }
+
+        // Clarifying questions section
+        let questionsSection = '';
+        if (viz.clarifying_questions && viz.clarifying_questions.length > 0) {
+            questionsSection = `
+                <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-xl">
+                    <div class="flex items-center gap-2 mb-3">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium text-blue-700">Help Us Determine Your Eligibility</span>
+                        <span class="text-xs text-blue-500">(${viz.clarifying_questions.length} questions)</span>
+                    </div>
+                    <p class="text-sm text-blue-600 mb-3">We don't have enough information to check some criteria. Answering these questions could change your eligibility status:</p>
+                    <div class="space-y-3">
+                        ${viz.clarifying_questions.map((q, i) => `
+                            <div class="p-3 bg-white rounded-lg border border-blue-100">
+                                <div class="flex items-start gap-2">
+                                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold">${i + 1}</span>
+                                    <div>
+                                        <p class="text-sm text-slate-700 font-medium mb-0.5">${q.human_label}</p>
+                                        <p class="text-sm text-slate-600">${q.question}</p>
+                                        ${q.formal_constraint ? `<p class="text-[10px] font-mono text-slate-400 mt-1">Constraint: ${q.formal_constraint}</p>` : ''}
+                                        ${q.is_hard ? '<span class="inline-block mt-1 px-1.5 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-600">Required criterion</span>' : '<span class="inline-block mt-1 px-1.5 py-0.5 text-[10px] font-medium rounded bg-blue-100 text-blue-600">Preference criterion</span>'}
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>`;
+        }
+
+        // Summary counts
+        const eligible = viz.eligible_count || 0;
+        const ineligible = viz.ineligible_count || 0;
+        const unknown = viz.unknown_count || 0;
+
+        return `
+            <div class="mt-6">
+                <h4 class="font-semibold text-lg mb-4 text-slate-800 flex items-center gap-2">
+                    Eligibility Assessment
+                    <span class="text-xs font-normal text-slate-500 bg-slate-100 px-2 py-1 rounded">Personalized for you</span>
+                </h4>
+
+                <!-- Status summary bar -->
+                <div class="flex items-center gap-3 mb-4 p-3 bg-slate-50 rounded-lg border border-slate-200">
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                        <span class="text-sm text-slate-600"><span class="font-semibold text-green-700">${eligible}</span> eligible</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                        <span class="text-sm text-slate-600"><span class="font-semibold text-red-700">${ineligible}</span> ineligible</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                        <span class="text-sm text-slate-600"><span class="font-semibold text-amber-700">${unknown}</span> unknown</span>
+                    </div>
+                    <div class="ml-auto text-xs text-slate-500">${eligible + ineligible + unknown} total criteria</div>
+                </div>
+
+                ${ineligSection}
+                ${questionsSection}
+
+                ${hardCriteria.length > 0 ? `
+                    <div class="mb-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            <span class="font-medium text-slate-700">Required Criteria</span>
+                            <span class="text-xs text-slate-500">(Must meet all)</span>
+                        </div>
+                        <div class="space-y-3">
+                            ${hardCriteria.map(renderModalCriterion).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+
+                ${softCriteria.length > 0 ? `
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                            <span class="font-medium text-slate-700">Preference Criteria</span>
+                            <span class="text-xs text-slate-500">(Flexible)</span>
+                        </div>
+                        <div class="space-y-3">
+                            ${softCriteria.map(renderModalCriterion).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+            </div>`;
+    }
+
     // View trial details with expanded criteria
     window.viewTrialDetails = async function(nctId) {
         try {
@@ -1050,92 +1327,45 @@ document.addEventListener('DOMContentLoaded', function() {
                 const modalContent = document.getElementById('trial-details');
                 const eligibility = generateEligibilityData(trial);
 
-                // Format criteria with hard/soft visualization and LLM explanations
+                // Find the visualization breakdown from the allTrials data
+                const trialData = allTrials.find(t => t.trial.nct_id === nctId);
+                const vizBreakdown = trialData?.trial?.eligibility_breakdown;
+
+                // Build criteria HTML using real visualization data
                 let criteriaHtml = '';
-                if (trial.criteria && trial.criteria.length > 0) {
+                if (vizBreakdown && vizBreakdown.criteria && vizBreakdown.criteria.length > 0) {
+                    criteriaHtml = buildModalVizCriteria(vizBreakdown);
+                } else if (trial.criteria && trial.criteria.length > 0) {
+                    // Fallback to database criteria without visualization
                     const hardCriteria = trial.criteria.filter(c => c.hard_constraint !== false);
                     const softCriteria = trial.criteria.filter(c => c.hard_constraint === false);
-
-                    // Mock criterion-level status and explanations
-                    const getCriterionStatus = () => {
-                        const rand = Math.random();
-                        if (rand > 0.7) return 'unclear';
-                        if (rand > 0.2) return 'met';
-                        return 'unmet';
-                    };
-
-                    const criterionExplanations = [
-                        "Based on your provided information, this criterion appears to be satisfied.",
-                        "Your profile data indicates you meet this requirement.",
-                        "This criterion requires verification with your healthcare provider.",
-                        "Additional documentation may be needed to confirm eligibility."
-                    ];
 
                     criteriaHtml = `
                         <div class="mt-6">
                             <h4 class="font-semibold text-lg mb-4 text-slate-800 flex items-center gap-2">
-                                Eligibility Assessment
-                                <span class="text-xs font-normal text-slate-500 bg-slate-100 px-2 py-1 rounded">Personalized for you</span>
+                                Eligibility Criteria
                             </h4>
-
                             ${hardCriteria.length > 0 ? `
-                                <div class="mb-6">
-                                    <div class="flex items-center gap-2 mb-3">
-                                        <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                                        <span class="font-medium text-slate-700">Required Criteria</span>
-                                        <span class="text-xs text-slate-500">(Must meet all)</span>
-                                    </div>
-                                    <div class="space-y-3">
-                                        ${hardCriteria.map(c => {
-                                            const status = getCriterionStatus();
-                                            const statusConfig = {
-                                                met: { border: 'border-green-400', bg: 'bg-green-50', icon: '✓', iconColor: 'text-green-600' },
-                                                unmet: { border: 'border-red-400', bg: 'bg-red-50', icon: '✗', iconColor: 'text-red-600' },
-                                                unclear: { border: 'border-amber-400', bg: 'bg-amber-50', icon: '?', iconColor: 'text-amber-600' }
-                                            }[status];
-
-                                            return `
-                                                <div class="rounded-lg border-l-4 ${statusConfig.border} ${statusConfig.bg} overflow-hidden">
-                                                    <div class="p-4">
-                                                        <div class="flex items-start justify-between">
-                                                            <div class="flex-1">
-                                                                <div class="flex items-center gap-2 mb-1">
-                                                                    <span class="w-5 h-5 rounded-full ${statusConfig.bg} ${statusConfig.iconColor} flex items-center justify-center text-sm font-bold">${statusConfig.icon}</span>
-                                                                    <span class="font-medium text-slate-800">${c.criterion_type}</span>
-                                                                </div>
-                                                                <p class="text-sm text-slate-600 ml-7">${c.criterion_value}</p>
-                                                            </div>
-                                                            <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="text-xs text-blue-600 hover:text-blue-800 whitespace-nowrap">
-                                                                Show explanation
-                                                            </button>
-                                                        </div>
-                                                        <div class="hidden mt-3 ml-7 p-3 bg-white/50 rounded-lg border border-slate-200">
-                                                            <p class="text-sm text-slate-600 italic">${criterionExplanations[Math.floor(Math.random() * criterionExplanations.length)]}</p>
-                                                            <button class="mt-2 text-xs text-blue-600 hover:underline">Show supporting note text →</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            `;
-                                        }).join('')}
+                                <div class="mb-4">
+                                    <p class="text-sm font-medium text-slate-600 mb-2">Required Criteria (${hardCriteria.length})</p>
+                                    <div class="space-y-2">
+                                        ${hardCriteria.map(c => `
+                                            <div class="rounded-lg border-l-4 border-slate-300 bg-slate-50 p-3">
+                                                <span class="font-medium text-sm text-slate-700">${c.criterion_type}</span>
+                                                <span class="text-sm text-slate-500 ml-2">${c.criterion_value}</span>
+                                            </div>
+                                        `).join('')}
                                     </div>
                                 </div>
                             ` : ''}
-
                             ${softCriteria.length > 0 ? `
                                 <div>
-                                    <div class="flex items-center gap-2 mb-3">
-                                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                                        <span class="font-medium text-slate-700">Preferences & Soft Criteria</span>
-                                        <span class="text-xs text-slate-500">(Flexible)</span>
-                                    </div>
-                                    <div class="space-y-3">
+                                    <p class="text-sm font-medium text-slate-600 mb-2">Preference Criteria (${softCriteria.length})</p>
+                                    <div class="space-y-2">
                                         ${softCriteria.map(c => `
-                                            <div class="rounded-lg border-l-4 border-blue-400 bg-blue-50 p-4">
-                                                <div class="flex items-center gap-2 mb-1">
-                                                    <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm">~</span>
-                                                    <span class="font-medium text-slate-800">${c.criterion_type}</span>
-                                                </div>
-                                                <p class="text-sm text-slate-600 ml-7">${c.criterion_value}</p>
+                                            <div class="rounded-lg border-l-4 border-blue-300 bg-blue-50 p-3">
+                                                <span class="font-medium text-sm text-slate-700">${c.criterion_type}</span>
+                                                <span class="text-sm text-slate-500 ml-2">${c.criterion_value}</span>
                                             </div>
                                         `).join('')}
                                     </div>

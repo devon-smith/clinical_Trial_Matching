@@ -11,6 +11,7 @@ import re
 from llm_service import LLMService
 from Matcher import TrialMatcher as MatcherService
 from preference_scorer import PatientPreferences, parse_preferences_from_message
+from eligibility_visualizer import EligibilityVisualizer
 
 load_dotenv()
 
@@ -635,6 +636,7 @@ llm_service = LLMService()
 # Initialize matcher (includes SMT evaluator + RAG index)
 matcher = TrialMatcher()
 scoring_matcher = MatcherService(DB_PATH)
+eligibility_viz = EligibilityVisualizer(scoring_matcher.smt_matcher)
 print(f"Matcher ready: {len(scoring_matcher.trials)} trials with SMT + RAG scoring.")
 
 def process_user_message(message: str, session: dict) -> dict:
@@ -1200,6 +1202,14 @@ def chat():
                     except Exception:
                         plain_summary = ''
 
+                # Generate eligibility visualization breakdown
+                viz_data = {}
+                try:
+                    viz_breakdown = eligibility_viz.get_breakdown(patient_attrs, nct_id)
+                    viz_data = eligibility_viz.to_dict(viz_breakdown)
+                except Exception as viz_err:
+                    print(f"Eligibility viz error for {nct_id}: {viz_err}")
+
                 formatted_trials.append({
                     'nct_id': nct_id,
                     'title': trial.get('brief_title') or trial.get('title', 'Clinical Trial'),
@@ -1222,6 +1232,8 @@ def chat():
                     'criteria_details': scoring['criteria_details'],
                     'preference_score': scoring.get('preference_score'),
                     'preference_breakdown': scoring.get('preference_breakdown', {}),
+                    # Eligibility visualization data
+                    'eligibility_breakdown': viz_data,
                 })
 
             # Sort by match score (highest first)
@@ -1272,6 +1284,100 @@ def list_trials():
     cursor.execute("SELECT nct_id, brief_title, brief_summary FROM trials LIMIT 20")
     trials = [dict(row) for row in cursor.fetchall()]
     return jsonify({'trials': trials})
+
+# ============ Eligibility Visualization API ============
+
+@app.route('/api/eligibility/breakdown', methods=['POST'])
+def eligibility_breakdown():
+    """
+    Get a structured eligibility breakdown for a patient-trial pair.
+
+    Accepts JSON body with:
+      - patient_profile: dict with age, sex, condition, prior_treatments, lab values, etc.
+      - nct_id: trial identifier
+
+    Returns structured checklist with eligible/ineligible/unknown per criterion,
+    ineligibility explanations with unsat core, and clarifying questions.
+    """
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': 'Request body required'}), 400
+
+    patient_profile = data.get('patient_profile', {})
+    nct_id = data.get('nct_id', '')
+
+    if not nct_id:
+        return jsonify({'error': 'nct_id is required'}), 400
+
+    # Build patient attributes from the profile
+    patient_attrs = build_patient_attributes(patient_profile)
+
+    # Merge any extra attributes provided directly (lab values, etc.)
+    for key, value in patient_profile.items():
+        if key not in ('age', 'gender', 'sex', 'condition', 'location', 'zip_code'):
+            patient_attrs[key] = value
+
+    breakdown = eligibility_viz.get_breakdown(patient_attrs, nct_id)
+    result = eligibility_viz.to_dict(breakdown)
+
+    return jsonify({'success': True, 'breakdown': result})
+
+
+@app.route('/api/eligibility/explain/<nct_id>', methods=['POST'])
+def eligibility_explain(nct_id: str):
+    """
+    Get a plain-language ineligibility explanation for a patient-trial pair.
+
+    Returns the unsat core in both formal constraint representation
+    and patient-readable form.
+    """
+    data = request.get_json() or {}
+    patient_profile = data.get('patient_profile', {})
+
+    patient_attrs = build_patient_attributes(patient_profile)
+    for key, value in patient_profile.items():
+        if key not in ('age', 'gender', 'sex', 'condition', 'location', 'zip_code'):
+            patient_attrs[key] = value
+
+    breakdown = eligibility_viz.get_breakdown(patient_attrs, nct_id)
+    result = eligibility_viz.to_dict(breakdown)
+
+    return jsonify({
+        'success': True,
+        'nct_id': nct_id,
+        'overall_status': result['overall_status'],
+        'ineligibility_explanation': result['ineligibility_explanation'],
+        'unsat_core': result['unsat_core'],
+        'failed_criteria': [
+            c for c in result['criteria'] if c['status'] == 'ineligible'
+        ],
+    })
+
+
+@app.route('/api/eligibility/questions/<nct_id>', methods=['POST'])
+def eligibility_questions(nct_id: str):
+    """
+    Get clarifying questions for criteria where the patient's eligibility
+    status is 'unknown' (not enough information to determine).
+    """
+    data = request.get_json() or {}
+    patient_profile = data.get('patient_profile', {})
+
+    patient_attrs = build_patient_attributes(patient_profile)
+    for key, value in patient_profile.items():
+        if key not in ('age', 'gender', 'sex', 'condition', 'location', 'zip_code'):
+            patient_attrs[key] = value
+
+    breakdown = eligibility_viz.get_breakdown(patient_attrs, nct_id)
+    result = eligibility_viz.to_dict(breakdown)
+
+    return jsonify({
+        'success': True,
+        'nct_id': nct_id,
+        'unknown_count': result['unknown_count'],
+        'clarifying_questions': result['clarifying_questions'],
+    })
+
 
 # ============ Clinician Dashboard API ============
 
