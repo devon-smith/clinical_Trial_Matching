@@ -213,6 +213,38 @@ CONDITION_TO_CRITERIA = {
         'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
         'patient_has_finding_of_malignant_neoplastic_disease_now',
     ],
+    'stomach cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_neoplasm_of_stomach_now',
+        'patient_has_finding_of_disorder_of_stomach_now',
+    ],
+    'gastric cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_neoplasm_of_stomach_now',
+        'patient_has_finding_of_disorder_of_stomach_now',
+    ],
+    'breast cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_diagnosis_of_malignant_tumor_of_breast_now',
+    ],
+    'lung cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_diagnosis_of_primary_malignant_neoplasm_of_lung_now',
+    ],
+    'colon cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_diagnosis_of_malignant_neoplasm_of_colon_now',
+    ],
+    'colorectal cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_diagnosis_of_malignant_neoplasm_of_colon_now',
+    ],
     'heart disease': [
         'patient_has_diagnosis_of_disorder_of_cardiovascular_system_now',
         'patient_has_finding_of_disorder_of_cardiovascular_system_now',
@@ -311,6 +343,130 @@ def build_patient_attributes(patient_data: Dict[str, Any]) -> Dict[str, Any]:
         attrs = merge_followup_answers(attrs, category_id, condition_details)
 
     return attrs
+
+
+# ---------------------------------------------------------------------------
+# Categories of criteria safe to infer as absent (False) when the patient
+# hasn't mentioned them.  Lab values / numeric measures are NOT included
+# because we can't know their values without tests.
+# ---------------------------------------------------------------------------
+
+_INFERABLE_PREFIXES = [
+    # Diagnoses — if unmentioned, patient likely doesn't have them
+    "patient_has_diagnosis_of_",
+    # Findings — symptoms/signs the patient would know about
+    "patient_has_finding_of_",
+    # Prior treatments — patient would have mentioned significant treatments
+    "patient_has_undergone_",
+    # Current treatments — patient would mention active treatments
+    "patient_is_undergoing_",
+    # Current medications — patient would mention medications they take
+    "patient_is_taking_",
+    # Allergies — patient would mention known allergies
+    "patient_has_allergy_to_",
+    # Exposures — e.g., tobacco, drug exposure
+    "patient_is_exposed_to_",
+    # Ability to undergo procedures — default to capable
+    "patient_can_undergo_",
+    # Future procedures
+    "patient_will_undergo_",
+    # Reproductive status (if not already set)
+    "patient_is_pregnant_",
+    "patient_is_breastfeeding_",
+    "patient_is_lactating_",
+    "patient_has_childbearing_",
+    # Positive-check patterns
+    "patients_",
+]
+
+# Prefixes that should NOT be defaulted (need actual measurements)
+_NON_INFERABLE_PATTERNS = [
+    "_value_recorded_",     # Lab values / measurements
+    "_in_years",            # Age (already handled)
+    "_in_months",
+    "_in_days",
+]
+
+
+def infer_negative_defaults(
+    patient_attrs: Dict[str, Any],
+    trial_nct_ids: List[str],
+    db_path: str = "trial_data.sqlite",
+) -> Dict[str, Any]:
+    """Infer negative (absent) defaults for criteria not already in patient_attrs.
+
+    For criteria categories where absence is a reasonable default (diagnoses,
+    findings, treatments, allergies, etc.), set to False if the patient hasn't
+    mentioned them.  Lab values and numeric measurements are left as unknown.
+
+    For "can_undergo" criteria, defaults to True (patient is capable) since
+    these are inclusion requirements and we assume capability unless stated.
+
+    Args:
+        patient_attrs: Existing patient attributes dict.
+        trial_nct_ids: NCT IDs of matched trials to check criteria for.
+        db_path: Path to the SQLite database.
+
+    Returns:
+        Updated patient_attrs with inferred defaults added.
+    """
+    if not trial_nct_ids:
+        return patient_attrs
+
+    conn = sqlite3.connect(db_path)
+    cur = conn.cursor()
+
+    placeholders = ",".join("?" * len(trial_nct_ids))
+    cur.execute(f"""
+        SELECT DISTINCT criterion_type
+        FROM criteria
+        WHERE nct_id IN ({placeholders})
+    """, trial_nct_ids)
+
+    needed_criteria = [row[0] for row in cur.fetchall()]
+    conn.close()
+
+    for ct in needed_criteria:
+        # Skip if we already have a value
+        if ct in patient_attrs:
+            continue
+
+        # Skip non-inferable (lab values, numeric measurements)
+        if any(pat in ct for pat in _NON_INFERABLE_PATTERNS):
+            continue
+
+        # Check if this criterion is in an inferable category
+        is_inferable = any(ct.startswith(prefix) for prefix in _INFERABLE_PREFIXES)
+        if not is_inferable:
+            continue
+
+        # Determine the default value based on criterion semantics
+        if ct.startswith("patient_can_undergo_"):
+            # "can_undergo" → assume patient is capable (True)
+            patient_attrs[ct] = True
+        elif "_is_normal_" in ct:
+            # "is_normal" → assume healthy/normal function (True)
+            patient_attrs[ct] = True
+        elif "_is_abnormal_" in ct:
+            # "is_abnormal" → assume NOT abnormal for healthy patient (False)
+            patient_attrs[ct] = False
+        elif ct.startswith("patients_") and "_is_positive_" in ct:
+            # "patients_X_is_positive" — context-dependent:
+            # Organ function checks → assume positive/normal (True)
+            # Disease/pathogen markers → assume negative (False)
+            if any(kw in ct for kw in (
+                "function", "activity", "performance", "health",
+                "competence", "swallow", "locomotion", "deglutition",
+                "balance", "hydration", "hemostatic",
+            )):
+                patient_attrs[ct] = True
+            else:
+                patient_attrs[ct] = False
+        else:
+            # Default: patient doesn't have this condition/finding/treatment
+            patient_attrs[ct] = False
+
+    return patient_attrs
 
 
 def _merge_dynamic_answers(
@@ -1314,6 +1470,12 @@ def chat():
 
             # Build structured patient attributes for SMT evaluation
             patient_attrs = build_patient_attributes(search_data)
+
+            # Infer negative defaults for criteria the patient hasn't mentioned.
+            # This resolves "Unknown" status for conditions/treatments that the
+            # patient would know about and would have mentioned if they had them.
+            trial_nct_ids = [t.get('nct_id', '') for t in trials[:10]]
+            patient_attrs = infer_negative_defaults(patient_attrs, trial_nct_ids)
 
             # Build rich condition text for RAG scoring
             rag_parts = [primary_condition, patient_data.get('symptoms', '')]
