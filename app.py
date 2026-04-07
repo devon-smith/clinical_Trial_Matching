@@ -851,26 +851,114 @@ class TrialMatcher:
             traceback.print_exc()
             print("--- End of error ---\n")
             
-            # Try a fallback query if the main one fails
-            try:
-                print("Attempting fallback query...")
-                cursor = self._execute_query("""
-                    SELECT * FROM trials
-                    WHERE brief_summary IS NOT NULL
-                    AND (status IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
-                         'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING',
-                         'AVAILABLE')
-                         OR status IS NULL)
-                    ORDER BY RANDOM()
-                    LIMIT 3
-                """)
-                trials = [dict(row) for row in cursor.fetchall()]
-                print(f"Fallback query returned {len(trials)} trials")
-                return trials
-            except Exception as fallback_error:
-                print(f"Fallback query also failed: {fallback_error}")
-                raise Exception("Unable to retrieve clinical trials. The database may be unavailable or the query could not be processed.") from e
+            # Return empty list — the caller will run a coverage check to
+            # explain why no trials matched, rather than silently showing
+            # irrelevant random trials.
+            return []
     
+    def check_condition_coverage(self, condition: str, search_terms: List[str]) -> Dict[str, Any]:
+        """Check how many trials exist for a condition, including inactive ones.
+
+        Returns a dict with:
+          total_all_statuses  – trials matching condition across ALL statuses
+          total_active        – trials matching condition with active/recruiting status
+          sample_reasons      – list of likely filter-out reasons (location, criteria, etc.)
+          inactive_statuses   – dict of status → count for non-active trials
+        """
+        if not condition:
+            return {"total_all_statuses": 0, "total_active": 0,
+                    "sample_reasons": [], "inactive_statuses": {}}
+
+        like_terms = [f"%{t.lower()}%" for t in search_terms[:5] if t]
+        if not like_terms:
+            like_terms = [f"%{condition.lower()}%"]
+
+        # Build OR clause for all search terms
+        or_clauses = " OR ".join(
+            "LOWER(COALESCE(t.diseases,'')) LIKE ?"
+            for _ in like_terms
+        )
+        or_clauses_broad = " OR ".join(
+            "(LOWER(t.title) LIKE ? OR LOWER(t.brief_summary) LIKE ?)"
+            for _ in like_terms
+        )
+
+        # Count ALL trials matching the condition (any status)
+        all_query = f"""
+            SELECT COUNT(DISTINCT t.nct_id) as cnt
+            FROM trials t
+            WHERE ({or_clauses} OR {or_clauses_broad})
+        """
+        all_params = list(like_terms) + [p for lt in like_terms for p in (lt, lt)]
+        try:
+            cursor = self._execute_query(all_query, all_params)
+            total_all = cursor.fetchone()["cnt"]
+        except Exception:
+            total_all = 0
+
+        # Count ACTIVE trials matching the condition
+        active_query = f"""
+            SELECT COUNT(DISTINCT t.nct_id) as cnt
+            FROM trials t
+            WHERE (t.status IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                   'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING', 'AVAILABLE')
+                   OR t.status IS NULL)
+            AND ({or_clauses} OR {or_clauses_broad})
+        """
+        try:
+            cursor = self._execute_query(active_query, all_params)
+            total_active = cursor.fetchone()["cnt"]
+        except Exception:
+            total_active = 0
+
+        # Get status breakdown for inactive trials
+        inactive_statuses: Dict[str, int] = {}
+        if total_all > total_active:
+            status_query = f"""
+                SELECT t.status, COUNT(DISTINCT t.nct_id) as cnt
+                FROM trials t
+                WHERE t.status NOT IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                       'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING', 'AVAILABLE')
+                AND t.status IS NOT NULL
+                AND ({or_clauses} OR {or_clauses_broad})
+                GROUP BY t.status
+            """
+            try:
+                cursor = self._execute_query(status_query, all_params)
+                for row in cursor.fetchall():
+                    inactive_statuses[row["status"]] = row["cnt"]
+            except Exception:
+                pass
+
+        # If active trials exist but none made it through scoring, try to figure out why
+        sample_reasons: List[str] = []
+        if total_active > 0:
+            # Check if location is a common filter-out factor
+            loc_query = f"""
+                SELECT COUNT(DISTINCT t.nct_id) as cnt
+                FROM trials t
+                JOIN trial_locations tl ON t.nct_id = tl.nct_id
+                WHERE (t.status IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                       'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING', 'AVAILABLE')
+                       OR t.status IS NULL)
+                AND ({or_clauses} OR {or_clauses_broad})
+                AND tl.latitude IS NOT NULL
+            """
+            try:
+                cursor = self._execute_query(loc_query, all_params)
+                with_location = cursor.fetchone()["cnt"]
+                if with_location == 0 and total_active > 0:
+                    sample_reasons.append("no location data available for distance matching")
+            except Exception:
+                pass
+
+        return {
+            "total_all_statuses": total_all,
+            "total_active": total_active,
+            "sample_reasons": sample_reasons,
+            "inactive_statuses": inactive_statuses,
+        }
+
     def get_trial_details(self, nct_id: str) -> Optional[Dict]:
         """Get detailed information about a specific trial."""
         try:
@@ -1574,6 +1662,36 @@ def chat():
 
                 trial_source = scoring.get('source', trial.get('source', 'sigir'))
 
+                # Determine match type — specific (disease column) vs broad (title/summary)
+                is_disease_match = trial.get('_disease_match', False)
+                trial_diseases = (trial.get('diseases') or '').lower()
+                condition_lower = (primary_condition or '').lower()
+                if is_disease_match and condition_lower and condition_lower in trial_diseases:
+                    match_type = 'specific'
+                    match_label = primary_condition
+                elif is_disease_match:
+                    # Matched on disease column but via an expanded/parent term
+                    # Find which search term matched
+                    matched_term = None
+                    for st in search_data.get('search_queries', []):
+                        if st and st.lower() in trial_diseases:
+                            matched_term = st
+                            break
+                    match_type = 'specific'
+                    match_label = matched_term or primary_condition
+                else:
+                    # Broad match — only title/summary matched
+                    match_type = 'broad'
+                    # Find which broader category term matched
+                    matched_term = None
+                    for st in search_data.get('search_queries', []):
+                        if st and (st.lower() in trial_diseases
+                                   or st.lower() in (trial.get('title') or '').lower()
+                                   or st.lower() in (trial.get('brief_summary') or '').lower()):
+                            matched_term = st
+                            break
+                    match_label = matched_term or 'keyword'
+
                 formatted_trials.append({
                     'nct_id': nct_id,
                     'title': trial.get('brief_title') or trial.get('title', 'Clinical Trial'),
@@ -1599,6 +1717,9 @@ def chat():
                     'preference_breakdown': scoring.get('preference_breakdown', {}),
                     # Eligibility visualization data
                     'eligibility_breakdown': viz_data,
+                    # Match transparency
+                    'match_type': match_type,
+                    'match_label': match_label,
                 })
 
             # Sort by match score (highest first), API trials win ties
@@ -1609,6 +1730,81 @@ def chat():
                 ),
                 reverse=True,
             )
+
+            # --- No-results analysis & broad-match detection ---
+            no_results_info = None
+            broad_match_banner = None
+
+            if not formatted_trials:
+                # Run coverage check to explain why
+                coverage = matcher.check_condition_coverage(
+                    primary_condition or '',
+                    search_data.get('search_queries', []),
+                )
+                total_all = coverage["total_all_statuses"]
+                total_active = coverage["total_active"]
+
+                if total_all == 0:
+                    # Condition not in our database at all
+                    cond_encoded = (primary_condition or '').replace(' ', '+')
+                    no_results_info = {
+                        "reason": "no_coverage",
+                        "condition": primary_condition,
+                        "ctgov_link": f"https://clinicaltrials.gov/search?cond={cond_encoded}&status=RECRUITING",
+                    }
+                elif total_active == 0:
+                    # Trials exist but all are inactive
+                    no_results_info = {
+                        "reason": "all_inactive",
+                        "condition": primary_condition,
+                        "total_in_db": total_all,
+                        "inactive_statuses": coverage["inactive_statuses"],
+                        "ctgov_link": f"https://clinicaltrials.gov/search?cond={(primary_condition or '').replace(' ', '+')}&status=RECRUITING",
+                    }
+                else:
+                    # Active trials exist but none passed scoring/filtering
+                    # Diagnose most common reason
+                    reasons = list(coverage["sample_reasons"])
+                    pre_filter_count = len(trials)  # trials before concept filter
+                    if pre_filter_count == 0:
+                        reasons.append("no trials matched your condition search terms")
+                    elif pre_filter_count > 0 and len(formatted_trials) == 0:
+                        # Trials retrieved but dropped during concept filtering or scoring
+                        if concept_set and len(trials) < pre_filter_count:
+                            reasons.append("trials were filtered for closer disease relevance")
+                    # Fallback reason
+                    if not reasons:
+                        reasons.append("eligibility criteria did not match your profile")
+
+                    no_results_info = {
+                        "reason": "filtered_out",
+                        "condition": primary_condition,
+                        "total_active": total_active,
+                        "primary_reason": reasons[0],
+                        "ctgov_link": f"https://clinicaltrials.gov/search?cond={(primary_condition or '').replace(' ', '+')}&status=RECRUITING",
+                    }
+
+            elif formatted_trials:
+                # Check if we're showing broad matches instead of specific ones
+                specific_count = sum(
+                    1 for t in formatted_trials if t.get('match_type') == 'specific'
+                )
+                broad_count = sum(
+                    1 for t in formatted_trials if t.get('match_type') == 'broad'
+                )
+                if specific_count == 0 and broad_count > 0:
+                    # All results are broad matches — warn the user
+                    # Find the broad category being matched
+                    broad_labels = set(
+                        t.get('match_label', '') for t in formatted_trials
+                        if t.get('match_type') == 'broad'
+                    )
+                    broad_term = ', '.join(broad_labels) if broad_labels else 'related terms'
+                    broad_match_banner = {
+                        "specific_condition": primary_condition,
+                        "broad_term": broad_term,
+                        "trial_count": len(formatted_trials),
+                    }
 
             # Generate concept expansion audit for the search terms
             concept_audit = []
@@ -1640,7 +1836,7 @@ def chat():
             except Exception:
                 pass
 
-            return jsonify({
+            result_payload = {
                 'status': 'complete',
                 'response': response if response else '',
                 'trials': formatted_trials,
@@ -1656,7 +1852,13 @@ def chat():
                 },
                 'data_last_updated': data_last_updated,
                 'condition_followups': get_followup_questions(primary_condition) if primary_condition else [],
-            })
+            }
+            if no_results_info:
+                result_payload['no_results_info'] = no_results_info
+            if broad_match_banner:
+                result_payload['broad_match_banner'] = broad_match_banner
+
+            return jsonify(result_payload)
 
         # For non-search responses, include condition follow-ups when detected
         condition_fups = []

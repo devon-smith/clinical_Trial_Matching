@@ -899,6 +899,60 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    // Build a transparent no-results message based on server diagnostics
+    function buildNoResultsMessage(info) {
+        if (!info) {
+            // Fallback when server doesn't provide diagnostics
+            return `We couldn't find trials matching your criteria. A few things to try:\n\n` +
+                `\u2022 **Use a broader condition term** \u2014 e.g., "cancer" instead of a specific subtype\n` +
+                `\u2022 **Expand your travel distance** \u2014 there may be trials further away\n` +
+                `\u2022 **Remove treatment type preference** \u2014 if you specified drug-only or avoided surgery, relaxing that may help\n\n` +
+                `You can start a new search by telling me about a different condition.`;
+        }
+
+        const condition = info.condition || 'your condition';
+
+        if (info.reason === 'no_coverage') {
+            return `Our database doesn't currently include **${condition}** trials. ` +
+                `We're expanding our coverage \u2014 in the meantime, you can search ClinicalTrials.gov directly:\n\n` +
+                `[\ud83d\udd17 Search ClinicalTrials.gov for ${condition}](${info.ctgov_link})\n\n` +
+                `You can also try a broader term (e.g., the general disease category) to see if related trials are available.`;
+        }
+
+        if (info.reason === 'all_inactive') {
+            const statusList = info.inactive_statuses
+                ? Object.entries(info.inactive_statuses)
+                    .map(([s, n]) => `${n} ${s.toLowerCase().replace(/_/g, ' ')}`)
+                    .join(', ')
+                : '';
+            return `I found **${info.total_in_db} ${condition}** trial${info.total_in_db > 1 ? 's' : ''} in our database, ` +
+                `but none are currently recruiting` +
+                (statusList ? ` (${statusList})` : '') + `.\n\n` +
+                `Clinical trials open and close frequently. Check ClinicalTrials.gov for the latest:\n\n` +
+                `[\ud83d\udd17 Search ClinicalTrials.gov for ${condition}](${info.ctgov_link})\n\n` +
+                `You can also start a new search with a different condition.`;
+        }
+
+        if (info.reason === 'filtered_out') {
+            return `I found **${info.total_active} ${condition}** trial${info.total_active > 1 ? 's' : ''}, ` +
+                `but none matched your specific criteria. ` +
+                `Most common reason: **${info.primary_reason}**.\n\n` +
+                `A few things to try:\n` +
+                `\u2022 **Expand your travel range** \u2014 there may be trials further away\n` +
+                `\u2022 **Adjust your preferences** \u2014 relaxing treatment type or schedule constraints may help\n` +
+                `\u2022 **Use a broader condition term** \u2014 e.g., "cancer" instead of a specific subtype\n\n` +
+                `Or check ClinicalTrials.gov for the full list:\n\n` +
+                `[\ud83d\udd17 Search ClinicalTrials.gov for ${condition}](${info.ctgov_link})`;
+        }
+
+        // Unknown reason — generic fallback
+        return `We couldn't find trials matching your criteria for **${condition}**.\n\n` +
+            (info.ctgov_link
+                ? `You can search ClinicalTrials.gov directly:\n\n[\ud83d\udd17 Search ClinicalTrials.gov](${info.ctgov_link})\n\n`
+                : '') +
+            `You can also start a new search by telling me about a different condition.`;
+    }
+
     // Handle API response data
     function handleResponse(data) {
         // Update patient profile from server data
@@ -911,13 +965,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.concept_audit && data.concept_audit.length > 0) {
                     renderConceptAuditPanel(data.concept_audit);
                 }
-                showTrialMatches(data.trials, data.data_last_updated);
+                showTrialMatches(data.trials, data.data_last_updated, data.broad_match_banner);
                 conversationMessages.push({ role: 'assistant', content: '[trial results]', trialCount: data.trials.length });
             } else {
                 if (data.concept_audit && data.concept_audit.length > 0) {
                     renderConceptAuditPanel(data.concept_audit);
                 }
-                const noResultsHtml = `We couldn't find trials matching your criteria. A few things to try:\n\n• **Use a broader condition term** — e.g., "cancer" instead of a specific subtype\n• **Expand your travel distance** — there may be trials further away\n• **Remove treatment type preference** — if you specified drug-only or avoided surgery, relaxing that may help\n\nYou can start a new search by telling me about a different condition.`;
+                const noResultsHtml = buildNoResultsMessage(data.no_results_info);
                 addMessage('assistant', noResultsHtml);
                 conversationMessages.push({ role: 'assistant', content: noResultsHtml });
             }
@@ -1268,6 +1322,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="flex flex-wrap items-center gap-2 mt-2">
                                 ${getStatusChip(eligibility.hardStatus)}
                                 ${trial.status ? `<span class="px-2.5 py-1 bg-slate-100 ${getStatusColor(trial.status)} rounded-full text-xs font-medium">${trial.status}</span>` : ''}
+                                ${trial.match_type ? `<span class="px-2 py-0.5 rounded-full text-[10px] font-medium ${trial.match_type === 'specific' ? 'bg-blue-50 text-blue-600 border border-blue-200' : 'bg-orange-50 text-orange-600 border border-orange-200'}" title="How this trial was matched to your search">Matched on: ${trial.match_label || trial.match_type}${trial.match_type === 'broad' ? ' (broad match)' : ''}</span>` : ''}
                             </div>
                         </div>
                         <div class="flex-shrink-0 text-center">
@@ -1306,7 +1361,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Show trial matches grouped by eligibility status
-    function showTrialMatches(trials, dataLastUpdated) {
+    function showTrialMatches(trials, dataLastUpdated, broadMatchBanner) {
         const container = document.createElement('div');
         container.className = 'flex justify-start w-full';
 
@@ -1365,6 +1420,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 </select>
             </div>` : '';
 
+        // Broad match banner — shown when no specific-condition trials exist
+        let broadBannerHtml = '';
+        if (broadMatchBanner) {
+            broadBannerHtml = `
+                <div class="flex items-start gap-3 px-4 py-3 mb-4 rounded-lg border border-amber-200 bg-amber-50 text-sm">
+                    <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div>
+                        <p class="font-medium text-amber-800">No trials specifically for ${broadMatchBanner.specific_condition} found.</p>
+                        <p class="text-amber-700 mt-0.5">Showing broader <strong>${broadMatchBanner.broad_term}</strong> trials \u2014 these may not target your specific condition. Check the "Matched on" tag on each trial for details.</p>
+                    </div>
+                </div>`;
+        }
+
         container.innerHTML = `
             <div class="w-full max-w-[98%]">
                 <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm mb-5">
@@ -1373,6 +1443,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ${dataLastUpdated ? `<p class="text-[10px] text-slate-400 mt-1">Trial data last updated: ${new Date(dataLastUpdated).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>` : ''}
                 </div>
 
+                ${broadBannerHtml}
                 ${sortControl}
 
                 <div id="trials-grid">
