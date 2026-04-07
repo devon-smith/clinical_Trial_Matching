@@ -155,16 +155,38 @@ def get_trial_distance(patient_location: str, patient_zip: str, trial_data: dict
 
     if nct_id:
         try:
-            db_path = os.path.join(os.path.dirname(__file__), 'trial_data.sqlite')
+            db_path = os.path.join(
+                os.path.dirname(__file__), 'trial_data.sqlite'
+            )
             conn = sqlite3.connect(db_path)
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
+
+            # Check trial_locations (SIGIR + legacy ctgov)
             cursor.execute(
                 "SELECT latitude, longitude FROM trial_locations "
-                "WHERE nct_id = ? AND latitude IS NOT NULL AND longitude IS NOT NULL",
+                "WHERE nct_id = ? "
+                "AND latitude IS NOT NULL "
+                "AND longitude IS NOT NULL",
                 (nct_id,),
             )
             rows = cursor.fetchall()
+
+            # Also check ct_gov_locations
+            if not rows:
+                try:
+                    cursor.execute(
+                        "SELECT latitude, longitude "
+                        "FROM ct_gov_locations "
+                        "WHERE nct_id = ? "
+                        "AND latitude IS NOT NULL "
+                        "AND longitude IS NOT NULL",
+                        (nct_id,),
+                    )
+                    rows = cursor.fetchall()
+                except sqlite3.OperationalError:
+                    pass  # table may not exist yet
+
             conn.close()
 
             if rows:
@@ -839,9 +861,82 @@ class TrialMatcher:
                             d['explanation'] = None
                         all_trials.append(d)
 
+            # --- Phase 3: Search ct_gov_trials table (ClinicalTrials.gov data) ---
+            ct_gov_exists = False
+            try:
+                self._execute_query(
+                    "SELECT 1 FROM ct_gov_trials LIMIT 1"
+                )
+                ct_gov_exists = True
+            except Exception:
+                pass
+
+            if ct_gov_exists:
+                for term in search_terms[:5]:
+                    like = f"%{term.lower()}%"
+
+                    # Strict disease-column match on ct_gov_trials
+                    cg_strict_query = """
+                    SELECT DISTINCT t.*
+                    FROM ct_gov_trials t
+                    WHERE (t.status IN (
+                            'RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                            'ENROLLING_BY_INVITATION',
+                            'NOT_YET_RECRUITING', 'AVAILABLE')
+                           OR t.status IS NULL)
+                    AND LOWER(COALESCE(t.diseases,'')) LIKE ?
+                    ORDER BY t.phase DESC, t.enrollment DESC
+                    LIMIT 10
+                    """
+                    try:
+                        cursor = self._execute_query(
+                            cg_strict_query, [like]
+                        )
+                        for row in cursor.fetchall():
+                            d = dict(row)
+                            if d['nct_id'] in seen:
+                                continue
+                            seen.add(d['nct_id'])
+                            d['_disease_match'] = True
+                            d['_source'] = 'ct_gov'
+                            d['explanation'] = None
+                            all_trials.append(d)
+                    except Exception as cg_err:
+                        print(f"ct_gov strict query error: {cg_err}")
+
+                    # Broad fallback on ct_gov_trials
+                    cg_broad_query = """
+                    SELECT DISTINCT t.*
+                    FROM ct_gov_trials t
+                    WHERE (t.status IN (
+                            'RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                            'ENROLLING_BY_INVITATION',
+                            'NOT_YET_RECRUITING', 'AVAILABLE')
+                           OR t.status IS NULL)
+                    AND (LOWER(t.title) LIKE ?
+                         OR LOWER(t.brief_summary) LIKE ?)
+                    ORDER BY t.phase DESC, t.enrollment DESC
+                    LIMIT 5
+                    """
+                    try:
+                        cursor = self._execute_query(
+                            cg_broad_query, [like, like]
+                        )
+                        for row in cursor.fetchall():
+                            d = dict(row)
+                            if d['nct_id'] in seen:
+                                continue
+                            seen.add(d['nct_id'])
+                            d['_disease_match'] = False
+                            d['_source'] = 'ct_gov'
+                            d['explanation'] = None
+                            all_trials.append(d)
+                    except Exception as cg_err:
+                        print(f"ct_gov broad query error: {cg_err}")
+
             print(f"Returning {len(all_trials)} unique trials")
             return all_trials
-            
+
         except Exception as e:
             print(f"\n--- ERROR in find_matching_trials ---")
             print(f"Error type: {type(e).__name__}")
@@ -930,10 +1025,36 @@ class TrialMatcher:
             except Exception:
                 pass
 
+        # Also check ct_gov_trials table
+        try:
+            cg_all_query = f"""
+                SELECT COUNT(DISTINCT t.nct_id) as cnt
+                FROM ct_gov_trials t
+                WHERE ({or_clauses} OR {or_clauses_broad})
+            """
+            cursor = self._execute_query(cg_all_query, all_params)
+            total_all += cursor.fetchone()["cnt"]
+
+            cg_active_query = f"""
+                SELECT COUNT(DISTINCT t.nct_id) as cnt
+                FROM ct_gov_trials t
+                WHERE (t.status IN (
+                        'RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                        'ENROLLING_BY_INVITATION',
+                        'NOT_YET_RECRUITING', 'AVAILABLE')
+                       OR t.status IS NULL)
+                AND ({or_clauses} OR {or_clauses_broad})
+            """
+            cursor = self._execute_query(cg_active_query, all_params)
+            total_active += cursor.fetchone()["cnt"]
+        except Exception:
+            pass  # ct_gov_trials table may not exist yet
+
         # If active trials exist but none made it through scoring, try to figure out why
         sample_reasons: List[str] = []
         if total_active > 0:
             # Check if location is a common filter-out factor
+            loc_count = 0
             loc_query = f"""
                 SELECT COUNT(DISTINCT t.nct_id) as cnt
                 FROM trials t
@@ -946,11 +1067,33 @@ class TrialMatcher:
             """
             try:
                 cursor = self._execute_query(loc_query, all_params)
-                with_location = cursor.fetchone()["cnt"]
-                if with_location == 0 and total_active > 0:
-                    sample_reasons.append("no location data available for distance matching")
+                loc_count += cursor.fetchone()["cnt"]
             except Exception:
                 pass
+
+            # Also check ct_gov_locations
+            cg_loc_query = f"""
+                SELECT COUNT(DISTINCT t.nct_id) as cnt
+                FROM ct_gov_trials t
+                JOIN ct_gov_locations cl ON t.nct_id = cl.nct_id
+                WHERE (t.status IN (
+                        'RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                        'ENROLLING_BY_INVITATION',
+                        'NOT_YET_RECRUITING', 'AVAILABLE')
+                       OR t.status IS NULL)
+                AND ({or_clauses} OR {or_clauses_broad})
+                AND cl.latitude IS NOT NULL
+            """
+            try:
+                cursor = self._execute_query(cg_loc_query, all_params)
+                loc_count += cursor.fetchone()["cnt"]
+            except Exception:
+                pass
+
+            if loc_count == 0 and total_active > 0:
+                sample_reasons.append(
+                    "no location data available for distance matching"
+                )
 
         return {
             "total_all_statuses": total_all,
@@ -1660,7 +1803,12 @@ def chat():
                 except Exception as viz_err:
                     print(f"Eligibility viz error for {nct_id}: {viz_err}")
 
-                trial_source = scoring.get('source', trial.get('source', 'sigir'))
+                # Detect source: ct_gov table, ctgov_api (legacy), or sigir
+                is_ct_gov = trial.get('_source') == 'ct_gov'
+                trial_source = (
+                    'ctgov_api' if is_ct_gov
+                    else scoring.get('source', trial.get('source', 'sigir'))
+                )
 
                 # Determine match type — specific (disease column) vs broad (title/summary)
                 is_disease_match = trial.get('_disease_match', False)
@@ -1704,6 +1852,7 @@ def chat():
                     'distance': distance,
                     'location': trial.get('location', ''),
                     'source': 'clinicaltrials.gov' if trial_source == 'ctgov_api' else 'sigir',
+                    'ct_gov_url': f"https://clinicaltrials.gov/study/{nct_id}",
                     # Real scoring data
                     'match_score': scoring['match_score'],
                     'hard_met': scoring['hard_met'],
@@ -1823,15 +1972,36 @@ def chat():
                     pass
 
             # Get last-updated timestamp for data freshness display
+            # Check both the SIGIR trials table and ct_gov_trials
             data_last_updated = None
             try:
-                db_path = os.path.join(os.path.dirname(__file__), 'trial_data.sqlite')
+                db_path = os.path.join(
+                    os.path.dirname(__file__), 'trial_data.sqlite'
+                )
                 _conn = sqlite3.connect(db_path)
-                _row = _conn.execute(
-                    "SELECT MAX(last_updated) FROM trials WHERE last_updated IS NOT NULL"
-                ).fetchone()
-                if _row and _row[0]:
-                    data_last_updated = _row[0]
+                timestamps = []
+                # SIGIR / legacy trials
+                try:
+                    _row = _conn.execute(
+                        "SELECT MAX(last_updated) FROM trials "
+                        "WHERE last_updated IS NOT NULL"
+                    ).fetchone()
+                    if _row and _row[0]:
+                        timestamps.append(_row[0])
+                except Exception:
+                    pass
+                # ct_gov_trials
+                try:
+                    _row = _conn.execute(
+                        "SELECT MAX(last_updated) FROM ct_gov_trials "
+                        "WHERE last_updated IS NOT NULL"
+                    ).fetchone()
+                    if _row and _row[0]:
+                        timestamps.append(_row[0])
+                except Exception:
+                    pass
+                if timestamps:
+                    data_last_updated = max(timestamps)
                 _conn.close()
             except Exception:
                 pass

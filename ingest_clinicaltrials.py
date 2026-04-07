@@ -1,6 +1,6 @@
 """
 Ingest actively recruiting trials from ClinicalTrials.gov API v2
-into the SQLite database.
+into dedicated ct_gov_trials / ct_gov_locations tables.
 
 Usage:
     python ingest_clinicaltrials.py                         # Top-20 conditions
@@ -17,9 +17,9 @@ import argparse
 import json
 import logging
 import sqlite3
-import sys
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
@@ -138,31 +138,42 @@ def _api_get(params: Dict[str, Any]) -> Dict[str, Any]:
             resp = requests.get(API_BASE, params=params, timeout=30)
             if resp.status_code == 429:
                 wait = RETRY_BACKOFF ** attempt
-                log.warning("Rate-limited (429). Waiting %.1fs (attempt %d/%d)...",
-                            wait, attempt, MAX_RETRIES)
+                log.warning(
+                    "Rate-limited (429). Waiting %.1fs "
+                    "(attempt %d/%d)...",
+                    wait, attempt, MAX_RETRIES,
+                )
                 time.sleep(wait)
                 continue
             resp.raise_for_status()
             return resp.json()
         except requests.ConnectionError as exc:
             wait = RETRY_BACKOFF ** attempt
-            log.warning("Connection error: %s. Retrying in %.1fs (%d/%d)...",
-                        exc, wait, attempt, MAX_RETRIES)
+            log.warning(
+                "Connection error: %s. Retrying in %.1fs (%d/%d)...",
+                exc, wait, attempt, MAX_RETRIES,
+            )
             time.sleep(wait)
         except requests.Timeout:
             wait = RETRY_BACKOFF ** attempt
-            log.warning("Timeout. Retrying in %.1fs (%d/%d)...",
-                        wait, attempt, MAX_RETRIES)
+            log.warning(
+                "Timeout. Retrying in %.1fs (%d/%d)...",
+                wait, attempt, MAX_RETRIES,
+            )
             time.sleep(wait)
-        except requests.HTTPError as exc:
+        except requests.HTTPError:
             if resp.status_code >= 500:
                 wait = RETRY_BACKOFF ** attempt
-                log.warning("Server error %d. Retrying in %.1fs (%d/%d)...",
-                            resp.status_code, wait, attempt, MAX_RETRIES)
+                log.warning(
+                    "Server error %d. Retrying in %.1fs (%d/%d)...",
+                    resp.status_code, wait, attempt, MAX_RETRIES,
+                )
                 time.sleep(wait)
             else:
                 raise
-    raise RuntimeError(f"API request failed after {MAX_RETRIES} retries")
+    raise RuntimeError(
+        f"API request failed after {MAX_RETRIES} retries"
+    )
 
 
 def _parse_study(study: Dict) -> Optional[TrialRecord]:
@@ -173,31 +184,56 @@ def _parse_study(study: Dict) -> Optional[TrialRecord]:
     if not nct_id:
         return None
 
-    brief_title = _safe_get(proto, "identificationModule", "briefTitle", default="")
-    official_title = _safe_get(proto, "identificationModule", "officialTitle", default="")
+    brief_title = _safe_get(
+        proto, "identificationModule", "briefTitle", default=""
+    )
+    official_title = _safe_get(
+        proto, "identificationModule", "officialTitle", default=""
+    )
     title = brief_title or official_title
 
-    status = _safe_get(proto, "statusModule", "overallStatus", default="")
-
-    # Phase — "PHASE2" -> "Phase 2"
-    phases_raw = _safe_get(proto, "designModule", "phases", default=[])
-    phase = ", ".join(phases_raw) if phases_raw else ""
-    phase = phase.replace("PHASE", "Phase ").replace("  ", " ").strip()
-
-    brief_summary = _safe_get(proto, "descriptionModule", "briefSummary", default="")
-    detailed_desc = _safe_get(proto, "descriptionModule", "detailedDescription", default="")
-
-    conditions = tuple(_safe_get(proto, "conditionsModule", "conditions", default=[]))
-
-    interventions_raw = _safe_get(proto, "armsInterventionsModule", "interventions", default=[])
-    interventions = tuple(
-        f"{i.get('type', '')}: {i.get('name', '')}" for i in interventions_raw
+    status = _safe_get(
+        proto, "statusModule", "overallStatus", default=""
     )
 
-    enrollment = _safe_get(proto, "designModule", "enrollmentInfo", "count")
+    # Phase — "PHASE2" -> "Phase 2"
+    phases_raw = _safe_get(
+        proto, "designModule", "phases", default=[]
+    )
+    phase = ", ".join(phases_raw) if phases_raw else ""
+    phase = (
+        phase.replace("PHASE", "Phase ").replace("  ", " ").strip()
+    )
 
-    start_date = _safe_get(proto, "statusModule", "startDateStruct", "date")
-    completion_date = _safe_get(proto, "statusModule", "completionDateStruct", "date")
+    brief_summary = _safe_get(
+        proto, "descriptionModule", "briefSummary", default=""
+    )
+    detailed_desc = _safe_get(
+        proto, "descriptionModule", "detailedDescription", default=""
+    )
+
+    conditions = tuple(
+        _safe_get(proto, "conditionsModule", "conditions", default=[])
+    )
+
+    interventions_raw = _safe_get(
+        proto, "armsInterventionsModule", "interventions", default=[]
+    )
+    interventions = tuple(
+        f"{i.get('type', '')}: {i.get('name', '')}"
+        for i in interventions_raw
+    )
+
+    enrollment = _safe_get(
+        proto, "designModule", "enrollmentInfo", "count"
+    )
+
+    start_date = _safe_get(
+        proto, "statusModule", "startDateStruct", "date"
+    )
+    completion_date = _safe_get(
+        proto, "statusModule", "completionDateStruct", "date"
+    )
 
     elig_mod = proto.get("eligibilityModule", {})
     eligibility_text = elig_mod.get("eligibilityCriteria", "")
@@ -223,9 +259,15 @@ def _parse_study(study: Dict) -> Optional[TrialRecord]:
             zip_code=loc.get("zip", ""),
             latitude=geo.get("lat"),
             longitude=geo.get("lon"),
-            contact_name=loc_contacts[0].get("name") if loc_contacts else None,
-            contact_email=loc_contacts[0].get("email") if loc_contacts else None,
-            contact_phone=loc_contacts[0].get("phone") if loc_contacts else None,
+            contact_name=(
+                loc_contacts[0].get("name") if loc_contacts else None
+            ),
+            contact_email=(
+                loc_contacts[0].get("email") if loc_contacts else None
+            ),
+            contact_phone=(
+                loc_contacts[0].get("phone") if loc_contacts else None
+            ),
         ))
 
     return TrialRecord(
@@ -262,7 +304,7 @@ def fetch_studies(
     """Fetch studies from ClinicalTrials.gov API v2 with pagination.
 
     Args:
-        condition: Condition search term. None for all recruiting trials.
+        condition: Condition search term. None for all recruiting.
         max_results: Cap on number of studies. None for unlimited.
         status_filter: overallStatus filter value.
     """
@@ -302,10 +344,14 @@ def fetch_studies(
             if record:
                 records.append(record)
 
-        cap_label = f"/{max_results}" if max_results else f"/{total_available}"
-        log.info("  Fetched %d%s trials%s",
-                 len(records), cap_label,
-                 f" for '{condition}'" if condition else "")
+        cap_label = (
+            f"/{max_results}" if max_results else f"/{total_available}"
+        )
+        log.info(
+            "  Fetched %d%s trials%s",
+            len(records), cap_label,
+            f" for '{condition}'" if condition else "",
+        )
 
         next_token = data.get("nextPageToken")
         if not next_token:
@@ -317,16 +363,42 @@ def fetch_studies(
 
 
 # ---------------------------------------------------------------------------
-# Database
+# Database — ct_gov_trials & ct_gov_locations
 # ---------------------------------------------------------------------------
 
 def _ensure_schema(conn: sqlite3.Connection) -> None:
-    """Create tables and columns needed for API-sourced trials."""
+    """Create ct_gov_trials and ct_gov_locations tables."""
     cursor = conn.cursor()
 
-    # trial_locations — one row per trial site
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS trial_locations (
+        CREATE TABLE IF NOT EXISTS ct_gov_trials (
+            nct_id TEXT PRIMARY KEY,
+            title TEXT,
+            official_title TEXT,
+            phase TEXT,
+            status TEXT,
+            enrollment INTEGER,
+            brief_summary TEXT,
+            detailed_description TEXT,
+            drugs TEXT,
+            diseases TEXT,
+            eligibility_text TEXT,
+            min_age TEXT,
+            max_age TEXT,
+            sex TEXT,
+            start_date TEXT,
+            completion_date TEXT,
+            contact_name TEXT,
+            contact_email TEXT,
+            contact_phone TEXT,
+            metadata_json TEXT,
+            last_updated TEXT,
+            created_at TEXT DEFAULT (datetime('now'))
+        )
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS ct_gov_locations (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             nct_id TEXT NOT NULL,
             facility_name TEXT,
@@ -336,117 +408,133 @@ def _ensure_schema(conn: sqlite3.Connection) -> None:
             zip TEXT,
             latitude REAL,
             longitude REAL,
-            FOREIGN KEY(nct_id) REFERENCES trials(nct_id)
+            contact_name TEXT,
+            contact_email TEXT,
+            contact_phone TEXT,
+            FOREIGN KEY(nct_id) REFERENCES ct_gov_trials(nct_id)
         )
     """)
-    cursor.execute(
-        "CREATE INDEX IF NOT EXISTS idx_trial_locations_nct ON trial_locations(nct_id)"
-    )
 
-    # Extra columns on the trials table for API-sourced data
-    existing_cols = {
-        row[1] for row in cursor.execute("PRAGMA table_info(trials)").fetchall()
-    }
-    new_cols = {
-        "detailed_description": "TEXT",
-        "eligibility_text": "TEXT",
-        "min_age": "TEXT",
-        "max_age": "TEXT",
-        "sex": "TEXT",
-        "start_date": "TEXT",
-        "completion_date": "TEXT",
-        "contact_name": "TEXT",
-        "contact_email": "TEXT",
-        "contact_phone": "TEXT",
-        "source": "TEXT",
-    }
-    for col, typedef in new_cols.items():
-        if col not in existing_cols:
-            cursor.execute(f"ALTER TABLE trials ADD COLUMN {col} {typedef}")
+    cursor.execute(
+        "CREATE INDEX IF NOT EXISTS idx_ct_gov_locations_nct "
+        "ON ct_gov_locations(nct_id)"
+    )
+    cursor.execute(
+        "CREATE INDEX IF NOT EXISTS idx_ct_gov_trials_status "
+        "ON ct_gov_trials(status)"
+    )
+    cursor.execute(
+        "CREATE INDEX IF NOT EXISTS idx_ct_gov_trials_diseases "
+        "ON ct_gov_trials(diseases)"
+    )
 
     conn.commit()
 
 
 def upsert_trial(conn: sqlite3.Connection, trial: TrialRecord) -> bool:
-    """Insert or update a trial row + its locations. Returns True if new."""
+    """Insert or update a trial in ct_gov_trials. Returns True if new."""
     cursor = conn.cursor()
 
-    cursor.execute("SELECT 1 FROM trials WHERE nct_id = ?", (trial.nct_id,))
+    cursor.execute(
+        "SELECT 1 FROM ct_gov_trials WHERE nct_id = ?", (trial.nct_id,)
+    )
     is_new = cursor.fetchone() is None
 
     drugs = ", ".join(trial.interventions) if trial.interventions else ""
     diseases = ", ".join(trial.conditions) if trial.conditions else ""
+    now = datetime.now(timezone.utc).isoformat()
 
     cursor.execute("""
-        INSERT INTO trials (
-            nct_id, title, phase, status, enrollment, brief_summary,
-            drugs, diseases, metadata_json, detailed_description,
-            eligibility_text, min_age, max_age, sex,
+        INSERT INTO ct_gov_trials (
+            nct_id, title, official_title, phase, status,
+            enrollment, brief_summary, detailed_description,
+            drugs, diseases, eligibility_text,
+            min_age, max_age, sex,
             start_date, completion_date,
-            contact_name, contact_email, contact_phone, source
-        ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?, 'ctgov_api')
+            contact_name, contact_email, contact_phone,
+            metadata_json, last_updated
+        ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
         ON CONFLICT(nct_id) DO UPDATE SET
-            title=excluded.title, phase=excluded.phase, status=excluded.status,
-            enrollment=excluded.enrollment, brief_summary=excluded.brief_summary,
-            drugs=excluded.drugs, diseases=excluded.diseases,
-            metadata_json=excluded.metadata_json,
+            title=excluded.title,
+            official_title=excluded.official_title,
+            phase=excluded.phase,
+            status=excluded.status,
+            enrollment=excluded.enrollment,
+            brief_summary=excluded.brief_summary,
             detailed_description=excluded.detailed_description,
+            drugs=excluded.drugs,
+            diseases=excluded.diseases,
             eligibility_text=excluded.eligibility_text,
-            min_age=excluded.min_age, max_age=excluded.max_age, sex=excluded.sex,
-            start_date=excluded.start_date, completion_date=excluded.completion_date,
-            contact_name=excluded.contact_name, contact_email=excluded.contact_email,
-            contact_phone=excluded.contact_phone, source='ctgov_api'
+            min_age=excluded.min_age,
+            max_age=excluded.max_age,
+            sex=excluded.sex,
+            start_date=excluded.start_date,
+            completion_date=excluded.completion_date,
+            contact_name=excluded.contact_name,
+            contact_email=excluded.contact_email,
+            contact_phone=excluded.contact_phone,
+            metadata_json=excluded.metadata_json,
+            last_updated=excluded.last_updated
     """, (
-        trial.nct_id, trial.title, trial.phase, trial.status,
-        trial.enrollment, trial.brief_summary, drugs, diseases,
-        trial.metadata_json, trial.detailed_description,
-        trial.eligibility_text, trial.min_age, trial.max_age, trial.sex,
+        trial.nct_id, trial.title, trial.official_title,
+        trial.phase, trial.status,
+        trial.enrollment, trial.brief_summary,
+        trial.detailed_description,
+        drugs, diseases, trial.eligibility_text,
+        trial.min_age, trial.max_age, trial.sex,
         trial.start_date, trial.completion_date,
         trial.contact_name, trial.contact_email, trial.contact_phone,
+        trial.metadata_json, now,
     ))
 
     # Replace locations
-    cursor.execute("DELETE FROM trial_locations WHERE nct_id = ?", (trial.nct_id,))
+    cursor.execute(
+        "DELETE FROM ct_gov_locations WHERE nct_id = ?",
+        (trial.nct_id,),
+    )
     for loc in trial.locations:
         cursor.execute("""
-            INSERT INTO trial_locations
-            (nct_id, facility_name, city, state, country, zip, latitude, longitude)
-            VALUES (?,?,?,?,?,?,?,?)
+            INSERT INTO ct_gov_locations
+            (nct_id, facility_name, city, state, country, zip,
+             latitude, longitude,
+             contact_name, contact_email, contact_phone)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?)
         """, (
             trial.nct_id, loc.facility, loc.city, loc.state,
-            loc.country, loc.zip_code, loc.latitude, loc.longitude,
+            loc.country, loc.zip_code,
+            loc.latitude, loc.longitude,
+            loc.contact_name, loc.contact_email, loc.contact_phone,
         ))
-
-    # Store eligibility text as a trial characteristic for RAG retrieval
-    cursor.execute("""
-        INSERT OR REPLACE INTO trial_characteristics
-        (nct_id, characteristic_key, characteristic_value, value_type, confidence, source)
-        VALUES (?, 'inclusion_text', ?, 'text', 1.0, 'ctgov_api')
-    """, (trial.nct_id, trial.eligibility_text))
 
     return is_new
 
 
 def refresh_statuses(conn: sqlite3.Connection) -> Dict[str, int]:
-    """Re-fetch status for every API-sourced trial."""
+    """Re-fetch status for every trial in ct_gov_trials."""
     cursor = conn.cursor()
     nct_ids = [
         row[0] for row in
-        cursor.execute("SELECT nct_id FROM trials WHERE source = 'ctgov_api'").fetchall()
+        cursor.execute("SELECT nct_id FROM ct_gov_trials").fetchall()
     ]
     if not nct_ids:
-        log.info("No API-sourced trials to refresh.")
+        log.info("No ct_gov trials to refresh.")
         return {"checked": 0, "updated": 0}
 
     updated = 0
     checked = 0
+    now = datetime.now(timezone.utc).isoformat()
 
     for i in range(0, len(nct_ids), PAGE_SIZE):
         batch = nct_ids[i:i + PAGE_SIZE]
-        nct_filter = " OR ".join(f"AREA[NCTId]{nid}" for nid in batch)
+        nct_filter = " OR ".join(
+            f"AREA[NCTId]{nid}" for nid in batch
+        )
 
         try:
-            data = _api_get({"query.term": nct_filter, "pageSize": PAGE_SIZE})
+            data = _api_get({
+                "query.term": nct_filter,
+                "pageSize": PAGE_SIZE,
+            })
         except Exception as exc:
             log.warning("Refresh batch error: %s", exc)
             continue
@@ -454,17 +542,23 @@ def refresh_statuses(conn: sqlite3.Connection) -> Dict[str, int]:
         for study in data.get("studies", []):
             proto = study.get("protocolSection", {})
             nct = _safe_get(proto, "identificationModule", "nctId")
-            new_status = _safe_get(proto, "statusModule", "overallStatus")
+            new_status = _safe_get(
+                proto, "statusModule", "overallStatus"
+            )
             if nct and new_status:
                 cursor.execute(
-                    "UPDATE trials SET status = ? WHERE nct_id = ? AND status != ?",
-                    (new_status, nct, new_status),
+                    "UPDATE ct_gov_trials "
+                    "SET status = ?, last_updated = ? "
+                    "WHERE nct_id = ? AND status != ?",
+                    (new_status, now, nct, new_status),
                 )
                 if cursor.rowcount > 0:
                     updated += 1
             checked += 1
 
-        log.info("  Refreshed %d/%d...", checked, len(nct_ids))
+        log.info(
+            "  Refreshed %d/%d...", checked, len(nct_ids)
+        )
         time.sleep(REQUEST_DELAY)
 
     conn.commit()
@@ -485,14 +579,20 @@ def ingest(
     conn.execute("PRAGMA journal_mode=WAL")
     _ensure_schema(conn)
 
-    stats = {"new": 0, "updated": 0, "skipped": 0, "total_fetched": 0}
+    stats = {
+        "new": 0, "updated": 0, "skipped": 0, "total_fetched": 0,
+    }
     seen_ncts: set = set()
 
     for idx, condition in enumerate(conditions, 1):
-        log.info("[%d/%d] Fetching: %s (max %d)...",
-                 idx, len(conditions), condition, max_per_condition)
+        log.info(
+            "[%d/%d] Fetching: %s (max %d)...",
+            idx, len(conditions), condition, max_per_condition,
+        )
 
-        records = fetch_studies(condition=condition, max_results=max_per_condition)
+        records = fetch_studies(
+            condition=condition, max_results=max_per_condition,
+        )
         stats["total_fetched"] += len(records)
 
         batch_new = 0
@@ -509,7 +609,10 @@ def ingest(
                 stats["updated"] += 1
 
         conn.commit()
-        log.info("  -> %d new, %d total unique so far", batch_new, len(seen_ncts))
+        log.info(
+            "  -> %d new, %d total unique so far",
+            batch_new, len(seen_ncts),
+        )
 
     conn.close()
     return stats
@@ -538,7 +641,10 @@ def ingest_all_recruiting(
         # Commit every 500 to avoid holding too much in WAL
         if (stats["new"] + stats["updated"]) % 500 == 0:
             conn.commit()
-            log.info("  Stored %d trials...", stats["new"] + stats["updated"])
+            log.info(
+                "  Stored %d trials...",
+                stats["new"] + stats["updated"],
+            )
 
     conn.commit()
     conn.close()
@@ -548,11 +654,22 @@ def ingest_all_recruiting(
 def _print_summary(stats: Dict[str, int], db_path: Path) -> None:
     """Print final ingestion summary."""
     conn = sqlite3.connect(db_path)
-    total = conn.execute("SELECT COUNT(*) FROM trials").fetchone()[0]
-    api_count = conn.execute(
-        "SELECT COUNT(*) FROM trials WHERE source = 'ctgov_api'"
+    total = conn.execute(
+        "SELECT COUNT(*) FROM ct_gov_trials"
     ).fetchone()[0]
-    loc_count = conn.execute("SELECT COUNT(*) FROM trial_locations").fetchone()[0]
+    loc_count = conn.execute(
+        "SELECT COUNT(*) FROM ct_gov_locations"
+    ).fetchone()[0]
+
+    # Also show SIGIR trial count if available
+    sigir_count = 0
+    try:
+        sigir_count = conn.execute(
+            "SELECT COUNT(*) FROM trials"
+        ).fetchone()[0]
+    except Exception:
+        pass
+
     conn.close()
 
     log.info("")
@@ -563,10 +680,10 @@ def _print_summary(stats: Dict[str, int], db_path: Path) -> None:
     log.info("  Updated:           %d", stats["updated"])
     log.info("  Skipped (dupes):   %d", stats.get("skipped", 0))
     log.info("  ──────────────────────────")
-    log.info("  Total in DB:       %d", total)
-    log.info("    from API:        %d", api_count)
-    log.info("    from SIGIR:      %d", total - api_count)
-    log.info("  Location records:  %d", loc_count)
+    log.info("  ct_gov_trials:     %d", total)
+    log.info("  ct_gov_locations:  %d", loc_count)
+    if sigir_count:
+        log.info("  SIGIR trials:      %d", sigir_count)
 
 
 # ---------------------------------------------------------------------------
@@ -605,7 +722,7 @@ def main() -> None:
     parser.add_argument(
         "--refresh",
         action="store_true",
-        help="Only refresh status of existing API-sourced trials",
+        help="Only refresh status of existing ct_gov trials",
     )
     parser.add_argument(
         "--db",
@@ -621,8 +738,10 @@ def main() -> None:
         _ensure_schema(conn)
         result = refresh_statuses(conn)
         conn.close()
-        log.info("Refresh complete: %d checked, %d updated",
-                 result["checked"], result["updated"])
+        log.info(
+            "Refresh complete: %d checked, %d updated",
+            result["checked"], result["updated"],
+        )
         return
 
     if args.all_recruiting:
@@ -636,7 +755,9 @@ def main() -> None:
         else DEFAULT_CONDITIONS
     )
 
-    log.info("Ingesting trials for %d condition(s)...", len(conditions))
+    log.info(
+        "Ingesting trials for %d condition(s)...", len(conditions)
+    )
     log.info("Database: %s", args.db)
     log.info("Max per condition: %d", args.max_per_condition)
 
