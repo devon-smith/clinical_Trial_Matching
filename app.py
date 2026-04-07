@@ -1081,8 +1081,36 @@ def chat():
                     'symptoms': '',
                     'primary_condition': None,
                     'preferences': None,
+                    'condition_details': {},
+                    'condition_category': None,
                 }
             }
+
+        # Handle client-side session restore
+        if user_message == '/restore':
+            profile = data.get('profile', {})
+            demos = profile.get('demographics', {})
+            pd = session['assistant']['patient_data']
+            if demos.get('age'):
+                pd['age'] = demos['age']
+            if demos.get('gender'):
+                pd['gender'] = demos['gender']
+            if demos.get('location'):
+                pd['location'] = demos['location']
+                import re as _re
+                m = _re.search(r'\b(\d{5})\b', str(demos['location']))
+                if m:
+                    pd['zip_code'] = m.group(1)
+            if profile.get('condition'):
+                pd['conditions'] = [profile['condition']]
+                pd['primary_condition'] = profile['condition']
+            if profile.get('conditionDetails'):
+                pd['condition_details'] = profile['conditionDetails']
+            if profile.get('conditionCategory'):
+                pd['condition_category'] = profile['conditionCategory']
+            session['assistant']['conversation_state'] = 'ready_to_search'
+            session.modified = True
+            return jsonify({'status': 'restored'})
 
         # Get or create conversation assistant
         assistant = ConversationalTrialAssistant()

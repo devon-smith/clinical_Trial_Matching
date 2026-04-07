@@ -15,17 +15,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- localStorage session persistence ---
     const SESSION_KEY = 'ctf_session';
+    const SESSION_MAX_AGE_MS = 24 * 60 * 60 * 1000; // 24 hours
+
+    // Patient profile tracked client-side (updated from server responses)
+    let patientProfile = {
+        demographics: { age: null, gender: null, location: null },
+        condition: null,
+        symptoms: null,
+        conditionDetails: {},
+        conditionCategory: null,
+    };
+
+    // Conversation messages (role + content pairs for clean restore)
+    let conversationMessages = [];
+
+    function _generateSessionId() {
+        return 'ctf_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 8);
+    }
 
     function saveSession() {
+        // Don't persist empty sessions (no condition yet)
+        if (!patientProfile.condition) return;
+
         try {
             const session = {
+                sessionId: loadSession()?. sessionId || _generateSessionId(),
+                timestamp: Date.now(),
+                patientProfile,
+                conversationMessages,
                 conversationState,
-                allTrials: allTrials.map(t => ({
+                searchResults: allTrials.map(t => ({
                     trial: t.trial,
                     eligibility: t.eligibility,
                 })),
                 chatHtml: messagesContainer.innerHTML,
-                savedAt: Date.now(),
             };
             localStorage.setItem(SESSION_KEY, JSON.stringify(session));
         } catch (e) {
@@ -39,26 +62,78 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!raw) return null;
             const session = JSON.parse(raw);
             // Expire after 24 hours
-            if (Date.now() - session.savedAt > 24 * 60 * 60 * 1000) {
+            if (Date.now() - session.timestamp > SESSION_MAX_AGE_MS) {
                 localStorage.removeItem(SESSION_KEY);
                 return null;
             }
             return session;
         } catch (e) {
+            localStorage.removeItem(SESSION_KEY);
             return null;
         }
     }
 
     function clearSession() {
         localStorage.removeItem(SESSION_KEY);
+        patientProfile = {
+            demographics: { age: null, gender: null, location: null },
+            condition: null,
+            symptoms: null,
+            conditionDetails: {},
+            conditionCategory: null,
+        };
+        conversationMessages = [];
     }
 
     function restoreSession(session) {
-        messagesContainer.innerHTML = session.chatHtml;
-        allTrials = session.allTrials || [];
+        // Restore patient profile
+        if (session.patientProfile) {
+            patientProfile = session.patientProfile;
+        }
+        conversationMessages = session.conversationMessages || [];
         conversationState = session.conversationState || 'intake';
+        allTrials = session.searchResults || [];
+
+        // Restore chat UI
+        messagesContainer.innerHTML = session.chatHtml || '';
         initQuickButtons();
         scrollToBottom();
+
+        // Sync server session by sending a restore message
+        _syncServerSession(patientProfile);
+    }
+
+    async function _syncServerSession(profile) {
+        // Tell the server about the restored patient profile so the
+        // Flask session matches what the client has
+        try {
+            await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: '/restore', profile }),
+                credentials: 'same-origin',
+            });
+        } catch (e) {
+            // Non-critical — server session will rebuild on next real message
+        }
+    }
+
+    function _updatePatientProfile(data) {
+        // Update client-side profile from server response data
+        if (data.patient_summary) {
+            const s = data.patient_summary;
+            if (s.age) patientProfile.demographics.age = s.age;
+            if (s.gender) patientProfile.demographics.gender = s.gender;
+            if (s.location) patientProfile.demographics.location = s.location;
+            if (s.condition) patientProfile.condition = s.condition;
+            if (s.symptoms) patientProfile.symptoms = s.symptoms;
+        }
+        // Also pick up condition from condition_followups if available
+        if (data.condition_followups && data.condition_followups.length > 0) {
+            const cat = data.condition_followups[0];
+            if (cat.category) patientProfile.conditionCategory = cat.category;
+            if (cat.category_display) patientProfile.condition = patientProfile.condition || cat.category_display;
+        }
     }
 
     // Smooth scroll to bottom of chat
@@ -89,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Check for saved session and offer to resume
         const saved = loadSession();
-        if (saved && saved.allTrials && saved.allTrials.length > 0) {
+        if (saved && saved.patientProfile && saved.patientProfile.condition) {
             showResumePrompt(saved);
         } else {
             initQuickButtons();
@@ -98,19 +173,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showResumePrompt(saved) {
-        // Build a short description from the saved trials
-        const trialCount = saved.allTrials.length;
+        const profile = saved.patientProfile || {};
+        const demos = profile.demographics || {};
+        const condition = profile.condition || '';
+        const location = demos.location || '';
+        const age = demos.age;
+        const trialCount = (saved.searchResults || saved.allTrials || []).length;
 
-        // Try to extract condition from the chat HTML
-        let condition = '';
-        const condMatch = saved.chatHtml && saved.chatHtml.match(/dealing with <strong>([^<]+)<\/strong>|condition to <strong>([^<]+)<\/strong>/);
-        if (condMatch) {
-            condition = condMatch[1] || condMatch[2] || '';
+        // Build context string
+        let contextParts = [];
+        if (condition) contextParts.push(`<strong>${condition}</strong>`);
+        if (location) contextParts.push(`near <strong>${location}</strong>`);
+
+        let description;
+        if (contextParts.length > 0 && trialCount > 0) {
+            description = `Last time you searched for ${contextParts.join(' ')} trials and found ${trialCount} result${trialCount !== 1 ? 's' : ''}.`;
+        } else if (contextParts.length > 0) {
+            description = `Last time you were looking into ${contextParts.join(' ')} trials.`;
+        } else {
+            description = `You had a search in progress.`;
         }
 
-        const desc = condition
-            ? `I found ${trialCount} trial${trialCount > 1 ? 's' : ''} for your ${condition} search last time.`
-            : `You had ${trialCount} trial result${trialCount > 1 ? 's' : ''} from your last search.`;
+        // Demographics we'd keep on "New search"
+        let demoNote = '';
+        const demoParts = [];
+        if (age) demoParts.push(`age ${age}`);
+        if (demos.gender) demoParts.push(demos.gender);
+        if (location) demoParts.push(location);
+        if (demoParts.length > 0) {
+            demoNote = `<p class="text-slate-400 text-xs mt-2">"New search" keeps your info (${demoParts.join(', ')}) — only the condition resets.</p>`;
+        }
 
         const resumeDiv = document.createElement('div');
         resumeDiv.className = 'flex justify-start message-enter';
@@ -118,11 +210,12 @@ document.addEventListener('DOMContentLoaded', function() {
         resumeDiv.innerHTML = `
             <div class="max-w-[85%]">
                 <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm leading-relaxed">
-                    <p class="mb-3">Welcome back — ${desc} Want to pick up where you left off, or start a new search?</p>
+                    <p class="mb-3">Welcome back! ${description} Want to pick up where you left off, or start a new search?</p>
                     <div class="flex gap-2">
-                        <button id="resume-btn" class="px-4 py-2 bg-primary text-white text-xs font-medium rounded-lg hover:bg-primary-dark transition-colors min-h-[44px]">Resume</button>
+                        <button id="resume-btn" class="px-4 py-2 bg-primary text-white text-xs font-medium rounded-lg hover:bg-primary-dark transition-colors min-h-[44px]">Continue</button>
                         <button id="new-search-btn" class="px-4 py-2 bg-white text-slate-600 text-xs font-medium rounded-lg border border-warm-border hover:bg-slate-50 transition-colors min-h-[44px]">New search</button>
                     </div>
+                    ${demoNote}
                 </div>
             </div>
         `;
@@ -136,10 +229,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         document.getElementById('new-search-btn').addEventListener('click', () => {
+            // Keep demographics, clear condition data
+            const savedDemographics = (saved.patientProfile || {}).demographics || {};
             resumeDiv.remove();
             clearSession();
+            // Restore demographics only
+            patientProfile.demographics = savedDemographics;
             initQuickButtons();
             userInput.focus();
+            // Send "new search" to server so it keeps demographics
+            if (savedDemographics.age || savedDemographics.location) {
+                _syncServerSession({ demographics: savedDemographics });
+            }
         });
     }
 
@@ -621,10 +722,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const existingQuickSelects = document.querySelectorAll('[id^="quick-select"]');
         existingQuickSelects.forEach(el => el.remove());
 
-        // Clear localStorage on explicit reset
-        if (/\b(start over|restart|reset|begin again|new search|clear)\b/i.test(message)) {
+        // Handle session on reset/new search
+        if (/\b(start over|restart|reset|begin again|clear)\b/i.test(message)) {
             clearSession();
+        } else if (/\b(new search|different condition|another condition|search for something)\b/i.test(message)) {
+            // Keep demographics, clear condition data
+            const savedDemos = { ...patientProfile.demographics };
+            clearSession();
+            patientProfile.demographics = savedDemos;
         }
+
+        // Track conversation message
+        conversationMessages.push({ role: 'user', content: message });
 
         // Don't show internal /update commands as user messages
         if (!message.startsWith('/update ')) {
@@ -743,6 +852,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Handle API response data
     function handleResponse(data) {
+        // Update patient profile from server data
+        _updatePatientProfile(data);
+
         if (data.trials) {
             if (data.trials.length > 0) {
                 updateProgress(4);
@@ -751,19 +863,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     renderConceptAuditPanel(data.concept_audit);
                 }
                 showTrialMatches(data.trials, data.data_last_updated);
+                conversationMessages.push({ role: 'assistant', content: '[trial results]', trialCount: data.trials.length });
             } else {
                 if (data.concept_audit && data.concept_audit.length > 0) {
                     renderConceptAuditPanel(data.concept_audit);
                 }
                 const noResultsHtml = `We couldn't find trials matching your criteria. A few things to try:\n\n• **Use a broader condition term** — e.g., "cancer" instead of a specific subtype\n• **Expand your travel distance** — there may be trials further away\n• **Remove treatment type preference** — if you specified drug-only or avoided surgery, relaxing that may help\n\nYou can start a new search by telling me about a different condition.`;
                 addMessage('assistant', noResultsHtml);
+                conversationMessages.push({ role: 'assistant', content: noResultsHtml });
             }
         } else if (data.response) {
             detectStateFromResponse(data.response);
             addMessageWithQuickSelect('assistant', data.response);
+            conversationMessages.push({ role: 'assistant', content: data.response });
         } else if (data.text) {
             detectStateFromResponse(data.text);
             addMessageWithQuickSelect('assistant', data.text);
+            conversationMessages.push({ role: 'assistant', content: data.text });
         } else {
             addMessage('assistant', "I didn't quite get that. Could you rephrase or try again?");
         }
