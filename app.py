@@ -14,6 +14,10 @@ from preference_scorer import PatientPreferences, parse_preferences_from_message
 from eligibility_visualizer import EligibilityVisualizer
 from concept_canonicalizer import ConceptCanonicalizer, _CONCEPT_HIERARCHY
 from progressive_eligibility import ProgressiveEligibilityChecker
+from condition_followups import (
+    detect_condition, get_followup_questions, parse_answer,
+    merge_followup_answers,
+)
 
 load_dotenv()
 
@@ -1346,12 +1350,23 @@ def chat():
                     'symptoms': patient_data.get('symptoms'),
                 },
                 'data_last_updated': data_last_updated,
+                'condition_followups': get_followup_questions(primary_condition) if primary_condition else [],
             })
+
+        # For non-search responses, include condition follow-ups when detected
+        condition_fups = []
+        detected_condition = assistant.patient_data.get('primary_condition') or (
+            assistant.patient_data.get('conditions', [None])[0]
+            if assistant.patient_data.get('conditions') else None
+        )
+        if detected_condition:
+            condition_fups = get_followup_questions(detected_condition)
 
         return jsonify({
             'status': 'continue',
             'response': response if response else '',
-            'conversation_state': assistant.conversation_state
+            'conversation_state': assistant.conversation_state,
+            'condition_followups': condition_fups,
         })
 
     except Exception as e:
@@ -1609,6 +1624,58 @@ def progressive_answer():
     session.modified = True
 
     return jsonify({'success': True, 'state': result})
+
+
+# ============ Condition Follow-up Questions API ============
+
+@app.route('/api/condition/followups', methods=['POST'])
+def condition_followups_api():
+    """Get follow-up questions for a detected condition."""
+    data = request.get_json() or {}
+    condition = data.get('condition', '')
+
+    if not condition:
+        return jsonify({'error': 'No condition provided'}), 400
+
+    questions = get_followup_questions(condition)
+    category = detect_condition(condition)
+
+    return jsonify({
+        'condition': condition,
+        'category': category.category_id if category else None,
+        'category_display': category.display_name if category else None,
+        'questions': questions,
+    })
+
+
+@app.route('/api/condition/followups/answer', methods=['POST'])
+def condition_followup_answer():
+    """Parse a follow-up answer and merge into patient attributes."""
+    data = request.get_json() or {}
+    answer = data.get('answer', '')
+    attribute = data.get('attribute', '')
+    category_id = data.get('category_id', '')
+    followup = data.get('followup', {})
+
+    if not answer or not attribute:
+        return jsonify({'error': 'Missing answer or attribute'}), 400
+
+    # Parse the answer
+    attr, value = parse_answer(answer, followup or {'attribute': attribute, 'value_type': 'text'})
+
+    # Merge into session patient attributes
+    patient_attrs = session.get('patient_attrs', {})
+    answers = {attr: value}
+    patient_attrs = merge_followup_answers(patient_attrs, category_id, answers)
+    session['patient_attrs'] = patient_attrs
+    session.modified = True
+
+    return jsonify({
+        'success': True,
+        'attribute': attr,
+        'parsed_value': value,
+        'patient_attrs_updated': list(patient_attrs.keys()),
+    })
 
 
 # ============ Clinician Dashboard API ============
