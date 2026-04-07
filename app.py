@@ -1317,6 +1317,20 @@ def chat():
                 except Exception:
                     pass
 
+            # Get last-updated timestamp for data freshness display
+            data_last_updated = None
+            try:
+                db_path = os.path.join(os.path.dirname(__file__), 'trial_data.sqlite')
+                _conn = sqlite3.connect(db_path)
+                _row = _conn.execute(
+                    "SELECT MAX(last_updated) FROM trials WHERE last_updated IS NOT NULL"
+                ).fetchone()
+                if _row and _row[0]:
+                    data_last_updated = _row[0]
+                _conn.close()
+            except Exception:
+                pass
+
             return jsonify({
                 'status': 'complete',
                 'response': response if response else '',
@@ -1331,6 +1345,7 @@ def chat():
                     'condition': primary_condition,
                     'symptoms': patient_data.get('symptoms'),
                 },
+                'data_last_updated': data_last_updated,
             })
 
         return jsonify({

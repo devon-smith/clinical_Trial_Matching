@@ -750,7 +750,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.concept_audit && data.concept_audit.length > 0) {
                     renderConceptAuditPanel(data.concept_audit);
                 }
-                showTrialMatches(data.trials);
+                showTrialMatches(data.trials, data.data_last_updated);
             } else {
                 if (data.concept_audit && data.concept_audit.length > 0) {
                     renderConceptAuditPanel(data.concept_audit);
@@ -1045,7 +1045,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Show trial matches grouped by eligibility status
-    function showTrialMatches(trials) {
+    function showTrialMatches(trials, dataLastUpdated) {
         const container = document.createElement('div');
         container.className = 'flex justify-start w-full';
 
@@ -1109,6 +1109,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm mb-5">
                     <p>I found <strong>${trials.length} clinical trial${trials.length > 1 ? 's' : ''}</strong> that may be relevant.</p>
                     ${trials.length === 1 ? '<p class="text-xs text-slate-500 mt-1">Only 1 trial matched. You could try broadening your search by expanding your travel range or using a broader condition term.</p>' : ''}
+                    ${dataLastUpdated ? `<p class="text-[10px] text-slate-400 mt-1">Trial data last updated: ${new Date(dataLastUpdated).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>` : ''}
                 </div>
 
                 ${sortControl}
