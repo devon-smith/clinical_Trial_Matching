@@ -201,34 +201,81 @@ class TrialMatcher:
         return row[0] if row else ""
 
     @staticmethod
-    def compute_disease_relevance(patient_condition: str, trial_diseases: str) -> float:
+    @staticmethod
+    def compute_disease_relevance(
+        patient_condition: str,
+        trial_diseases: str,
+        concept_set: Optional[set] = None,
+    ) -> float:
         """
         Compute how relevant a trial's disease focus is to the patient's condition.
 
-        Returns a score between 0.0 (no relevance) and 1.0 (strong match).
-        Uses token overlap between patient condition terms and trial disease terms.
+        Returns a score between -0.3 (mismatch penalty) and 1.0 (strong match).
+        When a concept_set is provided, uses it for precise matching:
+        - Primary concept match in trial diseases → high boost (1.0)
+        - Child/related concept match → moderate boost (0.7)
+        - Same broad category but different specific condition → penalty (-0.15)
+        Falls back to token overlap when no concept_set.
         """
         if not patient_condition or not trial_diseases:
             return 0.0
 
-        # Normalize and tokenize
-        condition_tokens = set(patient_condition.lower().split())
-        disease_tokens = set(trial_diseases.lower().replace(",", " ").split())
+        trial_lower = trial_diseases.lower().replace(",", " ")
+        trial_tokens = set(trial_lower.split())
+        stop_words = {
+            "of", "the", "and", "or", "a", "an", "in", "for", "to",
+            "with", "on", "at", "by", "is", "not",
+        }
+        trial_tokens -= stop_words
 
-        # Remove very common stop words that would cause false matches
-        stop_words = {"of", "the", "and", "or", "a", "an", "in", "for", "to", "with", "on", "at", "by", "is", "not"}
-        condition_tokens -= stop_words
-        disease_tokens -= stop_words
+        # --- Concept-set-aware scoring ---
+        if concept_set:
+            # Check each concept against the trial's disease text
+            primary_match = False
+            child_match = False
+            for cid in concept_set:
+                concept_name = cid.replace('_', ' ')
+                if concept_name in trial_lower:
+                    primary_match = True
+                    break
+                # Also check with underscores removed for compound terms
+                if cid in trial_lower.replace(' ', '_'):
+                    child_match = True
 
-        if not condition_tokens or not disease_tokens:
+            if primary_match:
+                return 1.0
+            if child_match:
+                return 0.7
+
+            # Check for broad category overlap (e.g., both are "cancer" but different types)
+            broad_categories = {
+                'cancer', 'diabetes', 'cardiovascular', 'respiratory',
+                'arthritis', 'depression', 'anxiety', 'kidney', 'liver',
+                'neurological', 'infectious',
+            }
+            condition_lower = patient_condition.lower()
+            condition_cats = {c for c in broad_categories if c in condition_lower}
+            trial_cats = {c for c in broad_categories if c in trial_lower}
+
+            if condition_cats and trial_cats:
+                if condition_cats & trial_cats:
+                    # Same broad category but no specific concept match → penalty
+                    return -0.15
+                # Different categories entirely → stronger penalty
+                return -0.3
+
+            # No category signal at all → neutral
             return 0.0
 
-        # Check for any exact token overlap
-        overlap = condition_tokens & disease_tokens
+        # --- Fallback: token overlap ---
+        condition_tokens = set(patient_condition.lower().split()) - stop_words
+        if not condition_tokens or not trial_tokens:
+            return 0.0
+
+        overlap = condition_tokens & trial_tokens
         if overlap:
-            # Jaccard-like score weighted toward condition coverage
             condition_coverage = len(overlap) / len(condition_tokens)
-            return min(condition_coverage * 1.2, 1.0)  # slight boost, capped at 1.0
+            return min(condition_coverage * 1.2, 1.0)
 
         return 0.0
 
@@ -253,6 +300,7 @@ class TrialMatcher:
         nct_id: str,
         *,
         use_llm_judge: bool = True,
+        concept_set: Optional[set] = None,
         preferences: Optional[PatientPreferences] = None,
         distance: Optional[float] = None,
     ) -> Dict[str, Any]:
@@ -324,18 +372,21 @@ class TrialMatcher:
         rag_normalized = min(rag_score * 3, 1.0)
 
         # Disease relevance — does this trial actually target the patient's condition?
-        patient_condition = patient_text.split()[0] if patient_text else ""
-        # Use the full patient text for broader matching
         trial_diseases = self._get_trial_diseases(nct_id)
-        disease_relevance = self.compute_disease_relevance(patient_text, trial_diseases)
+        disease_relevance = self.compute_disease_relevance(
+            patient_text, trial_diseases, concept_set=concept_set,
+        )
 
-        # Scoring: disease relevance gets 25% weight to ensure condition-appropriate trials rank higher
-        # Reduced hard/soft/RAG weights proportionally
+        # Clamp disease_relevance: allow negative (penalty) but floor at -0.3
+        disease_relevance_clamped = max(disease_relevance, -0.3)
+
+        # Scoring: disease relevance gets 25% weight
+        # Negative relevance penalizes mismatched trials
         eligibility = (
             0.30 * hard_score
             + 0.15 * soft_score
             + 0.30 * rag_normalized
-            + 0.25 * disease_relevance
+            + 0.25 * disease_relevance_clamped
         )
 
         # Distance score — always applied, sigmoid decay around d_max

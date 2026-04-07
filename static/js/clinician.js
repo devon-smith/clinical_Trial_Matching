@@ -1233,15 +1233,18 @@ function switchDashboard(dashboard) {
 
     if (dashboard === 'patient') {
         patientDashboard.classList.remove('hidden');
+        patientDashboard.classList.add('flex');
         clinicianDashboard.classList.add('hidden');
-        tabPatient.className = 'dashboard-tab px-4 py-2 rounded-md text-sm font-medium transition-all bg-white text-blue-600';
-        tabClinician.className = 'dashboard-tab px-4 py-2 rounded-md text-sm font-medium transition-all text-white/80 hover:text-white hover:bg-white/10';
+        clinicianDashboard.classList.remove('flex');
+        tabPatient.className = 'dashboard-tab px-3 py-1 rounded-md text-xs font-medium transition-all bg-white text-primary shadow-sm';
+        tabClinician.className = 'dashboard-tab px-3 py-1 rounded-md text-xs font-medium transition-all text-slate-500 hover:text-slate-700';
     } else {
         patientDashboard.classList.add('hidden');
+        patientDashboard.classList.remove('flex');
         clinicianDashboard.classList.remove('hidden');
         clinicianDashboard.classList.add('flex');
-        tabPatient.className = 'dashboard-tab px-4 py-2 rounded-md text-sm font-medium transition-all text-white/80 hover:text-white hover:bg-white/10';
-        tabClinician.className = 'dashboard-tab px-4 py-2 rounded-md text-sm font-medium transition-all bg-white text-blue-600';
+        tabPatient.className = 'dashboard-tab px-3 py-1 rounded-md text-xs font-medium transition-all text-slate-500 hover:text-slate-700';
+        tabClinician.className = 'dashboard-tab px-3 py-1 rounded-md text-xs font-medium transition-all bg-white text-primary shadow-sm';
 
         // Initialize clinician dashboard if not already done
         initClinicianDashboard();

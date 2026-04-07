@@ -2,34 +2,55 @@
 
 /* CSS Variables for theming */
 :root {
-    --primary: #2563EB;
-    --primary-dark: #1D4ED8;
-    --hard-met: #22C55E;
-    --hard-unmet: #EF4444;
-    --hard-unclear: #F59E0B;
-    --soft-met: #3B82F6;
+    --primary: #1a1a1a;
+    --primary-dark: #111111;
+    --accent: #4CAF50;
+    --accent-amber: #FFB74D;
+    --accent-red: #EF5350;
+    --hard-met: #4CAF50;
+    --hard-unmet: #EF5350;
+    --hard-unclear: #FFB74D;
+    --soft-met: #4CAF50;
     --soft-unmet: #8B5CF6;
-    --background: #F8FAFC;
+    --background: #fafaf8;
     --card: #FFFFFF;
-    --border: #E2E8F0;
+    --border: #e8e6e1;
 }
 
 /* Base styles */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2d3436;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Chat container */
 #chat-container {
     scroll-behavior: smooth;
-    min-height: 400px;
 }
 
 /* Message bubbles */
 .message {
     max-width: 85%;
     word-wrap: break-word;
-    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Message enter animation */
+.message-enter {
+    animation: messageSlideIn 0.25s ease-out;
+}
+
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Line clamp utility */
@@ -74,14 +95,6 @@ body {
     }
 }
 
-/* Progress tracker */
-.step-circle {
-    transition: all 0.3s ease;
-}
-
-.step-line {
-    transition: all 0.3s ease;
-}
 
 /* Quick select buttons */
 .quick-btn {
@@ -110,23 +123,23 @@ body {
     transform: translateY(-2px);
 }
 
-/* Trial card entry animation */
+/* Trial card entry animation — gentle staggered fade */
 .trial-card {
-    animation: cardSlideIn 0.4s ease-out;
+    animation: cardFadeIn 0.5s ease-out;
     animation-fill-mode: both;
 }
 
 .trial-card:nth-child(1) { animation-delay: 0.05s; }
-.trial-card:nth-child(2) { animation-delay: 0.1s; }
-.trial-card:nth-child(3) { animation-delay: 0.15s; }
-.trial-card:nth-child(4) { animation-delay: 0.2s; }
-.trial-card:nth-child(5) { animation-delay: 0.25s; }
-.trial-card:nth-child(6) { animation-delay: 0.3s; }
+.trial-card:nth-child(2) { animation-delay: 0.12s; }
+.trial-card:nth-child(3) { animation-delay: 0.19s; }
+.trial-card:nth-child(4) { animation-delay: 0.26s; }
+.trial-card:nth-child(5) { animation-delay: 0.33s; }
+.trial-card:nth-child(6) { animation-delay: 0.40s; }
 
-@keyframes cardSlideIn {
+@keyframes cardFadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(6px);
     }
     to {
         opacity: 1;
@@ -270,8 +283,8 @@ body {
     font-size: 0.75rem;
     font-weight: 500;
     border-radius: 9999px;
-    background-color: #DBEAFE;
-    color: #1E40AF;
+    background-color: #f0f0ec;
+    color: #2d3436;
 }
 
 .badge-success {
@@ -338,17 +351,17 @@ body {
 }
 
 #chat-container::-webkit-scrollbar-track {
-    background: #F1F5F9;
+    background: #f5f4f0;
     border-radius: 3px;
 }
 
 #chat-container::-webkit-scrollbar-thumb {
-    background: #CBD5E1;
+    background: #d5d3ce;
     border-radius: 3px;
 }
 
 #chat-container::-webkit-scrollbar-thumb:hover {
-    background: #94A3B8;
+    background: #b5b3ae;
 }
 
 /* ==========================================
@@ -356,7 +369,7 @@ body {
    ========================================== */
 
 #user-input:focus {
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.08);
 }
 
 button:focus {
@@ -364,58 +377,38 @@ button:focus {
 }
 
 button:focus-visible {
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.15);
 }
 
 /* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
 
-/* Tablet and below */
-@media (max-width: 1024px) {
-    #trials-grid {
-        grid-template-columns: 1fr !important;
-    }
+/* All trial grids single-column at 640px content width */
+#trials-grid .grid {
+    grid-template-columns: 1fr !important;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    .message {
-        max-width: 95%;
-    }
-
     #user-input {
         font-size: 16px; /* Prevents iOS zoom */
     }
 
+    /* Ensure touch-friendly tap targets */
     .quick-btn {
         padding: 0.625rem 1rem;
+        min-height: 44px;
     }
 
-    /* Stack trial card footer on mobile */
-    .trial-card .px-5.py-3 {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .trial-card .px-5.py-3 > div {
-        width: 100%;
-        justify-content: center;
+    button, a[role="button"], .trial-card button {
+        min-height: 44px;
+        min-width: 44px;
     }
 }
 
 /* Small mobile */
 @media (max-width: 480px) {
-    /* Hide step labels on very small screens */
-    #step-1 span, #step-2 span, #step-3 span, #step-4 span {
-        display: none;
-    }
-
-    .step-line {
-        width: 1.5rem !important;
-    }
-
-    /* Smaller match score circle on mobile */
     .trial-card .w-14.h-14 {
         width: 3rem;
         height: 3rem;
@@ -457,8 +450,13 @@ button:focus-visible {
 
 /* Focus visible for keyboard navigation */
 .trial-card:focus-visible {
-    outline: 2px solid var(--primary);
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
+}
+
+/* Heading weight override — use medium (500), not bold */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
 }
 
 /* ==========================================

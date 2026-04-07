@@ -137,7 +137,7 @@ _CONCEPT_HIERARCHY = {
         "excluded_children": [],
         "related": ["renal_artery_stenosis", "pheochromocytoma"],
     },
-    # Cancer family
+    # Cancer family — broad
     "malignant_neoplastic_disease": {
         "parent": "neoplasm",
         "children": [
@@ -158,12 +158,71 @@ _CONCEPT_HIERARCHY = {
             "bladder_cancer",
             "cervical_cancer",
             "head_and_neck_cancer",
+            "thyroid_cancer",
+            "brain_cancer",
+            "glioblastoma",
+            "endometrial_cancer",
+            "esophageal_cancer",
+            "multiple_myeloma",
+            "non_hodgkin_lymphoma",
+            "hodgkin_lymphoma",
+            "acute_myeloid_leukemia",
+            "chronic_lymphocytic_leukemia",
+            "non_small_cell_lung_cancer",
+            "small_cell_lung_cancer",
         ],
         "excluded_children": [
             "benign_neoplasm",
             "carcinoma_in_situ",
         ],
         "related": ["tumor", "metastasis", "neoplasm"],
+    },
+    # Breast cancer sub-family
+    "breast_cancer": {
+        "parent": "malignant_neoplastic_disease",
+        "children": [
+            "triple_negative_breast_cancer",
+            "her2_positive_breast_cancer",
+            "hormone_receptor_positive_breast_cancer",
+            "inflammatory_breast_cancer",
+            "metastatic_breast_cancer",
+        ],
+        "excluded_children": [],
+        "related": ["mastectomy", "lumpectomy", "breast_neoplasm"],
+    },
+    # Lung cancer sub-family
+    "lung_cancer": {
+        "parent": "malignant_neoplastic_disease",
+        "children": [
+            "non_small_cell_lung_cancer",
+            "small_cell_lung_cancer",
+            "lung_adenocarcinoma",
+            "squamous_cell_lung_carcinoma",
+        ],
+        "excluded_children": [],
+        "related": ["pulmonary_nodule", "mesothelioma"],
+    },
+    # Prostate cancer sub-family
+    "prostate_cancer": {
+        "parent": "malignant_neoplastic_disease",
+        "children": [
+            "metastatic_prostate_cancer",
+            "castration_resistant_prostate_cancer",
+            "localized_prostate_cancer",
+        ],
+        "excluded_children": [],
+        "related": ["benign_prostatic_hyperplasia", "prostate_specific_antigen"],
+    },
+    # Colorectal cancer sub-family
+    "colorectal_cancer": {
+        "parent": "malignant_neoplastic_disease",
+        "children": [
+            "colon_cancer",
+            "rectal_cancer",
+            "metastatic_colorectal_cancer",
+        ],
+        "excluded_children": [],
+        "related": ["colorectal_polyp", "familial_adenomatous_polyposis"],
     },
     # Respiratory family
     "chronic_obstructive_lung_disease": {
@@ -192,7 +251,7 @@ _CONCEPT_HIERARCHY = {
             "dyspnea",
         ],
     },
-    # Mental health family
+    # Mental health family — depression
     "depressive_disorder": {
         "parent": "mental_disorder",
         "children": [
@@ -211,6 +270,118 @@ _CONCEPT_HIERARCHY = {
             "suicidal_ideation",
             "insomnia",
         ],
+    },
+    # Anxiety family
+    "anxiety_disorder": {
+        "parent": "mental_disorder",
+        "children": [
+            "generalized_anxiety_disorder",
+            "social_anxiety_disorder",
+            "panic_disorder",
+            "post_traumatic_stress_disorder",
+            "obsessive_compulsive_disorder",
+            "agoraphobia",
+        ],
+        "excluded_children": [],
+        "related": [
+            "depressive_disorder",
+            "insomnia",
+            "phobic_disorder",
+        ],
+    },
+    # Broad mental health family
+    "mental_disorder": {
+        "parent": None,
+        "children": [
+            "depressive_disorder",
+            "anxiety_disorder",
+            "bipolar_disorder",
+            "schizophrenia",
+            "attention_deficit_hyperactivity_disorder",
+            "eating_disorder",
+            "substance_use_disorder",
+        ],
+        "excluded_children": [],
+        "related": ["insomnia", "cognitive_impairment"],
+    },
+    # Heart failure sub-family
+    "heart_failure": {
+        "parent": "disorder_of_cardiovascular_system",
+        "children": [
+            "congestive_heart_failure",
+            "systolic_heart_failure",
+            "diastolic_heart_failure",
+            "heart_failure_with_preserved_ejection_fraction",
+            "heart_failure_with_reduced_ejection_fraction",
+        ],
+        "excluded_children": [],
+        "related": ["cardiomyopathy", "dyspnea", "edema", "cardiac_arrhythmia"],
+    },
+    # Kidney disease family
+    "chronic_kidney_disease": {
+        "parent": "disorder_of_kidney",
+        "children": [
+            "end_stage_renal_disease",
+            "diabetic_nephropathy",
+            "glomerulonephritis",
+            "polycystic_kidney_disease",
+        ],
+        "excluded_children": [],
+        "related": ["acute_kidney_injury", "proteinuria", "renal_dialysis"],
+    },
+    # Liver disease family
+    "chronic_liver_disease": {
+        "parent": "disorder_of_liver",
+        "children": [
+            "liver_cirrhosis",
+            "non_alcoholic_fatty_liver_disease",
+            "hepatitis_b",
+            "hepatitis_c",
+            "alcoholic_liver_disease",
+        ],
+        "excluded_children": [],
+        "related": ["hepatocellular_carcinoma", "liver_fibrosis", "jaundice"],
+    },
+    # Stroke family
+    "cerebrovascular_disease": {
+        "parent": "disorder_of_cardiovascular_system",
+        "children": [
+            "ischemic_stroke",
+            "hemorrhagic_stroke",
+            "transient_ischemic_attack",
+            "cerebral_aneurysm",
+        ],
+        "excluded_children": [],
+        "related": ["hypertensive_disorder", "atrial_fibrillation"],
+    },
+    # Multiple sclerosis family
+    "multiple_sclerosis": {
+        "parent": "autoimmune_disease",
+        "children": [
+            "relapsing_remitting_multiple_sclerosis",
+            "primary_progressive_multiple_sclerosis",
+            "secondary_progressive_multiple_sclerosis",
+        ],
+        "excluded_children": [],
+        "related": ["neuromyelitis_optica", "demyelinating_disease"],
+    },
+    # Parkinson family
+    "parkinson_disease": {
+        "parent": "neurodegenerative_disorder",
+        "children": [
+            "early_onset_parkinson_disease",
+        ],
+        "excluded_children": [],
+        "related": ["tremor", "movement_disorder", "lewy_body_dementia"],
+    },
+    # HIV family
+    "hiv_infection": {
+        "parent": "infectious_disease",
+        "children": [
+            "acquired_immunodeficiency_syndrome",
+        ],
+        "excluded_children": [],
+        "related": ["antiretroviral_therapy", "opportunistic_infection"],
     },
     # Musculoskeletal family
     "arthritis": {
@@ -338,61 +509,262 @@ _CONCEPT_HIERARCHY = {
     },
 }
 
-# User-friendly aliases for common queries
+# User-friendly aliases — maps patient language to concept IDs
 _QUERY_ALIASES = {
+    # --- Cancer (all types + lay terms) ---
+    "cancer": "malignant_neoplastic_disease",
+    "malignancy": "malignant_neoplastic_disease",
+    "malignant": "malignant_neoplastic_disease",
+    "tumor": "malignant_neoplastic_disease",
+    "tumour": "malignant_neoplastic_disease",
+    "oncology": "malignant_neoplastic_disease",
+    "neoplasm": "malignant_neoplastic_disease",
+    "carcinoma": "malignant_neoplastic_disease",
+    "the big c": "malignant_neoplastic_disease",
+    "breast cancer": "breast_cancer",
+    "breast tumor": "breast_cancer",
+    "breast carcinoma": "breast_cancer",
+    "triple negative breast cancer": "triple_negative_breast_cancer",
+    "tnbc": "triple_negative_breast_cancer",
+    "her2 positive": "her2_positive_breast_cancer",
+    "her2+": "her2_positive_breast_cancer",
+    "lung cancer": "lung_cancer",
+    "lung tumor": "lung_cancer",
+    "nsclc": "non_small_cell_lung_cancer",
+    "non small cell lung cancer": "non_small_cell_lung_cancer",
+    "small cell lung cancer": "small_cell_lung_cancer",
+    "sclc": "small_cell_lung_cancer",
+    "prostate cancer": "prostate_cancer",
+    "colorectal cancer": "colorectal_cancer",
+    "colon cancer": "colon_cancer",
+    "rectal cancer": "rectal_cancer",
+    "bowel cancer": "colorectal_cancer",
+    "pancreatic cancer": "pancreatic_cancer",
+    "liver cancer": "hepatocellular_carcinoma",
+    "stomach cancer": "gastric_cancer",
+    "gastric cancer": "gastric_cancer",
+    "ovarian cancer": "ovarian_cancer",
+    "cervical cancer": "cervical_cancer",
+    "bladder cancer": "bladder_cancer",
+    "kidney cancer": "renal_cell_carcinoma",
+    "skin cancer": "melanoma",
+    "melanoma": "melanoma",
+    "lymphoma": "lymphoma",
+    "non hodgkin lymphoma": "non_hodgkin_lymphoma",
+    "hodgkin lymphoma": "hodgkin_lymphoma",
+    "leukemia": "leukemia",
+    "leukaemia": "leukemia",
+    "blood cancer": "leukemia",
+    "aml": "acute_myeloid_leukemia",
+    "cll": "chronic_lymphocytic_leukemia",
+    "multiple myeloma": "multiple_myeloma",
+    "myeloma": "multiple_myeloma",
+    "brain cancer": "brain_cancer",
+    "brain tumor": "brain_cancer",
+    "glioblastoma": "glioblastoma",
+    "gbm": "glioblastoma",
+    "thyroid cancer": "thyroid_cancer",
+    "head and neck cancer": "head_and_neck_cancer",
+    "sarcoma": "sarcoma",
+    "endometrial cancer": "endometrial_cancer",
+    "uterine cancer": "endometrial_cancer",
+    "esophageal cancer": "esophageal_cancer",
+    "metastatic cancer": "malignant_neoplastic_disease",
+    "stage 4 cancer": "malignant_neoplastic_disease",
+
+    # --- Diabetes ---
     "diabetes": "diabetes_mellitus",
     "type 2 diabetes": "type_2_diabetes_mellitus",
     "type 1 diabetes": "type_1_diabetes_mellitus",
     "t2dm": "type_2_diabetes_mellitus",
     "t1dm": "type_1_diabetes_mellitus",
-    "cancer": "malignant_neoplastic_disease",
-    "tumor": "malignant_neoplastic_disease",
-    "tumour": "malignant_neoplastic_disease",
+    "type 2": "type_2_diabetes_mellitus",
+    "type 1": "type_1_diabetes_mellitus",
+    "diabetic": "diabetes_mellitus",
+    "blood sugar": "diabetes_mellitus",
+    "high blood sugar": "diabetes_mellitus",
+    "a1c": "diabetes_mellitus",
+    "hba1c": "diabetes_mellitus",
+    "insulin resistance": "type_2_diabetes_mellitus",
+    "prediabetes": "type_2_diabetes_mellitus",
+    "pre-diabetes": "type_2_diabetes_mellitus",
+    "gestational diabetes": "gestational_diabetes",
+    "sugar diabetes": "type_2_diabetes_mellitus",
+
+    # --- Cardiovascular ---
     "heart disease": "disorder_of_cardiovascular_system",
     "cardiovascular disease": "disorder_of_cardiovascular_system",
+    "cardiovascular": "disorder_of_cardiovascular_system",
+    "cardiac": "disorder_of_cardiovascular_system",
     "cvd": "disorder_of_cardiovascular_system",
+    "heart problems": "disorder_of_cardiovascular_system",
+    "heart condition": "disorder_of_cardiovascular_system",
+    "heart failure": "heart_failure",
+    "chf": "heart_failure",
+    "congestive heart failure": "congestive_heart_failure",
+    "weak heart": "heart_failure",
+    "enlarged heart": "cardiomyopathy",
+    "cardiomyopathy": "cardiomyopathy",
+    "heart attack": "acute_myocardial_infarction",
+    "myocardial infarction": "acute_myocardial_infarction",
+    "mi": "acute_myocardial_infarction",
+    "coronary artery disease": "coronary_arteriosclerosis",
+    "cad": "coronary_arteriosclerosis",
+    "atrial fibrillation": "cardiac_arrhythmia",
+    "afib": "cardiac_arrhythmia",
+    "a-fib": "cardiac_arrhythmia",
+    "arrhythmia": "cardiac_arrhythmia",
+    "irregular heartbeat": "cardiac_arrhythmia",
     "high blood pressure": "hypertensive_disorder",
     "hypertension": "hypertensive_disorder",
     "bp": "hypertensive_disorder",
+    "htn": "hypertensive_disorder",
+    "high cholesterol": "hyperlipidemia",
+    "cholesterol": "hyperlipidemia",
+
+    # --- Respiratory ---
     "copd": "chronic_obstructive_lung_disease",
     "chronic obstructive pulmonary disease": "chronic_obstructive_lung_disease",
+    "emphysema": "emphysema",
+    "chronic bronchitis": "chronic_bronchitis",
+    "asthma": "asthma",
+    "breathing problems": "chronic_obstructive_lung_disease",
+    "shortness of breath": "chronic_obstructive_lung_disease",
+    "trouble breathing": "chronic_obstructive_lung_disease",
+    "can't breathe": "chronic_obstructive_lung_disease",
+    "difficulty breathing": "chronic_obstructive_lung_disease",
+    "wheezing": "asthma",
+    "lung disease": "chronic_obstructive_lung_disease",
+
+    # --- Mental health ---
     "depression": "depressive_disorder",
+    "depressed": "depressive_disorder",
+    "major depression": "major_depressive_disorder",
+    "mdd": "major_depressive_disorder",
+    "feeling down": "depressive_disorder",
+    "sadness": "depressive_disorder",
+    "anxiety": "anxiety_disorder",
+    "anxious": "anxiety_disorder",
+    "gad": "generalized_anxiety_disorder",
+    "panic attacks": "panic_disorder",
+    "panic disorder": "panic_disorder",
+    "ptsd": "post_traumatic_stress_disorder",
+    "post traumatic stress": "post_traumatic_stress_disorder",
+    "ocd": "obsessive_compulsive_disorder",
+    "mental health": "mental_disorder",
+    "mental illness": "mental_disorder",
+    "psychiatric": "mental_disorder",
+    "bipolar": "bipolar_disorder",
+    "bipolar disorder": "bipolar_disorder",
+    "schizophrenia": "schizophrenia",
+    "adhd": "attention_deficit_hyperactivity_disorder",
+    "add": "attention_deficit_hyperactivity_disorder",
+    "eating disorder": "eating_disorder",
+    "anorexia": "eating_disorder",
+    "bulimia": "eating_disorder",
+
+    # --- Musculoskeletal / Pain ---
     "arthritis": "arthritis",
     "joint pain": "arthritis",
+    "rheumatoid arthritis": "rheumatoid_arthritis",
+    "ra": "rheumatoid_arthritis",
+    "osteoarthritis": "osteoarthritis",
+    "oa": "osteoarthritis",
+    "psoriatic arthritis": "psoriatic_arthritis",
+    "gout": "gouty_arthritis",
     "back pain": "low_back_pain",
     "lower back pain": "low_back_pain",
     "chronic lower back pain": "low_back_pain",
     "lbp": "low_back_pain",
     "chronic back pain": "low_back_pain",
-    "obesity": "obesity",
-    "overweight": "obesity",
-    "dementia": "dementia",
-    "alzheimer": "alzheimer_disease",
-    "alzheimers": "alzheimer_disease",
-    "pneumonia": "pneumonia",
-    "appendicitis": "appendicitis",
+    "sciatica": "sciatica",
     "knee pain": "knee_pain",
     "knee pain that won't go away": "knee_pain",
     "chronic knee pain": "knee_pain",
+    "bad knees": "knee_pain",
     "hip pain": "hip_pain",
-    "glute problems": None,  # intentional failure case
-    "butt pain": None,  # intentional failure case
+    "shoulder pain": "joint_pain",
+    "neck pain": "joint_pain",
+    "fibromyalgia": "fibromyalgia",
+
+    # --- Neurological ---
+    "dementia": "dementia",
+    "alzheimer": "alzheimer_disease",
+    "alzheimers": "alzheimer_disease",
+    "alzheimer's": "alzheimer_disease",
+    "alzheimer's disease": "alzheimer_disease",
+    "memory loss": "dementia",
+    "parkinson": "parkinson_disease",
+    "parkinsons": "parkinson_disease",
+    "parkinson's": "parkinson_disease",
+    "parkinson's disease": "parkinson_disease",
+    "tremor": "parkinson_disease",
+    "multiple sclerosis": "multiple_sclerosis",
+    "ms": "multiple_sclerosis",
+    "epilepsy": "seizure_disorder",
+    "seizures": "seizure_disorder",
+    "migraine": "migraine",
+    "migraines": "migraine",
+    "headache": "migraine",
+    "stroke": "cerebrovascular_disease",
+    "tia": "transient_ischemic_attack",
+
+    # --- Kidney ---
+    "kidney disease": "chronic_kidney_disease",
+    "ckd": "chronic_kidney_disease",
+    "chronic kidney disease": "chronic_kidney_disease",
+    "renal failure": "chronic_kidney_disease",
+    "dialysis": "end_stage_renal_disease",
+    "kidney failure": "end_stage_renal_disease",
+    "esrd": "end_stage_renal_disease",
+
+    # --- Liver ---
+    "liver disease": "chronic_liver_disease",
+    "cirrhosis": "liver_cirrhosis",
+    "fatty liver": "non_alcoholic_fatty_liver_disease",
+    "nafld": "non_alcoholic_fatty_liver_disease",
+    "nash": "non_alcoholic_fatty_liver_disease",
+    "hepatitis": "chronic_liver_disease",
+    "hepatitis c": "hepatitis_c",
+    "hep c": "hepatitis_c",
+    "hepatitis b": "hepatitis_b",
+    "hep b": "hepatitis_b",
+
+    # --- Infectious ---
+    "hiv": "hiv_infection",
+    "hiv/aids": "hiv_infection",
+    "aids": "acquired_immunodeficiency_syndrome",
+    "pneumonia": "pneumonia",
+
+    # --- Metabolic ---
+    "obesity": "obesity",
+    "overweight": "obesity",
+    "weight loss": "obesity",
+    "bmi": "obesity",
+    "morbid obesity": "morbid_obesity",
+    "appendicitis": "appendicitis",
+
+    # --- Intentional failure cases ---
+    "glute problems": None,
+    "butt pain": None,
 }
 
-# Suggestions for failed queries
+# Suggestions for known failure cases
 _QUERY_SUGGESTIONS = {
     "glute problems": [
-        "Try 'lower back pain' or 'sciatica' — gluteal pain is often related to lumbar spine conditions",
-        "Try 'piriformis syndrome' for deep buttock pain",
-        "Try 'hip pain' if the pain is in the hip/buttock area",
-        "Try 'arthritis' if you have joint-related buttock discomfort",
+        "Try 'lower back pain' or 'sciatica'",
+        "Try 'hip pain'",
+        "Try 'piriformis syndrome'",
     ],
     "butt pain": [
-        "Try 'lower back pain' — buttock pain often originates from the lumbar spine",
-        "Try 'sciatica' if the pain radiates down the leg",
-        "Try 'piriformis syndrome' for deep buttock/gluteal pain",
+        "Try 'lower back pain'",
+        "Try 'sciatica'",
+        "Try 'hip pain'",
     ],
 }
+
+# Build a reverse lookup: all alias strings for fuzzy matching
+_ALL_ALIAS_KEYS: List[str] = [k for k, v in _QUERY_ALIASES.items() if v is not None]
 
 
 # ---------------------------------------------------------------------------
@@ -483,15 +855,14 @@ class ConceptCanonicalizer:
                 f"The system searched through {len(self._db_concepts)} known medical "
                 f"terms but found no confident match."
             )
-            # Try to find near-misses for suggestions
-            near = self._find_near_matches(query_lower, top_n=5)
+            # Find the 3 closest matches ranked by similarity
+            near = self._find_near_matches(query_lower, top_n=3)
             expansion.suggestions = [
                 f"Did you mean '{self._humanize_concept(n)}'?" for n in near
             ]
             if not expansion.suggestions:
                 expansion.suggestions = [
-                    "Try using standard medical terminology",
-                    "Describe your primary symptom or diagnosis",
+                    "Try using a more specific medical term",
                 ]
             return expansion
 
@@ -580,17 +951,41 @@ class ConceptCanonicalizer:
         )
 
     def _fuzzy_match_concept(self, query: str) -> Optional[str]:
-        """Try to match query against known concept hierarchy keys."""
+        """Try to match query against hierarchy keys and alias table with fuzzy fallback."""
         normalized = query.replace(' ', '_').lower()
 
-        # Exact match in hierarchy
+        # 1. Exact match in hierarchy
         if normalized in _CONCEPT_HIERARCHY:
             return normalized
 
-        # Partial match
+        # 2. Substring match in hierarchy
         for key in _CONCEPT_HIERARCHY:
             if normalized in key or key in normalized:
                 return key
+
+        # 3. Fuzzy match against alias table (Levenshtein via SequenceMatcher)
+        best_alias_key = None
+        best_alias_score = 0.0
+        for alias in _ALL_ALIAS_KEYS:
+            ratio = SequenceMatcher(None, query, alias).ratio()
+            if ratio > best_alias_score:
+                best_alias_score = ratio
+                best_alias_key = alias
+
+        if best_alias_score >= 0.7 and best_alias_key is not None:
+            return _QUERY_ALIASES[best_alias_key]
+
+        # 4. Fuzzy match against hierarchy keys
+        best_key = None
+        best_score = 0.0
+        for key in _CONCEPT_HIERARCHY:
+            ratio = SequenceMatcher(None, normalized, key).ratio()
+            if ratio > best_score:
+                best_score = ratio
+                best_key = key
+
+        if best_score >= 0.65:
+            return best_key
 
         return None
 
@@ -629,27 +1024,28 @@ class ConceptCanonicalizer:
 
         return best_key
 
-    def _find_near_matches(self, query: str, top_n: int = 5) -> List[str]:
-        """Find the closest concept keys to a query."""
-        normalized = query.replace(' ', '_').lower()
-        scored = []
+    def _find_near_matches(self, query: str, top_n: int = 3) -> List[str]:
+        """Find the closest concept keys ranked by similarity. Returns max 3."""
+        scored: Dict[str, float] = {}
 
-        # Check hierarchy keys
+        # Score against alias table (most useful — these are patient-language terms)
+        for alias, concept_id in _QUERY_ALIASES.items():
+            if concept_id is None:
+                continue
+            ratio = SequenceMatcher(None, query, alias).ratio()
+            # Keep the best score per concept_id
+            if concept_id not in scored or ratio > scored[concept_id]:
+                scored[concept_id] = ratio
+
+        # Score against hierarchy keys
+        normalized = query.replace(' ', '_').lower()
         for key in _CONCEPT_HIERARCHY:
             ratio = SequenceMatcher(None, normalized, key).ratio()
-            scored.append((key, ratio))
+            if key not in scored or ratio > scored[key]:
+                scored[key] = ratio
 
-        # Check DB concepts (sample to avoid scanning all 5000+)
-        tokens = set(normalized.split('_'))
-        for key in self._db_concepts:
-            key_tokens = set(key.split('_'))
-            overlap = tokens & key_tokens
-            if overlap:
-                ratio = len(overlap) / max(len(tokens), 1)
-                scored.append((key, ratio))
-
-        scored.sort(key=lambda x: x[1], reverse=True)
-        return [k for k, _ in scored[:top_n]]
+        ranked = sorted(scored.items(), key=lambda x: x[1], reverse=True)
+        return [k for k, _ in ranked[:top_n]]
 
     def _find_trial_terms(
         self, concept_id: str, hierarchy: Dict

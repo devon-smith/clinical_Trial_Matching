@@ -6,12 +6,71 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeModal = document.getElementById('close-modal');
     let isWaitingForResponse = false;
     let currentStep = 1;
-    let conversationState = 'age';
+    let conversationState = 'intake';
     let savedTrials = new Map(); // Track saved/shortlisted trials with their data
     let allTrials = []; // Store all trials for load more functionality
     let displayedTrialCount = 6; // Initial number of trials to show
     let currentSortBy = 'match'; // match, phase, title
     let currentFilter = 'all'; // all, eligible, review
+
+    // --- localStorage session persistence ---
+    const SESSION_KEY = 'ctf_session';
+
+    function saveSession() {
+        try {
+            const session = {
+                conversationState,
+                allTrials: allTrials.map(t => ({
+                    trial: t.trial,
+                    eligibility: t.eligibility,
+                })),
+                chatHtml: messagesContainer.innerHTML,
+                savedAt: Date.now(),
+            };
+            localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+        } catch (e) {
+            // localStorage full or unavailable — silently ignore
+        }
+    }
+
+    function loadSession() {
+        try {
+            const raw = localStorage.getItem(SESSION_KEY);
+            if (!raw) return null;
+            const session = JSON.parse(raw);
+            // Expire after 24 hours
+            if (Date.now() - session.savedAt > 24 * 60 * 60 * 1000) {
+                localStorage.removeItem(SESSION_KEY);
+                return null;
+            }
+            return session;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function clearSession() {
+        localStorage.removeItem(SESSION_KEY);
+    }
+
+    function restoreSession(session) {
+        messagesContainer.innerHTML = session.chatHtml;
+        allTrials = session.allTrials || [];
+        conversationState = session.conversationState || 'intake';
+        initQuickButtons();
+        scrollToBottom();
+    }
+
+    // Smooth scroll to bottom of chat
+    function scrollToBottom() {
+        const chatContainer = document.getElementById('chat-container');
+        if (chatContainer) {
+            chatContainer.scrollTo({
+                top: chatContainer.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    }
 
     // Initialize the chat
     function initChat() {
@@ -28,8 +87,60 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        initQuickButtons();
-        userInput.focus();
+        // Check for saved session and offer to resume
+        const saved = loadSession();
+        if (saved && saved.allTrials && saved.allTrials.length > 0) {
+            showResumePrompt(saved);
+        } else {
+            initQuickButtons();
+            userInput.focus();
+        }
+    }
+
+    function showResumePrompt(saved) {
+        // Build a short description from the saved trials
+        const trialCount = saved.allTrials.length;
+
+        // Try to extract condition from the chat HTML
+        let condition = '';
+        const condMatch = saved.chatHtml && saved.chatHtml.match(/dealing with <strong>([^<]+)<\/strong>|condition to <strong>([^<]+)<\/strong>/);
+        if (condMatch) {
+            condition = condMatch[1] || condMatch[2] || '';
+        }
+
+        const desc = condition
+            ? `I found ${trialCount} trial${trialCount > 1 ? 's' : ''} for your ${condition} search last time.`
+            : `You had ${trialCount} trial result${trialCount > 1 ? 's' : ''} from your last search.`;
+
+        const resumeDiv = document.createElement('div');
+        resumeDiv.className = 'flex justify-start message-enter';
+        resumeDiv.id = 'resume-prompt';
+        resumeDiv.innerHTML = `
+            <div class="max-w-[85%]">
+                <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm leading-relaxed">
+                    <p class="mb-3">Welcome back — ${desc} Want to pick up where you left off, or start a new search?</p>
+                    <div class="flex gap-2">
+                        <button id="resume-btn" class="px-4 py-2 bg-primary text-white text-xs font-medium rounded-lg hover:bg-primary-dark transition-colors min-h-[44px]">Resume</button>
+                        <button id="new-search-btn" class="px-4 py-2 bg-white text-slate-600 text-xs font-medium rounded-lg border border-warm-border hover:bg-slate-50 transition-colors min-h-[44px]">New search</button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        messagesContainer.appendChild(resumeDiv);
+        scrollToBottom();
+
+        document.getElementById('resume-btn').addEventListener('click', () => {
+            resumeDiv.remove();
+            restoreSession(saved);
+        });
+
+        document.getElementById('new-search-btn').addEventListener('click', () => {
+            resumeDiv.remove();
+            clearSession();
+            initQuickButtons();
+            userInput.focus();
+        });
     }
 
     // Initialize quick select buttons
@@ -44,53 +155,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Update progress tracker
+    // Internal step tracking only — no visual stepper
     function updateProgress(step) {
         currentStep = step;
-
-        for (let i = 1; i <= 4; i++) {
-            const stepEl = document.getElementById(`step-${i}`);
-            const lineEl = document.getElementById(`line-${i}`);
-            const circle = stepEl.querySelector('.step-circle');
-            const label = stepEl.querySelector('span');
-
-            if (i < step) {
-                circle.className = 'step-circle w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center text-sm font-medium';
-                circle.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
-                label.className = 'ml-2 text-sm font-medium text-green-600';
-                if (lineEl) lineEl.className = 'step-line w-12 h-0.5 bg-green-500';
-            } else if (i === step) {
-                circle.className = 'step-circle w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-medium';
-                circle.textContent = i;
-                label.className = 'ml-2 text-sm font-medium text-slate-700';
-                if (lineEl) lineEl.className = 'step-line w-12 h-0.5 bg-slate-200';
-            } else {
-                circle.className = 'step-circle w-8 h-8 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center text-sm font-medium';
-                circle.textContent = i;
-                label.className = 'ml-2 text-sm font-medium text-slate-400';
-                if (lineEl) lineEl.className = 'step-line w-12 h-0.5 bg-slate-200';
-            }
-        }
     }
 
-    // Detect conversation state from response
+    // Detect conversation state from response text
     function detectStateFromResponse(response) {
-        const lowerResponse = response.toLowerCase();
-
-        if (lowerResponse.includes('gender') || lowerResponse.includes('sex')) {
-            conversationState = 'gender';
-            updateProgress(1);
-        } else if (lowerResponse.includes('condition') || lowerResponse.includes('symptom') || lowerResponse.includes('health issue') || lowerResponse.includes('diagnosis')) {
-            conversationState = 'condition';
-            updateProgress(2);
-        } else if (lowerResponse.includes('preference') || lowerResponse.includes('travel') || lowerResponse.includes('distance')) {
+        const lower = response.toLowerCase();
+        if (lower.includes('preference') && lower.includes('rank')) {
             conversationState = 'preferences';
-            updateProgress(3);
-        } else if (lowerResponse.includes('found') && lowerResponse.includes('trial')) {
-            conversationState = 'results';
-            updateProgress(4);
-        } else if (lowerResponse.includes('search') || lowerResponse.includes('looking for')) {
+        } else if (lower.includes('searching') || lower.includes('looking for trials')) {
             conversationState = 'searching';
-            updateProgress(4);
+        } else if (lower.includes('also need to know') || lower.includes('can you tell me more')) {
+            conversationState = 'followup';
+        } else {
+            conversationState = 'intake';
         }
     }
 
@@ -99,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!status) return 'text-slate-500';
         const s = status.toLowerCase();
         if (s === 'recruiting') return 'text-green-600';
-        if (s.includes('active') || s.includes('enrolling')) return 'text-blue-600';
+        if (s.includes('active') || s.includes('enrolling')) return 'text-slate-600';
         return 'text-slate-500';
     }
 
@@ -163,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return `
                 <div class="bg-slate-50 rounded-lg p-3">
                     <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <svg class="w-4 h-4 text-slate-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <p class="text-sm text-slate-600">${eligibility.explanation}</p>
                     </div>
                 </div>`;
@@ -225,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.expand-icon').classList.toggle('rotate-180')"
                         class="w-full flex items-center justify-between px-3 py-2.5 bg-slate-50 hover:bg-slate-100 transition-colors text-left">
                     <span class="text-xs font-medium text-slate-700 flex items-center gap-1.5">
-                        <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                        <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
                         Why this match?
                     </span>
                     <div class="flex items-center gap-2">
@@ -312,14 +392,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const previewQuestions = viz.clarifying_questions.slice(0, 2);
             const moreCount = viz.clarifying_questions.length - 2;
             questionsHtml = `
-                <div class="mt-2 p-2.5 bg-blue-50 border border-blue-200 rounded-lg">
-                    <p class="text-[11px] font-medium text-blue-700 mb-1.5">We need more info to check ${unknownCount} criteria:</p>
+                <div class="mt-2 p-2.5 bg-accent/5 border border-accent/20 rounded-lg">
+                    <p class="text-[11px] font-medium text-slate-700 mb-1.5">We need more info to check ${unknownCount} criteria:</p>
                     ${previewQuestions.map(q => `
                         <div class="mb-1.5 last:mb-0">
-                            <p class="text-[11px] text-blue-600">${q.question}</p>
+                            <p class="text-[11px] text-slate-600">${q.question}</p>
                         </div>
                     `).join('')}
-                    ${moreCount > 0 ? `<p class="text-[10px] text-blue-400 mt-1">+${moreCount} more questions... (click View Full Details)</p>` : ''}
+                    ${moreCount > 0 ? `<p class="text-[10px] text-slate-400 mt-1">+${moreCount} more questions... (click View Details)</p>` : ''}
                 </div>`;
         }
 
@@ -333,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.expand-icon').classList.toggle('rotate-180')"
                         class="w-full flex items-center justify-between px-3 py-2.5 bg-slate-50 hover:bg-slate-100 transition-colors text-left">
                     <span class="text-xs font-medium text-slate-700 flex items-center gap-1.5">
-                        <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                        <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
                         Eligibility Breakdown
                     </span>
                     <div class="flex items-center gap-1.5">
@@ -359,111 +439,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     ${buildPreferenceBreakdown(trial)}
                 </div>
             </div>`;
-    }
-
-    // Render preference elicitation panel in chat
-    function renderPreferencePanel() {
-        const panelDiv = document.createElement('div');
-        panelDiv.className = 'flex justify-start';
-        panelDiv.innerHTML = `
-            <div class="max-w-lg bg-white border border-slate-200 rounded-xl shadow-sm p-4 space-y-4">
-                <div class="flex items-center gap-2 mb-1">
-                    <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
-                    <h3 class="text-sm font-semibold text-slate-800">Your Practical Preferences</h3>
-                </div>
-                <p class="text-xs text-slate-500">These help rank trials by what matters to you beyond medical eligibility.</p>
-
-                <div class="space-y-3">
-                    <div>
-                        <label class="flex justify-between text-xs font-medium text-slate-600 mb-1">
-                            <span>Travel willingness</span>
-                            <span id="pref-travel-label" class="text-blue-600">Regional (60 mi)</span>
-                        </label>
-                        <input type="range" id="pref-travel" min="1" max="5" value="3"
-                            class="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-blue-600"
-                            oninput="document.getElementById('pref-travel-label').textContent = {1:'Local only (15 mi)',2:'Nearby (30 mi)',3:'Regional (60 mi)',4:'Statewide (100 mi)',5:'Anywhere (200 mi)'}[this.value]">
-                    </div>
-
-                    <div>
-                        <label class="flex justify-between text-xs font-medium text-slate-600 mb-1">
-                            <span>Risk tolerance</span>
-                            <span id="pref-risk-label" class="text-blue-600">Open to newer</span>
-                        </label>
-                        <input type="range" id="pref-risk" min="1" max="5" value="3"
-                            class="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-blue-600"
-                            oninput="document.getElementById('pref-risk-label').textContent = {1:'Proven only',2:'Mostly proven',3:'Open to newer',4:'Comfortable with experimental',5:'Fully experimental'}[this.value]">
-                    </div>
-
-                    <div>
-                        <label class="flex justify-between text-xs font-medium text-slate-600 mb-1">
-                            <span>Schedule flexibility</span>
-                            <span id="pref-schedule-label" class="text-blue-600">Moderate</span>
-                        </label>
-                        <input type="range" id="pref-schedule" min="1" max="5" value="3"
-                            class="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-blue-600"
-                            oninput="document.getElementById('pref-schedule-label').textContent = {1:'Very limited',2:'Somewhat limited',3:'Moderate',4:'Fairly flexible',5:'Very flexible'}[this.value]">
-                    </div>
-
-                    <div>
-                        <label class="text-xs font-medium text-slate-600 mb-1 block">Treatment type preference</label>
-                        <div class="flex flex-wrap gap-1.5" id="pref-modalities">
-                            ${['Drug', 'Surgery', 'Device', 'Behavioral', 'Radiation'].map(m =>
-                                `<button type="button" data-modality="${m}"
-                                    class="pref-mod-btn px-2.5 py-1 text-xs rounded-full border border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
-                                    onclick="this.classList.toggle('bg-blue-50'); this.classList.toggle('text-blue-700'); this.classList.toggle('border-blue-200'); this.classList.toggle('bg-slate-100'); this.classList.toggle('text-slate-400'); this.classList.toggle('border-slate-200'); this.classList.toggle('line-through'); this.dataset.selected = this.dataset.selected === 'false' ? 'true' : 'false'"
-                                    data-selected="true">${m}</button>`
-                            ).join('')}
-                        </div>
-                        <p class="text-[10px] text-slate-400 mt-1">Click to toggle. Selected types are preferred.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-2 pt-1">
-                    <button type="button" id="pref-confirm-btn"
-                        class="flex-1 px-3 py-2 text-xs font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
-                        Confirm Preferences
-                    </button>
-                    <button type="button" id="pref-skip-btn"
-                        class="px-3 py-2 text-xs font-medium text-slate-500 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors">
-                        Skip
-                    </button>
-                </div>
-            </div>`;
-
-        messagesContainer.appendChild(panelDiv);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-
-        // Wire up confirm button
-        panelDiv.querySelector('#pref-confirm-btn').addEventListener('click', () => {
-            const travel = parseInt(panelDiv.querySelector('#pref-travel').value);
-            const risk = parseInt(panelDiv.querySelector('#pref-risk').value);
-            const schedule = parseInt(panelDiv.querySelector('#pref-schedule').value);
-            const modBtns = panelDiv.querySelectorAll('.pref-mod-btn');
-            const modalities = [];
-            modBtns.forEach(btn => {
-                if (btn.dataset.selected !== 'false') modalities.push(btn.dataset.modality);
-            });
-
-            const prefJson = JSON.stringify({ travel, risk, schedule, modalities });
-
-            // Disable the panel
-            panelDiv.querySelectorAll('input, button').forEach(el => el.disabled = true);
-            panelDiv.querySelector('#pref-confirm-btn').textContent = 'Preferences saved';
-            panelDiv.querySelector('#pref-confirm-btn').className = 'flex-1 px-3 py-2 text-xs font-medium text-white bg-green-500 rounded-lg cursor-default';
-
-            // Send as chat message
-            userInput.value = prefJson;
-            messageForm.dispatchEvent(new Event('submit'));
-        });
-
-        // Wire up skip button
-        panelDiv.querySelector('#pref-skip-btn').addEventListener('click', () => {
-            panelDiv.querySelectorAll('input, button').forEach(el => el.disabled = true);
-            panelDiv.querySelector('#pref-skip-btn').textContent = 'Skipped';
-
-            userInput.value = 'skip';
-            messageForm.dispatchEvent(new Event('submit'));
-        });
     }
 
     // Build preference breakdown HTML for trial cards
@@ -498,26 +473,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const panelDiv = document.createElement('div');
         panelDiv.className = 'flex justify-start w-full';
 
-        const auditItems = conceptAudit.map(audit => {
-            if (!audit.query_success) {
-                // Failed query
-                return `
-                    <div class="p-3 bg-red-50 border border-red-200 rounded-lg">
-                        <div class="flex items-center gap-2 mb-1">
-                            <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold">!</span>
-                            <span class="text-sm font-medium text-red-700">"${audit.query}"</span>
-                            <span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-600">No match</span>
-                        </div>
-                        <p class="text-xs text-red-600 ml-7">${audit.failure_reason || 'Could not map to a medical concept.'}</p>
-                        ${audit.suggestions && audit.suggestions.length > 0 ? `
-                            <div class="ml-7 mt-2">
-                                <p class="text-[10px] font-medium text-red-500 uppercase">Suggestions:</p>
-                                ${audit.suggestions.map(s => `<p class="text-xs text-red-600 mt-0.5">- ${s}</p>`).join('')}
-                            </div>
-                        ` : ''}
-                    </div>`;
-            }
+        const successAudits = conceptAudit.filter(a => a.query_success);
+        const failedAudits = conceptAudit.filter(a => !a.query_success);
 
+        const successItems = successAudits.map(audit => {
             const canon = audit.canonical_concept;
             const included = audit.included_concepts || [];
             const excluded = audit.excluded_concepts || [];
@@ -531,15 +490,15 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span class="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold">&#10003;</span>
                         <span class="text-sm font-medium text-slate-800">"${audit.query}"</span>
                         <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                        <span class="text-sm font-medium text-blue-700">${canon ? canon.canonical_name : audit.query}</span>
-                        ${canon ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-blue-100 text-blue-600">${canon.match_type} match</span>` : ''}
+                        <span class="text-sm font-medium text-slate-700">${canon ? canon.canonical_name : audit.query}</span>
+                        ${canon ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-slate-100 text-slate-600">${canon.match_type} match</span>` : ''}
                     </div>
 
                     ${canon ? `<p class="text-[10px] font-mono text-slate-400 ml-7 mb-2">${canon.snomed_pattern}</p>` : ''}
 
                     <div class="ml-7">
                         <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.expand-text').textContent = this.nextElementSibling.classList.contains('hidden') ? 'Show details' : 'Hide details'"
-                                class="text-xs text-blue-600 hover:text-blue-800 mb-1">
+                                class="text-xs text-primary/60 hover:text-primary mb-1">
                             <span class="expand-text">Show details</span>
                         </button>
                         <div class="hidden space-y-2 mt-1">
@@ -595,7 +554,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                             ${trialTerms.length > 0 ? `
                                 <div>
-                                    <p class="text-[10px] font-semibold text-blue-600 uppercase">Trial eligibility terms matched</p>
+                                    <p class="text-[10px] font-semibold text-slate-600 uppercase">Trial eligibility terms matched</p>
                                     ${trialTerms.slice(0, 8).map(t => `<p class="text-xs text-slate-600 py-0.5">${t}</p>`).join('')}
                                     ${trialTerms.length > 8 ? `<p class="text-[10px] text-slate-400">+${trialTerms.length - 8} more...</p>` : ''}
                                 </div>
@@ -605,36 +564,51 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>`;
         }).join('');
 
-        panelDiv.innerHTML = `
-            <div class="flex items-start space-x-3 w-full max-w-[98%]">
-                <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                </div>
-                <div class="flex-1 min-w-0">
-                    <div class="border border-purple-200 rounded-xl overflow-hidden">
-                        <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.expand-icon').classList.toggle('rotate-180')"
-                                class="w-full flex items-center justify-between px-4 py-3 bg-purple-50 hover:bg-purple-100 transition-colors text-left">
-                            <span class="text-sm font-medium text-purple-800 flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                                What We Searched For
-                            </span>
+        const failedToggle = failedAudits.length > 0 ? `
+            <div class="mt-1">
+                <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.failed-toggle-text').textContent = this.nextElementSibling.classList.contains('hidden') ? '${failedAudits.length} concept${failedAudits.length > 1 ? 's' : ''} couldn\\'t be mapped' : 'Hide unmapped concepts'"
+                        class="text-xs text-slate-400 hover:text-slate-600 flex items-center gap-1">
+                    <span class="w-4 h-4 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-[10px] font-bold">?</span>
+                    <span class="failed-toggle-text">${failedAudits.length} concept${failedAudits.length > 1 ? 's' : ''} couldn't be mapped</span>
+                </button>
+                <div class="hidden space-y-2 mt-2">
+                    ${failedAudits.map(audit => `
+                        <div class="p-2 bg-slate-50 border border-slate-200 rounded-lg">
                             <div class="flex items-center gap-2">
-                                <span class="text-xs text-purple-500">${conceptAudit.length} concept${conceptAudit.length > 1 ? 's' : ''} mapped</span>
-                                <svg class="w-4 h-4 text-purple-400 expand-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <span class="text-xs text-slate-500">"${audit.query}"</span>
+                                <span class="text-[10px] text-slate-400 italic">${audit.failure_reason || 'No matching medical concept'}</span>
                             </div>
-                        </button>
-                        <div class="hidden px-4 py-3 bg-white space-y-3">
-                            <p class="text-xs text-slate-500">Here's how we interpreted your search and what medical concepts we looked for:</p>
-                            ${auditItems}
+                            ${audit.suggestions && audit.suggestions.length > 0 ? `
+                                <p class="text-[10px] text-slate-400 mt-1">Try: ${audit.suggestions.slice(0, 3).join(', ')}</p>
+                            ` : ''}
                         </div>
+                    `).join('')}
+                </div>
+            </div>
+        ` : '';
+
+        panelDiv.innerHTML = `
+            <div class="w-full max-w-[98%]">
+                <div class="border border-warm-border rounded-xl overflow-hidden">
+                    <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.expand-icon').classList.toggle('rotate-180')"
+                            class="w-full flex items-center justify-between px-4 py-3 bg-[#f5f5f0] hover:bg-[#eeedea] transition-colors text-left">
+                        <span class="text-sm font-medium text-slate-700 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            What We Searched For
+                        </span>
+                        <svg class="w-4 h-4 text-slate-400 expand-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="hidden px-4 py-3 bg-white space-y-3">
+                        <p class="text-xs text-slate-500">Here's how we interpreted your search and what medical concepts we looked for:</p>
+                        ${successItems}
+                        ${failedToggle}
+                    </div>
                     </div>
                 </div>
             </div>`;
 
         messagesContainer.appendChild(panelDiv);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        scrollToBottom();
     }
 
     // Handle form submission
@@ -647,11 +621,36 @@ document.addEventListener('DOMContentLoaded', function() {
         const existingQuickSelects = document.querySelectorAll('[id^="quick-select"]');
         existingQuickSelects.forEach(el => el.remove());
 
-        addMessage('user', message);
+        // Clear localStorage on explicit reset
+        if (/\b(start over|restart|reset|begin again|new search|clear)\b/i.test(message)) {
+            clearSession();
+        }
+
+        // Don't show internal /update commands as user messages
+        if (!message.startsWith('/update ')) {
+            addMessage('user', message);
+        }
         userInput.value = '';
 
         showTypingIndicator();
         isWaitingForResponse = true;
+
+        // Show progress message if search takes more than 5 seconds
+        const searchTimer = setTimeout(() => {
+            const indicator = document.getElementById('typing-indicator');
+            if (indicator) {
+                indicator.innerHTML = `
+                    <div class="bg-[#f5f5f0] px-4 py-3 rounded-xl rounded-tl-sm inline-flex items-center gap-3">
+                        <div class="typing-indicator-dots flex space-x-1.5 items-center">
+                            <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                            <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                            <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                        </div>
+                        <span class="text-xs text-slate-500">Searching across trials — this can take a moment...</span>
+                    </div>
+                `;
+            }
+        }, 5000);
 
         try {
             const response = await fetch('/api/chat', {
@@ -664,95 +663,150 @@ document.addEventListener('DOMContentLoaded', function() {
                 credentials: 'same-origin'
             });
 
+            clearTimeout(searchTimer);
+
             if (!response.ok) {
-                const errorText = await response.text();
-                throw new Error(`Server responded with status ${response.status}: ${errorText}`);
+                throw new Error(`Server responded with status ${response.status}`);
             }
 
             const data = await response.json();
 
             removeTypingIndicator();
-
-            if (data.status === 'preferences') {
-                if (data.response) {
-                    addMessage('assistant', data.response);
-                }
-                updateProgress(3);
-                renderPreferencePanel();
-            } else if (data.trials) {
-                if (data.trials.length > 0) {
-                    updateProgress(4);
-                    // Show concept audit transparency panel if available
-                    if (data.concept_audit && data.concept_audit.length > 0) {
-                        renderConceptAuditPanel(data.concept_audit);
-                    }
-                    showTrialMatches(data.trials);
-                } else {
-                    // Show concept audit even on failure to explain why
-                    if (data.concept_audit && data.concept_audit.length > 0) {
-                        renderConceptAuditPanel(data.concept_audit);
-                    }
-                    addMessage('assistant', 'No matching trials found. Would you like to try a different search?');
-                }
-            } else if (data.response) {
-                detectStateFromResponse(data.response);
-                addMessageWithQuickSelect('assistant', data.response);
-            } else if (data.text) {
-                detectStateFromResponse(data.text);
-                addMessageWithQuickSelect('assistant', data.text);
-            } else {
-                addMessage('assistant', 'I received an unexpected response. Please try again.');
-            }
+            handleResponse(data);
         } catch (error) {
+            clearTimeout(searchTimer);
             console.error('Error in handleSubmit:', error);
             removeTypingIndicator();
 
-            let errorMessage = 'Sorry, something went wrong. Please try again.';
-            if (error.message) {
-                errorMessage += ` (${error.message})`;
-            }
-
-            addMessage('assistant', errorMessage);
+            addMessage('assistant', "I'm having trouble processing that right now. Could you try again in a moment?");
         } finally {
             isWaitingForResponse = false;
         }
     }
 
+    // Render editable patient summary card before results
+    function renderPatientSummary(summary) {
+        if (!summary) return;
+        const fields = [
+            { key: 'condition', label: 'Condition', value: summary.condition },
+            { key: 'age', label: 'Age', value: summary.age },
+            { key: 'location', label: 'Location', value: summary.location },
+            { key: 'gender', label: 'Gender', value: summary.gender },
+        ].filter(f => f.value);
+
+        if (fields.length === 0) return;
+
+        const card = document.createElement('div');
+        card.className = 'flex justify-start mb-2';
+        card.id = 'patient-summary-card';
+
+        const fieldsHtml = fields.map(f => `
+            <div class="flex items-center justify-between py-1.5 group">
+                <span class="text-xs text-slate-400">${f.label}</span>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-slate-700 font-medium">${f.value}</span>
+                    <button onclick="editPatientField('${f.key}', '${String(f.value).replace(/'/g, "\\'")}')"
+                        class="opacity-0 group-hover:opacity-100 text-[10px] text-slate-400 hover:text-primary transition-opacity px-1.5 py-0.5 rounded hover:bg-slate-100">
+                        Edit
+                    </button>
+                </div>
+            </div>
+        `).join('');
+
+        card.innerHTML = `
+            <div class="w-full max-w-[85%]">
+                <div class="bg-white border border-warm-border rounded-xl px-4 py-3">
+                    <p class="text-[10px] text-slate-400 uppercase tracking-wide mb-1">Your search profile</p>
+                    <div class="divide-y divide-slate-100">
+                        ${fieldsHtml}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        messagesContainer.appendChild(card);
+    }
+
+    // Handle field edit from summary card
+    window.editPatientField = function(field, currentValue) {
+        const newValue = prompt(`Update ${field}:`, currentValue);
+        if (newValue && newValue.trim() !== currentValue) {
+            // Remove old summary card
+            const oldCard = document.getElementById('patient-summary-card');
+            if (oldCard) oldCard.remove();
+
+            // Send update command
+            userInput.value = `/update ${field}=${newValue.trim()}`;
+            messageForm.dispatchEvent(new Event('submit'));
+        }
+    };
+
+    // Handle API response data
+    function handleResponse(data) {
+        if (data.trials) {
+            if (data.trials.length > 0) {
+                updateProgress(4);
+                renderPatientSummary(data.patient_summary);
+                if (data.concept_audit && data.concept_audit.length > 0) {
+                    renderConceptAuditPanel(data.concept_audit);
+                }
+                showTrialMatches(data.trials);
+            } else {
+                if (data.concept_audit && data.concept_audit.length > 0) {
+                    renderConceptAuditPanel(data.concept_audit);
+                }
+                const noResultsHtml = `We couldn't find trials matching your criteria. A few things to try:\n\n• **Use a broader condition term** — e.g., "cancer" instead of a specific subtype\n• **Expand your travel distance** — there may be trials further away\n• **Remove treatment type preference** — if you specified drug-only or avoided surgery, relaxing that may help\n\nYou can start a new search by telling me about a different condition.`;
+                addMessage('assistant', noResultsHtml);
+            }
+        } else if (data.response) {
+            detectStateFromResponse(data.response);
+            addMessageWithQuickSelect('assistant', data.response);
+        } else if (data.text) {
+            detectStateFromResponse(data.text);
+            addMessageWithQuickSelect('assistant', data.text);
+        } else {
+            addMessage('assistant', "I didn't quite get that. Could you rephrase or try again?");
+        }
+
+        // Persist session after every response
+        saveSession();
+    }
+
     // Add a message to the chat
+    // Simple markdown renderer for chat bubbles
+    function renderMarkdown(text) {
+        return text
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g, '<em>$1</em>')
+            .replace(/\n\n/g, '</p><p class="mt-2">')
+            .replace(/\n• /g, '</p><p class="mt-1">• ')
+            .replace(/\n/g, '<br>');
+    }
+
     function addMessage(role, content) {
         const messageDiv = document.createElement('div');
-        messageDiv.className = `flex ${role === 'user' ? 'justify-end' : 'justify-start'}`;
+        messageDiv.className = `flex ${role === 'user' ? 'justify-end' : 'justify-start'} message-enter`;
 
         if (role === 'user') {
             messageDiv.innerHTML = `
-                <div class="flex items-start space-x-3 max-w-[85%] flex-row-reverse">
-                    <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0 ml-3">
-                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                        </svg>
-                    </div>
-                    <div class="bg-blue-600 text-white p-4 rounded-2xl rounded-tr-none">
-                        <p>${content.replace(/\n/g, '<br>')}</p>
+                <div class="max-w-[80%]">
+                    <div class="bg-primary text-white px-4 py-3 rounded-xl rounded-tr-sm text-sm leading-relaxed">
+                        <p>${renderMarkdown(content)}</p>
                     </div>
                 </div>
             `;
         } else {
             messageDiv.innerHTML = `
-                <div class="flex items-start space-x-3 max-w-[85%]">
-                    <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <div class="bg-slate-50 text-slate-800 p-4 rounded-2xl rounded-tl-none border border-slate-100">
-                        <p>${content.replace(/\n/g, '<br>')}</p>
+                <div class="max-w-[85%]">
+                    <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm leading-relaxed">
+                        <p>${renderMarkdown(content)}</p>
                     </div>
                 </div>
             `;
         }
 
         messagesContainer.appendChild(messageDiv);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        scrollToBottom();
     }
 
     // Add message with quick select buttons
@@ -766,57 +820,50 @@ document.addEventListener('DOMContentLoaded', function() {
         if (lowerContent.includes('gender') || lowerContent.includes('sex')) {
             quickSelectHtml = `
                 <div id="quick-select-gender" class="mt-3 flex flex-wrap gap-2">
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Male">Male</button>
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Female">Female</button>
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Other">Other</button>
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Prefer not to say">Prefer not to say</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Male">Male</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Female">Female</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Other">Other</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Prefer not to say">Prefer not to say</button>
                 </div>
             `;
         } else if (lowerContent.includes('location') || lowerContent.includes('where are you') || lowerContent.includes('zip')) {
             quickSelectHtml = `
                 <div id="quick-select-location" class="mt-3 flex flex-wrap gap-2">
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="San Francisco, CA">San Francisco, CA</button>
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="New York, NY">New York, NY</button>
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Los Angeles, CA">Los Angeles, CA</button>
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Chicago, IL">Chicago, IL</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="San Francisco, CA">San Francisco, CA</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="New York, NY">New York, NY</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Los Angeles, CA">Los Angeles, CA</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Chicago, IL">Chicago, IL</button>
                 </div>
             `;
         } else if (lowerContent.includes('condition') || lowerContent.includes('symptom') || lowerContent.includes('health')) {
             quickSelectHtml = `
                 <div id="quick-select-condition" class="mt-3 flex flex-wrap gap-2">
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Cancer">Cancer</button>
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Diabetes">Diabetes</button>
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Heart Disease">Heart Disease</button>
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Arthritis">Arthritis</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Cancer">Cancer</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Diabetes">Diabetes</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Heart Disease">Heart Disease</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Arthritis">Arthritis</button>
                 </div>
             `;
         } else if (lowerContent.includes('search') || lowerContent.includes('proceed') || lowerContent.includes('confirm')) {
             quickSelectHtml = `
                 <div id="quick-select-confirm" class="mt-3 flex flex-wrap gap-2">
                     <button class="quick-btn px-4 py-2 bg-green-50 border border-green-200 rounded-full text-sm text-green-700 hover:bg-green-100 hover:border-green-300 transition-all" data-value="Yes, search for trials">Yes, search for trials</button>
-                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-all" data-value="Let me add more details">Add more details</button>
+                    <button class="quick-btn px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="Let me add more details">Add more details</button>
                 </div>
             `;
         }
 
         messageDiv.innerHTML = `
-            <div class="flex items-start space-x-3 max-w-[85%]">
-                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                    </svg>
+            <div class="max-w-[85%]">
+                <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm leading-relaxed">
+                    <p>${renderMarkdown(content)}</p>
                 </div>
-                <div>
-                    <div class="bg-slate-50 text-slate-800 p-4 rounded-2xl rounded-tl-none border border-slate-100">
-                        <p>${content.replace(/\n/g, '<br>')}</p>
-                    </div>
-                    ${quickSelectHtml}
-                </div>
+                ${quickSelectHtml}
             </div>
         `;
 
         messagesContainer.appendChild(messageDiv);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        scrollToBottom();
         initQuickButtons();
     }
 
@@ -826,23 +873,16 @@ document.addEventListener('DOMContentLoaded', function() {
         typingDiv.className = 'flex justify-start';
         typingDiv.id = 'typing-indicator';
         typingDiv.innerHTML = `
-            <div class="flex items-start space-x-3">
-                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                    </svg>
-                </div>
-                <div class="bg-slate-50 p-4 rounded-2xl rounded-tl-none border border-slate-100">
-                    <div class="typing-indicator-dots flex space-x-1">
-                        <div class="typing-dot w-2 h-2 bg-slate-400 rounded-full"></div>
-                        <div class="typing-dot w-2 h-2 bg-slate-400 rounded-full"></div>
-                        <div class="typing-dot w-2 h-2 bg-slate-400 rounded-full"></div>
-                    </div>
+            <div class="bg-[#f5f5f0] px-4 py-3 rounded-xl rounded-tl-sm inline-flex">
+                <div class="typing-indicator-dots flex space-x-1.5 items-center">
+                    <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                    <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                    <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
                 </div>
             </div>
         `;
         messagesContainer.appendChild(typingDiv);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        scrollToBottom();
     }
 
     // Remove typing indicator
@@ -890,197 +930,190 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Create a single rich trial card
     function createTrialCard(trial, eligibility, index) {
-        const isSaved = savedTrials.has(trial.nct_id);
-        const hardPercent = (eligibility.hardCriteriaMet / eligibility.hardCriteriaTotal) * 100;
-        const softPercent = (eligibility.softCriteriaMet / eligibility.softCriteriaTotal) * 100;
+
+        // --- Eligibility summary sentence ---
+        const totalChecked = eligibility.hardCriteriaTotal + eligibility.softCriteriaTotal;
+        const totalMet = eligibility.hardCriteriaMet + eligibility.softCriteriaMet;
+        const totalUnknown = totalChecked - totalMet;
+
+        let eligSummaryText, eligSummaryClass, eligSummaryIcon;
+        if (eligibility.hardStatus === 'met') {
+            eligSummaryText = 'Strong eligibility match';
+            eligSummaryClass = 'text-green-700 bg-green-50 border-green-200';
+            eligSummaryIcon = `<svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+        } else if (eligibility.hardStatus === 'violated') {
+            eligSummaryText = 'May not qualify — key criteria not met';
+            eligSummaryClass = 'text-red-700 bg-red-50 border-red-200';
+            eligSummaryIcon = `<svg class="w-4 h-4 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+        } else {
+            eligSummaryText = 'Partial match — some criteria need review';
+            eligSummaryClass = 'text-amber-700 bg-amber-50 border-amber-200';
+            eligSummaryIcon = `<svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>`;
+        }
+
+        let criteriaDetail = '';
+        if (totalChecked > 0) {
+            if (totalUnknown === 0) {
+                criteriaDetail = `You meet ${totalMet} of ${totalChecked} checked criteria.`;
+            } else if (totalUnknown > totalMet) {
+                // Most criteria are unknown — frame as study-team verification
+                criteriaDetail = `${totalMet} of ${totalChecked} criteria confirmed. The remaining ${totalUnknown} would need to be verified by the study team.`;
+            } else {
+                criteriaDetail = `You meet ${totalMet} of ${totalChecked} checked criteria. ${totalUnknown} still need to be verified.`;
+            }
+        }
+
+        // --- Match score color ---
+        const scoreColor = eligibility.matchScore >= 70
+            ? 'from-green-500 to-green-600'
+            : eligibility.matchScore >= 40
+                ? 'from-primary to-primary-dark'
+                : 'from-slate-400 to-slate-500';
+
+        // --- Key facts ---
+        let locationLine = '';
+        if (trial.distance && trial.distance < 9000) {
+            const dist = Math.round(trial.distance);
+            const distColor = dist <= 50
+                ? 'bg-green-100 text-green-700'
+                : dist <= 200
+                    ? 'bg-amber-100 text-amber-700'
+                    : 'bg-red-100 text-red-700';
+            locationLine = `<span class="inline-flex items-center gap-1 text-slate-600">${dist} mi <span class="px-1.5 py-0.5 text-[10px] font-medium rounded-full ${distColor}">${dist <= 50 ? 'Nearby' : dist <= 200 ? 'Regional' : 'Distant'}</span></span>`;
+        }
+        const phaseLine = trial.phase || '';
+        const enrollmentLine = trial.enrollment ? `${trial.enrollment} enrolled` : '';
+        const phaseEnrollment = [phaseLine, enrollmentLine].filter(Boolean).join(' · ');
+        const drugsLine = trial.drugs || '';
 
         return `
-            <div class="trial-card bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-lg transition-all duration-200" data-nct="${trial.nct_id}" data-status="${eligibility.hardStatus}">
-                <!-- Card Header -->
-                <div class="p-5 pb-4">
-                    <!-- Top Row: Title + Match Score -->
+            <div class="trial-card bg-white rounded-xl border border-warm-border overflow-hidden hover:shadow-lg transition-all duration-200" data-nct="${trial.nct_id}" data-status="${eligibility.hardStatus}">
+                <div class="p-5">
+                    <!-- TOP: Title + Match Score + Status -->
                     <div class="flex items-start justify-between gap-4 mb-3">
                         <div class="flex-1 min-w-0">
-                            <h3 class="font-semibold text-slate-800 text-base leading-snug mb-1 line-clamp-2">
+                            <h3 class="font-semibold text-slate-800 text-base leading-snug line-clamp-2">
                                 ${trial.title || 'Clinical Trial'}
                             </h3>
-                            <p class="text-xs text-slate-500 font-mono">${trial.nct_id}</p>
+                            <div class="flex flex-wrap items-center gap-2 mt-2">
+                                ${getStatusChip(eligibility.hardStatus)}
+                                ${trial.status ? `<span class="px-2.5 py-1 bg-slate-100 ${getStatusColor(trial.status)} rounded-full text-xs font-medium">${trial.status}</span>` : ''}
+                            </div>
                         </div>
                         <div class="flex-shrink-0 text-center">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-sm">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br ${scoreColor} flex items-center justify-center shadow-sm">
                                 <span class="text-white font-bold text-lg">${eligibility.matchScore}%</span>
                             </div>
-                            <p class="text-xs text-slate-500 mt-1">Match</p>
+                            <p class="text-[10px] text-slate-400 mt-1 font-medium">match</p>
                         </div>
                     </div>
 
-                    <!-- Status Chip + Phase + Distance -->
-                    <div class="flex flex-wrap items-center gap-2 mb-4">
-                        ${getStatusChip(eligibility.hardStatus)}
-                        ${trial.phase ? `<span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">${trial.phase}</span>` : ''}
-                        ${trial.distance && trial.distance < 9000 ? `<span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">${Math.round(trial.distance)} mi away</span>` : ''}
-                        ${trial.status ? `<span class="px-2.5 py-1 bg-slate-100 ${getStatusColor(trial.status)} rounded-full text-xs font-medium">${trial.status}</span>` : ''}
+                    <!-- MIDDLE: Key Facts -->
+                    <div class="text-sm space-y-1 mb-4 py-3 border-y border-slate-100">
+                        ${locationLine ? `<div class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>${locationLine}</div>` : ''}
+                        ${phaseEnrollment ? `<div class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg><span class="text-slate-600">${phaseEnrollment}</span></div>` : ''}
+                        ${drugsLine ? `<div class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg><span class="text-slate-600 text-xs line-clamp-1">${drugsLine}</span></div>` : ''}
                     </div>
 
-                    <!-- Action Links (Save, Share, ClinicalTrials.gov) -->
-                    <div class="flex flex-wrap items-center gap-2 mb-4 pb-4 border-b border-slate-100">
-                        <button onclick="toggleSaveTrial('${trial.nct_id}')" class="inline-flex items-center gap-1.5 px-3 py-1.5 ${isSaved ? 'bg-amber-100 text-amber-700 border border-amber-200' : 'bg-white text-slate-600 border border-slate-200'} text-sm font-medium rounded-lg hover:bg-slate-100 transition-colors" id="save-btn-${trial.nct_id}">
-                            <svg class="w-4 h-4 ${isSaved ? 'fill-amber-500' : ''}" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
-                            ${isSaved ? 'Saved' : 'Save'}
-                        </button>
-                        <button onclick="shareWithDoctor('${trial.nct_id}')" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white text-slate-600 border border-slate-200 text-sm font-medium rounded-lg hover:bg-slate-100 transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
-                            Share with Doctor
-                        </button>
-                        <a href="https://clinicaltrials.gov/ct2/show/${trial.nct_id}" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-600 border border-blue-200 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            ClinicalTrials.gov
-                        </a>
-                    </div>
-
-                    <!-- Eligibility Bars -->
-                    <div class="space-y-3 mb-4">
-                        <!-- Hard Criteria -->
+                    <!-- BOTTOM: Eligibility Summary -->
+                    <div class="flex items-start gap-2 px-3 py-2.5 rounded-lg border ${eligSummaryClass}">
+                        ${eligSummaryIcon}
                         <div>
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-xs font-medium text-slate-600 flex items-center gap-1.5">
-                                    <svg class="w-3.5 h-3.5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                                    Required Criteria
-                                </span>
-                                <span class="text-xs font-semibold ${eligibility.hardCriteriaMet === eligibility.hardCriteriaTotal ? 'text-green-600' : 'text-amber-600'}">
-                                    ${eligibility.hardCriteriaMet}/${eligibility.hardCriteriaTotal}
-                                </span>
-                            </div>
-                            <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
-                                <div class="h-full rounded-full transition-all duration-500 ${eligibility.hardCriteriaMet === eligibility.hardCriteriaTotal ? 'bg-green-500' : 'bg-amber-500'}" style="width: ${hardPercent}%"></div>
-                            </div>
-                        </div>
-
-                        <!-- Soft Criteria -->
-                        <div>
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-xs font-medium text-slate-600 flex items-center gap-1.5">
-                                    <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                                    Preferences Matched
-                                </span>
-                                <span class="text-xs font-semibold text-blue-600">
-                                    ${eligibility.softCriteriaMet}/${eligibility.softCriteriaTotal}
-                                </span>
-                            </div>
-                            <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
-                                <div class="h-full bg-blue-500 rounded-full transition-all duration-500" style="width: ${softPercent}%"></div>
-                            </div>
+                            <p class="text-sm font-medium">${eligSummaryText}</p>
+                            ${criteriaDetail ? `<p class="text-xs opacity-75 mt-0.5">${criteriaDetail}</p>` : ''}
                         </div>
                     </div>
-
-                    <!-- Why This Match — Expandable Criteria Breakdown -->
-                    ${buildCriteriaBreakdown(trial, eligibility)}
                 </div>
 
-                <!-- Card Footer - View Details -->
+                <!-- CTA -->
                 <div class="px-5 py-3 bg-slate-50 border-t border-slate-100">
-                    <button onclick="viewTrialDetails('${trial.nct_id}')" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                        View Full Details
+                    <button onclick="viewTrialDetails('${trial.nct_id}')" class="w-full px-4 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors">
+                        View Details
                     </button>
                 </div>
             </div>
         `;
     }
 
-    // Show trial matches with rich cards
+    // Show trial matches grouped by eligibility status
     function showTrialMatches(trials) {
         const container = document.createElement('div');
         container.className = 'flex justify-start w-full';
 
-        // Reset display count
-        displayedTrialCount = 6;
-
-        // Generate eligibility data for each trial and store globally
+        // Generate eligibility data and store globally
         allTrials = trials.map(trial => ({
             trial,
             eligibility: generateEligibilityData(trial)
         }));
 
-        // Sort by match score by default
-        allTrials.sort((a, b) => b.eligibility.matchScore - a.eligibility.matchScore);
+        // Group by status, sorted by match score within each group
+        const eligible = allTrials.filter(t => t.eligibility.hardStatus === 'met')
+            .sort((a, b) => b.eligibility.matchScore - a.eligibility.matchScore);
+        const review = allTrials.filter(t => t.eligibility.hardStatus === 'review')
+            .sort((a, b) => b.eligibility.matchScore - a.eligibility.matchScore);
+        const ineligible = allTrials.filter(t => t.eligibility.hardStatus === 'violated')
+            .sort((a, b) => b.eligibility.matchScore - a.eligibility.matchScore);
 
-        // Count by status for filter tabs
-        const statusCounts = {
-            all: allTrials.length,
-            eligible: allTrials.filter(t => t.eligibility.hardStatus === 'met').length,
-            review: allTrials.filter(t => t.eligibility.hardStatus === 'review').length
-        };
+        // Build section HTML
+        function buildSection(items, title, colorClass, iconSvg) {
+            if (items.length === 0) return '';
+            const cards = items.map((item, i) =>
+                createTrialCard(item.trial, item.eligibility, i)
+            ).join('');
+            return `
+                <div class="mb-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        ${iconSvg}
+                        <h4 class="text-sm font-semibold ${colorClass}">${title} (${items.length})</h4>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4">
+                        ${cards}
+                    </div>
+                </div>`;
+        }
 
-        // Only show first batch of trials
-        const initialTrials = allTrials.slice(0, displayedTrialCount);
-        const trialsHtml = initialTrials.map((item, index) =>
-            createTrialCard(item.trial, item.eligibility, index)
-        ).join('');
+        const eligibleSection = buildSection(eligible, 'Strong matches',
+            'text-green-700',
+            '<svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
+        );
+        const reviewSection = buildSection(review, 'Needs review',
+            'text-amber-700',
+            '<svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>'
+        );
+        const ineligibleSection = buildSection(ineligible, 'May not qualify',
+            'text-red-700',
+            '<svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
+        );
 
-        const hasMoreTrials = allTrials.length > displayedTrialCount;
+        // Sort dropdown only for 10+ results
+        const sortControl = allTrials.length >= 10 ? `
+            <div class="flex items-center justify-end gap-2 mb-4">
+                <span class="text-xs text-slate-500">Sort by:</span>
+                <select onchange="sortTrials(this.value)" class="text-xs border border-slate-200 rounded-lg px-2 py-1 bg-white focus:outline-none focus:ring-2 focus:ring-primary/30">
+                    <option value="match" ${currentSortBy === 'match' ? 'selected' : ''}>Match Score</option>
+                    <option value="phase" ${currentSortBy === 'phase' ? 'selected' : ''}>Phase</option>
+                </select>
+            </div>` : '';
 
         container.innerHTML = `
-            <div class="flex items-start space-x-3 w-full max-w-[98%]">
-                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
+            <div class="w-full max-w-[98%]">
+                <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm mb-5">
+                    <p>I found <strong>${trials.length} clinical trial${trials.length > 1 ? 's' : ''}</strong> that may be relevant.</p>
+                    ${trials.length === 1 ? '<p class="text-xs text-slate-500 mt-1">Only 1 trial matched. You could try broadening your search by expanding your travel range or using a broader condition term.</p>' : ''}
                 </div>
-                <div class="flex-1 min-w-0">
-                    <!-- Success Message -->
-                    <div class="bg-green-50 text-green-800 p-4 rounded-2xl rounded-tl-none border border-green-100 mb-4">
-                        <p class="font-medium">Great news! I found ${trials.length} clinical trial${trials.length > 1 ? 's' : ''} that may be right for you.</p>
-                        <p class="text-sm mt-1 text-green-700">Showing ${Math.min(displayedTrialCount, trials.length)} of ${trials.length} trials, sorted by match score.</p>
-                    </div>
 
-                    <!-- Filter & Sort Controls -->
-                    <div class="bg-white rounded-xl border border-slate-200 p-4 mb-4">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                            <!-- Filter Tabs -->
-                            <div class="flex items-center gap-1 bg-slate-100 rounded-lg p-1">
-                                <button onclick="filterTrials('all')" class="filter-tab px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${currentFilter === 'all' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-600 hover:text-slate-800'}" data-filter="all">
-                                    All <span class="text-xs text-slate-400 ml-1">${statusCounts.all}</span>
-                                </button>
-                                <button onclick="filterTrials('eligible')" class="filter-tab px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${currentFilter === 'eligible' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-600 hover:text-slate-800'}" data-filter="eligible">
-                                    Eligible <span class="text-xs text-green-500 ml-1">${statusCounts.eligible}</span>
-                                </button>
-                                <button onclick="filterTrials('review')" class="filter-tab px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${currentFilter === 'review' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-600 hover:text-slate-800'}" data-filter="review">
-                                    Review <span class="text-xs text-amber-500 ml-1">${statusCounts.review}</span>
-                                </button>
-                            </div>
+                ${sortControl}
 
-                            <!-- Sort Dropdown -->
-                            <div class="flex items-center gap-2">
-                                <span class="text-sm text-slate-500">Sort by:</span>
-                                <select onchange="sortTrials(this.value)" class="text-sm border border-slate-200 rounded-lg px-3 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    <option value="match" ${currentSortBy === 'match' ? 'selected' : ''}>Match Score</option>
-                                    <option value="phase" ${currentSortBy === 'phase' ? 'selected' : ''}>Phase</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Trial Cards Grid -->
-                    <div id="trials-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        ${trialsHtml}
-                    </div>
-
-                    <!-- Load More (for pagination) -->
-                    ${hasMoreTrials ? `
-                        <div class="text-center mt-4" id="load-more-btn">
-                            <button onclick="loadMoreTrials()" class="px-6 py-2.5 bg-white border border-slate-200 text-sm text-blue-600 hover:bg-blue-50 hover:border-blue-300 font-medium rounded-lg transition-colors flex items-center gap-2 mx-auto">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                Load more trials (${allTrials.length - displayedTrialCount} remaining)
-                            </button>
-                        </div>
-                    ` : ''}
+                <div id="trials-grid">
+                    ${eligibleSection}
+                    ${reviewSection}
+                    ${ineligibleSection}
                 </div>
             </div>
         `;
 
         messagesContainer.appendChild(container);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        scrollToBottom();
     }
 
     // Toggle save/shortlist trial
@@ -1121,79 +1154,45 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Filter trials
-    window.filterTrials = function(filter) {
-        currentFilter = filter;
-        const cards = document.querySelectorAll('.trial-card');
-        const tabs = document.querySelectorAll('.filter-tab');
-
-        tabs.forEach(tab => {
-            if (tab.dataset.filter === filter) {
-                tab.className = 'filter-tab px-3 py-1.5 text-sm font-medium rounded-md transition-colors bg-white text-slate-800 shadow-sm';
-            } else {
-                tab.className = 'filter-tab px-3 py-1.5 text-sm font-medium rounded-md transition-colors text-slate-600 hover:text-slate-800';
-            }
-        });
-
-        cards.forEach(card => {
-            const status = card.dataset.status;
-            if (filter === 'all') {
-                card.style.display = '';
-            } else if (filter === 'eligible' && status === 'met') {
-                card.style.display = '';
-            } else if (filter === 'review' && status === 'review') {
-                card.style.display = '';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    };
-
-    // Sort trials
+    // Sort trials and re-render grouped sections (only shown for 10+ results)
     window.sortTrials = function(sortBy) {
         currentSortBy = sortBy;
         const grid = document.getElementById('trials-grid');
-        if (!grid) return;
+        if (!grid || !allTrials.length) return;
 
-        // Sort the allTrials array
-        const sorted = [...allTrials].sort((a, b) => {
-            if (sortBy === 'match') {
-                return b.eligibility.matchScore - a.eligibility.matchScore;
-            } else if (sortBy === 'phase') {
+        const sorter = (a, b) => {
+            if (sortBy === 'phase') {
                 const phaseA = a.trial.phase || '';
                 const phaseB = b.trial.phase || '';
                 return phaseB.localeCompare(phaseA);
             }
-            return 0;
-        });
+            return b.eligibility.matchScore - a.eligibility.matchScore;
+        };
 
-        // Re-render the cards
-        const trialsHtml = sorted.slice(0, displayedTrialCount).map((item, index) =>
-            createTrialCard(item.trial, item.eligibility, index)
-        ).join('');
-        grid.innerHTML = trialsHtml;
-    };
+        const eligible = allTrials.filter(t => t.eligibility.hardStatus === 'met').sort(sorter);
+        const review = allTrials.filter(t => t.eligibility.hardStatus === 'review').sort(sorter);
+        const ineligible = allTrials.filter(t => t.eligibility.hardStatus === 'violated').sort(sorter);
 
-    // Load more trials (pagination)
-    window.loadMoreTrials = function() {
-        const grid = document.getElementById('trials-grid');
-        const loadMoreBtn = document.getElementById('load-more-btn');
-        if (!grid || !allTrials.length) return;
-
-        // Increase the displayed count
-        const previousCount = displayedTrialCount;
-        displayedTrialCount = Math.min(displayedTrialCount + 6, allTrials.length);
-
-        // Add more cards
-        const newTrials = allTrials.slice(previousCount, displayedTrialCount);
-        newTrials.forEach((item, index) => {
-            const cardHtml = createTrialCard(item.trial, item.eligibility, previousCount + index);
-            grid.insertAdjacentHTML('beforeend', cardHtml);
-        });
-
-        // Hide load more button if all trials are displayed
-        if (displayedTrialCount >= allTrials.length && loadMoreBtn) {
-            loadMoreBtn.style.display = 'none';
+        function renderSection(items, title, colorClass, iconSvg) {
+            if (items.length === 0) return '';
+            const cards = items.map((item, i) => createTrialCard(item.trial, item.eligibility, i)).join('');
+            return `
+                <div class="mb-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        ${iconSvg}
+                        <h4 class="text-sm font-semibold ${colorClass}">${title} (${items.length})</h4>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4">${cards}</div>
+                </div>`;
         }
+
+        grid.innerHTML =
+            renderSection(eligible, 'Strong matches', 'text-green-700',
+                '<svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>') +
+            renderSection(review, 'Needs review', 'text-amber-700',
+                '<svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>') +
+            renderSection(ineligible, 'May not qualify', 'text-red-700',
+                '<svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>');
     };
 
     // Update saved trials section
@@ -1217,7 +1216,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-xs text-slate-500">${trial.nct_id} · ${eligibility.matchScore}% match</p>
                     </div>
                     <div class="flex items-center gap-2">
-                        <a href="https://clinicaltrials.gov/ct2/show/${nctId}" target="_blank" class="p-1.5 text-blue-600 hover:bg-blue-50 rounded transition-colors" title="View on ClinicalTrials.gov">
+                        <a href="https://clinicaltrials.gov/ct2/show/${nctId}" target="_blank" class="p-1.5 text-slate-600 hover:bg-slate-50 rounded transition-colors" title="View on ClinicalTrials.gov">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                         </a>
                         <button onclick="viewTrialDetails('${nctId}')" class="p-1.5 text-slate-600 hover:bg-slate-50 rounded transition-colors" title="View details">
@@ -1342,7 +1341,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                                 ${patientFactHtml}
                             </div>
-                            <button onclick="this.closest('.rounded-lg').querySelector('.criterion-detail').classList.toggle('hidden')" class="text-xs text-blue-600 hover:text-blue-800 whitespace-nowrap ml-2">
+                            <button onclick="this.closest('.rounded-lg').querySelector('.criterion-detail').classList.toggle('hidden')" class="text-xs text-primary/60 hover:text-primary whitespace-nowrap ml-2">
                                 Details
                             </button>
                         </div>
@@ -1383,23 +1382,23 @@ document.addEventListener('DOMContentLoaded', function() {
         let questionsSection = '';
         if (viz.clarifying_questions && viz.clarifying_questions.length > 0) {
             questionsSection = `
-                <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-xl">
+                <div class="mb-6 p-4 bg-accent/5 border border-accent/20 rounded-xl">
                     <div class="flex items-center gap-2 mb-3">
-                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span class="font-medium text-blue-700">Help Us Determine Your Eligibility</span>
-                        <span class="text-xs text-blue-500">(${viz.clarifying_questions.length} questions)</span>
+                        <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium text-slate-700">Help Us Determine Your Eligibility</span>
+                        <span class="text-xs text-slate-500">(${viz.clarifying_questions.length} questions)</span>
                     </div>
-                    <p class="text-sm text-blue-600 mb-3">We don't have enough information to check some criteria. Answering these questions could change your eligibility status:</p>
+                    <p class="text-sm text-slate-600 mb-3">We don't have enough information to check some criteria. Answering these questions could change your eligibility status:</p>
                     <div class="space-y-3">
                         ${viz.clarifying_questions.map((q, i) => `
-                            <div class="p-3 bg-white rounded-lg border border-blue-100">
+                            <div class="p-3 bg-white rounded-lg border border-warm-border">
                                 <div class="flex items-start gap-2">
-                                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold">${i + 1}</span>
+                                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center text-xs font-bold">${i + 1}</span>
                                     <div>
                                         <p class="text-sm text-slate-700 font-medium mb-0.5">${q.human_label}</p>
                                         <p class="text-sm text-slate-600">${q.question}</p>
                                         ${q.formal_constraint ? `<p class="text-[10px] font-mono text-slate-400 mt-1">Constraint: ${q.formal_constraint}</p>` : ''}
-                                        ${q.is_hard ? '<span class="inline-block mt-1 px-1.5 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-600">Required criterion</span>' : '<span class="inline-block mt-1 px-1.5 py-0.5 text-[10px] font-medium rounded bg-blue-100 text-blue-600">Preference criterion</span>'}
+                                        ${q.is_hard ? '<span class="inline-block mt-1 px-1.5 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-600">Required criterion</span>' : '<span class="inline-block mt-1 px-1.5 py-0.5 text-[10px] font-medium rounded bg-slate-100 text-slate-600">Preference criterion</span>'}
                                     </div>
                                 </div>
                             </div>
@@ -1456,7 +1455,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ${softCriteria.length > 0 ? `
                     <div>
                         <div class="flex items-center gap-2 mb-3">
-                            <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                            <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                             <span class="font-medium text-slate-700">Preference Criteria</span>
                             <span class="text-xs text-slate-500">(Flexible)</span>
                         </div>
@@ -1483,159 +1482,210 @@ document.addEventListener('DOMContentLoaded', function() {
                 const trialData = allTrials.find(t => t.trial.nct_id === nctId);
                 const vizBreakdown = trialData?.trial?.eligibility_breakdown;
 
-                // Build criteria HTML using real visualization data
+                // --- 1. ELIGIBILITY CHECKLIST ---
                 let criteriaHtml = '';
                 if (vizBreakdown && vizBreakdown.criteria && vizBreakdown.criteria.length > 0) {
                     criteriaHtml = buildModalVizCriteria(vizBreakdown);
                 } else if (trial.criteria && trial.criteria.length > 0) {
-                    // Fallback to database criteria without visualization
                     const hardCriteria = trial.criteria.filter(c => c.hard_constraint !== false);
                     const softCriteria = trial.criteria.filter(c => c.hard_constraint === false);
-
                     criteriaHtml = `
-                        <div class="mt-6">
-                            <h4 class="font-semibold text-lg mb-4 text-slate-800 flex items-center gap-2">
-                                Eligibility Criteria
-                            </h4>
-                            ${hardCriteria.length > 0 ? `
-                                <div class="mb-4">
-                                    <p class="text-sm font-medium text-slate-600 mb-2">Required Criteria (${hardCriteria.length})</p>
-                                    <div class="space-y-2">
-                                        ${hardCriteria.map(c => `
-                                            <div class="rounded-lg border-l-4 border-slate-300 bg-slate-50 p-3">
-                                                <span class="font-medium text-sm text-slate-700">${c.criterion_type}</span>
-                                                <span class="text-sm text-slate-500 ml-2">${c.criterion_value}</span>
-                                            </div>
-                                        `).join('')}
-                                    </div>
+                        ${hardCriteria.length > 0 ? `
+                            <div class="mb-4">
+                                <p class="text-sm font-medium text-slate-600 mb-2">Required Criteria (${hardCriteria.length})</p>
+                                <div class="space-y-2">
+                                    ${hardCriteria.map(c => `
+                                        <div class="rounded-lg border-l-4 border-slate-300 bg-slate-50 p-3">
+                                            <span class="font-medium text-sm text-slate-700">${c.criterion_type}</span>
+                                            <span class="text-sm text-slate-500 ml-2">${c.criterion_value}</span>
+                                        </div>
+                                    `).join('')}
                                 </div>
-                            ` : ''}
-                            ${softCriteria.length > 0 ? `
-                                <div>
-                                    <p class="text-sm font-medium text-slate-600 mb-2">Preference Criteria (${softCriteria.length})</p>
-                                    <div class="space-y-2">
-                                        ${softCriteria.map(c => `
-                                            <div class="rounded-lg border-l-4 border-blue-300 bg-blue-50 p-3">
-                                                <span class="font-medium text-sm text-slate-700">${c.criterion_type}</span>
-                                                <span class="text-sm text-slate-500 ml-2">${c.criterion_value}</span>
-                                            </div>
-                                        `).join('')}
-                                    </div>
+                            </div>
+                        ` : ''}
+                        ${softCriteria.length > 0 ? `
+                            <div>
+                                <p class="text-sm font-medium text-slate-600 mb-2">Preference Criteria (${softCriteria.length})</p>
+                                <div class="space-y-2">
+                                    ${softCriteria.map(c => `
+                                        <div class="rounded-lg border-l-4 border-slate-300 bg-slate-50 p-3">
+                                            <span class="font-medium text-sm text-slate-700">${c.criterion_type}</span>
+                                            <span class="text-sm text-slate-500 ml-2">${c.criterion_value}</span>
+                                        </div>
+                                    `).join('')}
                                 </div>
-                            ` : ''}
-                        </div>
+                            </div>
+                        ` : ''}
                     `;
                 }
+
+                // Check for unknown criteria to show progressive check inline
+                const unknownCount = vizBreakdown?.counts?.unknown_count ?? 0;
+                const progressiveCheckHtml = unknownCount > 0 ? `
+                    <div class="mt-3 p-3 bg-indigo-50 border border-indigo-200 rounded-lg">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-indigo-800">${unknownCount} criteria couldn't be checked with your current info</p>
+                                <p class="text-xs text-indigo-600 mt-0.5">Answer a few quick questions to get a more accurate assessment.</p>
+                                <button onclick="startProgressiveCheck('${trial.nct_id}')"
+                                    class="mt-2 px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center gap-1.5">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                                    Check My Eligibility Step-by-Step
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="progressive-check-container"></div>
+                ` : '<div id="progressive-check-container"></div>';
+
+                // --- Match score color ---
+                const scoreColor = eligibility.matchScore >= 70
+                    ? 'from-green-500 to-green-600'
+                    : eligibility.matchScore >= 40
+                        ? 'from-primary to-primary-dark'
+                        : 'from-slate-400 to-slate-500';
 
                 document.getElementById('trial-title').textContent = trial.title || 'Clinical Trial Details';
                 modalContent.innerHTML = `
                     <div class="space-y-6">
-                        <!-- Match Score Summary -->
-                        <div class="flex items-center gap-4 p-4 bg-gradient-to-r from-blue-50 to-slate-50 rounded-xl border border-blue-100">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg">
-                                <span class="text-white font-bold text-xl">${eligibility.matchScore}%</span>
+
+                        <!-- 1. ELIGIBILITY — "Am I a fit?" -->
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-semibold text-lg text-slate-800 flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Am I Eligible?
+                                </h4>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br ${scoreColor} flex items-center justify-center">
+                                        <span class="text-white font-bold text-sm">${eligibility.matchScore}%</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <p class="font-semibold text-slate-800">Overall Match Score</p>
-                                <p class="text-sm text-slate-600">Based on ${eligibility.hardCriteriaTotal + eligibility.softCriteriaTotal} evaluated criteria</p>
+                            <div class="flex items-center gap-3 mb-3">
+                                ${getStatusChip(eligibility.hardStatus)}
+                                <span class="text-sm text-slate-500">${eligibility.hardCriteriaMet + eligibility.softCriteriaMet} of ${eligibility.hardCriteriaTotal + eligibility.softCriteriaTotal} criteria met</span>
                             </div>
+                            ${criteriaHtml}
+                            ${progressiveCheckHtml}
                         </div>
 
-                        <!-- About Section with Simple/Full toggle -->
+                        <hr class="border-slate-200">
+
+                        <!-- 2. PRACTICAL DETAILS — scannable grid -->
                         <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <h4 class="font-semibold text-slate-800">About This Study</h4>
-                                ${trial.plain_summary ? `
-                                    <div class="flex bg-slate-100 rounded-lg p-0.5 text-xs">
-                                        <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('bg-white','shadow-sm'));this.classList.add('bg-white','shadow-sm');this.closest('.space-y-4').querySelector('.summary-simple').classList.remove('hidden');this.closest('.space-y-4').querySelector('.summary-full').classList.add('hidden')" class="px-2.5 py-1 rounded-md bg-white shadow-sm font-medium text-slate-700 transition-all">Simple</button>
-                                        <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('bg-white','shadow-sm'));this.classList.add('bg-white','shadow-sm');this.closest('.space-y-4').querySelector('.summary-full').classList.remove('hidden');this.closest('.space-y-4').querySelector('.summary-simple').classList.add('hidden')" class="px-2.5 py-1 rounded-md font-medium text-slate-500 transition-all">Full</button>
+                            <h4 class="font-semibold text-slate-800 mb-3 flex items-center gap-2">
+                                <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                                Practical Details
+                            </h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                ${trial.distance && trial.distance < 9000 ? `
+                                    <div class="bg-slate-50 p-3 rounded-lg">
+                                        <p class="text-xs text-slate-500 mb-1">Nearest Site</p>
+                                        <p class="font-semibold text-slate-800">${Math.round(trial.distance)} miles</p>
+                                    </div>
+                                ` : ''}
+                                ${trial.phase ? `
+                                    <div class="bg-slate-50 p-3 rounded-lg">
+                                        <p class="text-xs text-slate-500 mb-1">Phase</p>
+                                        <p class="font-semibold text-slate-800">${trial.phase}</p>
+                                    </div>
+                                ` : ''}
+                                ${trial.enrollment ? `
+                                    <div class="bg-slate-50 p-3 rounded-lg">
+                                        <p class="text-xs text-slate-500 mb-1">Enrollment</p>
+                                        <p class="font-semibold text-slate-800">${trial.enrollment} participants</p>
+                                    </div>
+                                ` : ''}
+                                <div class="bg-slate-50 p-3 rounded-lg">
+                                    <p class="text-xs text-slate-500 mb-1">Status</p>
+                                    <p class="font-semibold ${getStatusColor(trial.status)}">${trial.status || 'Unknown'}</p>
+                                </div>
+                                ${trial.drugs ? `
+                                    <div class="bg-slate-50 p-3 rounded-lg col-span-2">
+                                        <p class="text-xs text-slate-500 mb-1">Treatment</p>
+                                        <p class="font-semibold text-slate-800">${trial.drugs}</p>
                                     </div>
                                 ` : ''}
                             </div>
-                            ${trial.plain_summary ? `
-                                <div class="summary-simple">
-                                    <p class="text-slate-600 bg-blue-50 border border-blue-100 rounded-lg p-3">${trial.plain_summary}</p>
-                                </div>
-                                <div class="summary-full hidden">
-                                    <p class="text-slate-600">${trial.brief_summary || 'No description available.'}</p>
-                                </div>
-                            ` : `
-                                <p class="text-slate-600">${trial.brief_summary || 'No description available.'}</p>
-                            `}
                         </div>
 
-                        <!-- Quick Info Grid -->
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            ${trial.phase ? `
-                                <div class="bg-slate-50 p-3 rounded-lg text-center">
-                                    <p class="text-xs text-slate-500 mb-1">Phase</p>
-                                    <p class="font-semibold text-slate-800">${trial.phase}</p>
-                                </div>
-                            ` : ''}
-                            ${trial.enrollment ? `
-                                <div class="bg-slate-50 p-3 rounded-lg text-center">
-                                    <p class="text-xs text-slate-500 mb-1">Enrollment</p>
-                                    <p class="font-semibold text-slate-800">${trial.enrollment}</p>
-                                </div>
-                            ` : ''}
-                            <div class="bg-slate-50 p-3 rounded-lg text-center">
-                                <p class="text-xs text-slate-500 mb-1">Status</p>
-                                <p class="font-semibold ${getStatusColor(trial.status)}">${trial.status || 'Unknown'}</p>
-                            </div>
-                            ${trial.distance && trial.distance < 9000 ? `
-                                <div class="bg-slate-50 p-3 rounded-lg text-center">
-                                    <p class="text-xs text-slate-500 mb-1">Nearest Site</p>
-                                    <p class="font-semibold text-slate-800">${Math.round(trial.distance)} mi</p>
-                                </div>
-                            ` : ''}
-                        </div>
+                        <hr class="border-slate-200">
 
-                        ${trial.drugs ? `
+                        <!-- 3. WHAT TO EXPECT -->
+                        ${trial.plain_summary ? `
                             <div>
-                                <h4 class="font-semibold text-slate-800 mb-2">Drugs/Interventions</h4>
-                                <p class="text-slate-600">${trial.drugs}</p>
+                                <h4 class="font-semibold text-slate-800 mb-2 flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    What to Expect
+                                </h4>
+                                <p class="text-slate-600 bg-accent/5 border border-warm-border rounded-lg p-4 text-sm leading-relaxed">${trial.plain_summary}</p>
                             </div>
+                            <hr class="border-slate-200">
                         ` : ''}
 
-                        <!-- Action Buttons (above eligibility) -->
-                        <div class="flex flex-col sm:flex-row gap-3 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                            <button onclick="toggleSaveTrial('${trial.nct_id}')" class="flex-1 text-center bg-amber-100 text-amber-700 border border-amber-200 px-4 py-3 rounded-xl hover:bg-amber-200 transition-colors flex items-center justify-center gap-2" id="modal-save-btn-${trial.nct_id}">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
-                                Save to Shortlist
-                            </button>
-                            <button onclick="shareWithDoctor('${trial.nct_id}')" class="flex-1 text-center bg-white text-slate-700 border border-slate-200 px-4 py-3 rounded-xl hover:bg-slate-100 transition-colors flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
-                                Share with Doctor
-                            </button>
-                            <a href="https://clinicaltrials.gov/ct2/show/${trial.nct_id}" target="_blank" class="flex-1 text-center bg-blue-600 text-white px-4 py-3 rounded-xl hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                        <!-- 4. ABOUT THIS STUDY -->
+                        <div>
+                            <h4 class="font-semibold text-slate-800 mb-2 flex items-center gap-2">
+                                <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                About This Study
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">${trial.brief_summary || 'No description available.'}</p>
+                        </div>
+
+                        <hr class="border-slate-200">
+
+                        <!-- 5. HOW TO JOIN -->
+                        <div>
+                            <h4 class="font-semibold text-slate-800 mb-3 flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+                                How to Join
+                            </h4>
+                            <a href="https://clinicaltrials.gov/ct2/show/${trial.nct_id}" target="_blank"
+                                class="w-full px-4 py-3 bg-green-600 text-white font-medium rounded-xl hover:bg-green-700 transition-colors flex items-center justify-center gap-2">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                ClinicalTrials.gov
+                                View on ClinicalTrials.gov to Request Screening
                             </a>
+                            <p class="text-xs text-slate-500 text-center mt-2">Contact the study team through ClinicalTrials.gov for enrollment details.</p>
                         </div>
 
-                        <!-- Progressive Eligibility Check Button -->
-                        <div class="mt-4 mb-4">
-                            <button onclick="startProgressiveCheck('${trial.nct_id}')"
-                                class="w-full px-4 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium rounded-xl hover:from-indigo-700 hover:to-blue-700 transition-all flex items-center justify-center gap-2 shadow-sm">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
-                                Check My Eligibility Step-by-Step
+                        <hr class="border-slate-200">
+
+                        <!-- 6. ACTIONS & RAW DATA — for power users -->
+                        <div>
+                            <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.expand-text').textContent = this.nextElementSibling.classList.contains('hidden') ? 'Show clinical details & actions' : 'Hide clinical details & actions'"
+                                class="text-sm text-slate-500 hover:text-slate-700 flex items-center gap-1.5">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <span class="expand-text">Show clinical details & actions</span>
                             </button>
-                            <p class="text-xs text-slate-500 text-center mt-1">Answer questions one at a time to see your updated eligibility</p>
+                            <div class="hidden mt-3 space-y-4">
+                                <div class="text-sm text-slate-500">
+                                    <p class="font-mono text-xs">${trial.nct_id}</p>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button onclick="toggleSaveTrial('${trial.nct_id}')" class="flex-1 text-center bg-amber-100 text-amber-700 border border-amber-200 px-4 py-3 rounded-xl hover:bg-amber-200 transition-colors flex items-center justify-center gap-2" id="modal-save-btn-${trial.nct_id}">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                                        Save to Shortlist
+                                    </button>
+                                    <button onclick="shareWithDoctor('${trial.nct_id}')" class="flex-1 text-center bg-white text-slate-700 border border-slate-200 px-4 py-3 rounded-xl hover:bg-slate-100 transition-colors flex items-center justify-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                                        Share with Doctor
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <div id="progressive-check-container"></div>
-
-                        ${criteriaHtml}
                     </div>
                 `;
 
                 trialModal.classList.remove('hidden');
                 trialModal.classList.add('flex');
             } else {
-                addMessage('assistant', 'Sorry, I could not load the trial details.');
+                addMessage('assistant', "I couldn't load the details for that trial. Please try again.");
             }
         } catch (error) {
             console.error('Error loading trial details:', error);
-            addMessage('assistant', 'Sorry, something went wrong while loading the trial details.');
+            addMessage('assistant', "I couldn't load the details for that trial. Please try again.");
         }
     };
 
@@ -1647,14 +1697,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!container) return;
 
         container.innerHTML = `
-            <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl">
+            <div class="p-4 bg-accent/5 border border-accent/20 rounded-xl">
                 <div class="flex items-center gap-2">
                     <div class="typing-indicator-dots flex space-x-1">
-                        <div class="typing-dot w-2 h-2 bg-blue-400 rounded-full"></div>
-                        <div class="typing-dot w-2 h-2 bg-blue-400 rounded-full"></div>
-                        <div class="typing-dot w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <div class="typing-dot w-2 h-2 bg-slate-400 rounded-full"></div>
+                        <div class="typing-dot w-2 h-2 bg-slate-400 rounded-full"></div>
+                        <div class="typing-dot w-2 h-2 bg-slate-400 rounded-full"></div>
                     </div>
-                    <span class="text-sm text-blue-600">Starting eligibility check...</span>
+                    <span class="text-sm text-slate-600">Starting eligibility check...</span>
                 </div>
             </div>`;
 
@@ -1669,7 +1719,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.success) {
                 renderProgressiveState(container, data.state);
             } else {
-                container.innerHTML = `<p class="text-sm text-red-600">Error: ${data.error}</p>`;
+                container.innerHTML = `<p class="text-sm text-slate-500">Could not start eligibility check. Please try again.</p>`;
             }
         } catch (error) {
             console.error('Progressive check error:', error);
@@ -1681,7 +1731,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderProgressiveState(container, state) {
         const progress = state.progress_percent || 0;
         const statusColors = {
-            checking: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700', bar: 'bg-blue-500', label: 'Checking...' },
+            checking: { bg: 'bg-slate-50', border: 'border-slate-200', text: 'text-slate-700', bar: 'bg-slate-500', label: 'Checking...' },
             eligible: { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', label: 'Eligible' },
             ineligible: { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-700', bar: 'bg-red-500', label: 'Not Eligible' },
             needs_review: { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-700', bar: 'bg-amber-500', label: 'Needs Clinical Review' },
@@ -1737,13 +1787,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextQ = state.next_question;
         if (nextQ && !state.hard_exclusion_hit) {
             const priorityLabel = nextQ.priority <= 2 ? 'Critical Check' : nextQ.priority <= 4 ? 'Important Check' : 'Additional Info';
-            const priorityColor = nextQ.priority <= 2 ? 'text-red-600 bg-red-100' : nextQ.priority <= 4 ? 'text-amber-600 bg-amber-100' : 'text-blue-600 bg-blue-100';
+            const priorityColor = nextQ.priority <= 2 ? 'text-red-600 bg-red-100' : nextQ.priority <= 4 ? 'text-amber-600 bg-amber-100' : 'text-slate-600 bg-slate-100';
 
             questionHtml = `
-                <div class="p-4 bg-white border border-blue-200 rounded-xl mt-3">
+                <div class="p-4 bg-white border border-slate-200 rounded-xl mt-3">
                     <div class="flex items-center gap-2 mb-2">
                         <span class="px-2 py-0.5 text-[10px] font-medium rounded ${priorityColor}">${priorityLabel}</span>
-                        ${nextQ.is_hard ? '<span class="px-2 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-600">Required</span>' : '<span class="px-2 py-0.5 text-[10px] font-medium rounded bg-blue-100 text-blue-600">Preferred</span>'}
+                        ${nextQ.is_hard ? '<span class="px-2 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-600">Required</span>' : '<span class="px-2 py-0.5 text-[10px] font-medium rounded bg-slate-100 text-slate-600">Preferred</span>'}
                         ${nextQ.is_boundary_case ? '<span class="px-2 py-0.5 text-[10px] font-medium rounded bg-amber-100 text-amber-600">Boundary Case</span>' : ''}
                     </div>
                     <p class="text-sm font-medium text-slate-800 mb-1">${nextQ.human_label}</p>
@@ -1765,10 +1815,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <div class="flex gap-2">
                         <input type="text" id="progressive-answer-input" placeholder="Type your answer..."
-                            class="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            class="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30"
                             onkeypress="if(event.key==='Enter')submitProgressiveAnswer('${state.nct_id}','${nextQ.attribute}')">
                         <button onclick="submitProgressiveAnswer('${state.nct_id}','${nextQ.attribute}')"
-                            class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                            class="px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors">
                             Submit
                         </button>
                         <button onclick="submitProgressiveAnswer('${state.nct_id}','${nextQ.attribute}','skip')"

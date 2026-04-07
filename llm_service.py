@@ -86,6 +86,59 @@ class LLMService:
                 "summary": symptoms
             }
     
+    def extract_intake_fields(self, message: str) -> Dict[str, any]:
+        """Extract patient intake fields from a freeform message.
+
+        Returns a dict with keys: age, gender, location, conditions, symptoms,
+        treatments_tried.  Values are ``None`` when not mentioned.
+        """
+        prompt = (
+            "You are a clinical-trial intake assistant. "
+            "Extract any patient information from the following message. "
+            "Return ONLY valid JSON with these keys (use null when not mentioned):\n"
+            "{\n"
+            '  "age": <integer or null>,\n'
+            '  "gender": <"male"|"female"|"non-binary"|null>,\n'
+            '  "location": <string like "San Francisco, CA" or ZIP code, or null>,\n'
+            '  "conditions": <list of condition strings, or []>,\n'
+            '  "symptoms": <string describing symptoms, or null>,\n'
+            '  "treatments_tried": <string describing past treatments, or null>\n'
+            "}\n\n"
+            "Rules:\n"
+            "- If the user mentions a condition for both 'conditions' and 'symptoms', "
+            "put the diagnosis name in 'conditions' and descriptive details in 'symptoms'.\n"
+            "- If the user only names a disease with no extra symptom detail, "
+            "leave 'symptoms' as null.\n"
+            "- Normalize condition names to standard medical terms when possible.\n"
+            "- Extract age even if expressed as a range ('in my 40s' -> 45).\n"
+            "- Do NOT confuse disease stage numbers (e.g., 'stage 2', 'grade 3') with age.\n"
+            "- Extract gender from pronouns or context if explicitly stated.\n\n"
+            f'User message: "{message}"'
+        )
+
+        try:
+            import json as _json
+            response = self.client.chat.completions.create(
+                model=self.deployment_name,
+                messages=[
+                    {"role": "system", "content": "You extract structured patient data from freeform text. Return only valid JSON."},
+                    {"role": "user", "content": prompt},
+                ],
+                max_tokens=300,
+                temperature=0.1,
+            )
+            return _json.loads(response.choices[0].message.content)
+        except Exception as e:
+            print(f"LLM intake extraction failed: {e}")
+            return {
+                "age": None,
+                "gender": None,
+                "location": None,
+                "conditions": [],
+                "symptoms": None,
+                "treatments_tried": None,
+            }
+
     def generate_search_query(self, analysis: Dict[str, any]) -> List[str]:
         """
         Generate search queries for clinical trials based on symptom analysis.

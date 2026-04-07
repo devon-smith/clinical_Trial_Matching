@@ -1034,9 +1034,8 @@ def index():
     # Clear session on page load to start fresh conversation
     session.clear()
     session['patient_data'] = {}
-    session['awaiting_info'] = 'age'
     session['assistant'] = {
-        'conversation_state': 'get_age',
+        'conversation_state': 'intake',
         'patient_data': {
             'age': None,
             'gender': None,
@@ -1044,7 +1043,8 @@ def index():
             'zip_code': None,
             'conditions': [],
             'symptoms': '',
-            'primary_condition': None
+            'primary_condition': None,
+            'preferences': None,
         }
     }
     return render_template('index.html')
@@ -1059,7 +1059,7 @@ def chat():
         # Initialize conversation assistant if not exists
         if 'assistant' not in session:
             session['assistant'] = {
-                'conversation_state': 'get_age',
+                'conversation_state': 'intake',
                 'patient_data': {
                     'age': None,
                     'gender': None,
@@ -1067,7 +1067,8 @@ def chat():
                     'zip_code': None,
                     'conditions': [],
                     'symptoms': '',
-                    'primary_condition': None
+                    'primary_condition': None,
+                    'preferences': None,
                 }
             }
 
@@ -1085,16 +1086,6 @@ def chat():
             'patient_data': assistant.patient_data
         }
         session.modified = True
-
-        # Signal frontend to show preference UI
-        if assistant.conversation_state == 'get_preferences':
-            next_question = assistant.get_next_question()
-            return jsonify({
-                'status': 'preferences',
-                'response': response if response else '',
-                'next_question': next_question,
-                'conversation_state': assistant.conversation_state,
-            })
 
         # Check if we're ready to search for trials
         if assistant.conversation_state == 'ready_to_search':
@@ -1138,6 +1129,44 @@ def chat():
                 except Exception as llm_err:
                     print(f"LLM symptom analysis failed (non-fatal): {llm_err}")
 
+            # Expand search queries using concept tree — capped to prevent over-expansion
+            expanded_terms = set(t.lower() for t in search_data.get('search_queries', []) if t)
+            concept_set = set()  # canonical concept IDs for relevance scoring
+            try:
+                # Only expand the first 3 user terms (primary condition + symptoms)
+                for term in list(search_data.get('search_queries', []))[:3]:
+                    exp = concept_canon.canonicalize_query(term)
+                    if exp.query_success and exp.canonical_match:
+                        cid = exp.canonical_match.concept.concept_id
+                        concept_set.add(cid)
+                        # Add the canonical name itself as a search term
+                        canon_name = exp.canonical_match.concept.canonical_name.lower()
+                        if canon_name not in expanded_terms:
+                            expanded_terms.add(canon_name)
+                            search_data['search_queries'].append(canon_name)
+                        # Add parent concept as a broader search term
+                        parent_id = exp.canonical_match.concept.parent
+                        if parent_id:
+                            concept_set.add(parent_id)
+                            parent_name = parent_id.replace('_', ' ')
+                            if parent_name not in expanded_terms:
+                                expanded_terms.add(parent_name)
+                                search_data['search_queries'].append(parent_name)
+                        # Add only direct children (max 3) — not all descendants
+                        for child in exp.included_concepts[:3]:
+                            concept_set.add(child.concept.concept_id)
+                        # Add short keyword forms for SQL LIKE matching
+                        for word in cid.split('_'):
+                            if len(word) > 4 and word not in expanded_terms:
+                                expanded_terms.add(word)
+                                search_data['search_queries'].append(word)
+            except Exception as exp_err:
+                print(f"Concept expansion failed (non-fatal): {exp_err}")
+
+            search_data['concept_set'] = concept_set
+            # Cap search queries to avoid excessive SQL queries
+            search_data['search_queries'] = search_data['search_queries'][:8]
+
             trials = matcher.find_matching_trials(search_data)
 
             # Build structured patient attributes for SMT evaluation
@@ -1172,6 +1201,25 @@ def chat():
                         ),
                     )
 
+            # Filter out trials with zero concept overlap before scoring
+            if concept_set:
+                filtered_trials = []
+                for trial in trials:
+                    trial_diseases = (trial.get('diseases') or '').lower()
+                    trial_title = (trial.get('title') or trial.get('brief_title') or '').lower()
+                    trial_text = trial_diseases + ' ' + trial_title
+                    # Check if any concept from the expansion appears in the trial
+                    has_overlap = any(
+                        cid.replace('_', ' ') in trial_text or cid.replace('_', '') in trial_text.replace(' ', '')
+                        for cid in concept_set
+                    )
+                    # Also allow trials that matched on disease column in retrieval
+                    if has_overlap or trial.get('_disease_match'):
+                        filtered_trials.append(trial)
+                if filtered_trials:
+                    trials = filtered_trials
+                    print(f"Concept filter: {len(trials)} trials remain after filtering")
+
             # Format trials with real scoring from SMT + RAG + preferences
             formatted_trials = []
             for trial in trials[:10]:  # Limit to top 10
@@ -1184,6 +1232,7 @@ def chat():
                 try:
                     scoring = scoring_matcher.score_trial(
                         patient_attrs, condition_text, nct_id,
+                        concept_set=concept_set,
                         preferences=patient_preferences,
                         distance=distance,
                     )
@@ -1250,7 +1299,7 @@ def chat():
                 search_terms = [primary_condition] + [
                     t for t in search_terms if t != primary_condition
                 ]
-            for term in search_terms[:5]:
+            for term in search_terms[:3]:
                 try:
                     expansion = concept_canon.canonicalize_query(term)
                     concept_audit.append(
@@ -1266,15 +1315,18 @@ def chat():
                 'patient_location': patient_location,
                 'conversation_state': assistant.conversation_state,
                 'concept_audit': concept_audit,
+                'patient_summary': {
+                    'age': patient_data.get('age'),
+                    'gender': patient_data.get('gender'),
+                    'location': patient_data.get('location'),
+                    'condition': primary_condition,
+                    'symptoms': patient_data.get('symptoms'),
+                },
             })
-
-        # Get next question
-        next_question = assistant.get_next_question()
 
         return jsonify({
             'status': 'continue',
             'response': response if response else '',
-            'next_question': next_question,
             'conversation_state': assistant.conversation_state
         })
 
@@ -1283,8 +1335,8 @@ def chat():
         import traceback
         traceback.print_exc()
         return jsonify({
-            'status': 'error',
-            'message': str(e)
+            'status': 'continue',
+            'response': "I'm having trouble processing that right now. Could you try again?"
         }), 500
 
 @app.route('/api/trials/<nct_id>')
