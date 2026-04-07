@@ -98,8 +98,14 @@ _CORRECTION_PATTERNS = [
     re.compile(r"(?:change|update|correct|fix)\s+(?:my\s+)?(?:age|location|condition|gender)", re.I),
 ]
 
+# Full reset — clears everything including demographics
 _RESET_PATTERNS = [
-    re.compile(r"\b(?:start over|restart|reset|begin again|new search|clear)\b", re.I),
+    re.compile(r"\b(?:start over|restart|reset|begin again|clear)\b", re.I),
+]
+
+# New search — keeps demographics, only resets condition data
+_NEW_SEARCH_PATTERNS = [
+    re.compile(r"\b(?:new search|different condition|another condition|search (?:for )?(?:something|another)|try (?:a )?different|look for something else)\b", re.I),
 ]
 
 _QUESTION_PATTERNS = [
@@ -148,8 +154,13 @@ def _detect_correction(text: str) -> bool:
     return any(p.search(text) for p in _CORRECTION_PATTERNS)
 
 
+def _detect_new_search(text: str) -> bool:
+    """Check if the user wants a new search (keep demographics)."""
+    return any(p.search(text) for p in _NEW_SEARCH_PATTERNS)
+
+
 def _detect_reset(text: str) -> bool:
-    """Check if the user wants to start over."""
+    """Check if the user wants a full reset (clear everything)."""
     return any(p.search(text) for p in _RESET_PATTERNS)
 
 
@@ -185,27 +196,46 @@ def _looks_like_gibberish(text: str) -> bool:
 
 
 def _merge_extracted(patient_data: Dict, extracted: Dict) -> List[str]:
-    """Merge LLM-extracted fields into patient_data. Returns list of newly filled field names."""
+    """Merge LLM-extracted fields into patient_data. Returns list of newly filled field names.
+
+    Demographics (age, gender, location) are only set when currently empty.
+    If the user wants to update existing demographics, the correction handler
+    or _handle_field_update takes care of that.
+    Condition data always replaces empty values (supports new search flow).
+    """
     newly_filled = []
 
     age = extracted.get('age')
-    if age is not None and patient_data.get('age') is None:
+    if age is not None:
         if isinstance(age, (int, float)) and 10 <= int(age) <= 120:
-            patient_data['age'] = int(age)
-            newly_filled.append('age')
+            new_age = int(age)
+            if patient_data.get('age') is None:
+                patient_data['age'] = new_age
+                newly_filled.append('age')
+            elif patient_data['age'] != new_age:
+                # User provided a different age — update it
+                patient_data['age'] = new_age
+                newly_filled.append('age')
 
     gender = extracted.get('gender')
-    if gender and patient_data.get('gender') is None:
-        patient_data['gender'] = str(gender).lower()
-        newly_filled.append('gender')
+    if gender:
+        new_gender = str(gender).lower()
+        if patient_data.get('gender') is None:
+            patient_data['gender'] = new_gender
+            newly_filled.append('gender')
+        elif patient_data['gender'] != new_gender:
+            patient_data['gender'] = new_gender
+            newly_filled.append('gender')
 
     location = extracted.get('location')
-    if location and patient_data.get('location') is None:
-        patient_data['location'] = str(location)
-        zip_code = _try_extract_zip(str(location))
-        if zip_code:
-            patient_data['zip_code'] = zip_code
-        newly_filled.append('location')
+    if location:
+        new_location = str(location)
+        if patient_data.get('location') is None or patient_data['location'] != new_location:
+            patient_data['location'] = new_location
+            zip_code = _try_extract_zip(new_location)
+            if zip_code:
+                patient_data['zip_code'] = zip_code
+            newly_filled.append('location')
 
     conditions = extracted.get('conditions') or []
     if conditions and not patient_data.get('conditions'):
@@ -464,7 +494,11 @@ class ConversationalTrialAssistant:
 
         # --- GLOBAL INTENTS (checked before state routing) ---
 
-        # Reset / start over
+        # New search (keep demographics) — check before full reset
+        if _detect_new_search(user_input):
+            return self._handle_new_search()
+
+        # Full reset / start over
         if _detect_reset(user_input):
             return self._handle_reset()
 
@@ -509,8 +543,44 @@ class ConversationalTrialAssistant:
     # Global intent handlers
     # ------------------------------------------------------------------
 
+    def _handle_new_search(self) -> Tuple[str, bool]:
+        """Start a new search but keep demographics (age, gender, location)."""
+        saved_age = self.patient_data.get('age')
+        saved_gender = self.patient_data.get('gender')
+        saved_location = self.patient_data.get('location')
+        saved_zip = self.patient_data.get('zip_code')
+
+        self._clear_condition_data()
+
+        has_demographics = saved_age is not None and saved_location
+
+        if has_demographics:
+            # Skip straight to intake for condition only
+            self.conversation_state = CONVERSATION_STATES['INTAKE']
+            # Build a summary of what we still have
+            parts = []
+            if saved_age:
+                parts.append(f"age **{saved_age}**")
+            if saved_gender:
+                parts.append(f"**{saved_gender}**")
+            if saved_location:
+                parts.append(f"**{saved_location}**")
+            info_str = ", ".join(parts)
+            return (
+                f"Starting fresh! I still have your info ({info_str}). "
+                f"What condition would you like to search for?"
+            ), False
+        else:
+            # Not enough demographics — do a full intake
+            self.conversation_state = CONVERSATION_STATES['INTAKE']
+            return (
+                "Sure — let's search for something new. "
+                "Tell me about your condition, and include your age and location "
+                "if you haven't already."
+            ), False
+
     def _handle_reset(self) -> Tuple[str, bool]:
-        """Clear all data and restart the conversation."""
+        """Full reset — clear everything including demographics."""
         self.conversation_state = CONVERSATION_STATES['INTAKE']
         self.patient_data = {
             'age': None,
@@ -527,9 +597,20 @@ class ConversationalTrialAssistant:
         self._pending_followups = []
         self._followup_batch = 0
         return (
-            "No problem — let's start fresh. Tell me about your condition, "
-            "symptoms, and anything you've already tried."
+            "No problem — let's start completely fresh. Tell me about your condition, "
+            "your age, and where you're located."
         ), False
+
+    def _clear_condition_data(self) -> None:
+        """Reset condition-specific data while preserving demographics."""
+        self.patient_data['conditions'] = []
+        self.patient_data['symptoms'] = ''
+        self.patient_data['primary_condition'] = None
+        self.patient_data['preferences'] = None
+        self.patient_data['condition_details'] = {}
+        self.patient_data['condition_category'] = None
+        self._pending_followups = []
+        self._followup_batch = 0
 
     def _handle_question(self, answer: str) -> Tuple[str, bool]:
         """Answer a mid-flow question, then resume."""

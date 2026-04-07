@@ -1055,6 +1055,8 @@ def index():
             'symptoms': '',
             'primary_condition': None,
             'preferences': None,
+            'condition_details': {},
+            'condition_category': None,
         }
     }
     return render_template('index.html')
