@@ -94,7 +94,8 @@ def _try_extract_gender(text: str) -> Optional[str]:
 # ---------------------------------------------------------------------------
 
 _CORRECTION_PATTERNS = [
-    re.compile(r"(?:actually|wait|sorry|oops|correction|i meant|i mean|no,?\s+i(?:'m| am))\b", re.I),
+    re.compile(r"(?:actually|sorry|oops|correction|i meant|i mean|no,?\s+i(?:'m| am))\b", re.I),
+    re.compile(r"\bwait,?\s+(?:i(?:'m| am)|my|it'?s|that'?s|i meant|actually)", re.I),
     re.compile(r"\bnot\s+\d+.*(?:i(?:'m| am)|my age)\s+(?:is\s+)?\d+", re.I),
     re.compile(r"(?:change|update|correct|fix)\s+(?:my\s+)?(?:age|location|condition|gender)", re.I),
 ]
@@ -109,8 +110,15 @@ _NEW_SEARCH_PATTERNS = [
     re.compile(r"\b(?:new search|different condition|another condition|search (?:for )?(?:something|another)|try (?:a )?different|look for something else)\b", re.I),
 ]
 
+# Hold / wait — patient wants to add more info before searching
+_HOLD_PATTERNS = [
+    re.compile(r"\b(?:let me add|want to (?:add|tell)|hold on|wait|before you search|not (?:yet|ready)|one more thing|I also have|can I add)\b", re.I),
+    re.compile(r"\b(?:more (?:detail|info)|add more|wait a (?:sec|moment|minute))\b", re.I),
+]
+
 _QUESTION_PATTERNS = [
-    re.compile(r"\b(?:what (?:does|is|are)|how (?:does|do|long)|can you explain|tell me about|what's)\b", re.I),
+    re.compile(r"\b(?:what (?:does|is|are)|how (?:does|do|long)|can you explain|tell me about|what's|what does)\b", re.I),
+    re.compile(r"\b(?:what do you mean|what is (?:a|an|the)|what are)\b", re.I),
     re.compile(r"\?$"),
 ]
 
@@ -147,6 +155,40 @@ _FAQ_ANSWERS: Dict[str, str] = {
         "or you might receive a placebo. However, trials are closely monitored by safety boards, "
         "and you can withdraw at any time."
     ),
+    "ecog": (
+        "An **ECOG score** measures how well you can carry out daily activities:\n\n"
+        "**0** — Fully active, no restrictions\n"
+        "**1** — Can't do strenuous work, but can handle light activity and self-care\n"
+        "**2** — Up and about more than 50% of the day, can do self-care but not work\n"
+        "**3** — In bed or a chair more than 50% of the day, limited self-care\n"
+        "**4** — Completely bedridden\n\n"
+        "Most trials require ECOG 0-1 (fully active or minor limitations)."
+    ),
+    "informed consent": (
+        "**Informed consent** means you'll receive a detailed explanation of the trial — "
+        "what it involves, potential risks, benefits, and alternatives — before you agree "
+        "to participate. You can withdraw at any time, even after signing."
+    ),
+    "clinical trial": (
+        "A **clinical trial** is a research study that tests new treatments, drugs, or "
+        "procedures in people. They're how new medical treatments get proven safe and effective "
+        "before becoming widely available. Participation is always voluntary."
+    ),
+    "biomarker": (
+        "A **biomarker** is a measurable indicator in your body — like a gene mutation, "
+        "protein level, or blood test result — that helps doctors understand your disease "
+        "and predict which treatments might work best for you."
+    ),
+    "double blind": (
+        "**Double-blind** means neither you nor your doctor knows which treatment group "
+        "you're in during the study. This prevents bias in evaluating results. "
+        "An independent team monitors safety throughout."
+    ),
+    "standard of care": (
+        "**Standard of care** is the current best-known treatment for your condition. "
+        "Many trials compare a new treatment against the standard of care, so even if "
+        "you're in the control group, you still receive established treatment."
+    ),
 }
 
 
@@ -163,6 +205,11 @@ def _detect_new_search(text: str) -> bool:
 def _detect_reset(text: str) -> bool:
     """Check if the user wants a full reset (clear everything)."""
     return any(p.search(text) for p in _RESET_PATTERNS)
+
+
+def _detect_hold(text: str) -> bool:
+    """Check if the user wants to pause and add more information."""
+    return any(p.search(text) for p in _HOLD_PATTERNS)
 
 
 def _detect_question(text: str) -> Optional[str]:
@@ -510,6 +557,16 @@ class ConversationalTrialAssistant:
             if faq_answer is not None:
                 return self._handle_question(faq_answer)
 
+        # Hold / wait — patient wants to add more before searching
+        # (checked before correction, since "wait" can appear in both)
+        if self.conversation_state in (
+            CONVERSATION_STATES['PREF_TRAVEL'],
+            CONVERSATION_STATES['PREF_RISK'],
+            CONVERSATION_STATES['PREF_TREATMENT'],
+            CONVERSATION_STATES['READY_TO_SEARCH'],
+        ) and _detect_hold(user_input):
+            return self._handle_hold(user_input)
+
         # Correction ("actually I'm 52", "I meant breast cancer")
         if self.conversation_state != CONVERSATION_STATES['INTAKE'] and _detect_correction(user_input):
             return self._handle_correction(user_input)
@@ -582,13 +639,18 @@ class ConversationalTrialAssistant:
             ), False
 
     def _handle_reset(self) -> Tuple[str, bool]:
-        """Full reset — clear everything including demographics."""
+        """Reset — clear condition data but preserve demographics."""
+        saved_age = self.patient_data.get('age')
+        saved_gender = self.patient_data.get('gender')
+        saved_location = self.patient_data.get('location')
+        saved_zip = self.patient_data.get('zip_code')
+
         self.conversation_state = CONVERSATION_STATES['INTAKE']
         self.patient_data = {
-            'age': None,
-            'gender': None,
-            'location': None,
-            'zip_code': None,
+            'age': saved_age,
+            'gender': saved_gender,
+            'location': saved_location,
+            'zip_code': saved_zip,
             'conditions': [],
             'symptoms': '',
             'primary_condition': None,
@@ -598,8 +660,24 @@ class ConversationalTrialAssistant:
         }
         self._pending_followups = []
         self.quick_replies = None
+
+        has_demographics = saved_age is not None and saved_location
+        if has_demographics:
+            parts = []
+            if saved_age:
+                parts.append(f"age **{saved_age}**")
+            if saved_gender:
+                parts.append(f"**{saved_gender}**")
+            if saved_location:
+                parts.append(f"**{saved_location}**")
+            info_str = ", ".join(parts)
+            return (
+                f"Starting fresh! I still have your info ({info_str}). "
+                f"What condition would you like to search for?"
+            ), False
+
         return (
-            "No problem — let's start completely fresh. Tell me about your condition, "
+            "No problem — let's start fresh. Tell me about your condition, "
             "your age, and where you're located."
         ), False
 
@@ -617,34 +695,104 @@ class ConversationalTrialAssistant:
         self.quick_replies = None
 
     def _handle_question(self, answer: str) -> Tuple[str, bool]:
-        """Answer a mid-flow question, then resume."""
-        # Build a resume hint based on current state
+        """Answer a mid-flow question, then resume where we left off."""
+        # Build a contextual resume hint based on current state
         resume = ""
         if self.conversation_state == CONVERSATION_STATES['FOLLOWUP']:
             followup = _build_followup_ask(self.patient_data)
             if followup:
-                resume = f"\n\nBack to your search — {followup}"
+                resume = f"\n\nNow, back to your search — {followup}"
         elif self.conversation_state == CONVERSATION_STATES['CONDITION_DETAIL']:
             remaining = [fq for fq in self._pending_followups
                          if fq['attribute'] not in self.patient_data.get('condition_details', {})]
             if remaining:
-                resume = "\n\nBack to your search — please answer the questions above when you're ready."
+                # Re-state the first unanswered question specifically
+                first_q = remaining[0]['question']
+                if len(remaining) > 1:
+                    resume = (f"\n\nNow, back to your search — {first_q} "
+                              f"(and {len(remaining) - 1} more when you're ready)")
+                else:
+                    resume = f"\n\nNow, back to your search — {first_q}"
         elif self.conversation_state == CONVERSATION_STATES['PREF_TRAVEL']:
-            resume = "\n\nBack to your search — **how far would you be willing to travel** for a trial?"
+            resume = ("\n\nNow, back to your search — any preferences on "
+                      "**travel distance**, **trial type**, or **treatment type**?")
         elif self.conversation_state == CONVERSATION_STATES['PREF_RISK']:
-            resume = "\n\nBack to your search — **how do you feel about experimental treatments?**"
+            resume = "\n\nNow, back to your search — **how do you feel about experimental treatments?**"
         elif self.conversation_state == CONVERSATION_STATES['PREF_TREATMENT']:
-            resume = "\n\nBack to your search — **any treatment types you'd prefer or want to avoid?**"
+            resume = "\n\nNow, back to your search — **any treatment types you'd prefer or want to avoid?**"
 
         return f"{answer}{resume}", False
 
-    def _handle_correction(self, message: str) -> Tuple[str, bool]:
-        """Handle corrections like 'actually I'm 52' or 'I meant breast cancer'."""
-        saved_state = self.conversation_state
+    def _handle_hold(self, message: str) -> Tuple[str, bool]:
+        """Handle 'hold on' / 'let me add more' — pause before searching."""
+        # Try to extract any new data from the hold message itself
+        extracted = self._extract_fields_from_message(message)
+        newly_filled = _merge_extracted(self.patient_data, extracted)
 
+        if newly_filled:
+            ack = _build_acknowledgment(self.patient_data, newly_filled)
+            self.conversation_state = CONVERSATION_STATES['FOLLOWUP']
+            return f"{ack}\n\nAnything else you'd like to add before I search?", False
+
+        # No new data — just acknowledge and wait
+        self.conversation_state = CONVERSATION_STATES['FOLLOWUP']
+        return "Of course! What else can you tell me?", False
+
+    def _handle_correction(self, message: str) -> Tuple[str, bool]:
+        """Handle corrections like 'actually I'm 52' or 'I meant breast cancer'.
+
+        When condition changes, clears stale follow-up data and re-triggers search.
+        """
         # Re-extract fields from the correction message
         extracted = self._extract_fields_from_message(message)
+
+        # Rule-based fallback for conditions: "I meant X not Y" / "I have X, not Y"
+        if not extracted.get('conditions'):
+            # "I meant X not Y" — extract X
+            m = re.search(
+                r"(?:i\s+meant|it'?s\s+actually|actually\s+(?:i\s+have|it'?s))\s+(.+?)(?:\s+not\s+.+)?$",
+                message, re.I
+            )
+            if m:
+                cond_text = m.group(1).strip().rstrip('.,!')
+                if len(cond_text) > 2 and not re.match(r'^\d+$', cond_text):
+                    extracted['conditions'] = [cond_text]
+
+        if not extracted.get('conditions'):
+            # "not X, I have Y" / "not X, it's Y"
+            m = re.search(
+                r"not\s+\w[\w\s]*?,\s*(?:it'?s|i (?:have|meant))\s+(.+?)$",
+                message, re.I
+            )
+            if m:
+                cond_text = m.group(1).strip().rstrip('.,!')
+                if len(cond_text) > 2:
+                    extracted['conditions'] = [cond_text]
+
+        if not extracted.get('conditions'):
+            # "sorry, I have X" / "actually I have X"
+            m = re.search(
+                r"(?:sorry|actually|oops),?\s+i\s+have\s+(.+?)$",
+                message, re.I
+            )
+            if m:
+                cond_text = m.group(1).strip().rstrip('.,!')
+                if len(cond_text) > 2:
+                    extracted['conditions'] = [cond_text]
+
+        # Rule-based age correction: "actually 45" / "I'm 45" / "my age is 45"
+        if not extracted.get('age'):
+            extracted['age'] = _try_extract_age(message)
+            # Also try: "actually X not Y" where X is a number
+            if not extracted.get('age'):
+                m = re.search(r'(?:actually|meant)\s+(\d{1,3})\b', message, re.I)
+                if m:
+                    age = int(m.group(1))
+                    if 1 <= age <= 120:
+                        extracted['age'] = age
+
         updated_fields = []
+        condition_changed = False
 
         # Apply corrections — overwrite existing values
         age = extracted.get('age')
@@ -676,6 +824,7 @@ class ConversationalTrialAssistant:
             updated_fields.append(
                 f"condition to **{conditions[0]}**" + (f" (was {old_cond})" if old_cond else "")
             )
+            condition_changed = True
 
         symptoms = extracted.get('symptoms')
         if symptoms:
@@ -689,19 +838,27 @@ class ConversationalTrialAssistant:
                 "\"I have breast cancer, not lung cancer\"?"
             ), False
 
+        # If condition changed, clear stale condition-specific data
+        if condition_changed:
+            self.patient_data['condition_details'] = {}
+            self.patient_data['condition_category'] = None
+            self.patient_data['condition_criteria_map'] = {}
+            self.patient_data['preferences'] = None
+            self._pending_followups = []
+            self._use_dynamic_followups = False
+
         # Build response
         ack = "Updated " + ", ".join(updated_fields) + "."
 
         # Check if all required fields are filled — if so, re-trigger search
         followup = _build_followup_ask(self.patient_data)
         if followup is None:
-            # All fields complete — go to ready_to_search to re-run
             self.conversation_state = CONVERSATION_STATES['READY_TO_SEARCH']
-            return f"{ack} Let me re-search with your updated information...", False
+            return f"{ack} Searching with your updated information...", False
 
-        # Otherwise restore state and continue
-        self.conversation_state = saved_state
-        return ack, False
+        # Still missing required fields
+        self.conversation_state = CONVERSATION_STATES['FOLLOWUP']
+        return f"{ack}\n\n{followup}", False
 
     def _handle_field_update(self, message: str) -> Tuple[str, bool]:
         """Handle /update field=value commands from the summary card UI."""
@@ -1019,10 +1176,24 @@ class ConversationalTrialAssistant:
         details = self.patient_data.setdefault('condition_details', {})
         criteria_map = self.patient_data.setdefault('condition_criteria_map', {})
 
+        # Per-answer "I don't know" phrases — these mean "skip this one"
+        _IDK_PHRASES = {
+            "i don't know", "idk", "not sure", "no idea", "skip",
+            "don't know", "dont know", "unsure", "?", "n/a", "na",
+            "i'm not sure", "im not sure", "no clue",
+        }
+
+        def _is_idk(text: str) -> bool:
+            return text.strip().lower().rstrip('.!') in _IDK_PHRASES
+
         def _store_answer(fq, value):
-            """Store an answer and its associated criterion_types."""
+            """Store an answer and its associated criterion_types.
+            If the answer is 'I don't know', store as None (explicit unknown)."""
             attr = fq['attribute']
-            details[attr] = value
+            if isinstance(value, str) and _is_idk(value):
+                details[attr] = None  # explicit unknown — acknowledged, won't re-ask
+            else:
+                details[attr] = value
             if fq.get('criterion_types'):
                 criteria_map[attr] = fq['criterion_types']
 
@@ -1080,11 +1251,22 @@ class ConversationalTrialAssistant:
 
         # Done — don't re-ask unanswered questions (they stay as unknown)
         answered = sum(1 for fq in self._pending_followups if fq['attribute'] in details)
+        skipped = sum(1 for fq in self._pending_followups
+                      if fq['attribute'] in details and details[fq['attribute']] is None)
+        known = answered - skipped
         total = len(self._pending_followups)
-        if answered == total:
+
+        if answered == total and skipped == 0:
             ack = "Thanks — that helps a lot with matching."
+        elif skipped > 0 and known > 0:
+            ack = (f"Got it — answered {known} of {total}. "
+                   f"No problem on the ones you're not sure about — "
+                   f"I'll include those as unknown and your doctor can help verify later.")
+        elif skipped == total or answered == 0:
+            ack = ("No problem — I'll include those as unknown and your doctor can "
+                   "help verify later.")
         elif answered > 0:
-            ack = f"Got it — answered {answered} of {total}. I'll work with what I have for the rest."
+            ack = f"Got it — answered {known} of {total}. I'll work with what I have for the rest."
         else:
             ack = "Thanks — I'll search with the information I have."
         return self._finish_condition_detail(ack)
