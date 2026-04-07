@@ -1370,14 +1370,18 @@ def chat():
         assistant = ConversationalTrialAssistant()
         assistant.conversation_state = session['assistant']['conversation_state']
         assistant.patient_data = session['assistant']['patient_data']
+        assistant._pending_followups = session['assistant'].get('pending_followups', [])
+        assistant._use_dynamic_followups = session['assistant'].get('use_dynamic_followups', False)
 
         # Process the message
         response, done = assistant.process_response(user_message)
 
-        # Update session
+        # Update session (persist followup state across requests)
         session['assistant'] = {
             'conversation_state': assistant.conversation_state,
-            'patient_data': assistant.patient_data
+            'patient_data': assistant.patient_data,
+            'pending_followups': assistant._pending_followups,
+            'use_dynamic_followups': assistant._use_dynamic_followups,
         }
         session.modified = True
 
@@ -1663,12 +1667,18 @@ def chat():
         if detected_condition:
             condition_fups = get_followup_questions(detected_condition)
 
-        return jsonify({
+        result = {
             'status': 'continue',
             'response': response if response else '',
             'conversation_state': assistant.conversation_state,
             'condition_followups': condition_fups,
-        })
+        }
+
+        # Include server-driven quick-reply buttons when available
+        if assistant.quick_replies:
+            result['quick_replies'] = assistant.quick_replies
+
+        return jsonify(result)
 
     except Exception as e:
         print(f"Error in chat endpoint: {str(e)}")

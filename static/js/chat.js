@@ -873,9 +873,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 conversationMessages.push({ role: 'assistant', content: noResultsHtml });
             }
         } else if (data.response) {
-            detectStateFromResponse(data.response);
-            addMessageWithQuickSelect('assistant', data.response);
-            conversationMessages.push({ role: 'assistant', content: data.response });
+            const responseText = data.response;
+            detectStateFromResponse(responseText);
+
+            // If entering condition_detail state, show a brief "searching" moment
+            if (data.conversation_state === 'condition_detail' && data.quick_replies) {
+                // Show searching animation briefly before revealing questions
+                const searchingDiv = document.createElement('div');
+                searchingDiv.className = 'flex justify-start message-enter';
+                searchingDiv.id = 'searching-moment';
+                searchingDiv.innerHTML = `
+                    <div class="max-w-[85%]">
+                        <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm leading-relaxed">
+                            <div class="flex items-center gap-2">
+                                <div class="typing-indicator-dots flex space-x-1 items-center">
+                                    <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                                    <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                                    <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                                </div>
+                                <span class="text-xs text-slate-500">Searching for relevant trials...</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                messagesContainer.appendChild(searchingDiv);
+                scrollToBottom();
+                // Replace with actual questions after a brief delay
+                setTimeout(() => {
+                    const el = document.getElementById('searching-moment');
+                    if (el) el.remove();
+                    addMessageWithServerQuickReplies('assistant', responseText, data.quick_replies);
+                    scrollToBottom();
+                }, 1200);
+            } else if (data.quick_replies && data.quick_replies.length > 0) {
+                addMessageWithServerQuickReplies('assistant', responseText, data.quick_replies);
+            } else {
+                addMessageWithQuickSelect('assistant', responseText);
+            }
+            conversationMessages.push({ role: 'assistant', content: responseText });
         } else if (data.text) {
             detectStateFromResponse(data.text);
             addMessageWithQuickSelect('assistant', data.text);
@@ -984,6 +1019,67 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>${renderMarkdown(content)}</p>
                 </div>
                 ${quickSelectHtml}
+            </div>
+        `;
+
+        messagesContainer.appendChild(messageDiv);
+        scrollToBottom();
+        initQuickButtons();
+    }
+
+    // Add message with server-driven quick-reply buttons
+    function addMessageWithServerQuickReplies(role, content, quickReplies) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'flex justify-start message-enter';
+
+        // Build quick-reply buttons from server data
+        let buttonsHtml = '';
+        if (quickReplies && quickReplies.length > 0) {
+            const buttons = [];
+            for (const qr of quickReplies) {
+                if (qr.type === 'skip') {
+                    // Skip button — styled differently
+                    for (const opt of (qr.options || [])) {
+                        buttons.push(
+                            `<button class="quick-btn px-3 py-2 bg-white border border-slate-200 rounded-full text-xs text-slate-500 hover:bg-slate-50 hover:border-slate-300 transition-all" data-value="${opt}">${opt}</button>`
+                        );
+                    }
+                } else if (qr.type === 'yes_no') {
+                    // Yes/No buttons with question number context
+                    const prefix = qr.question_num ? `${qr.question_num}. ` : '';
+                    for (const opt of (qr.options || [])) {
+                        const val = prefix + opt;
+                        const style = opt === 'Yes'
+                            ? 'bg-green-50 border-green-200 text-green-700 hover:bg-green-100 hover:border-green-300'
+                            : opt === 'No'
+                            ? 'bg-red-50 border-red-200 text-red-700 hover:bg-red-100 hover:border-red-300'
+                            : 'bg-white border-slate-200 text-slate-500 hover:bg-slate-50 hover:border-slate-300';
+                        buttons.push(
+                            `<button class="quick-btn px-3 py-2 border rounded-full text-xs ${style} transition-all" data-value="${val}">${prefix}${opt}</button>`
+                        );
+                    }
+                } else if (qr.type === 'choice') {
+                    // Choice buttons (stage, treatment type, preferences)
+                    const prefix = qr.question_num ? `${qr.question_num}. ` : '';
+                    for (const opt of (qr.options || [])) {
+                        const val = prefix + opt;
+                        buttons.push(
+                            `<button class="quick-btn px-3 py-2 bg-white border border-slate-200 rounded-full text-xs text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="${val}">${opt}</button>`
+                        );
+                    }
+                }
+            }
+            if (buttons.length > 0) {
+                buttonsHtml = `<div id="quick-select-server" class="mt-3 flex flex-wrap gap-2">${buttons.join('')}</div>`;
+            }
+        }
+
+        messageDiv.innerHTML = `
+            <div class="max-w-[85%]">
+                <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm leading-relaxed">
+                    <p>${renderMarkdown(content)}</p>
+                </div>
+                ${buttonsHtml}
             </div>
         `;
 

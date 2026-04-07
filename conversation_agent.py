@@ -452,8 +452,8 @@ class ConversationalTrialAssistant:
             'condition_category': None,    # Matched category ID from condition_followups
         }
         self._pending_followups: List[Dict] = []   # Queued condition follow-up questions
-        self._followup_batch: int = 0               # Which batch we're on (0 or 1)
         self._use_dynamic_followups: bool = False    # True if using dynamic criteria-driven questions
+        self.quick_replies: Optional[List[Dict]] = None  # Server-driven quick-reply buttons for frontend
 
     # ------------------------------------------------------------------
     # LLM extraction helper
@@ -597,7 +597,7 @@ class ConversationalTrialAssistant:
             'condition_category': None,
         }
         self._pending_followups = []
-        self._followup_batch = 0
+        self.quick_replies = None
         return (
             "No problem — let's start completely fresh. Tell me about your condition, "
             "your age, and where you're located."
@@ -613,8 +613,8 @@ class ConversationalTrialAssistant:
         self.patient_data['condition_category'] = None
         self.patient_data['condition_criteria_map'] = {}
         self._pending_followups = []
-        self._followup_batch = 0
         self._use_dynamic_followups = False
+        self.quick_replies = None
 
     def _handle_question(self, answer: str) -> Tuple[str, bool]:
         """Answer a mid-flow question, then resume."""
@@ -625,9 +625,10 @@ class ConversationalTrialAssistant:
             if followup:
                 resume = f"\n\nBack to your search — {followup}"
         elif self.conversation_state == CONVERSATION_STATES['CONDITION_DETAIL']:
-            batch_q = self._build_condition_question_batch()
-            if batch_q:
-                resume = f"\n\nBack to your search — {batch_q}"
+            remaining = [fq for fq in self._pending_followups
+                         if fq['attribute'] not in self.patient_data.get('condition_details', {})]
+            if remaining:
+                resume = "\n\nBack to your search — please answer the questions above when you're ready."
         elif self.conversation_state == CONVERSATION_STATES['PREF_TRAVEL']:
             resume = "\n\nBack to your search — **how far would you be willing to travel** for a trial?"
         elif self.conversation_state == CONVERSATION_STATES['PREF_RISK']:
@@ -894,6 +895,9 @@ class ConversationalTrialAssistant:
         Uses dynamic criteria-driven questions first (derived from the actual
         trial database), falling back to hardcoded condition_followups.
 
+        Presents ALL questions in a single bullet-point message and sets
+        self.quick_replies with button metadata for the frontend.
+
         Returns (response, is_done) if transitioning, None otherwise.
         """
         condition = self.patient_data.get('primary_condition') or (
@@ -911,8 +915,6 @@ class ConversationalTrialAssistant:
         )
 
         if dynamic_qs:
-            # Convert QuestionTemplate objects to the dict format used by
-            # _build_condition_question_batch and _handle_condition_detail
             self._pending_followups = [
                 {
                     'question': qt.question_text,
@@ -939,149 +941,152 @@ class ConversationalTrialAssistant:
             self._pending_followups = followups
             self._use_dynamic_followups = False
 
-        self._followup_batch = 0
-
-        # Build the first batch of grouped questions
-        question_msg = self._build_condition_question_batch()
-        if not question_msg:
+        if not self._pending_followups:
             return None
 
-        self.conversation_state = CONVERSATION_STATES['CONDITION_DETAIL']
-        intro = f"I'd like to ask a few quick questions about your **{condition}**"
-        full_msg = f"{ack}\n\n{intro} to help find the most relevant trials:\n\n{question_msg}\n\nIf you're not sure about any of these, just say \"I don't know\" and I'll search more broadly."
-
-        return full_msg.strip(), False
-
-    def _build_condition_question_batch(self) -> Optional[str]:
-        """Build a message with 2-3 grouped follow-up questions from the pending list.
-
-        Returns the formatted question text, or None if no questions remain.
-        """
-        remaining = [fq for fq in self._pending_followups
-                     if fq['attribute'] not in self.patient_data.get('condition_details', {})]
-        if not remaining:
-            return None
-
-        # Take 2-3 questions per batch
-        batch_size = min(3, len(remaining))
-        batch = remaining[:batch_size]
-
+        # Build ALL questions as numbered bullet points in one message
         parts = []
-        for i, fq in enumerate(batch, 1):
+        quick_replies: List[Dict] = []
+        for i, fq in enumerate(self._pending_followups, 1):
             q = fq['question']
             if fq.get('choices'):
                 options = ", ".join(fq['choices'])
                 q += f" ({options})"
             parts.append(f"**{i}.** {q}")
 
-        return "\n".join(parts)
+            # Build quick-reply button metadata for each question
+            if fq.get('choices'):
+                quick_replies.append({
+                    'question_num': i,
+                    'attribute': fq['attribute'],
+                    'type': 'choice',
+                    'options': fq['choices'],
+                })
+            elif fq.get('value_type') in ('boolean', 'yes_no'):
+                quick_replies.append({
+                    'question_num': i,
+                    'attribute': fq['attribute'],
+                    'type': 'yes_no',
+                    'options': ['Yes', 'No', "I don't know"],
+                })
+
+        question_msg = "\n".join(parts)
+
+        self.conversation_state = CONVERSATION_STATES['CONDITION_DETAIL']
+
+        # Set quick_replies for frontend (including a skip-all option)
+        quick_replies.append({
+            'type': 'skip',
+            'options': ["I don't know any of these"],
+        })
+        self.quick_replies = quick_replies
+
+        intro = f"I found some potential trials for **{condition}**. A few quick questions to improve your matches:"
+        full_msg = f"{ack}\n\n{intro}\n\n{question_msg}\n\nAnswer as many as you can — just say \"skip\" for any you're not sure about."
+
+        return full_msg.strip(), False
 
     def _handle_condition_detail(self, message: str) -> Tuple[str, bool]:
-        """Handle responses to condition-specific follow-up questions."""
+        """Handle responses to condition-specific follow-up questions.
+
+        All questions were presented at once, so we parse answers for all
+        pending questions from a single freeform response. Unanswered
+        questions are left as unknown (not re-asked).
+        """
         text = message.strip().lower()
 
         # Handle "I don't know" / skip — only if the ENTIRE message is a skip
-        # (not if "I don't know" appears as part of a multi-answer response)
         skip_phrases = [
             "i don't know", "idk", "not sure", "no idea", "skip",
             "don't know", "dont know", "i'm not sure", "im not sure",
             "i have no idea", "no clue", "unsure", "haven't been told",
-            "skip all", "skip these",
+            "skip all", "skip these", "i don't know any of these",
         ]
-        # Only skip if the entire message (stripped) matches a skip phrase
         is_full_skip = any(text == phrase or text == phrase + "."
                            for phrase in skip_phrases)
 
         if is_full_skip:
-            # Mark all pending as skipped and move on
             ack = "No problem — I'll search broadly and your doctor can help narrow it down later."
             return self._finish_condition_detail(ack)
 
-        # Parse answers from the response — try to match each pending question
+        # Parse answers for ALL pending questions at once
         remaining = [fq for fq in self._pending_followups
                      if fq['attribute'] not in self.patient_data.get('condition_details', {})]
-        batch = remaining[:3]  # Current batch
 
-        if not batch:
+        if not remaining:
             return self._finish_condition_detail("")
 
-        parsed_any = False
         details = self.patient_data.setdefault('condition_details', {})
-
-        # Also store criterion_types mapping for dynamic followups
         criteria_map = self.patient_data.setdefault('condition_criteria_map', {})
 
         def _store_answer(fq, value):
             """Store an answer and its associated criterion_types."""
             attr = fq['attribute']
             details[attr] = value
-            # Store criterion_types for this attribute (used by matching pipeline)
             if fq.get('criterion_types'):
                 criteria_map[attr] = fq['criterion_types']
 
-        if len(batch) == 1:
-            # Single question — entire response is the answer
-            fq = batch[0]
-            attr, value = parse_answer(message, fq)
-            if value is not None:
-                _store_answer(fq, value)
-                parsed_any = True
+        # Strategy 1: Split on numbered patterns (1. X  2. Y  3. Z)
+        numbered_parts = re.split(r'\s*\d+[.)]\s+', message.strip())
+        numbered_parts = [p.strip() for p in numbered_parts if p.strip()]
+
+        # Strategy 2: Split on newlines
+        newline_parts = [p.strip() for p in message.strip().split('\n') if p.strip()]
+
+        # Strategy 3: Split on commas followed by uppercase or numbered items
+        comma_parts = re.split(r',\s*(?=[A-Z1-9])', message.strip())
+        comma_parts = [p.strip() for p in comma_parts if p.strip()]
+
+        # Pick the best split: the one closest to the number of questions
+        n_questions = len(remaining)
+        candidates = [
+            (numbered_parts, abs(len(numbered_parts) - n_questions)),
+            (newline_parts, abs(len(newline_parts) - n_questions)),
+            (comma_parts, abs(len(comma_parts) - n_questions)),
+        ]
+        # Prefer splits that have at least as many parts as questions
+        candidates.sort(key=lambda x: (x[1], -len(x[0])))
+        best_parts = candidates[0][0]
+
+        parsed_count = 0
+        if len(best_parts) >= n_questions:
+            # Map each part to its corresponding question
+            for fq, ans_text in zip(remaining, best_parts):
+                attr, value = parse_answer(ans_text, fq)
+                if value is not None:
+                    _store_answer(fq, value)
+                    parsed_count += 1
+        elif len(best_parts) > 1:
+            # Partial match — assign what we can
+            for fq, ans_text in zip(remaining, best_parts):
+                attr, value = parse_answer(ans_text, fq)
+                if value is not None:
+                    _store_answer(fq, value)
+                    parsed_count += 1
         else:
-            # Multiple questions — try to split numbered answers
-            # Patterns: "1. X  2. Y  3. Z" or "1) X 2) Y" or with newlines
-            parts = re.split(r'\s*\d+[.)]\s+', message.strip())
-            # First element is empty if message starts with "1."
-            parts = [p.strip() for p in parts if p.strip()]
+            # Single response — try parsing against each question
+            for fq in remaining:
+                attr, value = parse_answer(message, fq)
+                if value is not None:
+                    _store_answer(fq, value)
+                    parsed_count += 1
 
-            if len(parts) >= len(batch):
-                # Successfully split numbered responses
-                for fq, ans_text in zip(batch, parts):
-                    attr, value = parse_answer(ans_text, fq)
-                    if value is not None:
-                        _store_answer(fq, value)
-                        parsed_any = True
-            else:
-                # Try comma/newline splitting
-                parts = re.split(r'\n|,\s*(?=[A-Z])', message.strip())
-                parts = [p.strip() for p in parts if p.strip()]
-
-                if len(parts) >= len(batch):
-                    for fq, ans_text in zip(batch, parts):
-                        attr, value = parse_answer(ans_text, fq)
-                        if value is not None:
-                            _store_answer(fq, value)
-                            parsed_any = True
-                else:
-                    # Fall back: parse entire message against each question
-                    for fq in batch:
-                        attr, value = parse_answer(message, fq)
-                        if value is not None:
-                            _store_answer(fq, value)
-                            parsed_any = True
-
-        if not parsed_any:
+        if parsed_count == 0:
             # Couldn't parse — store as raw text for the first unanswered question
-            for fq in batch:
+            for fq in remaining:
                 if fq['attribute'] not in details:
                     _store_answer(fq, message.strip())
-                    parsed_any = True
                     break
 
-        self._followup_batch += 1
-
-        # Check if there are more questions to ask (batch 2)
-        remaining_after = [fq for fq in self._pending_followups
-                           if fq['attribute'] not in details]
-
-        if remaining_after and self._followup_batch < 2:
-            ack = "Thanks for those details."
-
-            next_batch = self._build_condition_question_batch()
-            if next_batch:
-                return f"{ack} A couple more:\n\n{next_batch}", False
-
-        # Done with condition details — move to preferences
-        ack = "Thanks — that helps a lot with matching."
+        # Done — don't re-ask unanswered questions (they stay as unknown)
+        answered = sum(1 for fq in self._pending_followups if fq['attribute'] in details)
+        total = len(self._pending_followups)
+        if answered == total:
+            ack = "Thanks — that helps a lot with matching."
+        elif answered > 0:
+            ack = f"Got it — answered {answered} of {total}. I'll work with what I have for the rest."
+        else:
+            ack = "Thanks — I'll search with the information I have."
         return self._finish_condition_detail(ack)
 
     def _finish_condition_detail(self, ack: str) -> Tuple[str, bool]:
@@ -1121,6 +1126,10 @@ class ConversationalTrialAssistant:
             "you're open to, or **treatment types** you'd prefer or avoid? "
             "Or are you open to anything?"
         )
+        self.quick_replies = [{
+            'type': 'choice',
+            'options': ['Open to anything', 'Local only', 'No surgery', 'Proven treatments only'],
+        }]
         if ack:
             return f"{ack}\n\n{pref_q}", False
         return pref_q, False
