@@ -1263,6 +1263,8 @@ def chat():
                 except Exception as viz_err:
                     print(f"Eligibility viz error for {nct_id}: {viz_err}")
 
+                trial_source = scoring.get('source', trial.get('source', 'sigir'))
+
                 formatted_trials.append({
                     'nct_id': nct_id,
                     'title': trial.get('brief_title') or trial.get('title', 'Clinical Trial'),
@@ -1274,6 +1276,7 @@ def chat():
                     'status': _format_status(trial.get('status')),
                     'distance': distance,
                     'location': trial.get('location', ''),
+                    'source': 'clinicaltrials.gov' if trial_source == 'ctgov_api' else 'sigir',
                     # Real scoring data
                     'match_score': scoring['match_score'],
                     'hard_met': scoring['hard_met'],
@@ -1289,8 +1292,14 @@ def chat():
                     'eligibility_breakdown': viz_data,
                 })
 
-            # Sort by match score (highest first)
-            formatted_trials.sort(key=lambda x: x.get('match_score', 0), reverse=True)
+            # Sort by match score (highest first), API trials win ties
+            formatted_trials.sort(
+                key=lambda x: (
+                    x.get('match_score', 0),
+                    1 if x.get('source') == 'clinicaltrials.gov' else 0,
+                ),
+                reverse=True,
+            )
 
             # Generate concept expansion audit for the search terms
             concept_audit = []

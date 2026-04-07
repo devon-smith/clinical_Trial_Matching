@@ -773,6 +773,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add a message to the chat
+    // Get the correct ClinicalTrials.gov URL for a trial
+    function ctGovUrl(nctId, source) {
+        // API-sourced trials use the new URL format
+        if (source === 'clinicaltrials.gov') {
+            return `https://clinicaltrials.gov/study/${nctId}`;
+        }
+        return `https://clinicaltrials.gov/study/${nctId}`;
+    }
+
     // Simple markdown renderer for chat bubbles
     function renderMarkdown(text) {
         return text
@@ -1216,7 +1225,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-xs text-slate-500">${trial.nct_id} · ${eligibility.matchScore}% match</p>
                     </div>
                     <div class="flex items-center gap-2">
-                        <a href="https://clinicaltrials.gov/ct2/show/${nctId}" target="_blank" class="p-1.5 text-slate-600 hover:bg-slate-50 rounded transition-colors" title="View on ClinicalTrials.gov">
+                        <a href="https://clinicaltrials.gov/study/${nctId}" target="_blank" class="p-1.5 text-slate-600 hover:bg-slate-50 rounded transition-colors" title="View on ClinicalTrials.gov">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                         </a>
                         <button onclick="viewTrialDetails('${nctId}')" class="p-1.5 text-slate-600 hover:bg-slate-50 rounded transition-colors" title="View details">
@@ -1283,7 +1292,7 @@ document.addEventListener('DOMContentLoaded', function() {
             exportText += `NCT ID: ${nctId}\n`;
             exportText += `Match Score: ${eligibility.matchScore || 'N/A'}%\n`;
             exportText += `Phase: ${trial.phase || 'N/A'}\n`;
-            exportText += `Link: https://clinicaltrials.gov/ct2/show/${nctId}\n`;
+            exportText += `Link: https://clinicaltrials.gov/study/${nctId}\n`;
             exportText += '\n---\n\n';
         });
 
@@ -1478,9 +1487,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const modalContent = document.getElementById('trial-details');
                 const eligibility = generateEligibilityData(trial);
 
-                // Find the visualization breakdown from the allTrials data
+                // Find the visualization breakdown and source from the allTrials data
                 const trialData = allTrials.find(t => t.trial.nct_id === nctId);
                 const vizBreakdown = trialData?.trial?.eligibility_breakdown;
+                const trialSource = trialData?.trial?.source || trial.source || 'sigir';
+                const trialUrl = ctGovUrl(nctId, trialSource);
 
                 // --- 1. ELIGIBILITY CHECKLIST ---
                 let criteriaHtml = '';
@@ -1642,7 +1653,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
                                 How to Join
                             </h4>
-                            <a href="https://clinicaltrials.gov/ct2/show/${trial.nct_id}" target="_blank"
+                            <a href="${trialUrl}" target="_blank"
                                 class="w-full px-4 py-3 bg-green-600 text-white font-medium rounded-xl hover:bg-green-700 transition-colors flex items-center justify-center gap-2">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                                 View on ClinicalTrials.gov to Request Screening

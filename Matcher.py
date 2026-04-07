@@ -200,6 +200,30 @@ class TrialMatcher:
         conn.close()
         return row[0] if row else ""
 
+    def _get_trial_source(self, nct_id: str) -> str:
+        """Return 'ctgov_api' or 'sigir' for a trial."""
+        conn = self._connect()
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT COALESCE(source, 'sigir') FROM trials WHERE nct_id = ?",
+            (nct_id,),
+        )
+        row = cursor.fetchone()
+        conn.close()
+        return row[0] if row else "sigir"
+
+    def _get_eligibility_text(self, nct_id: str) -> str:
+        """Retrieve free-text eligibility criteria for API-sourced trials."""
+        conn = self._connect()
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT COALESCE(eligibility_text, '') FROM trials WHERE nct_id = ?",
+            (nct_id,),
+        )
+        row = cursor.fetchone()
+        conn.close()
+        return row[0] if row else ""
+
     @staticmethod
     @staticmethod
     def compute_disease_relevance(
@@ -314,11 +338,18 @@ class TrialMatcher:
         Returns dict with match_score (0-100), eligibility_status, constraint
         counts, RAG score, LLM judgments, and per-criterion details.
         """
+        trial_source = self._get_trial_source(nct_id)
+
         eval_result = self.get_detailed_evaluation(patient_attrs, nct_id)
 
         constraints = eval_result.get('constraints', [])
         hard_constraints = [c for c in constraints if c.get('hard_constraint')]
         soft_constraints = [c for c in constraints if not c.get('hard_constraint')]
+
+        # --- For API-sourced trials without structured criteria, use eligibility text ---
+        eligibility_text_for_llm = ""
+        if trial_source == 'ctgov_api' and not hard_constraints:
+            eligibility_text_for_llm = self._get_eligibility_text(nct_id)
 
         # --- LLM judge for unclear criteria ---
         llm_judgments: List[CriterionJudgment] = []
@@ -330,12 +361,21 @@ class TrialMatcher:
             use_llm_judge
             and self.llm_judge
             and patient_text
-            and unclear_criteria
+            and (unclear_criteria or eligibility_text_for_llm)
         ):
             try:
-                llm_judgments = self.llm_judge.evaluate_criteria(
-                    patient_text, unclear_criteria
-                )
+                if unclear_criteria:
+                    llm_judgments = self.llm_judge.evaluate_criteria(
+                        patient_text, unclear_criteria
+                    )
+                elif eligibility_text_for_llm:
+                    # For API trials: pass the free-text eligibility as context
+                    # The LLM judge can assess basic criteria from text
+                    llm_judgments = self.llm_judge.evaluate_criteria(
+                        patient_text,
+                        [{"attribute": "eligibility_criteria", "value": eligibility_text_for_llm,
+                          "hard_constraint": True, "operator": "text_match"}],
+                    )
             except Exception as e:
                 print(f"LLM judge error for {nct_id}: {e}")
 
@@ -411,6 +451,10 @@ class TrialMatcher:
         else:
             combined = base
 
+        # Source boost: API trials have real location/status data → small boost
+        if trial_source == 'ctgov_api':
+            combined = min(combined + 0.03, 1.0)
+
         match_score = max(0, min(100, int(round(combined * 100))))
 
         # Eligibility status
@@ -457,6 +501,7 @@ class TrialMatcher:
             'rag_score': rag_score,
             'criteria_details': criteria_details,
             'llm_judgments_count': len(llm_judgments),
+            'source': trial_source,
         }
         if pref_result is not None:
             result['preference_score'] = pref_result['preference_score']
