@@ -298,10 +298,106 @@ def build_patient_attributes(patient_data: Dict[str, Any]) -> Dict[str, Any]:
     # Merge condition-specific follow-up answers into criteria attributes
     condition_details = patient_data.get('condition_details', {})
     category_id = patient_data.get('condition_category')
-    if condition_details and category_id:
+    criteria_map = patient_data.get('condition_criteria_map', {})
+
+    if condition_details and criteria_map:
+        # Dynamic followups: answers carry their criterion_types directly
+        attrs = _merge_dynamic_answers(attrs, condition_details, criteria_map)
+        # Pass through for the eligibility visualizer
+        attrs['condition_details'] = condition_details
+        attrs['condition_criteria_map'] = criteria_map
+    elif condition_details and category_id:
+        # Hardcoded fallback: use condition_followups module
         attrs = merge_followup_answers(attrs, category_id, condition_details)
 
     return attrs
+
+
+def _merge_dynamic_answers(
+    attrs: Dict[str, Any],
+    condition_details: Dict[str, Any],
+    criteria_map: Dict[str, List[str]],
+) -> Dict[str, Any]:
+    """Merge dynamic follow-up answers directly into patient attributes.
+
+    Each answer's attribute_key maps to a list of criterion_types via
+    criteria_map. The answer value is translated to the appropriate
+    attribute value for each criterion.
+    """
+    for attr_key, value in condition_details.items():
+        criterion_types = criteria_map.get(attr_key, [])
+        if not criterion_types:
+            continue
+
+        if isinstance(value, bool):
+            # Boolean answer → set all associated criteria
+            for ct in criterion_types:
+                attrs[ct] = value
+        elif isinstance(value, (int, float)):
+            # Numeric answer → set all associated criteria
+            for ct in criterion_types:
+                attrs[ct] = value
+        elif isinstance(value, str):
+            # Text answer — try to extract meaning and set criteria
+            _merge_text_answer(attrs, value, criterion_types, attr_key)
+
+    return attrs
+
+
+def _merge_text_answer(
+    attrs: Dict[str, Any],
+    text: str,
+    criterion_types: List[str],
+    attr_key: str,
+) -> None:
+    """Parse a free-text answer and set the associated criteria.
+
+    For text answers, we check for positive/negative indicators and
+    try to match keywords against the criterion names.
+    """
+    text_lower = text.lower().strip()
+
+    # "I don't know" / uncertain answers — leave criteria as unknown
+    uncertain_phrases = [
+        "don't know", "dont know", "idk", "not sure", "unsure",
+        "no idea", "no clue", "haven't been told", "havent been told",
+    ]
+    if any(phrase in text_lower for phrase in uncertain_phrases):
+        return  # Leave criteria unset (unknown)
+
+    # Check for explicit negatives
+    negative_phrases = [
+        "no", "none", "never", "n/a", "not", "don't", "dont",
+        "haven't", "havent", "negative",
+    ]
+    positive_phrases = [
+        "yes", "have", "had", "diagnosed", "positive", "currently",
+        "taking", "receiving",
+    ]
+
+    is_negative = any(text_lower.startswith(p) or text_lower == p
+                      for p in negative_phrases)
+    is_positive = any(p in text_lower for p in positive_phrases)
+
+    if is_negative and not is_positive:
+        # Patient said no/none — set all criteria to False
+        for ct in criterion_types:
+            attrs[ct] = False
+        return
+
+    # For text answers about specific conditions/treatments,
+    # try to match keywords from the answer against criterion names
+    for ct in criterion_types:
+        # Extract the medical entity from the criterion name
+        ct_lower = ct.lower()
+
+        # Check if any significant word from the answer appears in the criterion
+        words = [w for w in text_lower.split() if len(w) > 3]
+        matched = any(w in ct_lower for w in words)
+
+        if matched or is_positive:
+            attrs[ct] = True
+        # If we can't determine, leave as unknown (don't set to False)
 
 
 
@@ -1057,6 +1153,7 @@ def index():
             'preferences': None,
             'condition_details': {},
             'condition_category': None,
+            'condition_criteria_map': {},
         }
     }
     return render_template('index.html')
@@ -1083,6 +1180,7 @@ def chat():
                     'preferences': None,
                     'condition_details': {},
                     'condition_category': None,
+                    'condition_criteria_map': {},
                 }
             }
 
@@ -1212,6 +1310,7 @@ def chat():
             # Include condition follow-up details for eligibility matching
             search_data['condition_details'] = patient_data.get('condition_details', {})
             search_data['condition_category'] = patient_data.get('condition_category')
+            search_data['condition_criteria_map'] = patient_data.get('condition_criteria_map', {})
 
             # Build structured patient attributes for SMT evaluation
             patient_attrs = build_patient_attributes(search_data)

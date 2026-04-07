@@ -88,12 +88,27 @@ def _build_followup_patient_fact(
 
     If the criterion was matched via a follow-up answer, show the original
     patient-provided detail alongside the boolean evaluation.
+    Works with both hardcoded _CRITERION_TO_FOLLOWUP and dynamic criteria_map.
     """
     followup_key = _CRITERION_TO_FOLLOWUP.get(attr)
+
+    # Also check dynamic criteria_map — reverse lookup which attribute_key
+    # maps to this criterion_type
+    if not followup_key:
+        criteria_map = patient_attrs.get('condition_criteria_map', {})
+        for ak, ct_list in criteria_map.items():
+            if attr in ct_list:
+                followup_key = ak
+                break
+
     if not followup_key:
         return f"Your value: {_format_value(patient_val)}"
 
-    raw_answer = patient_attrs.get(f"followup_{followup_key}")
+    # Look for the answer in condition_details (dynamic) or followup_ prefix (legacy)
+    condition_details = patient_attrs.get('condition_details', {})
+    raw_answer = condition_details.get(followup_key)
+    if raw_answer is None:
+        raw_answer = patient_attrs.get(f"followup_{followup_key}")
     if raw_answer is None:
         return f"Your value: {_format_value(patient_val)}"
 

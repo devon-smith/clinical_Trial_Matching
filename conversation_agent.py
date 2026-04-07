@@ -16,6 +16,7 @@ from llm_questioner import LLMQuestionGenerator
 from condition_followups import (
     detect_condition, get_followup_questions, parse_answer,
 )
+from dynamic_followups import discover_followup_questions
 
 QuestionProvider = Callable[[str], str]
 
@@ -452,6 +453,7 @@ class ConversationalTrialAssistant:
         }
         self._pending_followups: List[Dict] = []   # Queued condition follow-up questions
         self._followup_batch: int = 0               # Which batch we're on (0 or 1)
+        self._use_dynamic_followups: bool = False    # True if using dynamic criteria-driven questions
 
     # ------------------------------------------------------------------
     # LLM extraction helper
@@ -609,8 +611,10 @@ class ConversationalTrialAssistant:
         self.patient_data['preferences'] = None
         self.patient_data['condition_details'] = {}
         self.patient_data['condition_category'] = None
+        self.patient_data['condition_criteria_map'] = {}
         self._pending_followups = []
         self._followup_batch = 0
+        self._use_dynamic_followups = False
 
     def _handle_question(self, answer: str) -> Tuple[str, bool]:
         """Answer a mid-flow question, then resume."""
@@ -887,6 +891,9 @@ class ConversationalTrialAssistant:
     def _try_transition_to_condition_detail(self, ack: str = "") -> Optional[Tuple[str, bool]]:
         """If condition is known and has follow-ups, transition to CONDITION_DETAIL.
 
+        Uses dynamic criteria-driven questions first (derived from the actual
+        trial database), falling back to hardcoded condition_followups.
+
         Returns (response, is_done) if transitioning, None otherwise.
         """
         condition = self.patient_data.get('primary_condition') or (
@@ -896,16 +903,42 @@ class ConversationalTrialAssistant:
         if not condition:
             return None
 
-        category = detect_condition(condition)
-        if not category:
-            return None
+        # Try dynamic questions first (data-driven from trial criteria)
+        dynamic_qs = discover_followup_questions(
+            condition,
+            known_attrs=self.patient_data.get('condition_details'),
+            patient_data=self.patient_data,
+        )
 
-        followups = get_followup_questions(condition)
-        if not followups:
-            return None
+        if dynamic_qs:
+            # Convert QuestionTemplate objects to the dict format used by
+            # _build_condition_question_batch and _handle_condition_detail
+            self._pending_followups = [
+                {
+                    'question': qt.question_text,
+                    'attribute': qt.attribute_key,
+                    'value_type': qt.value_type,
+                    'choices': qt.choices,
+                    'criterion_types': qt.criterion_types,
+                }
+                for qt in dynamic_qs
+            ]
+            self.patient_data['condition_category'] = 'dynamic'
+            self._use_dynamic_followups = True
+        else:
+            # Fall back to hardcoded condition categories
+            category = detect_condition(condition)
+            if not category:
+                return None
 
-        self.patient_data['condition_category'] = category.category_id
-        self._pending_followups = followups
+            followups = get_followup_questions(condition)
+            if not followups:
+                return None
+
+            self.patient_data['condition_category'] = category.category_id
+            self._pending_followups = followups
+            self._use_dynamic_followups = False
+
         self._followup_batch = 0
 
         # Build the first batch of grouped questions
@@ -914,8 +947,8 @@ class ConversationalTrialAssistant:
             return None
 
         self.conversation_state = CONVERSATION_STATES['CONDITION_DETAIL']
-        intro = f"You mentioned **{category.display_name.lower()}**"
-        full_msg = f"{ack}\n\n{intro} — a few quick questions to help me find the most relevant trials:\n\n{question_msg}\n\nThese details help narrow down which trials you'd be eligible for. If you're not sure about any of these, just say \"I don't know\" and I'll search more broadly."
+        intro = f"I'd like to ask a few quick questions about your **{condition}**"
+        full_msg = f"{ack}\n\n{intro} to help find the most relevant trials:\n\n{question_msg}\n\nIf you're not sure about any of these, just say \"I don't know\" and I'll search more broadly."
 
         return full_msg.strip(), False
 
@@ -947,15 +980,19 @@ class ConversationalTrialAssistant:
         """Handle responses to condition-specific follow-up questions."""
         text = message.strip().lower()
 
-        # Handle "I don't know" / skip
+        # Handle "I don't know" / skip — only if the ENTIRE message is a skip
+        # (not if "I don't know" appears as part of a multi-answer response)
         skip_phrases = [
             "i don't know", "idk", "not sure", "no idea", "skip",
             "don't know", "dont know", "i'm not sure", "im not sure",
             "i have no idea", "no clue", "unsure", "haven't been told",
+            "skip all", "skip these",
         ]
-        is_skip = any(phrase in text for phrase in skip_phrases)
+        # Only skip if the entire message (stripped) matches a skip phrase
+        is_full_skip = any(text == phrase or text == phrase + "."
+                           for phrase in skip_phrases)
 
-        if is_skip:
+        if is_full_skip:
             # Mark all pending as skipped and move on
             ack = "No problem — I'll search broadly and your doctor can help narrow it down later."
             return self._finish_condition_detail(ack)
@@ -971,12 +1008,23 @@ class ConversationalTrialAssistant:
         parsed_any = False
         details = self.patient_data.setdefault('condition_details', {})
 
+        # Also store criterion_types mapping for dynamic followups
+        criteria_map = self.patient_data.setdefault('condition_criteria_map', {})
+
+        def _store_answer(fq, value):
+            """Store an answer and its associated criterion_types."""
+            attr = fq['attribute']
+            details[attr] = value
+            # Store criterion_types for this attribute (used by matching pipeline)
+            if fq.get('criterion_types'):
+                criteria_map[attr] = fq['criterion_types']
+
         if len(batch) == 1:
             # Single question — entire response is the answer
             fq = batch[0]
             attr, value = parse_answer(message, fq)
             if value is not None:
-                details[attr] = value
+                _store_answer(fq, value)
                 parsed_any = True
         else:
             # Multiple questions — try to split numbered answers
@@ -990,7 +1038,7 @@ class ConversationalTrialAssistant:
                 for fq, ans_text in zip(batch, parts):
                     attr, value = parse_answer(ans_text, fq)
                     if value is not None:
-                        details[attr] = value
+                        _store_answer(fq, value)
                         parsed_any = True
             else:
                 # Try comma/newline splitting
@@ -1001,21 +1049,21 @@ class ConversationalTrialAssistant:
                     for fq, ans_text in zip(batch, parts):
                         attr, value = parse_answer(ans_text, fq)
                         if value is not None:
-                            details[attr] = value
+                            _store_answer(fq, value)
                             parsed_any = True
                 else:
                     # Fall back: parse entire message against each question
                     for fq in batch:
                         attr, value = parse_answer(message, fq)
                         if value is not None:
-                            details[attr] = value
+                            _store_answer(fq, value)
                             parsed_any = True
 
         if not parsed_any:
             # Couldn't parse — store as raw text for the first unanswered question
             for fq in batch:
                 if fq['attribute'] not in details:
-                    details[fq['attribute']] = message.strip()
+                    _store_answer(fq, message.strip())
                     parsed_any = True
                     break
 
