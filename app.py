@@ -260,13 +260,13 @@ def build_patient_attributes(patient_data: Dict[str, Any]) -> Dict[str, Any]:
     """
     attrs: Dict[str, Any] = {}
 
-    # Age mapping — criteria check for presence (bool), not the numeric value
+    # Age mapping — pass numeric value for >= / <= comparisons
     age = patient_data.get('age')
     if age is not None:
         try:
             age_val = int(age)
-            attrs['patient_age_value_recorded_now_in_years'] = True
-            attrs['age'] = age_val  # Keep numeric for display
+            attrs['patient_age_value_recorded_now_in_years'] = age_val
+            attrs['age'] = age_val
         except (ValueError, TypeError):
             pass
 
