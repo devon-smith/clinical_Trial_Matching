@@ -110,7 +110,183 @@ _register(ConditionCategory(
     ],
 ))
 
-# --- 3. Lung Cancer ---
+# --- 3a. Gastric / Stomach Cancer ---
+_register(ConditionCategory(
+    category_id="gastric_cancer",
+    display_name="Gastric Cancer",
+    aliases=["gastric cancer", "stomach cancer", "gastric carcinoma",
+             "stomach tumor", "gastric tumor", "gastric adenocarcinoma",
+             "gastroesophageal cancer", "gej cancer"],
+    followups=[
+        FollowUpQuestion(
+            question="What stage is your gastric cancer?",
+            attribute="stage",
+            value_type="choice",
+            choices=["I", "II", "III", "IV"],
+        ),
+        FollowUpQuestion(
+            question="Has it spread (metastasized) to other parts of your body?",
+            attribute="metastatic_status",
+            value_type="boolean",
+        ),
+        FollowUpQuestion(
+            question="Have you had any prior treatments — surgery, chemotherapy, radiation, or immunotherapy?",
+            attribute="prior_treatments",
+            value_type="text",
+        ),
+        FollowUpQuestion(
+            question="Do you know your HER2 status or any other biomarkers from tumor testing?",
+            attribute="biomarker_status",
+            value_type="text",
+        ),
+        FollowUpQuestion(
+            question="What's your current ECOG performance status (0 = fully active, 4 = bedbound)?",
+            attribute="ecog",
+            value_type="numeric",
+        ),
+    ],
+))
+
+# --- 3b. Colorectal Cancer ---
+_register(ConditionCategory(
+    category_id="colorectal_cancer",
+    display_name="Colorectal Cancer",
+    aliases=["colorectal cancer", "colon cancer", "rectal cancer",
+             "bowel cancer", "crc", "colorectal carcinoma",
+             "colorectal adenocarcinoma", "sigmoid cancer"],
+    followups=[
+        FollowUpQuestion(
+            question="What stage is your colorectal cancer?",
+            attribute="stage",
+            value_type="choice",
+            choices=["I", "II", "III", "IV"],
+        ),
+        FollowUpQuestion(
+            question="Has it spread (metastasized) to other organs like the liver or lungs?",
+            attribute="metastatic_status",
+            value_type="boolean",
+        ),
+        FollowUpQuestion(
+            question="Have you had any prior treatments — surgery, chemotherapy (e.g. FOLFOX, FOLFIRI), radiation, or targeted therapy?",
+            attribute="prior_treatments",
+            value_type="text",
+        ),
+        FollowUpQuestion(
+            question="Do you know your MSI/MMR status or RAS/BRAF mutation status?",
+            attribute="biomarker_status",
+            value_type="text",
+        ),
+        FollowUpQuestion(
+            question="What's your current ECOG performance status (0 = fully active, 4 = bedbound)?",
+            attribute="ecog",
+            value_type="numeric",
+        ),
+    ],
+))
+
+# --- 3c. Prostate Cancer ---
+_register(ConditionCategory(
+    category_id="prostate_cancer",
+    display_name="Prostate Cancer",
+    aliases=["prostate cancer", "prostate carcinoma",
+             "prostate adenocarcinoma", "prostate tumor"],
+    followups=[
+        FollowUpQuestion(
+            question="What stage is your prostate cancer, or do you know your Gleason score?",
+            attribute="stage",
+            value_type="text",
+        ),
+        FollowUpQuestion(
+            question="Has it spread (metastasized) beyond the prostate?",
+            attribute="metastatic_status",
+            value_type="boolean",
+        ),
+        FollowUpQuestion(
+            question="Have you had any prior treatments — surgery, radiation, hormone therapy, or chemotherapy?",
+            attribute="prior_treatments",
+            value_type="text",
+        ),
+        FollowUpQuestion(
+            question="What's your most recent PSA level, if you know it?",
+            attribute="psa_level",
+            value_type="numeric",
+        ),
+        FollowUpQuestion(
+            question="Is your cancer castration-resistant (still progressing despite hormone therapy)?",
+            attribute="castration_resistant",
+            value_type="boolean",
+        ),
+    ],
+))
+
+# --- 3d. Pancreatic Cancer ---
+_register(ConditionCategory(
+    category_id="pancreatic_cancer",
+    display_name="Pancreatic Cancer",
+    aliases=["pancreatic cancer", "pancreatic carcinoma",
+             "pancreatic adenocarcinoma", "pancreas cancer",
+             "pancreatic tumor"],
+    followups=[
+        FollowUpQuestion(
+            question="What stage is your pancreatic cancer?",
+            attribute="stage",
+            value_type="choice",
+            choices=["I", "II", "III", "IV"],
+        ),
+        FollowUpQuestion(
+            question="Has it spread (metastasized) to other organs?",
+            attribute="metastatic_status",
+            value_type="boolean",
+        ),
+        FollowUpQuestion(
+            question="Have you had any prior treatments — surgery (Whipple), chemotherapy (e.g. FOLFIRINOX, gemcitabine), or radiation?",
+            attribute="prior_treatments",
+            value_type="text",
+        ),
+        FollowUpQuestion(
+            question="What's your current ECOG performance status (0 = fully active, 4 = bedbound)?",
+            attribute="ecog",
+            value_type="numeric",
+        ),
+    ],
+))
+
+# --- 3e. General Cancer (fallback) ---
+_register(ConditionCategory(
+    category_id="general_cancer",
+    display_name="Cancer",
+    aliases=["cancer", "tumor", "carcinoma", "neoplasm", "malignancy",
+             "oncology", "sarcoma", "lymphoma", "leukemia", "melanoma",
+             "bladder cancer", "ovarian cancer", "thyroid cancer",
+             "esophageal cancer", "brain cancer", "glioblastoma",
+             "kidney cancer", "renal cell carcinoma", "head and neck cancer",
+             "cervical cancer", "uterine cancer", "testicular cancer"],
+    followups=[
+        FollowUpQuestion(
+            question="What stage is your cancer?",
+            attribute="stage",
+            value_type="choice",
+            choices=["I", "II", "III", "IV"],
+        ),
+        FollowUpQuestion(
+            question="Has it spread (metastasized) to other parts of your body?",
+            attribute="metastatic_status",
+            value_type="boolean",
+        ),
+        FollowUpQuestion(
+            question="Have you had any prior treatments — surgery, chemotherapy, radiation, immunotherapy, or targeted therapy?",
+            attribute="prior_treatments",
+            value_type="text",
+        ),
+        FollowUpQuestion(
+            question="What's your current ECOG performance status (0 = fully active, 4 = bedbound)?",
+            attribute="ecog",
+            value_type="numeric",
+        ),
+    ],
+))
+
+# --- 4. Lung Cancer ---
 _register(ConditionCategory(
     category_id="lung_cancer",
     display_name="Lung Cancer",
