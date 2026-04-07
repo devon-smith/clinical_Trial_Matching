@@ -79,7 +79,7 @@ _CATEGORY_PATTERNS: List[Tuple[str, re.Pattern]] = [
     ("demographics_sex",     re.compile(r'^patient_sex_is_')),
     ("reproductive",         re.compile(r'^patient_(is_pregnant|is_breastfeeding|is_lactating|has_childbearing)')),
     ("diagnosis",            re.compile(r'^patient_has_diagnosis_of_')),
-    ("prior_treatment",      re.compile(r'^patient_has_undergone_')),
+    ("prior_treatment",      re.compile(r'^patient_has_(undergone|treatment_of)_')),
     ("current_treatment",    re.compile(r'^patient_is_undergoing_')),
     ("current_medication",   re.compile(r'^patient_is_taking_')),
     ("finding",              re.compile(r'^patient_has_finding_of_')),
@@ -92,6 +92,7 @@ _CATEGORY_PATTERNS: List[Tuple[str, re.Pattern]] = [
 ]
 
 # Prefix strippers per category (what to remove to get the entity)
+# For prior_treatment, we try multiple prefixes
 _PREFIX_STRIP = {
     "diagnosis":          "patient_has_diagnosis_of_",
     "prior_treatment":    "patient_has_undergone_",
@@ -102,6 +103,11 @@ _PREFIX_STRIP = {
     "exposure":           "patient_is_exposed_to_",
     "can_undergo":        "patient_can_undergo_",
     "will_undergo":       "patient_will_undergo_",
+}
+
+# Alternative prefixes for categories with multiple naming conventions
+_ALT_PREFIX_STRIP = {
+    "prior_treatment": ["patient_has_treatment_of_"],
 }
 
 
@@ -153,6 +159,12 @@ _MEDICAL_TERM_OVERRIDES: Dict[str, str] = {
     "never_smoked_tobacco": "never-smoker status",
     "ex_smoker": "former smoker status",
     "secondary_malignant_neoplastic_disease": "metastatic cancer",
+    "widespread_metastatic_malignant_neoplastic_disease": "cancer that has spread (metastatic)",
+    "secondary_primary_tumors_except_basal_cell_carcinoma_or_in_situ_neoplasias":
+        "other active cancers (except non-melanoma skin cancer)",
+    "neoadjuvant_chemotherapy": "chemotherapy before surgery (neoadjuvant)",
+    "antiher2_agents": "HER2-targeted therapy",
+    "anti_her2_therapy": "HER2-targeted therapy",
     "clinical_stage_iii": "clinical stage III",
     "clinical_stage_4": "clinical stage IV",
     "mental_disorder": "mental health condition",
@@ -272,21 +284,33 @@ def parse_criterion(criterion_type: str) -> Optional[ParsedCriterion]:
     # Extract entity
     entity = raw
     prefix = _PREFIX_STRIP.get(category)
+    stripped = False
     if prefix and entity.startswith(prefix):
         entity = entity[len(prefix):]
-    elif category == "lab_value":
-        # Strip "patient_" prefix and "_value_recorded_..." suffix
-        entity = re.sub(r'^patient_', '', entity)
-        entity = re.sub(r'_value_recorded_.*$', '', entity)
-    elif category == "positive_check":
-        entity = re.sub(r'^patients_', '', entity)
-        entity = re.sub(r'_is_positive_.*$', '', entity)
-    elif category == "reproductive":
-        entity = re.sub(r'^patient_', '', entity)
-    elif category == "demographics_sex":
-        entity = re.sub(r'^patient_sex_is_', '', entity)
-    else:
-        entity = re.sub(r'^patient_', '', entity)
+        stripped = True
+
+    # Try alternate prefixes (e.g. patient_has_treatment_of_ for prior_treatment)
+    if not stripped and category in _ALT_PREFIX_STRIP:
+        for alt_prefix in _ALT_PREFIX_STRIP[category]:
+            if entity.startswith(alt_prefix):
+                entity = entity[len(alt_prefix):]
+                stripped = True
+                break
+
+    if not stripped:
+        if category == "lab_value":
+            # Strip "patient_" prefix and "_value_recorded_..." suffix
+            entity = re.sub(r'^patient_', '', entity)
+            entity = re.sub(r'_value_recorded_.*$', '', entity)
+        elif category == "positive_check":
+            entity = re.sub(r'^patients_', '', entity)
+            entity = re.sub(r'_is_positive_.*$', '', entity)
+        elif category == "reproductive":
+            entity = re.sub(r'^patient_', '', entity)
+        elif category == "demographics_sex":
+            entity = re.sub(r'^patient_sex_is_', '', entity)
+        else:
+            entity = re.sub(r'^patient_', '', entity)
 
     # Strip timeframe suffix from entity
     if tf_match:

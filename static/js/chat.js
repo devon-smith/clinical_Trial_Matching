@@ -435,79 +435,137 @@ document.addEventListener('DOMContentLoaded', function() {
         const eligibleCount = viz.eligible_count || 0;
         const ineligibleCount = viz.ineligible_count || 0;
         const unknownCount = viz.unknown_count || 0;
-        const totalCount = viz.criteria ? viz.criteria.length : 0;
 
-        const hardCriteria = (viz.criteria || []).filter(c => c.is_hard);
-        const softCriteria = (viz.criteria || []).filter(c => !c.is_hard);
+        // Use pre-grouped data from backend when available
+        const grouped = viz.grouped || {};
+        const qualified = grouped.qualified || (viz.criteria || []).filter(c => c.status === 'eligible');
+        const notQualified = grouped.not_qualified || (viz.criteria || []).filter(c => c.status === 'ineligible');
+        const patientQuestions = grouped.patient_questions || [];
+        const doctorVerify = grouped.doctor_verify || [];
 
-        function statusIcon(status) {
-            if (status === 'eligible') return '<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-green-100 text-green-600 text-[10px] font-bold flex-shrink-0">&#10003;</span>';
-            if (status === 'ineligible') return '<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-red-100 text-red-600 text-[10px] font-bold flex-shrink-0">&#10007;</span>';
-            return '<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-amber-100 text-amber-600 text-[10px] font-bold flex-shrink-0">?</span>';
-        }
+        // --- Render helpers ---
 
-        function statusBadge(status) {
-            const cfg = {
-                eligible: 'bg-green-100 text-green-700',
-                ineligible: 'bg-red-100 text-red-700',
-                unknown: 'bg-amber-100 text-amber-700',
-            }[status] || 'bg-slate-100 text-slate-600';
-            return `<span class="ml-auto px-1.5 py-0.5 text-[10px] font-medium rounded ${cfg}">${status}</span>`;
-        }
-
-        function renderVizCriterion(c) {
-            const icon = statusIcon(c.status);
-            const badge = statusBadge(c.status);
-            const patientFact = c.patient_value
-                ? `<span class="text-[10px] text-slate-400 ml-1">(yours: ${c.patient_value})</span>`
-                : '';
+        function renderQualifiedCriterion(c) {
             const explanation = c.explanation
-                ? `<p class="text-[10px] text-slate-400 mt-0.5 ml-5">${c.explanation}</p>`
+                ? `<p class="text-[10px] text-green-600/70 mt-0.5 ml-5">${c.explanation}</p>`
                 : '';
             return `
-                <div class="py-1.5 border-b border-slate-50 last:border-0">
+                <div class="py-1.5 border-b border-green-50 last:border-0">
                     <div class="flex items-center gap-1.5">
-                        ${icon}
+                        <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-green-100 text-green-600 text-[10px] font-bold flex-shrink-0">&#10003;</span>
                         <span class="text-xs text-slate-600 flex-1">${c.human_label}</span>
-                        ${patientFact}
-                        ${badge}
                     </div>
                     ${explanation}
                 </div>`;
         }
 
-        // Ineligibility explanation banner
-        let ineligBanner = '';
-        if (viz.ineligibility_explanation) {
-            const lines = viz.ineligibility_explanation.split('\n').map(l => l.trim()).filter(Boolean);
-            ineligBanner = `
-                <div class="mb-2 p-2.5 bg-red-50 border border-red-200 rounded-lg">
-                    <p class="text-[11px] font-medium text-red-700 mb-1">Why you may not qualify:</p>
-                    ${lines.map(l => `<p class="text-[11px] text-red-600">${l}</p>`).join('')}
+        function renderNotQualifiedCriterion(c) {
+            const explanation = c.explanation
+                ? `<p class="text-[10px] text-red-600/80 mt-0.5 ml-5">${c.explanation}</p>`
+                : '';
+            return `
+                <div class="py-1.5 border-b border-red-50 last:border-0">
+                    <div class="flex items-center gap-1.5">
+                        <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-red-100 text-red-600 text-[10px] font-bold flex-shrink-0">&#10007;</span>
+                        <span class="text-xs text-slate-600 flex-1">${c.human_label}</span>
+                    </div>
+                    ${explanation}
                 </div>`;
         }
 
-        // Clarifying questions section
-        let questionsHtml = '';
-        if (viz.clarifying_questions && viz.clarifying_questions.length > 0) {
-            const previewQuestions = viz.clarifying_questions.slice(0, 2);
-            const moreCount = viz.clarifying_questions.length - 2;
-            questionsHtml = `
-                <div class="mt-2 p-2.5 bg-accent/5 border border-accent/20 rounded-lg">
-                    <p class="text-[11px] font-medium text-slate-700 mb-1.5">We need more info to check ${unknownCount} criteria:</p>
-                    ${previewQuestions.map(q => `
-                        <div class="mb-1.5 last:mb-0">
-                            <p class="text-[11px] text-slate-600">${q.question}</p>
-                        </div>
-                    `).join('')}
-                    ${moreCount > 0 ? `<p class="text-[10px] text-slate-400 mt-1">+${moreCount} more questions... (click View Details)</p>` : ''}
+        function renderPatientQuestion(c) {
+            // Show as a conversational question the patient can answer
+            const question = c.explanation || `Do you know about ${c.human_label.toLowerCase()}?`;
+            return `
+                <div class="py-1.5 border-b border-amber-50 last:border-0">
+                    <div class="flex items-start gap-1.5">
+                        <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-amber-100 text-amber-600 text-[10px] font-bold flex-shrink-0 mt-0.5">?</span>
+                        <span class="text-xs text-slate-600">${c.human_label}</span>
+                    </div>
                 </div>`;
         }
 
-        const hardPreview = hardCriteria.slice(0, 5);
-        const softPreview = softCriteria.slice(0, 3);
-        const moreHard = hardCriteria.length > 5 ? `<p class="text-[10px] text-slate-400 mt-1">+${hardCriteria.length - 5} more required criteria...</p>` : '';
-        const moreSoft = softCriteria.length > 3 ? `<p class="text-[10px] text-slate-400 mt-1">+${softCriteria.length - 3} more preference criteria...</p>` : '';
+        function renderDoctorVerify(c) {
+            return `
+                <div class="py-1 border-b border-slate-50 last:border-0">
+                    <div class="flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span class="text-[11px] text-slate-500">${c.human_label}</span>
+                    </div>
+                </div>`;
+        }
+
+        // --- Build sections ---
+
+        // "You qualify" section (green)
+        let qualifiedHtml = '';
+        if (qualified.length > 0) {
+            const preview = qualified.slice(0, 5);
+            const more = qualified.length > 5
+                ? `<p class="text-[10px] text-green-600/60 mt-1">+${qualified.length - 5} more criteria met</p>` : '';
+            qualifiedHtml = `
+                <div class="mb-2">
+                    <p class="text-[10px] font-semibold text-green-700 uppercase tracking-wide mb-1 flex items-center gap-1">
+                        <span>&#10003;</span> You qualify (${qualified.length})
+                    </p>
+                    <div class="bg-green-50/50 rounded-lg px-2 py-1">
+                        ${preview.map(renderQualifiedCriterion).join('')}
+                        ${more}
+                    </div>
+                </div>`;
+        }
+
+        // "You may not qualify" section (red)
+        let notQualifiedHtml = '';
+        if (notQualified.length > 0) {
+            notQualifiedHtml = `
+                <div class="mb-2">
+                    <p class="text-[10px] font-semibold text-red-700 uppercase tracking-wide mb-1 flex items-center gap-1">
+                        <span>&#10007;</span> You may not qualify (${notQualified.length})
+                    </p>
+                    <div class="bg-red-50/50 rounded-lg px-2 py-1">
+                        ${notQualified.map(renderNotQualifiedCriterion).join('')}
+                    </div>
+                </div>`;
+        }
+
+        // "Needs verification" section (amber) — split into patient questions and doctor verify
+        let verificationHtml = '';
+        if (patientQuestions.length > 0 || doctorVerify.length > 0) {
+            let patientQuestionsHtml = '';
+            if (patientQuestions.length > 0) {
+                const preview = patientQuestions.slice(0, 4);
+                const more = patientQuestions.length > 4
+                    ? `<p class="text-[10px] text-amber-600/60 mt-1">+${patientQuestions.length - 4} more questions</p>` : '';
+                patientQuestionsHtml = `
+                    <p class="text-[10px] font-medium text-amber-700 mb-1">Questions for you</p>
+                    ${preview.map(renderPatientQuestion).join('')}
+                    ${more}`;
+            }
+
+            let doctorVerifyHtml = '';
+            if (doctorVerify.length > 0) {
+                const preview = doctorVerify.slice(0, 3);
+                const more = doctorVerify.length > 3
+                    ? `<p class="text-[10px] text-slate-400 mt-1">+${doctorVerify.length - 3} more lab/clinical checks</p>` : '';
+                doctorVerifyHtml = `
+                    <p class="text-[10px] font-medium text-slate-500 ${patientQuestions.length > 0 ? 'mt-2' : ''} mb-1">Your doctor would verify</p>
+                    ${preview.map(renderDoctorVerify).join('')}
+                    ${more}`;
+            }
+
+            const totalVerify = patientQuestions.length + doctorVerify.length;
+            verificationHtml = `
+                <div class="mb-2">
+                    <p class="text-[10px] font-semibold text-amber-700 uppercase tracking-wide mb-1 flex items-center gap-1">
+                        <span>?</span> Needs verification (${totalVerify})
+                    </p>
+                    <div class="bg-amber-50/50 rounded-lg px-2 py-1">
+                        ${patientQuestionsHtml}
+                        ${doctorVerifyHtml}
+                    </div>
+                </div>`;
+        }
 
         return `
             <div class="border border-slate-200 rounded-lg overflow-hidden">
@@ -518,25 +576,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         Eligibility Breakdown
                     </span>
                     <div class="flex items-center gap-1.5">
-                        <span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-green-100 text-green-700">${eligibleCount} met</span>
+                        ${eligibleCount > 0 ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-green-100 text-green-700">${eligibleCount} met</span>` : ''}
                         ${ineligibleCount > 0 ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-700">${ineligibleCount} not met</span>` : ''}
-                        ${unknownCount > 0 ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-amber-100 text-amber-700">${unknownCount} unknown</span>` : ''}
+                        ${unknownCount > 0 ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-amber-100 text-amber-700">${unknownCount} to verify</span>` : ''}
                         <svg class="w-3.5 h-3.5 text-slate-400 expand-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                 </button>
-                <div class="hidden px-3 py-2 bg-white border-t border-slate-100 max-h-64 overflow-y-auto">
-                    ${ineligBanner}
-                    ${hardPreview.length > 0 ? `
-                        <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mb-1">Required Criteria</p>
-                        ${hardPreview.map(renderVizCriterion).join('')}
-                        ${moreHard}
-                    ` : ''}
-                    ${softPreview.length > 0 ? `
-                        <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mt-2 mb-1">Preference Criteria</p>
-                        ${softPreview.map(renderVizCriterion).join('')}
-                        ${moreSoft}
-                    ` : ''}
-                    ${questionsHtml}
+                <div class="hidden px-3 py-2 bg-white border-t border-slate-100 max-h-72 overflow-y-auto">
+                    ${notQualifiedHtml}
+                    ${qualifiedHtml}
+                    ${verificationHtml}
                     ${buildPreferenceBreakdown(trial)}
                 </div>
             </div>`;
