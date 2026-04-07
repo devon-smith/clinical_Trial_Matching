@@ -295,6 +295,12 @@ def build_patient_attributes(patient_data: Dict[str, Any]) -> Dict[str, Any]:
         attrs['patient_is_lactating_now'] = False
         attrs['patient_has_childbearing_potential_now'] = False
 
+    # Merge condition-specific follow-up answers into criteria attributes
+    condition_details = patient_data.get('condition_details', {})
+    category_id = patient_data.get('condition_category')
+    if condition_details and category_id:
+        attrs = merge_followup_answers(attrs, category_id, condition_details)
+
     return attrs
 
 
@@ -1172,6 +1178,10 @@ def chat():
             search_data['search_queries'] = search_data['search_queries'][:8]
 
             trials = matcher.find_matching_trials(search_data)
+
+            # Include condition follow-up details for eligibility matching
+            search_data['condition_details'] = patient_data.get('condition_details', {})
+            search_data['condition_category'] = patient_data.get('condition_category')
 
             # Build structured patient attributes for SMT evaluation
             patient_attrs = build_patient_attributes(search_data)

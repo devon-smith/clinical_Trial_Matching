@@ -13,6 +13,9 @@ from typing import Callable, Dict, List, Optional, Sequence, Set, Tuple, Union
 
 from Matcher import DEFAULT_DB_PATH, TrialMatcher
 from llm_questioner import LLMQuestionGenerator
+from condition_followups import (
+    detect_condition, get_followup_questions, parse_answer,
+)
 
 QuestionProvider = Callable[[str], str]
 
@@ -20,6 +23,7 @@ QuestionProvider = Callable[[str], str]
 CONVERSATION_STATES = {
     'INTAKE': 'intake',           # waiting for first open-ended response
     'FOLLOWUP': 'followup',       # asking for missing fields
+    'CONDITION_DETAIL': 'condition_detail',  # condition-specific follow-ups
     'PREF_TRAVEL': 'pref_travel',         # asking about travel willingness
     'PREF_RISK': 'pref_risk',             # asking about risk tolerance
     'PREF_TREATMENT': 'pref_treatment',   # asking about treatment type
@@ -413,7 +417,11 @@ class ConversationalTrialAssistant:
             'symptoms': '',
             'primary_condition': None,
             'preferences': None,
+            'condition_details': {},       # Follow-up answers keyed by attribute
+            'condition_category': None,    # Matched category ID from condition_followups
         }
+        self._pending_followups: List[Dict] = []   # Queued condition follow-up questions
+        self._followup_batch: int = 0               # Which batch we're on (0 or 1)
 
     # ------------------------------------------------------------------
     # LLM extraction helper
@@ -482,6 +490,9 @@ class ConversationalTrialAssistant:
         if self.conversation_state == CONVERSATION_STATES['FOLLOWUP']:
             return self._handle_followup(user_input)
 
+        if self.conversation_state == CONVERSATION_STATES['CONDITION_DETAIL']:
+            return self._handle_condition_detail(user_input)
+
         if self.conversation_state == CONVERSATION_STATES['PREF_TRAVEL']:
             return self._handle_pref_travel(user_input)
         if self.conversation_state == CONVERSATION_STATES['PREF_RISK']:
@@ -510,7 +521,11 @@ class ConversationalTrialAssistant:
             'symptoms': '',
             'primary_condition': None,
             'preferences': None,
+            'condition_details': {},
+            'condition_category': None,
         }
+        self._pending_followups = []
+        self._followup_batch = 0
         return (
             "No problem — let's start fresh. Tell me about your condition, "
             "symptoms, and anything you've already tried."
@@ -524,6 +539,10 @@ class ConversationalTrialAssistant:
             followup = _build_followup_ask(self.patient_data)
             if followup:
                 resume = f"\n\nBack to your search — {followup}"
+        elif self.conversation_state == CONVERSATION_STATES['CONDITION_DETAIL']:
+            batch_q = self._build_condition_question_batch()
+            if batch_q:
+                resume = f"\n\nBack to your search — {batch_q}"
         elif self.conversation_state == CONVERSATION_STATES['PREF_TRAVEL']:
             resume = "\n\nBack to your search — **how far would you be willing to travel** for a trial?"
         elif self.conversation_state == CONVERSATION_STATES['PREF_RISK']:
@@ -680,7 +699,11 @@ class ConversationalTrialAssistant:
         followup_ask = _build_followup_ask(self.patient_data)
 
         if followup_ask is None:
-            # All required fields filled — start preference questions
+            # All required fields filled — try condition-specific follow-ups
+            cond_result = self._try_transition_to_condition_detail(ack)
+            if cond_result:
+                return cond_result
+            # No condition follow-ups available — go to preferences
             return self._transition_to_preferences(ack)
 
         # Still missing fields — move to followup
@@ -715,7 +738,11 @@ class ConversationalTrialAssistant:
         followup_ask = _build_followup_ask(self.patient_data)
 
         if followup_ask is None:
-            # All required fields filled — start preference questions
+            # All required fields filled — try condition-specific follow-ups
+            cond_result = self._try_transition_to_condition_detail(ack)
+            if cond_result:
+                return cond_result
+            # No condition follow-ups — go to preferences
             return self._transition_to_preferences(ack)
 
         # Still missing — ask again
@@ -771,6 +798,175 @@ class ConversationalTrialAssistant:
                 return filled
 
         return filled
+
+    # ------------------------------------------------------------------
+    # Condition-specific follow-up questions
+    # ------------------------------------------------------------------
+
+    def _try_transition_to_condition_detail(self, ack: str = "") -> Optional[Tuple[str, bool]]:
+        """If condition is known and has follow-ups, transition to CONDITION_DETAIL.
+
+        Returns (response, is_done) if transitioning, None otherwise.
+        """
+        condition = self.patient_data.get('primary_condition') or (
+            self.patient_data['conditions'][0]
+            if self.patient_data.get('conditions') else None
+        )
+        if not condition:
+            return None
+
+        category = detect_condition(condition)
+        if not category:
+            return None
+
+        followups = get_followup_questions(condition)
+        if not followups:
+            return None
+
+        self.patient_data['condition_category'] = category.category_id
+        self._pending_followups = followups
+        self._followup_batch = 0
+
+        # Build the first batch of grouped questions
+        question_msg = self._build_condition_question_batch()
+        if not question_msg:
+            return None
+
+        self.conversation_state = CONVERSATION_STATES['CONDITION_DETAIL']
+        intro = f"You mentioned **{category.display_name.lower()}**"
+        full_msg = f"{ack}\n\n{intro} — a few quick questions to help me find the most relevant trials:\n\n{question_msg}\n\nThese details help narrow down which trials you'd be eligible for. If you're not sure about any of these, just say \"I don't know\" and I'll search more broadly."
+
+        return full_msg.strip(), False
+
+    def _build_condition_question_batch(self) -> Optional[str]:
+        """Build a message with 2-3 grouped follow-up questions from the pending list.
+
+        Returns the formatted question text, or None if no questions remain.
+        """
+        remaining = [fq for fq in self._pending_followups
+                     if fq['attribute'] not in self.patient_data.get('condition_details', {})]
+        if not remaining:
+            return None
+
+        # Take 2-3 questions per batch
+        batch_size = min(3, len(remaining))
+        batch = remaining[:batch_size]
+
+        parts = []
+        for i, fq in enumerate(batch, 1):
+            q = fq['question']
+            if fq.get('choices'):
+                options = ", ".join(fq['choices'])
+                q += f" ({options})"
+            parts.append(f"**{i}.** {q}")
+
+        return "\n".join(parts)
+
+    def _handle_condition_detail(self, message: str) -> Tuple[str, bool]:
+        """Handle responses to condition-specific follow-up questions."""
+        text = message.strip().lower()
+
+        # Handle "I don't know" / skip
+        skip_phrases = [
+            "i don't know", "idk", "not sure", "no idea", "skip",
+            "don't know", "dont know", "i'm not sure", "im not sure",
+            "i have no idea", "no clue", "unsure", "haven't been told",
+        ]
+        is_skip = any(phrase in text for phrase in skip_phrases)
+
+        if is_skip:
+            # Mark all pending as skipped and move on
+            ack = "No problem — I'll search broadly and your doctor can help narrow it down later."
+            return self._finish_condition_detail(ack)
+
+        # Parse answers from the response — try to match each pending question
+        remaining = [fq for fq in self._pending_followups
+                     if fq['attribute'] not in self.patient_data.get('condition_details', {})]
+        batch = remaining[:3]  # Current batch
+
+        if not batch:
+            return self._finish_condition_detail("")
+
+        parsed_any = False
+        details = self.patient_data.setdefault('condition_details', {})
+
+        if len(batch) == 1:
+            # Single question — entire response is the answer
+            fq = batch[0]
+            attr, value = parse_answer(message, fq)
+            if value is not None:
+                details[attr] = value
+                parsed_any = True
+        else:
+            # Multiple questions — try to split numbered answers
+            # Patterns: "1. X  2. Y  3. Z" or "1) X 2) Y" or with newlines
+            parts = re.split(r'\s*\d+[.)]\s+', message.strip())
+            # First element is empty if message starts with "1."
+            parts = [p.strip() for p in parts if p.strip()]
+
+            if len(parts) >= len(batch):
+                # Successfully split numbered responses
+                for fq, ans_text in zip(batch, parts):
+                    attr, value = parse_answer(ans_text, fq)
+                    if value is not None:
+                        details[attr] = value
+                        parsed_any = True
+            else:
+                # Try comma/newline splitting
+                parts = re.split(r'\n|,\s*(?=[A-Z])', message.strip())
+                parts = [p.strip() for p in parts if p.strip()]
+
+                if len(parts) >= len(batch):
+                    for fq, ans_text in zip(batch, parts):
+                        attr, value = parse_answer(ans_text, fq)
+                        if value is not None:
+                            details[attr] = value
+                            parsed_any = True
+                else:
+                    # Fall back: parse entire message against each question
+                    for fq in batch:
+                        attr, value = parse_answer(message, fq)
+                        if value is not None:
+                            details[attr] = value
+                            parsed_any = True
+
+        if not parsed_any:
+            # Couldn't parse — store as raw text for the first unanswered question
+            for fq in batch:
+                if fq['attribute'] not in details:
+                    details[fq['attribute']] = message.strip()
+                    parsed_any = True
+                    break
+
+        self._followup_batch += 1
+
+        # Check if there are more questions to ask (batch 2)
+        remaining_after = [fq for fq in self._pending_followups
+                           if fq['attribute'] not in details]
+
+        if remaining_after and self._followup_batch < 2:
+            ack = "Thanks for those details."
+
+            next_batch = self._build_condition_question_batch()
+            if next_batch:
+                return f"{ack} A couple more:\n\n{next_batch}", False
+
+        # Done with condition details — move to preferences
+        ack = "Thanks — that helps a lot with matching."
+        return self._finish_condition_detail(ack)
+
+    def _finish_condition_detail(self, ack: str) -> Tuple[str, bool]:
+        """Finish condition detail collection and move to next state."""
+        # Check if demographics are still missing
+        followup_ask = _build_followup_ask(self.patient_data)
+        if followup_ask is not None:
+            self.conversation_state = CONVERSATION_STATES['FOLLOWUP']
+            if ack:
+                return f"{ack}\n\n{followup_ask}", False
+            return followup_ask, False
+
+        # All required fields filled — move to preferences
+        return self._transition_to_preferences(ack)
 
     # ------------------------------------------------------------------
     # Conversational preference capture
