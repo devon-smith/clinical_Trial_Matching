@@ -852,25 +852,181 @@ def _parse_choice(text: str, choices: List[str]) -> Optional[str]:
 # Patient attribute integration
 # ---------------------------------------------------------------------------
 
-# Maps (category_id, attribute) → criteria attribute name for SMT matching
-_ATTRIBUTE_TO_CRITERIA: Dict[Tuple[str, str], str] = {
-    # Stage mappings
-    ("breast_cancer", "metastatic_status"): "patient_has_finding_of_metastasis_now",
-    ("breast_cancer", "stage"): "patient_cancer_stage",
-    ("lung_cancer", "stage"): "patient_cancer_stage",
-    ("liver_cancer", "stage"): "patient_cancer_stage",
+# Maps cancer stage values to database criterion attributes (boolean presence)
+_STAGE_CRITERIA: Dict[str, List[str]] = {
+    "III": [
+        "patient_has_finding_of_clinical_stage_iii_now",
+    ],
+    "IV": [
+        "patient_has_finding_of_clinical_stage_4_now",
+        "patient_has_finding_of_widespread_metastatic_malignant_neoplastic_disease_now",
+    ],
+}
 
-    # Lab values
-    ("type_2_diabetes", "a1c"): "patient_hba1c_value_recorded_now",
-    ("kidney_disease", "on_dialysis"): "patient_is_on_dialysis_now",
-    ("copd", "fev1_percent"): "patient_fev1_percent_predicted_value_recorded_now",
-    ("heart_failure", "ejection_fraction"): "patient_lvef_value_recorded_now",
-    ("hiv", "cd4_count"): "patient_cd4_count_value_recorded_now",
-    ("obesity", "bmi"): "patient_bmi_value_recorded_now",
+# Lung-cancer-specific stage criteria
+_LUNG_STAGE_CRITERIA: Dict[str, List[str]] = {
+    "III": [
+        "patient_has_finding_of_clinical_stage_iii_now",
+        "patient_has_diagnosis_of_non_small_cell_carcinoma_of_lung_tnm_stage_3_now",
+        "patient_has_finding_of_non_small_cell_carcinoma_of_lung_tnm_stage_3_now",
+    ],
+    "IV": [
+        "patient_has_finding_of_clinical_stage_4_now",
+        "patient_has_diagnosis_of_non_small_cell_carcinoma_of_lung_tnm_stage_4_now",
+        "patient_has_finding_of_non_small_cell_carcinoma_of_lung_tnm_stage_4_now",
+        "patient_has_finding_of_widespread_metastatic_malignant_neoplastic_disease_now",
+    ],
+}
 
-    # Smoking
-    ("lung_cancer", "smoking_status"): "patient_is_current_smoker_now",
-    ("copd", "smoking_status"): "patient_is_current_smoker_now",
+# Maps prior treatment keywords → database criterion attributes to set True
+_TREATMENT_CRITERIA: Dict[str, List[str]] = {
+    "chemotherapy": [
+        "patient_has_undergone_chemotherapy_inthehistory",
+        "patient_can_undergo_chemotherapy_now",
+    ],
+    "chemo": [
+        "patient_has_undergone_chemotherapy_inthehistory",
+        "patient_can_undergo_chemotherapy_now",
+    ],
+    "radiation": [
+        "patient_has_undergone_teleradiotherapy_procedure_inthehistory",
+    ],
+    "radiotherapy": [
+        "patient_has_undergone_teleradiotherapy_procedure_inthehistory",
+    ],
+    "surgery": [
+        "patient_has_undergone_first_line_treatment_inthehistory",
+    ],
+    "immunotherapy": [
+        "patient_has_undergone_immunological_therapy_inthehistory",
+    ],
+    "biologic": [
+        "patient_has_undergone_biological_treatment_inthepast4weeks",
+        "patient_is_undergoing_biological_treatment_now",
+    ],
+    "biologics": [
+        "patient_has_undergone_biological_treatment_inthepast4weeks",
+        "patient_is_undergoing_biological_treatment_now",
+    ],
+    "hormone therapy": [
+        "patient_has_undergone_hormone_therapy_inthehistory",
+        "patient_is_undergoing_hormone_therapy_now",
+    ],
+    "hormonal therapy": [
+        "patient_has_undergone_hormone_therapy_inthehistory",
+        "patient_is_undergoing_hormone_therapy_now",
+    ],
+    "steroid": [
+        "patient_has_undergone_inhaled_steroid_therapy_inthehistory",
+    ],
+    "nsaid": [
+        "patient_has_undergone_non_steroidal_anti_inflammatory_agent_therapy_inthehistory",
+    ],
+    "nsaids": [
+        "patient_has_undergone_non_steroidal_anti_inflammatory_agent_therapy_inthehistory",
+    ],
+    "antidepressant": [
+        "patient_has_undergone_antidepressant_therapy_inthehistory",
+    ],
+    "antidepressants": [
+        "patient_has_undergone_antidepressant_therapy_inthehistory",
+    ],
+    "physical therapy": [],  # No direct DB criterion
+    "methotrexate": [
+        "patient_has_undergone_drug_therapy_inthehistory",
+    ],
+    "infliximab": [
+        "patient_has_undergone_infliximab_therapy_inthehistory",
+    ],
+    "oxygen": [
+        "patient_has_undergone_oxygen_therapy_inthehistory",
+        "patient_is_undergoing_oxygen_therapy_now",
+    ],
+}
+
+# Maps current medication keywords → database criterion attributes
+_CURRENT_MED_CRITERIA: Dict[str, List[str]] = {
+    "metformin": ["patient_is_undergoing_drug_therapy_now"],
+    "insulin": ["patient_is_undergoing_drug_therapy_now"],
+    "ozempic": ["patient_is_undergoing_drug_therapy_now"],
+    "levodopa": ["patient_is_undergoing_drug_therapy_now"],
+    "beta-blocker": ["patient_is_taking_beta_adrenergic_receptor_antagonist_containing_product_now"],
+    "beta blocker": ["patient_is_taking_beta_adrenergic_receptor_antagonist_containing_product_now"],
+    "ace inhibitor": ["patient_is_undergoing_angiotensin_converting_enzyme_inhibitor_therapy_now"],
+    "statin": ["patient_is_undergoing_lipid_lowering_therapy_now"],
+    "blood thinner": ["patient_is_undergoing_anticoagulant_therapy_now"],
+    "warfarin": ["patient_is_undergoing_warfarin_therapy_now"],
+    "aspirin": ["patient_is_undergoing_aspirin_therapy_now"],
+    "inhaler": ["patient_is_undergoing_inhalation_therapy_procedure_now"],
+    "antibiotic": ["patient_is_undergoing_antibiotic_therapy_now"],
+    "antipsychotic": ["patient_is_undergoing_antipsychotic_drug_therapy_now"],
+    "anticonvulsant": ["patient_is_undergoing_anticonvulsant_therapy_now"],
+    "anti-seizure": ["patient_is_undergoing_anticonvulsant_therapy_now"],
+    "dopamine agonist": ["patient_is_taking_dopamine_receptor_agonist_containing_product_now"],
+    "biologic": ["patient_is_undergoing_biological_treatment_now"],
+    "dupixent": ["patient_is_undergoing_biological_treatment_now"],
+    "immunosuppressant": ["patient_is_undergoing_immunosuppressive_therapy_now"],
+    "opioid": ["patient_is_taking_opioid_receptor_agonist_containing_product_now"],
+}
+
+# Maps lab/measurement follow-up attributes → database criterion attributes
+# These are boolean "has value recorded" flags in the database
+_LAB_VALUE_CRITERIA: Dict[str, List[str]] = {
+    "a1c": [
+        "patient_hemoglobin_a1c_measurement_value_recorded_now_withunit_percent",
+        "patient_has_undergone_hemoglobin_a1c_measurement_now",
+    ],
+    "ejection_fraction": [
+        "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent",
+        "patient_cardiac_ejection_fraction_value_recorded_now_withunit_percent",
+    ],
+    "fev1_percent": [
+        "patient_fev1_after_bronchodilation_value_recorded_now_withunit_percent_of_predicted",
+        "patient_fev1_after_bronchodilation_value_recorded_now_withunit_percent_predicted",
+    ],
+    "cd4_count": [
+        "patient_absolute_cd4_count_procedure_value_recorded_now_withunit_per_cubic_millimeter",
+        "patient_lymphocyte_antigen_cd4_value_recorded_now_withunit_cells_per_mm3",
+    ],
+    "bmi": [],  # BMI isn't in the SIGIR criteria but stored as followup_ for display
+    "pain_score": [],
+    "monthly_migraine_days": [],
+    "monthly_seizure_count": [],
+}
+
+# Smoking status → database criterion attributes
+_SMOKING_CRITERIA: Dict[str, List[str]] = {
+    "current smoker": [
+        "patient_has_finding_of_cigarette_smoker_now",
+        "patient_has_finding_of_smoker_now",
+        "patient_has_finding_of_tobacco_smoking_behavior_finding_now",
+        "patient_is_exposed_to_tobacco_smoking_behavior_finding_now",
+    ],
+    "former smoker": [
+        "patient_has_finding_of_cigarette_smoker_inthehistory",
+        "patient_has_finding_of_ex_smoker_now",
+        "patient_has_finding_of_tobacco_smoking_behavior_finding_inthehistory",
+    ],
+    "never smoked": [
+        "patient_has_finding_of_non_smoker_now",
+    ],
+}
+
+# Receptor status keywords → database criterion attributes
+_RECEPTOR_CRITERIA: Dict[str, List[str]] = {
+    "er positive": ["patient_has_finding_of_estrogen_receptor_positive_tumor_now"],
+    "er+": ["patient_has_finding_of_estrogen_receptor_positive_tumor_now"],
+    "estrogen receptor positive": ["patient_has_finding_of_estrogen_receptor_positive_tumor_now"],
+}
+
+# Dialysis/kidney → database criterion attributes
+_KIDNEY_CRITERIA: Dict[str, List[str]] = {
+    "on_dialysis_true": [
+        "patient_has_diagnosis_of_end_stage_renal_disease_now",
+        "patient_has_finding_of_end_stage_renal_disease_now",
+        "patient_has_diagnosis_of_end_stage_renal_failure_on_dialysis_now",
+    ],
+    "on_dialysis_false": [],
 }
 
 
@@ -883,43 +1039,155 @@ def merge_followup_answers(
     Merge parsed follow-up answers into the patient attribute dict
     used for eligibility matching.
 
-    Args:
-        patient_attrs: Existing patient attributes dict
-        category_id: The condition category ID (e.g., "breast_cancer")
-        answers: Dict of {attribute: parsed_value} from parse_answer()
-
-    Returns:
-        Updated patient_attrs dict with new attributes added
+    Maps conversational follow-up data to the actual database criterion type
+    names so the SMT matcher and eligibility visualizer can evaluate them.
     """
     for attr, value in answers.items():
         if value is None:
             continue
 
-        # Store the raw follow-up attribute for display
+        # Always store the raw follow-up value for display in UI
         patient_attrs[f"followup_{attr}"] = value
 
-        # Map to criteria attribute if we have a known mapping
-        criteria_key = _ATTRIBUTE_TO_CRITERIA.get((category_id, attr))
-        if criteria_key:
-            # Handle special conversions
-            if attr == "smoking_status":
-                patient_attrs[criteria_key] = (value == "current smoker")
-            elif attr == "metastatic_status":
-                patient_attrs[criteria_key] = bool(value)
-            elif attr == "on_dialysis":
-                patient_attrs[criteria_key] = bool(value)
-            else:
-                patient_attrs[criteria_key] = value
-
-        # Generic stage handling for cancer types
-        if attr == "stage" and category_id in (
-            "breast_cancer", "lung_cancer", "liver_cancer",
-        ):
-            stage_map = {"I": 1, "II": 2, "III": 3, "IV": 4}
-            numeric_stage = stage_map.get(str(value))
+        # --- Stage mapping ---
+        if attr == "stage":
+            stage_str = str(value).upper().strip()
+            stage_map = {"I": 1, "II": 2, "III": 3, "IV": 4,
+                         "1": 1, "2": 2, "3": 3, "4": 4}
+            numeric_stage = stage_map.get(stage_str)
             if numeric_stage is not None:
                 patient_attrs["patient_cancer_stage_numeric"] = numeric_stage
-                if numeric_stage == 4:
-                    patient_attrs["patient_has_finding_of_metastasis_now"] = True
+
+            # Normalize to Roman numeral for lookup
+            num_to_roman = {1: "I", 2: "II", 3: "III", 4: "IV"}
+            roman = num_to_roman.get(numeric_stage, stage_str)
+
+            # Use lung-specific criteria for lung cancer
+            if category_id == "lung_cancer":
+                criteria_list = _LUNG_STAGE_CRITERIA.get(roman, [])
+            else:
+                criteria_list = _STAGE_CRITERIA.get(roman, [])
+            for crit in criteria_list:
+                patient_attrs[crit] = True
+
+            # Stage IV implies metastasis
+            if numeric_stage == 4:
+                patient_attrs["patient_has_finding_of_widespread_metastatic_malignant_neoplastic_disease_now"] = True
+
+            # Mark lower stages as NOT present to help filter
+            if numeric_stage and numeric_stage < 3:
+                patient_attrs["patient_has_finding_of_clinical_stage_iii_now"] = False
+                patient_attrs["patient_has_finding_of_clinical_stage_4_now"] = False
+            elif numeric_stage == 3:
+                patient_attrs["patient_has_finding_of_clinical_stage_4_now"] = False
+            continue
+
+        # --- Metastatic status ---
+        if attr == "metastatic_status":
+            is_metastatic = bool(value)
+            patient_attrs["patient_has_finding_of_widespread_metastatic_malignant_neoplastic_disease_now"] = is_metastatic
+            if is_metastatic:
+                patient_attrs["patient_has_finding_of_clinical_stage_4_now"] = True
+            continue
+
+        # --- Prior treatments ---
+        if attr == "prior_treatments":
+            text_lower = str(value).lower()
+            for keyword, crit_list in _TREATMENT_CRITERIA.items():
+                if keyword in text_lower:
+                    for crit in crit_list:
+                        patient_attrs[crit] = True
+            continue
+
+        # --- Current medications ---
+        if attr == "current_medications":
+            text_lower = str(value).lower()
+            # Set general drug therapy flag
+            if text_lower and text_lower not in ("none", "no", "nothing"):
+                patient_attrs["patient_is_undergoing_drug_therapy_now"] = True
+            for keyword, crit_list in _CURRENT_MED_CRITERIA.items():
+                if keyword in text_lower:
+                    for crit in crit_list:
+                        patient_attrs[crit] = True
+            continue
+
+        # --- Receptor status ---
+        if attr == "receptor_status":
+            text_lower = str(value).lower()
+            for keyword, crit_list in _RECEPTOR_CRITERIA.items():
+                if keyword in text_lower:
+                    for crit in crit_list:
+                        patient_attrs[crit] = True
+            continue
+
+        # --- Smoking status ---
+        if attr == "smoking_status":
+            smoking_val = str(value).lower()
+            crit_list = _SMOKING_CRITERIA.get(smoking_val, [])
+            for crit in crit_list:
+                patient_attrs[crit] = True
+            # Also set negative attributes for non-smokers
+            if smoking_val == "never smoked":
+                patient_attrs["patient_has_finding_of_cigarette_smoker_now"] = False
+                patient_attrs["patient_has_finding_of_smoker_now"] = False
+                patient_attrs["patient_has_finding_of_heavy_smoker_now"] = False
+            elif smoking_val == "former smoker":
+                patient_attrs["patient_has_finding_of_cigarette_smoker_now"] = False
+                patient_attrs["patient_has_finding_of_smoker_now"] = False
+            continue
+
+        # --- Lab values (A1C, ejection fraction, FEV1, CD4, etc.) ---
+        if attr in _LAB_VALUE_CRITERIA:
+            crit_list = _LAB_VALUE_CRITERIA[attr]
+            for crit in crit_list:
+                patient_attrs[crit] = True
+            # Store numeric value for display and future numeric comparison
+            if isinstance(value, (int, float)):
+                patient_attrs[f"patient_{attr}_numeric"] = value
+            continue
+
+        # --- Dialysis ---
+        if attr == "on_dialysis":
+            key = f"on_dialysis_{'true' if value else 'false'}"
+            for crit in _KIDNEY_CRITERIA.get(key, []):
+                patient_attrs[crit] = True
+            continue
+
+        # --- ECOG performance status ---
+        if attr == "ecog_status":
+            patient_attrs["patient_ecog_performance_status_value_recorded_now_withunit_integer"] = True
+            patient_attrs["patient_has_finding_of_ecog_performance_status_finding_now"] = True
+            if isinstance(value, (int, float)) and value >= 3:
+                patient_attrs["patient_has_finding_of_ecog_performance_status_grade_3_now"] = True
+            if isinstance(value, (int, float)) and value >= 4:
+                patient_attrs["patient_has_finding_of_ecog_performance_status_grade_4_now"] = True
+            continue
+
+        # --- Arthritis type ---
+        if attr == "arthritis_type":
+            val_lower = str(value).lower()
+            if "rheumatoid" in val_lower:
+                patient_attrs["patient_has_diagnosis_of_rheumatoid_arthritis_now"] = True
+            elif "osteoarthritis" in val_lower:
+                patient_attrs["patient_has_diagnosis_of_osteoarthritis_now"] = True
+            continue
+
+        # --- MS type ---
+        if attr == "ms_type":
+            val_lower = str(value).lower()
+            if "relapsing" in val_lower:
+                patient_attrs["patient_has_diagnosis_of_relapsing_remitting_multiple_sclerosis_now"] = True
+            continue
+
+        # --- Severity (depression, eczema, asthma) ---
+        if attr in ("severity", "asthma_severity"):
+            val_lower = str(value).lower()
+            if "severe" in val_lower:
+                patient_attrs[f"followup_{attr}_level"] = "severe"
+            elif "moderate" in val_lower:
+                patient_attrs[f"followup_{attr}_level"] = "moderate"
+            elif "mild" in val_lower:
+                patient_attrs[f"followup_{attr}_level"] = "mild"
+            continue
 
     return patient_attrs

@@ -11,6 +11,113 @@ from typing import Any, Dict, List, Optional
 
 from smt_matcher import SMTMatcher, Constraint
 
+# Maps database criterion attributes back to human-readable follow-up labels
+# Used to enrich the eligibility breakdown with patient-provided data
+_CRITERION_TO_FOLLOWUP: Dict[str, str] = {
+    # Stage
+    "patient_has_finding_of_clinical_stage_iii_now": "stage",
+    "patient_has_finding_of_clinical_stage_4_now": "stage",
+    "patient_has_diagnosis_of_non_small_cell_carcinoma_of_lung_tnm_stage_3_now": "stage",
+    "patient_has_diagnosis_of_non_small_cell_carcinoma_of_lung_tnm_stage_4_now": "stage",
+    "patient_has_finding_of_non_small_cell_carcinoma_of_lung_tnm_stage_3_now": "stage",
+    "patient_has_finding_of_non_small_cell_carcinoma_of_lung_tnm_stage_4_now": "stage",
+    # Metastasis
+    "patient_has_finding_of_widespread_metastatic_malignant_neoplastic_disease_now": "metastatic_status",
+    # Treatment history
+    "patient_has_undergone_chemotherapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_chemotherapy_inthepast4weeks": "prior_treatments",
+    "patient_has_undergone_teleradiotherapy_procedure_inthehistory": "prior_treatments",
+    "patient_has_undergone_immunological_therapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_biological_treatment_inthepast4weeks": "prior_treatments",
+    "patient_has_undergone_hormone_therapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_first_line_treatment_inthehistory": "prior_treatments",
+    "patient_has_undergone_drug_therapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_antidepressant_therapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_infliximab_therapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_non_steroidal_anti_inflammatory_agent_therapy_inthehistory": "prior_treatments",
+    "patient_can_undergo_chemotherapy_now": "prior_treatments",
+    # Current medications
+    "patient_is_undergoing_drug_therapy_now": "current_medications",
+    "patient_is_undergoing_biological_treatment_now": "current_medications",
+    "patient_is_undergoing_chemotherapy_now": "current_medications",
+    "patient_is_undergoing_anticoagulant_therapy_now": "current_medications",
+    "patient_is_undergoing_warfarin_therapy_now": "current_medications",
+    "patient_is_undergoing_aspirin_therapy_now": "current_medications",
+    "patient_is_undergoing_hormone_therapy_now": "current_medications",
+    "patient_is_taking_beta_adrenergic_receptor_antagonist_containing_product_now": "current_medications",
+    "patient_is_undergoing_anticonvulsant_therapy_now": "current_medications",
+    "patient_is_taking_opioid_receptor_agonist_containing_product_now": "current_medications",
+    "patient_is_taking_dopamine_receptor_agonist_containing_product_now": "current_medications",
+    "patient_is_undergoing_immunosuppressive_therapy_now": "current_medications",
+    "patient_is_undergoing_lipid_lowering_therapy_now": "current_medications",
+    # Lab values
+    "patient_hemoglobin_a1c_measurement_value_recorded_now_withunit_percent": "a1c",
+    "patient_has_undergone_hemoglobin_a1c_measurement_now": "a1c",
+    "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent": "ejection_fraction",
+    "patient_cardiac_ejection_fraction_value_recorded_now_withunit_percent": "ejection_fraction",
+    "patient_fev1_after_bronchodilation_value_recorded_now_withunit_percent_of_predicted": "fev1_percent",
+    "patient_fev1_after_bronchodilation_value_recorded_now_withunit_percent_predicted": "fev1_percent",
+    "patient_absolute_cd4_count_procedure_value_recorded_now_withunit_per_cubic_millimeter": "cd4_count",
+    "patient_lymphocyte_antigen_cd4_value_recorded_now_withunit_cells_per_mm3": "cd4_count",
+    # ECOG
+    "patient_ecog_performance_status_value_recorded_now_withunit_integer": "ecog_status",
+    "patient_has_finding_of_ecog_performance_status_finding_now": "ecog_status",
+    "patient_has_finding_of_ecog_performance_status_grade_3_now": "ecog_status",
+    "patient_has_finding_of_ecog_performance_status_grade_4_now": "ecog_status",
+    # Smoking
+    "patient_has_finding_of_cigarette_smoker_now": "smoking_status",
+    "patient_has_finding_of_smoker_now": "smoking_status",
+    "patient_has_finding_of_non_smoker_now": "smoking_status",
+    "patient_has_finding_of_ex_smoker_now": "smoking_status",
+    "patient_has_finding_of_tobacco_smoking_behavior_finding_now": "smoking_status",
+    "patient_has_finding_of_tobacco_smoking_behavior_finding_inthehistory": "smoking_status",
+    "patient_is_exposed_to_tobacco_smoking_behavior_finding_now": "smoking_status",
+    # Receptor status
+    "patient_has_finding_of_estrogen_receptor_positive_tumor_now": "receptor_status",
+    # Kidney/dialysis
+    "patient_has_diagnosis_of_end_stage_renal_disease_now": "on_dialysis",
+    "patient_has_finding_of_end_stage_renal_disease_now": "on_dialysis",
+    "patient_has_diagnosis_of_end_stage_renal_failure_on_dialysis_now": "on_dialysis",
+}
+
+
+def _build_followup_patient_fact(
+    attr: str, patient_val: Any, patient_attrs: Dict[str, Any]
+) -> str:
+    """Build a rich patient fact string that includes follow-up context.
+
+    If the criterion was matched via a follow-up answer, show the original
+    patient-provided detail alongside the boolean evaluation.
+    """
+    followup_key = _CRITERION_TO_FOLLOWUP.get(attr)
+    if not followup_key:
+        return f"Your value: {_format_value(patient_val)}"
+
+    raw_answer = patient_attrs.get(f"followup_{followup_key}")
+    if raw_answer is None:
+        return f"Your value: {_format_value(patient_val)}"
+
+    # Build context-rich fact based on the followup type
+    label_map = {
+        "stage": "Your stage",
+        "metastatic_status": "Metastatic",
+        "prior_treatments": "Prior treatment",
+        "current_medications": "Current medications",
+        "a1c": "Your A1C",
+        "ejection_fraction": "Your ejection fraction",
+        "fev1_percent": "Your FEV1",
+        "cd4_count": "Your CD4 count",
+        "ecog_status": "Your ECOG status",
+        "smoking_status": "Smoking status",
+        "receptor_status": "Receptor status",
+        "on_dialysis": "Dialysis status",
+    }
+    label = label_map.get(followup_key, followup_key.replace("_", " ").title())
+
+    if isinstance(raw_answer, bool):
+        return f"{label}: {'Yes' if raw_answer else 'No'}"
+    return f"{label}: {raw_answer}"
+
 
 # ---------------------------------------------------------------------------
 # Attribute humanization helpers
@@ -332,7 +439,7 @@ class EligibilityVisualizer:
                     human_label, patient_val, constraint
                 )
 
-            patient_fact = f"Your value: {_format_value(patient_val)}"
+            patient_fact = _build_followup_patient_fact(attr, patient_val, patient_attrs)
 
             cs = CriterionStatus(
                 attribute=attr,
