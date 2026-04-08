@@ -90,6 +90,22 @@ _CRITERION_TO_FOLLOWUP: Dict[str, str] = {
 }
 
 
+def _is_age_attribute(attr: str) -> bool:
+    """Check if an attribute represents a patient age criterion."""
+    return (
+        attr.startswith("patient_age_value_recorded_")
+        or attr == "patient_aged_value_recorded_now_withunit_years"
+    )
+
+
+def _is_sex_attribute(attr: str) -> bool:
+    """Check if an attribute represents a patient sex criterion."""
+    return attr in (
+        "patient_sex_is_male_now",
+        "patient_sex_is_female_now",
+    )
+
+
 def _build_followup_patient_fact(
     attr: str, patient_val: Any, patient_attrs: Dict[str, Any]
 ) -> str:
@@ -99,6 +115,24 @@ def _build_followup_patient_fact(
     patient-provided detail alongside the boolean evaluation.
     Works with both hardcoded _CRITERION_TO_FOLLOWUP and dynamic criteria_map.
     """
+    # Special-case: age attributes — show the numeric age, not bool coercion
+    if _is_age_attribute(attr):
+        age = patient_attrs.get('age')
+        if age is not None:
+            return f"Your age: {age}"
+        if isinstance(patient_val, (int, float)) and not isinstance(patient_val, bool):
+            return f"Your age: {int(patient_val)}"
+        return f"Your value: {_format_value(patient_val)}"
+
+    # Special-case: sex attributes — show "Male" / "Female"
+    if _is_sex_attribute(attr):
+        gender = patient_attrs.get('gender', '')
+        if gender:
+            return f"Your sex: {gender.capitalize()}"
+        if attr == "patient_sex_is_male_now":
+            return f"Sex is male: {'Yes' if patient_val else 'No'}"
+        return f"Sex is female: {'Yes' if patient_val else 'No'}"
+
     followup_key = _CRITERION_TO_FOLLOWUP.get(attr)
 
     # Also check dynamic criteria_map — reverse lookup which attribute_key
@@ -150,6 +184,14 @@ def _build_followup_patient_fact(
 # High-priority full-attribute overrides for common criteria
 # These take precedence over the parser for well-known patterns
 _ATTRIBUTE_OVERRIDES: Dict[str, str] = {
+    # Age
+    "patient_age_value_recorded_now_in_years": "Age",
+    "patient_age_value_recorded_inthehistory_in_years": "Age",
+    "patient_aged_value_recorded_now_withunit_years": "Age",
+    # Sex
+    "patient_sex_is_male_now": "Sex (male)",
+    "patient_sex_is_female_now": "Sex (female)",
+    # ECOG
     "patient_has_finding_of_ecog_performance_status_finding_now":
         "Can carry out normal daily activities",
     "patient_ecog_performance_status_value_recorded_now_withunit_integer":
@@ -676,12 +718,14 @@ class EligibilityVisualizer:
             if status == 'eligible':
                 eligible_count += 1
                 explanation = self._build_eligible_explanation(
-                    human_label, patient_val, constraint
+                    human_label, patient_val, constraint,
+                    attr=attr, patient_attrs=patient_attrs,
                 )
             else:
                 ineligible_count += 1
                 explanation = self._build_ineligible_explanation(
-                    human_label, patient_val, constraint
+                    human_label, patient_val, constraint,
+                    attr=attr, patient_attrs=patient_attrs,
                 )
 
             patient_fact = _build_followup_patient_fact(attr, patient_val, patient_attrs)
@@ -759,12 +803,29 @@ class EligibilityVisualizer:
         )
 
     def _build_eligible_explanation(
-        self, human_label: str, patient_val: Any, constraint: Constraint
+        self, human_label: str, patient_val: Any, constraint: Constraint,
+        attr: str = "", patient_attrs: Optional[Dict[str, Any]] = None,
     ) -> str:
         """Build a plain-language explanation for why a criterion is satisfied."""
         pv = _format_value(patient_val)
         cv = _format_value(constraint.value)
         op = constraint.operator
+
+        # Special-case: age — show numeric age instead of boolean
+        if _is_age_attribute(attr):
+            age = None
+            if patient_attrs:
+                age = patient_attrs.get('age')
+            if age is None and isinstance(patient_val, (int, float)) and not isinstance(patient_val, bool):
+                age = int(patient_val)
+            if age is not None:
+                return f"Your age: {age} — this trial requires age to be recorded ✓"
+
+        # Special-case: sex — show actual gender
+        if _is_sex_attribute(attr):
+            gender = patient_attrs.get('gender', '') if patient_attrs else ''
+            if gender:
+                return f"Your sex: {gender.capitalize()} — matches this trial's requirement ✓"
 
         if isinstance(constraint.value, str) and constraint.value.lower() in ('true', 'false'):
             expected = constraint.value.lower() == 'true'
@@ -785,12 +846,29 @@ class EligibilityVisualizer:
         return f"Your {human_label.lower()} ({pv}) matches the requirement ({cv})."
 
     def _build_ineligible_explanation(
-        self, human_label: str, patient_val: Any, constraint: Constraint
+        self, human_label: str, patient_val: Any, constraint: Constraint,
+        attr: str = "", patient_attrs: Optional[Dict[str, Any]] = None,
     ) -> str:
         """Build a plain-language explanation for why a criterion is NOT satisfied."""
         pv = _format_value(patient_val)
         cv = _format_value(constraint.value)
         op = constraint.operator
+
+        # Special-case: age
+        if _is_age_attribute(attr):
+            age = None
+            if patient_attrs:
+                age = patient_attrs.get('age')
+            if age is None and isinstance(patient_val, (int, float)) and not isinstance(patient_val, bool):
+                age = int(patient_val)
+            if age is not None:
+                return f"Your age: {age} — does not meet this trial's age requirement."
+
+        # Special-case: sex
+        if _is_sex_attribute(attr):
+            gender = patient_attrs.get('gender', '') if patient_attrs else ''
+            if gender:
+                return f"Your sex: {gender.capitalize()} — does not match this trial's requirement."
 
         if isinstance(constraint.value, str) and constraint.value.lower() in ('true', 'false'):
             expected = constraint.value.lower() == 'true'

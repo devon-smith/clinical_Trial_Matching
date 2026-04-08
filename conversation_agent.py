@@ -83,8 +83,13 @@ def _try_extract_zip(text: str) -> Optional[str]:
 def _try_extract_gender(text: str) -> Optional[str]:
     """Simple rule-based gender extraction."""
     lower = text.lower()
-    for token in ['male', 'female', 'non-binary', 'nonbinary', 'prefer not to say']:
+    # Check 'female' before 'male' to avoid substring false positive
+    # ('male' is a substring of 'female')
+    for token in ['female', 'non-binary', 'nonbinary', 'prefer not to say', 'male']:
         if token in lower:
+            # For 'male', ensure it's not part of 'female'
+            if token == 'male' and 'female' in lower:
+                continue
             return token.replace('nonbinary', 'non-binary')
     return None
 
@@ -497,6 +502,7 @@ class ConversationalTrialAssistant:
             'preferences': None,
             'condition_details': {},       # Follow-up answers keyed by attribute
             'condition_category': None,    # Matched category ID from condition_followups
+            'condition_criteria_map': {},  # Maps attribute keys to criterion_types from dynamic followups
         }
         self._pending_followups: List[Dict] = []   # Queued condition follow-up questions
         self._use_dynamic_followups: bool = False    # True if using dynamic criteria-driven questions

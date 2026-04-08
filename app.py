@@ -335,12 +335,19 @@ def build_patient_attributes(patient_data: Dict[str, Any]) -> Dict[str, Any]:
     if gender:
         attrs['gender'] = gender
 
-    # Condition mapping
+    # Condition mapping — first try explicit mapping, then fuzzy match
     condition = str(patient_data.get('condition', '')).lower()
+    condition_matched = False
     for keyword, criteria_attrs in CONDITION_TO_CRITERIA.items():
         if keyword in condition:
             for attr_name in criteria_attrs:
                 attrs[attr_name] = True
+            condition_matched = True
+
+    # Store condition keywords for infer_negative_defaults to avoid
+    # incorrectly defaulting related diagnoses to False
+    if condition:
+        attrs['_condition_keywords'] = _extract_condition_keywords(condition)
 
     # Pregnancy/breastfeeding — default to False if gender is male
     if gender == 'male':
@@ -365,6 +372,60 @@ def build_patient_attributes(patient_data: Dict[str, Any]) -> Dict[str, Any]:
         attrs = merge_followup_answers(attrs, category_id, condition_details)
 
     return attrs
+
+
+# ---------------------------------------------------------------------------
+# Condition keyword extraction for fuzzy criterion matching
+# ---------------------------------------------------------------------------
+
+# Common medical stop words to exclude from keyword matching
+_CONDITION_STOP_WORDS = {
+    'patient', 'has', 'now', 'disease', 'disorder', 'syndrome',
+    'the', 'and', 'with', 'without', 'finding', 'diagnosis',
+}
+
+
+def _extract_condition_keywords(condition: str) -> set:
+    """Extract meaningful keywords from a patient's stated condition.
+
+    Returns a set of keywords suitable for fuzzy matching against criterion
+    attribute names (which use snake_case with these words embedded).
+    """
+    words = set()
+    for word in condition.lower().replace('-', ' ').split():
+        word = word.strip('.,!?()[]')
+        if len(word) > 2 and word not in _CONDITION_STOP_WORDS:
+            words.add(word)
+    return words
+
+
+def _criterion_matches_condition(criterion_type: str, condition_keywords: set) -> bool:
+    """Check if a diagnosis/finding criterion semantically relates to the patient's condition.
+
+    Used to avoid incorrectly defaulting relevant diagnosis criteria to False
+    when the patient's stated condition overlaps with the criterion name.
+
+    Requires meaningful overlap — generic terms like 'cancer' alone aren't enough
+    to match 'lung_cancer' for a patient with 'brain cancer'.
+    """
+    if not condition_keywords:
+        return False
+    ct_lower = criterion_type.lower()
+
+    # Generic disease type words that shouldn't count as a match on their own
+    _GENERIC_DISEASE_WORDS = {
+        'cancer', 'tumor', 'tumour', 'neoplasm', 'malignant', 'carcinoma',
+        'type', 'stage', 'chronic', 'acute',
+    }
+
+    matched = [kw for kw in condition_keywords if kw in ct_lower]
+    if not matched:
+        return False
+
+    # If we have multiple keywords and at least one matches, that's meaningful
+    # unless ALL matches are generic
+    specific_matches = [m for m in matched if m not in _GENERIC_DISEASE_WORDS]
+    return len(specific_matches) > 0
 
 
 # ---------------------------------------------------------------------------
@@ -448,6 +509,9 @@ def infer_negative_defaults(
     needed_criteria = [row[0] for row in cur.fetchall()]
     conn.close()
 
+    # Get condition keywords so we don't falsely negate relevant diagnoses
+    condition_keywords = patient_attrs.get('_condition_keywords', set())
+
     for ct in needed_criteria:
         # Skip if we already have a value
         if ct in patient_attrs:
@@ -461,6 +525,18 @@ def infer_negative_defaults(
         is_inferable = any(ct.startswith(prefix) for prefix in _INFERABLE_PREFIXES)
         if not is_inferable:
             continue
+
+        # IMPORTANT: Don't default diagnosis/finding criteria to False if they
+        # semantically relate to the patient's stated condition. A patient who
+        # says "brain cancer" shouldn't have brain-related diagnosis criteria
+        # set to False — leave them as Unknown for the study team to verify.
+        if condition_keywords and (
+            ct.startswith("patient_has_diagnosis_of_") or
+            ct.startswith("patient_has_finding_of_")
+        ):
+            if _criterion_matches_condition(ct, condition_keywords):
+                # Skip — leave as Unknown rather than incorrectly defaulting
+                continue
 
         # Determine the default value based on criterion semantics
         if ct.startswith("patient_can_undergo_"):
