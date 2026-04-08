@@ -53,6 +53,20 @@ _SKIP_SUBSTRINGS = [
     # Too vague to ask about
     "is_exposed_to_drug_or_medicament",
     "has_finding_of_disease_now",
+    # Clinical findings patients can't self-assess
+    "prognosis_outlook",
+    "preinfarction_syndrome",
+    "disorder_of_hemostasis",
+    "calcinosis",
+    "sclerodactyly",
+    "telangiectasia",
+    "esophageal_motility",
+    "raynaud_phenomenon",
+    # Overly generic
+    "finding_of_co_morbid_conditions",
+    "neoplasm_now",
+    "malignant_neoplastic_disease_now",
+    "disease_condition_finding",
 ]
 
 
@@ -114,6 +128,9 @@ def discover_followup_questions(
 
     # 3. Filter out known attributes
     criteria = _filter_known(criteria, known_attrs)
+
+    # 3b. Filter out criteria about unrelated conditions
+    criteria = _filter_unrelated_conditions(criteria, condition)
 
     # 4. Generate questions
     questions = generate_questions_from_criteria(criteria)
@@ -305,6 +322,77 @@ def _gather_ranked_criteria(
 
     conn.close()
     return results
+
+
+def _filter_unrelated_conditions(
+    criteria: List[Dict],
+    patient_condition: str,
+) -> List[Dict]:
+    """Remove criteria that are about a DIFFERENT specific condition than the patient's.
+
+    For example, if the patient has brain cancer, remove criteria like:
+    - patient_has_diagnosis_of_carcinoma_in_situ_of_uterine_cervix
+    - patient_has_diagnosis_of_basal_cell_carcinoma_of_skin
+
+    But keep generic criteria that apply to all conditions:
+    - patient_has_diagnosis_of_secondary_malignant_neoplastic_disease (metastasis)
+    - patient_is_pregnant_now
+    """
+    if not patient_condition:
+        return criteria
+
+    # Build a set of words from the patient's condition for matching
+    cond_lower = patient_condition.lower().replace('-', ' ')
+    cond_words = set(cond_lower.split()) - {'of', 'the', 'and', 'or', 'a', 'an', 'with', 'type'}
+
+    # Body parts / organ systems that indicate a DIFFERENT condition
+    _BODY_SITES = {
+        'cervix', 'cervical', 'uterine', 'uterus', 'ovarian', 'ovary',
+        'prostate', 'prostatic', 'breast', 'mammary',
+        'lung', 'pulmonary', 'bronchial',
+        'colon', 'colorectal', 'rectal', 'gastric', 'stomach', 'esophageal',
+        'hepatic', 'liver', 'pancreatic', 'pancreas',
+        'renal', 'kidney', 'bladder',
+        'thyroid', 'adrenal',
+        'skin', 'cutaneous', 'melanoma',
+        'brain', 'cerebral', 'intracranial', 'glioma', 'glioblastoma',
+        'bone', 'osseous',
+        'testicular', 'testis',
+        'endometrial', 'vulvar',
+        'head_and_neck', 'laryngeal', 'pharyngeal', 'oral',
+    }
+
+    def _is_unrelated_diagnosis(ct: str) -> bool:
+        """Check if a criterion is a diagnosis/finding for a body site different from the patient's."""
+        # Only filter diagnosis-type criteria
+        if 'has_diagnosis_of_' not in ct and 'has_finding_of_' not in ct:
+            return False
+
+        # Extract the condition part from the criterion
+        crit_parts = ct.lower().replace('patient_has_diagnosis_of_', '').replace('patient_has_finding_of_', '')
+        crit_words = set(crit_parts.replace('_', ' ').split()) - {'now', 'inthehistory'}
+
+        # Check if ANY word from the criterion matches the patient's condition
+        if cond_words & crit_words:
+            return False  # Related to patient's condition
+
+        # Check if the criterion mentions a specific body site
+        crit_sites = crit_words & _BODY_SITES
+        if crit_sites:
+            # This criterion is about a specific body site
+            # Check if the patient's condition shares any site words
+            patient_sites = cond_words & _BODY_SITES
+            if patient_sites and not (patient_sites & crit_sites):
+                # Different body site — filter it out
+                return True
+
+        return False
+
+    filtered = [c for c in criteria if not _is_unrelated_diagnosis(c['criterion_type'])]
+    removed = len(criteria) - len(filtered)
+    if removed > 0:
+        print(f"  Filtered {removed} unrelated-condition criteria")
+    return filtered
 
 
 def _filter_known(
