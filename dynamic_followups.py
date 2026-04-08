@@ -70,6 +70,7 @@ def discover_followup_questions(
     patient_data: Optional[Dict] = None,
     db_path: str = _DEFAULT_DB,
     max_questions: int = _MAX_QUESTIONS,
+    trial_ids: Optional[List[str]] = None,
 ) -> List[QuestionTemplate]:
     """Discover the most impactful follow-up questions for a patient's condition.
 
@@ -85,6 +86,9 @@ def discover_followup_questions(
             filtering irrelevant questions (e.g., pregnancy for males).
         db_path: Path to the SQLite database.
         max_questions: Maximum number of questions to return.
+        trial_ids: Optional pre-computed list of trial NCT IDs. If provided,
+            skips the internal trial lookup (useful when the caller already
+            did preliminary retrieval).
 
     Returns:
         List of QuestionTemplate objects, sorted by priority (highest first).
@@ -92,15 +96,21 @@ def discover_followup_questions(
     known_attrs = known_attrs or {}
     patient_data = patient_data or {}
 
-    # 1. Find trials matching the condition
-    trial_ids = _find_matching_trial_ids(condition, db_path)
+    # 1. Find trials matching the condition (or use pre-supplied IDs)
+    if trial_ids is None:
+        trial_ids = _find_matching_trial_ids(condition, db_path)
     if not trial_ids:
         return []
+
+    print(f"  Dynamic followups: {len(trial_ids)} candidate trials for '{condition}'")
 
     # 2. Gather criteria from those trials, ranked by frequency
     criteria = _gather_ranked_criteria(trial_ids, db_path)
     if not criteria:
+        print("  Dynamic followups: no criteria found")
         return []
+
+    print(f"  Dynamic followups: {len(criteria)} unresolved criteria found")
 
     # 3. Filter out known attributes
     criteria = _filter_known(criteria, known_attrs)
@@ -110,6 +120,8 @@ def discover_followup_questions(
 
     # 5. Filter by patient demographics
     questions = _filter_by_demographics(questions, patient_data)
+
+    print(f"  Dynamic followups: asking top {min(max_questions, len(questions))} of {len(questions)} questions")
 
     # 6. Return top N
     return questions[:max_questions]

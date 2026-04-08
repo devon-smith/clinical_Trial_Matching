@@ -24,7 +24,8 @@ QuestionProvider = Callable[[str], str]
 CONVERSATION_STATES = {
     'INTAKE': 'intake',           # waiting for first open-ended response
     'FOLLOWUP': 'followup',       # asking for missing fields
-    'CONDITION_DETAIL': 'condition_detail',  # condition-specific follow-ups
+    'CONDITION_DETAIL': 'condition_detail',    # condition-specific follow-ups (round 1)
+    'CONDITION_DETAIL_2': 'condition_detail_2',  # optional second round of follow-ups
     'PREF_TRAVEL': 'pref_travel',         # asking about travel willingness
     'PREF_RISK': 'pref_risk',             # asking about risk tolerance
     'PREF_TREATMENT': 'pref_treatment',   # asking about treatment type
@@ -505,7 +506,10 @@ class ConversationalTrialAssistant:
             'condition_criteria_map': {},  # Maps attribute keys to criterion_types from dynamic followups
         }
         self._pending_followups: List[Dict] = []   # Queued condition follow-up questions
+        self._pending_followups_round2: List[Dict] = []  # Second round follow-ups
         self._use_dynamic_followups: bool = False    # True if using dynamic criteria-driven questions
+        self._preliminary_trial_ids: List[str] = []  # NCT IDs from preliminary retrieval
+        self._followup_round: int = 0                # 0=not started, 1=round 1, 2=round 2
         self.quick_replies: Optional[List[Dict]] = None  # Server-driven quick-reply buttons for frontend
 
     # ------------------------------------------------------------------
@@ -591,6 +595,9 @@ class ConversationalTrialAssistant:
 
         if self.conversation_state == CONVERSATION_STATES['CONDITION_DETAIL']:
             return self._handle_condition_detail(user_input)
+
+        if self.conversation_state == CONVERSATION_STATES['CONDITION_DETAIL_2']:
+            return self._handle_condition_detail_round2(user_input)
 
         if self.conversation_state == CONVERSATION_STATES['PREF_TRAVEL']:
             return self._handle_pref_travel(user_input)
@@ -697,7 +704,10 @@ class ConversationalTrialAssistant:
         self.patient_data['condition_category'] = None
         self.patient_data['condition_criteria_map'] = {}
         self._pending_followups = []
+        self._pending_followups_round2 = []
         self._use_dynamic_followups = False
+        self._preliminary_trial_ids = []
+        self._followup_round = 0
         self.quick_replies = None
 
     def _handle_question(self, answer: str) -> Tuple[str, bool]:
@@ -851,7 +861,10 @@ class ConversationalTrialAssistant:
             self.patient_data['condition_criteria_map'] = {}
             self.patient_data['preferences'] = None
             self._pending_followups = []
+            self._pending_followups_round2 = []
             self._use_dynamic_followups = False
+            self._preliminary_trial_ids = []
+            self._followup_round = 0
 
         # Build response
         ack = "Updated " + ", ".join(updated_fields) + "."
@@ -1052,14 +1065,70 @@ class ConversationalTrialAssistant:
     # Condition-specific follow-up questions
     # ------------------------------------------------------------------
 
+    def _preliminary_trial_lookup(self, condition: str) -> List[str]:
+        """Run a fast SQL query to find candidate trial NCT IDs for a condition.
+
+        This is Phase 1 only — quick disease-column matching, no scoring.
+        Used to determine which criteria to ask about BEFORE the full search.
+        """
+        conn = sqlite3.connect(self.db_path)
+        cur = conn.cursor()
+        condition_lower = condition.lower().strip()
+
+        # Build search terms
+        search_terms = [condition_lower]
+        words = condition_lower.split()
+        if len(words) > 1:
+            for w in words:
+                if len(w) > 3 and w not in ("type", "with", "from", "that", "this"):
+                    search_terms.append(w)
+
+        nct_ids: set = set()
+
+        # Search diseases column (both tables)
+        for term in search_terms:
+            pattern = f"%{term}%"
+            cur.execute(
+                "SELECT nct_id FROM trials WHERE LOWER(diseases) LIKE ?",
+                (pattern,),
+            )
+            for row in cur.fetchall():
+                nct_ids.add(row[0])
+            try:
+                cur.execute(
+                    "SELECT nct_id FROM ct_gov_trials WHERE LOWER(diseases) LIKE ?",
+                    (pattern,),
+                )
+                for row in cur.fetchall():
+                    nct_ids.add(row[0])
+            except Exception:
+                pass  # ct_gov_trials may not exist
+
+        # Fallback: title search
+        if not nct_ids:
+            for term in search_terms:
+                pattern = f"%{term}%"
+                cur.execute(
+                    "SELECT nct_id FROM trials WHERE LOWER(title) LIKE ?",
+                    (pattern,),
+                )
+                for row in cur.fetchall():
+                    nct_ids.add(row[0])
+
+        conn.close()
+        result = list(nct_ids)[:20]  # Cap at top 20
+        print(f"  Preliminary lookup for '{condition}': {len(result)} candidate trials")
+        return result
+
     def _try_transition_to_condition_detail(self, ack: str = "") -> Optional[Tuple[str, bool]]:
-        """If condition is known and has follow-ups, transition to CONDITION_DETAIL.
+        """After condition + demographics, do preliminary retrieval then ask
+        criteria-driven questions to enrich the patient profile BEFORE searching.
 
-        Uses dynamic criteria-driven questions first (derived from the actual
-        trial database), falling back to hardcoded condition_followups.
-
-        Presents ALL questions in a single bullet-point message and sets
-        self.quick_replies with button metadata for the frontend.
+        Flow:
+          1. Run preliminary SQL retrieval → top 20 candidate trials
+          2. Call discover_followup_questions() with those trial IDs
+          3. Present top 5 questions conversationally
+          4. Fall back to hardcoded questions if dynamic approach yields nothing
 
         Returns (response, is_done) if transitioning, None otherwise.
         """
@@ -1070,11 +1139,16 @@ class ConversationalTrialAssistant:
         if not condition:
             return None
 
-        # Try dynamic questions first (data-driven from trial criteria)
+        # Phase 1: Preliminary trial retrieval (fast SQL)
+        self._preliminary_trial_ids = self._preliminary_trial_lookup(condition)
+
+        # Phase 2: Discover criteria-driven questions using those trial IDs
         dynamic_qs = discover_followup_questions(
             condition,
             known_attrs=self.patient_data.get('condition_details'),
             patient_data=self.patient_data,
+            trial_ids=self._preliminary_trial_ids if self._preliminary_trial_ids else None,
+            max_questions=5,
         )
 
         if dynamic_qs:
@@ -1107,10 +1181,31 @@ class ConversationalTrialAssistant:
         if not self._pending_followups:
             return None
 
+        self._followup_round = 1
+
         # Build ALL questions as numbered bullet points in one message
+        question_msg = self._format_followup_questions(self._pending_followups)
+
+        self.conversation_state = CONVERSATION_STATES['CONDITION_DETAIL']
+
+        n_trials = len(self._preliminary_trial_ids)
+        intro = (
+            f"Let me look at what's available for **{condition}**...\n\n"
+            f"I found **{n_trials} potential trials**. To match you to the best ones, "
+            f"I need to know a few things:"
+        )
+        full_msg = (
+            f"{ack}\n\n{intro}\n\n{question_msg}\n\n"
+            f"Share what you know — it's okay to skip anything you're unsure about."
+        )
+
+        return full_msg.strip(), False
+
+    def _format_followup_questions(self, followups: List[Dict]) -> str:
+        """Format follow-up questions as numbered bullets with quick-reply metadata."""
         parts = []
         quick_replies: List[Dict] = []
-        for i, fq in enumerate(self._pending_followups, 1):
+        for i, fq in enumerate(followups, 1):
             q = fq['question']
             if fq.get('choices'):
                 options = ", ".join(fq['choices'])
@@ -1133,10 +1228,6 @@ class ConversationalTrialAssistant:
                     'options': ['Yes', 'No', "I don't know"],
                 })
 
-        question_msg = "\n".join(parts)
-
-        self.conversation_state = CONVERSATION_STATES['CONDITION_DETAIL']
-
         # Set quick_replies for frontend (including a skip-all option)
         quick_replies.append({
             'type': 'skip',
@@ -1144,10 +1235,7 @@ class ConversationalTrialAssistant:
         })
         self.quick_replies = quick_replies
 
-        intro = f"I found some potential trials for **{condition}**. A few quick questions to improve your matches:"
-        full_msg = f"{ack}\n\n{intro}\n\n{question_msg}\n\nAnswer as many as you can — just say \"skip\" for any you're not sure about."
-
-        return full_msg.strip(), False
+        return "\n".join(parts)
 
     def _handle_condition_detail(self, message: str) -> Tuple[str, bool]:
         """Handle responses to condition-specific follow-up questions.
@@ -1278,7 +1366,12 @@ class ConversationalTrialAssistant:
         return self._finish_condition_detail(ack)
 
     def _finish_condition_detail(self, ack: str) -> Tuple[str, bool]:
-        """Finish condition detail collection and move to next state."""
+        """Finish condition detail collection — try a second round or move on.
+
+        After round 1: if there are still many high-value unknowns, ask up to
+        5 more questions (round 2). After round 2 (or if round 2 has nothing
+        new to ask): move to preferences.
+        """
         # Check if demographics are still missing
         followup_ask = _build_followup_ask(self.patient_data)
         if followup_ask is not None:
@@ -1287,7 +1380,176 @@ class ConversationalTrialAssistant:
                 return f"{ack}\n\n{followup_ask}", False
             return followup_ask, False
 
+        # Try second round of questions (only after round 1, max 2 rounds)
+        if self._followup_round == 1 and self._use_dynamic_followups:
+            round2_result = self._try_second_round(ack)
+            if round2_result:
+                return round2_result
+
         # All required fields filled — move to preferences
+        return self._transition_to_preferences(ack)
+
+    def _try_second_round(self, ack: str) -> Optional[Tuple[str, bool]]:
+        """Attempt a second round of criteria-driven questions.
+
+        Only fires if the first round left many high-value criteria unresolved.
+        Returns (response, is_done) if asking more, None if done.
+        """
+        condition = self.patient_data.get('primary_condition') or (
+            self.patient_data['conditions'][0]
+            if self.patient_data.get('conditions') else None
+        )
+        if not condition:
+            return None
+
+        # Build known_attrs from what we already collected
+        known_attrs = dict(self.patient_data.get('condition_details', {}))
+        # Also include attribute keys from round 1 (even if answered None)
+        for fq in self._pending_followups:
+            attr = fq['attribute']
+            if attr not in known_attrs:
+                known_attrs[attr] = None  # Mark as asked-but-skipped
+
+        print(f"  Round 2: checking for additional questions (known: {len(known_attrs)} attrs)")
+
+        dynamic_qs = discover_followup_questions(
+            condition,
+            known_attrs=known_attrs,
+            patient_data=self.patient_data,
+            trial_ids=self._preliminary_trial_ids if self._preliminary_trial_ids else None,
+            max_questions=5,
+        )
+
+        if not dynamic_qs:
+            print("  Round 2: no additional questions needed")
+            return None
+
+        # Only do round 2 if there are enough high-value questions
+        # (at least 2 questions with decent priority)
+        high_value = [q for q in dynamic_qs if q.priority >= 10.0]
+        if len(high_value) < 2:
+            print(f"  Round 2: only {len(high_value)} high-value questions — skipping")
+            return None
+
+        self._pending_followups_round2 = [
+            {
+                'question': qt.question_text,
+                'attribute': qt.attribute_key,
+                'value_type': qt.value_type,
+                'choices': qt.choices,
+                'criterion_types': qt.criterion_types,
+            }
+            for qt in dynamic_qs
+        ]
+
+        self._followup_round = 2
+        question_msg = self._format_followup_questions(self._pending_followups_round2)
+
+        self.conversation_state = CONVERSATION_STATES['CONDITION_DETAIL_2']
+
+        intro = "A few more questions that would help narrow things down:"
+        full_msg = f"{ack}\n\n{intro}\n\n{question_msg}\n\nSame as before — skip anything you're not sure about."
+
+        return full_msg.strip(), False
+
+    def _handle_condition_detail_round2(self, message: str) -> Tuple[str, bool]:
+        """Handle answers to the second round of condition detail questions.
+
+        Same parsing logic as round 1, but uses _pending_followups_round2.
+        After processing, always moves to preferences (no round 3).
+        """
+        text = message.strip().lower()
+
+        # Handle full skip
+        skip_phrases = [
+            "i don't know", "idk", "not sure", "no idea", "skip",
+            "don't know", "dont know", "i'm not sure", "im not sure",
+            "skip all", "skip these", "i don't know any of these",
+        ]
+        is_full_skip = any(text == phrase or text == phrase + "."
+                           for phrase in skip_phrases)
+        if is_full_skip:
+            ack = "No problem — I have enough to find good matches."
+            return self._transition_to_preferences(ack)
+
+        # Parse answers using the same logic as round 1
+        remaining = [fq for fq in self._pending_followups_round2
+                     if fq['attribute'] not in self.patient_data.get('condition_details', {})]
+
+        if not remaining:
+            return self._transition_to_preferences("")
+
+        details = self.patient_data.setdefault('condition_details', {})
+        criteria_map = self.patient_data.setdefault('condition_criteria_map', {})
+
+        _IDK_PHRASES = {
+            "i don't know", "idk", "not sure", "no idea", "skip",
+            "don't know", "dont know", "unsure", "?", "n/a", "na",
+            "i'm not sure", "im not sure", "no clue",
+        }
+
+        def _is_idk(t: str) -> bool:
+            return t.strip().lower().rstrip('.!') in _IDK_PHRASES
+
+        def _store_answer(fq, value):
+            attr = fq['attribute']
+            if isinstance(value, str) and _is_idk(value):
+                details[attr] = None
+            else:
+                details[attr] = value
+            if fq.get('criterion_types'):
+                criteria_map[attr] = fq['criterion_types']
+
+        # Split strategies (same as round 1)
+        numbered_parts = re.split(r'\s*\d+[.)]\s+', message.strip())
+        numbered_parts = [p.strip() for p in numbered_parts if p.strip()]
+        newline_parts = [p.strip() for p in message.strip().split('\n') if p.strip()]
+        comma_parts = re.split(r',\s*(?=[A-Z1-9])', message.strip())
+        comma_parts = [p.strip() for p in comma_parts if p.strip()]
+
+        n_questions = len(remaining)
+        candidates = [
+            (numbered_parts, abs(len(numbered_parts) - n_questions)),
+            (newline_parts, abs(len(newline_parts) - n_questions)),
+            (comma_parts, abs(len(comma_parts) - n_questions)),
+        ]
+        candidates.sort(key=lambda x: (x[1], -len(x[0])))
+        best_parts = candidates[0][0]
+
+        parsed_count = 0
+        if len(best_parts) >= n_questions:
+            for fq, ans_text in zip(remaining, best_parts):
+                attr, value = parse_answer(ans_text, fq)
+                if value is not None:
+                    _store_answer(fq, value)
+                    parsed_count += 1
+        elif len(best_parts) > 1:
+            for fq, ans_text in zip(remaining, best_parts):
+                attr, value = parse_answer(ans_text, fq)
+                if value is not None:
+                    _store_answer(fq, value)
+                    parsed_count += 1
+        else:
+            for fq in remaining:
+                attr, value = parse_answer(message, fq)
+                if value is not None:
+                    _store_answer(fq, value)
+                    parsed_count += 1
+
+        if parsed_count == 0:
+            for fq in remaining:
+                if fq['attribute'] not in details:
+                    _store_answer(fq, message.strip())
+                    break
+
+        answered = sum(1 for fq in self._pending_followups_round2 if fq['attribute'] in details)
+        total = len(self._pending_followups_round2)
+
+        if parsed_count > 0:
+            ack = f"Got it — {parsed_count} more answer{'s' if parsed_count > 1 else ''}. That should help a lot with matching."
+        else:
+            ack = "Thanks — I'll search with what I have."
+
         return self._transition_to_preferences(ack)
 
     # ------------------------------------------------------------------

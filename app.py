@@ -1678,7 +1678,10 @@ def chat():
         assistant.conversation_state = session['assistant']['conversation_state']
         assistant.patient_data = session['assistant']['patient_data']
         assistant._pending_followups = session['assistant'].get('pending_followups', [])
+        assistant._pending_followups_round2 = session['assistant'].get('pending_followups_round2', [])
         assistant._use_dynamic_followups = session['assistant'].get('use_dynamic_followups', False)
+        assistant._preliminary_trial_ids = session['assistant'].get('preliminary_trial_ids', [])
+        assistant._followup_round = session['assistant'].get('followup_round', 0)
 
         # Process the message
         response, done = assistant.process_response(user_message)
@@ -1688,7 +1691,10 @@ def chat():
             'conversation_state': assistant.conversation_state,
             'patient_data': assistant.patient_data,
             'pending_followups': assistant._pending_followups,
+            'pending_followups_round2': getattr(assistant, '_pending_followups_round2', []),
             'use_dynamic_followups': assistant._use_dynamic_followups,
+            'preliminary_trial_ids': getattr(assistant, '_preliminary_trial_ids', []),
+            'followup_round': getattr(assistant, '_followup_round', 0),
         }
         session.modified = True
 
