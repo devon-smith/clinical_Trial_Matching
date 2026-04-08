@@ -204,51 +204,98 @@ def _filter_by_demographics(
 
 
 def _find_matching_trial_ids(condition: str, db_path: str) -> List[str]:
-    """Find trial NCT IDs whose diseases column matches the condition.
+    """Find trial NCT IDs matching the patient's condition.
 
-    Uses multiple search strategies:
-      - Exact substring match on diseases column
-      - Word-level matching for multi-word conditions
-      - Title fallback if diseases column has no matches
+    Prioritizes condition-specific matches over broad category matches:
+    1. Full-phrase match on diseases/conditions columns (both tables)
+    2. Concept-expanded matches (glioblastoma, glioma for brain cancer)
+    3. Only if < 5 results: broaden to individual word matches — but
+       never let a single generic word like 'cancer' drive retrieval alone
     """
     conn = sqlite3.connect(db_path)
+    conn.row_factory = sqlite3.Row
     cur = conn.cursor()
     condition_lower = condition.lower().strip()
 
-    # Build search terms — the condition itself plus individual words
-    search_terms = [condition_lower]
+    # --- Step 1: Full-phrase search across both tables ---
+    specific_ids: set = set()
 
-    # For multi-word conditions, also try key medical terms
-    words = condition_lower.split()
-    if len(words) > 1:
-        # Add the full term and meaningful subsets
-        # e.g. "stomach cancer" → also search "stomach", "cancer"
-        for w in words:
-            if len(w) > 3 and w not in ("type", "with", "from", "that", "this"):
-                search_terms.append(w)
+    # Build phrase-level search terms: the condition + concept expansions
+    phrase_terms = [condition_lower]
+    try:
+        from concept_canonicalizer import ConceptCanonicalizer
+        canon = ConceptCanonicalizer(db_path)
+        exp = canon.canonicalize_query(condition_lower)
+        if exp.query_success and exp.canonical_match:
+            phrase_terms.append(exp.canonical_match.concept.canonical_name.lower())
+            for child in exp.included_concepts[:6]:
+                phrase_terms.append(child.concept.canonical_name.lower())
+    except Exception:
+        pass
 
-    # Search diseases column first (most reliable)
-    nct_ids = set()
-    for term in search_terms:
+    # Deduplicate while preserving order
+    seen_terms: set = set()
+    unique_phrases = []
+    for t in phrase_terms:
+        if t not in seen_terms:
+            seen_terms.add(t)
+            unique_phrases.append(t)
+
+    for term in unique_phrases:
+        like = f"%{term}%"
+        # SIGIR trials table
         cur.execute(
-            "SELECT nct_id FROM trials WHERE LOWER(diseases) LIKE ?",
-            (f"%{term}%",)
+            "SELECT nct_id FROM trials WHERE LOWER(diseases) LIKE ? OR LOWER(title) LIKE ?",
+            (like, like),
         )
         for row in cur.fetchall():
-            nct_ids.add(row[0])
-
-    # If diseases search found nothing, try title
-    if not nct_ids:
-        for term in search_terms:
+            specific_ids.add(row[0])
+        # ct_gov_trials table
+        try:
             cur.execute(
-                "SELECT nct_id FROM trials WHERE LOWER(title) LIKE ?",
-                (f"%{term}%",)
+                "SELECT nct_id FROM ct_gov_trials WHERE LOWER(diseases) LIKE ? OR LOWER(title) LIKE ?",
+                (like, like),
             )
             for row in cur.fetchall():
-                nct_ids.add(row[0])
+                specific_ids.add(row[0])
+        except Exception:
+            pass
 
+    # If we have 5+ specific results, use only those
+    if len(specific_ids) >= 5:
+        conn.close()
+        print(f"  Trial ID lookup: {len(specific_ids)} specific matches for '{condition}'")
+        return list(specific_ids)
+
+    # --- Step 2: Broaden with individual words (excluding generic terms) ---
+    _GENERIC_WORDS = {"cancer", "disease", "disorder", "syndrome", "condition",
+                      "type", "chronic", "acute", "primary", "secondary"}
+    words = condition_lower.split()
+    broad_terms = [w for w in words if len(w) > 3 and w not in _GENERIC_WORDS]
+
+    broad_ids: set = set()
+    for term in broad_terms:
+        like = f"%{term}%"
+        cur.execute(
+            "SELECT nct_id FROM trials WHERE LOWER(diseases) LIKE ?",
+            (like,),
+        )
+        for row in cur.fetchall():
+            broad_ids.add(row[0])
+        try:
+            cur.execute(
+                "SELECT nct_id FROM ct_gov_trials WHERE LOWER(diseases) LIKE ?",
+                (like,),
+            )
+            for row in cur.fetchall():
+                broad_ids.add(row[0])
+        except Exception:
+            pass
+
+    all_ids = specific_ids | broad_ids
     conn.close()
-    return list(nct_ids)
+    print(f"  Trial ID lookup: {len(specific_ids)} specific + {len(broad_ids)} broad = {len(all_ids)} total for '{condition}'")
+    return list(all_ids)
 
 
 def _gather_ranked_criteria(
