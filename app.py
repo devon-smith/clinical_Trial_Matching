@@ -948,7 +948,29 @@ class TrialMatcher:
                 pass
 
             if ct_gov_exists:
-                for term in search_terms[:5]:
+                # Expand search terms using concept canonicalizer for better ct_gov coverage
+                ct_gov_search_terms = set(t.lower() for t in search_terms[:5] if t)
+                try:
+                    from concept_canonicalizer import ConceptCanonicalizer
+                    canon = ConceptCanonicalizer()
+                    for term in list(ct_gov_search_terms)[:3]:
+                        exp = canon.canonicalize_query(term)
+                        if exp.query_success and exp.canonical_match:
+                            # Add canonical name
+                            ct_gov_search_terms.add(exp.canonical_match.concept.canonical_name.lower())
+                            # Add child concept names (glioblastoma, glioma, etc.)
+                            for child in exp.included_concepts[:6]:
+                                ct_gov_search_terms.add(child.concept.canonical_name.lower())
+                            # Add individual words from concept ID (brain, cancer)
+                            for word in exp.canonical_match.concept.concept_id.split('_'):
+                                if len(word) > 3:
+                                    ct_gov_search_terms.add(word)
+                except Exception as exp_err:
+                    print(f"ct_gov concept expansion error: {exp_err}")
+
+                print(f"ct_gov search terms: {ct_gov_search_terms}")
+
+                for term in ct_gov_search_terms:
                     like = f"%{term.lower()}%"
 
                     # Strict disease-column match on ct_gov_trials
@@ -1979,9 +2001,12 @@ def chat():
                 total_all = coverage["total_all_statuses"]
                 total_active = coverage["total_active"]
 
+                # For the ClinicalTrials.gov fallback link, use the best condition string
+                _link_condition = primary_condition or user_message or ''
+
                 if total_all == 0:
                     # Condition not in our database at all
-                    cond_encoded = (primary_condition or '').replace(' ', '+')
+                    cond_encoded = _link_condition.replace(' ', '+')
                     no_results_info = {
                         "reason": "no_coverage",
                         "condition": primary_condition,
@@ -1994,7 +2019,7 @@ def chat():
                         "condition": primary_condition,
                         "total_in_db": total_all,
                         "inactive_statuses": coverage["inactive_statuses"],
-                        "ctgov_link": f"https://clinicaltrials.gov/search?cond={(primary_condition or '').replace(' ', '+')}&status=RECRUITING",
+                        "ctgov_link": f"https://clinicaltrials.gov/search?cond={_link_condition.replace(' ', '+')}&status=RECRUITING",
                     }
                 else:
                     # Active trials exist but none passed scoring/filtering
@@ -2016,7 +2041,7 @@ def chat():
                         "condition": primary_condition,
                         "total_active": total_active,
                         "primary_reason": reasons[0],
-                        "ctgov_link": f"https://clinicaltrials.gov/search?cond={(primary_condition or '').replace(' ', '+')}&status=RECRUITING",
+                        "ctgov_link": f"https://clinicaltrials.gov/search?cond={_link_condition.replace(' ', '+')}&status=RECRUITING",
                     }
 
             elif formatted_trials:

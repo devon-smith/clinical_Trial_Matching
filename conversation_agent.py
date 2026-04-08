@@ -95,6 +95,31 @@ def _try_extract_gender(text: str) -> Optional[str]:
     return None
 
 
+def _try_extract_condition(text: str) -> List[str]:
+    """Extract health conditions from natural language sentences.
+
+    Handles patterns like 'suffering from migraines', 'diagnosed with diabetes',
+    'I have breast cancer', 'dealing with chronic pain', 'battling depression'.
+    """
+    patterns = [
+        r"(?:suffering|suffer)\s+(?:from|with)\s+(.+?)(?:[,.]|\s+(?:and|for|since|in)\b|$)",
+        r"(?:diagnosed|diagnosis)\s+(?:with|of)\s+(.+?)(?:[,.]|\s+(?:and|for|since|in|about|last|this)\b|$)",
+        r"(?:i\s+have|i've\s+got|i\s+got)\s+(.+?)(?:[,.]|\s+(?:and|for|since|in|i\s+am|i'm)\b|$)",
+        r"(?:dealing|living)\s+with\s+(.+?)(?:[,.]|\s+(?:and|for|since|in)\b|$)",
+        r"(?:battling|fighting|treating)\s+(.+?)(?:[,.]|\s+(?:and|for|since|in)\b|$)",
+        r"(?:condition|problem)\s+(?:is|:)\s+(.+?)(?:[,.]|$)",
+    ]
+    for pat in patterns:
+        m = re.search(pat, text, re.I)
+        if m:
+            cond = m.group(1).strip().rstrip('.,!?')
+            if len(cond) > 2 and not re.match(r'^\d+$', cond):
+                # Clean up trailing words that aren't part of the condition
+                cond = re.sub(r'\s+(?:i\s+am|i\'m|and\s+i|who\s+is).*$', '', cond, flags=re.I)
+                return [cond.strip()]
+    return []
+
+
 # ---------------------------------------------------------------------------
 # Intent detection helpers
 # ---------------------------------------------------------------------------
@@ -537,6 +562,10 @@ class ConversationalTrialAssistant:
             zip_code = _try_extract_zip(message)
             if zip_code:
                 extracted['location'] = zip_code
+
+        # Rule-based condition extraction from natural sentences
+        if not extracted.get('conditions'):
+            extracted['conditions'] = _try_extract_condition(message)
 
         return extracted
 

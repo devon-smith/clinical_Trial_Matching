@@ -315,11 +315,10 @@ def _filter_known(
     if not known_attrs:
         return criteria
 
-    # Build a set of criterion_types we already have data for
+    # Build a set of criterion_types we already have data for (or already asked)
     known_criterion_types = set()
-    for key, val in known_attrs.items():
-        if val is not None:
-            # The key might be a criterion_type directly
-            known_criterion_types.add(key)
+    for key in known_attrs:
+        # Include all keys — even None values mean "already asked"
+        known_criterion_types.add(key)
 
     return [c for c in criteria if c["criterion_type"] not in known_criterion_types]
