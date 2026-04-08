@@ -15,17 +15,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- localStorage session persistence ---
     const SESSION_KEY = 'ctf_session';
+    const SESSION_MAX_AGE_MS = 24 * 60 * 60 * 1000; // 24 hours
+
+    // Patient profile tracked client-side (updated from server responses)
+    let patientProfile = {
+        demographics: { age: null, gender: null, location: null },
+        condition: null,
+        symptoms: null,
+        conditionDetails: {},
+        conditionCategory: null,
+    };
+
+    // Conversation messages (role + content pairs for clean restore)
+    let conversationMessages = [];
+
+    function _generateSessionId() {
+        return 'ctf_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 8);
+    }
 
     function saveSession() {
+        // Don't persist empty sessions (no condition yet)
+        if (!patientProfile.condition) return;
+
         try {
             const session = {
+                sessionId: loadSession()?. sessionId || _generateSessionId(),
+                timestamp: Date.now(),
+                patientProfile,
+                conversationMessages,
                 conversationState,
-                allTrials: allTrials.map(t => ({
+                searchResults: allTrials.map(t => ({
                     trial: t.trial,
                     eligibility: t.eligibility,
                 })),
                 chatHtml: messagesContainer.innerHTML,
-                savedAt: Date.now(),
             };
             localStorage.setItem(SESSION_KEY, JSON.stringify(session));
         } catch (e) {
@@ -39,26 +62,78 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!raw) return null;
             const session = JSON.parse(raw);
             // Expire after 24 hours
-            if (Date.now() - session.savedAt > 24 * 60 * 60 * 1000) {
+            if (Date.now() - session.timestamp > SESSION_MAX_AGE_MS) {
                 localStorage.removeItem(SESSION_KEY);
                 return null;
             }
             return session;
         } catch (e) {
+            localStorage.removeItem(SESSION_KEY);
             return null;
         }
     }
 
     function clearSession() {
         localStorage.removeItem(SESSION_KEY);
+        patientProfile = {
+            demographics: { age: null, gender: null, location: null },
+            condition: null,
+            symptoms: null,
+            conditionDetails: {},
+            conditionCategory: null,
+        };
+        conversationMessages = [];
     }
 
     function restoreSession(session) {
-        messagesContainer.innerHTML = session.chatHtml;
-        allTrials = session.allTrials || [];
+        // Restore patient profile
+        if (session.patientProfile) {
+            patientProfile = session.patientProfile;
+        }
+        conversationMessages = session.conversationMessages || [];
         conversationState = session.conversationState || 'intake';
+        allTrials = session.searchResults || [];
+
+        // Restore chat UI
+        messagesContainer.innerHTML = session.chatHtml || '';
         initQuickButtons();
         scrollToBottom();
+
+        // Sync server session by sending a restore message
+        _syncServerSession(patientProfile);
+    }
+
+    async function _syncServerSession(profile) {
+        // Tell the server about the restored patient profile so the
+        // Flask session matches what the client has
+        try {
+            await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: '/restore', profile }),
+                credentials: 'same-origin',
+            });
+        } catch (e) {
+            // Non-critical — server session will rebuild on next real message
+        }
+    }
+
+    function _updatePatientProfile(data) {
+        // Update client-side profile from server response data
+        if (data.patient_summary) {
+            const s = data.patient_summary;
+            if (s.age) patientProfile.demographics.age = s.age;
+            if (s.gender) patientProfile.demographics.gender = s.gender;
+            if (s.location) patientProfile.demographics.location = s.location;
+            if (s.condition) patientProfile.condition = s.condition;
+            if (s.symptoms) patientProfile.symptoms = s.symptoms;
+        }
+        // Also pick up condition from condition_followups if available
+        if (data.condition_followups && data.condition_followups.length > 0) {
+            const cat = data.condition_followups[0];
+            if (cat.category) patientProfile.conditionCategory = cat.category;
+            if (cat.category_display) patientProfile.condition = patientProfile.condition || cat.category_display;
+        }
     }
 
     // Smooth scroll to bottom of chat
@@ -89,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Check for saved session and offer to resume
         const saved = loadSession();
-        if (saved && saved.allTrials && saved.allTrials.length > 0) {
+        if (saved && saved.patientProfile && saved.patientProfile.condition) {
             showResumePrompt(saved);
         } else {
             initQuickButtons();
@@ -98,19 +173,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showResumePrompt(saved) {
-        // Build a short description from the saved trials
-        const trialCount = saved.allTrials.length;
+        const profile = saved.patientProfile || {};
+        const demos = profile.demographics || {};
+        const condition = profile.condition || '';
+        const location = demos.location || '';
+        const age = demos.age;
+        const trialCount = (saved.searchResults || saved.allTrials || []).length;
 
-        // Try to extract condition from the chat HTML
-        let condition = '';
-        const condMatch = saved.chatHtml && saved.chatHtml.match(/dealing with <strong>([^<]+)<\/strong>|condition to <strong>([^<]+)<\/strong>/);
-        if (condMatch) {
-            condition = condMatch[1] || condMatch[2] || '';
+        // Build context string
+        let contextParts = [];
+        if (condition) contextParts.push(`<strong>${condition}</strong>`);
+        if (location) contextParts.push(`near <strong>${location}</strong>`);
+
+        let description;
+        if (contextParts.length > 0 && trialCount > 0) {
+            description = `Last time you searched for ${contextParts.join(' ')} trials and found ${trialCount} result${trialCount !== 1 ? 's' : ''}.`;
+        } else if (contextParts.length > 0) {
+            description = `Last time you were looking into ${contextParts.join(' ')} trials.`;
+        } else {
+            description = `You had a search in progress.`;
         }
 
-        const desc = condition
-            ? `I found ${trialCount} trial${trialCount > 1 ? 's' : ''} for your ${condition} search last time.`
-            : `You had ${trialCount} trial result${trialCount > 1 ? 's' : ''} from your last search.`;
+        // Demographics we'd keep on "New search"
+        let demoNote = '';
+        const demoParts = [];
+        if (age) demoParts.push(`age ${age}`);
+        if (demos.gender) demoParts.push(demos.gender);
+        if (location) demoParts.push(location);
+        if (demoParts.length > 0) {
+            demoNote = `<p class="text-slate-400 text-xs mt-2">"New search" keeps your info (${demoParts.join(', ')}) — only the condition resets.</p>`;
+        }
 
         const resumeDiv = document.createElement('div');
         resumeDiv.className = 'flex justify-start message-enter';
@@ -118,11 +210,12 @@ document.addEventListener('DOMContentLoaded', function() {
         resumeDiv.innerHTML = `
             <div class="max-w-[85%]">
                 <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm leading-relaxed">
-                    <p class="mb-3">Welcome back — ${desc} Want to pick up where you left off, or start a new search?</p>
+                    <p class="mb-3">Welcome back! ${description} Want to pick up where you left off, or start a new search?</p>
                     <div class="flex gap-2">
-                        <button id="resume-btn" class="px-4 py-2 bg-primary text-white text-xs font-medium rounded-lg hover:bg-primary-dark transition-colors min-h-[44px]">Resume</button>
+                        <button id="resume-btn" class="px-4 py-2 bg-primary text-white text-xs font-medium rounded-lg hover:bg-primary-dark transition-colors min-h-[44px]">Continue</button>
                         <button id="new-search-btn" class="px-4 py-2 bg-white text-slate-600 text-xs font-medium rounded-lg border border-warm-border hover:bg-slate-50 transition-colors min-h-[44px]">New search</button>
                     </div>
+                    ${demoNote}
                 </div>
             </div>
         `;
@@ -136,10 +229,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         document.getElementById('new-search-btn').addEventListener('click', () => {
+            // Keep demographics, clear condition data
+            const savedDemographics = (saved.patientProfile || {}).demographics || {};
             resumeDiv.remove();
             clearSession();
+            // Restore demographics only
+            patientProfile.demographics = savedDemographics;
             initQuickButtons();
             userInput.focus();
+            // Send "new search" to server so it keeps demographics
+            if (savedDemographics.age || savedDemographics.location) {
+                _syncServerSession({ demographics: savedDemographics });
+            }
         });
     }
 
@@ -334,79 +435,137 @@ document.addEventListener('DOMContentLoaded', function() {
         const eligibleCount = viz.eligible_count || 0;
         const ineligibleCount = viz.ineligible_count || 0;
         const unknownCount = viz.unknown_count || 0;
-        const totalCount = viz.criteria ? viz.criteria.length : 0;
 
-        const hardCriteria = (viz.criteria || []).filter(c => c.is_hard);
-        const softCriteria = (viz.criteria || []).filter(c => !c.is_hard);
+        // Use pre-grouped data from backend when available
+        const grouped = viz.grouped || {};
+        const qualified = grouped.qualified || (viz.criteria || []).filter(c => c.status === 'eligible');
+        const notQualified = grouped.not_qualified || (viz.criteria || []).filter(c => c.status === 'ineligible');
+        const patientQuestions = grouped.patient_questions || [];
+        const doctorVerify = grouped.doctor_verify || [];
 
-        function statusIcon(status) {
-            if (status === 'eligible') return '<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-green-100 text-green-600 text-[10px] font-bold flex-shrink-0">&#10003;</span>';
-            if (status === 'ineligible') return '<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-red-100 text-red-600 text-[10px] font-bold flex-shrink-0">&#10007;</span>';
-            return '<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-amber-100 text-amber-600 text-[10px] font-bold flex-shrink-0">?</span>';
-        }
+        // --- Render helpers ---
 
-        function statusBadge(status) {
-            const cfg = {
-                eligible: 'bg-green-100 text-green-700',
-                ineligible: 'bg-red-100 text-red-700',
-                unknown: 'bg-amber-100 text-amber-700',
-            }[status] || 'bg-slate-100 text-slate-600';
-            return `<span class="ml-auto px-1.5 py-0.5 text-[10px] font-medium rounded ${cfg}">${status}</span>`;
-        }
-
-        function renderVizCriterion(c) {
-            const icon = statusIcon(c.status);
-            const badge = statusBadge(c.status);
-            const patientFact = c.patient_value
-                ? `<span class="text-[10px] text-slate-400 ml-1">(yours: ${c.patient_value})</span>`
-                : '';
+        function renderQualifiedCriterion(c) {
             const explanation = c.explanation
-                ? `<p class="text-[10px] text-slate-400 mt-0.5 ml-5">${c.explanation}</p>`
+                ? `<p class="text-[10px] text-green-600/70 mt-0.5 ml-5">${c.explanation}</p>`
                 : '';
             return `
-                <div class="py-1.5 border-b border-slate-50 last:border-0">
+                <div class="py-1.5 border-b border-green-50 last:border-0">
                     <div class="flex items-center gap-1.5">
-                        ${icon}
+                        <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-green-100 text-green-600 text-[10px] font-bold flex-shrink-0">&#10003;</span>
                         <span class="text-xs text-slate-600 flex-1">${c.human_label}</span>
-                        ${patientFact}
-                        ${badge}
                     </div>
                     ${explanation}
                 </div>`;
         }
 
-        // Ineligibility explanation banner
-        let ineligBanner = '';
-        if (viz.ineligibility_explanation) {
-            const lines = viz.ineligibility_explanation.split('\n').map(l => l.trim()).filter(Boolean);
-            ineligBanner = `
-                <div class="mb-2 p-2.5 bg-red-50 border border-red-200 rounded-lg">
-                    <p class="text-[11px] font-medium text-red-700 mb-1">Why you may not qualify:</p>
-                    ${lines.map(l => `<p class="text-[11px] text-red-600">${l}</p>`).join('')}
+        function renderNotQualifiedCriterion(c) {
+            const explanation = c.explanation
+                ? `<p class="text-[10px] text-red-600/80 mt-0.5 ml-5">${c.explanation}</p>`
+                : '';
+            return `
+                <div class="py-1.5 border-b border-red-50 last:border-0">
+                    <div class="flex items-center gap-1.5">
+                        <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-red-100 text-red-600 text-[10px] font-bold flex-shrink-0">&#10007;</span>
+                        <span class="text-xs text-slate-600 flex-1">${c.human_label}</span>
+                    </div>
+                    ${explanation}
                 </div>`;
         }
 
-        // Clarifying questions section
-        let questionsHtml = '';
-        if (viz.clarifying_questions && viz.clarifying_questions.length > 0) {
-            const previewQuestions = viz.clarifying_questions.slice(0, 2);
-            const moreCount = viz.clarifying_questions.length - 2;
-            questionsHtml = `
-                <div class="mt-2 p-2.5 bg-accent/5 border border-accent/20 rounded-lg">
-                    <p class="text-[11px] font-medium text-slate-700 mb-1.5">We need more info to check ${unknownCount} criteria:</p>
-                    ${previewQuestions.map(q => `
-                        <div class="mb-1.5 last:mb-0">
-                            <p class="text-[11px] text-slate-600">${q.question}</p>
-                        </div>
-                    `).join('')}
-                    ${moreCount > 0 ? `<p class="text-[10px] text-slate-400 mt-1">+${moreCount} more questions... (click View Details)</p>` : ''}
+        function renderPatientQuestion(c) {
+            // Show as a conversational question the patient can answer
+            const question = c.explanation || `Do you know about ${c.human_label.toLowerCase()}?`;
+            return `
+                <div class="py-1.5 border-b border-amber-50 last:border-0">
+                    <div class="flex items-start gap-1.5">
+                        <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-amber-100 text-amber-600 text-[10px] font-bold flex-shrink-0 mt-0.5">?</span>
+                        <span class="text-xs text-slate-600">${c.human_label}</span>
+                    </div>
                 </div>`;
         }
 
-        const hardPreview = hardCriteria.slice(0, 5);
-        const softPreview = softCriteria.slice(0, 3);
-        const moreHard = hardCriteria.length > 5 ? `<p class="text-[10px] text-slate-400 mt-1">+${hardCriteria.length - 5} more required criteria...</p>` : '';
-        const moreSoft = softCriteria.length > 3 ? `<p class="text-[10px] text-slate-400 mt-1">+${softCriteria.length - 3} more preference criteria...</p>` : '';
+        function renderDoctorVerify(c) {
+            return `
+                <div class="py-1 border-b border-slate-50 last:border-0">
+                    <div class="flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span class="text-[11px] text-slate-500">${c.human_label}</span>
+                    </div>
+                </div>`;
+        }
+
+        // --- Build sections ---
+
+        // "You qualify" section (green)
+        let qualifiedHtml = '';
+        if (qualified.length > 0) {
+            const preview = qualified.slice(0, 5);
+            const more = qualified.length > 5
+                ? `<p class="text-[10px] text-green-600/60 mt-1">+${qualified.length - 5} more criteria met</p>` : '';
+            qualifiedHtml = `
+                <div class="mb-2">
+                    <p class="text-[10px] font-semibold text-green-700 uppercase tracking-wide mb-1 flex items-center gap-1">
+                        <span>&#10003;</span> You qualify (${qualified.length})
+                    </p>
+                    <div class="bg-green-50/50 rounded-lg px-2 py-1">
+                        ${preview.map(renderQualifiedCriterion).join('')}
+                        ${more}
+                    </div>
+                </div>`;
+        }
+
+        // "You may not qualify" section (red)
+        let notQualifiedHtml = '';
+        if (notQualified.length > 0) {
+            notQualifiedHtml = `
+                <div class="mb-2">
+                    <p class="text-[10px] font-semibold text-red-700 uppercase tracking-wide mb-1 flex items-center gap-1">
+                        <span>&#10007;</span> You may not qualify (${notQualified.length})
+                    </p>
+                    <div class="bg-red-50/50 rounded-lg px-2 py-1">
+                        ${notQualified.map(renderNotQualifiedCriterion).join('')}
+                    </div>
+                </div>`;
+        }
+
+        // "Needs verification" section (amber) — split into patient questions and doctor verify
+        let verificationHtml = '';
+        if (patientQuestions.length > 0 || doctorVerify.length > 0) {
+            let patientQuestionsHtml = '';
+            if (patientQuestions.length > 0) {
+                const preview = patientQuestions.slice(0, 4);
+                const more = patientQuestions.length > 4
+                    ? `<p class="text-[10px] text-amber-600/60 mt-1">+${patientQuestions.length - 4} more questions</p>` : '';
+                patientQuestionsHtml = `
+                    <p class="text-[10px] font-medium text-amber-700 mb-1">Questions for you</p>
+                    ${preview.map(renderPatientQuestion).join('')}
+                    ${more}`;
+            }
+
+            let doctorVerifyHtml = '';
+            if (doctorVerify.length > 0) {
+                const preview = doctorVerify.slice(0, 3);
+                const more = doctorVerify.length > 3
+                    ? `<p class="text-[10px] text-slate-400 mt-1">+${doctorVerify.length - 3} more lab/clinical checks</p>` : '';
+                doctorVerifyHtml = `
+                    <p class="text-[10px] font-medium text-slate-500 ${patientQuestions.length > 0 ? 'mt-2' : ''} mb-1">Your doctor would verify</p>
+                    ${preview.map(renderDoctorVerify).join('')}
+                    ${more}`;
+            }
+
+            const totalVerify = patientQuestions.length + doctorVerify.length;
+            verificationHtml = `
+                <div class="mb-2">
+                    <p class="text-[10px] font-semibold text-amber-700 uppercase tracking-wide mb-1 flex items-center gap-1">
+                        <span>?</span> Needs verification (${totalVerify})
+                    </p>
+                    <div class="bg-amber-50/50 rounded-lg px-2 py-1">
+                        ${patientQuestionsHtml}
+                        ${doctorVerifyHtml}
+                    </div>
+                </div>`;
+        }
 
         return `
             <div class="border border-slate-200 rounded-lg overflow-hidden">
@@ -417,25 +576,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         Eligibility Breakdown
                     </span>
                     <div class="flex items-center gap-1.5">
-                        <span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-green-100 text-green-700">${eligibleCount} met</span>
+                        ${eligibleCount > 0 ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-green-100 text-green-700">${eligibleCount} met</span>` : ''}
                         ${ineligibleCount > 0 ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-red-100 text-red-700">${ineligibleCount} not met</span>` : ''}
-                        ${unknownCount > 0 ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-amber-100 text-amber-700">${unknownCount} unknown</span>` : ''}
+                        ${unknownCount > 0 ? `<span class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-amber-100 text-amber-700">${unknownCount} to verify</span>` : ''}
                         <svg class="w-3.5 h-3.5 text-slate-400 expand-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                 </button>
-                <div class="hidden px-3 py-2 bg-white border-t border-slate-100 max-h-64 overflow-y-auto">
-                    ${ineligBanner}
-                    ${hardPreview.length > 0 ? `
-                        <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mb-1">Required Criteria</p>
-                        ${hardPreview.map(renderVizCriterion).join('')}
-                        ${moreHard}
-                    ` : ''}
-                    ${softPreview.length > 0 ? `
-                        <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mt-2 mb-1">Preference Criteria</p>
-                        ${softPreview.map(renderVizCriterion).join('')}
-                        ${moreSoft}
-                    ` : ''}
-                    ${questionsHtml}
+                <div class="hidden px-3 py-2 bg-white border-t border-slate-100 max-h-72 overflow-y-auto">
+                    ${notQualifiedHtml}
+                    ${qualifiedHtml}
+                    ${verificationHtml}
                     ${buildPreferenceBreakdown(trial)}
                 </div>
             </div>`;
@@ -621,10 +771,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const existingQuickSelects = document.querySelectorAll('[id^="quick-select"]');
         existingQuickSelects.forEach(el => el.remove());
 
-        // Clear localStorage on explicit reset
-        if (/\b(start over|restart|reset|begin again|new search|clear)\b/i.test(message)) {
+        // Handle session on reset/new search
+        if (/\b(start over|restart|reset|begin again|clear)\b/i.test(message)) {
             clearSession();
+        } else if (/\b(new search|different condition|another condition|search for something)\b/i.test(message)) {
+            // Keep demographics, clear condition data
+            const savedDemos = { ...patientProfile.demographics };
+            clearSession();
+            patientProfile.demographics = savedDemos;
         }
+
+        // Track conversation message
+        conversationMessages.push({ role: 'user', content: message });
 
         // Don't show internal /update commands as user messages
         if (!message.startsWith('/update ')) {
@@ -741,8 +899,65 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    // Build a transparent no-results message based on server diagnostics
+    function buildNoResultsMessage(info) {
+        if (!info) {
+            // Fallback when server doesn't provide diagnostics
+            return `We couldn't find trials matching your criteria. A few things to try:\n\n` +
+                `\u2022 **Use a broader condition term** \u2014 e.g., "cancer" instead of a specific subtype\n` +
+                `\u2022 **Expand your travel distance** \u2014 there may be trials further away\n` +
+                `\u2022 **Remove treatment type preference** \u2014 if you specified drug-only or avoided surgery, relaxing that may help\n\n` +
+                `You can start a new search by telling me about a different condition.`;
+        }
+
+        const condition = info.condition || 'your condition';
+
+        if (info.reason === 'no_coverage') {
+            return `Our database doesn't currently include **${condition}** trials. ` +
+                `We're expanding our coverage \u2014 in the meantime, you can search ClinicalTrials.gov directly:\n\n` +
+                `[\ud83d\udd17 Search ClinicalTrials.gov for ${condition}](${info.ctgov_link})\n\n` +
+                `You can also try a broader term (e.g., the general disease category) to see if related trials are available.`;
+        }
+
+        if (info.reason === 'all_inactive') {
+            const statusList = info.inactive_statuses
+                ? Object.entries(info.inactive_statuses)
+                    .map(([s, n]) => `${n} ${s.toLowerCase().replace(/_/g, ' ')}`)
+                    .join(', ')
+                : '';
+            return `I found **${info.total_in_db} ${condition}** trial${info.total_in_db > 1 ? 's' : ''} in our database, ` +
+                `but none are currently recruiting` +
+                (statusList ? ` (${statusList})` : '') + `.\n\n` +
+                `Clinical trials open and close frequently. Check ClinicalTrials.gov for the latest:\n\n` +
+                `[\ud83d\udd17 Search ClinicalTrials.gov for ${condition}](${info.ctgov_link})\n\n` +
+                `You can also start a new search with a different condition.`;
+        }
+
+        if (info.reason === 'filtered_out') {
+            return `I found **${info.total_active} ${condition}** trial${info.total_active > 1 ? 's' : ''}, ` +
+                `but none matched your specific criteria. ` +
+                `Most common reason: **${info.primary_reason}**.\n\n` +
+                `A few things to try:\n` +
+                `\u2022 **Expand your travel range** \u2014 there may be trials further away\n` +
+                `\u2022 **Adjust your preferences** \u2014 relaxing treatment type or schedule constraints may help\n` +
+                `\u2022 **Use a broader condition term** \u2014 e.g., "cancer" instead of a specific subtype\n\n` +
+                `Or check ClinicalTrials.gov for the full list:\n\n` +
+                `[\ud83d\udd17 Search ClinicalTrials.gov for ${condition}](${info.ctgov_link})`;
+        }
+
+        // Unknown reason — generic fallback
+        return `We couldn't find trials matching your criteria for **${condition}**.\n\n` +
+            (info.ctgov_link
+                ? `You can search ClinicalTrials.gov directly:\n\n[\ud83d\udd17 Search ClinicalTrials.gov](${info.ctgov_link})\n\n`
+                : '') +
+            `You can also start a new search by telling me about a different condition.`;
+    }
+
     // Handle API response data
     function handleResponse(data) {
+        // Update patient profile from server data
+        _updatePatientProfile(data);
+
         if (data.trials) {
             if (data.trials.length > 0) {
                 updateProgress(4);
@@ -750,20 +965,59 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.concept_audit && data.concept_audit.length > 0) {
                     renderConceptAuditPanel(data.concept_audit);
                 }
-                showTrialMatches(data.trials, data.data_last_updated);
+                showTrialMatches(data.trials, data.data_last_updated, data.broad_match_banner);
+                conversationMessages.push({ role: 'assistant', content: '[trial results]', trialCount: data.trials.length });
             } else {
                 if (data.concept_audit && data.concept_audit.length > 0) {
                     renderConceptAuditPanel(data.concept_audit);
                 }
-                const noResultsHtml = `We couldn't find trials matching your criteria. A few things to try:\n\n• **Use a broader condition term** — e.g., "cancer" instead of a specific subtype\n• **Expand your travel distance** — there may be trials further away\n• **Remove treatment type preference** — if you specified drug-only or avoided surgery, relaxing that may help\n\nYou can start a new search by telling me about a different condition.`;
+                const noResultsHtml = buildNoResultsMessage(data.no_results_info);
                 addMessage('assistant', noResultsHtml);
+                conversationMessages.push({ role: 'assistant', content: noResultsHtml });
             }
         } else if (data.response) {
-            detectStateFromResponse(data.response);
-            addMessageWithQuickSelect('assistant', data.response);
+            const responseText = data.response;
+            detectStateFromResponse(responseText);
+
+            // If entering condition_detail state, show a brief "searching" moment
+            if (data.conversation_state === 'condition_detail' && data.quick_replies) {
+                // Show searching animation briefly before revealing questions
+                const searchingDiv = document.createElement('div');
+                searchingDiv.className = 'flex justify-start message-enter';
+                searchingDiv.id = 'searching-moment';
+                searchingDiv.innerHTML = `
+                    <div class="max-w-[85%]">
+                        <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm leading-relaxed">
+                            <div class="flex items-center gap-2">
+                                <div class="typing-indicator-dots flex space-x-1 items-center">
+                                    <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                                    <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                                    <div class="typing-dot w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
+                                </div>
+                                <span class="text-xs text-slate-500">Searching for relevant trials...</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                messagesContainer.appendChild(searchingDiv);
+                scrollToBottom();
+                // Replace with actual questions after a brief delay
+                setTimeout(() => {
+                    const el = document.getElementById('searching-moment');
+                    if (el) el.remove();
+                    addMessageWithServerQuickReplies('assistant', responseText, data.quick_replies);
+                    scrollToBottom();
+                }, 1200);
+            } else if (data.quick_replies && data.quick_replies.length > 0) {
+                addMessageWithServerQuickReplies('assistant', responseText, data.quick_replies);
+            } else {
+                addMessageWithQuickSelect('assistant', responseText);
+            }
+            conversationMessages.push({ role: 'assistant', content: responseText });
         } else if (data.text) {
             detectStateFromResponse(data.text);
             addMessageWithQuickSelect('assistant', data.text);
+            conversationMessages.push({ role: 'assistant', content: data.text });
         } else {
             addMessage('assistant', "I didn't quite get that. Could you rephrase or try again?");
         }
@@ -868,6 +1122,67 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>${renderMarkdown(content)}</p>
                 </div>
                 ${quickSelectHtml}
+            </div>
+        `;
+
+        messagesContainer.appendChild(messageDiv);
+        scrollToBottom();
+        initQuickButtons();
+    }
+
+    // Add message with server-driven quick-reply buttons
+    function addMessageWithServerQuickReplies(role, content, quickReplies) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'flex justify-start message-enter';
+
+        // Build quick-reply buttons from server data
+        let buttonsHtml = '';
+        if (quickReplies && quickReplies.length > 0) {
+            const buttons = [];
+            for (const qr of quickReplies) {
+                if (qr.type === 'skip') {
+                    // Skip button — styled differently
+                    for (const opt of (qr.options || [])) {
+                        buttons.push(
+                            `<button class="quick-btn px-3 py-2 bg-white border border-slate-200 rounded-full text-xs text-slate-500 hover:bg-slate-50 hover:border-slate-300 transition-all" data-value="${opt}">${opt}</button>`
+                        );
+                    }
+                } else if (qr.type === 'yes_no') {
+                    // Yes/No buttons with question number context
+                    const prefix = qr.question_num ? `${qr.question_num}. ` : '';
+                    for (const opt of (qr.options || [])) {
+                        const val = prefix + opt;
+                        const style = opt === 'Yes'
+                            ? 'bg-green-50 border-green-200 text-green-700 hover:bg-green-100 hover:border-green-300'
+                            : opt === 'No'
+                            ? 'bg-red-50 border-red-200 text-red-700 hover:bg-red-100 hover:border-red-300'
+                            : 'bg-white border-slate-200 text-slate-500 hover:bg-slate-50 hover:border-slate-300';
+                        buttons.push(
+                            `<button class="quick-btn px-3 py-2 border rounded-full text-xs ${style} transition-all" data-value="${val}">${prefix}${opt}</button>`
+                        );
+                    }
+                } else if (qr.type === 'choice') {
+                    // Choice buttons (stage, treatment type, preferences)
+                    const prefix = qr.question_num ? `${qr.question_num}. ` : '';
+                    for (const opt of (qr.options || [])) {
+                        const val = prefix + opt;
+                        buttons.push(
+                            `<button class="quick-btn px-3 py-2 bg-white border border-slate-200 rounded-full text-xs text-slate-600 hover:bg-accent/5 hover:border-accent/30 hover:text-accent transition-all" data-value="${val}">${opt}</button>`
+                        );
+                    }
+                }
+            }
+            if (buttons.length > 0) {
+                buttonsHtml = `<div id="quick-select-server" class="mt-3 flex flex-wrap gap-2">${buttons.join('')}</div>`;
+            }
+        }
+
+        messageDiv.innerHTML = `
+            <div class="max-w-[85%]">
+                <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm leading-relaxed">
+                    <p>${renderMarkdown(content)}</p>
+                </div>
+                ${buttonsHtml}
             </div>
         `;
 
@@ -1007,6 +1322,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="flex flex-wrap items-center gap-2 mt-2">
                                 ${getStatusChip(eligibility.hardStatus)}
                                 ${trial.status ? `<span class="px-2.5 py-1 bg-slate-100 ${getStatusColor(trial.status)} rounded-full text-xs font-medium">${trial.status}</span>` : ''}
+                                ${trial.match_type ? `<span class="px-2 py-0.5 rounded-full text-[10px] font-medium ${trial.match_type === 'specific' ? 'bg-blue-50 text-blue-600 border border-blue-200' : 'bg-orange-50 text-orange-600 border border-orange-200'}" title="How this trial was matched to your search">Matched on: ${trial.match_label || trial.match_type}${trial.match_type === 'broad' ? ' (broad match)' : ''}</span>` : ''}
                             </div>
                         </div>
                         <div class="flex-shrink-0 text-center">
@@ -1035,17 +1351,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
 
                 <!-- CTA -->
-                <div class="px-5 py-3 bg-slate-50 border-t border-slate-100">
-                    <button onclick="viewTrialDetails('${trial.nct_id}')" class="w-full px-4 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors">
+                <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex gap-2">
+                    <button onclick="viewTrialDetails('${trial.nct_id}')" class="flex-1 px-4 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors">
                         View Details
                     </button>
+                    <a href="${trial.ct_gov_url || ('https://clinicaltrials.gov/study/' + trial.nct_id)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-2.5 bg-white text-slate-600 border border-slate-200 text-sm font-medium rounded-lg hover:bg-slate-100 transition-colors" title="View on ClinicalTrials.gov">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        CT.gov
+                    </a>
                 </div>
             </div>
         `;
     }
 
     // Show trial matches grouped by eligibility status
-    function showTrialMatches(trials, dataLastUpdated) {
+    function showTrialMatches(trials, dataLastUpdated, broadMatchBanner) {
         const container = document.createElement('div');
         container.className = 'flex justify-start w-full';
 
@@ -1104,6 +1424,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 </select>
             </div>` : '';
 
+        // Broad match banner — shown when no specific-condition trials exist
+        let broadBannerHtml = '';
+        if (broadMatchBanner) {
+            broadBannerHtml = `
+                <div class="flex items-start gap-3 px-4 py-3 mb-4 rounded-lg border border-amber-200 bg-amber-50 text-sm">
+                    <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div>
+                        <p class="font-medium text-amber-800">No trials specifically for ${broadMatchBanner.specific_condition} found.</p>
+                        <p class="text-amber-700 mt-0.5">Showing broader <strong>${broadMatchBanner.broad_term}</strong> trials \u2014 these may not target your specific condition. Check the "Matched on" tag on each trial for details.</p>
+                    </div>
+                </div>`;
+        }
+
         container.innerHTML = `
             <div class="w-full max-w-[98%]">
                 <div class="bg-[#f5f5f0] text-slate-700 px-4 py-3 rounded-xl rounded-tl-sm text-sm mb-5">
@@ -1112,6 +1447,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ${dataLastUpdated ? `<p class="text-[10px] text-slate-400 mt-1">Trial data last updated: ${new Date(dataLastUpdated).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>` : ''}
                 </div>
 
+                ${broadBannerHtml}
                 ${sortControl}
 
                 <div id="trials-grid">

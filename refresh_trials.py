@@ -84,10 +84,24 @@ def _ensure_refresh_schema(conn: sqlite3.Connection) -> None:
 def refresh_statuses(conn: sqlite3.Connection, dry_run: bool = False) -> Dict[str, int]:
     """Check current status of all API-sourced trials via the API."""
     cursor = conn.cursor()
+
+    # Collect trials from both the legacy trials table and ct_gov_trials
+    trials: Dict[str, str] = {}
+    ct_gov_ncts: set = set()
+
     cursor.execute(
         "SELECT nct_id, status FROM trials WHERE source = 'ctgov_api'"
     )
-    trials = {row[0]: row[1] for row in cursor.fetchall()}
+    for row in cursor.fetchall():
+        trials[row[0]] = row[1]
+
+    try:
+        cursor.execute("SELECT nct_id, status FROM ct_gov_trials")
+        for row in cursor.fetchall():
+            trials[row[0]] = row[1]
+            ct_gov_ncts.add(row[0])
+    except Exception:
+        pass  # table may not exist
 
     if not trials:
         log.info("No API-sourced trials to refresh.")
@@ -129,19 +143,32 @@ def refresh_statuses(conn: sqlite3.Connection, dry_run: bool = False) -> Dict[st
                     "new_status": new_status,
                 })
                 if not dry_run:
-                    cursor.execute(
-                        "UPDATE trials SET status = ?, last_updated = ? WHERE nct_id = ?",
-                        (new_status, now, nct),
-                    )
+                    # Update in whichever table the trial lives
+                    if nct in ct_gov_ncts:
+                        cursor.execute(
+                            "UPDATE ct_gov_trials SET status = ?, last_updated = ? WHERE nct_id = ?",
+                            (new_status, now, nct),
+                        )
+                    else:
+                        cursor.execute(
+                            "UPDATE trials SET status = ?, last_updated = ? WHERE nct_id = ?",
+                            (new_status, now, nct),
+                        )
                 changed += 1
 
         # Update last_updated for all checked trials (even if status unchanged)
         if not dry_run:
             for nid in batch:
-                cursor.execute(
-                    "UPDATE trials SET last_updated = ? WHERE nct_id = ? AND last_updated IS NULL",
-                    (now, nid),
-                )
+                if nid in ct_gov_ncts:
+                    cursor.execute(
+                        "UPDATE ct_gov_trials SET last_updated = ? WHERE nct_id = ? AND last_updated IS NULL",
+                        (now, nid),
+                    )
+                else:
+                    cursor.execute(
+                        "UPDATE trials SET last_updated = ? WHERE nct_id = ? AND last_updated IS NULL",
+                        (now, nid),
+                    )
 
         log.info("  Checked %d/%d...", min(i + len(batch), len(nct_ids)), len(nct_ids))
         time.sleep(REQUEST_DELAY)
@@ -165,9 +192,15 @@ def pull_new_trials(
     """Pull new recruiting trials that aren't already in the database."""
     cursor = conn.cursor()
 
-    # Get all existing NCT IDs for dedup
+    # Get all existing NCT IDs for dedup (both tables)
+    existing_ncts: set = set()
     cursor.execute("SELECT nct_id FROM trials")
-    existing_ncts = {row[0] for row in cursor.fetchall()}
+    existing_ncts.update(row[0] for row in cursor.fetchall())
+    try:
+        cursor.execute("SELECT nct_id FROM ct_gov_trials")
+        existing_ncts.update(row[0] for row in cursor.fetchall())
+    except Exception:
+        pass
 
     stats = {"fetched": 0, "new": 0, "skipped": 0}
     now = datetime.now(timezone.utc).isoformat()
@@ -192,12 +225,8 @@ def pull_new_trials(
                 stats["new"] += 1
                 batch_new += 1
             else:
+                # upsert_trial now writes to ct_gov_trials with last_updated
                 upsert_trial(conn, record)
-                # Set last_updated on new trials
-                cursor.execute(
-                    "UPDATE trials SET last_updated = ? WHERE nct_id = ?",
-                    (now, record.nct_id),
-                )
                 stats["new"] += 1
                 batch_new += 1
 
@@ -243,27 +272,52 @@ def print_summary(conn: sqlite3.Connection) -> None:
     """Print database summary after refresh."""
     cursor = conn.cursor()
 
-    total = cursor.execute("SELECT COUNT(*) FROM trials").fetchone()[0]
-    api = cursor.execute(
-        "SELECT COUNT(*) FROM trials WHERE source = 'ctgov_api'"
-    ).fetchone()[0]
-    sigir = total - api
-    recruiting = cursor.execute(
-        "SELECT COUNT(*) FROM trials WHERE status = 'RECRUITING'"
-    ).fetchone()[0]
-    locations = cursor.execute("SELECT COUNT(*) FROM trial_locations").fetchone()[0]
+    sigir_total = cursor.execute("SELECT COUNT(*) FROM trials").fetchone()[0]
+    ct_gov_total = 0
+    ct_gov_recruiting = 0
+    ct_gov_locations = 0
+    try:
+        ct_gov_total = cursor.execute(
+            "SELECT COUNT(*) FROM ct_gov_trials"
+        ).fetchone()[0]
+        ct_gov_recruiting = cursor.execute(
+            "SELECT COUNT(*) FROM ct_gov_trials WHERE status = 'RECRUITING'"
+        ).fetchone()[0]
+        ct_gov_locations = cursor.execute(
+            "SELECT COUNT(*) FROM ct_gov_locations"
+        ).fetchone()[0]
+    except Exception:
+        pass
 
-    # Last update time
-    row = cursor.execute(
-        "SELECT MAX(last_updated) FROM trials WHERE last_updated IS NOT NULL"
-    ).fetchone()
-    last_updated = row[0] if row and row[0] else "never"
+    sigir_locations = cursor.execute(
+        "SELECT COUNT(*) FROM trial_locations"
+    ).fetchone()[0]
+
+    # Last update time from both tables
+    timestamps = []
+    try:
+        row = cursor.execute(
+            "SELECT MAX(last_updated) FROM trials WHERE last_updated IS NOT NULL"
+        ).fetchone()
+        if row and row[0]:
+            timestamps.append(row[0])
+    except Exception:
+        pass
+    try:
+        row = cursor.execute(
+            "SELECT MAX(last_updated) FROM ct_gov_trials WHERE last_updated IS NOT NULL"
+        ).fetchone()
+        if row and row[0]:
+            timestamps.append(row[0])
+    except Exception:
+        pass
+    last_updated = max(timestamps) if timestamps else "never"
 
     log.info("")
     log.info("Database summary:")
-    log.info("  Total trials:     %d (%d API, %d SIGIR)", total, api, sigir)
-    log.info("  Recruiting:       %d", recruiting)
-    log.info("  Location records: %d", locations)
+    log.info("  SIGIR trials:     %d", sigir_total)
+    log.info("  ct_gov_trials:    %d (%d recruiting)", ct_gov_total, ct_gov_recruiting)
+    log.info("  Locations:        %d (SIGIR) + %d (ct_gov)", sigir_locations, ct_gov_locations)
     log.info("  Last updated:     %s", last_updated)
 
 

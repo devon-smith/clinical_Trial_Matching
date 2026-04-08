@@ -193,10 +193,24 @@ class TrialMatcher:
         conn = self._connect()
         cursor = conn.cursor()
         cursor.execute(
-            "SELECT COALESCE(diseases, '') FROM trials WHERE nct_id = ?",
+            "SELECT COALESCE(diseases, '') FROM trials "
+            "WHERE nct_id = ?",
             (nct_id,),
         )
         row = cursor.fetchone()
+        if row and row[0]:
+            conn.close()
+            return row[0]
+        # Fallback to ct_gov_trials
+        try:
+            cursor.execute(
+                "SELECT COALESCE(diseases, '') FROM ct_gov_trials "
+                "WHERE nct_id = ?",
+                (nct_id,),
+            )
+            row = cursor.fetchone()
+        except Exception:
+            row = None
         conn.close()
         return row[0] if row else ""
 
@@ -204,25 +218,65 @@ class TrialMatcher:
         """Return 'ctgov_api' or 'sigir' for a trial."""
         conn = self._connect()
         cursor = conn.cursor()
-        cursor.execute(
-            "SELECT COALESCE(source, 'sigir') FROM trials WHERE nct_id = ?",
-            (nct_id,),
-        )
-        row = cursor.fetchone()
+        # Check ct_gov_trials first (always ctgov_api)
+        try:
+            cursor.execute(
+                "SELECT 1 FROM ct_gov_trials WHERE nct_id = ?",
+                (nct_id,),
+            )
+            if cursor.fetchone():
+                conn.close()
+                return "ctgov_api"
+        except Exception:
+            pass
+        # Check main trials table (source column may not exist)
+        try:
+            cursor.execute(
+                "SELECT COALESCE(source, 'sigir') FROM trials "
+                "WHERE nct_id = ?",
+                (nct_id,),
+            )
+            row = cursor.fetchone()
+            if row:
+                conn.close()
+                return row[0]
+        except Exception:
+            pass
         conn.close()
-        return row[0] if row else "sigir"
+        return "sigir"
 
     def _get_eligibility_text(self, nct_id: str) -> str:
-        """Retrieve free-text eligibility criteria for API-sourced trials."""
+        """Retrieve free-text eligibility criteria."""
         conn = self._connect()
         cursor = conn.cursor()
-        cursor.execute(
-            "SELECT COALESCE(eligibility_text, '') FROM trials WHERE nct_id = ?",
-            (nct_id,),
-        )
-        row = cursor.fetchone()
+        # Check ct_gov_trials first (always has eligibility_text)
+        try:
+            cursor.execute(
+                "SELECT COALESCE(eligibility_text, '') "
+                "FROM ct_gov_trials WHERE nct_id = ?",
+                (nct_id,),
+            )
+            row = cursor.fetchone()
+            if row and row[0]:
+                conn.close()
+                return row[0]
+        except Exception:
+            pass
+        # Fallback to main trials table (column may not exist)
+        try:
+            cursor.execute(
+                "SELECT COALESCE(eligibility_text, '') FROM trials "
+                "WHERE nct_id = ?",
+                (nct_id,),
+            )
+            row = cursor.fetchone()
+            if row and row[0]:
+                conn.close()
+                return row[0]
+        except Exception:
+            pass
         conn.close()
-        return row[0] if row else ""
+        return ""
 
     @staticmethod
     @staticmethod

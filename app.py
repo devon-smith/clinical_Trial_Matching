@@ -14,6 +14,10 @@ from preference_scorer import PatientPreferences, parse_preferences_from_message
 from eligibility_visualizer import EligibilityVisualizer
 from concept_canonicalizer import ConceptCanonicalizer, _CONCEPT_HIERARCHY
 from progressive_eligibility import ProgressiveEligibilityChecker
+from condition_followups import (
+    detect_condition, get_followup_questions, parse_answer,
+    merge_followup_answers,
+)
 
 load_dotenv()
 
@@ -151,16 +155,38 @@ def get_trial_distance(patient_location: str, patient_zip: str, trial_data: dict
 
     if nct_id:
         try:
-            db_path = os.path.join(os.path.dirname(__file__), 'trial_data.sqlite')
+            db_path = os.path.join(
+                os.path.dirname(__file__), 'trial_data.sqlite'
+            )
             conn = sqlite3.connect(db_path)
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
+
+            # Check trial_locations (SIGIR + legacy ctgov)
             cursor.execute(
                 "SELECT latitude, longitude FROM trial_locations "
-                "WHERE nct_id = ? AND latitude IS NOT NULL AND longitude IS NOT NULL",
+                "WHERE nct_id = ? "
+                "AND latitude IS NOT NULL "
+                "AND longitude IS NOT NULL",
                 (nct_id,),
             )
             rows = cursor.fetchall()
+
+            # Also check ct_gov_locations
+            if not rows:
+                try:
+                    cursor.execute(
+                        "SELECT latitude, longitude "
+                        "FROM ct_gov_locations "
+                        "WHERE nct_id = ? "
+                        "AND latitude IS NOT NULL "
+                        "AND longitude IS NOT NULL",
+                        (nct_id,),
+                    )
+                    rows = cursor.fetchall()
+                except sqlite3.OperationalError:
+                    pass  # table may not exist yet
+
             conn.close()
 
             if rows:
@@ -209,6 +235,38 @@ CONDITION_TO_CRITERIA = {
         'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
         'patient_has_finding_of_malignant_neoplastic_disease_now',
     ],
+    'stomach cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_neoplasm_of_stomach_now',
+        'patient_has_finding_of_disorder_of_stomach_now',
+    ],
+    'gastric cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_neoplasm_of_stomach_now',
+        'patient_has_finding_of_disorder_of_stomach_now',
+    ],
+    'breast cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_diagnosis_of_malignant_tumor_of_breast_now',
+    ],
+    'lung cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_diagnosis_of_primary_malignant_neoplasm_of_lung_now',
+    ],
+    'colon cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_diagnosis_of_malignant_neoplasm_of_colon_now',
+    ],
+    'colorectal cancer': [
+        'patient_has_diagnosis_of_malignant_neoplastic_disease_now',
+        'patient_has_finding_of_malignant_neoplastic_disease_now',
+        'patient_has_diagnosis_of_malignant_neoplasm_of_colon_now',
+    ],
     'heart disease': [
         'patient_has_diagnosis_of_disorder_of_cardiovascular_system_now',
         'patient_has_finding_of_disorder_of_cardiovascular_system_now',
@@ -256,13 +314,13 @@ def build_patient_attributes(patient_data: Dict[str, Any]) -> Dict[str, Any]:
     """
     attrs: Dict[str, Any] = {}
 
-    # Age mapping — criteria check for presence (bool), not the numeric value
+    # Age mapping — pass numeric value for >= / <= comparisons
     age = patient_data.get('age')
     if age is not None:
         try:
             age_val = int(age)
-            attrs['patient_age_value_recorded_now_in_years'] = True
-            attrs['age'] = age_val  # Keep numeric for display
+            attrs['patient_age_value_recorded_now_in_years'] = age_val
+            attrs['age'] = age_val
         except (ValueError, TypeError):
             pass
 
@@ -277,12 +335,19 @@ def build_patient_attributes(patient_data: Dict[str, Any]) -> Dict[str, Any]:
     if gender:
         attrs['gender'] = gender
 
-    # Condition mapping
+    # Condition mapping — first try explicit mapping, then fuzzy match
     condition = str(patient_data.get('condition', '')).lower()
+    condition_matched = False
     for keyword, criteria_attrs in CONDITION_TO_CRITERIA.items():
         if keyword in condition:
             for attr_name in criteria_attrs:
                 attrs[attr_name] = True
+            condition_matched = True
+
+    # Store condition keywords for infer_negative_defaults to avoid
+    # incorrectly defaulting related diagnoses to False
+    if condition:
+        attrs['_condition_keywords'] = _extract_condition_keywords(condition)
 
     # Pregnancy/breastfeeding — default to False if gender is male
     if gender == 'male':
@@ -291,7 +356,302 @@ def build_patient_attributes(patient_data: Dict[str, Any]) -> Dict[str, Any]:
         attrs['patient_is_lactating_now'] = False
         attrs['patient_has_childbearing_potential_now'] = False
 
+    # Merge condition-specific follow-up answers into criteria attributes
+    condition_details = patient_data.get('condition_details', {})
+    category_id = patient_data.get('condition_category')
+    criteria_map = patient_data.get('condition_criteria_map', {})
+
+    if condition_details and criteria_map:
+        # Dynamic followups: answers carry their criterion_types directly
+        attrs = _merge_dynamic_answers(attrs, condition_details, criteria_map)
+        # Pass through for the eligibility visualizer
+        attrs['condition_details'] = condition_details
+        attrs['condition_criteria_map'] = criteria_map
+    elif condition_details and category_id:
+        # Hardcoded fallback: use condition_followups module
+        attrs = merge_followup_answers(attrs, category_id, condition_details)
+
     return attrs
+
+
+# ---------------------------------------------------------------------------
+# Condition keyword extraction for fuzzy criterion matching
+# ---------------------------------------------------------------------------
+
+# Common medical stop words to exclude from keyword matching
+_CONDITION_STOP_WORDS = {
+    'patient', 'has', 'now', 'disease', 'disorder', 'syndrome',
+    'the', 'and', 'with', 'without', 'finding', 'diagnosis',
+}
+
+
+def _extract_condition_keywords(condition: str) -> set:
+    """Extract meaningful keywords from a patient's stated condition.
+
+    Returns a set of keywords suitable for fuzzy matching against criterion
+    attribute names (which use snake_case with these words embedded).
+    """
+    words = set()
+    for word in condition.lower().replace('-', ' ').split():
+        word = word.strip('.,!?()[]')
+        if len(word) > 2 and word not in _CONDITION_STOP_WORDS:
+            words.add(word)
+    return words
+
+
+def _criterion_matches_condition(criterion_type: str, condition_keywords: set) -> bool:
+    """Check if a diagnosis/finding criterion semantically relates to the patient's condition.
+
+    Used to avoid incorrectly defaulting relevant diagnosis criteria to False
+    when the patient's stated condition overlaps with the criterion name.
+
+    Requires meaningful overlap — generic terms like 'cancer' alone aren't enough
+    to match 'lung_cancer' for a patient with 'brain cancer'.
+    """
+    if not condition_keywords:
+        return False
+    ct_lower = criterion_type.lower()
+
+    # Generic disease type words that shouldn't count as a match on their own
+    _GENERIC_DISEASE_WORDS = {
+        'cancer', 'tumor', 'tumour', 'neoplasm', 'malignant', 'carcinoma',
+        'type', 'stage', 'chronic', 'acute',
+    }
+
+    matched = [kw for kw in condition_keywords if kw in ct_lower]
+    if not matched:
+        return False
+
+    # If we have multiple keywords and at least one matches, that's meaningful
+    # unless ALL matches are generic
+    specific_matches = [m for m in matched if m not in _GENERIC_DISEASE_WORDS]
+    return len(specific_matches) > 0
+
+
+# ---------------------------------------------------------------------------
+# Categories of criteria safe to infer as absent (False) when the patient
+# hasn't mentioned them.  Lab values / numeric measures are NOT included
+# because we can't know their values without tests.
+# ---------------------------------------------------------------------------
+
+_INFERABLE_PREFIXES = [
+    # Diagnoses — if unmentioned, patient likely doesn't have them
+    "patient_has_diagnosis_of_",
+    # Findings — symptoms/signs the patient would know about
+    "patient_has_finding_of_",
+    # Prior treatments — patient would have mentioned significant treatments
+    "patient_has_undergone_",
+    # Current treatments — patient would mention active treatments
+    "patient_is_undergoing_",
+    # Current medications — patient would mention medications they take
+    "patient_is_taking_",
+    # Allergies — patient would mention known allergies
+    "patient_has_allergy_to_",
+    # Exposures — e.g., tobacco, drug exposure
+    "patient_is_exposed_to_",
+    # Ability to undergo procedures — default to capable
+    "patient_can_undergo_",
+    # Future procedures
+    "patient_will_undergo_",
+    # Reproductive status (if not already set)
+    "patient_is_pregnant_",
+    "patient_is_breastfeeding_",
+    "patient_is_lactating_",
+    "patient_has_childbearing_",
+    # Positive-check patterns
+    "patients_",
+]
+
+# Prefixes that should NOT be defaulted (need actual measurements)
+_NON_INFERABLE_PATTERNS = [
+    "_value_recorded_",     # Lab values / measurements
+    "_in_years",            # Age (already handled)
+    "_in_months",
+    "_in_days",
+]
+
+
+def infer_negative_defaults(
+    patient_attrs: Dict[str, Any],
+    trial_nct_ids: List[str],
+    db_path: str = "trial_data.sqlite",
+) -> Dict[str, Any]:
+    """Infer negative (absent) defaults for criteria not already in patient_attrs.
+
+    For criteria categories where absence is a reasonable default (diagnoses,
+    findings, treatments, allergies, etc.), set to False if the patient hasn't
+    mentioned them.  Lab values and numeric measurements are left as unknown.
+
+    For "can_undergo" criteria, defaults to True (patient is capable) since
+    these are inclusion requirements and we assume capability unless stated.
+
+    Args:
+        patient_attrs: Existing patient attributes dict.
+        trial_nct_ids: NCT IDs of matched trials to check criteria for.
+        db_path: Path to the SQLite database.
+
+    Returns:
+        Updated patient_attrs with inferred defaults added.
+    """
+    if not trial_nct_ids:
+        return patient_attrs
+
+    conn = sqlite3.connect(db_path)
+    cur = conn.cursor()
+
+    placeholders = ",".join("?" * len(trial_nct_ids))
+    cur.execute(f"""
+        SELECT DISTINCT criterion_type
+        FROM criteria
+        WHERE nct_id IN ({placeholders})
+    """, trial_nct_ids)
+
+    needed_criteria = [row[0] for row in cur.fetchall()]
+    conn.close()
+
+    # Get condition keywords so we don't falsely negate relevant diagnoses
+    condition_keywords = patient_attrs.get('_condition_keywords', set())
+
+    for ct in needed_criteria:
+        # Skip if we already have a value
+        if ct in patient_attrs:
+            continue
+
+        # Skip non-inferable (lab values, numeric measurements)
+        if any(pat in ct for pat in _NON_INFERABLE_PATTERNS):
+            continue
+
+        # Check if this criterion is in an inferable category
+        is_inferable = any(ct.startswith(prefix) for prefix in _INFERABLE_PREFIXES)
+        if not is_inferable:
+            continue
+
+        # IMPORTANT: Don't default diagnosis/finding criteria to False if they
+        # semantically relate to the patient's stated condition. A patient who
+        # says "brain cancer" shouldn't have brain-related diagnosis criteria
+        # set to False — leave them as Unknown for the study team to verify.
+        if condition_keywords and (
+            ct.startswith("patient_has_diagnosis_of_") or
+            ct.startswith("patient_has_finding_of_")
+        ):
+            if _criterion_matches_condition(ct, condition_keywords):
+                # Skip — leave as Unknown rather than incorrectly defaulting
+                continue
+
+        # Determine the default value based on criterion semantics
+        if ct.startswith("patient_can_undergo_"):
+            # "can_undergo" → assume patient is capable (True)
+            patient_attrs[ct] = True
+        elif "_is_normal_" in ct:
+            # "is_normal" → assume healthy/normal function (True)
+            patient_attrs[ct] = True
+        elif "_is_abnormal_" in ct:
+            # "is_abnormal" → assume NOT abnormal for healthy patient (False)
+            patient_attrs[ct] = False
+        elif ct.startswith("patients_") and "_is_positive_" in ct:
+            # "patients_X_is_positive" — context-dependent:
+            # Organ function checks → assume positive/normal (True)
+            # Disease/pathogen markers → assume negative (False)
+            if any(kw in ct for kw in (
+                "function", "activity", "performance", "health",
+                "competence", "swallow", "locomotion", "deglutition",
+                "balance", "hydration", "hemostatic",
+            )):
+                patient_attrs[ct] = True
+            else:
+                patient_attrs[ct] = False
+        else:
+            # Default: patient doesn't have this condition/finding/treatment
+            patient_attrs[ct] = False
+
+    return patient_attrs
+
+
+def _merge_dynamic_answers(
+    attrs: Dict[str, Any],
+    condition_details: Dict[str, Any],
+    criteria_map: Dict[str, List[str]],
+) -> Dict[str, Any]:
+    """Merge dynamic follow-up answers directly into patient attributes.
+
+    Each answer's attribute_key maps to a list of criterion_types via
+    criteria_map. The answer value is translated to the appropriate
+    attribute value for each criterion.
+    """
+    for attr_key, value in condition_details.items():
+        criterion_types = criteria_map.get(attr_key, [])
+        if not criterion_types:
+            continue
+
+        if isinstance(value, bool):
+            # Boolean answer → set all associated criteria
+            for ct in criterion_types:
+                attrs[ct] = value
+        elif isinstance(value, (int, float)):
+            # Numeric answer → set all associated criteria
+            for ct in criterion_types:
+                attrs[ct] = value
+        elif isinstance(value, str):
+            # Text answer — try to extract meaning and set criteria
+            _merge_text_answer(attrs, value, criterion_types, attr_key)
+
+    return attrs
+
+
+def _merge_text_answer(
+    attrs: Dict[str, Any],
+    text: str,
+    criterion_types: List[str],
+    attr_key: str,
+) -> None:
+    """Parse a free-text answer and set the associated criteria.
+
+    For text answers, we check for positive/negative indicators and
+    try to match keywords against the criterion names.
+    """
+    text_lower = text.lower().strip()
+
+    # "I don't know" / uncertain answers — leave criteria as unknown
+    uncertain_phrases = [
+        "don't know", "dont know", "idk", "not sure", "unsure",
+        "no idea", "no clue", "haven't been told", "havent been told",
+    ]
+    if any(phrase in text_lower for phrase in uncertain_phrases):
+        return  # Leave criteria unset (unknown)
+
+    # Check for explicit negatives
+    negative_phrases = [
+        "no", "none", "never", "n/a", "not", "don't", "dont",
+        "haven't", "havent", "negative",
+    ]
+    positive_phrases = [
+        "yes", "have", "had", "diagnosed", "positive", "currently",
+        "taking", "receiving",
+    ]
+
+    is_negative = any(text_lower.startswith(p) or text_lower == p
+                      for p in negative_phrases)
+    is_positive = any(p in text_lower for p in positive_phrases)
+
+    if is_negative and not is_positive:
+        # Patient said no/none — set all criteria to False
+        for ct in criterion_types:
+            attrs[ct] = False
+        return
+
+    # For text answers about specific conditions/treatments,
+    # try to match keywords from the answer against criterion names
+    for ct in criterion_types:
+        # Extract the medical entity from the criterion name
+        ct_lower = ct.lower()
+
+        # Check if any significant word from the answer appears in the criterion
+        words = [w for w in text_lower.split() if len(w) > 3]
+        matched = any(w in ct_lower for w in words)
+
+        if matched or is_positive:
+            attrs[ct] = True
+        # If we can't determine, leave as unknown (don't set to False)
 
 
 
@@ -577,9 +937,82 @@ class TrialMatcher:
                             d['explanation'] = None
                         all_trials.append(d)
 
+            # --- Phase 3: Search ct_gov_trials table (ClinicalTrials.gov data) ---
+            ct_gov_exists = False
+            try:
+                self._execute_query(
+                    "SELECT 1 FROM ct_gov_trials LIMIT 1"
+                )
+                ct_gov_exists = True
+            except Exception:
+                pass
+
+            if ct_gov_exists:
+                for term in search_terms[:5]:
+                    like = f"%{term.lower()}%"
+
+                    # Strict disease-column match on ct_gov_trials
+                    cg_strict_query = """
+                    SELECT DISTINCT t.*
+                    FROM ct_gov_trials t
+                    WHERE (t.status IN (
+                            'RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                            'ENROLLING_BY_INVITATION',
+                            'NOT_YET_RECRUITING', 'AVAILABLE')
+                           OR t.status IS NULL)
+                    AND LOWER(COALESCE(t.diseases,'')) LIKE ?
+                    ORDER BY t.phase DESC, t.enrollment DESC
+                    LIMIT 10
+                    """
+                    try:
+                        cursor = self._execute_query(
+                            cg_strict_query, [like]
+                        )
+                        for row in cursor.fetchall():
+                            d = dict(row)
+                            if d['nct_id'] in seen:
+                                continue
+                            seen.add(d['nct_id'])
+                            d['_disease_match'] = True
+                            d['_source'] = 'ct_gov'
+                            d['explanation'] = None
+                            all_trials.append(d)
+                    except Exception as cg_err:
+                        print(f"ct_gov strict query error: {cg_err}")
+
+                    # Broad fallback on ct_gov_trials
+                    cg_broad_query = """
+                    SELECT DISTINCT t.*
+                    FROM ct_gov_trials t
+                    WHERE (t.status IN (
+                            'RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                            'ENROLLING_BY_INVITATION',
+                            'NOT_YET_RECRUITING', 'AVAILABLE')
+                           OR t.status IS NULL)
+                    AND (LOWER(t.title) LIKE ?
+                         OR LOWER(t.brief_summary) LIKE ?)
+                    ORDER BY t.phase DESC, t.enrollment DESC
+                    LIMIT 5
+                    """
+                    try:
+                        cursor = self._execute_query(
+                            cg_broad_query, [like, like]
+                        )
+                        for row in cursor.fetchall():
+                            d = dict(row)
+                            if d['nct_id'] in seen:
+                                continue
+                            seen.add(d['nct_id'])
+                            d['_disease_match'] = False
+                            d['_source'] = 'ct_gov'
+                            d['explanation'] = None
+                            all_trials.append(d)
+                    except Exception as cg_err:
+                        print(f"ct_gov broad query error: {cg_err}")
+
             print(f"Returning {len(all_trials)} unique trials")
             return all_trials
-            
+
         except Exception as e:
             print(f"\n--- ERROR in find_matching_trials ---")
             print(f"Error type: {type(e).__name__}")
@@ -589,26 +1022,162 @@ class TrialMatcher:
             traceback.print_exc()
             print("--- End of error ---\n")
             
-            # Try a fallback query if the main one fails
-            try:
-                print("Attempting fallback query...")
-                cursor = self._execute_query("""
-                    SELECT * FROM trials
-                    WHERE brief_summary IS NOT NULL
-                    AND (status IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
-                         'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING',
-                         'AVAILABLE')
-                         OR status IS NULL)
-                    ORDER BY RANDOM()
-                    LIMIT 3
-                """)
-                trials = [dict(row) for row in cursor.fetchall()]
-                print(f"Fallback query returned {len(trials)} trials")
-                return trials
-            except Exception as fallback_error:
-                print(f"Fallback query also failed: {fallback_error}")
-                raise Exception("Unable to retrieve clinical trials. The database may be unavailable or the query could not be processed.") from e
+            # Return empty list — the caller will run a coverage check to
+            # explain why no trials matched, rather than silently showing
+            # irrelevant random trials.
+            return []
     
+    def check_condition_coverage(self, condition: str, search_terms: List[str]) -> Dict[str, Any]:
+        """Check how many trials exist for a condition, including inactive ones.
+
+        Returns a dict with:
+          total_all_statuses  – trials matching condition across ALL statuses
+          total_active        – trials matching condition with active/recruiting status
+          sample_reasons      – list of likely filter-out reasons (location, criteria, etc.)
+          inactive_statuses   – dict of status → count for non-active trials
+        """
+        if not condition:
+            return {"total_all_statuses": 0, "total_active": 0,
+                    "sample_reasons": [], "inactive_statuses": {}}
+
+        like_terms = [f"%{t.lower()}%" for t in search_terms[:5] if t]
+        if not like_terms:
+            like_terms = [f"%{condition.lower()}%"]
+
+        # Build OR clause for all search terms
+        or_clauses = " OR ".join(
+            "LOWER(COALESCE(t.diseases,'')) LIKE ?"
+            for _ in like_terms
+        )
+        or_clauses_broad = " OR ".join(
+            "(LOWER(t.title) LIKE ? OR LOWER(t.brief_summary) LIKE ?)"
+            for _ in like_terms
+        )
+
+        # Count ALL trials matching the condition (any status)
+        all_query = f"""
+            SELECT COUNT(DISTINCT t.nct_id) as cnt
+            FROM trials t
+            WHERE ({or_clauses} OR {or_clauses_broad})
+        """
+        all_params = list(like_terms) + [p for lt in like_terms for p in (lt, lt)]
+        try:
+            cursor = self._execute_query(all_query, all_params)
+            total_all = cursor.fetchone()["cnt"]
+        except Exception:
+            total_all = 0
+
+        # Count ACTIVE trials matching the condition
+        active_query = f"""
+            SELECT COUNT(DISTINCT t.nct_id) as cnt
+            FROM trials t
+            WHERE (t.status IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                   'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING', 'AVAILABLE')
+                   OR t.status IS NULL)
+            AND ({or_clauses} OR {or_clauses_broad})
+        """
+        try:
+            cursor = self._execute_query(active_query, all_params)
+            total_active = cursor.fetchone()["cnt"]
+        except Exception:
+            total_active = 0
+
+        # Get status breakdown for inactive trials
+        inactive_statuses: Dict[str, int] = {}
+        if total_all > total_active:
+            status_query = f"""
+                SELECT t.status, COUNT(DISTINCT t.nct_id) as cnt
+                FROM trials t
+                WHERE t.status NOT IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                       'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING', 'AVAILABLE')
+                AND t.status IS NOT NULL
+                AND ({or_clauses} OR {or_clauses_broad})
+                GROUP BY t.status
+            """
+            try:
+                cursor = self._execute_query(status_query, all_params)
+                for row in cursor.fetchall():
+                    inactive_statuses[row["status"]] = row["cnt"]
+            except Exception:
+                pass
+
+        # Also check ct_gov_trials table
+        try:
+            cg_all_query = f"""
+                SELECT COUNT(DISTINCT t.nct_id) as cnt
+                FROM ct_gov_trials t
+                WHERE ({or_clauses} OR {or_clauses_broad})
+            """
+            cursor = self._execute_query(cg_all_query, all_params)
+            total_all += cursor.fetchone()["cnt"]
+
+            cg_active_query = f"""
+                SELECT COUNT(DISTINCT t.nct_id) as cnt
+                FROM ct_gov_trials t
+                WHERE (t.status IN (
+                        'RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                        'ENROLLING_BY_INVITATION',
+                        'NOT_YET_RECRUITING', 'AVAILABLE')
+                       OR t.status IS NULL)
+                AND ({or_clauses} OR {or_clauses_broad})
+            """
+            cursor = self._execute_query(cg_active_query, all_params)
+            total_active += cursor.fetchone()["cnt"]
+        except Exception:
+            pass  # ct_gov_trials table may not exist yet
+
+        # If active trials exist but none made it through scoring, try to figure out why
+        sample_reasons: List[str] = []
+        if total_active > 0:
+            # Check if location is a common filter-out factor
+            loc_count = 0
+            loc_query = f"""
+                SELECT COUNT(DISTINCT t.nct_id) as cnt
+                FROM trials t
+                JOIN trial_locations tl ON t.nct_id = tl.nct_id
+                WHERE (t.status IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                       'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING', 'AVAILABLE')
+                       OR t.status IS NULL)
+                AND ({or_clauses} OR {or_clauses_broad})
+                AND tl.latitude IS NOT NULL
+            """
+            try:
+                cursor = self._execute_query(loc_query, all_params)
+                loc_count += cursor.fetchone()["cnt"]
+            except Exception:
+                pass
+
+            # Also check ct_gov_locations
+            cg_loc_query = f"""
+                SELECT COUNT(DISTINCT t.nct_id) as cnt
+                FROM ct_gov_trials t
+                JOIN ct_gov_locations cl ON t.nct_id = cl.nct_id
+                WHERE (t.status IN (
+                        'RECRUITING', 'ACTIVE_NOT_RECRUITING',
+                        'ENROLLING_BY_INVITATION',
+                        'NOT_YET_RECRUITING', 'AVAILABLE')
+                       OR t.status IS NULL)
+                AND ({or_clauses} OR {or_clauses_broad})
+                AND cl.latitude IS NOT NULL
+            """
+            try:
+                cursor = self._execute_query(cg_loc_query, all_params)
+                loc_count += cursor.fetchone()["cnt"]
+            except Exception:
+                pass
+
+            if loc_count == 0 and total_active > 0:
+                sample_reasons.append(
+                    "no location data available for distance matching"
+                )
+
+        return {
+            "total_all_statuses": total_all,
+            "total_active": total_active,
+            "sample_reasons": sample_reasons,
+            "inactive_statuses": inactive_statuses,
+        }
+
     def get_trial_details(self, nct_id: str) -> Optional[Dict]:
         """Get detailed information about a specific trial."""
         try:
@@ -632,8 +1201,12 @@ class TrialMatcher:
             print(f"Error in get_trial_details: {e}")
             raise
 
-# Initialize LLM service
-llm_service = LLMService()
+# Initialize LLM service (lazy — allows app to start without Azure credentials)
+try:
+    llm_service = LLMService()
+except Exception as e:
+    print(f"Warning: LLM service unavailable ({e}). Running without LLM features.")
+    llm_service = None
 
 # Initialize matcher (includes SMT evaluator + RAG index)
 matcher = TrialMatcher()
@@ -1045,6 +1618,9 @@ def index():
             'symptoms': '',
             'primary_condition': None,
             'preferences': None,
+            'condition_details': {},
+            'condition_category': None,
+            'condition_criteria_map': {},
         }
     }
     return render_template('index.html')
@@ -1069,21 +1645,60 @@ def chat():
                     'symptoms': '',
                     'primary_condition': None,
                     'preferences': None,
+                    'condition_details': {},
+                    'condition_category': None,
+                    'condition_criteria_map': {},
                 }
             }
+
+        # Handle client-side session restore
+        if user_message == '/restore':
+            profile = data.get('profile', {})
+            demos = profile.get('demographics', {})
+            pd = session['assistant']['patient_data']
+            if demos.get('age'):
+                pd['age'] = demos['age']
+            if demos.get('gender'):
+                pd['gender'] = demos['gender']
+            if demos.get('location'):
+                pd['location'] = demos['location']
+                import re as _re
+                m = _re.search(r'\b(\d{5})\b', str(demos['location']))
+                if m:
+                    pd['zip_code'] = m.group(1)
+            if profile.get('condition'):
+                pd['conditions'] = [profile['condition']]
+                pd['primary_condition'] = profile['condition']
+            if profile.get('conditionDetails'):
+                pd['condition_details'] = profile['conditionDetails']
+            if profile.get('conditionCategory'):
+                pd['condition_category'] = profile['conditionCategory']
+            session['assistant']['conversation_state'] = 'ready_to_search'
+            session.modified = True
+            return jsonify({'status': 'restored'})
 
         # Get or create conversation assistant
         assistant = ConversationalTrialAssistant()
         assistant.conversation_state = session['assistant']['conversation_state']
         assistant.patient_data = session['assistant']['patient_data']
+        assistant._pending_followups = session['assistant'].get('pending_followups', [])
+        assistant._pending_followups_round2 = session['assistant'].get('pending_followups_round2', [])
+        assistant._use_dynamic_followups = session['assistant'].get('use_dynamic_followups', False)
+        assistant._preliminary_trial_ids = session['assistant'].get('preliminary_trial_ids', [])
+        assistant._followup_round = session['assistant'].get('followup_round', 0)
 
         # Process the message
         response, done = assistant.process_response(user_message)
 
-        # Update session
+        # Update session (persist followup state across requests)
         session['assistant'] = {
             'conversation_state': assistant.conversation_state,
-            'patient_data': assistant.patient_data
+            'patient_data': assistant.patient_data,
+            'pending_followups': assistant._pending_followups,
+            'pending_followups_round2': getattr(assistant, '_pending_followups_round2', []),
+            'use_dynamic_followups': assistant._use_dynamic_followups,
+            'preliminary_trial_ids': getattr(assistant, '_preliminary_trial_ids', []),
+            'followup_round': getattr(assistant, '_followup_round', 0),
         }
         session.modified = True
 
@@ -1169,8 +1784,19 @@ def chat():
 
             trials = matcher.find_matching_trials(search_data)
 
+            # Include condition follow-up details for eligibility matching
+            search_data['condition_details'] = patient_data.get('condition_details', {})
+            search_data['condition_category'] = patient_data.get('condition_category')
+            search_data['condition_criteria_map'] = patient_data.get('condition_criteria_map', {})
+
             # Build structured patient attributes for SMT evaluation
             patient_attrs = build_patient_attributes(search_data)
+
+            # Infer negative defaults for criteria the patient hasn't mentioned.
+            # This resolves "Unknown" status for conditions/treatments that the
+            # patient would know about and would have mentioned if they had them.
+            trial_nct_ids = [t.get('nct_id', '') for t in trials[:10]]
+            patient_attrs = infer_negative_defaults(patient_attrs, trial_nct_ids)
 
             # Build rich condition text for RAG scoring
             rag_parts = [primary_condition, patient_data.get('symptoms', '')]
@@ -1263,7 +1889,42 @@ def chat():
                 except Exception as viz_err:
                     print(f"Eligibility viz error for {nct_id}: {viz_err}")
 
-                trial_source = scoring.get('source', trial.get('source', 'sigir'))
+                # Detect source: ct_gov table, ctgov_api (legacy), or sigir
+                is_ct_gov = trial.get('_source') == 'ct_gov'
+                trial_source = (
+                    'ctgov_api' if is_ct_gov
+                    else scoring.get('source', trial.get('source', 'sigir'))
+                )
+
+                # Determine match type — specific (disease column) vs broad (title/summary)
+                is_disease_match = trial.get('_disease_match', False)
+                trial_diseases = (trial.get('diseases') or '').lower()
+                condition_lower = (primary_condition or '').lower()
+                if is_disease_match and condition_lower and condition_lower in trial_diseases:
+                    match_type = 'specific'
+                    match_label = primary_condition
+                elif is_disease_match:
+                    # Matched on disease column but via an expanded/parent term
+                    # Find which search term matched
+                    matched_term = None
+                    for st in search_data.get('search_queries', []):
+                        if st and st.lower() in trial_diseases:
+                            matched_term = st
+                            break
+                    match_type = 'specific'
+                    match_label = matched_term or primary_condition
+                else:
+                    # Broad match — only title/summary matched
+                    match_type = 'broad'
+                    # Find which broader category term matched
+                    matched_term = None
+                    for st in search_data.get('search_queries', []):
+                        if st and (st.lower() in trial_diseases
+                                   or st.lower() in (trial.get('title') or '').lower()
+                                   or st.lower() in (trial.get('brief_summary') or '').lower()):
+                            matched_term = st
+                            break
+                    match_label = matched_term or 'keyword'
 
                 formatted_trials.append({
                     'nct_id': nct_id,
@@ -1277,6 +1938,7 @@ def chat():
                     'distance': distance,
                     'location': trial.get('location', ''),
                     'source': 'clinicaltrials.gov' if trial_source == 'ctgov_api' else 'sigir',
+                    'ct_gov_url': f"https://clinicaltrials.gov/study/{nct_id}",
                     # Real scoring data
                     'match_score': scoring['match_score'],
                     'hard_met': scoring['hard_met'],
@@ -1290,6 +1952,9 @@ def chat():
                     'preference_breakdown': scoring.get('preference_breakdown', {}),
                     # Eligibility visualization data
                     'eligibility_breakdown': viz_data,
+                    # Match transparency
+                    'match_type': match_type,
+                    'match_label': match_label,
                 })
 
             # Sort by match score (highest first), API trials win ties
@@ -1300,6 +1965,81 @@ def chat():
                 ),
                 reverse=True,
             )
+
+            # --- No-results analysis & broad-match detection ---
+            no_results_info = None
+            broad_match_banner = None
+
+            if not formatted_trials:
+                # Run coverage check to explain why
+                coverage = matcher.check_condition_coverage(
+                    primary_condition or '',
+                    search_data.get('search_queries', []),
+                )
+                total_all = coverage["total_all_statuses"]
+                total_active = coverage["total_active"]
+
+                if total_all == 0:
+                    # Condition not in our database at all
+                    cond_encoded = (primary_condition or '').replace(' ', '+')
+                    no_results_info = {
+                        "reason": "no_coverage",
+                        "condition": primary_condition,
+                        "ctgov_link": f"https://clinicaltrials.gov/search?cond={cond_encoded}&status=RECRUITING",
+                    }
+                elif total_active == 0:
+                    # Trials exist but all are inactive
+                    no_results_info = {
+                        "reason": "all_inactive",
+                        "condition": primary_condition,
+                        "total_in_db": total_all,
+                        "inactive_statuses": coverage["inactive_statuses"],
+                        "ctgov_link": f"https://clinicaltrials.gov/search?cond={(primary_condition or '').replace(' ', '+')}&status=RECRUITING",
+                    }
+                else:
+                    # Active trials exist but none passed scoring/filtering
+                    # Diagnose most common reason
+                    reasons = list(coverage["sample_reasons"])
+                    pre_filter_count = len(trials)  # trials before concept filter
+                    if pre_filter_count == 0:
+                        reasons.append("no trials matched your condition search terms")
+                    elif pre_filter_count > 0 and len(formatted_trials) == 0:
+                        # Trials retrieved but dropped during concept filtering or scoring
+                        if concept_set and len(trials) < pre_filter_count:
+                            reasons.append("trials were filtered for closer disease relevance")
+                    # Fallback reason
+                    if not reasons:
+                        reasons.append("eligibility criteria did not match your profile")
+
+                    no_results_info = {
+                        "reason": "filtered_out",
+                        "condition": primary_condition,
+                        "total_active": total_active,
+                        "primary_reason": reasons[0],
+                        "ctgov_link": f"https://clinicaltrials.gov/search?cond={(primary_condition or '').replace(' ', '+')}&status=RECRUITING",
+                    }
+
+            elif formatted_trials:
+                # Check if we're showing broad matches instead of specific ones
+                specific_count = sum(
+                    1 for t in formatted_trials if t.get('match_type') == 'specific'
+                )
+                broad_count = sum(
+                    1 for t in formatted_trials if t.get('match_type') == 'broad'
+                )
+                if specific_count == 0 and broad_count > 0:
+                    # All results are broad matches — warn the user
+                    # Find the broad category being matched
+                    broad_labels = set(
+                        t.get('match_label', '') for t in formatted_trials
+                        if t.get('match_type') == 'broad'
+                    )
+                    broad_term = ', '.join(broad_labels) if broad_labels else 'related terms'
+                    broad_match_banner = {
+                        "specific_condition": primary_condition,
+                        "broad_term": broad_term,
+                        "trial_count": len(formatted_trials),
+                    }
 
             # Generate concept expansion audit for the search terms
             concept_audit = []
@@ -1318,20 +2058,41 @@ def chat():
                     pass
 
             # Get last-updated timestamp for data freshness display
+            # Check both the SIGIR trials table and ct_gov_trials
             data_last_updated = None
             try:
-                db_path = os.path.join(os.path.dirname(__file__), 'trial_data.sqlite')
+                db_path = os.path.join(
+                    os.path.dirname(__file__), 'trial_data.sqlite'
+                )
                 _conn = sqlite3.connect(db_path)
-                _row = _conn.execute(
-                    "SELECT MAX(last_updated) FROM trials WHERE last_updated IS NOT NULL"
-                ).fetchone()
-                if _row and _row[0]:
-                    data_last_updated = _row[0]
+                timestamps = []
+                # SIGIR / legacy trials
+                try:
+                    _row = _conn.execute(
+                        "SELECT MAX(last_updated) FROM trials "
+                        "WHERE last_updated IS NOT NULL"
+                    ).fetchone()
+                    if _row and _row[0]:
+                        timestamps.append(_row[0])
+                except Exception:
+                    pass
+                # ct_gov_trials
+                try:
+                    _row = _conn.execute(
+                        "SELECT MAX(last_updated) FROM ct_gov_trials "
+                        "WHERE last_updated IS NOT NULL"
+                    ).fetchone()
+                    if _row and _row[0]:
+                        timestamps.append(_row[0])
+                except Exception:
+                    pass
+                if timestamps:
+                    data_last_updated = max(timestamps)
                 _conn.close()
             except Exception:
                 pass
 
-            return jsonify({
+            result_payload = {
                 'status': 'complete',
                 'response': response if response else '',
                 'trials': formatted_trials,
@@ -1346,13 +2107,36 @@ def chat():
                     'symptoms': patient_data.get('symptoms'),
                 },
                 'data_last_updated': data_last_updated,
-            })
+                'condition_followups': get_followup_questions(primary_condition) if primary_condition else [],
+            }
+            if no_results_info:
+                result_payload['no_results_info'] = no_results_info
+            if broad_match_banner:
+                result_payload['broad_match_banner'] = broad_match_banner
 
-        return jsonify({
+            return jsonify(result_payload)
+
+        # For non-search responses, include condition follow-ups when detected
+        condition_fups = []
+        detected_condition = assistant.patient_data.get('primary_condition') or (
+            assistant.patient_data.get('conditions', [None])[0]
+            if assistant.patient_data.get('conditions') else None
+        )
+        if detected_condition:
+            condition_fups = get_followup_questions(detected_condition)
+
+        result = {
             'status': 'continue',
             'response': response if response else '',
-            'conversation_state': assistant.conversation_state
-        })
+            'conversation_state': assistant.conversation_state,
+            'condition_followups': condition_fups,
+        }
+
+        # Include server-driven quick-reply buttons when available
+        if assistant.quick_replies:
+            result['quick_replies'] = assistant.quick_replies
+
+        return jsonify(result)
 
     except Exception as e:
         print(f"Error in chat endpoint: {str(e)}")
@@ -1609,6 +2393,58 @@ def progressive_answer():
     session.modified = True
 
     return jsonify({'success': True, 'state': result})
+
+
+# ============ Condition Follow-up Questions API ============
+
+@app.route('/api/condition/followups', methods=['POST'])
+def condition_followups_api():
+    """Get follow-up questions for a detected condition."""
+    data = request.get_json() or {}
+    condition = data.get('condition', '')
+
+    if not condition:
+        return jsonify({'error': 'No condition provided'}), 400
+
+    questions = get_followup_questions(condition)
+    category = detect_condition(condition)
+
+    return jsonify({
+        'condition': condition,
+        'category': category.category_id if category else None,
+        'category_display': category.display_name if category else None,
+        'questions': questions,
+    })
+
+
+@app.route('/api/condition/followups/answer', methods=['POST'])
+def condition_followup_answer():
+    """Parse a follow-up answer and merge into patient attributes."""
+    data = request.get_json() or {}
+    answer = data.get('answer', '')
+    attribute = data.get('attribute', '')
+    category_id = data.get('category_id', '')
+    followup = data.get('followup', {})
+
+    if not answer or not attribute:
+        return jsonify({'error': 'Missing answer or attribute'}), 400
+
+    # Parse the answer
+    attr, value = parse_answer(answer, followup or {'attribute': attribute, 'value_type': 'text'})
+
+    # Merge into session patient attributes
+    patient_attrs = session.get('patient_attrs', {})
+    answers = {attr: value}
+    patient_attrs = merge_followup_answers(patient_attrs, category_id, answers)
+    session['patient_attrs'] = patient_attrs
+    session.modified = True
+
+    return jsonify({
+        'success': True,
+        'attribute': attr,
+        'parsed_value': value,
+        'patient_attrs_updated': list(patient_attrs.keys()),
+    })
 
 
 # ============ Clinician Dashboard API ============

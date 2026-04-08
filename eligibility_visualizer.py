@@ -4,32 +4,265 @@ Eligibility criteria visualization module.
 Provides structured breakdowns of patient-trial eligibility, plain-language
 explanations for ineligibility, and clarifying question generation for
 criteria with unknown/missing data.
+
+Each criterion is classified into a display_category:
+  - 'patient_visible': shown to the patient directly
+  - 'doctor_verify': requires lab work or clinical assessment
+  - 'hidden': procedural/administrative — hidden from patient view
 """
 
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
 from smt_matcher import SMTMatcher, Constraint
+from criteria_question_mapper import (
+    parse_criterion,
+    _TIMEFRAME_HUMAN,
+)
+
+# Maps database criterion attributes back to human-readable follow-up labels
+# Used to enrich the eligibility breakdown with patient-provided data
+_CRITERION_TO_FOLLOWUP: Dict[str, str] = {
+    # Stage
+    "patient_has_finding_of_clinical_stage_iii_now": "stage",
+    "patient_has_finding_of_clinical_stage_4_now": "stage",
+    "patient_has_diagnosis_of_non_small_cell_carcinoma_of_lung_tnm_stage_3_now": "stage",
+    "patient_has_diagnosis_of_non_small_cell_carcinoma_of_lung_tnm_stage_4_now": "stage",
+    "patient_has_finding_of_non_small_cell_carcinoma_of_lung_tnm_stage_3_now": "stage",
+    "patient_has_finding_of_non_small_cell_carcinoma_of_lung_tnm_stage_4_now": "stage",
+    # Metastasis
+    "patient_has_finding_of_widespread_metastatic_malignant_neoplastic_disease_now": "metastatic_status",
+    # Treatment history
+    "patient_has_undergone_chemotherapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_chemotherapy_inthepast4weeks": "prior_treatments",
+    "patient_has_undergone_teleradiotherapy_procedure_inthehistory": "prior_treatments",
+    "patient_has_undergone_immunological_therapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_biological_treatment_inthepast4weeks": "prior_treatments",
+    "patient_has_undergone_hormone_therapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_first_line_treatment_inthehistory": "prior_treatments",
+    "patient_has_undergone_drug_therapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_antidepressant_therapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_infliximab_therapy_inthehistory": "prior_treatments",
+    "patient_has_undergone_non_steroidal_anti_inflammatory_agent_therapy_inthehistory": "prior_treatments",
+    "patient_can_undergo_chemotherapy_now": "prior_treatments",
+    # Current medications
+    "patient_is_undergoing_drug_therapy_now": "current_medications",
+    "patient_is_undergoing_biological_treatment_now": "current_medications",
+    "patient_is_undergoing_chemotherapy_now": "current_medications",
+    "patient_is_undergoing_anticoagulant_therapy_now": "current_medications",
+    "patient_is_undergoing_warfarin_therapy_now": "current_medications",
+    "patient_is_undergoing_aspirin_therapy_now": "current_medications",
+    "patient_is_undergoing_hormone_therapy_now": "current_medications",
+    "patient_is_taking_beta_adrenergic_receptor_antagonist_containing_product_now": "current_medications",
+    "patient_is_undergoing_anticonvulsant_therapy_now": "current_medications",
+    "patient_is_taking_opioid_receptor_agonist_containing_product_now": "current_medications",
+    "patient_is_taking_dopamine_receptor_agonist_containing_product_now": "current_medications",
+    "patient_is_undergoing_immunosuppressive_therapy_now": "current_medications",
+    "patient_is_undergoing_lipid_lowering_therapy_now": "current_medications",
+    # Lab values
+    "patient_hemoglobin_a1c_measurement_value_recorded_now_withunit_percent": "a1c",
+    "patient_has_undergone_hemoglobin_a1c_measurement_now": "a1c",
+    "patient_left_ventricular_ejection_fraction_value_recorded_now_withunit_percent": "ejection_fraction",
+    "patient_cardiac_ejection_fraction_value_recorded_now_withunit_percent": "ejection_fraction",
+    "patient_fev1_after_bronchodilation_value_recorded_now_withunit_percent_of_predicted": "fev1_percent",
+    "patient_fev1_after_bronchodilation_value_recorded_now_withunit_percent_predicted": "fev1_percent",
+    "patient_absolute_cd4_count_procedure_value_recorded_now_withunit_per_cubic_millimeter": "cd4_count",
+    "patient_lymphocyte_antigen_cd4_value_recorded_now_withunit_cells_per_mm3": "cd4_count",
+    # ECOG
+    "patient_ecog_performance_status_value_recorded_now_withunit_integer": "ecog_status",
+    "patient_has_finding_of_ecog_performance_status_finding_now": "ecog_status",
+    "patient_has_finding_of_ecog_performance_status_grade_3_now": "ecog_status",
+    "patient_has_finding_of_ecog_performance_status_grade_4_now": "ecog_status",
+    # Smoking
+    "patient_has_finding_of_cigarette_smoker_now": "smoking_status",
+    "patient_has_finding_of_smoker_now": "smoking_status",
+    "patient_has_finding_of_non_smoker_now": "smoking_status",
+    "patient_has_finding_of_ex_smoker_now": "smoking_status",
+    "patient_has_finding_of_tobacco_smoking_behavior_finding_now": "smoking_status",
+    "patient_has_finding_of_tobacco_smoking_behavior_finding_inthehistory": "smoking_status",
+    "patient_is_exposed_to_tobacco_smoking_behavior_finding_now": "smoking_status",
+    # Receptor status
+    "patient_has_finding_of_estrogen_receptor_positive_tumor_now": "receptor_status",
+    # Kidney/dialysis
+    "patient_has_diagnosis_of_end_stage_renal_disease_now": "on_dialysis",
+    "patient_has_finding_of_end_stage_renal_disease_now": "on_dialysis",
+    "patient_has_diagnosis_of_end_stage_renal_failure_on_dialysis_now": "on_dialysis",
+}
+
+
+def _is_age_attribute(attr: str) -> bool:
+    """Check if an attribute represents a patient age criterion."""
+    return (
+        attr.startswith("patient_age_value_recorded_")
+        or attr == "patient_aged_value_recorded_now_withunit_years"
+    )
+
+
+def _is_sex_attribute(attr: str) -> bool:
+    """Check if an attribute represents a patient sex criterion."""
+    return attr in (
+        "patient_sex_is_male_now",
+        "patient_sex_is_female_now",
+    )
+
+
+def _build_followup_patient_fact(
+    attr: str, patient_val: Any, patient_attrs: Dict[str, Any]
+) -> str:
+    """Build a rich patient fact string that includes follow-up context.
+
+    If the criterion was matched via a follow-up answer, show the original
+    patient-provided detail alongside the boolean evaluation.
+    Works with both hardcoded _CRITERION_TO_FOLLOWUP and dynamic criteria_map.
+    """
+    # Special-case: age attributes — show the numeric age, not bool coercion
+    if _is_age_attribute(attr):
+        age = patient_attrs.get('age')
+        if age is not None:
+            return f"Your age: {age}"
+        if isinstance(patient_val, (int, float)) and not isinstance(patient_val, bool):
+            return f"Your age: {int(patient_val)}"
+        return f"Your value: {_format_value(patient_val)}"
+
+    # Special-case: sex attributes — show "Male" / "Female"
+    if _is_sex_attribute(attr):
+        gender = patient_attrs.get('gender', '')
+        if gender:
+            return f"Your sex: {gender.capitalize()}"
+        if attr == "patient_sex_is_male_now":
+            return f"Sex is male: {'Yes' if patient_val else 'No'}"
+        return f"Sex is female: {'Yes' if patient_val else 'No'}"
+
+    followup_key = _CRITERION_TO_FOLLOWUP.get(attr)
+
+    # Also check dynamic criteria_map — reverse lookup which attribute_key
+    # maps to this criterion_type
+    if not followup_key:
+        criteria_map = patient_attrs.get('condition_criteria_map', {})
+        for ak, ct_list in criteria_map.items():
+            if attr in ct_list:
+                followup_key = ak
+                break
+
+    if not followup_key:
+        return f"Your value: {_format_value(patient_val)}"
+
+    # Look for the answer in condition_details (dynamic) or followup_ prefix (legacy)
+    condition_details = patient_attrs.get('condition_details', {})
+    raw_answer = condition_details.get(followup_key)
+    if raw_answer is None:
+        raw_answer = patient_attrs.get(f"followup_{followup_key}")
+    if raw_answer is None:
+        return f"Your value: {_format_value(patient_val)}"
+
+    # Build context-rich fact based on the followup type
+    label_map = {
+        "stage": "Your stage",
+        "metastatic_status": "Metastatic",
+        "prior_treatments": "Prior treatment",
+        "current_medications": "Current medications",
+        "a1c": "Your A1C",
+        "ejection_fraction": "Your ejection fraction",
+        "fev1_percent": "Your FEV1",
+        "cd4_count": "Your CD4 count",
+        "ecog_status": "Your ECOG status",
+        "smoking_status": "Smoking status",
+        "receptor_status": "Receptor status",
+        "on_dialysis": "Dialysis status",
+    }
+    label = label_map.get(followup_key, followup_key.replace("_", " ").title())
+
+    if isinstance(raw_answer, bool):
+        return f"{label}: {'Yes' if raw_answer else 'No'}"
+    return f"{label}: {raw_answer}"
 
 
 # ---------------------------------------------------------------------------
-# Attribute humanization helpers
+# Attribute humanization helpers (uses criteria_question_mapper's parser)
 # ---------------------------------------------------------------------------
+
+# High-priority full-attribute overrides for common criteria
+# These take precedence over the parser for well-known patterns
+_ATTRIBUTE_OVERRIDES: Dict[str, str] = {
+    # Age
+    "patient_age_value_recorded_now_in_years": "Age",
+    "patient_age_value_recorded_inthehistory_in_years": "Age",
+    "patient_aged_value_recorded_now_withunit_years": "Age",
+    # Sex
+    "patient_sex_is_male_now": "Sex (male)",
+    "patient_sex_is_female_now": "Sex (female)",
+    # ECOG
+    "patient_has_finding_of_ecog_performance_status_finding_now":
+        "Can carry out normal daily activities",
+    "patient_ecog_performance_status_value_recorded_now_withunit_integer":
+        "Daily activity level (ECOG score)",
+    "patient_has_finding_of_ecog_performance_status_grade_3_now":
+        "Significantly limited daily activities (ECOG 3)",
+    "patient_has_finding_of_ecog_performance_status_grade_4_now":
+        "Completely disabled (ECOG 4)",
+    "patient_has_finding_of_written_informed_consent_now":
+        "Informed consent",  # Should be hidden anyway
+    "patient_has_diagnosis_of_secondary_primary_tumors_except_basal_cell_carcinoma_or_in_situ_neoplasias_now":
+        "No other active cancers (except non-melanoma skin cancer)",
+}
+
 
 def _humanize_attribute(attr: str) -> str:
-    """Convert a database attribute name to a human-readable label."""
+    """Convert a database attribute name to a human-readable label.
+
+    Uses the criteria_question_mapper's structured parser for rich results,
+    with a simple fallback for attributes that don't parse cleanly.
+    """
+    # Check full-attribute overrides first
+    if attr in _ATTRIBUTE_OVERRIDES:
+        return _ATTRIBUTE_OVERRIDES[attr]
+
+    parsed = parse_criterion(attr)
+    if parsed and parsed.entity_human:
+        entity = parsed.entity_human
+        tf = _TIMEFRAME_HUMAN.get(parsed.timeframe, "")
+
+        # Build a natural label from category + entity + timeframe
+        cat = parsed.category
+        if cat == "diagnosis":
+            label = f"Diagnosed with {entity}"
+        elif cat == "prior_treatment":
+            label = f"Prior {entity}"
+            # Only add timeframe if it's a specific window, not generic "history"
+            if tf and tf not in ("currently", "in your medical history"):
+                label += f" ({tf})"
+        elif cat == "current_treatment":
+            label = f"Currently receiving {entity}"
+        elif cat == "current_medication":
+            label = f"Currently taking {entity}"
+        elif cat == "finding":
+            # Strip leading "has " from entities like "has clinical signs of ..."
+            if entity.lower().startswith("has "):
+                entity = entity[4:]
+            label = entity.capitalize()
+        elif cat == "allergy":
+            label = f"Allergy to {entity}"
+        elif cat == "exposure":
+            label = f"Exposed to {entity}"
+        elif cat == "lab_value":
+            label = entity.capitalize() if entity else "Lab value"
+        elif cat == "can_undergo":
+            label = f"Able to undergo {entity}"
+        elif cat == "will_undergo":
+            label = f"Planned {entity}"
+        elif cat == "reproductive":
+            label = entity.replace("_", " ").capitalize()
+        else:
+            label = entity.capitalize()
+
+        return label
+
+    # Fallback: simple cleanup
     label = attr
-    label = label.replace('patient_', '')
-    label = label.replace('_now', '')
-    label = label.replace('_inthehistory', ' (history)')
-    label = label.replace('_inthepast', ' (past ')
-    label = label.replace('months', ' months)')
-    label = label.replace('month', ' month)')
-    label = label.replace('_', ' ')
-    label = label.replace('withunit ', '(')
-    # Capitalize first letter of each word for readability
-    label = label.strip().title()
-    return label
+    label = label.replace('patient_', '').replace('patients_', '')
+    label = label.replace('_now', '').replace('_inthehistory', ' (history)')
+    label = label.replace('_', ' ').strip()
+    return label.capitalize()
 
 
 def _humanize_operator(op: str) -> str:
@@ -61,6 +294,136 @@ def _format_value(value: Any) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Display category classification
+# ---------------------------------------------------------------------------
+
+# Criteria that are purely procedural — hide from patients entirely
+_HIDDEN_PATTERNS = [
+    "informed_consent", "written_informed_consent",
+    "encounter_for_check_up", "follow_up_visit",
+    "collection_of_blood_specimen", "complete_blood_count",
+    "medical_record_not_available", "insufficient_clinical_detail",
+    "laboratory_test", "can_undergo_biopsy", "can_undergo_excision",
+    "imaging_", "radiology_", "will_undergo_imaging",
+    "histological_", "pathological_confirmation",
+    "tissue_specimen", "biopsy_specimen",
+    "measurable_disease_by_recist", "evaluable_disease",
+    "archived_tumor_tissue",
+]
+
+# Criteria that require clinical/lab verification — show as "doctor would verify"
+_DOCTOR_VERIFY_PATTERNS = [
+    # Lab values
+    "_value_recorded_", "platelet_count", "white_blood_cell",
+    "neutrophil", "hemoglobin", "hematocrit", "lymphocyte",
+    "serum_creatinine", "creatinine_level", "creatinine_renal_clearance",
+    "glomerular_filtration", "egfr",
+    "alanine_aminotransferase", "aspartate_aminotransferase",
+    "serum_bilirubin", "alkaline_phosphatase",
+    "left_ventricular_ejection_fraction", "cardiac_ejection_fraction",
+    "fev1_after_bronchodilation",
+    "absolute_cd4_count", "lymphocyte_antigen_cd4",
+    "international_normalised_ratio",
+    # Clinical assessments
+    "bone_marrow_function", "adequate_bone_marrow",
+    "adequate_hepatic_function", "adequate_renal_function",
+    "adequate_organ_function",
+    "qtc_interval", "electrocardiogram",
+    "tumor_proportion_score", "pdl1_expression",
+    "microsatellite_instability",
+    "her2_positive", "her2_negative", "her2_status",
+    "estrogen_receptor", "progesterone_receptor",
+    "brca_", "egfr_mutation", "alk_rearrangement",
+    "kras_", "braf_",
+]
+
+
+def _classify_display_category(attr: str) -> str:
+    """Classify a criterion into a display category for the patient view.
+
+    Returns:
+        'hidden'         — procedural, hide from patient view
+        'doctor_verify'  — requires lab/clinical verification
+        'patient_visible' — patient can understand and self-assess
+    """
+    attr_lower = attr.lower()
+
+    # Age and sex are already collected — always patient_visible
+    if attr_lower.startswith('patient_age_') or attr_lower.startswith('patient_sex_'):
+        return 'patient_visible'
+
+    for pattern in _HIDDEN_PATTERNS:
+        if pattern in attr_lower:
+            return 'hidden'
+
+    for pattern in _DOCTOR_VERIFY_PATTERNS:
+        if pattern in attr_lower:
+            return 'doctor_verify'
+
+    return 'patient_visible'
+
+
+def _doctor_verify_label(attr: str, human_label: str) -> str:
+    """Generate a patient-friendly label for doctor-verify criteria."""
+    attr_lower = attr.lower()
+
+    # Map common lab/clinical criteria to patient-friendly summaries
+    if "bone_marrow" in attr_lower or "adequate_bone_marrow" in attr_lower:
+        return "Adequate bone marrow function"
+    if "hepatic_function" in attr_lower or "adequate_hepatic" in attr_lower:
+        return "Adequate liver function"
+    if "renal_function" in attr_lower or "adequate_renal" in attr_lower:
+        return "Adequate kidney function"
+    if "organ_function" in attr_lower or "adequate_organ" in attr_lower:
+        return "Adequate organ function"
+    if "platelet" in attr_lower:
+        return "Platelet count"
+    if "white_blood_cell" in attr_lower or "neutrophil" in attr_lower:
+        return "White blood cell / neutrophil count"
+    if "hemoglobin_a1c" in attr_lower or "hba1c" in attr_lower:
+        return "HbA1c (average blood sugar)"
+    if "hemoglobin" in attr_lower:
+        return "Hemoglobin level"
+    if "creatinine" in attr_lower or "glomerular_filtration" in attr_lower:
+        return "Kidney function (creatinine/eGFR)"
+    if "bilirubin" in attr_lower or "aminotransferase" in attr_lower:
+        return "Liver function (ALT/AST/bilirubin)"
+    if "ejection_fraction" in attr_lower:
+        return "Heart function (ejection fraction)"
+    if "fev1" in attr_lower:
+        return "Lung function (FEV1)"
+    if "cd4" in attr_lower:
+        return "CD4 count"
+    if "qtc" in attr_lower or "electrocardiogram" in attr_lower:
+        return "Heart rhythm (ECG/QTc)"
+    if "her2" in attr_lower:
+        return "HER2 receptor status"
+    if "estrogen_receptor" in attr_lower:
+        return "Estrogen receptor status"
+    if "progesterone_receptor" in attr_lower:
+        return "Progesterone receptor status"
+    if "pdl1" in attr_lower or "tumor_proportion" in attr_lower:
+        return "PD-L1 expression level"
+    if "microsatellite" in attr_lower:
+        return "Microsatellite instability status"
+    if "brca" in attr_lower:
+        return "BRCA mutation status"
+    if "egfr_mutation" in attr_lower:
+        return "EGFR mutation status"
+    if "alk_rearrangement" in attr_lower:
+        return "ALK rearrangement status"
+    if "kras" in attr_lower:
+        return "KRAS mutation status"
+    if "braf" in attr_lower:
+        return "BRAF mutation status"
+    if "international_normalised_ratio" in attr_lower:
+        return "INR (blood clotting)"
+
+    # Default: use humanized label but mark it as lab
+    return human_label
+
+
+# ---------------------------------------------------------------------------
 # Data classes for visualization output
 # ---------------------------------------------------------------------------
 
@@ -83,6 +446,8 @@ class CriterionStatus:
     formal_constraint: str = ""
     # Plain-language explanation
     explanation: str = ""
+    # Display category: 'patient_visible', 'doctor_verify', or 'hidden'
+    display_category: str = "patient_visible"
 
 
 @dataclass
@@ -200,44 +565,61 @@ _CLARIFYING_TEMPLATES = {
 
 def _generate_clarifying_question(attribute: str, constraint_desc: str,
                                   operator: str, value: Any) -> str:
-    """Generate a patient-friendly clarifying question for an unknown criterion."""
+    """Generate a conversational, patient-friendly clarifying question.
+
+    Uses criteria_question_mapper's parsing to understand the criterion
+    and builds a natural question rather than echoing database field names.
+    """
     attr_lower = attribute.lower()
 
-    # Check templates by keyword match
+    # Check templates by keyword match (these are already well-written)
     for keyword, template in _CLARIFYING_TEMPLATES.items():
         if keyword in attr_lower:
             return template
 
-    # Build a generic but informative question from the constraint
+    # Try structured parsing for a better question
+    parsed = parse_criterion(attribute)
+    if parsed and parsed.entity_human:
+        entity = parsed.entity_human
+        tf = _TIMEFRAME_HUMAN.get(parsed.timeframe, "")
+        cat = parsed.category
+
+        if cat == "diagnosis":
+            return f"Have you been diagnosed with {entity}?"
+        elif cat == "prior_treatment":
+            tf_part = f" {tf}" if tf and tf != "currently" else ""
+            return f"Have you had {entity}{tf_part}?"
+        elif cat == "current_treatment":
+            return f"Are you currently receiving {entity}?"
+        elif cat == "current_medication":
+            return f"Are you currently taking {entity}?"
+        elif cat == "finding":
+            # Strip leading "has " from entities like "has clinical signs of ..."
+            if entity.lower().startswith("has "):
+                entity = entity[4:]
+            return f"Do you have {entity}?"
+        elif cat == "allergy":
+            return f"Are you allergic to {entity}?"
+        elif cat == "exposure":
+            return f"Have you been exposed to {entity}?"
+        elif cat == "reproductive":
+            entity_readable = entity.replace("_", " ")
+            return f"Regarding {entity_readable} — does this apply to you?"
+        elif cat in ("can_undergo", "will_undergo"):
+            return f"Are you able to undergo {entity}?"
+        elif cat == "lab_value":
+            if "score" in entity.lower():
+                return f"Do you know your {entity}?"
+            return f"Do you know your {entity} level?"
+
+    # Fallback: use humanized label
     human_attr = _humanize_attribute(attribute)
-    human_val = _format_value(value)
 
     if isinstance(value, str) and value.lower() in ('true', 'false'):
-        # Boolean criterion
         condition_desc = human_attr.lower()
-        if value.lower() == 'true':
-            return (
-                f"This trial requires that you have {condition_desc}. "
-                f"Does this apply to you?"
-            )
-        else:
-            return (
-                f"This trial requires that you do NOT have {condition_desc}. "
-                f"Does this apply to you?"
-            )
+        return f"Do you have {condition_desc}?"
 
-    # Numeric criterion
-    human_op = _humanize_operator(operator)
-    if constraint_desc:
-        return (
-            f"This trial has a requirement: {constraint_desc}. "
-            f"Do you have this information available?"
-        )
-
-    return (
-        f"This trial requires that your {human_attr.lower()} {human_op} {human_val}. "
-        f"Do you know your current value for this?"
-    )
+    return f"Do you know your {human_attr.lower()}?"
 
 
 # ---------------------------------------------------------------------------
@@ -285,7 +667,12 @@ class EligibilityVisualizer:
             is_hard = constraint.hard_constraint
             attr = constraint.attribute
             human_label = _humanize_attribute(attr)
+            display_cat = _classify_display_category(attr)
             formal = f"{attr} {constraint.operator} {constraint.value}"
+
+            # For doctor-verify criteria, use a cleaner label
+            if display_cat == 'doctor_verify':
+                human_label = _doctor_verify_label(attr, human_label)
 
             if attr not in patient_attrs:
                 # Unknown — missing data
@@ -293,6 +680,12 @@ class EligibilityVisualizer:
                     attr, constraint.description,
                     constraint.operator, constraint.value,
                 )
+
+                if display_cat == 'doctor_verify':
+                    explanation = "Lab work needed — your doctor would verify this."
+                else:
+                    explanation = "We need more information to check this."
+
                 cs = CriterionStatus(
                     attribute=attr,
                     human_label=human_label,
@@ -305,7 +698,8 @@ class EligibilityVisualizer:
                     patient_value=None,
                     patient_fact="No data available",
                     formal_constraint=formal,
-                    explanation=f"We don't have enough information to evaluate: {human_label}.",
+                    explanation=explanation,
+                    display_category=display_cat,
                 )
                 criteria_statuses.append(cs)
                 unknown_count += 1
@@ -324,15 +718,17 @@ class EligibilityVisualizer:
             if status == 'eligible':
                 eligible_count += 1
                 explanation = self._build_eligible_explanation(
-                    human_label, patient_val, constraint
+                    human_label, patient_val, constraint,
+                    attr=attr, patient_attrs=patient_attrs,
                 )
             else:
                 ineligible_count += 1
                 explanation = self._build_ineligible_explanation(
-                    human_label, patient_val, constraint
+                    human_label, patient_val, constraint,
+                    attr=attr, patient_attrs=patient_attrs,
                 )
 
-            patient_fact = f"Your value: {_format_value(patient_val)}"
+            patient_fact = _build_followup_patient_fact(attr, patient_val, patient_attrs)
 
             cs = CriterionStatus(
                 attribute=attr,
@@ -347,6 +743,7 @@ class EligibilityVisualizer:
                 patient_fact=patient_fact,
                 formal_constraint=formal,
                 explanation=explanation,
+                display_category=display_cat,
             )
             criteria_statuses.append(cs)
 
@@ -406,12 +803,29 @@ class EligibilityVisualizer:
         )
 
     def _build_eligible_explanation(
-        self, human_label: str, patient_val: Any, constraint: Constraint
+        self, human_label: str, patient_val: Any, constraint: Constraint,
+        attr: str = "", patient_attrs: Optional[Dict[str, Any]] = None,
     ) -> str:
         """Build a plain-language explanation for why a criterion is satisfied."""
         pv = _format_value(patient_val)
         cv = _format_value(constraint.value)
         op = constraint.operator
+
+        # Special-case: age — show numeric age instead of boolean
+        if _is_age_attribute(attr):
+            age = None
+            if patient_attrs:
+                age = patient_attrs.get('age')
+            if age is None and isinstance(patient_val, (int, float)) and not isinstance(patient_val, bool):
+                age = int(patient_val)
+            if age is not None:
+                return f"Your age: {age} — this trial requires age to be recorded ✓"
+
+        # Special-case: sex — show actual gender
+        if _is_sex_attribute(attr):
+            gender = patient_attrs.get('gender', '') if patient_attrs else ''
+            if gender:
+                return f"Your sex: {gender.capitalize()} — matches this trial's requirement ✓"
 
         if isinstance(constraint.value, str) and constraint.value.lower() in ('true', 'false'):
             expected = constraint.value.lower() == 'true'
@@ -432,12 +846,29 @@ class EligibilityVisualizer:
         return f"Your {human_label.lower()} ({pv}) matches the requirement ({cv})."
 
     def _build_ineligible_explanation(
-        self, human_label: str, patient_val: Any, constraint: Constraint
+        self, human_label: str, patient_val: Any, constraint: Constraint,
+        attr: str = "", patient_attrs: Optional[Dict[str, Any]] = None,
     ) -> str:
         """Build a plain-language explanation for why a criterion is NOT satisfied."""
         pv = _format_value(patient_val)
         cv = _format_value(constraint.value)
         op = constraint.operator
+
+        # Special-case: age
+        if _is_age_attribute(attr):
+            age = None
+            if patient_attrs:
+                age = patient_attrs.get('age')
+            if age is None and isinstance(patient_val, (int, float)) and not isinstance(patient_val, bool):
+                age = int(patient_val)
+            if age is not None:
+                return f"Your age: {age} — does not meet this trial's age requirement."
+
+        # Special-case: sex
+        if _is_sex_attribute(attr):
+            gender = patient_attrs.get('gender', '') if patient_attrs else ''
+            if gender:
+                return f"Your sex: {gender.capitalize()} — does not match this trial's requirement."
 
         if isinstance(constraint.value, str) and constraint.value.lower() in ('true', 'false'):
             expected = constraint.value.lower() == 'true'
@@ -530,31 +961,67 @@ class EligibilityVisualizer:
         return (summary, formal_core, plain_core)
 
     def to_dict(self, breakdown: EligibilityBreakdown) -> Dict[str, Any]:
-        """Convert an EligibilityBreakdown to a JSON-serializable dictionary."""
+        """Convert an EligibilityBreakdown to a JSON-serializable dictionary.
+
+        Includes pre-grouped criteria for frontend rendering:
+          - qualified: eligible criteria (green)
+          - not_qualified: ineligible criteria (red)
+          - needs_verification: unknown criteria, split into
+              patient_questions (patient can answer) and
+              doctor_verify (requires lab/clinical work)
+        """
+        def _criterion_dict(c: CriterionStatus) -> Dict[str, Any]:
+            return {
+                'attribute': c.attribute,
+                'human_label': c.human_label,
+                'operator': c.operator,
+                'expected_value': _format_value(c.expected_value),
+                'is_inclusion': c.is_inclusion,
+                'is_hard': c.is_hard,
+                'description': c.description,
+                'status': c.status,
+                'patient_value': _format_value(c.patient_value) if c.patient_value is not None else None,
+                'patient_fact': c.patient_fact,
+                'formal_constraint': c.formal_constraint,
+                'explanation': c.explanation,
+                'display_category': c.display_category,
+            }
+
+        # Filter out hidden criteria for patient view
+        visible = [c for c in breakdown.criteria if c.display_category != 'hidden']
+
+        # Pre-group for frontend
+        qualified = [_criterion_dict(c) for c in visible if c.status == 'eligible']
+        not_qualified = [_criterion_dict(c) for c in visible if c.status == 'ineligible']
+        unknown_patient = [
+            _criterion_dict(c) for c in visible
+            if c.status == 'unknown' and c.display_category == 'patient_visible'
+        ]
+        unknown_doctor = [
+            _criterion_dict(c) for c in visible
+            if c.status == 'unknown' and c.display_category == 'doctor_verify'
+        ]
+
+        # Recount based on visible criteria only
+        visible_eligible = len(qualified)
+        visible_ineligible = len(not_qualified)
+        visible_unknown = len(unknown_patient) + len(unknown_doctor)
+
         return {
             'nct_id': breakdown.nct_id,
             'trial_title': breakdown.trial_title,
             'overall_status': breakdown.overall_status,
-            'eligible_count': breakdown.eligible_count,
-            'ineligible_count': breakdown.ineligible_count,
-            'unknown_count': breakdown.unknown_count,
-            'criteria': [
-                {
-                    'attribute': c.attribute,
-                    'human_label': c.human_label,
-                    'operator': c.operator,
-                    'expected_value': _format_value(c.expected_value),
-                    'is_inclusion': c.is_inclusion,
-                    'is_hard': c.is_hard,
-                    'description': c.description,
-                    'status': c.status,
-                    'patient_value': _format_value(c.patient_value) if c.patient_value is not None else None,
-                    'patient_fact': c.patient_fact,
-                    'formal_constraint': c.formal_constraint,
-                    'explanation': c.explanation,
-                }
-                for c in breakdown.criteria
-            ],
+            'eligible_count': visible_eligible,
+            'ineligible_count': visible_ineligible,
+            'unknown_count': visible_unknown,
+            'criteria': [_criterion_dict(c) for c in visible],
+            # Pre-grouped for patient-facing display
+            'grouped': {
+                'qualified': qualified,
+                'not_qualified': not_qualified,
+                'patient_questions': unknown_patient,
+                'doctor_verify': unknown_doctor,
+            },
             'ineligibility_explanation': breakdown.ineligibility_explanation,
             'unsat_core': {
                 'formal': breakdown.unsat_core_formal,
