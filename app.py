@@ -2155,6 +2155,7 @@ def chat():
                     'location': patient_data.get('location'),
                     'condition': primary_condition,
                     'symptoms': patient_data.get('symptoms'),
+                    'condition_details': patient_data.get('condition_details', {}),
                 },
                 'data_last_updated': data_last_updated,
                 'condition_followups': get_followup_questions(primary_condition) if primary_condition else [],

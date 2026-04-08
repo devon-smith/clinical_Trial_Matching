@@ -871,6 +871,36 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `).join('');
 
+        // Build condition details section from follow-up answers
+        const details = summary.condition_details || {};
+        const detailEntries = Object.entries(details).filter(([k, v]) => v !== null && v !== undefined);
+        let detailsHtml = '';
+        if (detailEntries.length > 0) {
+            const detailRows = detailEntries.map(([key, val]) => {
+                // Humanize the attribute key
+                const label = key
+                    .replace(/^(diagnosis_|finding_|lab_|taking_|prior_|current_|repro_|allergy_|exposure_|can_|other_|smoking_|cancer_|ecog_|bmi|blood_|heart_|kidney_|liver_|diabetes_)/, '')
+                    .replace(/_/g, ' ')
+                    .replace(/^\w/, c => c.toUpperCase());
+                // Format the value
+                let display;
+                if (val === true || val === 'yes') display = '<span class="text-green-600">Yes</span>';
+                else if (val === false || val === 'no') display = '<span class="text-red-500">No</span>';
+                else display = `<span class="text-slate-700">${val}</span>`;
+                return `
+                    <div class="flex items-center justify-between py-1">
+                        <span class="text-xs text-slate-400">${label}</span>
+                        <span class="text-xs font-medium">${display}</span>
+                    </div>`;
+            }).join('');
+
+            detailsHtml = `
+                <div class="mt-2 pt-2 border-t border-slate-100">
+                    <p class="text-[10px] text-slate-400 uppercase tracking-wide mb-1">Your details</p>
+                    ${detailRows}
+                </div>`;
+        }
+
         card.innerHTML = `
             <div class="w-full max-w-[85%]">
                 <div class="bg-white border border-warm-border rounded-xl px-4 py-3">
@@ -878,6 +908,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="divide-y divide-slate-100">
                         ${fieldsHtml}
                     </div>
+                    ${detailsHtml}
                 </div>
             </div>
         `;

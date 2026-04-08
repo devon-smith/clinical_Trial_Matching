@@ -1242,10 +1242,11 @@ class ConversationalTrialAssistant:
         self.conversation_state = CONVERSATION_STATES['CONDITION_DETAIL']
 
         n_trials = len(self._preliminary_trial_ids)
+        trial_word = "trial" if n_trials == 1 else "trials"
         intro = (
             f"Let me look at what's available for **{condition}**...\n\n"
-            f"I found **{n_trials} potential trials**. To match you to the best ones, "
-            f"I need to know a few things:"
+            f"I found **{n_trials} potential {trial_word}** in our database. "
+            f"To find your best matches, a few quick questions:"
         )
         full_msg = (
             f"{ack}\n\n{intro}\n\n{question_msg}\n\n"
@@ -1470,13 +1471,18 @@ class ConversationalTrialAssistant:
 
         # Build known_attrs from what we already collected
         known_attrs = dict(self.patient_data.get('condition_details', {}))
-        # Also include attribute keys from round 1 (even if answered None)
+        # Include the actual criterion_types from round 1 questions (not attribute_keys)
+        # so _filter_known can match against the criteria table's criterion_type column
         for fq in self._pending_followups:
+            for ct in fq.get('criterion_types', []):
+                if ct not in known_attrs:
+                    known_attrs[ct] = None  # Mark as asked
+            # Also include the attribute key for backward compat
             attr = fq['attribute']
             if attr not in known_attrs:
-                known_attrs[attr] = None  # Mark as asked-but-skipped
+                known_attrs[attr] = None
 
-        print(f"  Round 2: checking for additional questions (known: {len(known_attrs)} attrs)")
+        print(f"  Round 2: excluding {len(known_attrs)} already-asked criteria")
 
         dynamic_qs = discover_followup_questions(
             condition,
