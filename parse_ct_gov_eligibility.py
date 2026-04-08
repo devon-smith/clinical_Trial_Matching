@@ -144,7 +144,12 @@ def _extract_numeric_criteria(text: str) -> List[Tuple[str, str, str]]:
     Returns list of (criterion_type, value, comparison).
     """
     results = []
+    seen_attrs: set = set()
     for pattern, attr, default_op in _NUMERIC_PATTERNS:
+        # Skip if we already extracted this attribute (prevents duplicates
+        # when multiple patterns match the same criterion, e.g. ECOG)
+        if attr in seen_attrs:
+            continue
         m = pattern.search(text)
         if m:
             groups = m.groups()
@@ -160,6 +165,7 @@ def _extract_numeric_criteria(text: str) -> List[Tuple[str, str, str]]:
             try:
                 float(val)  # validate it's a number
                 results.append((attr, val, op))
+                seen_attrs.add(attr)
             except ValueError:
                 pass
     return results
