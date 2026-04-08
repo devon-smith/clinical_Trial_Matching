@@ -499,7 +499,26 @@ def generate_questions_from_criteria(
     # Parse all criteria
     parsed_items: List[Tuple[ParsedCriterion, Dict]] = []
     for c in criteria:
-        parsed = parse_criterion(c["criterion_type"])
+        ct = c["criterion_type"]
+
+        # Handle free-text criteria: use the stored text as the entity
+        if ct.startswith("free_text_"):
+            display_text = c.get("criterion_value") or c.get("description") or ct
+            # Truncate long text for the question
+            if len(display_text) > 100:
+                display_text = display_text[:97] + "..."
+            is_exclusion = "exclusion" in ct
+            parsed = ParsedCriterion(
+                raw=ct,
+                category="free_text_exclusion" if is_exclusion else "free_text_inclusion",
+                entity=ct,
+                entity_human=display_text,
+                timeframe="now",
+            )
+            parsed_items.append((parsed, c))
+            continue
+
+        parsed = parse_criterion(ct)
         if parsed and parsed.category not in _SKIP_CATEGORIES:
             parsed_items.append((parsed, c))
 
@@ -734,6 +753,14 @@ def _build_individual_question(
         question = f"Are you able/willing to undergo {entity_h}?"
         value_type = "boolean"
         attr_key = f"can_{parsed.entity}"
+    elif category == "free_text_inclusion":
+        question = f"Does this apply to you: {entity_h}"
+        value_type = "text"
+        attr_key = parsed.entity
+    elif category == "free_text_exclusion":
+        question = f"Does any of this apply to you: {entity_h}"
+        value_type = "text"
+        attr_key = parsed.entity
     else:
         question = f"Regarding {entity_h} — does this apply to you?"
         value_type = "boolean"

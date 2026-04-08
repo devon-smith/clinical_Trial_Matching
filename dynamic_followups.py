@@ -187,10 +187,35 @@ def _filter_by_demographics(
         significant = [w for w in overlap if len(w) > 3]
         return len(significant) >= 2
 
+    # Female-specific keywords to filter for male patients
+    _FEMALE_SPECIFIC = {
+        "pregnant", "pregnancy", "breastfeeding", "lactating", "lactation",
+        "childbearing", "uterine", "cervical", "cervix", "ovarian", "ovary",
+        "menstrual", "menopause", "menopausal",
+    }
+
+    def _is_female_specific(q: QuestionTemplate) -> bool:
+        """Check if a question is female-specific by examining criterion types and text."""
+        # Check attribute key
+        if q.attribute_key in ("pregnancy_status", "repro_is_pregnant"):
+            return True
+        # Check criterion types for female-specific patterns
+        for ct in q.criterion_types:
+            ct_lower = ct.lower()
+            if any(kw in ct_lower for kw in _FEMALE_SPECIFIC):
+                return True
+        # Check question text
+        q_lower = q.question_text.lower()
+        if any(kw in q_lower for kw in _FEMALE_SPECIFIC):
+            return True
+        return False
+
+    is_male = gender in ("male", "m", "man")
+
     filtered = []
     for q in questions:
-        # Skip pregnancy/breastfeeding for males
-        if q.attribute_key == "pregnancy_status" and gender in ("male", "m", "man"):
+        # Skip female-specific questions for male patients
+        if is_male and _is_female_specific(q):
             continue
         # Skip redundant "do you have X" when patient already stated their condition
         if q.attribute_key in _REDUNDANT_IF_CONDITION_STATED and condition:
@@ -319,7 +344,8 @@ def _gather_ranked_criteria(
             criterion_type,
             MAX(is_inclusion) as is_inclusion,
             MAX(hard_constraint) as hard_constraint,
-            COUNT(DISTINCT nct_id) as trial_count
+            COUNT(DISTINCT nct_id) as trial_count,
+            MAX(criterion_value) as criterion_value
         FROM criteria
         WHERE nct_id IN ({placeholders})
         GROUP BY criterion_type
@@ -337,6 +363,7 @@ def _gather_ranked_criteria(
             "is_inclusion": bool(row[1]),
             "hard_constraint": bool(row[2]),
             "trial_count": row[3],
+            "criterion_value": row[4],
         })
 
     # If we have very few results with min_count >= 2, also include
@@ -347,7 +374,8 @@ def _gather_ranked_criteria(
                 criterion_type,
                 MAX(is_inclusion) as is_inclusion,
                 MAX(hard_constraint) as hard_constraint,
-                COUNT(DISTINCT nct_id) as trial_count
+                COUNT(DISTINCT nct_id) as trial_count,
+                MAX(criterion_value) as criterion_value
             FROM criteria
             WHERE nct_id IN ({placeholders})
             GROUP BY criterion_type
@@ -365,6 +393,7 @@ def _gather_ranked_criteria(
                 "is_inclusion": bool(row[1]),
                 "hard_constraint": bool(row[2]),
                 "trial_count": row[3],
+                "criterion_value": row[4],
             })
 
     conn.close()
