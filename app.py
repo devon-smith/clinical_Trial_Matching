@@ -1201,8 +1201,12 @@ class TrialMatcher:
             print(f"Error in get_trial_details: {e}")
             raise
 
-# Initialize LLM service
-llm_service = LLMService()
+# Initialize LLM service (lazy — allows app to start without Azure credentials)
+try:
+    llm_service = LLMService()
+except Exception as e:
+    print(f"Warning: LLM service unavailable ({e}). Running without LLM features.")
+    llm_service = None
 
 # Initialize matcher (includes SMT evaluator + RAG index)
 matcher = TrialMatcher()
