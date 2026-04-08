@@ -100,23 +100,31 @@ def _try_extract_condition(text: str) -> List[str]:
 
     Handles patterns like 'suffering from migraines', 'diagnosed with diabetes',
     'I have breast cancer', 'dealing with chronic pain', 'battling depression'.
+    Also catches standalone 'stage N X cancer' and 'with X cancer' phrases.
     """
+    # Sentence-level extraction patterns (ordered by specificity)
     patterns = [
-        r"(?:suffering|suffer)\s+(?:from|with)\s+(.+?)(?:[,.]|\s+(?:and|for|since|in)\b|$)",
-        r"(?:diagnosed|diagnosis)\s+(?:with|of)\s+(.+?)(?:[,.]|\s+(?:and|for|since|in|about|last|this)\b|$)",
-        r"(?:i\s+have|i've\s+got|i\s+got)\s+(.+?)(?:[,.]|\s+(?:and|for|since|in|i\s+am|i'm)\b|$)",
-        r"(?:dealing|living)\s+with\s+(.+?)(?:[,.]|\s+(?:and|for|since|in)\b|$)",
-        r"(?:battling|fighting|treating)\s+(.+?)(?:[,.]|\s+(?:and|for|since|in)\b|$)",
+        r"(?:suffering|suffer)\s+(?:from|with)\s+(.+?)(?:[,.]|\s+(?:and\s+i|for\s+\d|since|in\s+the|i\s+am|i'm)\b|$)",
+        r"(?:diagnosed|diagnosis)\s+(?:with|of)\s+(.+?)(?:[,.]|\s+(?:and\s+i|for\s+\d|since|in\s+the|about|last|this)\b|$)",
+        r"(?:i\s+have|i've\s+got|i\s+got)\s+(.+?)(?:[,.]|\s+(?:and\s+i|for\s+\d|since|in\s+the|i\s+am|i'm)\b|$)",
+        r"(?:dealing|living)\s+with\s+(.+?)(?:[,.]|\s+(?:and\s+i|for\s+\d|since|in\s+the)\b|$)",
+        r"(?:battling|fighting|treating)\s+(.+?)(?:[,.]|\s+(?:and\s+i|for\s+\d|since|in\s+the)\b|$)",
         r"(?:condition|problem)\s+(?:is|:)\s+(.+?)(?:[,.]|$)",
+        # "with stage 4 skin cancer" / "with brain cancer"
+        r"\bwith\s+((?:stage\s+\d\s+)?\w[\w\s]*?(?:cancer|disease|disorder|syndrome))(?:[,.]|\s+(?:and\s+i|i\s+am|i'm|who)\b|$)",
     ]
     for pat in patterns:
         m = re.search(pat, text, re.I)
         if m:
             cond = m.group(1).strip().rstrip('.,!?')
             if len(cond) > 2 and not re.match(r'^\d+$', cond):
-                # Clean up trailing words that aren't part of the condition
+                # Clean up trailing filler
                 cond = re.sub(r'\s+(?:i\s+am|i\'m|and\s+i|who\s+is).*$', '', cond, flags=re.I)
-                return [cond.strip()]
+                # Strip stage prefix for the condition name but keep it for context
+                cond_clean = cond.strip()
+                # Remove "stage N" from the stored condition name
+                cond_no_stage = re.sub(r'^stage\s+\d+\s+', '', cond_clean, flags=re.I).strip()
+                return [cond_no_stage if cond_no_stage else cond_clean]
     return []
 
 
@@ -563,9 +571,21 @@ class ConversationalTrialAssistant:
             if zip_code:
                 extracted['location'] = zip_code
 
-        # Rule-based condition extraction from natural sentences
-        if not extracted.get('conditions'):
-            extracted['conditions'] = _try_extract_condition(message)
+        # Rule-based condition extraction — runs even when LLM returned something,
+        # to catch more specific phrases (e.g., "skin cancer" vs LLM returning "cancer")
+        regex_conditions = _try_extract_condition(message)
+        if regex_conditions:
+            llm_conditions = extracted.get('conditions') or []
+            if not llm_conditions:
+                # LLM missed entirely — use regex
+                extracted['conditions'] = regex_conditions
+            else:
+                # LLM returned something — prefer whichever is more specific
+                regex_cond = regex_conditions[0].lower()
+                llm_cond = llm_conditions[0].lower() if llm_conditions else ''
+                if llm_cond and llm_cond in regex_cond and len(regex_cond) > len(llm_cond):
+                    # Regex found a more specific version (e.g., "skin cancer" vs "cancer")
+                    extracted['conditions'] = regex_conditions
 
         return extracted
 

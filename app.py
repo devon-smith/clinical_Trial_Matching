@@ -1849,24 +1849,45 @@ def chat():
                         ),
                     )
 
-            # Filter out trials with zero concept overlap before scoring
-            if concept_set:
-                filtered_trials = []
-                for trial in trials:
-                    trial_diseases = (trial.get('diseases') or '').lower()
-                    trial_title = (trial.get('title') or trial.get('brief_title') or '').lower()
-                    trial_text = trial_diseases + ' ' + trial_title
-                    # Check if any concept from the expansion appears in the trial
-                    has_overlap = any(
-                        cid.replace('_', ' ') in trial_text or cid.replace('_', '') in trial_text.replace(' ', '')
+            # Filter and categorize trials by relevance to the specific condition
+            condition_lower = (primary_condition or '').lower()
+            specific_trials = []
+            broad_trials = []
+
+            for trial in trials:
+                trial_diseases = (trial.get('diseases') or '').lower()
+                trial_title = (trial.get('title') or trial.get('brief_title') or '').lower()
+                trial_text = trial_diseases + ' ' + trial_title
+
+                # Check for specific condition match (e.g., "skin cancer" in diseases)
+                if condition_lower and condition_lower in trial_text:
+                    trial['_relevance'] = 'specific'
+                    specific_trials.append(trial)
+                    continue
+
+                # Check for concept-expanded match (e.g., "melanoma" for skin cancer)
+                if concept_set:
+                    has_concept_overlap = any(
+                        cid.replace('_', ' ') in trial_text
                         for cid in concept_set
                     )
-                    # Also allow trials that matched on disease column in retrieval
-                    if has_overlap or trial.get('_disease_match'):
-                        filtered_trials.append(trial)
-                if filtered_trials:
-                    trials = filtered_trials
-                    print(f"Concept filter: {len(trials)} trials remain after filtering")
+                    if has_concept_overlap:
+                        trial['_relevance'] = 'specific'
+                        specific_trials.append(trial)
+                        continue
+
+                # Broad match (e.g., trial matched on "cancer" but is for lung cancer)
+                if trial.get('_disease_match'):
+                    trial['_relevance'] = 'broad'
+                    broad_trials.append(trial)
+
+            # Only include broad matches if fewer than 3 specific ones
+            if len(specific_trials) >= 3:
+                trials = specific_trials
+            else:
+                trials = specific_trials + broad_trials
+
+            print(f"Relevance filter: {len(specific_trials)} specific, {len(broad_trials)} broad")
 
             # Format trials with real scoring from SMT + RAG + preferences
             formatted_trials = []
@@ -2181,6 +2202,34 @@ def get_trial(nct_id: str):
             'success': True,
             'trial': trial
         })
+
+    # Fallback: check ct_gov_trials table
+    try:
+        db_path = os.path.join(os.path.dirname(__file__), 'trial_data.sqlite')
+        conn = sqlite3.connect(db_path)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM ct_gov_trials WHERE nct_id = ?", (nct_id,))
+        row = cursor.fetchone()
+        if row:
+            trial_data = dict(row)
+            # Map ct_gov_trials column names to the format the frontend expects
+            trial_data['brief_title'] = trial_data.get('title', '')
+            trial_data['source'] = 'clinicaltrials.gov'
+            # Get locations
+            cursor.execute(
+                "SELECT * FROM ct_gov_locations WHERE nct_id = ?", (nct_id,)
+            )
+            trial_data['locations'] = [dict(r) for r in cursor.fetchall()]
+            conn.close()
+            return jsonify({
+                'success': True,
+                'trial': trial_data
+            })
+        conn.close()
+    except Exception as e:
+        print(f"ct_gov_trials lookup error: {e}")
+
     return jsonify({'success': False, 'error': 'Trial not found'}), 404
 
 @app.route('/api/trials')
