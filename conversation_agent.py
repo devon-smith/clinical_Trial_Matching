@@ -1208,6 +1208,10 @@ class ConversationalTrialAssistant:
                     'value_type': qt.value_type,
                     'choices': qt.choices,
                     'criterion_types': qt.criterion_types,
+                    'input_hint': qt.input_hint,
+                    'input_options': qt.input_options,
+                    'input_unit': qt.input_unit,
+                    'input_placeholder': qt.input_placeholder,
                 }
                 for qt in dynamic_qs
             ]
@@ -1251,35 +1255,48 @@ class ConversationalTrialAssistant:
         return full_msg.strip(), False
 
     def _format_followup_questions(self, followups: List[Dict]) -> str:
-        """Format follow-up questions as numbered bullets with quick-reply metadata."""
+        """Format follow-up questions as numbered bullets with input hint metadata."""
         parts = []
         quick_replies: List[Dict] = []
         for i, fq in enumerate(followups, 1):
             q = fq['question']
-            if fq.get('choices'):
+            hint = fq.get('input_hint', 'text')
+
+            # Append options inline for select/choice types
+            if hint == 'select' and fq.get('input_options'):
+                options = ", ".join(fq['input_options'])
+                q += f" ({options})"
+            elif fq.get('choices'):
                 options = ", ".join(fq['choices'])
                 q += f" ({options})"
+
+            # Append unit hint for number types
+            if hint == 'number' and fq.get('input_unit'):
+                q += f" [{fq['input_unit']}]"
+
             parts.append(f"**{i}.** {q}")
 
-            # Build quick-reply button metadata for each question
-            if fq.get('choices'):
-                quick_replies.append({
-                    'question_num': i,
-                    'attribute': fq['attribute'],
-                    'type': 'choice',
-                    'options': fq['choices'],
-                })
-            elif fq.get('value_type') in ('boolean', 'yes_no'):
-                quick_replies.append({
-                    'question_num': i,
-                    'attribute': fq['attribute'],
-                    'type': 'yes_no',
-                    'options': ['Yes', 'No', "I don't know"],
-                })
+            # Build structured metadata for each question
+            reply: Dict = {
+                'question_num': i,
+                'attribute': fq['attribute'],
+                'input_hint': hint,
+            }
 
-        # Set quick_replies for frontend (including a skip-all option)
+            if hint == 'yes_no':
+                reply['options'] = ['Yes', 'No', "I don't know"]
+            elif hint == 'select':
+                reply['options'] = fq.get('input_options') or fq.get('choices') or []
+            elif hint == 'number':
+                reply['input_unit'] = fq.get('input_unit')
+                reply['input_placeholder'] = fq.get('input_placeholder')
+            # text type needs no extra metadata
+
+            quick_replies.append(reply)
+
+        # Skip-all option
         quick_replies.append({
-            'type': 'skip',
+            'input_hint': 'skip',
             'options': ["I don't know any of these"],
         })
         self.quick_replies = quick_replies
@@ -1487,6 +1504,10 @@ class ConversationalTrialAssistant:
                 'value_type': qt.value_type,
                 'choices': qt.choices,
                 'criterion_types': qt.criterion_types,
+                'input_hint': qt.input_hint,
+                'input_options': qt.input_options,
+                'input_unit': qt.input_unit,
+                'input_placeholder': qt.input_placeholder,
             }
             for qt in dynamic_qs
         ]

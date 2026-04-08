@@ -49,6 +49,10 @@ class QuestionTemplate:
     criterion_types: List[str] = field(default_factory=list)
     priority: float = 0.0
     group_label: str = ""       # human label for the group (e.g. "smoking")
+    input_hint: str = "text"    # yes_no, select, number, text
+    input_options: Optional[List[str]] = None  # for select type
+    input_unit: Optional[str] = None           # for number type (e.g. "kg/m²")
+    input_placeholder: Optional[str] = None    # hint text for input field
 
 
 # ---------------------------------------------------------------------------
@@ -548,14 +552,22 @@ def generate_questions_from_criteria(
         if group["source"] == "semantic":
             # Use the predefined semantic group question
             sg = _SEMANTIC_GROUPS[key]
+            sg_choices = sg.get("choices")
+            hint, options, unit, placeholder = _infer_input_hint(
+                criterion_types, sg["value_type"], key, sg_choices,
+            )
             q = QuestionTemplate(
                 question_text=sg["question"],
                 attribute_key=sg["attribute_key"],
                 value_type=sg["value_type"],
-                choices=sg.get("choices"),
+                choices=sg_choices,
                 criterion_types=criterion_types,
                 priority=priority,
                 group_label=key,
+                input_hint=hint,
+                input_options=options,
+                input_unit=unit,
+                input_placeholder=placeholder,
             )
         else:
             # Build question from parsed criteria
@@ -568,6 +580,101 @@ def generate_questions_from_criteria(
     questions.sort(key=lambda q: q.priority, reverse=True)
 
     return questions
+
+
+# ---------------------------------------------------------------------------
+# Input hint inference
+# ---------------------------------------------------------------------------
+
+# Units extracted from criterion_type patterns like "_withunit_kilograms_per_square_meter"
+_UNIT_MAP = {
+    "kilograms_per_square_meter": ("kg/m²", "e.g. 24.5"),
+    "millimeters_of_mercury": ("mmHg", "e.g. 120/80"),
+    "milligrams_per_deciliter": ("mg/dL", "e.g. 100"),
+    "grams_per_deciliter": ("g/dL", "e.g. 13.5"),
+    "percent": ("%", "e.g. 7.2"),
+    "cells_per_microliter": ("cells/µL", "e.g. 1500"),
+    "milliliters_per_minute": ("mL/min", "e.g. 60"),
+    "international_units_per_liter": ("IU/L", "e.g. 40"),
+    "years": ("years", "e.g. 45"),
+    "months": ("months", "e.g. 6"),
+    "weeks": ("weeks", "e.g. 12"),
+}
+
+
+def _extract_unit_from_criterion(criterion_type: str) -> Tuple[Optional[str], Optional[str]]:
+    """Extract unit and placeholder from a criterion_type string.
+
+    Returns (unit_label, placeholder) or (None, None).
+    """
+    m = re.search(r'_withunit_(.+?)(?:_(?:now|inthehistory|inthepast))', criterion_type)
+    if not m:
+        m = re.search(r'_withunit_(.+)$', criterion_type)
+    if m:
+        unit_key = m.group(1)
+        if unit_key in _UNIT_MAP:
+            return _UNIT_MAP[unit_key]
+        # Fallback: humanize the unit key
+        human_unit = unit_key.replace('_', ' ')
+        return human_unit, None
+    return None, None
+
+
+def _infer_input_hint(
+    criterion_types: List[str],
+    value_type: str,
+    category: str,
+    choices: Optional[List[str]] = None,
+) -> Tuple[str, Optional[List[str]], Optional[str], Optional[str]]:
+    """Infer the input_hint, options, unit, and placeholder from criterion patterns.
+
+    Returns (input_hint, input_options, input_unit, input_placeholder).
+    """
+    raw = criterion_types[0] if criterion_types else ""
+
+    # --- yes_no: binary boolean questions ---
+    yes_no_patterns = [
+        "is_pregnant", "is_breastfeeding", "is_lactating",
+        "has_diagnosis_of_", "has_undergone_", "is_undergoing_",
+        "has_finding_of_", "has_allergy_to_", "is_taking_",
+        "is_exposed_to_", "can_undergo_", "will_undergo_",
+        "is_smoker", "is_non_smoker",
+    ]
+    if value_type == "boolean" or category in (
+        "diagnosis", "prior_treatment", "current_treatment",
+        "current_medication", "finding", "allergy", "exposure",
+        "reproductive", "can_undergo", "will_undergo",
+    ):
+        if any(pat in raw for pat in yes_no_patterns) or value_type == "boolean":
+            return "yes_no", None, None, None
+
+    # --- number: numeric lab values with units ---
+    if "_value_recorded_" in raw or value_type == "numeric":
+        unit, placeholder = _extract_unit_from_criterion(raw)
+        if not unit:
+            # Infer from category
+            if "a1c" in raw or "hemoglobin_a1c" in raw:
+                unit, placeholder = "%", "e.g. 7.2"
+            elif "body_mass_index" in raw or "bmi" in raw:
+                unit, placeholder = "kg/m²", "e.g. 24.5"
+            elif "creatinine" in raw:
+                unit, placeholder = "mg/dL", "e.g. 1.0"
+            elif "ecog" in raw or "performance_status" in raw:
+                unit, placeholder = "0-4", "0 = fully active"
+            elif "ejection_fraction" in raw:
+                unit, placeholder = "%", "e.g. 55"
+            elif "glomerular_filtration" in raw or "egfr" in raw:
+                unit, placeholder = "mL/min", "e.g. 60"
+            else:
+                unit, placeholder = None, "Enter a number"
+        return "number", None, unit, placeholder
+
+    # --- select: categorical with predefined options ---
+    if value_type == "choice" and choices:
+        return "select", choices, None, None
+
+    # --- text: everything else ---
+    return "text", None, None, None
 
 
 def _build_individual_question(
@@ -632,6 +739,10 @@ def _build_individual_question(
         value_type = "boolean"
         attr_key = f"other_{parsed.entity}"
 
+    hint, options, unit, placeholder = _infer_input_hint(
+        criterion_types, value_type, category,
+    )
+
     return QuestionTemplate(
         question_text=question,
         attribute_key=attr_key,
@@ -639,4 +750,8 @@ def _build_individual_question(
         criterion_types=criterion_types,
         priority=priority,
         group_label=category,
+        input_hint=hint,
+        input_options=options,
+        input_unit=unit,
+        input_placeholder=placeholder,
     )
