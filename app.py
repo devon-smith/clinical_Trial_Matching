@@ -1984,8 +1984,12 @@ def chat():
                     'ct_gov_url': f"https://clinicaltrials.gov/study/{nct_id}",
                     # Real scoring data
                     'match_score': scoring['match_score'],
+                    'trial_relevance': scoring.get('trial_relevance'),
+                    'match_rate': scoring.get('match_rate'),
+                    'coverage': scoring.get('coverage'),
                     'hard_met': scoring['hard_met'],
                     'hard_total': scoring['hard_total'],
+                    'hard_unknown': scoring.get('hard_unknown', 0),
                     'soft_met': scoring['soft_met'],
                     'soft_total': scoring['soft_total'],
                     'eligibility_status': scoring['eligibility_status'],

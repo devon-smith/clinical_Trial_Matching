@@ -245,6 +245,31 @@ class TrialMatcher:
         conn.close()
         return "sigir"
 
+    def _get_trial_relevance(self, nct_id: str) -> float:
+        """Retrieve the pre-computed trial relevance score (0-1)."""
+        conn = self._connect()
+        cursor = conn.cursor()
+        try:
+            cursor.execute(
+                "SELECT trial_relevance FROM ct_gov_trials WHERE nct_id = ?",
+                (nct_id,),
+            )
+            row = cursor.fetchone()
+            if row and row[0] is not None:
+                conn.close()
+                return float(row[0])
+        except Exception:
+            pass
+        cursor.execute(
+            "SELECT trial_relevance FROM trials WHERE nct_id = ?",
+            (nct_id,),
+        )
+        row = cursor.fetchone()
+        conn.close()
+        if row and row[0] is not None:
+            return float(row[0])
+        return 0.5
+
     def _get_eligibility_text(self, nct_id: str) -> str:
         """Retrieve free-text eligibility criteria."""
         conn = self._connect()
@@ -371,6 +396,52 @@ class TrialMatcher:
         conn.close()
         return chars
 
+    # ------------------------------------------------------------------
+    # Criteria importance tiers
+    # ------------------------------------------------------------------
+
+    _TIER_WEIGHTS = {1: 5.0, 2: 2.0, 3: 1.0, 4: 0.3}
+
+    @staticmethod
+    def _classify_tier(attr: str) -> int:
+        """Classify a criterion attribute into an importance tier (1-4)."""
+        a = attr.lower()
+
+        # Tier 1: Deal-breakers
+        if any(k in a for k in (
+            "age_value_recorded", "sex_is_male", "sex_is_female",
+        )):
+            return 1
+        # Primary diagnosis — the condition the trial is studying
+        if "has_diagnosis_of_" in a and "_now" in a:
+            # Check if it looks like the primary condition (not a comorbidity exclusion)
+            return 1
+
+        # Tier 2: Core eligibility
+        if any(k in a for k in (
+            "stage", "performance_status", "ecog", "karnofsky",
+            "chemotherapy", "radiotherapy", "immunotherapy", "surgery",
+            "a1c", "hemoglobin_a1c", "egfr", "glomerular_filtration",
+            "ejection_fraction", "platelet_count", "neutrophil",
+            "white_blood_cell", "hemoglobin_value",
+            "treatment_of_", "has_undergone_",
+        )):
+            return 2
+
+        # Tier 3: Standard exclusions
+        if any(k in a for k in (
+            "pregnant", "breastfeeding", "lactating",
+            "infection", "hepatitis", "hiv",
+            "is_taking_", "medication",
+            "organ_function", "liver_disease", "kidney_disease",
+            "smoker", "smoking", "tobacco",
+            "allergy_to_",
+        )):
+            return 3
+
+        # Tier 4: Everything else (rare conditions, administrative, edge cases)
+        return 4
+
     def score_trial(
         self,
         patient_attrs: Dict[str, Any],
@@ -436,31 +507,72 @@ class TrialMatcher:
         # Build lookup of LLM results
         llm_by_attr = {j.criterion: j for j in llm_judgments}
 
-        # Count hard constraints with LLM upgrades
+        # Count constraints with tier-weighted scoring
         hard_met = 0
         hard_failed_explicitly = 0
+        hard_unknown = 0
+        weighted_met = 0.0
+        weighted_failed = 0.0
+        weighted_unknown = 0.0
+        weighted_total = 0.0
+        has_tier1_failure = False
+
         for c in hard_constraints:
             attr = c.get('attribute', '')
+            tier = self._classify_tier(attr)
+            weight = self._TIER_WEIGHTS.get(tier, 0.3)
+            weighted_total += weight
+
             if c.get('met'):
                 hard_met += 1
+                weighted_met += weight
             elif attr in llm_by_attr and llm_by_attr[attr].status == "MET":
-                hard_met += 1  # LLM resolved as MET
+                hard_met += 1
+                weighted_met += weight
             elif attr in patient_attrs:
                 hard_failed_explicitly += 1
+                weighted_failed += weight
+                if tier == 1:
+                    has_tier1_failure = True
             elif attr in llm_by_attr and llm_by_attr[attr].status == "NOT_MET":
-                hard_failed_explicitly += 1  # LLM resolved as NOT_MET
+                hard_failed_explicitly += 1
+                weighted_failed += weight
+                if tier == 1:
+                    has_tier1_failure = True
+            else:
+                hard_unknown += 1
+                weighted_unknown += weight
 
         hard_total = len(hard_constraints)
 
         soft_met = sum(1 for c in soft_constraints if c.get('met'))
         soft_total = max(len(soft_constraints), 1)
 
-        # Score components
-        hard_evaluable = hard_met + hard_failed_explicitly
-        hard_score = (
-            hard_met / max(hard_evaluable, 1) if hard_evaluable > 0 else 0.5
-        )
+        # Tier-weighted hard score
+        weighted_evaluable = weighted_met + weighted_failed
+        if weighted_evaluable > 0:
+            hard_score = weighted_met / weighted_evaluable
+        else:
+            hard_score = 0.5  # neutral when nothing evaluable
+
+        # Tier 1 failure override — drops eligibility dramatically
+        if has_tier1_failure:
+            hard_score = min(hard_score, 0.15)
+
         soft_score = soft_met / soft_total
+
+        # Confidence: match_rate vs coverage
+        hard_checked = hard_met + hard_failed_explicitly
+        match_rate = hard_met / max(hard_checked, 1) if hard_checked > 0 else 1.0
+        coverage = hard_checked / max(hard_total, 1) if hard_total > 0 else 0.0
+
+        # Coverage weight: high coverage = higher confidence in the score
+        if coverage >= 0.7:
+            coverage_weight = 1.0
+        elif coverage >= 0.4:
+            coverage_weight = 0.8
+        else:
+            coverage_weight = 0.6
 
         rag_score = self.rag.score_trial(patient_text, nct_id) if patient_text else 0.0
         rag_normalized = min(rag_score * 3, 1.0)
@@ -474,10 +586,9 @@ class TrialMatcher:
         # Clamp disease_relevance: allow negative (penalty) but floor at -0.3
         disease_relevance_clamped = max(disease_relevance, -0.3)
 
-        # Scoring: disease relevance gets 25% weight
-        # Negative relevance penalizes mismatched trials
+        # Scoring: tier-weighted hard score modulated by coverage confidence
         eligibility = (
-            0.30 * hard_score
+            0.30 * hard_score * coverage_weight
             + 0.15 * soft_score
             + 0.30 * rag_normalized
             + 0.25 * disease_relevance_clamped
@@ -509,15 +620,19 @@ class TrialMatcher:
         if trial_source == 'ctgov_api':
             combined = min(combined + 0.03, 1.0)
 
+        # Trial relevance multiplier: penalizes broad/unfocused trials
+        trial_relevance = self._get_trial_relevance(nct_id)
+        combined = combined * trial_relevance
+
         match_score = max(0, min(100, int(round(combined * 100))))
 
-        # Eligibility status
-        if eval_result['status'] == 'PASS' and hard_failed_explicitly == 0:
-            eligibility_status = 'eligible'
-        elif hard_failed_explicitly == 0:
-            eligibility_status = 'review_needed'
+        # Eligibility status — uses tier awareness
+        if has_tier1_failure:
+            eligibility_status = 'not_eligible'
         elif hard_failed_explicitly > 0:
             eligibility_status = 'not_eligible'
+        elif eval_result['status'] == 'PASS' and hard_failed_explicitly == 0:
+            eligibility_status = 'eligible'
         else:
             eligibility_status = 'review_needed'
 
@@ -547,8 +662,12 @@ class TrialMatcher:
 
         result = {
             'match_score': match_score,
+            'trial_relevance': round(trial_relevance, 2),
+            'match_rate': round(match_rate, 2),
+            'coverage': round(coverage, 2),
             'hard_met': hard_met,
             'hard_total': hard_total,
+            'hard_unknown': hard_unknown,
             'soft_met': soft_met,
             'soft_total': len(soft_constraints),
             'eligibility_status': eligibility_status,
